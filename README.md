@@ -37,6 +37,24 @@ Entry is the reference close of the run date. The ledger settles from the
 following session onward. If both stop and target fall in one bar, the stop
 is assumed first. A gap through a level fills at the open.
 
+## Guardrails against bad data and hallucination
+
+These run in code, after each model reply:
+
+- **Freshness:** price history whose last bar is more than 4 calendar days old is
+  treated as unverified. No trade can rest on stale prices.
+- **Grounding:** every figure quoted in an analyst summary, a bull or bear argument,
+  or the PM rationale must match a value in the data the agent was given. A figure
+  that matches nothing is removed (analysts, debate) or voids the trade (PM).
+- **Schema:** the PM reply must be valid JSON with a known action, a candidate ticker,
+  numeric stop and target, and confidence between 0 and 1. Anything else becomes NO_TRADE.
+- **Unverified fields:** every missing or unconfirmed value is labelled and listed on
+  the report.
+
+Limits: these checks catch invented numbers and malformed output. They cannot verify
+that the source data itself is correct. The data is end-of-day, not live. See
+`project/PORTFOLIO_MANAGER_INSTRUCTIONS.md` for the instructions to use with the agents.
+
 ## Setup
 
 ```bash

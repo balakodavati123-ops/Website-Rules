@@ -14,7 +14,7 @@ from trading_team.pipeline import TradingDesk
 from trading_team.config import Settings
 from trading_team.report import write_pdf
 
-from conftest import FakeLLM, FakeProvider, make_bars
+from conftest import END_DAY, FakeLLM, FakeProvider, make_bars
 
 
 # ---- indicators ---------------------------------------------------------
@@ -59,7 +59,7 @@ def test_validate_bars_flags_bad_rows():
 
 def test_snapshot_marks_missing_flows_unverified(bars):
     provider = FakeProvider({"ABC.NS": bars})
-    snap = DataAgent(provider).snapshot("ABC.NS")
+    snap = DataAgent(provider).snapshot("ABC.NS", END_DAY)
     assert snap.bars
     items = snap.unverified_items()
     assert any(i.startswith("fii_dii_flows") for i in items)
@@ -68,14 +68,14 @@ def test_snapshot_marks_missing_flows_unverified(bars):
 
 def test_snapshot_provider_failure_is_unverified():
     provider = FakeProvider(fail={"ABC.NS"})
-    snap = DataAgent(provider).snapshot("ABC.NS")
+    snap = DataAgent(provider).snapshot("ABC.NS", END_DAY)
     assert snap.bars == []
     assert "price history" in snap.unverified_items()
 
 
 def test_context_labels_unverified(bars):
     provider = FakeProvider({"ABC.NS": bars})
-    snap = DataAgent(provider).snapshot("ABC.NS")
+    snap = DataAgent(provider).snapshot("ABC.NS", END_DAY)
     ctx = build_context(snap, technical_summary(bars), DataAgent(provider).market())
     assert ctx["flows"].startswith("UNVERIFIED")
     assert ctx["market"]["india_vix"] == 12.0

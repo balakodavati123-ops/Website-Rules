@@ -10,6 +10,7 @@ import logging
 from datetime import date
 from typing import Any, Protocol
 
+from .guardrails import is_fresh
 from .models import Bar, DataPoint, Snapshot
 
 log = logging.getLogger(__name__)
@@ -70,6 +71,9 @@ class DataAgent:
         elif len(bars) < self.MIN_BARS:
             snap.points["price_history_check"] = DataPoint(
                 value=len(bars), note=f"fewer than {self.MIN_BARS} bars")
+        elif not is_fresh(bars, snap.as_of):
+            snap.points["price_freshness"] = DataPoint(
+                value=bars[-1].day.isoformat(), note="last bar is stale")
         else:
             snap.bars = bars
             snap.points["price_history"] = DataPoint(
