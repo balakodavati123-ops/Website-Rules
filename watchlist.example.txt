@@ -1,0 +1,5 @@
+# One ticker per line. NSE tickers use the .NS suffix. Lines starting with # are ignored.
+RELIANCE.NS
+TCS.NS
+INFY.NS
+HDFCBANK.NS
