@@ -13,6 +13,7 @@ from .config import Settings
 from .data import DataAgent, DataProvider
 from .indicators import screen_score, technical_summary
 from .ledger import Ledger
+from .guardrails import ungrounded_numbers, validate_pm_output
 from .llm import LLM
 from .models import Recommendation
 from .report import write_pdf
@@ -54,12 +55,27 @@ class TradingDesk:
 
         cases: list[CaseFile] = []
         risk_facts: dict[str, CandidateRisk] = {}
+        grounding_flags: list[str] = []
         for score, t, tech in ranked[: self.settings.candidates_per_run]:
             if tech is None:
                 continue
             ctx = build_context(snaps[t], tech, market)
             analysts = {name: run_analyst(self.llm, name, ctx) for name in ANALYSTS}
+            for name, rep in analysts.items():
+                bad = ungrounded_numbers(rep.get("summary", ""), ctx)
+                if bad:
+                    grounding_flags.append(f"{t} {name} analyst: {bad}")
+                    rep["summary"] = "[removed: figures not in the data]"
+                    rep["signal"] = "neutral"
             bull, bear = run_debate(self.llm, ctx, analysts)
+            for side, text in (("bull", bull), ("bear", bear)):
+                bad = ungrounded_numbers(text, ctx)
+                if bad:
+                    grounding_flags.append(f"{t} {side}: {bad}")
+                    if side == "bull":
+                        bull = "[removed: figures not in the data]"
+                    else:
+                        bear = "[removed: figures not in the data]"
             cases.append(CaseFile(ticker=t, score=score, context=ctx,
                                   analysts=analysts, bull=bull, bear=bear))
             risk_facts[t] = CandidateRisk(
@@ -74,7 +90,22 @@ class TradingDesk:
             proposal = {"action": "NO_TRADE", "rationale":
                         "no candidate had a verified price history"}
 
+        # Schema and grounding checks on the PM before the risk manager sees it.
+        problems = validate_pm_output(proposal, {c.ticker for c in cases})
+        if not problems and proposal.get("action") == "BUY":
+            case_data = {c.ticker: {"context": c.context, "analysts": c.analysts}
+                         for c in cases}
+            bad = ungrounded_numbers(str(proposal.get("rationale", "")), case_data)
+            if bad:
+                problems.append(f"rationale quotes figures not in the data: {bad}")
+        if problems:
+            grounding_flags.append("PM output rejected: " + "; ".join(problems))
+            proposal = {"action": "NO_TRADE", "rationale":
+                        "portfolio manager output failed checks; staying in cash"}
+
         review = self.risk.review(proposal, risk_facts, market) if cases else None
+        if review is not None:
+            review.notes = review.notes + grounding_flags
         rec = self._build_recommendation(run_date, proposal, review, snaps,
                                          unverified_market)
         self.ledger.record(rec)

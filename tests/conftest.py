@@ -11,21 +11,27 @@ import pytest  # noqa: E402
 from trading_team.models import Bar  # noqa: E402
 
 
-def make_bars(n=260, start=date(2025, 1, 1), base=100.0, drift=0.002, amp=0.01):
-    """Deterministic uptrending bars with a small sine wobble. Weekdays only."""
-    bars, price, day = [], base, start
-    i = 0
-    while len(bars) < n:
-        if day.weekday() < 5:
-            wobble = math.sin(i / 3) * amp
-            close = price * (1 + drift + wobble)
-            high = max(price, close) * 1.007
-            low = min(price, close) * 0.993
-            bars.append(Bar(day, round(price, 4), round(high, 4), round(low, 4),
-                            round(close, 4), 1_000_000.0))
-            price = close
-            i += 1
-        day += timedelta(days=1)
+END_DAY = date(2026, 1, 5)  # test run date; the last bar lands on it
+
+
+def make_bars(n=260, end=END_DAY, base=100.0, drift=0.002, amp=0.01):
+    """Deterministic uptrending bars with a small sine wobble. Weekdays only,
+    ending on `end` so the data is fresh for a run on that date."""
+    days, d = [], end
+    while len(days) < n:
+        if d.weekday() < 5:
+            days.append(d)
+        d -= timedelta(days=1)
+    days.reverse()
+    bars, price = [], base
+    for i, day in enumerate(days):
+        wobble = math.sin(i / 3) * amp
+        close = price * (1 + drift + wobble)
+        high = max(price, close) * 1.007
+        low = min(price, close) * 0.993
+        bars.append(Bar(day, round(price, 4), round(high, 4), round(low, 4),
+                        round(close, 4), 1_000_000.0))
+        price = close
     return bars
 
 
