@@ -67,6 +67,7 @@ cp watchlist.example.txt watchlist.txt  # edit with your tickers (NSE uses .NS)
 
 ```bash
 python -m trading_team run --watchlist watchlist.txt   # daily run, writes reports/YYYY-MM-DD.pdf
+python -m trading_team screen --watchlist watchlist.txt  # verified prices + indicators as JSON, no API key
 python -m trading_team settle                          # check open trades against later prices
 python -m trading_team stats                           # win rate, average return, counts
 ```
