@@ -81,8 +81,8 @@ def agent_feed(room: dict, rec: dict, stats: dict) -> list[dict]:
                   f"gate is met: 100 or more paper trades and 98% confidence after correction.",
         "info", kind="ledger")
     if room.get("decision") == "BUY":
-        add("PM", f"CEO, your call. The ticket for {sym(room['ticker'])} is ready on the Agent Room "
-                  f"tab. I will not place anything. You decide.", "bull", room["ticker"], "ask")
+        add("PM", f"CEO, your call. The ticket for {sym(room['ticker'])} is ready on the Morning "
+                  f"briefing tab. I will not place anything. You decide.", "bull", room["ticker"], "ask")
     return rows
 
 

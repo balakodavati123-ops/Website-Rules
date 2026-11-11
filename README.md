@@ -109,10 +109,19 @@ The sizing reproduces the daily report's BEL numbers exactly (see `tests/test_ti
 
 ## CEO Trading Desk dashboard
 
-`dashboard/` holds the source of a live dashboard (a Claude Artifact): holdings and profit and loss
-from INDmoney, the 08:45 pre-market plan with reasons, live alerts and a chart with moving averages
-and a projection line, the paper-trading lab with the real-money gate, MCX commodities and crypto
-(paper only), and an agent room where the agents' latest discussion replays and the CEO's ticket waits.
+`dashboard/` holds the source of a live dashboard (a Claude Artifact). It opens on the **Live floor**:
+a desk for each of the ten agents on a ring around the CEO, with data packets moving from the sources
+(INDmoney movers and quotes, NSE filings, CoinDCX crypto, the paper ledger) to Scout and from desk to
+desk as each name is checked. The other tabs hold holdings and profit and loss from INDmoney, the 08:45
+pre-market plan with reasons, live alerts and a chart with moving averages and a projection line, the
+paper-trading lab with the real-money gate, MCX commodities and crypto (paper only), and the morning
+briefing where the Claude agents' research run replays and the CEO's ticket waits.
+
+The floor desks are fixed rules running in the browser on live INDmoney prices (`dashboard/page/floor_*.js`):
+eight hard rules, a 0 to 100 screen score and paper position sizing. They cost nothing to run and they
+are a screen, not a forecast; the screen has not been backtested. `node dashboard/test/floor_calc_test.js`
+checks the rules on INDmoney-shaped rows. Crypto prices come from CoinDCX in rupees, cross-checked
+against Kraken (`dashboard/make_crypto.py`), because neither needs an account and both work in India.
 Page code is in `dashboard/page/`, saved data comes from `dashboard/build_seed.py`, and
 `project/DASHBOARD_PLAYBOOK.md` says how the daily session keeps it fresh.
 

@@ -12,7 +12,7 @@ entry (gap through the stop fills at the open), exit signal also fills at the ne
 R = profit / initial risk. Costs: 0.4% round trip for crypto, 0.15% for commodities.
 
 Data is Yahoo Finance daily bars: spot-like crypto pairs and COMEX/NYMEX futures. These are
-proxies for what trades on Gemini and MCX, not the same contracts.
+proxies for what trades on Indian crypto exchanges and MCX, not the same contracts.
 
 Usage: python backtest/macro_lab.py [--cache DIR]
 """

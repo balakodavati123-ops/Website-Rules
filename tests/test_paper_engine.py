@@ -110,3 +110,32 @@ def test_filing_reaction_is_measured_from_the_minute_bars():
     assert r["at_filing"] == 0.0 and r["since_filing"] > 5 and r["day_pct"] > 5
     assert read_of(r) == "Rose after the filing"
     assert read_of({"at_filing": 9.5, "since_filing": 1.0}) == "Moved before the filing"
+
+
+def test_crypto_quote_is_verified_only_when_two_sources_agree():
+    from datetime import datetime, timedelta, timezone
+    from dashboard.make_crypto import candle_rows, quote_row
+    now = datetime(2026, 11, 11, 20, 0, tzinfo=timezone(timedelta(hours=5, minutes=30)))
+    tick = {"last_price": "7388337.5", "change_24_hour": "-0.53", "high": "7499900", "low": "7300001"}
+    ok = quote_row("BTC", "Bitcoin", tick, 100.83, 73594.4, 93.9, [1, 2], now)        # 7388337/100.83 = 73,275: within 2%
+    assert ok["verified"] == "yes" and ok["premium_pct"] == 6.9 and ok["price_inr"] == 7388337.5
+    off = quote_row("BTC", "Bitcoin", tick, 100.83, 60000.0, 93.9, [], now)           # sources disagree by 22%
+    assert off["verified"] == "single source"
+    lone = quote_row("BTC", "Bitcoin", tick, 100.83, None, None, [], now)             # Kraken down
+    assert lone["verified"] == "single source" and lone["price_usd"] is None and lone["premium_pct"] is None
+    rows = candle_rows("BTC", "1d", [{"open": 2, "high": 3, "low": 1, "close": 2.5, "volume": 1, "time": 1794355200000},
+                                     {"open": 1, "high": 2, "low": 0.5, "close": 2, "volume": 1, "time": 1794268800000},
+                                     {"open": 0, "high": 2, "low": 0, "close": 1, "volume": 1, "time": 1794182400000}])
+    assert [r["c"] for r in rows] == [2, 2.5] and rows[0]["t"] < rows[1]["t"]          # oldest first, bad bar dropped
+
+
+def test_floor_rules_on_indmoney_shaped_rows():
+    """The floor's 8 rules, score and paper sizing are JavaScript; this runs their own check when node is installed."""
+    import shutil
+    import subprocess
+    import pytest
+    if not shutil.which("node"):
+        pytest.skip("node is not installed")
+    script = Path(__file__).resolve().parents[1] / "dashboard" / "test" / "floor_calc_test.js"
+    out = subprocess.run(["node", str(script)], capture_output=True, text=True)
+    assert out.returncode == 0, out.stderr[-800:]

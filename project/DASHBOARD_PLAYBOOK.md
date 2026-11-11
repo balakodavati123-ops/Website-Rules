@@ -2,17 +2,28 @@
 
 The dashboard is a Claude Artifact (https://claude.ai/artifact/4zc7CfzQEu6AiXdKt5Qp3N). Its numbers come two ways:
 
-- **Live, in the viewer's own browser:** holdings, net worth, quotes, movers, candles, MCX futures
-  (INDmoney connector) and crypto (Gemini connector). Nothing to do: it refreshes when the page opens.
+- **Live, in the viewer's own browser:** holdings, net worth, quotes, movers, candles and MCX futures
+  (INDmoney connector). Nothing to do: it refreshes when the page opens, and the Live floor's
+  "Live refresh" button re-reads prices every minute while the market is open.
 - **Saved by the desk after each run:** agent notes, today's plan, filing alerts, the paper ledger,
-  strategy tests. These are nine JSON datasets that the daily session must refresh.
+  strategy tests, and crypto prices and candles (CoinDCX in rupees, checked against Kraken; there is
+  no crypto connector that works in India, so these are saved, not streamed). These are eleven JSON
+  datasets; the daily session refreshes nine of them.
+
+## The Live floor
+
+The first tab. Ten desks and the CEO; the engine in `dashboard/page/floor_engine.js` plays one hand-off
+at a time, and every sentence a desk says is a cell of the calcs in `floor_data.js` (`floor_rows`,
+`floor_stats`, `floor_side`), so a reader can trace it. All limits live in one calc, `floor_rules`.
+These desks are fixed rules on live prices, not Claude calls: they screen and rank, they do not
+predict, and the screen is not backtested. The Claude agents' research is the morning run.
 
 ## Automatic refresh
 
 A scheduled task, "CEO Desk Daily Refresh", runs weekdays at 08:15 IST in a fresh cloud session. It
 clones this branch, runs the desk, the crypto and commodity signals, the filing alerts and the paper
-engine, then publishes seven datasets (agent feed, plan, filing alerts, crypto/commodity strategy tests,
-breakout signals, paper ledger, paper equity). It reads the dashboard's current paper ledger first, so
+engine, then publishes nine datasets (agent feed, plan, filing alerts, crypto/commodity strategy tests,
+breakout signals, paper ledger, paper equity, crypto quotes, crypto candles). It reads the dashboard's current paper ledger first, so
 trades carry over from day to day. If a step fails it leaves that dataset as it was and says so.
 The paper engine (`dashboard/paper_engine.py`) fills pending orders at the next open, closes trades on
 stop, target, exit signal or time stop, and writes the equity point. The dashboard turns the closed
@@ -31,13 +42,12 @@ trades into the confidence figure and the real-money gate.
 5. Never write to `files/*` or the live-query datasets in this routine. The page code only changes
    when the page itself is changed.
 
-## When the CEO says "approve SYMBOL"
+## Paper orders and the CEO's approval
 
-Append a row to `paper_ledger` (status OPEN with the actual entry, stop, target, qty and risk) and
-re-upload that one file. When a stop or target is hit, close the row (WIN, LOSS or TIME STOP, with
-`exit`, `pnl_rs` and `r_mult`) and add a point to `paper_equity`. The dashboard computes the
-confidence figure and the real-money gate from those rows by itself. Never approve on the CEO's
-behalf and never place an order.
+Paper orders need no approval: the paper engine opens and closes them by its own rules in the daily
+refresh, so the record cannot be flattered by picking which signals to take. The CEO's approval is for
+real money, and only after the gate passes. Even then the desk writes a ticket and the CEO places the
+order in INDmoney. Never approve on the CEO's behalf and never place an order.
 
 ## Contract rolls (MCX futures)
 
@@ -48,6 +58,6 @@ update `datasets/comm_live` (`source.args.ind_keys`) and the enum for `sym` in `
 
 ## Changing the page
 
-Edit `dashboard/page/*`, test with `D3=<path to d3.min.js> node dashboard/test/harness.js OUTDIR`
-(a headless smoke test with a mock of the platform), run `python dashboard/pack.py dashboard/assets.json`,
+Edit `dashboard/page/*`, test with `node dashboard/test/floor_calc_test.js` (the floor's rules) and
+`D3=<path to d3.min.js> node dashboard/test/harness.js OUTDIR` (a headless smoke test with a mock of the platform), run `python dashboard/pack.py dashboard/assets.json`,
 then write the changed documents with ArtifactData `set` (pin `if_version`).

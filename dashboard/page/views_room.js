@@ -1,4 +1,4 @@
-/* Agent room: the agents' discussion replayed message by message, and the CEO's ticket. */
+/* Morning briefing: the research run replayed message by message, and the CEO's ticket. */
 (function () {
   const { inr, num, pct, cls, el, tag, mk, need } = CD;
   const COLOR = { DATA: ['#29d3ee', '#04101c'], TECH: ['#4f8cff', '#fff'], FUND: ['#a184ff', '#fff'], SENT: ['#ff7ac6', '#fff'], CALL: ['#ffb64a', '#2a1a00'], BULL: ['#2de3a5', '#04201a'], BEAR: ['#ff5f75', '#fff'], RISK: ['#ffb64a', '#2a1a00'], PM: ['#4f8cff', '#fff'], LEDGER: ['#5b7093', '#fff'] };
@@ -40,7 +40,7 @@
       add('Live price', document.createTextNode(t.live === null ? '—' : `${num(t.live, 2)} (${pct(t.ref_gap_pct)} vs signal)`));
       add('Entry limit', document.createTextNode(num(t.t_entry, 2))); add('Stop (5% below)', document.createTextNode(num(t.t_stop, 2))); add('Target (20% above)', document.createTextNode(num(t.t_target, 2)));
       add('Quantity', document.createTextNode(String(t.t_qty))); add('Rupees at risk', document.createTextNode(inr(t.t_risk))); add('Position value', document.createTextNode(inr(t.t_value)));
-      const ex = el('p', 'note', why.join(' ')); const how = el('p', 'note', `To record this paper trade, tell Claude in the chat: approve ${t.symbol}. The Scribe then adds it to the ledger. For real money, later, the order is always yours to place in INDmoney.`);
+      const ex = el('p', 'note', why.join(' ')); const how = el('p', 'note', 'This is a paper order. The Scribe fills it by itself at the next open, in the morning run, if the gap is within 3%. For real money, later, the order is always yours to place in INDmoney.');
       const text = [`PAPER TICKET: BUY ${t.symbol} (${t.strategy})`, `Entry LIMIT ${num(t.t_entry, 2)}  Qty ${t.t_qty}`, `Stop ${num(t.t_stop, 2)}  Target ${num(t.t_target, 2)}`, `Risk ${inr(t.t_risk)}  Value ${inr(t.t_value)}`, `Status ${status}: ${why.join(' ')}`].join('\n');
       const btn = el('button', 'cd-btn pri', 'Copy ticket'); btn.type = 'button'; btn.dataset.label = 'Copy ticket'; btn.style.marginTop = '8px'; btn.addEventListener('click', () => CD.copy(text, btn));
       w.append(top, dl, ex, how, btn); return w; })); });

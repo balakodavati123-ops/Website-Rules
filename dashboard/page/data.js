@@ -44,18 +44,6 @@ dash.loader('candles', { description: 'Candles for the chosen instrument and tim
   fn: ({ answer }) => { const a = typeof answer === 'string' ? JSON.parse(answer) : answer;
     return (a.candles || []).map((c) => ({ t: c.datetime_ist, o: c.open, h: c.high, l: c.low, c: c.close, v: c.volume })); } });
 
-['crypto_btc', 'crypto_eth', 'crypto_sol'].forEach((id) => {
-  dash.loader(id, { description: 'Gemini 24-hour ticker with the last 24 hourly prices.',
-    fn: ({ answer }) => { const txt = typeof answer === 'string' ? answer : JSON.stringify(answer); const i = txt.indexOf('{'); const j = txt.lastIndexOf('}');
-      const a = JSON.parse(txt.slice(i, j + 1)); const num = (x) => (x === undefined || x === null || x === '' ? null : Number(x));
-      return [{ symbol: a.symbol, open: num(a.open), high: num(a.high), low: num(a.low), close: num(a.close), bid: num(a.bid), ask: num(a.ask), spark: JSON.stringify((a.changes || []).map(Number).reverse()) }]; } });
-});
-
-dash.loader('crypto_candles', { description: 'Gemini candles for the chosen coin and timeframe (latest 160).',
-  fn: ({ answer }) => { const txt = typeof answer === 'string' ? answer : JSON.stringify(answer); const i = txt.indexOf('['); const j = txt.lastIndexOf(']');
-    const arr = JSON.parse(txt.slice(i, j + 1)); const rows = arr.map((r) => ({ t: new Date(Number(r[0])).toISOString(), o: Number(r[1]), h: Number(r[2]), l: Number(r[3]), c: Number(r[4]), v: Number(r[5]) }));
-    rows.sort((x, y) => (x.t < y.t ? -1 : 1)); return rows.slice(-160); } });
-
 dash.loader('mf_ideas', { description: 'Top-ranked mutual funds in three long-term categories, from INDmoney.',
   fn: ({ answer }) => { const a = typeof answer === 'string' ? JSON.parse(answer) : answer;
     return (a.data || []).map((f) => ({ name: f.name, category: f.category, rank: f.ind_ranking && f.ind_ranking.rank, ret_1y: f.return_1yr, ret_3y: f.return_3yr, ret_5y: f.return_5yr, expense: f.expense_ratio, risk: f.risk, nav: f.nav, aum: f.aum, min_sip: f.min_sip, rating: f.rating })); } });
@@ -114,10 +102,6 @@ dash.calc('alerts_live', { inputs: ['m_gainers', 'm_losers', 'm_52high', 'm_uppe
 
 dash.calc('plan_join', { inputs: ['plan_today', 'watch_live'], title: 'Today\'s plan with live prices', description: 'The pre-market watchlist joined to live quotes where the stock is on the live list.',
   fn: (plan, live) => plan.map((p) => { const l = live.find((x) => x.symbol === p.symbol) || {}; return { ...p, live: l.live ?? null, chg_pct: l.chg_pct ?? null, target: l.target ?? null, upside: l.upside ?? null }; }) });
-
-dash.calc('crypto_all', { inputs: ['crypto_btc', 'crypto_eth', 'crypto_sol'], title: 'Crypto board', description: 'Bitcoin, Ethereum and Solana with 24-hour change.',
-  fn: (btc, eth, sol) => { const nm = { BTCUSD: 'Bitcoin', ETHUSD: 'Ethereum', SOLUSD: 'Solana' };
-    return [].concat(btc, eth, sol).map((r) => ({ ...r, name: nm[r.symbol] || r.symbol, chg_pct: r.open ? ((r.close / r.open) - 1) * 100 : null })); } });
 
 dash.calc('ticket_view', { inputs: ['paper_ledger', 'watch_live', 'desk_rules', 'paper_stats'], title: 'Pending paper tickets', description: 'Each pending or open paper order with its live price and the size it would take today.',
   fn: (ledger, live, rules, paper) => { const rule = (k) => (rules.find((r) => r.key === k) || {}).value; const eq = (paper[0] || {}).equity || rule('paper_start');

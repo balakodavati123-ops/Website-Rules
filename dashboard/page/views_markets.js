@@ -1,8 +1,10 @@
-/* Commodities and crypto tab. MCX futures come from INDmoney, crypto from Gemini. */
+/* Commodities and crypto tab. MCX futures come live from INDmoney; crypto is saved from CoinDCX and checked against Kraken. */
 (function () {
   const { inr, num, pct, cls, el, tag, mk, need } = CD;
   const STATUS = { APPROVED: 'g', PROBATION: 'a', REJECTED: 'r' };
-  const CSYMS = [['BTCUSD', 'Bitcoin'], ['ETHUSD', 'Ethereum'], ['SOLUSD', 'Solana']]; const CTFS = [['1day', 'Daily'], ['6hr', '6-hour'], ['1hr', 'Hourly']];
+  const CSYMS = [['BTC', 'Bitcoin'], ['ETH', 'Ethereum'], ['SOL', 'Solana']]; const CTFS = [['1d', 'Daily'], ['1h', 'Hourly'], ['15m', '15-minute']];
+  /* A coin or timeframe saved in an older link falls back to the first choice. */
+  const pick = (list, v) => (list.some((x) => x[0] === v) ? v : list[0][0]);
   const rangeBar = (live, lo, hi) => { const rb = el('div', 'rangebar'); const span = hi - lo; const i = el('i'); i.style.left = (span > 0 ? Math.min(100, Math.max(0, ((live - lo) / span) * 100)) : 50) + '%'; rb.appendChild(i); return rb; };
 
   dash.draw('lead_markets', (p) => { const r = need(p, ['metals_est']); if (!r) return; const rows = r[0]; const g = rows.find((x) => x.metal === 'Gold') || {}, s = rows.find((x) => x.metal === 'Silver') || {}, b = rows.find((x) => x.metal === 'Both') || {};
@@ -16,15 +18,22 @@
       const lh = CD.lohi(num(x.low, x.low < 1000 ? 2 : 0), 'day range', num(x.high, x.high < 1000 ? 2 : 0));
       const meta = el('div', 'sub'); meta.style.marginTop = '6px'; meta.textContent = `Open interest ${num(x.oi, 0)} (${pct(x.oi_chg, 1)}) · expires ${String(x.expiry || '').slice(0, 10)}`; c.append(v, d, rangeBar(x.live, x.low, x.high), lh, meta); return c; })); });
 
-  dash.draw('crypto_cards', (box) => { const r = need(box, ['crypto_all']); if (!r) return;
-    box.replaceChildren(...r[0].map((x) => { const c = el('div', 'crypto-card'); c.appendChild(el('div', 'sub', `${x.name} · ${x.symbol}`)); const v = el('div', 'num'); v.style.cssText = 'font-size:20px;font-weight:650;margin-top:2px';
-      v.append(document.createTextNode('$'), mk(num(x.close, 2), '', 'crypto_all', 'close', 'symbol=' + x.symbol)); const d = el('div', 'num ' + cls(x.chg_pct)); d.append(mk(pct(x.chg_pct), '', 'crypto_all', 'chg_pct', 'symbol=' + x.symbol), document.createTextNode(' since the 24-hour open'));
-      const sp = el('div'); sp.style.marginTop = '6px'; let arr = []; try { arr = JSON.parse(x.spark); } catch (e) { arr = []; } CD.spark(sp, arr, (x.chg_pct || 0) >= 0 ? CD.PAL.green : CD.PAL.red, 200, 40);
-      const lh = CD.lohi('$' + num(x.low, 2), '24h range', '$' + num(x.high, 2)); c.append(v, d, sp, rangeBar(x.close, x.low, x.high), lh); return c; })); });
+  dash.draw('crypto_stamp', (em) => { const d = dash.data('crypto_quotes'); em.textContent = d.status === 'ok' && d.data.length ? `CoinDCX, checked against Kraken · saved ${d.data[0].as_of_hm} IST` : '—'; });
+  dash.draw('crypto_cards', (box) => { const r = need(box, ['crypto_quotes']); if (!r) return;
+    box.replaceChildren(...r[0].map((x) => { const c = el('div', 'crypto-card'), w = 'symbol=' + x.symbol; const top = el('div', 'sub'); top.append(`${x.name} · ${x.symbol} `, tag(x.verified === 'yes' ? 'two sources agree' : 'single source', x.verified === 'yes' ? 'g' : 'a'));
+      const v = el('div', 'num'); v.style.cssText = 'font-size:20px;font-weight:650;margin-top:2px'; v.append('₹', mk(num(x.price_inr, 0), '', 'crypto_quotes', 'price_inr', w));
+      const d = el('div', 'num ' + cls(x.chg_24h_pct)); d.append(mk(pct(x.chg_24h_pct), '', 'crypto_quotes', 'chg_24h_pct', w), ' in 24 hours');
+      const sp = el('div'); sp.style.marginTop = '6px'; let arr = []; try { arr = JSON.parse(x.spark); } catch (e) { arr = []; } CD.spark(sp, arr, (x.chg_24h_pct || 0) >= 0 ? CD.PAL.green : CD.PAL.red, 200, 40);
+      const g = el('div', 'sub'); g.style.marginTop = '6px';
+      if (x.price_usd == null) g.textContent = 'Global dollar price unavailable: Data Unverified.';
+      else { g.append('Global price $', mk(num(x.price_usd, 2), '', 'crypto_quotes', 'price_usd', w)); if (x.premium_pct != null) g.append(' · India premium ', mk(pct(x.premium_pct, 1), '', 'crypto_quotes', 'premium_pct', w)); }
+      c.append(top, v, d, sp, rangeBar(x.price_inr, x.low_inr, x.high_inr), CD.lohi('₹' + num(x.low_inr, 0), '24h range', '₹' + num(x.high_inr, 0)), g); return c; })); });
 
-  dash.draw('sel_csym', (sel) => { sel.replaceChildren(...CSYMS.map(([k, n]) => new Option(n, k))); sel.value = dash.params().csym || 'BTCUSD'; sel.onchange = () => dash.setParams({ csym: sel.value }); });
-  dash.draw('sel_ctf', (sel) => { sel.replaceChildren(...CTFS.map(([k, n]) => new Option(n, k))); sel.value = dash.params().ctf || '1day'; sel.onchange = () => dash.setParams({ ctf: sel.value }); });
-  dash.draw('candle_crypto', (box) => { const r = need(box, ['crypto_candles']); if (!r) return; const rows = r[0].map((x) => ({ t: new Date(x.t), o: x.o, h: x.h, l: x.l, c: x.c, v: x.v })); CD.candleChart(box, rows, { iv: dash.params().ctf, label: 'Crypto candlestick chart with moving averages and a projection line' }); });
+  dash.draw('sel_csym', (sel) => { sel.replaceChildren(...CSYMS.map(([k, n]) => new Option(n, k))); sel.value = pick(CSYMS, dash.params().csym); sel.onchange = () => dash.setParams({ csym: sel.value }); });
+  dash.draw('sel_ctf', (sel) => { sel.replaceChildren(...CTFS.map(([k, n]) => new Option(n, k))); sel.value = pick(CTFS, dash.params().ctf); sel.onchange = () => dash.setParams({ ctf: sel.value }); });
+  dash.draw('candle_crypto', (box) => { const r = need(box, ['crypto_candles']); if (!r) return; const sym = pick(CSYMS, dash.params().csym), tf = pick(CTFS, dash.params().ctf);
+    const rows = r[0].filter((x) => x.symbol === sym && x.tf === tf).map((x) => ({ t: new Date(x.t), o: x.o, h: x.h, l: x.l, c: x.c, v: x.v }));
+    CD.candleChart(box, rows, { iv: tf, label: `${sym} in rupees: candles with moving averages and a projection line` }); });
 
   dash.draw('metals_panel', (box) => { const r = need(box, ['metals_est']); if (!r) return; const t = el('table'); const tb = el('tbody');
     r[0].forEach((x) => { const tr = el('tr'); const a = el('td', '', x.metal); const b = el('td', 'num r', inr(x.held)); const c = el('td', 'num r ' + cls(x.fut_chg_pct), x.fut_chg_pct === null ? '' : pct(x.fut_chg_pct)); const d = el('td', 'num r ' + cls(x.est_move));

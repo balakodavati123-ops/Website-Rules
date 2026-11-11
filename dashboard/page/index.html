@@ -5,7 +5,7 @@
   <header class="cd-top" id="cd-header">
     <div class="cd-brand">
       <div class="cd-logo" aria-hidden="true"></div>
-      <div><h1 id="cd-title">CEO Trading Desk</h1><small>Your agents report here. You make the final call.</small></div>
+      <div><h1 id="cd-title">CEO Trading Desk</h1><small>Your desks work the tape. You make the final call.</small></div>
     </div>
     <div class="cd-pulse">
       <span class="chip" data-draw="chip_session">—</span>
@@ -15,16 +15,115 @@
   </header>
 
   <nav class="cd-tabs" role="tablist" aria-label="Desk sections">
-    <button class="cd-tab" role="tab" id="tabbtn-command" data-tab="command" aria-selected="true">Command</button>
+    <button class="cd-tab" role="tab" id="tabbtn-floor" data-tab="floor" aria-selected="true">Live floor</button>
+    <button class="cd-tab" role="tab" id="tabbtn-command" data-tab="command" aria-selected="false">Command</button>
     <button class="cd-tab" role="tab" id="tabbtn-premarket" data-tab="premarket" aria-selected="false">Pre-market 08:45</button>
     <button class="cd-tab" role="tab" id="tabbtn-alerts" data-tab="alerts" aria-selected="false">Live alerts</button>
     <button class="cd-tab" role="tab" id="tabbtn-algo" data-tab="algo" aria-selected="false">Algo lab</button>
     <button class="cd-tab" role="tab" id="tabbtn-markets" data-tab="markets" aria-selected="false">Commodities and crypto</button>
-    <button class="cd-tab" role="tab" id="tabbtn-room" data-tab="room" aria-selected="false">Agent room</button>
+    <button class="cd-tab" role="tab" id="tabbtn-room" data-tab="room" aria-selected="false">Morning briefing</button>
   </nav>
 
+  <!-- ============ LIVE FLOOR ============ -->
+  <section id="tab-floor" role="tabpanel" aria-labelledby="tabbtn-floor">
+    <div class="fl-bar" id="floor-bar">
+      <span class="chip wrap" data-draw="fl_mode" data-source="floor_stats">—</span>
+      <div class="fl-kv"><small>Loop</small><b class="num" data-draw="fl_num" data-k="loop">—</b></div>
+      <div class="fl-kv"><small>Hand-offs</small><b class="num" data-draw="fl_num" data-k="total">—</b></div>
+      <div class="fl-kv"><small>Names on the tape</small><b class="num" data-draw="fl_num" data-k="seen" data-source="floor_stats" data-field="seen" data-row="0">—</b></div>
+      <div class="fl-kv"><small>Killed by a rule</small><b class="num down" data-draw="fl_num" data-k="killed" data-source="floor_stats" data-field="killed" data-row="0">—</b></div>
+      <div class="fl-kv"><small>Cleared all 8</small><b class="num" data-draw="fl_num" data-k="survivors" data-source="floor_stats" data-field="survivors" data-row="0">—</b></div>
+      <div class="fl-kv"><small>Setups</small><b class="num up" data-draw="fl_num" data-k="setups" data-source="floor_stats" data-field="setups" data-row="0">—</b></div>
+      <div class="fl-kv"><small>Prices as of</small><b class="num" data-draw="fl_asof" data-source="floor_stats" data-field="quote_time" data-row="0">—</b></div>
+      <div class="fl-actions">
+        <button class="cd-btn tog" id="btn-live" type="button" aria-pressed="false">Live refresh</button>
+        <button class="cd-btn" id="btn-pull" type="button">Pull prices now</button>
+        <button class="cd-btn tog" id="btn-pause" type="button" aria-pressed="false">Pause desks</button>
+      </div>
+    </div>
+    <div class="fl-grid">
+      <aside class="fl-desks" id="floor-desks" aria-label="The desks">
+        <article class="desk" id="desk-DATA" data-agent="DATA" style="--c:#29d3ee"><header><i class="ic" style="color:#04101c">DA</i><div><b>Scout</b><small>Data desk · <b data-draw="desk_n" data-agent="DATA">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="DATA">—</span></header>
+          <p class="dk-rule">Pulls every list. No price, no opinion.</p><p class="dk-now" data-draw="desk_now" data-agent="DATA">—</p></article>
+        <article class="desk" id="desk-TECH" data-agent="TECH" style="--c:#4f8cff"><header><i class="ic" style="color:#fff">TE</i><div><b>Chartist</b><small>Technical desk · <b data-draw="desk_n" data-agent="TECH">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="TECH">—</span></header>
+          <p class="dk-rule">Eight hard rules. One fail and the name is out.</p><p class="dk-now" data-draw="desk_now" data-agent="TECH">—</p></article>
+        <article class="desk" id="desk-SENT" data-agent="SENT" style="--c:#ff7ac6"><header><i class="ic" style="color:#fff">SE</i><div><b>Pulse</b><small>Crowd and breadth · <b data-draw="desk_n" data-agent="SENT">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="SENT">—</span></header>
+          <p class="dk-rule">Reads turnover and breadth, never rumours.</p><p class="dk-now" data-draw="desk_now" data-agent="SENT">—</p></article>
+        <article class="desk" id="desk-FUND" data-agent="FUND" style="--c:#a184ff"><header><i class="ic" style="color:#fff">FU</i><div><b>Ledgerhand</b><small>Fundamentals · <b data-draw="desk_n" data-agent="FUND">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="FUND">—</span></header>
+          <p class="dk-rule">Scores each survivor out of 100.</p><p class="dk-now" data-draw="desk_now" data-agent="FUND">—</p></article>
+        <article class="desk" id="desk-CALL" data-agent="CALL" style="--c:#ffb64a"><header><i class="ic" style="color:#2a1a00">CA</i><div><b>Echo</b><small>Filings and calls · <b data-draw="desk_n" data-agent="CALL">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="CALL">—</span></header>
+          <p class="dk-rule">Checks what the company filed, and when.</p><p class="dk-now" data-draw="desk_now" data-agent="CALL">—</p></article>
+        <article class="desk" id="desk-BULL" data-agent="BULL" style="--c:#2de3a5"><header><i class="ic" style="color:#04201a">BU</i><div><b>Bull</b><small>Bull researcher · <b data-draw="desk_n" data-agent="BULL">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="BULL">—</span></header>
+          <p class="dk-rule">Makes the best case for buying.</p><p class="dk-now" data-draw="desk_now" data-agent="BULL">—</p></article>
+        <article class="desk" id="desk-BEAR" data-agent="BEAR" style="--c:#ff5f75"><header><i class="ic" style="color:#fff">BE</i><div><b>Bear</b><small>Bear researcher · <b data-draw="desk_n" data-agent="BEAR">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="BEAR">—</span></header>
+          <p class="dk-rule">Makes the best case against.</p><p class="dk-now" data-draw="desk_now" data-agent="BEAR">—</p></article>
+        <article class="desk" id="desk-RISK" data-agent="RISK" style="--c:#ffb64a"><header><i class="ic" style="color:#2a1a00">WA</i><div><b>Warden</b><small>Risk manager · <b data-draw="desk_n" data-agent="RISK">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="RISK">—</span></header>
+          <p class="dk-rule">Sizes from the stop. Can veto anything.</p><p class="dk-now" data-draw="desk_now" data-agent="RISK">—</p></article>
+        <article class="desk" id="desk-PM" data-agent="PM" style="--c:#4f8cff"><header><i class="ic" style="color:#fff">CH</i><div><b>Chief</b><small>Portfolio manager · <b data-draw="desk_n" data-agent="PM">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="PM">—</span></header>
+          <p class="dk-rule">Weighs it all and reports to you.</p><p class="dk-now" data-draw="desk_now" data-agent="PM">—</p></article>
+        <article class="desk" id="desk-LEDGER" data-agent="LEDGER" style="--c:#8ea3c4"><header><i class="ic" style="color:#04101c">SC</i><div><b>Scribe</b><small>Ledger · <b data-draw="desk_n" data-agent="LEDGER">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="LEDGER">—</span></header>
+          <p class="dk-rule">Writes down every paper order, win or lose.</p><p class="dk-now" data-draw="desk_now" data-agent="LEDGER">—</p></article>
+        <article class="desk" id="desk-CEO" data-agent="CEO" style="--c:#cfe0ff"><header><i class="ic" style="color:#04101c">CEO</i><div><b>You</b><small>CEO · <b data-draw="desk_n" data-agent="CEO">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="CEO">—</span></header>
+          <p class="dk-rule">The final call. Nothing is placed without you.</p><p class="dk-now" data-draw="desk_now" data-agent="CEO">—</p></article>
+      </aside>
+      <div class="fl-main">
+        <div class="card" id="card-stage">
+          <h2>The floor <em>sources feed Scout, each desk hands on to the next, the Chief reports to you</em></h2>
+          <div class="fl-stage" data-draw="floor_stage" data-source="floor_rows floor_stats floor_side paper_live"></div>
+          <div class="fl-phases" id="floor-phases"><span data-ph="0">Pull</span><span data-ph="1">Rules</span><span data-ph="2">Crowd</span><span data-ph="3">Books</span><span data-ph="4">Filings</span><span data-ph="5">Debate</span><span data-ph="6">Size</span><span data-ph="7">Verdict</span><span data-ph="8">Log</span></div>
+          <p class="fl-note num" data-draw="fl_note">—</p>
+          <div class="fl-say" id="floor-say" data-draw="fl_say" data-source="floor_rows floor_stats floor_side"></div>
+          <div class="fl-flowrow"><small>This batch</small><div class="fl-flow" data-draw="fl_flow" data-source="floor_rows"></div></div>
+        </div>
+        <div class="fl-two">
+          <div class="card" id="card-rules">
+            <h2>Chartist: 8 hard rules <em class="num" data-draw="rule_note">—</em></h2>
+            <ol class="rules" id="rules-list">
+            <li data-rule="1"><span>Enough money traded</span><span class="lim hs" data-draw="rule_lim" data-k="1" data-source="floor_rules" data-field="show" data-where="n=1">—</span><b data-draw="rule_val" data-k="1" data-source="floor_rows">—</b></li>
+            <li data-rule="2"><span>Not a penny stock</span><span class="lim hs" data-draw="rule_lim" data-k="2" data-source="floor_rules" data-field="show" data-where="n=2">—</span><b data-draw="rule_val" data-k="2" data-source="floor_rows">—</b></li>
+            <li data-rule="3"><span>Not locked at its upper circuit</span><span class="lim hs" data-draw="rule_lim" data-k="3" data-source="floor_rules" data-field="show" data-where="n=3">—</span><b data-draw="rule_val" data-k="3" data-source="floor_rows">—</b></li>
+            <li data-rule="4"><span>Has not already run too far today</span><span class="lim hs" data-draw="rule_lim" data-k="4" data-source="floor_rules" data-field="show" data-where="n=4">—</span><b data-draw="rule_val" data-k="4" data-source="floor_rows">—</b></li>
+            <li data-rule="5"><span>Not down on the day</span><span class="lim hs" data-draw="rule_lim" data-k="5" data-source="floor_rules" data-field="show" data-where="n=5">—</span><b data-draw="rule_val" data-k="5" data-source="floor_rows">—</b></li>
+            <li data-rule="6"><span>Holding near the day's high</span><span class="lim hs" data-draw="rule_lim" data-k="6" data-source="floor_rules" data-field="show" data-where="n=6">—</span><b data-draw="rule_val" data-k="6" data-source="floor_rows">—</b></li>
+            <li data-rule="7"><span>At or near its 52-week high</span><span class="lim hs" data-draw="rule_lim" data-k="7" data-source="floor_rules" data-field="show" data-where="n=7">—</span><b data-draw="rule_val" data-k="7" data-source="floor_rows">—</b></li>
+            <li data-rule="8"><span>Market not in panic (India VIX)</span><span class="lim hs" data-draw="rule_lim" data-k="8" data-source="floor_rules" data-field="show" data-where="n=8">—</span><b data-draw="rule_val" data-k="8" data-source="floor_rows">—</b></li>
+            </ol>
+          </div>
+          <div class="card" id="card-score">
+            <h2>Screen score <em data-draw="sc_name">—</em></h2>
+            <ul class="factors" id="score-parts">
+            <li><span>Closeness to the 52-week high</span><div class="meter"><b class="fbar" data-f="1"></b></div><span class="pts"><b data-draw="sc_val" data-k="1" data-source="floor_rows">—</b> <small data-draw="sc_max" data-k="1" data-source="floor_rules" data-field="show" data-where="key=f1">—</small></span></li>
+            <li><span>Holding the day's gains</span><div class="meter"><b class="fbar" data-f="2"></b></div><span class="pts"><b data-draw="sc_val" data-k="2" data-source="floor_rows">—</b> <small data-draw="sc_max" data-k="2" data-source="floor_rules" data-field="show" data-where="key=f2">—</small></span></li>
+            <li><span>Size of today's move</span><div class="meter"><b class="fbar" data-f="3"></b></div><span class="pts"><b data-draw="sc_val" data-k="3" data-source="floor_rows">—</b> <small data-draw="sc_max" data-k="3" data-source="floor_rules" data-field="show" data-where="key=f3">—</small></span></li>
+            <li><span>Money traded</span><div class="meter"><b class="fbar" data-f="4"></b></div><span class="pts"><b data-draw="sc_val" data-k="4" data-source="floor_rows">—</b> <small data-draw="sc_max" data-k="4" data-source="floor_rules" data-field="show" data-where="key=f4">—</small></span></li>
+            <li><span>Company size</span><div class="meter"><b class="fbar" data-f="5"></b></div><span class="pts"><b data-draw="sc_val" data-k="5" data-source="floor_rows">—</b> <small data-draw="sc_max" data-k="5" data-source="floor_rules" data-field="show" data-where="key=f5">—</small></span></li>
+            <li><span>Analyst view</span><div class="meter"><b class="fbar" data-f="6"></b></div><span class="pts"><b data-draw="sc_val" data-k="6" data-source="floor_rows">—</b> <small data-draw="sc_max" data-k="6" data-source="floor_rules" data-field="show" data-where="key=f6">—</small></span></li>
+            </ul>
+            <div class="fl-gauge" data-draw="sc_gauge" data-source="floor_rows floor_rules"></div>
+            <p class="note">The score ranks survivors for your attention. It has not been backtested and is not a forecast.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="fl-side">
+        <div class="card" id="card-paper">
+          <h2>Paper account <em>pretend money</em></h2>
+          <div class="fl-eq"><b data-draw="fl_ps" data-k="equity" data-source="paper_stats" data-field="equity" data-row="0">—</b> <small class="num" data-draw="fl_ps" data-k="pnl" data-source="paper_stats" data-field="pnl" data-row="0">—</small></div>
+          <div data-draw="fl_spark" data-source="paper_equity"></div>
+          <div class="fl-psgrid"><div><small>Closed trades</small><b data-draw="fl_ps" data-k="trades" data-source="paper_stats" data-field="trades" data-row="0">—</b></div><div><small>Needed</small><b data-draw="fl_ps" data-k="need_trades" data-source="paper_stats" data-field="need_trades" data-row="0">—</b></div><div><small>Win rate</small><b data-draw="fl_ps" data-k="win_rate" data-source="paper_stats" data-field="win_rate" data-row="0">—</b></div><div><small>Confidence</small><b data-draw="fl_ps" data-k="confidence" data-source="paper_stats" data-field="confidence" data-row="0">—</b></div><div><small>Pending</small><b data-draw="fl_ps" data-k="pending" data-source="paper_stats" data-field="pending" data-row="0">—</b></div><div><small>Open</small><b data-draw="fl_ps" data-k="open_positions" data-source="paper_stats" data-field="open_positions" data-row="0">—</b></div></div>
+        </div>
+        <div class="card" id="card-decide"><h2>You approve <em>nothing is placed</em></h2><div data-draw="fl_decide" data-source="paper_live floor_rows"></div></div>
+        <div class="card" id="card-ladder"><h2>Warden's ladder <em>entry, stop, target</em></h2><div class="chartbox" data-draw="fl_ladder" data-source="floor_rows" style="min-height:150px"></div></div>
+      </aside>
+    </div>
+    <div class="cd-grid" style="margin-top:12px">
+      <div class="card c7" id="card-activity"><h2>Desk activity <em>newest on the right</em></h2><div class="chartbox" data-draw="fl_timeline" style="min-height:90px"></div></div>
+      <div class="card c5" id="card-log"><h2>desk.log <em>every hand-off as it happens</em></h2><div class="fl-log" data-draw="fl_log"></div></div>
+      <div class="card c12"><p class="note" style="margin-top:0">What you are watching: the desks on this floor follow fixed rules on live INDmoney prices, in your browser, all day and at no cost. They screen and rank; they do not predict, and the screen itself has not been backtested. The Claude agents that read results, filings and earnings calls run once each weekday morning and report on the Morning briefing tab. "Live refresh" re-reads prices every minute while the market is open and switches itself off after 30 minutes. No order is ever placed from this page.</p></div>
+    </div>
+  </section>
+
   <!-- ============ COMMAND ============ -->
-  <section id="tab-command" role="tabpanel" aria-labelledby="tabbtn-command">
+  <section id="tab-command" role="tabpanel" aria-labelledby="tabbtn-command" hidden>
     <div class="cd-grid">
       <div class="card c12"><p class="lead" data-draw="lead_command" data-source="kpi_rows">—</p></div>
       <div class="c12 kpis" data-draw="kpis" data-source="kpi_rows"></div>
@@ -137,8 +236,9 @@
     <div class="cd-grid">
       <div class="card c12"><p class="lead" data-draw="lead_markets" data-source="metals_est">—</p></div>
       <div class="card c12" id="card-mcx"><h2>MCX futures <em>live from INDmoney, 09:00 to 23:30</em></h2><div class="cardgrid" data-draw="mcx_cards" data-source="comm_live"></div></div>
-      <div class="card c12" id="card-crypto"><h2>Crypto <em>live from Gemini, around the clock</em></h2><div class="cardgrid" data-draw="crypto_cards" data-source="crypto_all"></div></div>
-      <div class="card c8" id="card-cchart"><h2>Crypto chart</h2>
+      <div class="card c12" id="card-crypto"><h2>Crypto in rupees <em data-draw="crypto_stamp" data-source="crypto_quotes">—</em></h2><div class="cardgrid" data-draw="crypto_cards" data-source="crypto_quotes"></div>
+        <p class="note">Rupee prices from CoinDCX, an Indian exchange, cross-checked against Kraken's dollar price. They are saved by the morning run, not streamed, so check the time above. Rupee prices usually sit above the global price.</p></div>
+      <div class="card c8" id="card-cchart"><h2>Crypto chart <em>rupees, CoinDCX</em></h2>
         <div class="toolbar"><select class="dash-select" data-draw="sel_csym" aria-label="Coin" data-source="crypto_candles"></select><select class="dash-select" data-draw="sel_ctf" aria-label="Timeframe" data-source="crypto_candles"></select></div>
         <div class="chartbox" data-draw="candle_crypto" data-source="crypto_candles" style="min-height:300px"></div></div>
       <div class="card c4" id="card-metalsest"><h2>Your metals today <em>estimate</em></h2><div data-draw="metals_panel" data-source="metals_est"></div>
@@ -151,50 +251,31 @@
     </div>
   </section>
 
-  <!-- ============ AGENT ROOM ============ -->
+  <!-- ============ MORNING BRIEFING ============ -->
   <section id="tab-room" role="tabpanel" aria-labelledby="tabbtn-room" hidden>
     <div class="cd-grid">
-      <div class="card c5" id="card-team">
-        <h2>The team <em>ten agents, one CEO</em></h2>
-        <svg class="constellation" viewBox="0 0 520 430" role="img" aria-label="Ten agents arranged in a ring around the CEO. The active agent glows while it speaks.">
-          <circle class="orbit" cx="260" cy="215" r="150" fill="none" stroke="#1c2c48" stroke-dasharray="2 6"/>
-          <g id="spokes">
-            <path class="edge" data-edge="DATA" d="M260 65 L260 215"/><path class="edge" data-edge="TECH" d="M348 94 L260 215"/><path class="edge" data-edge="FUND" d="M403 169 L260 215"/>
-            <path class="edge" data-edge="SENT" d="M403 261 L260 215"/><path class="edge" data-edge="CALL" d="M348 336 L260 215"/><path class="edge" data-edge="BULL" d="M260 365 L260 215"/>
-            <path class="edge" data-edge="BEAR" d="M172 336 L260 215"/><path class="edge" data-edge="RISK" d="M117 261 L260 215"/><path class="edge" data-edge="PM" d="M117 169 L260 215"/><path class="edge" data-edge="LEDGER" d="M172 94 L260 215"/>
-          </g>
-          <g class="node" data-agent="DATA"><circle class="node-ring" cx="260" cy="65" r="25"/><circle cx="260" cy="65" r="18" fill="#29d3ee"/><text x="260" y="69" text-anchor="middle" fill="#04101c" style="font-weight:700">DA</text><text class="nm" x="260" y="104" text-anchor="middle">Scout</text></g>
-          <g class="node" data-agent="TECH"><circle class="node-ring" cx="348" cy="94" r="25"/><circle cx="348" cy="94" r="18" fill="#4f8cff"/><text x="348" y="98" text-anchor="middle" fill="#fff" style="font-weight:700">TE</text><text class="nm" x="348" y="133" text-anchor="middle">Chartist</text></g>
-          <g class="node" data-agent="FUND"><circle class="node-ring" cx="403" cy="169" r="25"/><circle cx="403" cy="169" r="18" fill="#a184ff"/><text x="403" y="173" text-anchor="middle" fill="#fff" style="font-weight:700">FU</text><text class="nm" x="403" y="208" text-anchor="middle">Ledgerhand</text></g>
-          <g class="node" data-agent="SENT"><circle class="node-ring" cx="403" cy="261" r="25"/><circle cx="403" cy="261" r="18" fill="#ff7ac6"/><text x="403" y="265" text-anchor="middle" fill="#fff" style="font-weight:700">SE</text><text class="nm" x="403" y="300" text-anchor="middle">Pulse</text></g>
-          <g class="node" data-agent="CALL"><circle class="node-ring" cx="348" cy="336" r="25"/><circle cx="348" cy="336" r="18" fill="#ffb64a"/><text x="348" y="340" text-anchor="middle" fill="#2a1a00" style="font-weight:700">CA</text><text class="nm" x="348" y="375" text-anchor="middle">Echo</text></g>
-          <g class="node" data-agent="BULL"><circle class="node-ring" cx="260" cy="365" r="25"/><circle cx="260" cy="365" r="18" fill="#2de3a5"/><text x="260" y="369" text-anchor="middle" fill="#04201a" style="font-weight:700">BU</text><text class="nm" x="260" y="404" text-anchor="middle">Bull</text></g>
-          <g class="node" data-agent="BEAR"><circle class="node-ring" cx="172" cy="336" r="25"/><circle cx="172" cy="336" r="18" fill="#ff5f75"/><text x="172" y="340" text-anchor="middle" fill="#fff" style="font-weight:700">BE</text><text class="nm" x="172" y="375" text-anchor="middle">Bear</text></g>
-          <g class="node" data-agent="RISK"><circle class="node-ring" cx="117" cy="261" r="25"/><circle cx="117" cy="261" r="18" fill="#ffb64a"/><text x="117" y="265" text-anchor="middle" fill="#2a1a00" style="font-weight:700">WA</text><text class="nm" x="117" y="300" text-anchor="middle">Warden</text></g>
-          <g class="node" data-agent="PM"><circle class="node-ring" cx="117" cy="169" r="25"/><circle cx="117" cy="169" r="18" fill="#4f8cff"/><text x="117" y="173" text-anchor="middle" fill="#fff" style="font-weight:700">CH</text><text class="nm" x="117" y="208" text-anchor="middle">Chief</text></g>
-          <g class="node" data-agent="LEDGER"><circle class="node-ring" cx="172" cy="94" r="25"/><circle cx="172" cy="94" r="18" fill="#5b7093"/><text x="172" y="98" text-anchor="middle" fill="#fff" style="font-weight:700">SC</text><text class="nm" x="172" y="133" text-anchor="middle">Scribe</text></g>
-          <g class="node ceo"><circle cx="260" cy="215" r="34" fill="#0a1226" stroke="#e8eef9" stroke-width="2"/><circle cx="260" cy="215" r="26" fill="url(#ceoGrad)"/><text x="260" y="220" text-anchor="middle" fill="#04101c" style="font-weight:800;font-size:15px">CEO</text></g>
-          <defs><radialGradient id="ceoGrad"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#9cc0ff"/></radialGradient></defs>
-        </svg>
-        <p class="note">Agents run after the market closes and before it opens. They read the data, argue both sides, and ask you. They never place orders.</p>
-      </div>
       <div class="card c7" id="card-room">
-        <h2>Room <em data-draw="room_stamp" data-source="agent_feed">—</em></h2>
+        <h2>Morning research run <em data-draw="room_stamp" data-source="agent_feed">—</em></h2>
+        <p class="note" style="margin:0 0 10px">Once each weekday morning the Claude agents read the results, filings and earnings calls, argue both sides and write this. The floor desks work all day from fixed rules; this is the deep read.</p>
         <div class="toolbar"><button class="cd-btn pri" id="btn-replay" type="button">Replay the last run</button><button class="cd-btn" id="btn-skip" type="button">Show everything</button></div>
         <div class="feed" data-draw="feed" data-source="agent_feed" aria-live="polite"></div>
       </div>
-      <div class="card c12" id="card-ticket"><h2>Waiting for your decision <em>CEO</em></h2><div data-draw="ticket_panel" data-source="ticket_view"></div></div>
+      <div class="card c5" id="card-ticket"><h2>Waiting for your decision <em>CEO</em></h2><div data-draw="ticket_panel" data-source="ticket_view"></div></div>
     </div>
   </section>
 
   <footer>
     <details id="about"><summary>How this desk works, and what it cannot do</summary>
-      <p class="note">Live figures come from your INDmoney account and Gemini each time you open the page. Agent notes, the paper ledger and the pre-market plan are saved by the desk after each run. The page cannot place or approve orders. Paper trades use pretend money; the desk moves to real money only after 100 or more paper trades and a 98% chance, after correction for the strategies tried, that the average trade makes money. A 98% confidence is not a 98% win rate. Nothing here is investment advice, and trading can lose money you cannot spare.</p></details>
+      <p class="note">Live figures come from your INDmoney account each time you open the page. Agent notes, the paper ledger, the pre-market plan and crypto prices (CoinDCX, checked against Kraken) are saved by the desk each weekday morning. The Live floor runs fixed rules on those live prices; it is a screen, not a forecast. The page cannot place or approve orders. Paper trades use pretend money; the desk moves to real money only after 100 or more paper trades and a 98% chance, after correction for the strategies tried, that the average trade makes money. A 98% confidence is not a 98% win rate. Nothing here is investment advice, and trading can lose money you cannot spare.</p></details>
   </footer>
 </div>
 
 <script src="lib.js"></script>
 <script src="data.js"></script>
+<script src="floor_data.js"></script>
+<script src="floor_engine.js"></script>
+<script src="floor_stage.js"></script>
+<script src="floor_views.js"></script>
 <script src="views_command.js"></script>
 <script src="views_pre.js"></script>
 <script src="views_alerts.js"></script>
