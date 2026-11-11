@@ -39,6 +39,20 @@ def main(argv: list[str] | None = None) -> int:
                        help="analyse the top of the plain screen instead of requiring "
                             "an entry signal from a backtested strategy")
 
+    tk = sub.add_parser("ticket", help="print an order ticket (no orders are placed)")
+    tk.add_argument("--ticker", required=True)
+    tk.add_argument("--entry", type=float, required=True)
+    tk.add_argument("--stop", type=float, required=True)
+    tk.add_argument("--target", type=float, required=True)
+    tk.add_argument("--equity", type=float, required=True, help="current portfolio equity, Rs")
+    tk.add_argument("--risk-pct", type=float, default=0.5, help="risk per trade, %% of equity")
+    tk.add_argument("--open-risk", type=float, default=0.0, help="risk already open, Rs")
+    tk.add_argument("--cash", type=float, default=None)
+    tk.add_argument("--live-price", type=float, default=None,
+                    help="live price you or Claude read from INDmoney")
+    tk.add_argument("--price-time", default=None, help="time of that price, HH:MM:SS IST")
+    tk.add_argument("--vix", type=float, default=None)
+
     screen_p = sub.add_parser(
         "screen", help="print verified prices and indicators as JSON (no API key needed)")
     screen_p.add_argument("--watchlist", required=True)
@@ -50,6 +64,21 @@ def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(level=logging.INFO if args.verbose else logging.WARNING)
     settings = Settings()
     ledger = Ledger(args.ledger)
+
+    if args.cmd == "ticket":
+        from datetime import datetime
+        from .ticket import IST, build_ticket, render_text
+        pt = None
+        if args.price_time:
+            h, m, sec = (int(x) for x in (args.price_time.split(":") + ["0"])[:3])
+            pt = datetime.now(IST).replace(hour=h, minute=m, second=sec, microsecond=0)
+        t = build_ticket(ticker=args.ticker.upper(), entry=args.entry, stop=args.stop,
+                         target=args.target, equity=args.equity,
+                         risk_frac=args.risk_pct / 100, open_risk_rs=args.open_risk,
+                         cash=args.cash, live_price=args.live_price, price_time=pt,
+                         vix=args.vix)
+        print(render_text(t))
+        return 0
 
     if args.cmd == "stats":
         print(json.dumps(ledger.stats(), indent=2))
