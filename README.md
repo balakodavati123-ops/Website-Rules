@@ -79,6 +79,20 @@ These inputs cannot be backtested (no history of past transcripts), so their val
 measured only going forward, in the ledger. The newest transcript can be a quarter old
 when a company has reported but not yet filed its transcript; the report states its month.
 
+## Sudden jumps: study and live watcher
+
+`python backtest/spike_study.py CACHE_DIR` studies every NSE EQ stock (2,108 listed today)
+over 5 years: how often 10%+ jumps happen, what was filed before them, how the day
+unfolded, whether price moved before the filing, and how often a scheduled results
+announcement ends in a jump. Results are in `backtest/spike_study_results.json`.
+
+`python -m trading_team.spike_watch` watches NSE's public announcements feed during
+market hours. For each price-sensitive filing it prints what was filed, how long ago, and
+how far the price has already moved (Yahoo one-minute prices, about 30 seconds behind).
+It reacts to public filings; it does not and cannot know about them in advance.
+No model calls are used, so it costs nothing on your subscription. It needs a computer
+that stays on during market hours (09:15 to 15:30 IST).
+
 ## Guardrails against bad data and hallucination
 
 These run in code, after each model reply:

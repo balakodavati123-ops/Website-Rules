@@ -1,0 +1,110 @@
+{
+  "period": [
+    "2021-11-11",
+    "2026-11-11"
+  ],
+  "stocks": 2108,
+  "frequency": {
+    "spikes_10pct": 15730,
+    "spikes_15pct": 5521,
+    "liquid_stock_days": 1318780,
+    "per_year_10pct": 3146,
+    "per_year_15pct": 1104,
+    "chance_per_stock_day_pct": 1.193,
+    "by_year": {
+      "2021": 154,
+      "2022": 2465,
+      "2023": 2595,
+      "2024": 4234,
+      "2025": 2817,
+      "2026": 3465
+    },
+    "market_wide_days": 13,
+    "jumps_on_market_wide_days_pct": 4,
+    "median_jumps_per_day": 11.0
+  },
+  "shape": {
+    "gap_at_open_pct": 3,
+    "built_in_session_pct": 85,
+    "median_gap_pct": 0.9,
+    "median_jump_pct": 13.4,
+    "closed_below_high_median_pct": -3.1,
+    "close_gave_back_half_or_more_pct": 17,
+    "median_next_day_pct": -0.2,
+    "median_next_5d_pct": -0.9,
+    "next_day_down_pct": 53,
+    "median_ret_close_pct": 9.6
+  },
+  "precursors": {
+    "pre_vol5": {
+      "spikes": 1.04,
+      "ordinary": 0.819
+    },
+    "vol_squeeze": {
+      "spikes": 1.027,
+      "ordinary": 0.982
+    },
+    "ret20": {
+      "spikes": 0.048,
+      "ordinary": 0.016
+    },
+    "off_high": {
+      "spikes": -0.185,
+      "ordinary": -0.192
+    }
+  },
+  "causes": {
+    "n": 900,
+    "share_pct": {
+      "no announcement": 58,
+      "results": 17,
+      "other announcement": 10,
+      "routine filing only": 6,
+      "order / contract win": 4,
+      "approval / regulatory": 2,
+      "acquisition / merger / stake": 2,
+      "fund raise": 1,
+      "bonus / split / buyback / dividend": 0
+    },
+    "median_jump_pct": {
+      "no announcement": 13.6,
+      "results": 14.3,
+      "other announcement": 12.3,
+      "routine filing only": 13.7,
+      "order / contract win": 12.7,
+      "approval / regulatory": 14.8,
+      "acquisition / merger / stake": 14.7,
+      "fund raise": 11.4,
+      "bonus / split / buyback / dividend": 20.0
+    },
+    "median_close_pct": {
+      "no announcement": 9.6,
+      "results": 10.1,
+      "other announcement": 9.1,
+      "routine filing only": 9.1,
+      "order / contract win": 8.4,
+      "approval / regulatory": 8.6,
+      "acquisition / merger / stake": 9.4,
+      "fund raise": 9.2,
+      "bonus / split / buyback / dividend": 16.8
+    }
+  },
+  "timing": {
+    "n": 220,
+    "overnight_pct": 48,
+    "in_session": 115,
+    "moved_3pct_before_filing_pct": 79,
+    "median_already_up_at_filing_pct": 7.2,
+    "median_mins_ann_to_peak": 22,
+    "median_left_after_filing_pct": 6.1
+  },
+  "base_rate": {
+    "stocks": 120,
+    "results_events": 2420,
+    "results_hit10_pct": 5.8,
+    "results_hit15_pct": 2.6,
+    "ordinary_day_hit10_pct": 0.93,
+    "results_median_high_pct": 2.1,
+    "lift": 6
+  }
+}
