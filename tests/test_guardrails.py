@@ -91,3 +91,11 @@ def test_pipeline_stale_data_is_unverified(tmp_path, bars):
     rec = desk.run(["ABC.NS"], run_date=date(2027, 6, 1), write_report=False).recommendation
     assert rec.action == "NO_TRADE"
     assert "ABC.NS: price history" in rec.unverified
+
+
+def test_number_formats_and_indicator_names():
+    ctx = {"last_close": 1340.8, "equity": 102797, "rsi": 68.8}
+    text = ("Close 1,340.8 over 1-3 months, RSI(14) 68.8, equity 1,02,797, "
+            "above SMA50 and SMA200, MACD(12,26,9)")
+    assert ungrounded_numbers(text, ctx) == []
+    assert ungrounded_numbers("fell -3 to 999.5", ctx) == ["-3", "999.5"]

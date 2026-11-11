@@ -59,9 +59,8 @@ def write_pdf(rec: Recommendation, path: str | Path, track_record: dict,
     story.append(Spacer(1, 6))
     story.append(Paragraph(
         "<b>Track record.</b> "
-        f"Closed trades: {tr.get('closed_trades', 0)}, win rate: "
-        f"{tr.get('win_rate_pct') if tr.get('win_rate_pct') is not None else 'n/a'}%, "
-        f"average return: {tr.get('avg_return_pct') if tr.get('avg_return_pct') is not None else 'n/a'}%, "
+        f"Closed trades: {tr.get('closed_trades', 0)}, win rate: {_pct(tr.get('win_rate_pct'))}, "
+        f"average return: {_pct(tr.get('avg_return_pct'))}, "
         f"open trades: {tr.get('open_trades', 0)}.", body))
 
     story.append(Spacer(1, 12))
@@ -70,6 +69,10 @@ def write_pdf(rec: Recommendation, path: str | Path, track_record: dict,
     SimpleDocTemplate(str(path), pagesize=A4, leftMargin=48, rightMargin=48,
                       topMargin=48, bottomMargin=48).build(story)
     return path
+
+
+def _pct(value) -> str:
+    return "n/a" if value is None else f"{value}%"
 
 
 def _esc(text: str) -> str:
