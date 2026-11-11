@@ -165,7 +165,7 @@ def simulate(data, strat: Strategy, start):
     tr = pd.DataFrame(trades)
     years = (cal[-1] - cal[i0]).days / 365.25
     split_i = i0 + int(0.6 * (len(cal) - i0))
-    out = {"trades": len(tr), "final_equity": round(curve[-1]),
+    out = {"trade_table": tr, "trades": len(tr), "final_equity": round(curve[-1]),
            "cagr": (curve[-1] / START_EQUITY) ** (1 / years) - 1, "max_dd": max_dd}
     if len(tr):
         se = tr.R.std(ddof=1) / math.sqrt(len(tr)) if len(tr) > 1 else float("nan")
@@ -222,6 +222,7 @@ def main():
               "strategies": {}}
     for name, strat in STRATEGIES.items():
         r = simulate(data, strat, start)
+        r.pop("trade_table", None)   # per-trade rows are used by confidence.py only
         ok, fails = verdict(r)
         # PROBATION: failed approval, but positive per trade and ahead of the index.
         # Tradable only as a labelled experiment so forward results accumulate.

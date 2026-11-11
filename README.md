@@ -93,6 +93,36 @@ It reacts to public filings; it does not and cannot know about them in advance.
 No model calls are used, so it costs nothing on your subscription. It needs a computer
 that stays on during market hours (09:15 to 15:30 IST).
 
+## Order tickets (no orders are placed)
+
+`python -m trading_team ticket --ticker BEL --entry 393 --stop 376 --target 470 --equity 102797
+--live-price 396.45 --price-time 15:15:12` prints exact numbers for a manual trade: quantity,
+limit price, stop trigger and limit, target, rupees at risk and to gain, a checklist, and the
+steps to place it in the INDmoney app. No tool available to Claude can place orders, so
+the last step is always yours.
+
+The ticket refuses (DO NOT TRADE) when the stop is not below the entry, reward to risk is
+under 3, the position would exceed 30% of equity or total open risk 4%, India VIX is above 20,
+the price is older than 2 minutes, or the price is at or below the stop. It shows WAITING
+when price has run more than 0.5% above the entry: the limit rests, and you do not raise it.
+The sizing reproduces the daily report's BEL numbers exactly (see `tests/test_ticket.py`).
+
+## How sure are we that a strategy works?
+
+`python backtest/confidence.py` measures how likely each strategy's true average result per
+trade is above zero. "99% confidence" does not mean a 99% win rate. Results (5 years):
+
+| Strategy | Trades | Avg R | Naive | Month-clustered | After correcting for 8 tries |
+|---|---|---|---|---|---|
+| breakout_52w | 289 | +0.24 | 97.3% | 97.4% | 81.0% |
+| trend_ride | 179 | +0.50 | 92.9% | 90.9% | 46.5% |
+| earnings_drift | 111 | +0.24 | 91.7% | 88.3% | 36.9% |
+| breakout_52w_trail | 174 | +0.23 | 84.2% | 83.9% | 24.6% |
+| others | | | below 70% | | below 5% |
+
+The best strategy would need about 424 trades at its current average to reach 99%, and that
+assumes its edge is real. None is validated. They stay on probation or rejected.
+
 ## Guardrails against bad data and hallucination
 
 These run in code, after each model reply:
