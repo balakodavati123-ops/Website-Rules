@@ -106,6 +106,11 @@ def technical_summary(bars: Sequence[Bar]) -> dict:
     def r(x, nd=2):
         return None if x is None else round(x, nd)
 
+    def pct_vs(level):
+        return None if not level else round((last / level - 1) * 100, 1)
+
+    support, resistance = min(b.low for b in recent), max(b.high for b in recent)
+
     return {
         "last_close": r(last),
         "last_date": bars[-1].day.isoformat(),
@@ -120,6 +125,12 @@ def technical_summary(bars: Sequence[Bar]) -> dict:
         "realized_vol_20d_ann": r(vol, 3),
         "support_20d": r(min(b.low for b in recent)),
         "resistance_20d": r(max(b.high for b in recent)),
+        # Distances are precomputed so analysts quote them instead of deriving
+        # their own figures, which the grounding check would reject.
+        "pct_vs_sma50": pct_vs(sma50),
+        "pct_vs_sma200": pct_vs(sma200),
+        "pct_above_support_20d": pct_vs(support),
+        "pct_below_resistance_20d": round((1 - last / resistance) * 100, 1),
         "return_1m_pct": r(ret_1m, 1),
         "return_3m_pct": r(ret_3m, 1),
     }

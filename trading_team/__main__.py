@@ -29,7 +29,11 @@ def main(argv: list[str] | None = None) -> int:
 
     run_p = sub.add_parser("run", help="run the daily analysis")
     run_p.add_argument("--watchlist", required=True, help="file with one ticker per line")
-    run_p.add_argument("--model", default=Settings.model)
+    run_p.add_argument("--model", default=None,
+                       help="model name; default is the backend's own default")
+    run_p.add_argument("--llm", choices=("auto", "cli", "api"), default="auto",
+                       help="cli = Claude subscription via the `claude` command; "
+                            "api = Anthropic API key; auto = api if a key is set, else cli")
     run_p.add_argument("--no-pdf", action="store_true")
 
     screen_p = sub.add_parser(
@@ -79,19 +83,29 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps(settled, indent=2) if settled else "no open trades settled")
         return 0
 
-    from .llm import AnthropicLLM
+    import os
+    from .llm import AnthropicLLM, ClaudeCLILLM
     from .pipeline import TradingDesk
     tickers = read_watchlist(args.watchlist)
     if not tickers:
         print("watchlist is empty", file=sys.stderr)
         return 2
-    desk = TradingDesk(provider, AnthropicLLM(args.model), ledger, settings)
+    backend = args.llm
+    if backend == "auto":
+        backend = "api" if os.environ.get("ANTHROPIC_API_KEY") else "cli"
+    llm = (AnthropicLLM(args.model or settings.model) if backend == "api"
+           else ClaudeCLILLM(args.model))
+    desk = TradingDesk(provider, llm, ledger, settings)
     result = desk.run(tickers, write_report=not args.no_pdf)
     rec = result.recommendation
     print(f"{rec.run_date}: {rec.action}"
           + (f" {rec.ticker} entry {rec.entry_price} stop {rec.stop_loss} "
              f"target {rec.target}" if rec.is_trade else ""))
     print(rec.rationale)
+    for note in rec.risk_notes:
+        print(f"  risk: {note}")
+    if rec.unverified:
+        print("  Data Unverified: " + "; ".join(rec.unverified))
     if result.pdf_path:
         print(f"report: {result.pdf_path}")
     return 0

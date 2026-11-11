@@ -3,6 +3,7 @@ portfolio manager -> risk manager -> ledger -> report."""
 from __future__ import annotations
 
 import logging
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import date
 from pathlib import Path
@@ -56,30 +57,39 @@ class TradingDesk:
         cases: list[CaseFile] = []
         risk_facts: dict[str, CandidateRisk] = {}
         grounding_flags: list[str] = []
-        for score, t, tech in ranked[: self.settings.candidates_per_run]:
-            if tech is None:
-                continue
+        def analyse(item):
+            score, t, tech = item
             ctx = build_context(snaps[t], tech, market)
             analysts = {name: run_analyst(self.llm, name, ctx) for name in ANALYSTS}
             for name, rep in analysts.items():
                 bad = ungrounded_numbers(rep.get("summary", ""), ctx)
                 if bad:
-                    grounding_flags.append(f"{t} {name} analyst: {bad}")
+                    grounding_flags.append(
+                        f"{t} {name} analyst summary removed: quoted figures not in "
+                        f"the data ({', '.join(bad)})")
                     rep["summary"] = "[removed: figures not in the data]"
                     rep["signal"] = "neutral"
             bull, bear = run_debate(self.llm, ctx, analysts)
             for side, text in (("bull", bull), ("bear", bear)):
                 bad = ungrounded_numbers(text, ctx)
                 if bad:
-                    grounding_flags.append(f"{t} {side}: {bad}")
+                    grounding_flags.append(
+                        f"{t} {side} argument removed: quoted figures not in the "
+                        f"data ({', '.join(bad)})")
                     if side == "bull":
                         bull = "[removed: figures not in the data]"
                     else:
                         bear = "[removed: figures not in the data]"
-            cases.append(CaseFile(ticker=t, score=score, context=ctx,
-                                  analysts=analysts, bull=bull, bear=bear))
-            risk_facts[t] = CandidateRisk(
-                price_verified=True, realized_vol=tech.get("realized_vol_20d_ann"))
+            return CaseFile(ticker=t, score=score, context=ctx,
+                            analysts=analysts, bull=bull, bear=bear), tech
+
+        # Candidates are analysed in parallel; each one is several model calls.
+        todo = [x for x in ranked[: self.settings.candidates_per_run] if x[2] is not None]
+        with ThreadPoolExecutor(max_workers=max(1, len(todo))) as pool:
+            for case, tech in pool.map(analyse, todo):
+                cases.append(case)
+                risk_facts[case.ticker] = CandidateRisk(
+                    price_verified=True, realized_vol=tech.get("realized_vol_20d_ann"))
 
         unverified_market = [k for k, p in market.items() if not p.verified]
         track = self.ledger.stats()
@@ -107,7 +117,7 @@ class TradingDesk:
         if review is not None:
             review.notes = review.notes + grounding_flags
         rec = self._build_recommendation(run_date, proposal, review, snaps,
-                                         unverified_market)
+                                         unverified_market, [c.ticker for c in cases])
         self.ledger.record(rec)
 
         pdf = None
@@ -120,12 +130,20 @@ class TradingDesk:
         return RunResult(rec, review, cases, pdf)
 
     def _build_recommendation(self, run_date, proposal, review, snaps,
-                              unverified_market) -> Recommendation:
+                              unverified_market, analysed=()) -> Recommendation:
         if review is None or not review.approved:
             # On a no-trade day, report any ticker whose price history failed,
             # plus the market data that was unavailable.
             base_unverified = [f"{t}: price history" for t, s in snaps.items()
                                if "price history" in s.unverified_items()]
+            # Items missing for the analysed candidates, grouped by item.
+            missing: dict[str, list[str]] = {}
+            for t in analysed:
+                for item in snaps[t].unverified_items():
+                    missing.setdefault(item, []).append(t)
+            for item, ts in missing.items():
+                who = "all candidates" if len(ts) == len(analysed) else ", ".join(ts)
+                base_unverified.append(f"{item}: {who}")
             base_unverified += unverified_market
             notes = review.notes if review else [proposal.get("rationale", "")]
             return Recommendation(

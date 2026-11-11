@@ -59,9 +59,17 @@ that the source data itself is correct. The data is end-of-day, not live. See
 
 ```bash
 pip install -r requirements.txt
-export ANTHROPIC_API_KEY=...          # for the LLM agents
 cp watchlist.example.txt watchlist.txt  # edit with your tickers (NSE uses .NS)
 ```
+
+The agents need Claude. There are two ways to provide it:
+
+- **Claude subscription (default, no extra cost).** If the `claude` command (Claude Code)
+  is installed and logged in, the agents run through it. Calls count against your
+  subscription's usage limits. A run of five candidates is 26 calls and takes about 80 seconds.
+- **API key (pay per use).** Set `ANTHROPIC_API_KEY` and the agents use the API instead.
+
+`--llm cli` or `--llm api` forces one or the other.
 
 ## Usage
 

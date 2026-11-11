@@ -11,11 +11,25 @@ from typing import Any
 
 from .models import Bar
 
-NUMBER_RE = re.compile(r"(?<![A-Za-z_])-?\d+(?:\.\d+)?")
+# A minus sign counts only at the start or after a space/bracket, so the "3" in
+# "1-3 months" is not read as -3.
+NUMBER_RE = re.compile(r"(?:(?<=^)|(?<=[\s(\[]))-?\d+(?:\.\d+)?|(?<![A-Za-z_\d.])\d+(?:\.\d+)?")
+# Western (1,234,567) and Indian (12,34,567) grouping; the last group has 3 digits,
+# so a parameter list like "12,26,9" is left alone.
+THOUSANDS_RE = re.compile(r"(?<![\d.,])\d{1,3}(?:,\d{2,3})*,\d{3}(?!\d|,\d)")
 
-# Numbers the agents may always state: rule parameters and words-as-numbers
-# that are not market data. Kept deliberately short.
-ALWAYS_ALLOWED = {0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 15.0, 30.0, 100.0}
+
+def _numbers(text: str) -> list[str]:
+    text = THOUSANDS_RE.sub(lambda m: m.group(0).replace(",", ""), text or "")
+    return NUMBER_RE.findall(text)
+
+# Numbers the agents may always state: rule parameters and indicator settings.
+# These are not market data. Kept deliberately short.
+ALWAYS_ALLOWED = {
+    0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 15.0, 30.0, 100.0,   # rule parameters
+    9.0, 12.0, 14.0, 20.0, 26.0, 50.0, 200.0,           # indicator periods
+    70.0,                                               # RSI overbought line
+}
 
 
 def flatten_numbers(obj: Any, out: set[float] | None = None) -> set[float]:
@@ -33,7 +47,7 @@ def flatten_numbers(obj: Any, out: set[float] | None = None) -> set[float]:
         for v in obj:
             flatten_numbers(v, out)
     elif isinstance(obj, str):
-        for m in NUMBER_RE.findall(obj):
+        for m in _numbers(obj):
             out.add(float(m))
     return out
 
@@ -48,7 +62,7 @@ def ungrounded_numbers(text: str, context: Any, tol: float = 0.011) -> list[str]
     allowed = flatten_numbers(context) | ALWAYS_ALLOWED
     allowed |= {round(v * 100, 6) for v in list(allowed)}  # fraction -> percent
     bad: list[str] = []
-    for token in NUMBER_RE.findall(text or ""):
+    for token in _numbers(text):
         v = float(token)
         if any(abs(v - a) <= tol * max(1.0, abs(a)) for a in allowed):
             continue

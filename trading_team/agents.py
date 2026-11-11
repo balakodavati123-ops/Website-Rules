@@ -15,6 +15,9 @@ from .models import Snapshot
 GROUNDING = (
     "Use only the numbers and facts in the context JSON. If an item is missing or "
     "marked UNVERIFIED, say so; do not estimate or fill it in from memory. "
+    "Quote figures exactly as given. Do not calculate new figures (differences, "
+    "ratios, averages, price levels); an automated check deletes any reply that "
+    "contains a number not present in the context. "
     "This is a research input, not a guarantee. "
 )
 
