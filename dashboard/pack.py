@@ -1,11 +1,13 @@
 """Builds the documents that make up the CEO Trading Desk dashboard.
 
-Live datasets are calls on the viewer's own INDmoney and Gemini connections (read-only tools).
-File datasets are the desk's own saved data (agent notes, plan, ledger, strategy tests).
+Live datasets are calls on the viewer's own INDmoney connection (read-only tools).
+File datasets are the desk's own saved data (agent notes, plan, ledger, strategy tests, and
+crypto prices from CoinDCX and Kraken, which have no connector).
 Writes dashboard/pack/*.json and prints the batch for ArtifactData.
 
 Usage: python dashboard/pack.py ASSETS.json
-  ASSETS.json maps file-dataset ids to their /_blob/ urls (printed by the uploads).
+  ASSETS.json maps file-dataset ids to their /_blob/ urls (printed by the uploads). A file
+  dataset missing from it is left out, so one upload can be packed by itself.
 """
 from __future__ import annotations
 
@@ -21,7 +23,6 @@ NOW = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 EDIT = {"via": "claude", "at": NOW}
 
 IND = "INDmoney"
-GEM = "Gemini"
 CAND_KEYS = ["INDI00012", "INDI00024", "INDS02423", "INDS01104", "INDS01992", "INDS04037", "INDS00972", "INDS01995",
              "INDS01620", "INDCF5UV5U5G", "INDCF4KF275C", "INDCF66J0IAV", "INDCFCC1F0V8", "INDCF5MMIWLR"]
 WATCH_KEYS = ["INDS02423", "INDS01104", "INDS01992", "INDS39555", "INDS04037", "INDS00954", "INDS00972", "INDS01070",
@@ -62,18 +63,12 @@ LIVE = {
     "candles": live("Candles for the chosen instrument", "Open, high, low, close and volume for the instrument and timeframe picked on the chart.",
                     call(IND, "get_indian_stocks_ohlc", {"ind_key": "{{sym}}", "interval": "{{iv}}", "lookback": "{{lb}}"},
                          {"sym": {"enum": CAND_KEYS}, "iv": {"enum": ["5minute", "15minute", "60minute", "1day"]}, "lb": {"enum": ["1d", "7d", "14d", "1y"]}})),
-    "crypto_btc": live("Bitcoin ticker", "Gemini 24-hour ticker for Bitcoin.", call(GEM, "gemini_get_ticker", {"symbol": "BTCUSD"})),
-    "crypto_eth": live("Ethereum ticker", "Gemini 24-hour ticker for Ethereum.", call(GEM, "gemini_get_ticker", {"symbol": "ETHUSD"})),
-    "crypto_sol": live("Solana ticker", "Gemini 24-hour ticker for Solana.", call(GEM, "gemini_get_ticker", {"symbol": "SOLUSD"})),
-    "crypto_candles": live("Crypto candles", "Gemini candles for the coin and timeframe picked on the crypto chart.",
-                           call(GEM, "gemini_list_candles", {"symbol": "{{csym}}", "time_frame": "{{ctf}}"},
-                                {"csym": {"enum": ["BTCUSD", "ETHUSD", "SOLUSD"]}, "ctf": {"enum": ["1hr", "6hr", "1day"]}})),
     "mf_ideas": live("Long-term fund ideas", "Top-ranked funds in flexi cap, large and mid cap, and Nifty 50 index categories.",
                      call(IND, "get_mf_by_category", {"categories": ["flexi-cap", "large-mid-cap", "nifty-50-index-funds"], "size": 12, "sort_key": "category_ind_rank", "sort_asc": True})),
 }
 
 FILES = {  # id -> (title, description, file name)
-    "agent_feed": ("Agent room messages", "What the agents said in their latest run, in order.", "agent_feed.json"),
+    "agent_feed": ("Morning briefing messages", "What the agents said in their latest run, in order.", "agent_feed.json"),
     "plan_today": ("Today's plan", "Watchlist with reasons: algo signal, screened names, filings and results.", "plan_today.json"),
     "alerts_log": ("Company filing alerts", "Filings caught during the session with the price at the moment of filing.", "alerts_log.json"),
     "strategies_eq": ("Stock strategy tests", "Five-year tests of eight stock strategies with confidence figures.", "strategies_eq.json"),
@@ -82,8 +77,11 @@ FILES = {  # id -> (title, description, file name)
     "paper_ledger": ("Paper ledger", "Every paper order the agents take.", "paper_ledger.json"),
     "paper_equity": ("Paper equity", "Paper account equity by day.", "paper_equity.json"),
     "desk_rules": ("Desk rules", "Trading cash, risk limits and the real-money gate.", "desk_rules.json"),
+    "crypto_quotes": ("Crypto prices in rupees", "Bitcoin, Ethereum and Solana on CoinDCX, cross-checked against Kraken's dollar price.", "crypto_quotes.json"),
+    "crypto_candles": ("Crypto candles in rupees", "CoinDCX daily, hourly and 15-minute candles for Bitcoin, Ethereum and Solana.", "crypto_candles.json"),
 }
-PAGE_FILES = ["index.html", "style.css", "lib.js", "data.js", "views_command.js", "views_pre.js", "views_alerts.js",
+SCHEDULE = "Rebuilt each weekday at 08:15 IST by the CEO Desk Daily Refresh task."
+PAGE_FILES = ["index.html", "style.css", "lib.js", "data.js", "floor_data.js", "floor_engine.js", "floor_stage.js", "floor_views.js", "views_command.js", "views_pre.js", "views_alerts.js",
               "views_algo.js", "views_markets.js", "views_room.js", "tabs.js"]
 
 
@@ -100,13 +98,18 @@ def main():
         writes.append({"op": "set", "collection": collection, "doc_id": doc_id, "file_path": str(path)})
 
     put("dash", "meta", {"title": "CEO Trading Desk", "lang": "en"})
-    put("dash", "params", {"sym": "INDI00012", "iv": "15minute", "lb": "7d", "csym": "BTCUSD", "ctf": "1day"})
+    put("dash", "params", {"sym": "INDI00012", "iv": "15minute", "lb": "7d", "csym": "BTC", "ctf": "1d"})
     for did, doc in LIVE.items():
         put("datasets", did, doc)
     for did, (title, desc, fname) in FILES.items():
-        put("datasets", did, {"title": title, "description": desc, "edit": EDIT,
-                              "source": {"kind": "file", "url": assets[did], "name": fname, "format": "json"},
-                              "updated": {"at": NOW, "by": "Claude (agent run)"}})
+        if did not in assets:
+            continue
+        doc = {"title": title, "description": desc, "edit": EDIT,
+               "source": {"kind": "file", "url": assets[did], "name": fname, "format": "json"},
+               "updated": {"at": NOW, "by": "Claude (agent run)"}}
+        if did not in ("strategies_eq", "desk_rules"):
+            doc.update(schedule=SCHEDULE, staleAfterHours=96)
+        put("datasets", did, doc)
     for name in PAGE_FILES:
         put("files", name, {"text": (PAGE / name).read_text(), "edit": EDIT})
     (PACK / "batch.json").write_text(json.dumps(writes))

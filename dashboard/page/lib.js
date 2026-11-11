@@ -109,7 +109,7 @@
   };
   /* Times are shown in IST for every viewer: shift by 5:30 and format as UTC. */
   CD.ist = (d) => new Date(d.getTime() + 330 * 60000);
-  CD.fmtTime = (iv) => { const f = iv === '1day' || iv === '1d' ? d3.utcFormat('%d %b') : iv === '60minute' || iv === '1hr' || iv === '6hr' ? d3.utcFormat('%d %b %H:%M') : d3.utcFormat('%d %H:%M'); return (d) => f(CD.ist(d)); };
+  CD.fmtTime = (iv) => { const f = iv === '1day' || iv === '1d' ? d3.utcFormat('%d %b') : ['60minute', '1hr', '6hr', '1h'].includes(iv) ? d3.utcFormat('%d %b %H:%M') : d3.utcFormat('%d %H:%M'); return (d) => f(CD.ist(d)); };
   CD.lohi = (lo, mid, hi) => { const d = CD.el('div', 'sub num'); d.style.cssText = 'display:flex;justify-content:space-between;gap:8px;margin-top:5px'; [lo, mid, hi].forEach((t) => d.appendChild(CD.el('span', '', t))); return d; };
 
   CD.spark = (el, values, color, w = 120, h = 34) => {
