@@ -107,6 +107,15 @@ the price is older than 2 minutes, or the price is at or below the stop. It show
 when price has run more than 0.5% above the entry: the limit rests, and you do not raise it.
 The sizing reproduces the daily report's BEL numbers exactly (see `tests/test_ticket.py`).
 
+## CEO Trading Desk dashboard
+
+`dashboard/` holds the source of a live dashboard (a Claude Artifact): holdings and profit and loss
+from INDmoney, the 08:45 pre-market plan with reasons, live alerts and a chart with moving averages
+and a projection line, the paper-trading lab with the real-money gate, MCX commodities and crypto
+(paper only), and an agent room where the agents' latest discussion replays and the CEO's ticket waits.
+Page code is in `dashboard/page/`, saved data comes from `dashboard/build_seed.py`, and
+`project/DASHBOARD_PLAYBOOK.md` says how the daily session keeps it fresh.
+
 ## The morning flow
 
 `project/MORNING_PLAYBOOK.md` is the step-by-step for the daily Claude session: settle

@@ -1,0 +1,6 @@
+[
+ {"symbol":"TALBROAUTO","kind":"Event","headline":"Results on 11 Nov: up 11.8% on the day, high +17.1%","why":"Results filed at 13:52 with the price already up 6.3%. Most of the move came around the filing. Chasing after a 17% intraday high is the riskiest entry; wait for a base, not a headline.","source":"NSE filing and live prices, 11 Nov"},
+ {"symbol":"GRSE","kind":"Earnings","headline":"Q2 profit up 11.8% on the year, flat on the quarter","why":"Revenue Rs 1,827 cr (+8.9%), profit Rs 172 cr, EPS 15.01 against 13.43. The analyst estimate is not available, so a beat or miss cannot be stated. Watch whether the price holds above the filing-time level.","source":"Results filing read 11 Nov"},
+ {"symbol":"BHEL","kind":"Event","headline":"Power Grid synchronous condenser order","why":"Rs 600 to 900 cr over 35 months is about 2% of a year's revenue. Too small to move the stock by itself.","source":"NSE filing 11:47, 11 Nov"},
+ {"symbol":"DBL","kind":"Event","headline":"Lowest bidder for a Rs 901 cr NBCC job in Srinagar","why":"L-1 means the lowest bid, not a confirmed award. About 10% of yearly revenue if won. Wait for the award letter.","source":"NSE filing 12:04, 11 Nov"}
+]

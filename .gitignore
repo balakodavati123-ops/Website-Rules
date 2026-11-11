@@ -5,3 +5,4 @@ data/
 reports/
 watchlist.txt
 .env
+dashboard/pack/

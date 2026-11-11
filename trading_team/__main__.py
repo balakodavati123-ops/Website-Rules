@@ -201,6 +201,17 @@ def main(argv: list[str] | None = None) -> int:
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(dataclasses.asdict(rec), indent=2, default=str))
     print(f"recommendation file: {out}")
+    # What each agent said, for the dashboard's agent room.
+    room = {"run_date": rec.run_date.isoformat(), "decision": rec.action, "ticker": rec.ticker,
+            "strategy": rec.strategy, "pm_rationale": rec.rationale,
+            "risk_notes": rec.risk_notes, "unverified": rec.unverified,
+            "candidates": [{"ticker": c.ticker, "screen_score": c.score,
+                            "analysts": c.analysts, "bull": c.bull, "bear": c.bear,
+                            "entry_signal": c.context.get("entry_signal")}
+                           for c in result.cases]}
+    room_file = Path(settings.report_dir) / f"{rec.run_date.isoformat()}_agents.json"
+    room_file.write_text(json.dumps(room, indent=2, default=str))
+    print(f"agent room file: {room_file}")
     return 0
 
 

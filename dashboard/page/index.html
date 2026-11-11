@@ -1,0 +1,204 @@
+<meta name="dash-one-writer">
+<link rel="stylesheet" href="style.css">
+<div class="cd" id="cd">
+
+  <header class="cd-top" id="cd-header">
+    <div class="cd-brand">
+      <div class="cd-logo" aria-hidden="true"></div>
+      <div><h1 id="cd-title">CEO Trading Desk</h1><small>Your agents report here. You make the final call.</small></div>
+    </div>
+    <div class="cd-pulse">
+      <span class="chip" data-draw="chip_session">—</span>
+      <span class="chip" data-draw="chip_data" data-source="indices">—</span>
+      <span class="chip agent" data-draw="chip_agents" data-source="agent_feed">—</span>
+    </div>
+  </header>
+
+  <nav class="cd-tabs" role="tablist" aria-label="Desk sections">
+    <button class="cd-tab" role="tab" id="tabbtn-command" data-tab="command" aria-selected="true">Command</button>
+    <button class="cd-tab" role="tab" id="tabbtn-premarket" data-tab="premarket" aria-selected="false">Pre-market 08:45</button>
+    <button class="cd-tab" role="tab" id="tabbtn-alerts" data-tab="alerts" aria-selected="false">Live alerts</button>
+    <button class="cd-tab" role="tab" id="tabbtn-algo" data-tab="algo" aria-selected="false">Algo lab</button>
+    <button class="cd-tab" role="tab" id="tabbtn-markets" data-tab="markets" aria-selected="false">Commodities and crypto</button>
+    <button class="cd-tab" role="tab" id="tabbtn-room" data-tab="room" aria-selected="false">Agent room</button>
+  </nav>
+
+  <!-- ============ COMMAND ============ -->
+  <section id="tab-command" role="tabpanel" aria-labelledby="tabbtn-command">
+    <div class="cd-grid">
+      <div class="card c12"><p class="lead" data-draw="lead_command" data-source="kpi_rows">—</p></div>
+      <div class="c12 kpis" data-draw="kpis" data-source="kpi_rows"></div>
+
+      <div class="card c4" id="card-alloc">
+        <h2>Where your money sits <em>live from INDmoney</em></h2>
+        <div class="chartbox donutbox" data-draw="alloc_chart" data-source="alloc_rows" style="min-height:260px"></div>
+        <div data-draw="alloc_legend" data-source="alloc_rows"></div>
+        <p class="note">Gold and silver are your largest bets. The desk watches them under Commodities and crypto.</p>
+      </div>
+      <div class="stack c8"><div class="card" id="card-mf">
+        <h2>Mutual funds <em>profit and loss since you invested</em></h2>
+        <div class="tw"><table data-source="mf_holdings" data-row-key="name">
+          <thead><tr><th data-field="name">Fund</th><th class="hs" data-field="class">Class</th><th class="r hs" data-field="invested">Invested</th><th class="r" data-field="value">Value</th><th class="r" data-field="pnl">P/L</th><th class="r" data-field="pnl_pct">P/L %</th><th class="r" data-field="day_pct">Today</th></tr></thead>
+          <tbody data-draw="mf_body"></tbody></table></div>
+      </div>
+      <div class="card" id="card-metals">
+        <h2>Gold and silver <em>coins, jewellery, digital</em></h2>
+        <div class="tw"><table data-source="metals_rows" data-row-key="key">
+          <thead><tr><th data-field="metal">Metal</th><th data-field="name">Holding</th><th class="r hs" data-field="qty">Qty</th><th class="r hs" data-field="invested">Invested</th><th class="r" data-field="value">Value</th><th class="r" data-field="pnl">P/L</th><th class="r" data-field="pnl_pct">P/L %</th></tr></thead>
+          <tbody data-draw="metals_body"></tbody></table></div>
+      </div>
+      </div>
+      <div class="card c4" id="card-stocks">
+        <h2>Direct stocks and loans</h2>
+        <div class="tw"><table data-source="stock_holdings" data-row-key="name">
+          <thead><tr><th data-field="name">Stock</th><th class="r" data-field="qty">Qty</th><th class="r" data-field="value">Value</th><th class="r" data-field="pnl">P/L</th><th class="r" data-field="pnl_pct">P/L %</th></tr></thead>
+          <tbody data-draw="stock_body"></tbody></table></div>
+        <div data-draw="stock_empty" data-source="stock_holdings"></div>
+        <div data-draw="debt_note" data-source="snapshot"></div>
+      </div>
+      <div class="card c4" id="card-inbox"><h2>CEO inbox <em>decisions waiting for you</em></h2><div data-draw="inbox" data-source="ticket_view"></div></div>
+      <div class="card c4" id="card-mini"><h2>What the agents said last <em>from the latest run</em></h2><div class="list" data-draw="mini_feed" data-source="agent_feed"></div></div>
+    </div>
+  </section>
+
+  <!-- ============ PRE-MARKET ============ -->
+  <section id="tab-premarket" role="tabpanel" aria-labelledby="tabbtn-premarket" hidden>
+    <div class="cd-grid">
+      <div class="card c12"><p class="lead" data-draw="lead_pre" data-source="plan_today">—</p></div>
+      <div class="c12 cardgrid" data-draw="idx_cards" data-source="indices"></div>
+      <div class="card c7" id="card-plan">
+        <h2>Today's watchlist and the reasons <em>earnings calls, events, sentiment, signals</em></h2>
+        <div class="list" data-draw="plan_list" data-source="plan_join"></div>
+        <p class="note">Results dates come from Yahoo Finance and are projections until the company confirms them.</p>
+      </div>
+      <div class="card c5" id="card-analyst">
+        <h2>Analyst targets on your watchlist <em>INDmoney</em></h2>
+        <div class="tw"><table data-source="watch_live" data-row-key="symbol">
+          <thead><tr><th data-field="symbol">Stock</th><th class="r" data-field="live">Live</th><th class="r" data-field="chg_pct">Today</th><th class="r" data-field="target">Target</th><th class="r" data-field="upside">Upside</th><th data-field="sentiment">View</th></tr></thead>
+          <tbody data-draw="analyst_body"></tbody></table></div>
+        <p class="note">An analyst target is an opinion, not a promise. Many targets miss.</p>
+      </div>
+      <div class="card c12" id="card-longterm">
+        <h2>Long-term options to evaluate <em>top-ranked in three categories, INDmoney ranking</em></h2>
+        <div class="tw"><table data-source="mf_ideas" data-row-key="name">
+          <thead><tr><th data-field="name">Fund</th><th data-field="category">Category</th><th data-field="rank">Rank</th><th class="r" data-field="ret_1y">1 year</th><th class="r" data-field="ret_3y">3 years</th><th class="r" data-field="ret_5y">5 years</th><th class="r" data-field="expense">Expense</th><th data-field="risk">Risk</th><th class="r" data-field="min_sip">Min SIP</th></tr></thead>
+          <tbody data-draw="ideas_body"></tbody></table></div>
+        <p class="note">Ranked by INDmoney within each category, not by recent returns. Past returns do not repeat on demand.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIVE ALERTS ============ -->
+  <section id="tab-alerts" role="tabpanel" aria-labelledby="tabbtn-alerts" hidden>
+    <div class="cd-grid">
+      <div class="card c12" id="card-chart">
+        <h2>Chart <em>candles, volume, moving averages, support and resistance, and a projection line</em></h2>
+        <div class="toolbar">
+          <select class="dash-select" data-draw="sel_sym" aria-label="Instrument" data-source="candles"></select>
+          <select class="dash-select" data-draw="sel_view" aria-label="Timeframe" data-source="candles"></select>
+          <span class="chip" data-draw="chart_stamp" data-source="candles">—</span>
+        </div>
+        <div class="chartbox" data-draw="candle_main" data-source="candles" style="min-height:300px"></div>
+        <div class="legend"><span><i style="background:#29d3ee"></i>EMA 20</span><span><i style="background:#ffb64a"></i>EMA 50</span><span><i style="background:#a184ff"></i>Projection (straight-line fit of recent closes, with a widening band)</span></div>
+        <div class="toolbar" style="margin-top:10px" data-draw="tech_stats" data-source="candles"></div>
+        <p class="note">The projection shows where recent drift points. It is not a forecast. Markets do not follow lines.</p>
+      </div>
+      <div class="card c6" id="card-signals"><h2>Live signals from the movers lists <em>rules on today's market</em></h2><div class="list" data-draw="alerts_live_list" data-source="alerts_live"></div></div>
+      <div class="card c6" id="card-filings"><h2>Company filing alerts <em data-draw="alerts_date" data-source="alerts_log">—</em></h2><div class="list" data-draw="alerts_log_list" data-source="alerts_log"></div>
+        <p class="note">"Before the filing" means the price had already moved when the news appeared. For most jumps that is the case.</p></div>
+      <div class="card c4"><h2>Top gainers</h2><div class="tw"><table data-source="m_gainers" data-row-key="symbol"><thead><tr><th data-field="symbol">Stock</th><th class="r" data-field="price">Price</th><th class="r" data-field="chg_pct">Change</th><th class="r" data-field="volume">Volume</th></tr></thead><tbody data-draw="gainers_body"></tbody></table></div></div>
+      <div class="card c4"><h2>At 52-week highs</h2><div class="tw"><table data-source="m_52high" data-row-key="symbol"><thead><tr><th data-field="symbol">Stock</th><th class="r" data-field="price">Price</th><th class="r" data-field="chg_pct">Change</th><th class="r" data-field="volume">Volume</th></tr></thead><tbody data-draw="high_body"></tbody></table></div></div>
+      <div class="card c4"><h2>Most active</h2><div class="tw"><table data-source="m_active" data-row-key="symbol"><thead><tr><th data-field="symbol">Stock</th><th class="r" data-field="price">Price</th><th class="r" data-field="chg_pct">Change</th><th class="r" data-field="volume">Volume</th></tr></thead><tbody data-draw="active_body"></tbody></table></div></div>
+    </div>
+  </section>
+
+  <!-- ============ ALGO LAB ============ -->
+  <section id="tab-algo" role="tabpanel" aria-labelledby="tabbtn-algo" hidden>
+    <div class="cd-grid">
+      <div class="card c12"><p class="lead" data-draw="lead_algo" data-source="paper_stats">—</p></div>
+      <div class="card c5" id="card-gate"><h2>Real-money gate <em>all four tests must pass</em></h2><div data-draw="gate_panel" data-source="paper_stats"></div></div>
+      <div class="card c7" id="card-equity"><h2>Paper account <em>starts at your trading cash</em></h2><div class="chartbox" data-draw="equity_chart" data-source="paper_equity" style="min-height:230px"></div></div>
+      <div class="card c12" id="card-ledger">
+        <h2>Paper ledger <em>every order the agents take, win or lose</em></h2>
+        <div class="tw"><table data-source="paper_ledger" data-row-key="id">
+          <thead><tr><th data-field="id">#</th><th data-field="market">Market</th><th data-field="symbol">Symbol</th><th data-field="strategy">Strategy</th><th data-field="status">Status</th><th class="r" data-field="entry">Entry</th><th class="r" data-field="stop">Stop</th><th class="r" data-field="target">Target</th><th class="r" data-field="qty">Qty</th><th class="r" data-field="risk_rs">Risk</th><th class="r" data-field="pnl_rs">P/L</th><th class="r" data-field="r_mult">R</th></tr></thead>
+          <tbody data-draw="ledger_body"></tbody></table></div>
+        <p class="note">R is profit measured in units of the amount risked. A trade that loses its stop is minus 1R.</p>
+      </div>
+      <div class="card c7" id="card-evidence"><h2>How sure are we? <em>chance each strategy truly makes money, from 5 years of history</em></h2><div class="chartbox" data-draw="conf_chart" data-source="strategies_eq" style="min-height:300px"></div>
+        <p class="note">Blue is the naive figure. The marker is the figure after correcting for trying eight strategies. The amber line is your 98% gate.</p></div>
+      <div class="card c5" id="card-strats"><h2>Strategies tested on stocks</h2>
+        <div class="tw"><table data-source="strategies_eq" data-row-key="strategy"><thead><tr><th data-field="strategy">Strategy</th><th data-field="status">Status</th><th class="r" data-field="trades">Trades</th><th class="r" data-field="avg_R">Avg R</th><th class="r" data-field="conf_adjusted">Confidence</th></tr></thead><tbody data-draw="eq_body"></tbody></table></div></div>
+    </div>
+  </section>
+
+  <!-- ============ COMMODITIES AND CRYPTO ============ -->
+  <section id="tab-markets" role="tabpanel" aria-labelledby="tabbtn-markets" hidden>
+    <div class="cd-grid">
+      <div class="card c12"><p class="lead" data-draw="lead_markets" data-source="metals_est">—</p></div>
+      <div class="card c12" id="card-mcx"><h2>MCX futures <em>live from INDmoney, 09:00 to 23:30</em></h2><div class="cardgrid" data-draw="mcx_cards" data-source="comm_live"></div></div>
+      <div class="card c12" id="card-crypto"><h2>Crypto <em>live from Gemini, around the clock</em></h2><div class="cardgrid" data-draw="crypto_cards" data-source="crypto_all"></div></div>
+      <div class="card c8" id="card-cchart"><h2>Crypto chart</h2>
+        <div class="toolbar"><select class="dash-select" data-draw="sel_csym" aria-label="Coin" data-source="crypto_candles"></select><select class="dash-select" data-draw="sel_ctf" aria-label="Timeframe" data-source="crypto_candles"></select></div>
+        <div class="chartbox" data-draw="candle_crypto" data-source="crypto_candles" style="min-height:300px"></div></div>
+      <div class="card c4" id="card-metalsest"><h2>Your metals today <em>estimate</em></h2><div data-draw="metals_panel" data-source="metals_est"></div>
+        <p class="note">Your holdings track the spot price. MCX futures move the same way on most days, so this is a fair estimate, not your exact change.</p></div>
+      <div class="card c7" id="card-macro"><h2>Strategy tests on crypto and commodities <em>5 years, after costs</em></h2>
+        <div class="tw"><table data-source="strategies_macro" data-row-key="strategy,market"><thead><tr><th data-field="strategy">Strategy</th><th data-field="market">Market</th><th data-field="status">Status</th><th class="r" data-field="trades">Trades</th><th class="r" data-field="avg_R">Avg R</th><th class="r" data-field="conf_cluster">Confidence</th><th class="r" data-field="conf_adjusted">After 6 tries</th></tr></thead><tbody data-draw="macro_body"></tbody></table></div>
+        <p class="note">Crypto uses three coins that survived. That flatters every crypto result. The desk paper trades the best one; it does not trust it with money.</p></div>
+      <div class="card c5" id="card-macrosig"><h2>Breakout signals today <em>20-day high</em></h2>
+        <div class="tw"><table data-source="macro_signals" data-row-key="symbol"><thead><tr><th data-field="symbol">Symbol</th><th data-field="name">Name</th><th data-field="entry_signal_today">Signal</th><th class="r" data-field="last_close">Close</th><th class="r" data-field="buy_hold_pa">Buy and hold p.a.</th></tr></thead><tbody data-draw="macrosig_body"></tbody></table></div></div>
+    </div>
+  </section>
+
+  <!-- ============ AGENT ROOM ============ -->
+  <section id="tab-room" role="tabpanel" aria-labelledby="tabbtn-room" hidden>
+    <div class="cd-grid">
+      <div class="card c5" id="card-team">
+        <h2>The team <em>ten agents, one CEO</em></h2>
+        <svg class="constellation" viewBox="0 0 520 430" role="img" aria-label="Ten agents arranged in a ring around the CEO. The active agent glows while it speaks.">
+          <circle class="orbit" cx="260" cy="215" r="150" fill="none" stroke="#1c2c48" stroke-dasharray="2 6"/>
+          <g id="spokes">
+            <path class="edge" data-edge="DATA" d="M260 65 L260 215"/><path class="edge" data-edge="TECH" d="M348 94 L260 215"/><path class="edge" data-edge="FUND" d="M403 169 L260 215"/>
+            <path class="edge" data-edge="SENT" d="M403 261 L260 215"/><path class="edge" data-edge="CALL" d="M348 336 L260 215"/><path class="edge" data-edge="BULL" d="M260 365 L260 215"/>
+            <path class="edge" data-edge="BEAR" d="M172 336 L260 215"/><path class="edge" data-edge="RISK" d="M117 261 L260 215"/><path class="edge" data-edge="PM" d="M117 169 L260 215"/><path class="edge" data-edge="LEDGER" d="M172 94 L260 215"/>
+          </g>
+          <g class="node" data-agent="DATA"><circle class="node-ring" cx="260" cy="65" r="25"/><circle cx="260" cy="65" r="18" fill="#29d3ee"/><text x="260" y="69" text-anchor="middle" fill="#04101c" style="font-weight:700">DA</text><text class="nm" x="260" y="104" text-anchor="middle">Scout</text></g>
+          <g class="node" data-agent="TECH"><circle class="node-ring" cx="348" cy="94" r="25"/><circle cx="348" cy="94" r="18" fill="#4f8cff"/><text x="348" y="98" text-anchor="middle" fill="#fff" style="font-weight:700">TE</text><text class="nm" x="348" y="133" text-anchor="middle">Chartist</text></g>
+          <g class="node" data-agent="FUND"><circle class="node-ring" cx="403" cy="169" r="25"/><circle cx="403" cy="169" r="18" fill="#a184ff"/><text x="403" y="173" text-anchor="middle" fill="#fff" style="font-weight:700">FU</text><text class="nm" x="403" y="208" text-anchor="middle">Ledgerhand</text></g>
+          <g class="node" data-agent="SENT"><circle class="node-ring" cx="403" cy="261" r="25"/><circle cx="403" cy="261" r="18" fill="#ff7ac6"/><text x="403" y="265" text-anchor="middle" fill="#fff" style="font-weight:700">SE</text><text class="nm" x="403" y="300" text-anchor="middle">Pulse</text></g>
+          <g class="node" data-agent="CALL"><circle class="node-ring" cx="348" cy="336" r="25"/><circle cx="348" cy="336" r="18" fill="#ffb64a"/><text x="348" y="340" text-anchor="middle" fill="#2a1a00" style="font-weight:700">CA</text><text class="nm" x="348" y="375" text-anchor="middle">Echo</text></g>
+          <g class="node" data-agent="BULL"><circle class="node-ring" cx="260" cy="365" r="25"/><circle cx="260" cy="365" r="18" fill="#2de3a5"/><text x="260" y="369" text-anchor="middle" fill="#04201a" style="font-weight:700">BU</text><text class="nm" x="260" y="404" text-anchor="middle">Bull</text></g>
+          <g class="node" data-agent="BEAR"><circle class="node-ring" cx="172" cy="336" r="25"/><circle cx="172" cy="336" r="18" fill="#ff5f75"/><text x="172" y="340" text-anchor="middle" fill="#fff" style="font-weight:700">BE</text><text class="nm" x="172" y="375" text-anchor="middle">Bear</text></g>
+          <g class="node" data-agent="RISK"><circle class="node-ring" cx="117" cy="261" r="25"/><circle cx="117" cy="261" r="18" fill="#ffb64a"/><text x="117" y="265" text-anchor="middle" fill="#2a1a00" style="font-weight:700">WA</text><text class="nm" x="117" y="300" text-anchor="middle">Warden</text></g>
+          <g class="node" data-agent="PM"><circle class="node-ring" cx="117" cy="169" r="25"/><circle cx="117" cy="169" r="18" fill="#4f8cff"/><text x="117" y="173" text-anchor="middle" fill="#fff" style="font-weight:700">CH</text><text class="nm" x="117" y="208" text-anchor="middle">Chief</text></g>
+          <g class="node" data-agent="LEDGER"><circle class="node-ring" cx="172" cy="94" r="25"/><circle cx="172" cy="94" r="18" fill="#5b7093"/><text x="172" y="98" text-anchor="middle" fill="#fff" style="font-weight:700">SC</text><text class="nm" x="172" y="133" text-anchor="middle">Scribe</text></g>
+          <g class="node ceo"><circle cx="260" cy="215" r="34" fill="#0a1226" stroke="#e8eef9" stroke-width="2"/><circle cx="260" cy="215" r="26" fill="url(#ceoGrad)"/><text x="260" y="220" text-anchor="middle" fill="#04101c" style="font-weight:800;font-size:15px">CEO</text></g>
+          <defs><radialGradient id="ceoGrad"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#9cc0ff"/></radialGradient></defs>
+        </svg>
+        <p class="note">Agents run after the market closes and before it opens. They read the data, argue both sides, and ask you. They never place orders.</p>
+      </div>
+      <div class="card c7" id="card-room">
+        <h2>Room <em data-draw="room_stamp" data-source="agent_feed">—</em></h2>
+        <div class="toolbar"><button class="cd-btn pri" id="btn-replay" type="button">Replay the last run</button><button class="cd-btn" id="btn-skip" type="button">Show everything</button></div>
+        <div class="feed" data-draw="feed" data-source="agent_feed" aria-live="polite"></div>
+      </div>
+      <div class="card c12" id="card-ticket"><h2>Waiting for your decision <em>CEO</em></h2><div data-draw="ticket_panel" data-source="ticket_view"></div></div>
+    </div>
+  </section>
+
+  <footer>
+    <details id="about"><summary>How this desk works, and what it cannot do</summary>
+      <p class="note">Live figures come from your INDmoney account and Gemini each time you open the page. Agent notes, the paper ledger and the pre-market plan are saved by the desk after each run. The page cannot place or approve orders. Paper trades use pretend money; the desk moves to real money only after 100 or more paper trades and a 98% chance, after correction for the strategies tried, that the average trade makes money. A 98% confidence is not a 98% win rate. Nothing here is investment advice, and trading can lose money you cannot spare.</p></details>
+  </footer>
+</div>
+
+<script src="lib.js"></script>
+<script src="data.js"></script>
+<script src="views_command.js"></script>
+<script src="views_pre.js"></script>
+<script src="views_alerts.js"></script>
+<script src="views_algo.js"></script>
+<script src="views_markets.js"></script>
+<script src="views_room.js"></script>
+<script src="tabs.js"></script>
