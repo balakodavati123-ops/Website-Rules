@@ -37,6 +37,30 @@ Entry is the reference close of the run date. The ledger settles from the
 following session onward. If both stop and target fall in one bar, the stop
 is assumed first. A gap through a level fills at the open.
 
+## Strategy lab: what the desk is allowed to trade
+
+`python backtest/strategy_lab.py` replays every entry strategy in
+`trading_team/strategies.py` over 5 years on the wide universe
+(`watchlists/nifty200_plus_etfs.txt`: 215 stocks plus gold and silver ETFs), under the
+desk's portfolio rules and after costs. Results go to `backtest/approved_strategies.json`.
+
+- **APPROVED**: at least 100 trades, positive average result per trade with t-stat of 2 or
+  more, positive in both parts of the period, drawdown of 20% or less, positive return.
+  These criteria were fixed before the results were seen.
+- **PROBATION**: failed approval, but positive per trade and ahead of the Nifty. Tradable
+  only as a labelled experiment, so forward results build up in the ledger by strategy.
+- **REJECTED**: not traded.
+
+The daily run analyses only tickers with an entry signal from a tradable strategy whose
+stop and target fit the risk rules, and trades it with the tested stop and target. If
+nothing signals, the day is NO_TRADE and no model calls are made.
+`--no-strategy-gate` turns this off.
+
+Current verdicts (11 Nov 2021 to 11 Nov 2026): none APPROVED; `breakout_52w` and
+`trend_ride` on PROBATION (`trend_ride` has no fixed target, so it is outside the risk
+rules and is reported as watch-only); the rest REJECTED. The universe is today's index
+members, so every result is flattered by survivorship bias.
+
 ## Guardrails against bad data and hallucination
 
 These run in code, after each model reply:

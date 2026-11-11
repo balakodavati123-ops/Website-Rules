@@ -68,6 +68,7 @@ class Recommendation:
     rationale: str = ""
     risk_notes: list[str] = field(default_factory=list)
     unverified: list[str] = field(default_factory=list)
+    strategy: str | None = None  # entry strategy and its lab status, if gated
 
     @property
     def is_trade(self) -> bool:

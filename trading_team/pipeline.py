@@ -19,6 +19,7 @@ from .llm import LLM
 from .models import Recommendation
 from .report import write_pdf
 from .risk import CandidateRisk, RiskManager, RiskReview
+from .strategies import STRATEGIES, live_signals, load_verdicts, tradable
 
 log = logging.getLogger(__name__)
 ANALYSTS = ("technical", "fundamentals", "sentiment")
@@ -45,21 +46,53 @@ class TradingDesk:
             write_report: bool = True) -> RunResult:
         run_date = run_date or date.today()
         market = self.data.market()
-        snaps = {t: self.data.snapshot(t, run_date) for t in tickers}
+        # Price history for the whole watchlist, fetched in parallel. Fundamentals
+        # and news are fetched later, only for the candidates that get analysed.
+        with ThreadPoolExecutor(max_workers=6) as pool:
+            snaps = dict(zip(tickers, pool.map(
+                lambda t: self.data.snapshot(t, run_date, enrich=False), tickers)))
 
-        # Screen: deterministic ranking; only the top few get LLM analysis.
+        verdicts = load_verdicts(self.settings.strategy_file)
+        gated = bool(verdicts)
+        allowed = tradable(verdicts, self.settings.rules)
+        watch_only = [n for n, v in verdicts.items()
+                      if v.get("status") in ("APPROVED", "PROBATION") and n not in allowed]
+        watch_hits: list[str] = []
+
+        # Screen: deterministic; only the top few get LLM analysis.
+        # Each entry is (score, ticker, technicals, strategy name or None).
         ranked = []
         for t, snap in snaps.items():
-            tech = technical_summary(snap.bars) if snap.bars else None
-            ranked.append((screen_score(tech) if tech else float("-inf"), t, tech))
+            if not snap.bars:
+                continue
+            if gated:
+                sigs = live_signals(snap.bars, list(allowed) + watch_only)
+                watch_hits += [f"{t} ({n})" for n, _ in sigs if n in watch_only]
+                sigs = [x for x in sigs if x[0] in allowed]
+                if sigs:
+                    name, score = max(sigs, key=lambda x: x[1])
+                    ranked.append((score, t, technical_summary(snap.bars), name))
+            else:
+                tech = technical_summary(snap.bars)
+                ranked.append((screen_score(tech), t, tech, None))
         ranked.sort(key=lambda x: x[0], reverse=True)
 
         cases: list[CaseFile] = []
         risk_facts: dict[str, CandidateRisk] = {}
         grounding_flags: list[str] = []
         def analyse(item):
-            score, t, tech = item
+            score, t, tech, strat_name = item
+            self.data.enrich(snaps[t])
             ctx = build_context(snaps[t], tech, market)
+            if strat_name:
+                v = verdicts[strat_name]
+                ctx["entry_signal"] = {
+                    "strategy": strat_name, "lab_status": v["status"],
+                    "backtest_trades": v["trades"],
+                    "backtest_win_rate_pct": round(v["win_rate"] * 100, 1),
+                    "backtest_avg_R": round(v["avg_R"], 2),
+                    "note": "backtest on today's index members; flattered by "
+                            "survivorship bias"}
             analysts = {name: run_analyst(self.llm, name, ctx) for name in ANALYSTS}
             for name, rep in analysts.items():
                 bad = ungrounded_numbers(rep.get("summary", ""), ctx)
@@ -84,7 +117,8 @@ class TradingDesk:
                             analysts=analysts, bull=bull, bear=bear), tech
 
         # Candidates are analysed in parallel; each one is several model calls.
-        todo = [x for x in ranked[: self.settings.candidates_per_run] if x[2] is not None]
+        todo = ranked[: self.settings.candidates_per_run]
+        strategy_of = {t: name for _, t, _, name in todo if name}
         with ThreadPoolExecutor(max_workers=max(1, len(todo))) as pool:
             for case, tech in pool.map(analyse, todo):
                 cases.append(case)
@@ -96,6 +130,17 @@ class TradingDesk:
 
         if cases:
             proposal = run_portfolio_manager(self.llm, cases, track)
+        elif gated and any(sn.bars for sn in snaps.values()):
+            n_ok = sum(1 for sn in snaps.values() if sn.bars)
+            why = (f"No tested strategy gave an entry signal today across {n_ok} "
+                   f"tickers with verified prices.")
+            if not allowed:
+                why = ("No strategy has passed the backtest lab with exits that fit "
+                       "the risk policy, so the desk has nothing it may trade.")
+            if watch_hits:
+                why += (" Signals from strategies outside the current risk policy "
+                        "(not tradable): " + ", ".join(sorted(watch_hits)[:8]) + ".")
+            proposal = {"action": "NO_TRADE", "rationale": why}
         else:
             proposal = {"action": "NO_TRADE", "rationale":
                         "no candidate had a verified price history"}
@@ -114,10 +159,25 @@ class TradingDesk:
                         "portfolio manager output failed checks; staying in cash"}
 
         review = self.risk.review(proposal, risk_facts, market) if cases else None
+        strategy_label = None
+        if review is not None and review.approved and review.ticker in strategy_of:
+            # Trade the strategy exactly as it was tested: its own stop and target.
+            name = strategy_of[review.ticker]
+            strat, v = STRATEGIES[name], verdicts[name]
+            review.stop_pct = round(strat.stop_pct * 100, 2)
+            review.target_pct = round(strat.target_pct * 100, 2)
+            strategy_label = f"{name} ({v['status']})"
+            review.notes.append(
+                f"entry signal: {name}; stop and target set to the tested values")
+            if v["status"] != "APPROVED":
+                review.notes.append(
+                    f"{name} is on PROBATION, not validated: "
+                    + "; ".join(v.get("failed_criteria", [])))
         if review is not None:
             review.notes = review.notes + grounding_flags
         rec = self._build_recommendation(run_date, proposal, review, snaps,
                                          unverified_market, [c.ticker for c in cases])
+        rec.strategy = strategy_label
         self.ledger.record(rec)
 
         pdf = None

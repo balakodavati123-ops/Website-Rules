@@ -25,4 +25,7 @@ class Settings:
     history_days: int = 400
     ledger_path: str = "data/ledger.sqlite"
     report_dir: str = "reports"
+    # Path to the lab's approved_strategies.json. When set, only tickers with an
+    # entry signal from a tested strategy are analysed. None = ungated screen.
+    strategy_file: str | None = None
     rules: RiskRules = field(default_factory=RiskRules)

@@ -7,13 +7,14 @@ snapshot with verified=False, and the rest of the team reports it as
 from __future__ import annotations
 
 import logging
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 from typing import Any, Protocol
 
 from .guardrails import is_fresh
 from .models import Bar, DataPoint, Snapshot
 
 log = logging.getLogger(__name__)
+IST = timezone(timedelta(hours=5, minutes=30))
 
 FUNDAMENTAL_KEYS = (
     "trailingPE", "forwardPE", "priceToBook", "trailingEps",
@@ -54,7 +55,8 @@ class DataAgent:
         self.provider = provider
         self.history_days = history_days
 
-    def snapshot(self, ticker: str, as_of: date | None = None) -> Snapshot:
+    def snapshot(self, ticker: str, as_of: date | None = None,
+                 enrich: bool = True) -> Snapshot:
         snap = Snapshot(ticker=ticker, as_of=as_of or date.today())
 
         # Price history: must pass validation and be long enough to analyse.
@@ -79,6 +81,12 @@ class DataAgent:
             snap.points["price_history"] = DataPoint(
                 value=len(bars), source="provider", verified=True)
 
+        return self.enrich(snap) if enrich else snap
+
+    def enrich(self, snap: Snapshot) -> Snapshot:
+        """Adds fundamentals, flows and news. Skipped for tickers that are only
+        screened on price, so a wide watchlist stays fast."""
+        ticker = snap.ticker
         # Fundamentals: a field is verified only if the provider returned a value.
         try:
             info = self.provider.fundamentals(ticker) or {}
@@ -135,6 +143,11 @@ class YFinanceProvider:
     def history(self, ticker: str, days: int) -> list[Bar]:
         period = "2y" if days > 365 else "1y"
         df = self._yf.Ticker(ticker).history(period=period, auto_adjust=False)
+        # During market hours the last row is an unfinished session. Signals must
+        # use completed bars only, so drop it until after the 15:30 IST close.
+        now = datetime.now(IST)
+        if len(df) and df.index[-1].date() == now.date() and now.hour * 60 + now.minute < 945:
+            df = df.iloc[:-1]
         bars: list[Bar] = []
         for ts, row in df.iterrows():
             bars.append(Bar(

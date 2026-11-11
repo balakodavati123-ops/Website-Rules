@@ -57,7 +57,15 @@ PM_SYSTEM = (
     "You are the PORTFOLIO MANAGER. You see one case file per candidate: analyst "
     "reports, a bull and a bear argument, and the team's track record. Choose AT "
     "MOST ONE idea for today, or choose NO_TRADE. Choosing NO_TRADE is normal and "
-    "expected when the evidence is weak or mixed. Propose a stop-loss percentage "
+    "expected when the evidence is weak or mixed. Base the decision on what is "
+    "specific to today's candidates. Conditions that are the same every day are "
+    "not reasons to pass, because position size and the risk manager already "
+    "account for them: a strategy's PROBATION status, FII/DII flows being "
+    "unverified, or a short track record. When a candidate has an entry_signal "
+    "from a breakout strategy, a high RSI is expected by construction and is not "
+    "by itself a reason to pass. Pass when the candidates have specific problems: "
+    "bearish fundamentals, a stronger bear than bull case, unverified prices, or "
+    "nothing that stands out. Propose a stop-loss percentage "
     "(3 to 5) and a target percentage (15 to 30); the risk manager may adjust them. "
     'Reply with only a JSON object: {"action": "BUY" or "NO_TRADE", "ticker": '
     '"<one candidate ticker or null>", "stop_pct": <number or null>, "target_pct": '
