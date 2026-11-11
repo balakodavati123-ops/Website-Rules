@@ -99,3 +99,7 @@ def test_number_formats_and_indicator_names():
             "above SMA50 and SMA200, MACD(12,26,9)")
     assert ungrounded_numbers(text, ctx) == []
     assert ungrounded_numbers("fell -3 to 999.5", ctx) == ["-3", "999.5"]
+
+
+def test_fifty_two_week_is_not_flagged():
+    assert ungrounded_numbers("a new 52-week high on 20-day volume", {"x": 1.0}) == []

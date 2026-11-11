@@ -40,10 +40,17 @@ def main(argv: list[str] | None = None) -> int:
                             "an entry signal from a backtested strategy")
 
     tk = sub.add_parser("ticket", help="print an order ticket (no orders are placed)")
-    tk.add_argument("--ticker", required=True)
-    tk.add_argument("--entry", type=float, required=True)
-    tk.add_argument("--stop", type=float, required=True)
-    tk.add_argument("--target", type=float, required=True)
+    tk.add_argument("--from-json", default=None,
+                    help="recommendation file written by `run` (reports/YYYY-MM-DD.json)")
+    tk.add_argument("--mode", choices=("limit", "open"), default="limit",
+                    help="limit: use the entry/stop/target given; open: enter at the live "
+                         "price with the strategy's stop and target percentages (as backtested)")
+    tk.add_argument("--max-gap-pct", type=float, default=3.0,
+                    help="open mode: skip if live price is further than this from the analysed close")
+    tk.add_argument("--ticker", default=None)
+    tk.add_argument("--entry", type=float, default=None)
+    tk.add_argument("--stop", type=float, default=None)
+    tk.add_argument("--target", type=float, default=None)
     tk.add_argument("--equity", type=float, required=True, help="current portfolio equity, Rs")
     tk.add_argument("--risk-pct", type=float, default=0.5, help="risk per trade, %% of equity")
     tk.add_argument("--open-risk", type=float, default=0.0, help="risk already open, Rs")
@@ -52,6 +59,10 @@ def main(argv: list[str] | None = None) -> int:
                     help="live price you or Claude read from INDmoney")
     tk.add_argument("--price-time", default=None, help="time of that price, HH:MM:SS IST")
     tk.add_argument("--vix", type=float, default=None)
+
+    bd = sub.add_parser("board", help="print a context board from INDmoney mover lists")
+    bd.add_argument("files", nargs="+", help="saved get_indian_stocks_movers outputs")
+    bd.add_argument("--ticker", default=None, help="also check this ticker against the lists")
 
     screen_p = sub.add_parser(
         "screen", help="print verified prices and indicators as JSON (no API key needed)")
@@ -65,18 +76,56 @@ def main(argv: list[str] | None = None) -> int:
     settings = Settings()
     ledger = Ledger(args.ledger)
 
+    if args.cmd == "board":
+        from .movers import parse, render_board, warnings_for
+        boards = {}
+        for f in args.files:
+            cat, stocks = parse(Path(f).read_text())
+            boards[cat] = stocks
+        print(render_board(boards))
+        for w in (warnings_for(args.ticker, boards) if args.ticker else []):
+            print(f"WARNING: {w}")
+        return 0
+
     if args.cmd == "ticket":
         from datetime import datetime
-        from .ticket import IST, build_ticket, render_text
+        from .ticket import IST, build_ticket, levels_from_pct, render_text
+        ticker, ref_entry, stop, target = args.ticker, args.entry, args.stop, args.target
+        stop_pct = target_pct = None
+        if args.from_json:
+            rec = json.loads(Path(args.from_json).read_text())
+            if rec.get("action") != "BUY":
+                print(f"NO TRADE on {rec.get('run_date')}: {rec.get('rationale', '')}")
+                for n in rec.get("risk_notes", []):
+                    print(f"  {n}")
+                return 0
+            ticker, ref_entry = rec["ticker"], rec["entry_price"]
+            stop, target = rec["stop_loss"], rec["target"]
+            stop_pct, target_pct = rec["stop_pct"], rec["target_pct"]
+            print(f"Recommendation {rec['run_date']}: {rec.get('strategy') or 'no strategy tag'}")
+        if not ticker or ref_entry is None:
+            print("give --from-json, or --ticker with --entry --stop --target", file=sys.stderr)
+            return 2
         pt = None
         if args.price_time:
             h, m, sec = (int(x) for x in (args.price_time.split(":") + ["0"])[:3])
             pt = datetime.now(IST).replace(hour=h, minute=m, second=sec, microsecond=0)
-        t = build_ticket(ticker=args.ticker.upper(), entry=args.entry, stop=args.stop,
-                         target=args.target, equity=args.equity,
-                         risk_frac=args.risk_pct / 100, open_risk_rs=args.open_risk,
-                         cash=args.cash, live_price=args.live_price, price_time=pt,
-                         vix=args.vix)
+        entry, reference = ref_entry, None
+        if args.mode == "open":
+            if args.live_price is None or stop_pct is None:
+                print("open mode needs --from-json and --live-price", file=sys.stderr)
+                return 2
+            entry, reference = args.live_price, ref_entry
+            stop, target = levels_from_pct(entry, stop_pct, target_pct)
+        if stop is None or target is None:
+            print("need --stop and --target", file=sys.stderr)
+            return 2
+        ticker = ticker.upper().removesuffix(".NS").removesuffix(".BO")   # the app's symbol
+        t = build_ticket(ticker=ticker, entry=entry, stop=stop, target=target,
+                         equity=args.equity, risk_frac=args.risk_pct / 100,
+                         open_risk_rs=args.open_risk, cash=args.cash,
+                         live_price=args.live_price, price_time=pt, vix=args.vix,
+                         reference_price=reference, max_gap_pct=args.max_gap_pct)
         print(render_text(t))
         return 0
 
@@ -147,6 +196,11 @@ def main(argv: list[str] | None = None) -> int:
         print("  Data Unverified: " + "; ".join(rec.unverified))
     if result.pdf_path:
         print(f"report: {result.pdf_path}")
+    import dataclasses
+    out = Path(settings.report_dir) / f"{rec.run_date.isoformat()}.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(dataclasses.asdict(rec), indent=2, default=str))
+    print(f"recommendation file: {out}")
     return 0
 
 

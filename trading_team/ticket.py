@@ -63,7 +63,8 @@ def build_ticket(*, ticker: str, entry: float, stop: float, target: float, equit
                  tick: float = 0.05, max_chase_pct: float = 0.5,
                  max_price_age_s: int = 120, min_reward_to_risk: float = 3.0,
                  slippage_pct: float = 0.3, circuit_limits: tuple[float, float] | None = None,
-                 vix: float | None = None, max_vix: float = 20.0) -> Ticket:
+                 vix: float | None = None, max_vix: float = 20.0,
+                 reference_price: float | None = None, max_gap_pct: float = 3.0) -> Ticket:
     now = now or datetime.now(IST)
     entry = _tick(entry, tick)
     stop_trigger = _tick(stop, tick)
@@ -121,6 +122,11 @@ def build_ticket(*, ticker: str, entry: float, stop: float, target: float, equit
             status = "WAITING"
         else:
             add("entry still reachable", True, f"live {live_price} is {gap:+.2f}% from the entry limit")
+        if reference_price:
+            ref_gap = (live_price / reference_price - 1) * 100
+            add("price close to the analysed close", abs(ref_gap) <= max_gap_pct,
+                f"live {live_price} vs analysed close {reference_price} = {ref_gap:+.2f}% "
+                f"(limit {max_gap_pct}%); a bigger gap means the signal's premise has changed")
         if circuit_limits:
             lo, hi = circuit_limits
             add("away from circuit limits", lo < stop_trigger and entry < hi * 0.98,
@@ -172,3 +178,10 @@ def render_text(t: Ticket) -> str:
     lines += [f"  {s}" for s in t.steps]
     lines.append("This tool places no orders. Research output, not investment advice.")
     return "\n".join(lines)
+
+
+def levels_from_pct(entry: float, stop_pct: float, target_pct: float,
+                    tick: float = 0.05) -> tuple[float, float]:
+    """Stop and target prices for a given entry, as the strategy was tested:
+    stop_pct and target_pct are measured from the actual entry."""
+    return _tick(entry * (1 - stop_pct / 100), tick), _tick(entry * (1 + target_pct / 100), tick)

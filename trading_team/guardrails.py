@@ -27,7 +27,7 @@ def _numbers(text: str) -> list[str]:
 # These are not market data. Kept deliberately short.
 ALWAYS_ALLOWED = {
     0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 15.0, 30.0, 100.0,   # rule parameters
-    9.0, 12.0, 14.0, 20.0, 26.0, 50.0, 200.0,           # indicator periods
+    9.0, 12.0, 14.0, 20.0, 26.0, 50.0, 52.0, 200.0,     # indicator periods and '52-week'
     70.0,                                               # RSI overbought line
 }
 
