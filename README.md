@@ -107,6 +107,17 @@ the price is older than 2 minutes, or the price is at or below the stop. It show
 when price has run more than 0.5% above the entry: the limit rests, and you do not raise it.
 The sizing reproduces the daily report's BEL numbers exactly (see `tests/test_ticket.py`).
 
+## The morning flow
+
+`project/MORNING_PLAYBOOK.md` is the step-by-step for the daily Claude session: settle
+yesterday, run the analysis (writes `reports/YYYY-MM-DD.json`), read the live price from
+INDmoney, then `ticket --from-json ... --mode open --live-price ...` to get a READY, WAITING or
+DO NOT TRADE ticket. `--mode open` enters at the live price with the strategy's own stop and
+target percentages, as backtested, and refuses if the price has gapped more than 3% from the
+analysed close. `board` prints INDmoney's mover lists with tags (thin, at circuit, already up
+15%+). Movers are context only. The INDmoney connector works inside Claude sessions, not in
+the Python scripts, so the live price is passed in as an argument.
+
 ## How sure are we that a strategy works?
 
 `python backtest/confidence.py` measures how likely each strategy's true average result per
