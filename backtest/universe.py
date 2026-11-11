@@ -71,3 +71,47 @@ def fetch_universe(years: int, cache: Path | None = None) -> dict[str, pd.DataFr
         cache.mkdir(parents=True, exist_ok=True)
         (cache / "universe.pkl").write_bytes(pickle.dumps(out))
     return out
+
+
+def _earnings(sym: str):
+    import yfinance as yf
+    try:
+        e = yf.Ticker(sym).get_earnings_dates(limit=28)
+    except Exception:
+        return None
+    if e is None or not len(e) or "Surprise(%)" not in e:
+        return None
+    e = e.dropna(subset=["Surprise(%)"])
+    ist = e.index.tz_convert("Asia/Kolkata")
+    # A result released after the 15:30 close can only move the next session.
+    after_close = (ist.hour * 60 + ist.minute) >= 930
+    react = pd.to_datetime(ist.date) + pd.to_timedelta(after_close.astype(int), unit="D")
+    return pd.DataFrame({"react": react, "surprise": e["Surprise(%)"].to_numpy()})
+
+
+def add_earnings(data: dict[str, pd.DataFrame], cache: Path | None = None) -> int:
+    """Adds a "Surprise" column to each stock: EPS surprise in %, placed on the
+    first session on or after the day the result could be traded. Returns the
+    number of tickers with earnings history."""
+    f = cache / "earnings.pkl" if cache else None
+    if f and f.exists():
+        ev = pickle.loads(f.read_bytes())
+    else:
+        names = [t for t in data if not t.startswith("^")]
+        with ThreadPoolExecutor(max_workers=6) as pool:
+            ev = dict(zip(names, pool.map(lambda t: _earnings(f"{t}.NS"), names)))
+        if f:
+            f.write_bytes(pickle.dumps(ev))
+    n = 0
+    for t, df in data.items():
+        e = ev.get(t)
+        df["Surprise"] = float("nan")
+        if e is None or not len(e):
+            continue
+        n += 1
+        pos = df.index.searchsorted(e["react"].to_numpy())
+        for i, s in zip(pos, e["surprise"]):
+            if i < len(df) and (df.index[i] - pd.Timestamp(e["react"].iloc[0]).normalize()
+                                ).days is not None:
+                df.iloc[i, df.columns.get_loc("Surprise")] = s
+    return n

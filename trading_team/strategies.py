@@ -79,6 +79,19 @@ def trend_ride(df):
     return mom.where(ok), c < s50
 
 
+def earnings_drift(df):
+    """Fundamental trigger: reported EPS beat the consensus estimate by 5% or
+    more, the stock rose at least 2% on the reaction session, and it is above
+    its 200-day average. Needs a "Surprise" column (EPS surprise in %, set on
+    the first session that could react to the result)."""
+    c, s50, s200 = _base(df)
+    if "Surprise" not in df:
+        return pd.Series(np.nan, index=df.index), None
+    sur = df["Surprise"]
+    ok = (sur >= 5) & (c / c.shift(1) - 1 >= 0.02) & (c > s200)
+    return sur.clip(upper=50).where(ok), None
+
+
 @dataclass(frozen=True)
 class Strategy:
     name: str
@@ -87,6 +100,9 @@ class Strategy:
     target_pct: float | None   # None = no fixed target (exit by signal or time)
     max_hold: int              # sessions
     describe: str
+    # Trailing exit: leave at the next open after a close more than this many
+    # ATR(14) below the highest close since entry. None = no trailing exit.
+    trail_atr: float | None = None
 
 
 STRATEGIES = {s.name: s for s in [
@@ -100,6 +116,14 @@ STRATEGIES = {s.name: s for s in [
              "Short dip in an uptrend, exit on bounce, 5% stop, max 10 sessions"),
     Strategy("trend_ride", trend_ride, 0.05, None, 120,
              "12-month momentum, 5% stop, exit below the 50-day average"),
+    Strategy("breakout_52w_trail", breakout_52w, 0.05, None, 120,
+             "52-week high on volume, 5% stop, no fixed target: trail 3 ATR below "
+             "the highest close", trail_atr=3.0),
+    Strategy("earnings_drift", earnings_drift, 0.05, 0.20, 40,
+             "EPS beat of 5%+ with a 2%+ price reaction, 5% stop, 20% target"),
+    Strategy("earnings_drift_trail", earnings_drift, 0.05, None, 120,
+             "EPS beat of 5%+ with a 2%+ price reaction, 5% stop, no fixed target: "
+             "trail 3 ATR below the highest close", trail_atr=3.0),
 ]}
 
 

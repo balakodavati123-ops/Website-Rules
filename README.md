@@ -56,10 +56,28 @@ stop and target fit the risk rules, and trades it with the tested stop and targe
 nothing signals, the day is NO_TRADE and no model calls are made.
 `--no-strategy-gate` turns this off.
 
-Current verdicts (11 Nov 2021 to 11 Nov 2026): none APPROVED; `breakout_52w` and
-`trend_ride` on PROBATION (`trend_ride` has no fixed target, so it is outside the risk
+Current verdicts (11 Nov 2021 to 11 Nov 2026), eight strategies tested: none APPROVED;
+`breakout_52w` and `trend_ride` on PROBATION (`trend_ride` has no fixed target, so it is outside the risk
 rules and is reported as watch-only); the rest REJECTED. The universe is today's index
 members, so every result is flattered by survivorship bias.
+
+## Company results and concalls
+
+For each analysed candidate the desk also fetches:
+
+- **Quarterly results** (Yahoo Finance): revenue, net profit and operating margin for the
+  latest quarter against the same quarter a year earlier, EPS against the consensus
+  estimate, and days to the next result. Growth is computed in code. If the year-ago
+  quarter is missing, growth is reported as unverified.
+- **The latest concall transcript**: located on the company's screener.in page and
+  downloaded from BSE, the official filing. A concall analyst summarises demand, margins,
+  guidance and risks. Each point must carry a verbatim quote; quotes not found in the
+  transcript are deleted, as are statements with figures the transcript does not contain.
+  With no verified quote, the concall view is set to neutral.
+
+These inputs cannot be backtested (no history of past transcripts), so their value is
+measured only going forward, in the ledger. The newest transcript can be a quarter old
+when a company has reported but not yet filed its transcript; the report states its month.
 
 ## Guardrails against bad data and hallucination
 

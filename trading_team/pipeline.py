@@ -8,8 +8,8 @@ from dataclasses import dataclass, field
 from datetime import date
 from pathlib import Path
 
-from .agents import (CaseFile, build_context, run_analyst, run_debate,
-                     run_portfolio_manager)
+from .agents import (CaseFile, build_context, run_analyst, run_concall_analyst,
+                     run_debate, run_portfolio_manager)
 from .config import Settings
 from .data import DataAgent, DataProvider
 from .indicators import screen_score, technical_summary
@@ -94,6 +94,14 @@ class TradingDesk:
                     "note": "backtest on today's index members; flattered by "
                             "survivorship bias"}
             analysts = {name: run_analyst(self.llm, name, ctx) for name in ANALYSTS}
+            concall = snaps[t].points.get("concall")
+            concall_report = None
+            if concall is not None and concall.verified:
+                concall_report = run_concall_analyst(self.llm, concall.value)
+                if concall_report["quotes_dropped"]:
+                    grounding_flags.append(
+                        f"{t} concall: {concall_report['quotes_dropped']} quote(s) "
+                        f"removed, not found in the transcript")
             for name, rep in analysts.items():
                 bad = ungrounded_numbers(rep.get("summary", ""), ctx)
                 if bad:
@@ -102,9 +110,12 @@ class TradingDesk:
                         f"the data ({', '.join(bad)})")
                     rep["summary"] = "[removed: figures not in the data]"
                     rep["signal"] = "neutral"
+            if concall_report:
+                analysts["concall"] = concall_report
             bull, bear = run_debate(self.llm, ctx, analysts)
+            evidence = {"context": ctx, "analysts": analysts}
             for side, text in (("bull", bull), ("bear", bear)):
-                bad = ungrounded_numbers(text, ctx)
+                bad = ungrounded_numbers(text, evidence)
                 if bad:
                     grounding_flags.append(
                         f"{t} {side} argument removed: quoted figures not in the "
