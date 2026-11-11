@@ -1,0 +1,114 @@
+{
+  "momentum_screen": {
+    "trades": 332,
+    "avg_R": -0.002169512553268764,
+    "t_stat": -0.017747984683919,
+    "confidence_naive": 0.49291995021156576,
+    "confidence_cluster": 0.48765000000000003,
+    "confidence_adjusted": 0.0031979069909043867,
+    "avgR_99pct_range": [
+      -0.4014746294158382,
+      0.43392385279223583
+    ],
+    "months": 59,
+    "trades_needed_for_99": null
+  },
+  "pullback_in_uptrend": {
+    "trades": 298,
+    "avg_R": -0.06385305142489289,
+    "t_stat": -0.4708287619432333,
+    "confidence_naive": 0.31888151171358936,
+    "confidence_cluster": 0.34919999999999995,
+    "confidence_adjusted": 0.00022110261562124922,
+    "avgR_99pct_range": [
+      -0.4768862241384884,
+      0.3823228862251695
+    ],
+    "months": 60,
+    "trades_needed_for_99": null
+  },
+  "breakout_52w": {
+    "trades": 289,
+    "avg_R": 0.23571538850380905,
+    "t_stat": 1.9217054032005616,
+    "confidence_naive": 0.9726785815012309,
+    "confidence_cluster": 0.97405,
+    "confidence_adjusted": 0.810307773955067,
+    "avgR_99pct_range": [
+      -0.07949575715959649,
+      0.5421414603819544
+    ],
+    "months": 60,
+    "trades_needed_for_99": 424
+  },
+  "rsi2_dip": {
+    "trades": 740,
+    "avg_R": 0.012888379845930706,
+    "t_stat": 0.4751305159216498,
+    "confidence_naive": 0.682653025491164,
+    "confidence_cluster": 0.68085,
+    "confidence_adjusted": 0.04617549230220808,
+    "avgR_99pct_range": [
+      -0.0579777506247831,
+      0.07878820534857632
+    ],
+    "months": 60,
+    "trades_needed_for_99": 17735
+  },
+  "trend_ride": {
+    "trades": 179,
+    "avg_R": 0.5030197623973938,
+    "t_stat": 1.4700925168470367,
+    "confidence_naive": 0.9292316506084906,
+    "confidence_cluster": 0.9087,
+    "confidence_adjusted": 0.46490500794786294,
+    "avgR_99pct_range": [
+      -0.37344702885829223,
+      1.6480406194088324
+    ],
+    "months": 52,
+    "trades_needed_for_99": 449
+  },
+  "breakout_52w_trail": {
+    "trades": 174,
+    "avg_R": 0.23191265334642056,
+    "t_stat": 1.0044853463864034,
+    "confidence_naive": 0.8424276345678243,
+    "confidence_cluster": 0.83935,
+    "confidence_adjusted": 0.24634557073640084,
+    "avgR_99pct_range": [
+      -0.3253340915136111,
+      0.8734091788874129
+    ],
+    "months": 54,
+    "trades_needed_for_99": 933
+  },
+  "earnings_drift": {
+    "trades": 111,
+    "avg_R": 0.2402185444061943,
+    "t_stat": 1.385131597361588,
+    "confidence_naive": 0.9169938841136895,
+    "confidence_cluster": 0.88285,
+    "confidence_adjusted": 0.3690586347267498,
+    "avgR_99pct_range": [
+      -0.2594751916021793,
+      0.7778823540665711
+    ],
+    "months": 40,
+    "trades_needed_for_99": 314
+  },
+  "earnings_drift_trail": {
+    "trades": 97,
+    "avg_R": 0.2232852334098952,
+    "t_stat": 0.8324251921474867,
+    "confidence_naive": 0.7974155063879195,
+    "confidence_cluster": 0.72895,
+    "confidence_adjusted": 0.07972268598640331,
+    "avgR_99pct_range": [
+      -0.4995237704530463,
+      1.2875417187848754
+    ],
+    "months": 38,
+    "trades_needed_for_99": 758
+  }
+}

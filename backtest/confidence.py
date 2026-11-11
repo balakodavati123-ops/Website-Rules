@@ -73,6 +73,7 @@ def main():
     start = cal[-1] - pd.DateOffset(years=args.years)
     n_tests = len(STRATEGIES)
     print(f"{n_tests} strategies tested; trades from {start.date()} to {cal[-1].date()}\n")
+    results = {}
     print(f"{'strategy':<22}{'trades':>7}{'avg R':>8}{'naive':>9}{'cluster':>9}{'adjusted':>10}"
           f"{'99% range of true avg R':>28}{'trades for 99%':>16}")
     for name, strat in STRATEGIES.items():
@@ -82,11 +83,14 @@ def main():
             print(f"{name:<22}{len(tr):>7}  too few trades")
             continue
         a = analyse(tr, cal, n_tests)
+        results[name] = {**a, "avgR_99pct_range": list(a["avgR_99pct_range"])}
         lo, hi = a["avgR_99pct_range"]
         need = a["trades_needed_for_99"]
         print(f"{name:<22}{a['trades']:>7}{a['avg_R']:>+8.2f}{a['confidence_naive']*100:>8.1f}%"
               f"{a['confidence_cluster']*100:>8.1f}%{a['confidence_adjusted']*100:>9.1f}%"
               f"{'  %+.2f to %+.2f' % (lo, hi):>28}{(str(need) if need else 'n/a'):>16}")
+    (Path(__file__).resolve().parent / "confidence_results.json").write_text(
+        __import__("json").dumps(results, indent=2))
     print("\nconfidence = chance the true average result per trade is above zero.")
     print("A strategy is 'close' to 99% only if the adjusted column reaches about 99%.")
 
