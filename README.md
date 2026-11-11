@@ -118,7 +118,7 @@ paper-trading lab with the real-money gate, MCX commodities and crypto (paper on
 briefing where the Claude agents' research run replays and the CEO's ticket waits.
 
 The floor desks are fixed rules running in the browser on live INDmoney prices (`dashboard/page/floor_*.js`):
-eight hard rules, a 0 to 100 screen score and paper position sizing. They cost nothing to run and they
+eight hard rules, a 0 to 100 screen score and paper position sizing. They make no model calls and they
 are a screen, not a forecast; the screen has not been backtested. `node dashboard/test/floor_calc_test.js`
 checks the rules on INDmoney-shaped rows. Crypto prices come from CoinDCX in rupees, cross-checked
 against Kraken (`dashboard/make_crypto.py`), because neither needs an account and both work in India.
