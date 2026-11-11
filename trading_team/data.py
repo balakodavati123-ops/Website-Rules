@@ -104,6 +104,15 @@ class DataAgent:
         snap.points["fii_dii_flows"] = DataPoint(
             value=flows, source="provider" if flows else None,
             verified=bool(flows), note="" if flows else "no verified source")
+        # Quarterly results and the latest concall transcript, where the provider has them.
+        for name, note in (("results", "no quarterly results confirmed"),
+                           ("concall", "no concall transcript found")):
+            fn = getattr(self.provider, name, None)
+            value = self._safe(lambda: fn(ticker)) if fn else None
+            key = "quarterly_results" if name == "results" else "concall"
+            snap.points[key] = DataPoint(
+                value=value, source="provider" if value else None,
+                verified=bool(value), note="" if value else note)
         news = self._safe(lambda: self.provider.news(ticker))
         snap.points["news"] = DataPoint(
             value=news, source="provider" if news else None,
@@ -166,6 +175,22 @@ class YFinanceProvider:
 
     def flows(self) -> dict[str, Any] | None:
         return None  # no verified free source configured
+
+    def results(self, ticker: str) -> dict[str, Any] | None:
+        """Latest quarter vs a year earlier, plus EPS surprise and next results date."""
+        from .fundamentals import summarise_earnings, summarise_quarters
+        t = self._yf.Ticker(ticker)
+        out = summarise_quarters(t.quarterly_income_stmt) or {}
+        try:
+            out.update(summarise_earnings(t.get_earnings_dates(limit=8),
+                                          datetime.now(IST).date()) or {})
+        except Exception as exc:
+            log.warning("earnings dates failed for %s: %s", ticker, exc)
+        return out or None
+
+    def concall(self, ticker: str) -> dict[str, Any] | None:
+        from .fundamentals import latest_concall
+        return latest_concall(ticker)
 
     def news(self, ticker: str) -> list[dict[str, str]] | None:
         items = self._yf.Ticker(ticker).news or []

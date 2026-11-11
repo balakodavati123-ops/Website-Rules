@@ -124,6 +124,69 @@
         "drawdown 25% above 20%"
       ],
       "description": "12-month momentum, 5% stop, exit below the 50-day average"
+    },
+    "breakout_52w_trail": {
+      "trades": 174,
+      "final_equity": 128093,
+      "cagr": 0.05077044398840869,
+      "max_dd": 0.24029400609289775,
+      "win_rate": 0.27011494252873564,
+      "avg_R": 0.23191265334642056,
+      "t_stat": 1.0044853463864034,
+      "avg_hold": 22.603448275862068,
+      "avg_R_first_60pct": 0.39077578485839237,
+      "avg_R_last_40pct": -0.028045198218624223,
+      "trades_first": 108,
+      "trades_last": 66,
+      "status": "REJECTED",
+      "failed_criteria": [
+        "t-stat 1.00 below 2.0",
+        "not positive in both parts of the period",
+        "drawdown 24% above 20%"
+      ],
+      "description": "52-week high on volume, 5% stop, no fixed target: trail 3 ATR below the highest close"
+    },
+    "earnings_drift": {
+      "trades": 111,
+      "final_equity": 123228,
+      "cagr": 0.042663736470560876,
+      "max_dd": 0.12998873604130023,
+      "win_rate": 0.40540540540540543,
+      "avg_R": 0.2402185444061943,
+      "t_stat": 1.385131597361588,
+      "avg_hold": 20.81081081081081,
+      "avg_R_first_60pct": 0.5504942201048857,
+      "avg_R_last_40pct": -0.214852446618553,
+      "trades_first": 66,
+      "trades_last": 45,
+      "status": "REJECTED",
+      "failed_criteria": [
+        "t-stat 1.39 below 2.0",
+        "not positive in both parts of the period"
+      ],
+      "description": "EPS beat of 5%+ with a 2%+ price reaction, 5% stop, 20% target"
+    },
+    "earnings_drift_trail": {
+      "trades": 97,
+      "final_equity": 121789,
+      "cagr": 0.040216857605510414,
+      "max_dd": 0.22663730303298357,
+      "win_rate": 0.31958762886597936,
+      "avg_R": 0.2232852334098952,
+      "t_stat": 0.8324251921474867,
+      "avg_hold": 27.628865979381445,
+      "avg_R_first_60pct": 0.7799456472392942,
+      "avg_R_last_40pct": -0.5056748323190796,
+      "trades_first": 55,
+      "trades_last": 42,
+      "status": "REJECTED",
+      "failed_criteria": [
+        "only 97 trades (need 100)",
+        "t-stat 0.83 below 2.0",
+        "not positive in both parts of the period",
+        "drawdown 23% above 20%"
+      ],
+      "description": "EPS beat of 5%+ with a 2%+ price reaction, 5% stop, no fixed target: trail 3 ATR below the highest close"
     }
   }
 }

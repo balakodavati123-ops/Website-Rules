@@ -35,7 +35,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from trading_team.strategies import STRATEGIES, Strategy  # noqa: E402
-from universe import fetch_universe  # noqa: E402
+from universe import add_earnings, fetch_universe  # noqa: E402
 
 COST = 0.0025
 START_EQUITY = 100_000.0
@@ -56,11 +56,16 @@ def build(data: dict[str, pd.DataFrame], strat: Strategy):
     O, H, L, C = (np.full(shape, np.nan) for _ in range(4))
     S = np.full(shape, np.nan)
     X = np.zeros(shape, dtype=bool)
+    A = np.full(shape, np.nan)  # ATR(14), for trailing exits
     for j, t in enumerate(names):
         df = data[t]
         score, exit_ = strat.fn(df)
         # require a valid 200-day average so every strategy starts on equal footing
         score = score.where(df["Close"].rolling(200).mean().notna())
+        pc = df["Close"].shift(1)
+        tr = pd.concat([df["High"] - df["Low"], (df["High"] - pc).abs(),
+                        (df["Low"] - pc).abs()], axis=1).max(axis=1)
+        A[:, j] = tr.ewm(alpha=1 / 14, adjust=False).mean().reindex(cal).to_numpy()
         r = df.reindex(cal)
         O[:, j], H[:, j], L[:, j], C[:, j] = r.Open, r.High, r.Low, r.Close
         S[:, j] = score.reindex(cal).to_numpy(dtype=float)
@@ -74,11 +79,11 @@ def build(data: dict[str, pd.DataFrame], strat: Strategy):
     nc = nifty.to_numpy()
     regime = np.where(np.isnan(vix) | (vix > 20) | (nret < -0.02), 2,
                       np.where((vix >= 16) | (nc < n200), 1, 0))  # 0 normal 1 caution 2 cash
-    return cal, names, O, H, L, C, Cff, S, X, regime
+    return cal, names, O, H, L, C, Cff, S, X, A, regime
 
 
 def simulate(data, strat: Strategy, start):
-    cal, names, O, H, L, C, Cff, S, X, regime = build(data, strat)
+    cal, names, O, H, L, C, Cff, S, X, A, regime = build(data, strat)
     i0 = int(np.searchsorted(cal, start))
     cash, pos, trades, curve = START_EQUITY, [], [], []
     peak = ref_peak = START_EQUITY
@@ -99,7 +104,8 @@ def simulate(data, strat: Strategy, start):
                     cash -= q * o
                     pos.append({"j": j, "q": q, "e": o, "stop": o * (1 - strat.stop_pct),
                                 "tgt": o * (1 + strat.target_pct) if strat.target_pct else None,
-                                "risk": q * o * strat.stop_pct, "age": 0, "i": i})
+                                "risk": q * o * strat.stop_pct, "age": 0, "i": i,
+                                "hi": o, "leave": False})
             pending = None
 
         for p in pos[:]:
@@ -109,7 +115,7 @@ def simulate(data, strat: Strategy, start):
                 continue
             p["age"] += 1
             px = None
-            if p["age"] > 1 and X[i - 1, j]:
+            if p["leave"] or (p["age"] > 1 and X[i - 1, j]):
                 px = o
             elif o <= p["stop"]:
                 px = o
@@ -122,6 +128,10 @@ def simulate(data, strat: Strategy, start):
             elif p["age"] >= strat.max_hold:
                 px = c
             if px is None:
+                p["hi"] = max(p["hi"], c)
+                if strat.trail_atr and not np.isnan(A[i, j]) \
+                        and c < p["hi"] - strat.trail_atr * A[i, j]:
+                    p["leave"] = True  # exit at the next open
                 continue
             cost = COST * p["q"] * p["e"]
             pnl = p["q"] * (px - p["e"]) - cost
@@ -193,6 +203,8 @@ def main():
     ap.add_argument("--cache", type=Path, default=None)
     args = ap.parse_args()
     data = fetch_universe(args.years, args.cache)
+    n_earn = add_earnings(data, args.cache)
+    print(f"earnings history for {n_earn} tickers")
     nifty = data["^NSEI"]["Close"]
     start = nifty.index[-1] - pd.DateOffset(years=args.years)
     n = nifty[nifty.index >= start]

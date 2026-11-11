@@ -131,6 +131,12 @@ def technical_summary(bars: Sequence[Bar]) -> dict:
         "pct_vs_sma200": pct_vs(sma200),
         "pct_above_support_20d": pct_vs(support),
         "pct_below_resistance_20d": round((1 - last / resistance) * 100, 1),
+        "atr14": r(atr14),
+        "high_52w": r(max(b.high for b in bars[-252:])),
+        "low_52w": r(min(b.low for b in bars[-252:])),
+        "pct_below_52w_high": round((1 - last / max(b.high for b in bars[-252:])) * 100, 1),
+        "volume_vs_50d_avg": (round(bars[-1].volume / (sum(b.volume for b in bars[-50:]) / 50), 2)
+                              if len(bars) >= 50 and sum(b.volume for b in bars[-50:]) else None),
         "return_1m_pct": r(ret_1m, 1),
         "return_3m_pct": r(ret_3m, 1),
     }
