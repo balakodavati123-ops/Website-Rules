@@ -7,6 +7,17 @@ The dashboard is a Claude Artifact (https://claude.ai/artifact/4zc7CfzQEu6AiXdKt
 - **Saved by the desk after each run:** agent notes, today's plan, filing alerts, the paper ledger,
   strategy tests. These are nine JSON datasets that the daily session must refresh.
 
+## Automatic refresh
+
+A scheduled task, "CEO Desk Daily Refresh", runs weekdays at 08:15 IST in a fresh cloud session. It
+clones this branch, runs the desk, the crypto and commodity signals, the filing alerts and the paper
+engine, then publishes seven datasets (agent feed, plan, filing alerts, crypto/commodity strategy tests,
+breakout signals, paper ledger, paper equity). It reads the dashboard's current paper ledger first, so
+trades carry over from day to day. If a step fails it leaves that dataset as it was and says so.
+The paper engine (`dashboard/paper_engine.py`) fills pending orders at the next open, closes trades on
+stop, target, exit signal or time stop, and writes the equity point. The dashboard turns the closed
+trades into the confidence figure and the real-money gate.
+
 ## Daily refresh (after `python -m trading_team run ...`)
 
 1. `python dashboard/build_seed.py` rebuilds `dashboard/data/*.json` from the newest
