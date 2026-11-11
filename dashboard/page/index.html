@@ -26,6 +26,7 @@
 
   <!-- ============ LIVE FLOOR ============ -->
   <section id="tab-floor" role="tabpanel" aria-labelledby="tabbtn-floor">
+    <div class="fl-wrap">
     <div class="fl-bar" id="floor-bar">
       <span class="chip wrap" data-draw="fl_mode" data-source="floor_stats">—</span>
       <div class="fl-kv"><small>Loop</small><b class="num" data-draw="fl_num" data-k="loop">—</b></div>
@@ -47,11 +48,11 @@
           <p class="dk-rule">Pulls every list. No price, no opinion.</p><p class="dk-now" data-draw="desk_now" data-agent="DATA">—</p></article>
         <article class="desk" id="desk-TECH" data-agent="TECH" style="--c:#4f8cff"><header><i class="ic" style="color:#fff">TE</i><div><b>Chartist</b><small>Technical desk · <b data-draw="desk_n" data-agent="TECH">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="TECH">—</span></header>
           <p class="dk-rule">Eight hard rules. One fail and the name is out.</p><p class="dk-now" data-draw="desk_now" data-agent="TECH">—</p></article>
-        <article class="desk" id="desk-SENT" data-agent="SENT" style="--c:#ff7ac6"><header><i class="ic" style="color:#fff">SE</i><div><b>Pulse</b><small>Crowd and breadth · <b data-draw="desk_n" data-agent="SENT">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="SENT">—</span></header>
+        <article class="desk" id="desk-SENT" data-agent="SENT" style="--c:#ff7ac6"><header><i class="ic" style="color:#fff">SE</i><div><b>Pulse</b><small>Crowd desk · <b data-draw="desk_n" data-agent="SENT">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="SENT">—</span></header>
           <p class="dk-rule">Reads turnover and breadth, never rumours.</p><p class="dk-now" data-draw="desk_now" data-agent="SENT">—</p></article>
         <article class="desk" id="desk-FUND" data-agent="FUND" style="--c:#a184ff"><header><i class="ic" style="color:#fff">FU</i><div><b>Ledgerhand</b><small>Fundamentals · <b data-draw="desk_n" data-agent="FUND">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="FUND">—</span></header>
           <p class="dk-rule">Scores each survivor out of 100.</p><p class="dk-now" data-draw="desk_now" data-agent="FUND">—</p></article>
-        <article class="desk" id="desk-CALL" data-agent="CALL" style="--c:#ffb64a"><header><i class="ic" style="color:#2a1a00">CA</i><div><b>Echo</b><small>Filings and calls · <b data-draw="desk_n" data-agent="CALL">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="CALL">—</span></header>
+        <article class="desk" id="desk-CALL" data-agent="CALL" style="--c:#ffb64a"><header><i class="ic" style="color:#2a1a00">CA</i><div><b>Echo</b><small>Filings desk · <b data-draw="desk_n" data-agent="CALL">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="CALL">—</span></header>
           <p class="dk-rule">Checks what the company filed, and when.</p><p class="dk-now" data-draw="desk_now" data-agent="CALL">—</p></article>
         <article class="desk" id="desk-BULL" data-agent="BULL" style="--c:#2de3a5"><header><i class="ic" style="color:#04201a">BU</i><div><b>Bull</b><small>Bull researcher · <b data-draw="desk_n" data-agent="BULL">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="BULL">—</span></header>
           <p class="dk-rule">Makes the best case for buying.</p><p class="dk-now" data-draw="desk_now" data-agent="BULL">—</p></article>
@@ -118,7 +119,8 @@
     <div class="cd-grid" style="margin-top:12px">
       <div class="card c7" id="card-activity"><h2>Desk activity <em>newest on the right</em></h2><div class="chartbox" data-draw="fl_timeline" style="min-height:90px"></div></div>
       <div class="card c5" id="card-log"><h2>desk.log <em>every hand-off as it happens</em></h2><div class="fl-log" data-draw="fl_log"></div></div>
-      <div class="card c12"><p class="note" style="margin-top:0">What you are watching: the desks on this floor follow fixed rules on live INDmoney prices, in your browser, all day and at no cost. They screen and rank; they do not predict, and the screen itself has not been backtested. The Claude agents that read results, filings and earnings calls run once each weekday morning and report on the Morning briefing tab. "Live refresh" re-reads prices every minute while the market is open and switches itself off after 30 minutes. No order is ever placed from this page.</p></div>
+      <div class="card c12"><p class="note" style="margin-top:0">What you are watching: the desks on this floor follow fixed rules on live INDmoney prices, in your browser, all day and at no cost. They screen and rank; they do not predict, and the screen itself has not been backtested. The Claude agents that read results, filings and earnings calls run once each weekday morning and report on the Morning briefing tab. "Live refresh" re-reads prices every minute while the market is open and switches itself off after an hour. No order is ever placed from this page.</p></div>
+    </div>
     </div>
   </section>
 

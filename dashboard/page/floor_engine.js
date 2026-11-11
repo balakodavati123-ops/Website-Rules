@@ -107,7 +107,7 @@
   const refresh = (ids) => ids.forEach((id) => { try { dash.refresh(id); } catch (e) { /* that list keeps its last answer */ } });
   E.pull = () => refresh(QUOTES.concat(MOVERS));
   const liveTick = () => {
-    const L = E.live; if (Date.now() - L.since > 30 * 60000) { E.setLive(false); return; }
+    const L = E.live; if (Date.now() - L.since > 60 * 60000) { E.setLive(false); return; }
     if (!E.shown || document.hidden || CD.session().key !== 'open') return;
     L.n += 1; refresh(QUOTES); if (L.n % 2 === 0) refresh(MOVERS);
   };

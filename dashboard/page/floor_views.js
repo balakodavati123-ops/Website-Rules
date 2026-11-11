@@ -126,6 +126,9 @@
     if (!s || E.sized !== last.sized) { last.sized = E.sized; dash.draw('fl_ladder'); }
   });
 
+  /* desk colours come from the same table the stage uses */
+  document.querySelectorAll('.desk').forEach((n) => { const a = AG[n.dataset.agent]; if (a) n.style.setProperty('--c', a.c); });
+
   /* ---------- controls ---------- */
   const press = (id, fn) => document.querySelectorAll('#' + id).forEach((b) => b.addEventListener('click', () => fn(b)));
   press('btn-live', () => E.setLive(!E.live.on));
