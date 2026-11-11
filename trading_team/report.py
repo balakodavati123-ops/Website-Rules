@@ -33,6 +33,8 @@ def write_pdf(rec: Recommendation, path: str | Path, track_record: dict,
             f"Entry (reference close): {rec.entry_price:,.2f}<br/>"
             f"Stop-loss: {rec.stop_loss:,.2f} (-{rec.stop_pct}%)<br/>"
             f"Target: {rec.target:,.2f} (+{rec.target_pct}%)", body))
+        if rec.strategy:
+            story.append(Paragraph(f"Entry strategy: {_esc(rec.strategy)}", body))
     else:
         story.append(Paragraph("<b>Decision: NO TRADE (stay in cash)</b>", body))
 

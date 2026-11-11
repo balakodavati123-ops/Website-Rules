@@ -35,6 +35,9 @@ def main(argv: list[str] | None = None) -> int:
                        help="cli = Claude subscription via the `claude` command; "
                             "api = Anthropic API key; auto = api if a key is set, else cli")
     run_p.add_argument("--no-pdf", action="store_true")
+    run_p.add_argument("--no-strategy-gate", action="store_true",
+                       help="analyse the top of the plain screen instead of requiring "
+                            "an entry signal from a backtested strategy")
 
     screen_p = sub.add_parser(
         "screen", help="print verified prices and indicators as JSON (no API key needed)")
@@ -95,12 +98,19 @@ def main(argv: list[str] | None = None) -> int:
         backend = "api" if os.environ.get("ANTHROPIC_API_KEY") else "cli"
     llm = (AnthropicLLM(args.model or settings.model) if backend == "api"
            else ClaudeCLILLM(args.model))
+    if not args.no_strategy_gate:
+        from dataclasses import replace
+        from .strategies import VERDICT_FILE
+        if VERDICT_FILE.exists():
+            settings = replace(settings, strategy_file=str(VERDICT_FILE))
     desk = TradingDesk(provider, llm, ledger, settings)
     result = desk.run(tickers, write_report=not args.no_pdf)
     rec = result.recommendation
     print(f"{rec.run_date}: {rec.action}"
           + (f" {rec.ticker} entry {rec.entry_price} stop {rec.stop_loss} "
              f"target {rec.target}" if rec.is_trade else ""))
+    if rec.strategy:
+        print(f"entry strategy: {rec.strategy}")
     print(rec.rationale)
     for note in rec.risk_notes:
         print(f"  risk: {note}")

@@ -1,0 +1,129 @@
+{
+  "generated": "2026-11-11",
+  "period": [
+    "2021-11-11",
+    "2026-11-11"
+  ],
+  "tickers": 217,
+  "criteria": {
+    "min_trades": 100,
+    "min_avg_R": 0.0,
+    "min_t_stat": 2.0,
+    "both_halves_positive": true,
+    "max_drawdown": 0.2,
+    "min_cagr": 0.0
+  },
+  "benchmark_nifty": {
+    "cagr": 0.07233531107964453,
+    "max_dd": 0.16465934060306942
+  },
+  "strategies": {
+    "momentum_screen": {
+      "trades": 332,
+      "final_equity": 117532,
+      "cagr": 0.03283955024975693,
+      "max_dd": 0.3786856605038347,
+      "win_rate": 0.21987951807228914,
+      "avg_R": -0.002169512553268764,
+      "t_stat": -0.017747984683919,
+      "avg_hold": 11.099397590361447,
+      "avg_R_first_60pct": 0.1753979364368945,
+      "avg_R_last_40pct": -0.2712111019323039,
+      "trades_first": 200,
+      "trades_last": 132,
+      "status": "REJECTED",
+      "failed_criteria": [
+        "average R -0.00 is not positive",
+        "t-stat -0.02 below 2.0",
+        "not positive in both parts of the period",
+        "drawdown 38% above 20%"
+      ],
+      "description": "Current desk screen: trend + RSI + MACD, 4% stop, 20% target"
+    },
+    "pullback_in_uptrend": {
+      "trades": 298,
+      "final_equity": 98061,
+      "cagr": -0.003909673125167212,
+      "max_dd": 0.3530744801312852,
+      "win_rate": 0.22483221476510068,
+      "avg_R": -0.06385305142489289,
+      "t_stat": -0.4708287619432333,
+      "avg_hold": 12.979865771812081,
+      "avg_R_first_60pct": 0.24491380096118265,
+      "avg_R_last_40pct": -0.5840278387780112,
+      "trades_first": 187,
+      "trades_last": 111,
+      "status": "REJECTED",
+      "failed_criteria": [
+        "average R -0.06 is not positive",
+        "t-stat -0.47 below 2.0",
+        "not positive in both parts of the period",
+        "drawdown 35% above 20%",
+        "return -0.4% a year is not positive"
+      ],
+      "description": "Buy a dip to the 50-day average in an uptrend, 4% stop, 20% target"
+    },
+    "breakout_52w": {
+      "trades": 289,
+      "final_equity": 170865,
+      "cagr": 0.11310743806848533,
+      "max_dd": 0.21080875777414432,
+      "win_rate": 0.29411764705882354,
+      "avg_R": 0.23571538850380905,
+      "t_stat": 1.9217054032005616,
+      "avg_hold": 13.055363321799309,
+      "avg_R_first_60pct": 0.4580742030977919,
+      "avg_R_last_40pct": -0.25594465709844183,
+      "trades_first": 199,
+      "trades_last": 90,
+      "status": "PROBATION",
+      "failed_criteria": [
+        "t-stat 1.92 below 2.0",
+        "not positive in both parts of the period",
+        "drawdown 21% above 20%"
+      ],
+      "description": "52-week closing high on high volume, 5% stop, 20% target"
+    },
+    "rsi2_dip": {
+      "trades": 740,
+      "final_equity": 106177,
+      "cagr": 0.0120606819718716,
+      "max_dd": 0.2273487162504707,
+      "win_rate": 0.6013513513513513,
+      "avg_R": 0.012888379845930706,
+      "t_stat": 0.4751305159216498,
+      "avg_hold": 3.960810810810811,
+      "avg_R_first_60pct": 0.03302469736053851,
+      "avg_R_last_40pct": -0.01889472759001819,
+      "trades_first": 453,
+      "trades_last": 287,
+      "status": "REJECTED",
+      "failed_criteria": [
+        "t-stat 0.48 below 2.0",
+        "not positive in both parts of the period",
+        "drawdown 23% above 20%"
+      ],
+      "description": "Short dip in an uptrend, exit on bounce, 5% stop, max 10 sessions"
+    },
+    "trend_ride": {
+      "trades": 179,
+      "final_equity": 228692,
+      "cagr": 0.17994013190527092,
+      "max_dd": 0.24529088595825987,
+      "win_rate": 0.2122905027932961,
+      "avg_R": 0.5030197623973938,
+      "t_stat": 1.4700925168470367,
+      "avg_hold": 22.150837988826815,
+      "avg_R_first_60pct": 0.7785121168232524,
+      "avg_R_last_40pct": 0.04249522962580927,
+      "trades_first": 112,
+      "trades_last": 67,
+      "status": "PROBATION",
+      "failed_criteria": [
+        "t-stat 1.47 below 2.0",
+        "drawdown 25% above 20%"
+      ],
+      "description": "12-month momentum, 5% stop, exit below the 50-day average"
+    }
+  }
+}

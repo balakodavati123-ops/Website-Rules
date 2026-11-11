@@ -44,6 +44,9 @@ class Ledger:
         self._db = sqlite3.connect(self.path)
         self._db.row_factory = sqlite3.Row
         self._db.execute(SCHEMA)
+        cols = {r[1] for r in self._db.execute("pragma table_info(recommendations)")}
+        if "strategy" not in cols:  # ledgers created before strategies existed
+            self._db.execute("alter table recommendations add column strategy text")
         self._db.commit()
 
     def close(self) -> None:
@@ -53,12 +56,13 @@ class Ledger:
         cur = self._db.execute(
             """insert into recommendations
                (run_date, created_at, action, ticker, entry_price, stop_pct, target_pct,
-                stop_loss, target, confidence, rationale, risk_notes, unverified)
-               values (?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                stop_loss, target, confidence, rationale, risk_notes, unverified, strategy)
+               values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
             (rec.run_date.isoformat(), datetime.now().isoformat(timespec="seconds"),
              rec.action, rec.ticker, rec.entry_price, rec.stop_pct, rec.target_pct,
              rec.stop_loss, rec.target, rec.confidence, rec.rationale,
-             json.dumps(rec.risk_notes), json.dumps(rec.unverified)))
+             json.dumps(rec.risk_notes), json.dumps(rec.unverified),
+             rec.strategy))
         self._db.commit()
         return int(cur.lastrowid)
 
@@ -92,7 +96,15 @@ class Ledger:
         no_trade_days = self._db.execute(
             "select count(*) from recommendations where action='NO_TRADE'").fetchone()[0]
         open_count = len(self.open_trades())
+        by_strategy = {}
+        for r in self._db.execute(
+                "select strategy, count(*) n, sum(return_pct > 0) wins, avg(return_pct) avg "
+                "from recommendations where action='BUY' and status='closed' "
+                "and strategy is not null group by strategy"):
+            by_strategy[r["strategy"]] = {"closed_trades": r["n"], "wins": r["wins"],
+                                          "avg_return_pct": round(r["avg"], 2)}
         return {
+            "live_results_by_strategy": by_strategy,
             "closed_trades": len(returns),
             "wins": wins,
             "losses": len(returns) - wins,
