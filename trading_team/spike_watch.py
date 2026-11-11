@@ -42,8 +42,14 @@ TRIGGERS = [
 IGNORE = ("copy of newspaper", "analysts/institutional", "trading window", "shareholders meeting")
 
 
-def fetch_feed() -> list[dict]:
-    req = urllib.request.Request(FEED, headers=HEADERS)
+def fetch_feed(whole_day: bool = False) -> list[dict]:
+    """Latest filings, or with whole_day=True every filing so far today (used on
+    startup, so a restart or a gap in monitoring does not lose filings)."""
+    url = FEED
+    if whole_day:
+        today = datetime.now(IST).strftime("%d-%m-%Y")
+        url = f"{FEED}&from_date={today}&to_date={today}"
+    req = urllib.request.Request(url, headers=HEADERS)
     rows = json.loads(urllib.request.urlopen(req, timeout=20).read())
     out = []
     for r in rows:
@@ -110,8 +116,9 @@ def verdict(trigger: str, snap: dict) -> str:
 def alert(item: dict, trig: str, snap: dict) -> str:
     age = (datetime.now(IST) - item["time"]).total_seconds() / 60
     vol = snap["volume_vs_normal"]
+    late = "  [CATCH-UP: filed earlier today]" if age > 10 else ""
     lines = [f"[{datetime.now(IST):%H:%M:%S}] {item['symbol']}  {trig}  filed {item['time']:%H:%M:%S} "
-             f"({age:.0f} min ago)",
+             f"({age:.0f} min ago){late}",
              f"    {item['text'][:160]}",
              f"    price {snap['last']:.2f} ({snap['day_pct']:+.1f}% today, day high "
              f"{snap['day_high_pct']:+.1f}%), {snap['since_filing_pct']:+.1f}% since filing, "
@@ -145,12 +152,15 @@ def main(argv=None) -> int:
             time.sleep(60)
             continue
         try:
-            feed = fetch_feed()
+            feed = fetch_feed(whole_day=not args.once)   # whole day every poll: no gaps
         except Exception as exc:
             print(f"feed error: {exc}", file=sys.stderr, flush=True)
             time.sleep(args.interval)
             continue
-        cutoff = now - timedelta(minutes=args.lookback_min if (args.once or first) else 5)
+        if first and not args.once:   # catch-up: everything since the open today
+            cutoff = now.replace(hour=9, minute=15, second=0, microsecond=0)
+        else:
+            cutoff = now - timedelta(minutes=args.lookback_min if args.once else 30)
         for item in sorted(feed, key=lambda x: x["time"]):
             key = (item["symbol"], item["time"], item["desc"])
             if key in seen:
