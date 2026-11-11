@@ -32,6 +32,10 @@ def main(argv: list[str] | None = None) -> int:
     run_p.add_argument("--model", default=Settings.model)
     run_p.add_argument("--no-pdf", action="store_true")
 
+    screen_p = sub.add_parser(
+        "screen", help="print verified prices and indicators as JSON (no API key needed)")
+    screen_p.add_argument("--watchlist", required=True)
+
     sub.add_parser("settle", help="settle open trades against later prices")
     sub.add_parser("stats", help="print the track record")
 
@@ -46,6 +50,28 @@ def main(argv: list[str] | None = None) -> int:
 
     from .data import YFinanceProvider
     provider = YFinanceProvider()
+
+    if args.cmd == "screen":
+        from .data import DataAgent
+        from .indicators import screen_score, technical_summary
+        agent = DataAgent(provider, settings.history_days)
+        market = agent.market()
+        rows = []
+        for t in read_watchlist(args.watchlist):
+            snap = agent.snapshot(t)
+            tech = technical_summary(snap.bars) if snap.bars else None
+            rows.append({"ticker": t,
+                         "screen_score": screen_score(tech) if tech else None,
+                         "technicals": tech or "UNVERIFIED",
+                         "unverified": snap.unverified_items()})
+        rows.sort(key=lambda r: (r["screen_score"] is not None, r["screen_score"] or 0),
+                  reverse=True)
+        vix = market["india_vix"]
+        print(json.dumps({"as_of": date.today().isoformat(),
+                          "source": "Yahoo Finance daily bars (delayed, unofficial)",
+                          "india_vix": vix.value if vix.verified else "UNVERIFIED",
+                          "candidates": rows}, indent=2, default=str))
+        return 0
 
     if args.cmd == "settle":
         settled = settle_open_trades(ledger, lambda t: provider.history(t, 400),
