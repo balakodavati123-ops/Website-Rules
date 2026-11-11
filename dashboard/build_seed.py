@@ -133,8 +133,9 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     reports = ROOT / "reports"
     files = sorted(reports.glob("*_agents.json"))
-    if len(sys.argv) > 1:
-        files = [reports / f"{sys.argv[1]}_agents.json"]
+    dates = [x for x in sys.argv[1:] if not x.startswith("--")]
+    if dates:
+        files = [reports / f"{dates[0]}_agents.json"]
     room = json.loads(files[-1].read_text())
     rec = json.loads((reports / f"{room['run_date']}.json").read_text())
     stats = {"closed_trades": 0}
@@ -191,15 +192,17 @@ def main():
     entry, stop, target = rec["entry_price"], rec["stop_loss"], rec["target"]
     risk_rs = round(PAPER_START * 0.005, 2)                    # Caution regime: 0.5% of equity
     qty = int(risk_rs // (entry - stop)) if rec.get("action") == "BUY" else 0
-    ledger = [{"id": 1, "market": "NSE", "symbol": sym(rec.get("ticker")), "strategy": rec.get("strategy"),
+    ledger = [{"id": 1, "market": "NSE", "symbol": sym(rec.get("ticker")), "strategy": (rec.get("strategy") or "").split(" (")[0],
+               "signal_date": rec["run_date"], "signal_close": entry, "atr": "",
                "status": "PENDING", "opened": "", "closed": "", "entry": entry, "stop": stop,
                "target": target, "qty": qty, "risk_rs": round(qty * (entry - stop), 2),
                "exit": "", "pnl_rs": 0, "r_mult": 0,
                "note": f"Signal from {rec['run_date']} close. Fills at the next open if the gap is within 3%."}
               ] if rec.get("action") == "BUY" else []
-    (OUT / "paper_ledger.json").write_text(json.dumps(ledger, indent=1))
-    (OUT / "paper_equity.json").write_text(json.dumps(
-        [{"date": rec["run_date"], "equity": PAPER_START}], indent=1))
+    if "--skip-paper" not in sys.argv:       # the daily refresh writes these from the engine
+        (OUT / "paper_ledger.json").write_text(json.dumps(ledger, indent=1))
+        (OUT / "paper_equity.json").write_text(json.dumps(
+            [{"date": rec["run_date"], "equity": PAPER_START}], indent=1))
     rules = [
         {"key": "trading_cash", "label": "Trading cash (CEO)", "value": TRADING_CASH, "unit": "rupees"},
         {"key": "paper_start", "label": "Paper account start", "value": PAPER_START, "unit": "rupees"},
