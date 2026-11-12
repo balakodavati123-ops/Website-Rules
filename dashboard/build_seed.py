@@ -23,11 +23,11 @@ TRADING_CASH = 32000
 PAPER_START = 32000
 
 AGENTS = {  # id -> (display name, role, tone colour key)
-    "DATA": ("Scout", "Data agent"), "TECH": ("Chartist", "Technical analyst"),
-    "FUND": ("Ledgerhand", "Fundamentals analyst"), "SENT": ("Pulse", "News and sentiment"),
-    "CALL": ("Echo", "Earnings-call analyst"), "BULL": ("Bull", "Bull researcher"),
-    "BEAR": ("Bear", "Bear researcher"), "RISK": ("Warden", "Risk manager"),
-    "PM": ("Chief", "Portfolio manager"), "LEDGER": ("Scribe", "Ledger agent"),
+    "DATA": ("Market Data Analyst", "Research"), "TECH": ("Technical Analyst", "Research"),
+    "FUND": ("Fundamental Analyst", "Research"), "SENT": ("Sentiment and Noise Analyst", "Research"),
+    "CALL": ("Corporate Filings Analyst", "Research"), "BULL": ("Research Analyst, Long Case", "Debate"),
+    "BEAR": ("Research Analyst, Short Case", "Debate"), "RISK": ("Chief Risk Officer", "Risk"),
+    "PM": ("Trading Officer", "Trading"), "LEDGER": ("Trade Operations", "Operations"),
 }
 
 

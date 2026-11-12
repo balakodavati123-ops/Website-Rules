@@ -2,7 +2,7 @@
    data travel along each hand-off the engine plays. Everything here lives inside one drawing. */
 (function () {
   const { el } = CD; const AG = CD.AGENTS, E = CD.ENG, reduce = E.reduce;
-  const ORDER = ['DATA', 'TECH', 'SENT', 'FUND', 'CALL', 'BULL', 'BEAR', 'RISK', 'PM', 'LEDGER'];
+  const ORDER = ['DATA', 'TECH', 'SENT', 'FUND', 'CALL', 'BULL', 'BEAR', 'RISK', 'PM', 'LEDGER', 'COO'];
   const PORTS = [['S1', 'INDmoney', 'movers'], ['S2', 'INDmoney', 'quotes'], ['S3', 'NSE', 'filings'], ['S4', 'CoinDCX', 'crypto'], ['S5', 'Ledger', 'paper']];
   const TONE = { info: '#29d3ee', ok: '#2de3a5', bull: '#2de3a5', bear: '#ff5f75', kill: '#ff5f75', warn: '#ffb64a', ask: '#ffffff' };
   const TAU = Math.PI * 2; const bez = (a, m, b, u) => (1 - u) * (1 - u) * a + 2 * (1 - u) * u * m + u * u * b;
@@ -10,11 +10,11 @@
   dash.draw('floor_stage', {
     mount(box) {
       const cv = el('canvas', 'fl-cv'); cv.setAttribute('role', 'img');
-      cv.setAttribute('aria-label', 'The floor. Data moves from five sources to Scout, around the ring of ten desks, and from the Chief to the CEO in the middle.');
+      cv.setAttribute('aria-label', 'The floor. Data moves from five sources to the Market Data Analyst, around the ring of desks, and from the Trading Officer and the COO to the CEO in the middle.');
       const layer = el('div', 'fl-layer'); box.replaceChildren(cv, layer); const N = {};
       PORTS.forEach(([id, a, b]) => { const n = el('div', 'fl-port'); n.append(el('b', '', a), el('small', '', b)); layer.appendChild(n); N[id] = { el: n }; });
       ORDER.concat(['CEO']).forEach((id) => { const a = AG[id]; const n = el('div', 'fl-node' + (id === 'CEO' ? ' ceo' : '')); n.style.setProperty('--c', a.c);
-        const orb = el('i', 'orb', a.init); orb.style.color = a.fg; const st = el('small', '', E.desk[id].chip); n.append(orb, el('b', '', id === 'CEO' ? 'You' : a.name), st); layer.appendChild(n); N[id] = { el: n, st }; });
+        const orb = el('i', 'orb', a.init); orb.style.color = a.fg; const st = el('small', '', E.desk[id].chip); n.append(orb, el('b', '', id === 'CEO' ? 'You' : a.short), st); layer.appendChild(n); N[id] = { el: n, st }; });
       const M = { cv, ctx: cv.getContext('2d'), N, W: 0, H: 0, parts: [], pk: [], sparks: [], rings: [], edge: null, raf: 0, last: 0 };
 
       M.layout = () => {

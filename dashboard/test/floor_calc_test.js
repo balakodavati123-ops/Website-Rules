@@ -16,8 +16,8 @@ const rows = run(17.53); const by = Object.fromEntries(rows.map((r) => [r.symbol
 assert.equal(by.ICICIBANK.failed, 5); assert.match(by.ICICIBANK.fail_reason, /down 1\.1% today/);
 assert.equal(by.LOCKED.failed, 3); assert.equal(by.RUNNER.failed, 4); assert.equal(by.THIN.failed, 1);
 assert.equal(by['544937'].label, 'National Stock Exchange Of India'); assert.ok(!by['544937'].bull.includes('544937'));
-const k = by.KOTAKBANK; assert.equal(k.failed, 0); assert.deepEqual([k.f1, k.f2, k.f3, k.f4, k.f5, k.f6], [19, 15, 15, 15, 10, 8]); assert.equal(k.score, 82); assert.equal(k.verdict, 'SETUP');
-assert.equal(k.qty, 6); assert.equal(k.risk_rs, 146); assert.equal(k.stop, 463.31); assert.match(k.size_note, /Half size because India VIX is 17\.5/); assert.match(k.bear, /below the price/);
+const k = by.KOTAKBANK; assert.equal(k.failed, 0); assert.deepEqual([k.f1, k.f2, k.f3, k.f4, k.f5], [23, 19, 15, 20, 10]); assert.equal(k.score, 87); assert.equal(k.horizon, 'Day'); assert.equal(k.target_px, 536.47); assert.equal(k.verdict, 'SETUP');
+assert.equal(k.qty, 6); assert.equal(k.risk_rs, 146); assert.equal(k.stop, 463.31); assert.match(k.size_note, /Half size because India VIX is 17\.5/); assert.match(k.bear, /29%/);
 assert.ok(run(21).every((r) => r.failed), 'a VIX above 20 leaves no survivors'); assert.equal(run(21).find((r) => r.symbol === 'KOTAKBANK').failed, 8);
 assert.equal(run(14).find((r) => r.symbol === 'KOTAKBANK').qty, 13, 'full size in a normal market');
 const st = C.floor_stats.fn(rows, limits, gainers, [], [], idx(17.53))[0];

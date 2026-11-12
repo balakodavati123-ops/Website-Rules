@@ -85,11 +85,11 @@
     if (!out.length) out.push(el('div', 'empty', 'Nothing needs you right now. The desks keep looking.')); box.replaceChildren(...out);
   });
   dash.draw('fl_ladder', (box) => {
-    const r = E.sized; box.replaceChildren(); if (!r) { box.appendChild(el('div', 'empty', 'Warden draws the entry, stop and target here when a name reaches the watch bar.')); return; }
+    const r = E.sized; box.replaceChildren(); if (!r) { box.appendChild(el('div', 'empty', 'The Risk Officer draws the entry, the stop and a reward marker here when a name reaches the watch bar.')); return; }
     const W = Math.max(220, box.clientWidth), H = 138, x0 = 8, x1 = W - 8; const s = CD.svg(box, W, H, `Paper entry, stop and target for ${r.label}`); const y = d3.scaleLinear([r.stop, r.target_px], [H - 16, 16]);
     s.append('rect').attr('x', x0).attr('width', x1 - x0).attr('y', y(r.target_px)).attr('height', y(r.price) - y(r.target_px)).attr('fill', PAL.green).attr('opacity', 0.1);
     s.append('rect').attr('x', x0).attr('width', x1 - x0).attr('y', y(r.price)).attr('height', y(r.stop) - y(r.price)).attr('fill', PAL.red).attr('opacity', 0.17);
-    [['Target', r.target_px, PAL.green, 'target_px'], ['Entry now', r.price, '#e8eef9', 'price'], ['Stop', r.stop, PAL.red, 'stop']].forEach(([lab, v, c, f]) => { const d = Math.round((v / r.price - 1) * 100);
+    [['Reward marker (2x risk)', r.target_px, PAL.green, 'target_px'], ['Entry now', r.price, '#e8eef9', 'price'], ['Stop', r.stop, PAL.red, 'stop']].forEach(([lab, v, c, f]) => { const d = Math.round((v / r.price - 1) * 100);
       s.append('line').attr('x1', x0).attr('x2', x1).attr('y1', y(v)).attr('y2', y(v)).attr('stroke', c).attr('stroke-width', 1.4);
       s.append('text').attr('x', x0 + 4).attr('y', y(v) - 4).style('fill', c).text(d ? `${lab} ${pct(d, 0)}` : lab);
       CD.mark(s.append('text').attr('x', x1 - 4).attr('y', y(v) - 4).attr('text-anchor', 'end').style('fill', c).text(num(v, 2)).node(), 'floor_rows', f, where(r)); });
@@ -124,6 +124,21 @@
     if (!s || E.focus !== last.focus) { paintRules(!!s); last.focus = E.focus; dash.draw('rule_val'); dash.draw('rule_note'); }
     if (!s || E.scored !== last.scored) { last.scored = E.scored; paintScore(); ['sc_val', 'sc_name', 'sc_gauge'].forEach((n) => dash.draw(n)); }
     if (!s || E.sized !== last.sized) { last.sized = E.sized; dash.draw('fl_ladder'); }
+  });
+
+  /* ---------- Algo tab: names the desks approved, and the paper / real switch ---------- */
+  const HZ = { Day: 'g', Week: 'b', Month: 'a' };
+  dash.draw('approved_body', (body) => {
+    const r = need(body, ['floor_rows']); if (!r) return; const rows = r[0].filter((x) => !x.failed && x.horizon).sort((a, b) => b.score - a.score);
+    if (!rows.length) { const tr = el('tr'), td = el('td', 'dim', 'No name clears the rules and reaches a score of 50 right now.'); td.colSpan = 7; tr.appendChild(td); body.replaceChildren(tr); return; }
+    body.replaceChildren(...rows.map((x) => { const tr = el('tr'); tr.setAttribute('data-key', x.symbol); const cell = (c, v) => { const td = el('td', c); td.append(v); tr.appendChild(td); };
+      cell('', x.label); cell('num r', String(x.score)); cell('', tag(x.horizon, HZ[x.horizon])); cell('num r', num(x.price, 2)); cell('num r ' + cls(x.chg_pct), pct(x.chg_pct)); cell('hs', x.lists);
+      const b = el('button', 'cd-btn', 'Open chart'); b.type = 'button'; b.disabled = !x.key; b.addEventListener('click', () => { CD.pickName = x.label; dash.setParams({ sym: x.key, iv: '1day', lb: '1y' }); CD.goto('alerts'); }); cell('r', b); return tr; }));
+  });
+  dash.draw('mode_note', (p) => {
+    const d = dash.data('paper_stats'); const s = d.status === 'ok' ? d.data[0] : null; const real = document.querySelector('#btn-real'); if (real) real.disabled = !(s && s.ready);
+    p.textContent = !s ? '—' : s.ready ? 'All four tests pass. Real-money mode shows tickets from the approved strategies; you place each order yourself.'
+      : `Real money is locked: ${s.trades} of ${s.need_trades} paper trades closed, confidence ${Number(s.confidence).toFixed(0)}% against the ${s.need_conf}% needed. The desk trades paper until every test passes.`;
   });
 
   /* desk colours come from the same table the stage uses */

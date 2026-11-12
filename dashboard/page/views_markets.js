@@ -18,6 +18,13 @@
       const lh = CD.lohi(num(x.low, x.low < 1000 ? 2 : 0), 'day range', num(x.high, x.high < 1000 ? 2 : 0));
       const meta = el('div', 'sub'); meta.style.marginTop = '6px'; meta.textContent = `Open interest ${num(x.oi, 0)} (${pct(x.oi_chg, 1)}) · expires ${String(x.expiry || '').slice(0, 10)}`; c.append(v, d, rangeBar(x.live, x.low, x.high), lh, meta); return c; })); });
 
+  dash.draw('crypto_live_cards', (box) => { const r = need(box, ['crypto_live']); if (!r) return;
+    box.replaceChildren(...r[0].map((x) => { const c = el('div', 'crypto-card'), w = 'symbol=' + x.symbol; c.appendChild(el('div', 'sub', `${x.name} · ${x.symbol} · rank ${x.rank}`));
+      const v = el('div', 'num'); v.style.cssText = 'font-size:20px;font-weight:650;margin-top:2px'; v.append('$', mk(num(x.price_usd, 2), '', 'crypto_live', 'price_usd', w));
+      const d = el('div', 'num ' + cls(x.chg_24h_pct)); d.append(mk(pct(x.chg_24h_pct), '', 'crypto_live', 'chg_24h_pct', w), ' in 24 hours');
+      const sp = el('div'); sp.style.marginTop = '6px'; let arr = []; try { arr = JSON.parse(x.spark); } catch (e) { arr = []; } CD.spark(sp, arr, (x.chg_24h_pct || 0) >= 0 ? CD.PAL.green : CD.PAL.red, 200, 40);
+      c.append(v, d, sp, el('div', 'sub', '7-day line')); return c; })); });
+
   dash.draw('crypto_stamp', (em) => { const d = dash.data('crypto_quotes'); em.textContent = d.status === 'ok' && d.data.length ? `CoinDCX, checked against Kraken · saved ${d.data[0].as_of_hm} IST` : '—'; });
   dash.draw('crypto_cards', (box) => { const r = need(box, ['crypto_quotes']); if (!r) return;
     box.replaceChildren(...r[0].map((x) => { const c = el('div', 'crypto-card'), w = 'symbol=' + x.symbol; const top = el('div', 'sub'); top.append(`${x.name} · ${x.symbol} `, tag(x.verified === 'yes' ? 'two sources agree' : 'single source', x.verified === 'yes' ? 'g' : 'a'));
