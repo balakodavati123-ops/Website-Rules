@@ -33,6 +33,42 @@ def stock_signals(provider) -> list[dict]:
              "signal_date": str(bars.index[-1].date()), "signal_close": float(bars.Close.iloc[-1])}]
 
 
+PRICE_STRATEGIES = ["breakout_52w", "breakout_52w_trail", "trend_ride", "momentum_screen", "pullback_in_uptrend", "rsi2_dip"]
+
+
+def scan_signals(provider, per_strategy: int = 2) -> list[dict]:
+    """Every price strategy on the whole watchlist; the strongest few signals of each go on paper.
+    Strategies the 5-year test rejected are traded here too, on paper only, so their record is seen."""
+    import yfinance as yf
+    sys.path.insert(0, str(ROOT))
+    from trading_team.strategies import STRATEGIES
+    ticks = [t.strip() for t in (ROOT / "watchlists" / "nifty200_plus_etfs.txt").read_text().splitlines() if t.strip() and not t.startswith("#")]
+    data = yf.download(ticks, period="2y", group_by="ticker", auto_adjust=False, threads=True, progress=False)
+    newest = max(data[t].Close.dropna().index[-1] for t in ticks if t in data and len(data[t].Close.dropna()))
+    found: dict[str, list] = {}
+    for t in ticks:
+        try:
+            df = data[t].dropna(subset=["Close"])
+        except KeyError:
+            continue
+        if len(df) < 260 or df.index[-1] != newest:          # too short, or its last bar is stale
+            continue
+        df = df.copy()
+        df.index = __import__("pandas").to_datetime(df.index.date)
+        for name in PRICE_STRATEGIES:
+            last = STRATEGIES[name].fn(df)[0].iloc[-1]
+            if last == last:
+                found.setdefault(name, []).append((float(last), t, df))
+    out = []
+    for name, hits in found.items():
+        for _, t, df in sorted(hits, key=lambda x: -x[0])[:per_strategy]:
+            provider._pre[t] = df
+            out.append({"market": "NSE", "symbol": t.replace(".NS", ""), "strategy": name,
+                        "signal_date": str(df.index[-1].date()), "signal_close": float(df.Close.iloc[-1])})
+    print("signals:", {k: len(v) for k, v in found.items()}, "taken", len(out))
+    return out
+
+
 def crypto_signals() -> list[dict]:
     f = ROOT / "backtest" / "macro_lab_results.json"
     if not f.exists():
@@ -56,7 +92,12 @@ def main():
     equity = json.loads((state / "paper_equity.json").read_text())
     rules = json.loads((ROOT / "dashboard" / "data" / "desk_rules.json").read_text())
     provider = YahooProvider()
-    ledger, equity = step(ledger, equity, rules, stock_signals(provider) + crypto_signals(), provider, today)
+    try:
+        scanned = scan_signals(provider)
+    except Exception as e:                                   # the scan is extra: the desk's own signal still runs
+        print("strategy scan failed:", e)
+        scanned = []
+    ledger, equity = step(ledger, equity, rules, stock_signals(provider) + scanned + crypto_signals(), provider, today)
     out = ROOT / "dashboard" / "data"
     (out / "paper_ledger.json").write_text(json.dumps(ledger, indent=1))
     (out / "paper_equity.json").write_text(json.dumps(equity, indent=1))

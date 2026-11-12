@@ -78,10 +78,13 @@ FILES = {  # id -> (title, description, file name)
     "paper_equity": ("Paper equity", "Paper account equity by day.", "paper_equity.json"),
     "desk_rules": ("Desk rules", "Trading cash, risk limits and the real-money gate.", "desk_rules.json"),
     "crypto_quotes": ("Crypto prices in rupees", "Bitcoin, Ethereum and Solana on CoinDCX, cross-checked against Kraken's dollar price.", "crypto_quotes.json"),
+    "world_markets": ("World markets before the bell", "Last close and change for world indices, the dollar, the rupee, crude, gold and US yields, from Yahoo Finance.", "world_markets.json"),
+    "events_today": ("Company events", "Board meetings, results and corporate actions due in the next three days, from NSE.", "events_today.json"),
+    "world_news": ("Headlines", "News headlines from Yahoo Finance, word for word with their publisher.", "world_news.json"),
     "crypto_candles": ("Crypto candles in rupees", "CoinDCX daily, hourly and 15-minute candles for Bitcoin, Ethereum and Solana.", "crypto_candles.json"),
 }
 SCHEDULE = "Rebuilt each weekday at 08:15 IST by the CEO Desk Daily Refresh task."
-PAGE_FILES = ["index.html", "style.css", "lib.js", "data.js", "floor_data.js", "floor_engine.js", "floor_stage.js", "floor_views.js", "views_command.js", "views_pre.js", "views_alerts.js",
+PAGE_FILES = ["index.html", "style.css", "lib.js", "data.js", "floor_data.js", "floor_engine.js", "floor_stage.js", "floor_views.js", "views_plus.js", "views_command.js", "views_pre.js", "views_alerts.js",
               "views_algo.js", "views_markets.js", "views_room.js", "tabs.js"]
 
 

@@ -75,7 +75,6 @@
           <div class="fl-stage" data-draw="floor_stage" data-source="floor_rows floor_stats floor_side paper_live"></div>
           <div class="fl-phases" id="floor-phases"><span data-ph="0">Pull</span><span data-ph="1">Rules</span><span data-ph="2">Crowd</span><span data-ph="3">Books</span><span data-ph="4">Filings</span><span data-ph="5">Debate</span><span data-ph="6">Size</span><span data-ph="7">Verdict</span><span data-ph="8">Log</span></div>
           <p class="fl-note num" data-draw="fl_note">—</p>
-          <div class="fl-say" id="floor-say" data-draw="fl_say" data-source="floor_rows floor_stats floor_side"></div>
           <div class="fl-flowrow"><small>This batch</small><div class="fl-flow" data-draw="fl_flow" data-source="floor_rows"></div></div>
         </div>
         <div class="fl-two">
@@ -168,6 +167,10 @@
     <div class="cd-grid">
       <div class="card c12"><p class="lead" data-draw="lead_pre" data-source="plan_today">—</p></div>
       <div class="c12 cardgrid" data-draw="idx_cards" data-source="indices"></div>
+      <div class="card c12" id="card-world"><h2>World markets before the bell <em>last close, from Yahoo Finance</em></h2><div class="cardgrid" data-draw="world_cards" data-source="world_markets"></div></div>
+      <div class="card c7" id="card-events"><h2>Results, board meetings and corporate actions <em>next three days, from NSE; blue is on your watchlist</em></h2>
+        <div class="tw" style="max-height:420px;overflow-y:auto"><table data-source="events_today" data-row-key="date,symbol,kind"><thead><tr><th data-field="date">Date</th><th data-field="symbol">Company</th><th data-field="kind">Event</th><th class="hs" data-field="detail">Detail</th></tr></thead><tbody data-draw="events_body"></tbody></table></div></div>
+      <div class="card c5" id="card-news"><h2>Headlines <em>word for word, no opinion added</em></h2><div class="list" data-draw="news_list" data-source="world_news"></div></div>
       <div class="card c12" id="card-plan">
         <h2>Today's watchlist and the reasons <em>earnings calls, events, sentiment, signals</em></h2>
         <div class="list" data-draw="plan_list" data-source="plan_join"></div>
@@ -211,6 +214,10 @@
         <div class="tw"><table data-source="floor_rows" data-row-key="symbol"><thead><tr><th data-field="label">Name</th><th class="r" data-field="score">Score</th><th data-field="horizon">Horizon</th><th class="r" data-field="price">Price</th><th class="r" data-field="chg_pct">Today</th><th class="hs" data-field="lists">Found on</th><th class="r">Chart</th></tr></thead>
           <tbody data-draw="approved_body"></tbody></table></div>
         <p class="note">The score and its horizon band rank names for attention. They are not backtested and promise no return. Open a chart to see the history with its projection band.</p></div>
+      <div class="card c12" id="card-algochart"><h2>Chart and projection <em data-draw="algo_pick">—</em></h2><div class="chartbox" data-draw="candle_algo" data-source="candles" style="min-height:120px"></div></div>
+      <div class="card c12" id="card-league"><h2>Strategy league <em>every strategy trades its own paper book; ranked by confidence</em></h2>
+        <div class="tw"><table data-source="strategy_board" data-row-key="strategy"><thead><tr><th data-field="rank">#</th><th data-field="strategy">Strategy</th><th class="r" data-field="closed">Closed / needed</th><th class="r" data-field="open">Live</th><th class="r" data-field="win_rate">Win rate</th><th class="r" data-field="avg_r">Avg R</th><th class="r" data-field="confidence">Confidence</th><th class="r" data-field="pnl">Paper P/L</th><th class="hs" data-field="backtest">5-year test</th><th data-field="ready">Status</th></tr></thead><tbody data-draw="league_body"></tbody></table></div>
+        <p class="note">A strategy earns real money only with enough closed paper trades and the confidence the gate asks for. Several of these failed the 5-year test and trade here on paper so you can watch them fail or prove it wrong. Confidence is not a win rate.</p></div>
       <div class="card c5" id="card-gate"><h2>Real-money gate <em>all four tests must pass</em></h2><div data-draw="gate_panel" data-source="paper_stats"></div></div>
       <div class="card c7" id="card-equity"><h2>Paper account <em>starts at your trading cash</em></h2><div class="chartbox" data-draw="equity_chart" data-source="paper_equity" style="min-height:230px"></div></div>
       <div class="card c12" id="card-ledger">
@@ -279,4 +286,5 @@
 <script src="views_algo.js"></script>
 <script src="views_markets.js"></script>
 <script src="views_room.js"></script>
+<script src="views_plus.js"></script>
 <script src="tabs.js"></script>

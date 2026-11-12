@@ -39,8 +39,8 @@ dash.calc('floor_rows', {
     const half = vix !== null && vix >= L('caution');
     const riskPct = half ? L('risk_caution') : L('risk_normal');
     const stopPct = L('stop_pct'), rewardR = L('reward_r');
-    const openRisk = ledger.filter((r) => r.status === 'OPEN').reduce((s, r) => s + (Number(r.risk_rs) || 0), 0);
-    const busy = ledger.filter((r) => r.status === 'OPEN' || r.status === 'PENDING').length;
+    const openRisk = ledger.filter((r) => r.status === 'OPEN' && r.strategy === 'breakout_52w').reduce((s, r) => s + (Number(r.risk_rs) || 0), 0);
+    const busy = ledger.filter((r) => (r.status === 'OPEN' || r.status === 'PENDING') && r.strategy === 'breakout_52w').length;
     const bo = strategies.find((s) => s.strategy === 'breakout_52w');
     const winPct = bo ? Math.round(bo.win_rate * 100) : null;
     const sectorN = {}; gainers.forEach((g) => { if (g.sector) sectorN[g.sector] = (sectorN[g.sector] || 0) + 1; });
