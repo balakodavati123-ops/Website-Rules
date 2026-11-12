@@ -1,7 +1,7 @@
 /* A minimal stand-in for the dashboard platform's `dash` API, for local testing only.
    It feeds shape-correct sample answers through the page's real loaders and calcs. */
 (function () {
-  const A = window.__ANSWERS; const FILES = window.__FILES; const L = {}, C = {}, DRAW = {}; const PARAMS = { sym: 'INDI00012', iv: '15minute', lb: '7d', csym: 'BTC', ctf: '1d' };
+  const A = window.__ANSWERS; const FILES = window.__FILES; const L = {}, C = {}, DRAW = {}; const PARAMS = { sym: 'INDI00012', iv: '15minute', lb: '7d', csym: 'BTC', ctf: '1d', mode: 'paper' };
   const CALLS = new Set(Object.keys(A));
   const cache = {};
   let memo = {};

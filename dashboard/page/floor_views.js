@@ -135,11 +135,6 @@
       cell('', x.label); cell('num r', String(x.score)); cell('', tag(x.horizon, HZ[x.horizon])); cell('num r', num(x.price, 2)); cell('num r ' + cls(x.chg_pct), pct(x.chg_pct)); cell('hs', x.lists);
       const b = el('button', 'cd-btn', 'Open chart'); b.type = 'button'; b.disabled = !x.key; b.addEventListener('click', () => { CD.pickName = x.label; dash.setParams({ sym: x.key, iv: '1day', lb: '1y' }); dash.draw('algo_pick'); dash.draw('candle_algo'); document.querySelectorAll('#card-algochart').forEach((n) => n.scrollIntoView({ behavior: 'smooth', block: 'start' })); }); cell('r', b); return tr; }));
   });
-  dash.draw('mode_note', (p) => {
-    const d = dash.data('paper_stats'); const s = d.status === 'ok' ? d.data[0] : null; const real = document.querySelector('#btn-real'); if (real) real.disabled = !(s && s.ready);
-    p.textContent = !s ? '—' : s.ready ? 'All four tests pass. Real-money mode shows tickets from the approved strategies; you place each order yourself.'
-      : `Real money is locked: ${s.trades} of ${s.need_trades} paper trades closed, confidence ${Number(s.confidence).toFixed(0)}% against the ${s.need_conf}% needed. The desk trades paper until every test passes.`;
-  });
 
   /* desk colours come from the same table the stage uses */
   document.querySelectorAll('.desk').forEach((n) => { const a = AG[n.dataset.agent]; if (a) n.style.setProperty('--c', a.c); });

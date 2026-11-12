@@ -101,7 +101,7 @@ def main():
         writes.append({"op": "set", "collection": collection, "doc_id": doc_id, "file_path": str(path)})
 
     put("dash", "meta", {"title": "CEO Trading Desk", "lang": "en"})
-    put("dash", "params", {"sym": "INDI00012", "iv": "15minute", "lb": "7d", "csym": "BTC", "ctf": "1d"})
+    put("dash", "params", {"sym": "INDI00012", "iv": "15minute", "lb": "7d", "csym": "BTC", "ctf": "1d", "mode": "paper"})
     for did, doc in LIVE.items():
         put("datasets", did, doc)
     for did, (title, desc, fname) in FILES.items():
