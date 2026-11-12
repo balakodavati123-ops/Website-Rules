@@ -3,12 +3,12 @@
    or floor_side. The stage and the panels listen with CD.ENG.on(fn). */
 (function () {
   const AG = (CD.AGENTS = {
-    DATA: { name: 'Scout', init: 'DA', c: '#29d3ee', fg: '#04101c', ph: 0 }, TECH: { name: 'Chartist', init: 'TE', c: '#4f8cff', fg: '#fff', ph: 1 },
-    SENT: { name: 'Pulse', init: 'SE', c: '#ff7ac6', fg: '#fff', ph: 2 }, FUND: { name: 'Ledgerhand', init: 'FU', c: '#a184ff', fg: '#fff', ph: 3 },
-    CALL: { name: 'Echo', init: 'CA', c: '#ffb64a', fg: '#2a1a00', ph: 4 }, BULL: { name: 'Bull', init: 'BU', c: '#2de3a5', fg: '#04201a', ph: 5 },
-    BEAR: { name: 'Bear', init: 'BE', c: '#ff5f75', fg: '#fff', ph: 5 }, RISK: { name: 'Warden', init: 'WA', c: '#ffb64a', fg: '#2a1a00', ph: 6 },
-    PM: { name: 'Chief', init: 'CH', c: '#4f8cff', fg: '#fff', ph: 7 }, LEDGER: { name: 'Scribe', init: 'SC', c: '#8ea3c4', fg: '#04101c', ph: 8 },
-    CEO: { name: 'CEO', init: 'CEO', c: '#cfe0ff', fg: '#04101c', ph: 7 } });
+    DATA: { name: 'Market Data Analyst', short: 'Market Data', init: 'MD', c: '#29d3ee', fg: '#04101c', ph: 0 }, TECH: { name: 'Technical Analyst', short: 'Technical', init: 'TA', c: '#4f8cff', fg: '#fff', ph: 1 },
+    SENT: { name: 'Sentiment and Noise Analyst', short: 'Sentiment', init: 'SN', c: '#ff7ac6', fg: '#fff', ph: 2 }, FUND: { name: 'Fundamental Analyst', short: 'Fundamental', init: 'FA', c: '#a184ff', fg: '#fff', ph: 3 },
+    CALL: { name: 'Corporate Filings Analyst', short: 'Filings', init: 'CF', c: '#ffb64a', fg: '#2a1a00', ph: 4 }, BULL: { name: 'Research Analyst, Long Case', short: 'Long Case', init: 'RL', c: '#2de3a5', fg: '#04201a', ph: 5 },
+    BEAR: { name: 'Research Analyst, Short Case', short: 'Short Case', init: 'RS', c: '#ff5f75', fg: '#fff', ph: 5 }, RISK: { name: 'Chief Risk Officer', short: 'Risk Officer', init: 'CRO', c: '#ffb64a', fg: '#2a1a00', ph: 6 },
+    PM: { name: 'Trading Officer', short: 'Trading Officer', init: 'TO', c: '#4f8cff', fg: '#fff', ph: 7 }, LEDGER: { name: 'Trade Operations', short: 'Operations', init: 'OPS', c: '#8ea3c4', fg: '#04101c', ph: 8 },
+    COO: { name: 'Chief Operating Officer', short: 'COO', init: 'COO', c: '#f2d16b', fg: '#2a1a00', ph: 8 }, CEO: { name: 'CEO', short: 'CEO', init: 'CEO', c: '#cfe0ff', fg: '#04101c', ph: 7 } });
   CD.PORTS = { S1: 'INDmoney movers', S2: 'INDmoney quotes', S3: 'NSE filings', S4: 'CoinDCX crypto', S5: 'Paper ledger' };
   CD.hms = (d = new Date()) => { const t = CD.istParts(d); return [t.h, t.m, t.s].map((x) => String(x).padStart(2, '0')).join(':'); };
 
@@ -25,7 +25,7 @@
   const chain = (r, bi, S) => {
     const port = /watch/.test(r.src) ? 'S2' : 'S1'; const say = (o) => S.push(Object.assign({ row: r, bi }, o));
     if (r.failed) { say({ hops: [[port, 'DATA'], ['DATA', 'TECH']], agent: 'TECH', state: 'KILL', tone: 'kill', kill: true, text: `${r.label}, from ${r.src}, is out at rule ${r.failed} of 8: ${r.fail_reason}.` }); return; }
-    say({ hops: [[port, 'DATA'], ['DATA', 'TECH']], agent: 'TECH', state: 'CLEAR', tone: 'ok', text: `${r.label}, from ${r.src}, clears all 8 rules at ${inr(r.price, 2)}, ${pc(r.chg_pct)} today. Over to Pulse.` });
+    say({ hops: [[port, 'DATA'], ['DATA', 'TECH']], agent: 'TECH', state: 'CLEAR', tone: 'ok', text: `${r.label}, from ${r.src}, clears all 8 rules at ${inr(r.price, 2)}, ${pc(r.chg_pct)} today. Over to Sentiment.` });
     say({ hops: [['TECH', 'SENT']], agent: 'SENT', state: 'CROWD', tone: 'info', text: r.crowd_txt });
     say({ hops: [['SENT', 'FUND']], agent: 'FUND', state: 'SCORING', tone: 'info', score: true, text: r.fund_txt });
     say({ hops: [['S3', 'CALL']], agent: 'CALL', state: 'FILINGS', tone: 'info', text: r.echo_txt });
@@ -46,7 +46,9 @@
     const seen = E.batch.map((s) => by[s]).filter(Boolean); const surv = seen.filter((r) => !r.failed); const best = surv.slice().sort((a, b) => b.score - a.score)[0];
     sideStep();
     if (D.stats.kill_txt && E.loop % 2 === 0) S.push({ hops: [['TECH', 'PM']], agent: 'TECH', state: 'TALLY', tone: 'info', text: D.stats.kill_txt });
-    S.push({ hops: [['PM', 'CEO']], agent: 'PM', state: 'REPORT', tone: 'ask', ceo: true,
+    const busy = Object.keys(E.desk).filter((k) => k !== 'CEO' && k !== 'COO').sort((x, y) => E.desk[y].n - E.desk[x].n)[0];
+    S.push({ hops: [['LEDGER', 'COO'], ['PM', 'COO']], agent: 'COO', state: 'RANKING', tone: 'info', text: `Desk review: ${seen.length} names went through the analysts this loop and ${surv.length} reached the Trading Officer.` + (busy && E.desk[busy].n ? ` Busiest desk this session: ${AG[busy].name}, ${E.desk[busy].n} hand-offs.` : '') });
+    S.push({ hops: [['COO', 'CEO'], ['PM', 'CEO']], agent: 'PM', state: 'REPORT', tone: 'ask', ceo: true,
       text: `CEO, loop ${E.loop} is done. ${seen.length} names checked, ${seen.length - surv.length} killed by a rule, ${surv.length} scored.` + (best ? ` Best of the batch: ${best.label} at ${best.score}.` : ' Nothing in this batch is worth your time.') + ' Nothing is placed without you.' });
     return S;
   };
@@ -73,7 +75,7 @@
     if (s.bi !== undefined) { E.doneBi = Math.max(E.doneBi, s.bi); const f = E.flow[s.bi];
       if (f) { if (s.kill) { f.st = 'kill'; f.rule = s.row.failed; } else if (s.verdict) f.st = s.verdict; else if (f.st === 'queue') f.st = 'work'; if (s.score) f.score = s.row.score; } }
     if (s.agent === 'TECH' && s.row) E.focus = s.row; if (s.score) E.scored = s.row; if (s.size) E.sized = s.row;
-    E.log.push({ t: s.t, agent: s.agent, name: AG[s.agent].name, text: s.text, tone: s.tone }); if (E.log.length > 80) E.log.shift();
+    E.log.push({ t: s.t, agent: s.agent, name: AG[s.agent].short, text: s.text, tone: s.tone }); if (E.log.length > 80) E.log.shift();
     E.hist.push({ tone: s.tone, len: s.text.length, kill: !!s.kill, verdict: s.verdict || '', sym: s.row ? s.row.label : '', score: s.verdict ? s.row.score : null }); if (E.hist.length > 120) E.hist.shift();
     tell(s);
   };

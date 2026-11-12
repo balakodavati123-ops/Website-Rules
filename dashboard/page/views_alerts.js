@@ -7,7 +7,7 @@
   const VIEWS = [['5minute|1d', 'Today, 5-minute'], ['15minute|7d', 'Week, 15-minute'], ['60minute|14d', 'Two weeks, hourly'], ['1day|1y', 'Year, daily']];
   const toRows = (rows) => rows.map((r) => ({ t: new Date(String(r.t).replace(' ', 'T') + '+05:30'), o: r.o, h: r.h, l: r.l, c: r.c, v: r.v })).filter((r) => !Number.isNaN(r.t.getTime()));
 
-  dash.draw('sel_sym', (sel) => { sel.replaceChildren(...SYMS.map(([k, n]) => new Option(n, k))); sel.value = dash.params().sym || SYMS[0][0]; sel.onchange = () => dash.setParams({ sym: sel.value }); });
+  dash.draw('sel_sym', (sel) => { sel.replaceChildren(...SYMS.map(([k, n]) => new Option(n, k))); const cur = dash.params().sym || SYMS[0][0]; if (!SYMS.some((x) => x[0] === cur)) sel.appendChild(new Option(CD.pickName || 'Picked on the Algo tab', cur)); sel.value = cur; sel.onchange = () => dash.setParams({ sym: sel.value }); });
   dash.draw('sel_view', (sel) => { sel.replaceChildren(...VIEWS.map(([k, n]) => new Option(n, k))); const p = dash.params(); sel.value = (p.iv || '15minute') + '|' + (p.lb || '7d');
     sel.onchange = () => { const [iv, lb] = sel.value.split('|'); dash.setParams({ iv, lb }); }; });
 

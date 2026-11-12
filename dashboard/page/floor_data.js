@@ -8,7 +8,7 @@ dash.calc('floor_rules', {
   fn: (deskRules) => {
     const R = (k, d) => { const r = deskRules.find((x) => x.key === k); return r ? Number(r.value) : d; };
     const L = { traded: 10, price: 20, circuit: 0.5, chase: 8, green: 0, dayhigh: 3, yearhigh: 3, vix: 20 };
-    const P = { f1: 25, f2: 20, f3: 15, f4: 15, f5: 10, f6: 15 };
+    const P = { f1: 30, f2: 25, f3: 15, f4: 20, f5: 10 };
     const row = (n, kind, key, limit, show) => ({ n, kind, key, limit, show });
     return [
       row(1, 'rule', 'traded', L.traded, `₹${L.traded} cr or more`), row(2, 'rule', 'price', L.price, `₹${L.price} or more`),
@@ -20,7 +20,7 @@ dash.calc('floor_rules', {
       row(31, 'size', 'caution', 16, 'India VIX from which size is halved'), row(32, 'size', 'pos_cap', 30, '% of the account in one position, at most'),
       row(33, 'size', 'open_risk', 4, '% of the account at risk in total, at most'), row(34, 'size', 'max_pos', 4, 'positions at once, at most'),
       row(35, 'size', 'risk_normal', R('risk_normal', 1), '% of the account risked on a trade'), row(36, 'size', 'risk_caution', R('risk_caution', 0.5), '% risked on a trade in a caution market'),
-      row(37, 'size', 'stop_pct', R('stop_pct', 5), '% stop under the entry'), row(38, 'size', 'target_pct', R('target_pct', 20), '% target over the entry'),
+      row(37, 'size', 'stop_pct', R('stop_pct', 5), '% stop under the entry'), row(38, 'size', 'reward_r', 2, 'times the risk: a marker on the ladder, not a prediction'),
       row(39, 'size', 'paper_start', R('paper_start', 0), 'rupees the paper account started with')];
   } });
 
@@ -38,7 +38,7 @@ dash.calc('floor_rows', {
     const equity = (paper[0] && Number(paper[0].equity)) || L('paper_start');
     const half = vix !== null && vix >= L('caution');
     const riskPct = half ? L('risk_caution') : L('risk_normal');
-    const stopPct = L('stop_pct'), tgtPct = L('target_pct');
+    const stopPct = L('stop_pct'), rewardR = L('reward_r');
     const openRisk = ledger.filter((r) => r.status === 'OPEN').reduce((s, r) => s + (Number(r.risk_rs) || 0), 0);
     const busy = ledger.filter((r) => r.status === 'OPEN' || r.status === 'PENDING').length;
     const bo = strategies.find((s) => s.strategy === 'breakout_52w');
@@ -50,7 +50,7 @@ dash.calc('floor_rows', {
     const take = (s, tag) => {
       if (!s || !s.symbol) return; const k = String(s.symbol); let o = by.get(k);
       if (!o) { o = { symbol: k, tags: [] }; by.set(k, o); order.push(k); }
-      o.tags.push(tag);
+      o.tags.push(tag); if (!o.key && s.key) o.key = s.key;
       if (tag === 'your watchlist') {
         o.name = o.name || s.name;
         if (o.price == null) Object.assign(o, { price: s.live, chg_pct: s.chg_pct, day_high: s.high, volume: s.volume, w52_high: s.w52_high, circ_up: s.upper, cap: s.cap });
@@ -90,29 +90,27 @@ dash.calc('floor_rows', {
       checks.forEach((c, i) => { const reached = failAt < 0 || i <= failAt; row['r' + (i + 1)] = reached ? (c[0] ? 'pass' : 'fail') : 'skip'; row['v' + (i + 1)] = reached ? c[1] : ''; });
 
       /* Screen score for names that cleared every rule: six parts that add to 100. */
-      const hasAn = o.analysts != null && o.buy_pct != null;
       const share = [
         offHigh === null ? 0 : clamp(1 - offHigh / L('yearhigh')),
         offDay === null ? 0 : clamp(1 - offDay / L('dayhigh')),
         chg < 1.5 ? 0.4 + 0.4 * chg / 1.5 : chg <= 5 ? 1 : clamp(1 - 0.22 * (chg - 5)),
         traded > 0 ? clamp(Math.log10(traded / L('traded')) / 2) : 0,
-        cap === 'large' ? 1 : cap === 'mid' ? 0.7 : cap === 'small' ? 0.4 : 0.5,
-        hasAn ? clamp(0.6 * (o.buy_pct / 100) + 0.4 * clamp((Number(o.upside) || 0) / 20)) : 0.45];
+        cap === 'large' ? 1 : cap === 'mid' ? 0.7 : cap === 'small' ? 0.4 : 0.5];
       const parts = share.map((x, i) => Math.round(Math.max(0, x) * L('f' + (i + 1))));
       const score = failAt >= 0 ? null : parts.reduce((a, b) => a + b, 0);
       parts.forEach((v, i) => { row['f' + (i + 1)] = failAt >= 0 ? null : v; });
       row.score = score;
       row.verdict = failAt >= 0 ? 'KILLED' : score >= L('setup') ? 'SETUP' : score >= L('watch') ? 'WATCH' : 'PASS';
 
+      row.key = o.key || ''; row.horizon = failAt >= 0 ? '' : score >= 81 ? 'Day' : score >= 61 ? 'Week' : score >= 50 ? 'Month' : '';
       /* What each desk says about it. */
       const secN = o.sector ? sectorN[o.sector] || 0 : 0;
       row.crowd_txt = `${tick}: ${cr(traded)} traded today.` + (secN >= 3 ? ` ${o.sector} has ${secN} of the top gainers, so the move is not alone.` : ' No cluster of gainers in its sector.');
-      row.fund_txt = `${capName}.` + (hasAn ? ` ${o.analysts} analysts, ${Math.round(o.buy_pct)}% say buy, mean target ${inr(o.target, 0)} (${pc(Number(o.upside) || 0)} from here).` : ' INDmoney shows no analyst cover for it here, so that part is scored neutral.') + (score !== null ? ` Screen score ${score} of 100.` : '');
+      row.fund_txt = `${capName}` + (o.sector ? `, ${o.sector}` : '') + '.' + (score !== null ? ` Screen score ${score} of 100: ${parts[0]} for the 52-week high, ${parts[1]} for holding gains, ${parts[3]} for money traded.` : '');
       const al = alerts.find((a) => a.symbol === o.symbol);
       row.echo_txt = al ? `${tick} filed "${String(al.type).toLowerCase()}" at ${al.time}. The price was ${pc(al.at_filing)} at the filing and moved ${pc(al.since_filing)} after it.` : `No filing from ${tick} in the last alert log. Nothing to read into.`;
       row.bull = `${tick} is ${offHigh !== null && offHigh < 0.3 ? 'at its 52-week high' : (offHigh || 0).toFixed(1) + '% below its 52-week high'}, ${pc(chg)} today on ${cr(traded)}, and within ${(offDay || 0).toFixed(1)}% of the day's high.`;
-      row.bear = hasAn && Number(o.upside) < 0 ? `Analysts' mean target ${inr(o.target, 0)} is below the price. The easy part may be done.`
-        : chg >= 5 ? `It is already ${pc(chg)} today. Late entries on big up days often give the gain back.`
+      row.bear = chg >= 5 ? `It is already ${pc(chg)} today. Late entries on big up days often give the gain back.`
           : cap === 'small' ? 'Small cap: the exit gets thin when a breakout fails.'
             : winPct !== null ? `Only ${winPct}% of breakout trades won in the 5-year test. Most breakouts fail and the stop does the work.` : 'Most breakouts fail and the stop does the work.';
 
@@ -125,7 +123,7 @@ dash.calc('floor_rows', {
         else if (qty < 1) blocked = price > equity * L('pos_cap') / 100 ? `one share costs ${inr(price, 0)}, more than ${L('pos_cap')}% of the paper account` : `one share risks ${inr(per, 0)}, more than the ${inr(budget, 0)} risk budget`;
       }
       row.qty = qty; row.value = Math.round(qty * price); row.risk_rs = Math.round(qty * per); row.blocked = blocked;
-      row.stop = Math.round(price * (1 - stopPct / 100) * 100) / 100; row.target_px = Math.round(price * (1 + tgtPct / 100) * 100) / 100;
+      row.stop = Math.round(price * (1 - stopPct / 100) * 100) / 100; row.target_px = Math.round((price + rewardR * price * stopPct / 100) * 100) / 100;
       row.size_note = !sized ? '' : blocked ? `${tick} is blocked: ${blocked}.`
         : `${tick} on paper: ${qty} shares, ${inr(row.value)}, risking ${inr(row.risk_rs)} down to a stop at ${inr(row.stop, 2)}.` + (half ? ` Half size because India VIX is ${vix.toFixed(1)}.` : '');
       row.chief_txt = row.verdict === 'SETUP' ? `${tick} scores ${score}: a setup. If it holds into the close, the morning research run reads its filings and results before anything goes on paper.` + (blocked ? ' Too big for the paper account, so watch only.' : '')

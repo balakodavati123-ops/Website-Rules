@@ -44,6 +44,10 @@ dash.loader('candles', { description: 'Candles for the chosen instrument and tim
   fn: ({ answer }) => { const a = typeof answer === 'string' ? JSON.parse(answer) : answer;
     return (a.candles || []).map((c) => ({ t: c.datetime_ist, o: c.open, h: c.high, l: c.low, c: c.close, v: c.volume })); } });
 
+dash.loader('crypto_live', { description: 'Live global dollar prices from CoinGecko, one row per coin.',
+  fn: ({ answer }) => { const a = typeof answer === 'string' ? JSON.parse(answer) : answer;
+    return (a.coins || []).map((c) => ({ symbol: String(c.symbol || '').toUpperCase(), name: c.name, price_usd: c.currentPrice, chg_24h_pct: c.priceChangePercentage24h, market_cap: c.marketCap, volume_24h: c.totalVolume, rank: c.marketCapRank, spark: JSON.stringify((c.sparkline7d || []).map((x) => Math.round(x * 100) / 100)) })); } });
+
 dash.loader('mf_ideas', { description: 'Top-ranked mutual funds in three long-term categories, from INDmoney.',
   fn: ({ answer }) => { const a = typeof answer === 'string' ? JSON.parse(answer) : answer;
     return (a.data || []).map((f) => ({ name: f.name, category: f.category, rank: f.ind_ranking && f.ind_ranking.rank, ret_1y: f.return_1yr, ret_3y: f.return_3yr, ret_5y: f.return_5yr, expense: f.expense_ratio, risk: f.risk, nav: f.nav, aum: f.aum, min_sip: f.min_sip, rating: f.rating })); } });
