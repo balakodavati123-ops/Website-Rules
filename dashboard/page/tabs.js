@@ -1,6 +1,6 @@
 /* Tab switching. The Live floor opens first, or the tab named in the link. */
 (function () {
-  const TABS = ['floor', 'command', 'premarket', 'alerts', 'algo', 'markets', 'room'];
+  const TABS = ['floor', 'trades', 'command', 'premarket', 'alerts', 'algo', 'markets', 'room'];
   const show = (id) => {
     TABS.forEach((t) => { const sec = document.getElementById('tab-' + t); const btn = document.getElementById('tabbtn-' + t);
       if (sec) sec.hidden = t !== id; if (btn) btn.setAttribute('aria-selected', t === id ? 'true' : 'false'); });

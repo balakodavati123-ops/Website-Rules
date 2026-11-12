@@ -16,6 +16,7 @@
 
   <nav class="cd-tabs" role="tablist" aria-label="Desk sections">
     <button class="cd-tab" role="tab" id="tabbtn-floor" data-tab="floor" aria-selected="true">Live floor</button>
+    <button class="cd-tab" role="tab" id="tabbtn-trades" data-tab="trades" aria-selected="false">Today's trades</button>
     <button class="cd-tab" role="tab" id="tabbtn-command" data-tab="command" aria-selected="false">Command</button>
     <button class="cd-tab" role="tab" id="tabbtn-premarket" data-tab="premarket" aria-selected="false">Pre-market 08:45</button>
     <button class="cd-tab" role="tab" id="tabbtn-alerts" data-tab="alerts" aria-selected="false">Live alerts</button>
@@ -124,6 +125,20 @@
     </div>
   </section>
 
+  <!-- ============ TODAY'S TRADES ============ -->
+  <section id="tab-trades" role="tabpanel" aria-labelledby="tabbtn-trades" hidden>
+    <div class="cd-grid">
+      <div class="card c12"><p class="lead" data-draw="tr_lead" data-source="strategy_pnl trade_book">—</p></div>
+      <div class="c12 kpis"><div class="kpi"><div class="l">Booked on the last run</div><div class="v"><b data-draw="tr_kpi" data-k="today" data-source="trade_book">—</b></div></div><div class="kpi"><div class="l">Open now</div><div class="v"><b data-draw="tr_kpi" data-k="open" data-source="trade_book">—</b></div></div><div class="kpi"><div class="l">Waiting for the open</div><div class="v"><b data-draw="tr_kpi" data-k="pending" data-source="trade_book">—</b></div></div><div class="kpi"><div class="l">Closed</div><div class="v"><b data-draw="tr_kpi" data-k="closed" data-source="trade_book">—</b></div></div><div class="kpi"><div class="l">Rupees in open trades</div><div class="v"><b data-draw="tr_kpi" data-k="deployed" data-source="trade_book">—</b></div></div><div class="kpi"><div class="l">Paper profit or loss</div><div class="v"><b data-draw="tr_kpi" data-k="pnl" data-source="trade_book">—</b></div></div></div>
+      <div class="card c6" id="card-trpnl"><h2>Profit or loss by strategy <em>rupees, and percent of the rupees deployed</em></h2><div class="chartbox" data-draw="tr_pnl" data-source="strategy_pnl" style="min-height:120px"></div></div>
+      <div class="card c6" id="card-trmix"><h2>Trades by strategy and status</h2><div class="chartbox" data-draw="tr_mix" data-source="strategy_pnl" style="min-height:120px"></div>
+        <div class="legend"><span><i style="background:#ffb64a"></i>Pending</span><span><i style="background:#4f8cff"></i>Open</span><span><i style="background:#2de3a5"></i>Won</span><span><i style="background:#ff5f75"></i>Lost</span><span><i style="background:#5b7093"></i>Skipped</span></div></div>
+      <div class="card c12" id="card-trbook"><h2>Every trade the desks booked <em>newest first; the bar runs from stop to target, grey is the entry, white is the price now</em></h2>
+        <div class="tw"><table data-source="trade_book" data-row-key="id"><thead><tr><th data-field="id">#</th><th class="hs" data-field="booked">Booked</th><th data-field="strategy">Strategy</th><th data-field="symbol">Stock</th><th data-field="status">Status</th><th class="r" data-field="entry">Entry</th><th class="r hs" data-field="stop">Stop</th><th class="r hs" data-field="target">Target</th><th class="r hs" data-field="qty">Qty</th><th class="r" data-field="last">Last</th><th class="r" data-field="move_pct">Move</th><th class="hs">Stop to target</th><th class="r" data-field="pnl">P/L</th></tr></thead><tbody data-draw="tr_body"></tbody></table></div>
+        <p class="note">The desks book trades once a day, in the 08:15 run, at the previous close; orders fill at the next open. Each strategy has its own pretend ₹32,000 book. Prices of open trades are the last close unless the stock is on a live INDmoney list. The Strategy league in the Algo lab ranks the strategies on closed trades.</p></div>
+    </div>
+  </section>
+
   <!-- ============ COMMAND ============ -->
   <section id="tab-command" role="tabpanel" aria-labelledby="tabbtn-command" hidden>
     <div class="cd-grid">
@@ -207,9 +222,14 @@
   <section id="tab-algo" role="tabpanel" aria-labelledby="tabbtn-algo" hidden>
     <div class="cd-grid">
       <div class="card c12"><p class="lead" data-draw="lead_algo" data-source="paper_stats">—</p></div>
-      <div class="card c12" id="card-mode"><h2>Trading mode <em>paper first, real money only after the tests pass</em></h2>
-        <div class="toolbar"><button class="cd-btn tog" id="btn-paper" type="button" aria-pressed="true">Paper money</button><button class="cd-btn tog" id="btn-real" type="button" aria-pressed="false" disabled>Real money</button></div>
+      <div class="card c12" id="card-mode"><h2>Trading mode <em>your choice; the desk shows what its tests say</em></h2>
+        <div class="toolbar"><button class="cd-btn tog" id="btn-paper" type="button" aria-pressed="true">Paper money</button><button class="cd-btn tog" id="btn-real" type="button" aria-pressed="false">Real money</button></div>
         <p class="note" data-draw="mode_note" data-source="paper_stats">—</p></div>
+      <div class="card c12" id="card-real" hidden><h2>Real money <em>tickets for you to place, and how to connect a broker</em></h2>
+        <div class="cd-grid"><div class="c6"><div data-draw="real_tickets" data-source="trade_book strategy_board"></div></div>
+          <div class="c6"><p class="sub" style="margin-bottom:6px"><b>Connecting a broker</b></p>
+            <p class="note" style="margin-top:0">This page cannot send orders. Orders can only go through a broker that offers a Claude connector with order tools, added by you in Claude under Settings, Connectors. Zerodha publishes one for Kite (add a custom connector with the address mcp.kite.trade/mcp and sign in with your Kite account). INDmoney's connector, which this page already uses, is read-only.</p>
+            <p class="note">Once a broker is connected, tell Claude in the chat. Claude will check which tools the broker really allows, and then place an order only when you approve that order. Fully automatic orders with no approval are not set up here.</p></div></div></div>
       <div class="card c12" id="card-approved"><h2>Approved by the desks <em>live from the floor's rules; Day 81 to 100, Week 61 to 80, Month 50 to 60</em></h2>
         <div class="tw"><table data-source="floor_rows" data-row-key="symbol"><thead><tr><th data-field="label">Name</th><th class="r" data-field="score">Score</th><th data-field="horizon">Horizon</th><th class="r" data-field="price">Price</th><th class="r" data-field="chg_pct">Today</th><th class="hs" data-field="lists">Found on</th><th class="r">Chart</th></tr></thead>
           <tbody data-draw="approved_body"></tbody></table></div>

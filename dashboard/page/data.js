@@ -93,6 +93,21 @@ dash.calc('strategy_board', { inputs: ['paper_ledger', 'strategies_eq', 'strateg
         ready: n >= rule('gate_trades') && conf >= rule('gate_conf') && mean > 0 }; });
     rows.sort((a, b) => b.confidence - a.confidence || b.avg_r - a.avg_r || b.closed - a.closed); rows.forEach((r, i) => { r.rank = i + 1; }); return rows; } });
 
+dash.calc('trade_book', { inputs: ['paper_ledger', 'paper_live'], title: 'Trade book', description: 'Every paper trade the desks booked, newest first, with its strategy, where the price stands between stop and target, and its profit or loss. Open trades use the live price when the stock is on a live list, else the last close.',
+  fn: (ledger, live) => { const latest = ledger.reduce((m, r) => (String(r.signal_date) > m ? String(r.signal_date) : m), ''); const lv = {}; live.forEach((r) => { lv[r.id] = r.live; });
+    return ledger.map((r) => { const entry = Number(r.entry), qty = r.qty === '' || r.qty == null ? null : Number(r.qty); const closed = ['WIN', 'LOSS', 'TIME STOP'].includes(r.status); const open = r.status === 'OPEN';
+      const last = closed ? Number(r.exit) : open ? (lv[r.id] != null ? lv[r.id] : r.last_close != null ? Number(r.last_close) : null) : null;
+      const pnl = closed ? Number(r.pnl_rs) || 0 : open ? (lv[r.id] != null && qty !== null ? Math.round(qty * (lv[r.id] - entry) * 100) / 100 : Number(r.unrealized_rs) || 0) : 0;
+      return { id: r.id, booked: String(r.signal_date), today: String(r.signal_date) === latest ? 'yes' : 'no', strategy: r.strategy, market: r.market, symbol: r.symbol, status: r.status, entry, stop: Number(r.stop),
+        target: r.target === '' || r.target == null ? null : Number(r.target), qty, last, move_pct: last !== null && entry ? Math.round((last / entry - 1) * 1000) / 10 : null, pnl,
+        deployed: (open || closed) && qty !== null ? Math.round(qty * entry) : 0, r_mult: closed || open ? Number(r.r_mult) || 0 : null, note: r.note || '' }; }).sort((a, b) => b.id - a.id); } });
+
+dash.calc('strategy_pnl', { inputs: ['trade_book'], title: 'Profit and loss by strategy', description: 'Per strategy: trades booked on the latest day, pending, open and closed counts, wins, rupees deployed, profit or loss, and that profit as a percent of the rupees deployed.',
+  fn: (book) => { const by = {}; book.forEach((t) => { const s = by[t.strategy] || (by[t.strategy] = { strategy: t.strategy, booked_today: 0, pending: 0, open: 0, closed: 0, wins: 0, skipped: 0, deployed: 0, pnl: 0 });
+      if (t.today === 'yes') s.booked_today += 1; if (t.status === 'PENDING') s.pending += 1; else if (t.status === 'OPEN') s.open += 1; else if (t.status === 'SKIPPED') s.skipped += 1; else { s.closed += 1; if (t.pnl > 0) s.wins += 1; }
+      s.deployed += t.deployed; s.pnl += t.pnl; });
+    return Object.values(by).map((s) => ({ ...s, pnl: Math.round(s.pnl * 100) / 100, return_pct: s.deployed ? Math.round((s.pnl / s.deployed) * 10000) / 100 : null })).sort((a, b) => b.pnl - a.pnl); } });
+
 dash.calc('kpi_rows', { inputs: ['snapshot', 'mf_holdings', 'metals_est', 'paper_stats'], title: 'Headline figures', description: 'The six figures at the top of the Command tab.',
   fn: (snap, mf, est, paper) => { const get = (k, n) => snap.find((r) => r.kind === k && r.name === n) || {}; const net = get('total', 'Net worth').current, as = get('total', 'Assets');
     const gold = get('asset', 'GOLD').current || 0, silver = get('asset', 'SILVER').current || 0, sa = get('asset', 'SA').current;

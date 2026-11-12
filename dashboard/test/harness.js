@@ -39,7 +39,7 @@ const FILES = {}; for (const f of fs.readdirSync(path.join(ROOT, 'data'))) FILES
   for (const [w, h, tag] of [[1280, 900, 'desktop'], [400, 860, 'phone']]) {
     const page = await browser.newPage({ viewport: { width: w, height: h }, deviceScaleFactor: 1 }); const errs = []; page.on('pageerror', (e) => errs.push('pageerror: ' + e.message)); page.on('console', (m) => { if (m.type() === 'error') errs.push('console: ' + m.text()); });
     await page.goto('file://' + wrapper); await page.waitForTimeout(500);
-    for (const t of ['floor', 'command', 'premarket', 'alerts', 'algo', 'markets', 'room']) {
+    for (const t of ['floor', 'trades', 'command', 'premarket', 'alerts', 'algo', 'markets', 'room']) {
       await page.click('#tabbtn-' + t); await page.evaluate(() => window.__rerun()); await page.waitForTimeout(t === 'room' ? 9000 : t === 'floor' ? FLOOR_MS : 700);
       if (t === 'floor') { await page.locator('#cd').screenshot({ path: path.join(OUT, `${tag}-floor-a.png`) }); await page.click('#btn-pull'); await page.waitForTimeout(FLOOR_MS); report[tag + '_floor'] = await page.evaluate(() => ({ loop: CD.ENG.loop, step: CD.ENG.i, steps: CD.ENG.steps.length, log: CD.ENG.log.map((l) => l.t + ' ' + l.name + ': ' + l.text), refreshed: window.__refreshed.length, desks: Object.fromEntries(Object.entries(CD.ENG.desk).map(([k, v]) => [k, v.n])) })); }
       else await page.evaluate(() => window.__rerun());
