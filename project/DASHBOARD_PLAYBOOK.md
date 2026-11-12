@@ -61,3 +61,10 @@ update `datasets/comm_live` (`source.args.ind_keys`) and the enum for `sym` in `
 Edit `dashboard/page/*`, test with `node dashboard/test/floor_calc_test.js` (the floor's rules) and
 `D3=<path to d3.min.js> node dashboard/test/harness.js OUTDIR` (a headless smoke test with a mock of the platform), run `python dashboard/pack.py dashboard/assets.json`,
 then write the changed documents with ArtifactData `set` (pin `if_version`).
+
+## Rise and fall alerts
+
+`dashboard/trend_alert.py` is run hourly through market hours (10:20 to 15:20 IST, weekdays) by the scheduled task
+"Trend Alerts". It scans the watchlist on 15-minute Yahoo bars (NSE data is delayed about 15 minutes) and pushes a
+phone notification only for names whose rise or fall condition is new since an hour earlier. It screens; it does not
+forecast. Each run costs a fresh session, so keep the frequency low.
