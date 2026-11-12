@@ -81,6 +81,18 @@ dash.calc('paper_stats', { inputs: ['paper_ledger', 'paper_equity', 'desk_rules'
     return [{ trades: n, wins: R.filter((r) => r > 0).length, win_rate: n ? (R.filter((r) => r > 0).length / n) * 100 : 0, avg_r: mean, t_stat: t, confidence: conf, drawdown: dd, equity: last, start, pnl: last - start, pnl_pct: start ? ((last - start) / start) * 100 : 0, need_trades: need.trades, need_conf: need.conf, need_dd: need.dd, ...tests,
       open_positions: ledger.filter((r) => r.status === 'OPEN').length, pending: ledger.filter((r) => r.status === 'PENDING').length, ready: Object.values(tests).every(Boolean) }]; } });
 
+dash.calc('strategy_board', { inputs: ['paper_ledger', 'strategies_eq', 'strategies_macro', 'desk_rules'], title: 'Strategy league', description: 'Each strategy judged on its own closed paper trades: win rate, average R, the chance its true average is above zero, and whether it has earned real money.',
+  fn: (ledger, eq, macro, rules) => { const rule = (k) => (rules.find((r) => r.key === k) || {}).value; const names = [];
+    const add = (n) => { if (n && !names.includes(n)) names.push(n); }; ledger.forEach((r) => add(r.strategy)); eq.forEach((s) => add(s.strategy));
+    const ncdf = (x) => { const k = 1 / (1 + 0.2316419 * Math.abs(x)); const d = 0.3989423 * Math.exp(-x * x / 2); const p = d * k * (0.3193815 + k * (-0.3565638 + k * (1.781478 + k * (-1.821256 + k * 1.330274)))); return x > 0 ? 1 - p : p; };
+    const rows = names.map((name) => { const mine = ledger.filter((r) => r.strategy === name); const R = mine.filter((r) => ['WIN', 'LOSS', 'TIME STOP'].includes(r.status)).map((r) => Number(r.r_mult));
+      const n = R.length, mean = n ? R.reduce((a, b) => a + b, 0) / n : 0, sd = n > 1 ? Math.sqrt(R.reduce((a, b) => a + (b - mean) ** 2, 0) / (n - 1)) : 0;
+      const conf = n > 1 && sd > 0 ? ncdf(mean / (sd / Math.sqrt(n))) * 100 : 0; const bt = eq.find((s) => s.strategy === name) || macro.find((s) => s.strategy === name);
+      return { strategy: name, closed: n, open: mine.filter((r) => r.status === 'OPEN' || r.status === 'PENDING').length, win_rate: n ? (R.filter((x) => x > 0).length / n) * 100 : 0, avg_r: mean, confidence: conf,
+        pnl: mine.reduce((s, r) => s + (Number(r.pnl_rs) || 0) + (r.status === 'OPEN' ? Number(r.unrealized_rs) || 0 : 0), 0), backtest: bt ? bt.status : '', need_trades: rule('gate_trades'), need_conf: rule('gate_conf'),
+        ready: n >= rule('gate_trades') && conf >= rule('gate_conf') && mean > 0 }; });
+    rows.sort((a, b) => b.confidence - a.confidence || b.avg_r - a.avg_r || b.closed - a.closed); rows.forEach((r, i) => { r.rank = i + 1; }); return rows; } });
+
 dash.calc('kpi_rows', { inputs: ['snapshot', 'mf_holdings', 'metals_est', 'paper_stats'], title: 'Headline figures', description: 'The six figures at the top of the Command tab.',
   fn: (snap, mf, est, paper) => { const get = (k, n) => snap.find((r) => r.kind === k && r.name === n) || {}; const net = get('total', 'Net worth').current, as = get('total', 'Assets');
     const gold = get('asset', 'GOLD').current || 0, silver = get('asset', 'SILVER').current || 0, sa = get('asset', 'SA').current;

@@ -133,7 +133,7 @@
     if (!rows.length) { const tr = el('tr'), td = el('td', 'dim', 'No name clears the rules and reaches a score of 50 right now.'); td.colSpan = 7; tr.appendChild(td); body.replaceChildren(tr); return; }
     body.replaceChildren(...rows.map((x) => { const tr = el('tr'); tr.setAttribute('data-key', x.symbol); const cell = (c, v) => { const td = el('td', c); td.append(v); tr.appendChild(td); };
       cell('', x.label); cell('num r', String(x.score)); cell('', tag(x.horizon, HZ[x.horizon])); cell('num r', num(x.price, 2)); cell('num r ' + cls(x.chg_pct), pct(x.chg_pct)); cell('hs', x.lists);
-      const b = el('button', 'cd-btn', 'Open chart'); b.type = 'button'; b.disabled = !x.key; b.addEventListener('click', () => { CD.pickName = x.label; dash.setParams({ sym: x.key, iv: '1day', lb: '1y' }); CD.goto('alerts'); }); cell('r', b); return tr; }));
+      const b = el('button', 'cd-btn', 'Open chart'); b.type = 'button'; b.disabled = !x.key; b.addEventListener('click', () => { CD.pickName = x.label; dash.setParams({ sym: x.key, iv: '1day', lb: '1y' }); dash.draw('algo_pick'); dash.draw('candle_algo'); document.querySelectorAll('#card-algochart').forEach((n) => n.scrollIntoView({ behavior: 'smooth', block: 'start' })); }); cell('r', b); return tr; }));
   });
   dash.draw('mode_note', (p) => {
     const d = dash.data('paper_stats'); const s = d.status === 'ok' ? d.data[0] : null; const real = document.querySelector('#btn-real'); if (real) real.disabled = !(s && s.ready);
