@@ -17,7 +17,7 @@
   <nav class="cd-tabs" role="tablist" aria-label="Desk sections">
     <button class="cd-tab" role="tab" id="tabbtn-floor" data-tab="floor" aria-selected="true">Live floor</button>
     <button class="cd-tab" role="tab" id="tabbtn-trades" data-tab="trades" aria-selected="false">Today's trades</button>
-    <button class="cd-tab" role="tab" id="tabbtn-command" data-tab="command" aria-selected="false">Command</button>
+    <button class="cd-tab" role="tab" id="tabbtn-command" data-tab="command" aria-selected="false">Personal portfolio</button>
     <button class="cd-tab" role="tab" id="tabbtn-premarket" data-tab="premarket" aria-selected="false">Pre-market 08:45</button>
     <button class="cd-tab" role="tab" id="tabbtn-alerts" data-tab="alerts" aria-selected="false">Live alerts</button>
     <button class="cd-tab" role="tab" id="tabbtn-algo" data-tab="algo" aria-selected="false">Algo lab</button>
@@ -43,6 +43,9 @@
         <button class="cd-btn tog" id="btn-pause" type="button" aria-pressed="false">Pause desks</button>
       </div>
     </div>
+    <div class="card" id="card-org" style="margin-bottom:12px"><h2>Your organisation <em><b data-draw="org_count">—</b> desks: a COO for each strategy, three trading managers each, nine analysts under them</em></h2>
+      <div class="fl-stage org" data-draw="org_stage" data-source="strategy_board trade_book"></div>
+      <p class="note">Point at or tap any desk to see what it does. Green COOs are in paper profit, red in loss, blue have no result yet; amber managers are handling trades. These desks are rule programs run by the daily engine and this page, not separate AIs.</p></div>
     <div class="fl-grid">
       <aside class="fl-desks" id="floor-desks" aria-label="The desks">
         <article class="desk" id="desk-DATA" data-agent="DATA" style="--c:#29d3ee"><header><i class="ic" style="color:#04101c">MD</i><div><b>Market Data Analyst</b><small>Research · <b data-draw="desk_n" data-agent="DATA">—</b> done</small></div><span class="dk-chip" data-draw="desk_chip" data-agent="DATA">—</span></header>
@@ -145,6 +148,8 @@
       <div class="card c12"><p class="lead" data-draw="lead_command" data-source="kpi_rows">—</p></div>
       <div class="c12 kpis" data-draw="kpis" data-source="kpi_rows"></div>
 
+      <div class="card c12" id="card-advice"><h2>Where your capital is concentrated <em>from your INDmoney holdings</em></h2><div class="list" data-draw="pf_advice" data-source="alloc_rows"></div>
+        <p class="note">These are observations about concentration, not instructions to buy or sell. Moving money has tax and timing costs; decide with your own goals in view.</p></div>
       <div class="card c4" id="card-alloc">
         <h2>Where your money sits <em>live from INDmoney</em></h2>
         <div class="chartbox donutbox" data-draw="alloc_chart" data-source="alloc_rows" style="min-height:260px"></div>
@@ -186,6 +191,9 @@
       <div class="card c7" id="card-events"><h2>Results, board meetings and corporate actions <em>next three days, from NSE; blue is on your watchlist</em></h2>
         <div class="tw" style="max-height:420px;overflow-y:auto"><table data-source="events_today" data-row-key="date,symbol,kind"><thead><tr><th data-field="date">Date</th><th data-field="symbol">Company</th><th data-field="kind">Event</th><th class="hs" data-field="detail">Detail</th></tr></thead><tbody data-draw="events_body"></tbody></table></div></div>
       <div class="card c5" id="card-news"><h2>Headlines <em>word for word, no opinion added</em></h2><div class="list" data-draw="news_list" data-source="world_news"></div></div>
+      <div class="card c12" id="card-results"><h2>Results filed since yesterday's close <em>from NSE; blue is on your watchlist</em></h2>
+        <div class="tw" style="max-height:340px;overflow-y:auto"><table data-source="results_filed" data-row-key="symbol"><thead><tr><th data-field="time">Filed</th><th data-field="symbol">Company</th><th class="hs" data-field="headline">Filing</th></tr></thead><tbody data-draw="results_body"></tbody></table></div>
+        <p class="note">The desk lists who filed; it does not read profit or margin out of the filing, so check the numbers yourself. A stock on this list that closes up 2% or more near its day high becomes a paper trade for the Results Reaction strategy, and the hourly Trend Alerts watch for it rising or falling.</p></div>
       <div class="card c12" id="card-plan">
         <h2>Today's watchlist and the reasons <em>earnings calls, events, sentiment, signals</em></h2>
         <div class="list" data-draw="plan_list" data-source="plan_join"></div>
@@ -222,6 +230,9 @@
   <section id="tab-algo" role="tabpanel" aria-labelledby="tabbtn-algo" hidden>
     <div class="cd-grid">
       <div class="card c12"><p class="lead" data-draw="lead_algo" data-source="paper_stats">—</p></div>
+      <div class="card c12 console" id="card-console"><h2>AI trading console <em class="num" data-draw="fl_note">—</em></h2>
+        <div class="fl-flowrow" style="margin:0 0 8px"><small>Working on</small><div class="fl-flow" data-draw="fl_flow" data-source="floor_rows"></div></div>
+        <div class="fl-log" data-draw="fl_log"></div><p class="note">The desks' live hand-offs, as on the Live floor. Open the Live floor once so the desks start.</p></div>
       <div class="card c12" id="card-mode"><h2>Trading mode <em>your choice; the desk shows what its tests say</em></h2>
         <div class="toolbar"><button class="cd-btn tog" id="btn-paper" type="button" aria-pressed="true">Paper money</button><button class="cd-btn tog" id="btn-real" type="button" aria-pressed="false">Real money</button></div>
         <p class="note" data-draw="mode_note" data-source="paper_stats">—</p></div>
@@ -238,6 +249,10 @@
       <div class="card c12" id="card-league"><h2>Strategy league <em>every strategy trades its own paper book; ranked by confidence</em></h2>
         <div class="tw"><table data-source="strategy_board" data-row-key="strategy"><thead><tr><th data-field="rank">#</th><th data-field="strategy">Strategy</th><th class="r" data-field="closed">Closed / needed</th><th class="r" data-field="open">Live</th><th class="r" data-field="win_rate">Win rate</th><th class="r" data-field="avg_r">Avg R</th><th class="r" data-field="confidence">Confidence</th><th class="r" data-field="pnl">Paper P/L</th><th class="hs" data-field="backtest">5-year test</th><th data-field="ready">Status</th></tr></thead><tbody data-draw="league_body"></tbody></table></div>
         <p class="note">A strategy earns real money only with enough closed paper trades and the confidence the gate asks for. Several of these failed the 5-year test and trade here on paper so you can watch them fail or prove it wrong. Confidence is not a win rate.</p></div>
+      <div class="card c7" id="card-algomacro"><h2>Crypto and commodity strategies <em>5-year tests, after costs</em></h2>
+        <div class="tw"><table data-source="strategies_macro" data-row-key="strategy,market"><thead><tr><th data-field="strategy">Strategy</th><th data-field="market">Market</th><th data-field="status">Status</th><th class="r" data-field="trades">Trades</th><th class="r" data-field="avg_R">Avg R</th><th class="r" data-field="conf_cluster">Confidence</th><th class="r" data-field="conf_adjusted">After 6 tries</th></tr></thead><tbody data-draw="macro_body"></tbody></table></div></div>
+      <div class="card c5" id="card-algosig"><h2>Crypto and commodity signals today <em>20-day breakout</em></h2>
+        <div class="tw"><table data-source="macro_signals" data-row-key="symbol"><thead><tr><th data-field="symbol">Symbol</th><th data-field="name">Name</th><th data-field="entry_signal_today">Signal</th><th class="r" data-field="last_close">Close</th><th class="r" data-field="buy_hold_pa">Buy and hold p.a.</th></tr></thead><tbody data-draw="macrosig_body"></tbody></table></div></div>
       <div class="card c5" id="card-gate"><h2>Real-money gate <em>all four tests must pass</em></h2><div data-draw="gate_panel" data-source="paper_stats"></div></div>
       <div class="card c7" id="card-equity"><h2>Paper account <em>starts at your trading cash</em></h2><div class="chartbox" data-draw="equity_chart" data-source="paper_equity" style="min-height:230px"></div></div>
       <div class="card c12" id="card-ledger">
@@ -278,6 +293,11 @@
   <!-- ============ MORNING BRIEFING ============ -->
   <section id="tab-room" role="tabpanel" aria-labelledby="tabbtn-room" hidden>
     <div class="cd-grid">
+      <div class="card c12" id="card-bworld"><h2>World indices, currencies and commodities <em>last close, saved by the morning run</em></h2><div class="cardgrid" data-draw="world_cards" data-source="world_markets"></div></div>
+      <div class="card c6" id="card-nifty"><h2>Nifty 50 <em>one year, with the drift of recent closes</em></h2><div class="chartbox" data-draw="idx_chart" data-id="nifty_day" data-source="nifty_day" style="min-height:240px"></div></div>
+      <div class="card c6" id="card-sensex"><h2>Sensex <em>one year, with the drift of recent closes</em></h2><div class="chartbox" data-draw="idx_chart" data-id="sensex_day" data-source="sensex_day" style="min-height:240px"></div></div>
+      <div class="card c12" id="card-orders"><h2>Order book for today <em>what the desks would place; real money only if you choose it</em></h2><div data-draw="real_tickets" data-source="trade_book strategy_board"></div>
+        <p class="note">Every order here comes from a paper strategy. None has yet proven it makes money, and no rule can promise a rally. If you place one with real money, size it so that the loss at the stop is at most 1% of your trading cash.</p></div>
       <div class="card c7" id="card-room">
         <h2>Morning research run <em data-draw="room_stamp" data-source="agent_feed">—</em></h2>
         <p class="note" style="margin:0 0 10px">Once each weekday morning the Claude agents read the results, filings and earnings calls, argue both sides and write this. The floor desks work all day from fixed rules; this is the deep read.</p>
@@ -300,6 +320,7 @@
 <script src="floor_engine.js"></script>
 <script src="floor_stage.js"></script>
 <script src="floor_views.js"></script>
+<script src="org_stage.js"></script>
 <script src="views_command.js"></script>
 <script src="views_pre.js"></script>
 <script src="views_alerts.js"></script>

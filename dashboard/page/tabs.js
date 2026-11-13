@@ -4,7 +4,7 @@
   const show = (id) => {
     TABS.forEach((t) => { const sec = document.getElementById('tab-' + t); const btn = document.getElementById('tabbtn-' + t);
       if (sec) sec.hidden = t !== id; if (btn) btn.setAttribute('aria-selected', t === id ? 'true' : 'false'); });
-    if (CD.ENG) CD.ENG.show(id === 'floor');   /* the desks only work while their tab is on screen */
+    if (CD.ENG) CD.ENG.show(id === 'floor' || id === 'algo');   /* the desks only work while their tab is on screen */
     try { dash.setLink(id); } catch (e) { /* link is a convenience */ }
   };
   CD.goto = show;
