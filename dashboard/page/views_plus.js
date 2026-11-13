@@ -79,6 +79,19 @@
     const s = CD.candleChart(box, rows, { iv: '1day', label: 'Index candles for one year with moving averages and a projection band' });
     if (s) { const p = el('p', 'note'); p.textContent = `Last ${num(s.last, 2)}. Recent drift points to ${num(s.projEnd, 2)} in ${s.steps} sessions (${pct((s.projEnd / s.last - 1) * 100, 1)}); support near ${num(s.support, 2)}, resistance near ${num(s.resistance, 2)}. This is the slope of recent closes with a widening band, not a forecast.`; box.appendChild(p); } });
 
+  /* ---------- F&O desk ---------- */
+  dash.draw('fo_lead', (p) => { const r = need(p, ['fo_stats', 'fo_book']); if (!r) return; const [st, book] = r; const open = book.filter((b) => b.status === 'OPEN');
+    const pnl = st.reduce((a, s) => a + s.pnl, 0), n = st.reduce((a, s) => a + s.settled, 0), risk = open.reduce((a, b) => a + b.max_loss_rs, 0);
+    p.replaceChildren(`${book.length} index-option structures booked across ${st.length} strategies: ${open.length} open to the ${open[0] ? open[0].expiry : 'next'} expiry with `, el('b', 'warn', inr(risk)), ' at risk in the worst case, ', `${n} settled with a paper result of `,
+      el('b', cls(pnl), (pnl > 0 ? '+' : '') + inr(pnl, 0)), '. Positions are held to expiry with no stop, so a loss is the full worst case. Option sellers win often and lose big: a win rate alone means nothing here.'); });
+  dash.draw('fo_stats_body', (body) => { const r = need(body, ['fo_stats']); if (!r) return;
+    CD.fillTable(body, r[0], [{ render: (d) => d.strategy }, { cls: 'num r', render: (d) => String(d.open) }, { cls: 'num r', render: (d) => String(d.settled) }, { cls: 'num r', render: (d) => (d.win_rate === null ? '—' : pct(d.win_rate, 0, false)) },
+      { cls: 'num r', render: (d) => el('span', cls(d.pnl), (d.pnl > 0 ? '+' : '') + inr(d.pnl, 0)) }, { cls: 'num r', render: (d) => inr(d.at_risk, 0) }], 'strategy'); });
+  dash.draw('fo_body', (body) => { const r = need(body, ['fo_book']); if (!r) return; const FST = { OPEN: 'b', WIN: 'g', LOSS: 'r' };
+    CD.fillTable(body, r[0], [{ cls: 'num', render: (d) => String(d.id) }, { render: (d) => d.strategy }, { cls: 'num', render: (d) => d.expiry.slice(5) }, { cls: 'hs', render: (d) => d.legs_txt }, { render: (d) => tag(d.status, FST[d.status] || '') },
+      { cls: 'num r', render: (d) => inr(d.credit_rs, 0) }, { cls: 'num r hs', render: (d) => inr(d.max_gain_rs, 0) }, { cls: 'num r hs', render: (d) => inr(d.max_loss_rs, 0) },
+      { cls: 'num r', render: (d) => (d.pnl_rs === null ? '—' : el('span', cls(d.pnl_rs), (d.pnl_rs > 0 ? '+' : '') + inr(d.pnl_rs, 0))) }], 'id'); });
+
   const toRows = (rows) => rows.map((r) => ({ t: new Date(String(r.t).replace(' ', 'T') + '+05:30'), o: r.o, h: r.h, l: r.l, c: r.c, v: r.v })).filter((r) => !Number.isNaN(r.t.getTime()));
   dash.draw('algo_pick', (em) => { em.textContent = CD.pickName ? `${CD.pickName} · daily candles, one year` : 'press "Open chart" on a name above'; });
   dash.draw('candle_algo', (box) => { if (!CD.pickName) { box.replaceChildren(el('div', 'empty', 'Pick a name from the approved list to see its history, its moving averages and where the recent drift points.')); return; }

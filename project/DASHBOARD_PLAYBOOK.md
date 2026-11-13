@@ -68,3 +68,14 @@ then write the changed documents with ArtifactData `set` (pin `if_version`).
 "Trend Alerts". It scans the watchlist on 15-minute Yahoo bars (NSE data is delayed about 15 minutes) and pushes a
 phone notification only for names whose rise or fall condition is new since an hour earlier. It screens; it does not
 forecast. Each run costs a fresh session, so keep the frequency low.
+
+## F&O paper desk
+
+`dashboard/fo_engine.py` paper trades NIFTY index option structures (short iron condor, bull put
+spread, iron butterfly), one lot, held to expiry. `book CHAIN.json` needs a saved INDmoney option
+chain (shorts at the bid, longs at the ask) and refuses credit structures with no credit and
+expiries under 2 days. `settle` runs in the daily refresh and needs no option data: each leg is
+worth its intrinsic value against the expiry-day index close from Yahoo, minus Rs 50 a leg, an
+approximation of NSE's official settlement. Booking runs weekly by a send_later wake of the main
+chat session, because scheduled tasks in this organisation carry no connectors and NSE's public
+option-chain API refuses scripts. The fo_ledger dataset feeds the F&O card in the Algo lab.
