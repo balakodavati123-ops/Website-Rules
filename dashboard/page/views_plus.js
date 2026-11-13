@@ -64,6 +64,21 @@
       const text = `BUY ${t.symbol}  limit near ${num(t.entry, 2)}  stop ${num(t.stop, 2)}  ${t.target === null ? 'exit by the strategy rule' : 'target ' + num(t.target, 2)}`; const b = el('button', 'cd-btn', 'Copy ticket'); b.type = 'button'; b.dataset.label = 'Copy ticket'; b.style.marginTop = '6px'; b.addEventListener('click', () => CD.copy(text, b));
       c.append(h, el('p', 'sub num', text), el('p', 'sub', `Paper record of this strategy: ${s.closed || 0} closed trades, confidence ${s.closed > 1 ? Number(s.confidence).toFixed(0) + '%' : 'not measurable yet'}. Size it yourself: risk at most 1% of your trading cash between entry and stop.`), b); return c; })); });
 
+  dash.draw('results_body', (body) => { const r = need(body, ['results_filed']); if (!r) return; if (!r[0].length) { const tr = el('tr'), td = el('td', 'dim', 'No results were filed since the last close.'); td.colSpan = 3; tr.appendChild(td); body.replaceChildren(tr); return; }
+    CD.fillTable(body, r[0], [{ cls: 'num', render: (d) => d.time }, { render: (d) => (d.watchlist === 'yes' ? tag(d.symbol, 'b') : d.symbol + ' · ' + d.company) }, { cls: 'hs', render: (d) => d.headline }], 'symbol'); });
+  dash.draw('pf_advice', (box) => { const r = need(box, ['alloc_rows']); if (!r) return; const rows = r[0].slice().sort((a, b) => b.share - a.share); const share = (n) => { const x = rows.find((q) => q.name === n); return x ? x.share : 0; }; const out = [];
+    const say = (sev, head, why) => { const row = el('div', 'row sev-' + sev); row.style.gridTemplateColumns = '1fr'; const b = el('div'); b.append(el('div', 'h', head), el('div', 'w', why)); row.appendChild(b); out.push(row); };
+    const metals = share('GOLD') + share('SILVER'), top = rows[0];
+    if (metals >= 50) say('hi', `Gold and silver are ${metals.toFixed(0)}% of your assets.`, 'One theme decides most of your result. Metals pay no income and can go sideways for years. A common rule of thumb keeps them at 10% to 20%; that is a rule of thumb, not a target for you.');
+    else if (top && top.share >= 40) say('hi', `${top.label} is ${top.share.toFixed(0)}% of your assets.`, 'One asset class decides most of your result.');
+    if (share('MF') < 30) say('up', `Mutual funds are ${share('MF').toFixed(0)}% of your assets.`, 'Diversified equity funds are the usual long-term growth engine. Yours is small beside the metals.');
+    if (share('SA') < 10) say('dn', `Liquid savings are ${share('SA').toFixed(0)}% of your assets.`, 'With no salary coming in, an emergency reserve of six months or more of expenses comes before any trading money.');
+    if (!out.length) say('up', 'No single asset class dominates.', 'Nothing stands out as concentrated.'); box.replaceChildren(...out); });
+  dash.draw('idx_chart', (box) => { const id = box.dataset.id, r = need(box, [id]); if (!r) return;
+    const rows = r[0].map((c) => ({ t: new Date(String(c.t).replace(' ', 'T') + '+05:30'), o: c.o, h: c.h, l: c.l, c: c.c, v: c.v || 0 })).filter((c) => !Number.isNaN(c.t.getTime()));
+    const s = CD.candleChart(box, rows, { iv: '1day', label: 'Index candles for one year with moving averages and a projection band' });
+    if (s) { const p = el('p', 'note'); p.textContent = `Last ${num(s.last, 2)}. Recent drift points to ${num(s.projEnd, 2)} in ${s.steps} sessions (${pct((s.projEnd / s.last - 1) * 100, 1)}); support near ${num(s.support, 2)}, resistance near ${num(s.resistance, 2)}. This is the slope of recent closes with a widening band, not a forecast.`; box.appendChild(p); } });
+
   const toRows = (rows) => rows.map((r) => ({ t: new Date(String(r.t).replace(' ', 'T') + '+05:30'), o: r.o, h: r.h, l: r.l, c: r.c, v: r.v })).filter((r) => !Number.isNaN(r.t.getTime()));
   dash.draw('algo_pick', (em) => { em.textContent = CD.pickName ? `${CD.pickName} · daily candles, one year` : 'press "Open chart" on a name above'; });
   dash.draw('candle_algo', (box) => { if (!CD.pickName) { box.replaceChildren(el('div', 'empty', 'Pick a name from the approved list to see its history, its moving averages and where the recent drift points.')); return; }

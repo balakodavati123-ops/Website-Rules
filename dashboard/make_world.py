@@ -4,7 +4,7 @@
   NSE             board meetings (results) and corporate actions due in the next few days
   Yahoo Finance   news headlines, shown word for word with their publisher. The desk adds no opinion.
 
-Writes dashboard/data/world_markets.json, events_today.json and world_news.json.
+Writes dashboard/data/world_markets.json, events_today.json, world_news.json and results_filed.json.
 Usage: python dashboard/make_world.py
 """
 from __future__ import annotations
@@ -72,6 +72,32 @@ def events(today, watch: set[str], days: int = 3, cap: int = 80) -> list[dict]:
     return rows[:cap]
 
 
+def results_filed(now, watch: set[str], cap: int = 60) -> list[dict]:
+    """Companies that filed financial results since the previous session's close (15:30 IST).
+    The filing is listed as filed; the desk does not read the profit figures out of it."""
+    since = now - timedelta(days=1)
+    while since.weekday() >= 5:
+        since -= timedelta(days=1)
+    since = since.replace(hour=15, minute=30, second=0, microsecond=0)
+    url = ("https://www.nseindia.com/api/corporate-announcements?index=equities"
+           f"&from_date={since.strftime('%d-%m-%Y')}&to_date={now.strftime('%d-%m-%Y')}")
+    rows, seen = [], set()
+    try:
+        for r in nse(url):
+            when = datetime.strptime(r["an_dt"], "%d-%b-%Y %H:%M:%S").replace(tzinfo=IST)
+            desc, text = (r.get("desc") or "").lower(), (r.get("attchmntText") or "").lower()
+            is_result = "financial result" in desc or ("financial results" in text and "approved" in text)
+            if when < since or not is_result or "transcript" in text or r["symbol"] in seen:
+                continue
+            seen.add(r["symbol"])
+            rows.append({"time": when.strftime("%d %b %H:%M"), "symbol": r["symbol"], "company": r.get("sm_name") or "",
+                         "headline": (r.get("attchmntText") or r.get("desc") or "")[:170], "watchlist": "yes" if r["symbol"] in watch else "no"})
+    except Exception as err:
+        print("results feed failed:", err)
+    rows.sort(key=lambda x: (x["watchlist"] != "yes", x["symbol"]))
+    return rows[:cap]
+
+
 def news(cap: int = 14) -> list[dict]:
     import yfinance as yf
     out, seen = [], set()
@@ -98,11 +124,12 @@ def main():
     now = datetime.now(IST)
     watch = {t.strip().replace(".NS", "") for t in (ROOT / "watchlists" / "nifty200_plus_etfs.txt").read_text().splitlines() if t.strip() and not t.startswith("#")}
     OUT.mkdir(parents=True, exist_ok=True)
-    m, e, n = markets(), events(now.date(), watch), news()
+    m, e, n, rf = markets(), events(now.date(), watch), news(), results_filed(now, watch)
+    (OUT / "results_filed.json").write_text(json.dumps(rf, indent=1))
     (OUT / "world_markets.json").write_text(json.dumps(m, indent=1))
     (OUT / "events_today.json").write_text(json.dumps(e, indent=1))
     (OUT / "world_news.json").write_text(json.dumps(n, indent=1))
-    print(f"world: {sum(1 for r in m if r['last'] is not None)}/{len(m)} markets, {len(e)} events ({sum(1 for r in e if r['watchlist'] == 'yes')} on the watchlist), {len(n)} headlines")
+    print(f"world: {sum(1 for r in m if r['last'] is not None)}/{len(m)} markets, {len(e)} events ({sum(1 for r in e if r['watchlist'] == 'yes')} on the watchlist), {len(n)} headlines, {len(rf)} results filed since the last close")
 
 
 if __name__ == "__main__":

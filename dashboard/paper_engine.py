@@ -35,11 +35,21 @@ PLAN = {
     "breakout_52w_trail": (0.05, None, 120, 3.0, None),
     "trend_ride": (0.05, None, 120, None, "sma50"),
     "rsi2_dip": (0.05, None, 10, None, "bounce"),
+    "results_reaction": (0.05, None, 60, 3.0, None),
 }
 
 
 def plan(strategy):
     return PLAN.get(strategy, PLAN["breakout_52w"])
+
+
+def complete(df):
+    """Drop today's bar while the NSE session is still running: a half-built bar is not a close."""
+    from datetime import timedelta, timezone
+    now = datetime.now(timezone(timedelta(hours=5, minutes=30)))
+    if len(df) and df.index[-1].date() == now.date() and (now.hour, now.minute) < (15, 45):
+        return df.iloc[:-1]
+    return df
 
 
 def d(x) -> date:
@@ -225,6 +235,8 @@ class YahooProvider:
             if df is None:
                 df = self._yf.Ticker(sym).history(period="2y", auto_adjust=False)
             df = df[["Open", "High", "Low", "Close"]].dropna()
+            if sym.endswith(".NS") or sym.startswith("^"):
+                df = complete(df)
             df.index = __import__("pandas").to_datetime(df.index.date)
             self._cache[sym] = df
         return self._cache[sym]

@@ -84,7 +84,7 @@ FILES = {  # id -> (title, description, file name)
     "crypto_candles": ("Crypto candles in rupees", "CoinDCX daily, hourly and 15-minute candles for Bitcoin, Ethereum and Solana.", "crypto_candles.json"),
 }
 SCHEDULE = "Rebuilt each weekday at 08:15 IST by the CEO Desk Daily Refresh task."
-PAGE_FILES = ["index.html", "style.css", "lib.js", "data.js", "floor_data.js", "floor_engine.js", "floor_stage.js", "floor_views.js", "views_plus.js", "views_command.js", "views_pre.js", "views_alerts.js",
+PAGE_FILES = ["index.html", "style.css", "lib.js", "data.js", "floor_data.js", "floor_engine.js", "floor_stage.js", "floor_views.js", "org_stage.js", "views_plus.js", "views_command.js", "views_pre.js", "views_alerts.js",
               "views_algo.js", "views_markets.js", "views_room.js", "tabs.js"]
 
 

@@ -40,9 +40,11 @@ dash.loader('silver_rows', { description: 'Your silver holdings.',
       return (a.stocks || []).map((s) => ({ symbol: s.symbol, name: s.name, key: s.ind_key, price: s.price, chg_pct: s.change_pct, prev: s.previous_close, day_low: s.day_low, day_high: s.day_high, volume: s.volume, mcap_cr: s.mcap_cr, w52_high: s['52_week_high'], w52_low: s['52_week_low'], circ_up: s.circuit_upper_limit, circ_lo: s.circuit_lower_limit, sector: s.sector, cap: s.market_cap_category })); } });
 });
 
-dash.loader('candles', { description: 'Candles for the chosen instrument and timeframe.',
+['candles', 'nifty_day', 'sensex_day'].forEach((id) => {
+  dash.loader(id, { description: 'Candles for the chosen instrument and timeframe.',
   fn: ({ answer }) => { const a = typeof answer === 'string' ? JSON.parse(answer) : answer;
     return (a.candles || []).map((c) => ({ t: c.datetime_ist, o: c.open, h: c.high, l: c.low, c: c.close, v: c.volume })); } });
+});
 
 dash.loader('crypto_live', { description: 'Live global dollar prices from CoinGecko, one row per coin.',
   fn: ({ answer }) => { const a = typeof answer === 'string' ? JSON.parse(answer) : answer;

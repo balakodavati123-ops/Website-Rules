@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from paper_engine import YahooProvider, step  # noqa: E402
+from paper_engine import YahooProvider, complete, step  # noqa: E402
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
@@ -44,6 +44,7 @@ def scan_signals(provider, per_strategy: int = 2) -> list[dict]:
     from trading_team.strategies import STRATEGIES
     ticks = [t.strip() for t in (ROOT / "watchlists" / "nifty200_plus_etfs.txt").read_text().splitlines() if t.strip() and not t.startswith("#")]
     data = yf.download(ticks, period="2y", group_by="ticker", auto_adjust=False, threads=True, progress=False)
+    data = complete(data)
     newest = max(data[t].Close.dropna().index[-1] for t in ticks if t in data and len(data[t].Close.dropna()))
     found: dict[str, list] = {}
     for t in ticks:
@@ -65,6 +66,33 @@ def scan_signals(provider, per_strategy: int = 2) -> list[dict]:
             provider._pre[t] = df
             out.append({"market": "NSE", "symbol": t.replace(".NS", ""), "strategy": name,
                         "signal_date": str(df.index[-1].date()), "signal_close": float(df.Close.iloc[-1])})
+    try:                                                     # results reaction: filed results, then closed up 2%+ near the day's high
+        import urllib.request
+        prev = max(i for i in data[ticks[0]].Close.dropna().index if i < newest)
+        url = ("https://www.nseindia.com/api/corporate-announcements?index=equities"
+               f"&from_date={prev.strftime('%d-%m-%Y')}&to_date={newest.strftime('%d-%m-%Y')}")
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (research script)", "Accept": "application/json", "Referer": "https://www.nseindia.com/"})
+        filed = {r["symbol"] for r in json.loads(urllib.request.urlopen(req, timeout=25).read())
+                 if "financial result" in ((r.get("desc") or "") + (r.get("attchmntText") or "")).lower()}
+        hits = []
+        for t in ticks:
+            if t.replace(".NS", "") not in filed or t not in data:
+                continue
+            df = data[t].dropna(subset=["Close"])
+            if len(df) < 30 or df.index[-1] != newest:
+                continue
+            c, p, h, l = float(df.Close.iloc[-1]), float(df.Close.iloc[-2]), float(df.High.iloc[-1]), float(df.Low.iloc[-1])
+            if c / p - 1 >= 0.02 and h > l and (c - l) / (h - l) >= 0.66:
+                df = df.copy()
+                df.index = __import__("pandas").to_datetime(df.index.date)
+                hits.append((c / p - 1, t, df))
+        found["results_reaction"] = hits
+        for _, t, df in sorted(hits, key=lambda x: -x[0])[:per_strategy + 1]:
+            provider._pre[t] = df
+            out.append({"market": "NSE", "symbol": t.replace(".NS", ""), "strategy": "results_reaction",
+                        "signal_date": str(df.index[-1].date()), "signal_close": float(df.Close.iloc[-1])})
+    except Exception as e:
+        print("results reaction scan failed:", e)
     print("signals:", {k: len(v) for k, v in found.items()}, "taken", len(out))
     return out
 
