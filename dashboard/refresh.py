@@ -120,6 +120,7 @@ def main():
     equity = json.loads((state / "paper_equity.json").read_text())
     rules = json.loads((ROOT / "dashboard" / "data" / "desk_rules.json").read_text())
     provider = YahooProvider()
+    before = {r["id"] for r in ledger}
     try:
         scanned = scan_signals(provider)
     except Exception as e:                                   # the scan is extra: the desk's own signal still runs
@@ -133,6 +134,11 @@ def main():
     for r in ledger:
         by[r["status"]] = by.get(r["status"], 0) + 1
     print(f"{today}: ledger {len(ledger)} rows {by}; equity {equity[-1]['equity']}")
+    # The only phone alert: new orders from the two strategies that survived the 5-year test.
+    tested = [r for r in ledger if r["status"] == "PENDING" and r["strategy"] in ("breakout_52w", "trend_ride")
+              and r["id"] not in before]
+    for r in tested:
+        print(f"ALERT: {r['symbol']} ({r['strategy'].replace('_', ' ')}) buy near {float(r['entry']):.2f}, stop {float(r['stop']):.2f}")
 
 
 if __name__ == "__main__":
