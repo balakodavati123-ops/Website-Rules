@@ -110,6 +110,16 @@ dash.calc('strategy_pnl', { inputs: ['trade_book'], title: 'Profit and loss by s
       s.deployed += t.deployed; s.pnl += t.pnl; });
     return Object.values(by).map((s) => ({ ...s, pnl: Math.round(s.pnl * 100) / 100, return_pct: s.deployed ? Math.round((s.pnl / s.deployed) * 10000) / 100 : null })).sort((a, b) => b.pnl - a.pnl); } });
 
+dash.calc('fo_book', { inputs: ['fo_ledger'], title: 'F&O paper positions', description: 'Each index-option structure with its legs, credit taken in, best and worst case at expiry, and the result once settled.',
+  fn: (rows) => rows.map((r) => ({ id: r.id, strategy: r.strategy, underlying: r.underlying, expiry: r.expiry, booked: r.booked, status: r.status,
+    legs_txt: r.legs.map((l) => `${l.side === 'S' ? 'sell' : 'buy'} ${l.strike} ${l.kind} @ ${l.entry}`).join(' · '), lot: r.lot,
+    credit_rs: r.credit_rs, max_gain_rs: r.max_gain_rs, max_loss_rs: r.max_loss_rs, settle_close: r.settle_close === '' ? null : r.settle_close, pnl_rs: r.status === 'OPEN' ? null : r.pnl_rs })).sort((a, b) => b.id - a.id) });
+
+dash.calc('fo_stats', { inputs: ['fo_ledger'], title: 'F&O results by strategy', description: 'Per option strategy: open and settled counts, wins, win rate, total paper profit or loss, and the worst case of what is open now.',
+  fn: (rows) => { const by = {}; rows.forEach((r) => { const s = by[r.strategy] || (by[r.strategy] = { strategy: r.strategy, open: 0, settled: 0, wins: 0, pnl: 0, at_risk: 0 });
+      if (r.status === 'OPEN') { s.open += 1; s.at_risk += r.max_loss_rs; } else { s.settled += 1; if (r.status === 'WIN') s.wins += 1; s.pnl += r.pnl_rs; } });
+    return Object.values(by).map((s) => ({ ...s, pnl: Math.round(s.pnl * 100) / 100, win_rate: s.settled ? Math.round((s.wins / s.settled) * 1000) / 10 : null })).sort((a, b) => b.pnl - a.pnl); } });
+
 dash.calc('kpi_rows', { inputs: ['snapshot', 'mf_holdings', 'metals_est', 'paper_stats'], title: 'Headline figures', description: 'The six figures at the top of the Command tab.',
   fn: (snap, mf, est, paper) => { const get = (k, n) => snap.find((r) => r.kind === k && r.name === n) || {}; const net = get('total', 'Net worth').current, as = get('total', 'Assets');
     const gold = get('asset', 'GOLD').current || 0, silver = get('asset', 'SILVER').current || 0, sa = get('asset', 'SA').current;

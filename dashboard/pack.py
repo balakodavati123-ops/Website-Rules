@@ -78,6 +78,7 @@ FILES = {  # id -> (title, description, file name)
     "paper_equity": ("Paper equity", "Paper account equity by day.", "paper_equity.json"),
     "desk_rules": ("Desk rules", "Trading cash, risk limits and the real-money gate.", "desk_rules.json"),
     "crypto_quotes": ("Crypto prices in rupees", "Bitcoin, Ethereum and Solana on CoinDCX, cross-checked against Kraken's dollar price.", "crypto_quotes.json"),
+    "fo_ledger": ("F&O paper positions", "NIFTY index option structures the desk paper trades, held to expiry.", "fo_ledger.json"),
     "world_markets": ("World markets before the bell", "Last close and change for world indices, the dollar, the rupee, crude, gold and US yields, from Yahoo Finance.", "world_markets.json"),
     "events_today": ("Company events", "Board meetings, results and corporate actions due in the next three days, from NSE.", "events_today.json"),
     "world_news": ("Headlines", "News headlines from Yahoo Finance, word for word with their publisher.", "world_news.json"),

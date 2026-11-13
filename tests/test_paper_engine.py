@@ -139,3 +139,50 @@ def test_floor_rules_on_indmoney_shaped_rows():
     script = Path(__file__).resolve().parents[1] / "dashboard" / "test" / "floor_calc_test.js"
     out = subprocess.run(["node", str(script)], capture_output=True, text=True)
     assert out.returncode == 0, out.stderr[-800:]
+
+
+def test_fo_engine_books_and_settles_defined_risk_structures(tmp_path, monkeypatch):
+    import importlib
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    import dashboard.fo_engine as fo
+    importlib.reload(fo)
+    monkeypatch.setattr(fo, "LEDGER", tmp_path / "fo_ledger.json")
+    ch = {24850: (47.3, 47.45, -0.22), 24700: (22.95, 23.05, -0.12), 24950: (73.6, 73.8, -0.31), 24800: (37.3, 37.45, -0.18),
+          25100: (159.0, 159.4, 0.53), 25250: (94.05, 94.25, 0.37), 25400: (52.5, 52.65, 0.24), 25550: (28.6, 28.7, 0.14)}
+    rows = [{"strike_price": k, "call_data": {"buy_price": b, "sell_price": a, "delta": abs(d), "lot_size": 65},
+             "put_data": {"buy_price": b, "sell_price": a, "delta": -abs(d), "lot_size": 65}} for k, (b, a, d) in ch.items()]
+    q, strikes, spot, exp, lot = fo.quotes({"selected_expiry": "20261117", "entity_details": {"live_price": 25110.95}, "option_chain_data": rows})
+    assert lot == 65 and exp == "2026-11-17" and strikes[0] == 24700
+    st = fo.structures(q, strikes, spot)
+    assert st["short_iron_condor"] == [("S", 25400, "CE"), ("B", 25550, "CE"), ("S", 24850, "PE"), ("B", 24700, "PE")]
+    assert st["bull_put_spread"] == [("S", 24950, "PE"), ("B", 24800, "PE")]
+    # settle a condor at an inside close (full win) and an iron fly through the wing (full loss)
+    fo.save([
+        {"id": 1, "strategy": "short_iron_condor", "underlying": "NIFTY", "expiry": "2026-11-17", "lot": 65, "booked": "2026-11-13",
+         "status": "OPEN", "legs": [{"side": "S", "strike": 25400, "kind": "CE", "entry": 52.5}, {"side": "B", "strike": 25550, "kind": "CE", "entry": 28.7},
+                                    {"side": "S", "strike": 24850, "kind": "PE", "entry": 47.3}, {"side": "B", "strike": 24700, "kind": "PE", "entry": 23.05}],
+         "credit_rs": 3123.25, "max_gain_rs": 2923.25, "max_loss_rs": 6826.75, "settle_close": "", "pnl_rs": 0, "note": ""},
+        {"id": 2, "strategy": "iron_butterfly", "underlying": "NIFTY", "expiry": "2026-11-17", "lot": 65, "booked": "2026-11-13",
+         "status": "OPEN", "legs": [{"side": "S", "strike": 25100, "kind": "CE", "entry": 159.0}, {"side": "B", "strike": 25250, "kind": "CE", "entry": 94.25},
+                                    {"side": "S", "strike": 25100, "kind": "PE", "entry": 132.6}, {"side": "B", "strike": 24950, "kind": "PE", "entry": 73.8}],
+         "credit_rs": 8030.75, "max_gain_rs": 7830.75, "max_loss_rs": 1919.25, "settle_close": "", "pnl_rs": 0, "note": ""}])
+
+    class FakeT:
+        def __init__(self, *a, **k): pass
+        def history(self, **k):
+            idx = pd.to_datetime(["2026-11-17"]).tz_localize("Asia/Kolkata")
+            return pd.DataFrame({"Close": [25350.0]}, index=idx)
+    monkeypatch.setattr(fo, "datetime", __import__("dashboard.fo_engine", fromlist=["datetime"]).datetime)
+    import yfinance
+    monkeypatch.setattr(yfinance, "Ticker", FakeT)
+    import dashboard.fo_engine as fo2
+    fake_now = fo.datetime(2026, 11, 18, 9, 0, tzinfo=fo.IST)
+
+    class FakeDT(fo.datetime):
+        @classmethod
+        def now(cls, tz=None): return fake_now
+    monkeypatch.setattr(fo, "datetime", FakeDT)
+    fo.settle()
+    out = {r["id"]: r for r in fo.load()}
+    assert out[1]["status"] == "WIN" and out[1]["pnl_rs"] == 3123.25 - 200          # inside the band: keep the credit
+    assert out[2]["status"] == "LOSS" and out[2]["pnl_rs"] == round((123.55 - 150) * 65 - 200, 2)
