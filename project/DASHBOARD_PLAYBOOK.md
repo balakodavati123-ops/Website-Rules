@@ -79,3 +79,15 @@ worth its intrinsic value against the expiry-day index close from Yahoo, minus R
 approximation of NSE's official settlement. Booking runs weekly by a send_later wake of the main
 chat session, because scheduled tasks in this organisation carry no connectors and NSE's public
 option-chain API refuses scripts. The fo_ledger dataset feeds the F&O card in the Algo lab.
+
+## Signal desk (the CEO's operational rules)
+
+`dashboard/signal_desk.py` runs daily after refresh.py. It turns the research run's candidates into
+standardized signals (trajectory, sentiment, urgency, rule-based conviction 0-1, drivers, red flags;
+tradable at 0.75+), verifies each on daily bars (close above the 9/21 EMA, volume 1.5x the 20-day
+average, ADX(14) 20+), sizes a Rs 1,00,000 paper pool in thirds (everything available only at
+conviction 0.90+ with ADX over 25), protects with a 1.5x ATR stop, breakeven at +1.5R then a
+9-EMA/1-ATR trail, and a sideways exit after 6 flat sessions. Losing exits write diagnoses and
+lessons to signal_lessons.json; the run-up and ADX lessons mechanically gate later entries.
+Daily bars only: it cannot see intraday moves, and VWAP from the CEO's spec has no end-of-day
+equivalent, so the EMAs stand in for it.
