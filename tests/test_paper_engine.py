@@ -186,3 +186,38 @@ def test_fo_engine_books_and_settles_defined_risk_structures(tmp_path, monkeypat
     out = {r["id"]: r for r in fo.load()}
     assert out[1]["status"] == "WIN" and out[1]["pnl_rs"] == 3123.25 - 200          # inside the band: keep the credit
     assert out[2]["status"] == "LOSS" and out[2]["pnl_rs"] == round((123.55 - 150) * 65 - 200, 2)
+
+
+def test_signal_desk_handoff_gates_and_protection(tmp_path, monkeypatch):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    import numpy as np
+    import dashboard.signal_desk as sd
+    room = {"decision": "BUY", "ticker": "AAA.NS", "run_date": "2026-11-12", "risk_notes": ["stop set"], "candidates": [
+        {"ticker": "AAA.NS", "bull": "a surprise of 20.0% beat", "analysts": {"technical": {"signal": "bullish"}, "fundamentals": {"signal": "bullish"}, "sentiment": {"signal": "neutral"}, "concall": {"signal": "bullish"}}},
+        {"ticker": "BBB.NS", "bull": "flat", "analysts": {"technical": {"signal": "bearish"}, "fundamentals": {"signal": "neutral"}}}]}
+    s1, s2 = sd.make_signals(room)
+    assert (s1["trajectory"], s1["sentiment"], s1["conviction"], s1["eligible"]) == ("Exponential_Profit", "Strong_Positive", 0.8, "yes")
+    assert s2["eligible"] == "no" and s2["sentiment"] == "Negative"
+
+    idx = pd.bdate_range("2026-05-01", periods=140)
+    up = pd.DataFrame({"Open": np.linspace(100, 139, 140), "Close": np.linspace(100.5, 140, 140)}, index=idx)
+    up["High"], up["Low"], up["Volume"] = up.Close + 1, up.Open - 1, 1_000_000
+    up.iloc[-1, up.columns.get_loc("Volume")] = 2_000_000
+    v, g = sd.gates(up.copy(), [])
+    assert v == "ENTER" and g["adx"] > 25 and g["volx"] > 1.5
+    flat = up.copy(); flat["Close"] = 100 + np.sin(np.arange(140)) * 2; flat["Open"] = flat.Close; flat["High"] = flat.Close + 2; flat["Low"] = flat.Close - 2
+    assert sd.gates(flat, [])[0] == "WAIT_SIDEWAYS"
+    assert sd.gates(up.copy(), [{"lesson": "Lesson: priced in — skip entries after a 10-day run-up above 8%."}])[0] == "ENTER"  # run-up here is ~2%
+
+    # sideways time-stop: fills, then six flat sessions, exit at close
+    rows = [{"id": 1, "ticker": "AAA.NS", "strategy": "signal_desk", "conviction": 0.8, "status": "PENDING", "signal_date": str(idx[120].date()),
+             "signal_close": 100.0, "deploy_rs": 30000, "all_in": False, "adx_at_entry": 22, "runup_10d": 1.0, "entry": 100.0,
+             "stop": 94.0, "atr0": 4.0, "qty": 0, "opened": "", "closed": "", "exit": "", "pnl_rs": 0, "be": False, "note": ""}]
+    flat2 = up.iloc[:128].copy()
+    flat2.iloc[121:, [flat2.columns.get_loc(c) for c in ("Open", "Close")]] = 100.0
+    flat2.High.iloc[121:] = 101; flat2.Low.iloc[121:] = 99
+    lessons = []
+    sd.settle(rows, lessons, {"AAA.NS": flat2}, flat2)
+    r = rows[0]
+    assert r["status"] == "SIDEWAYS_EXIT" and r["qty"] == 300 and r["exit"] == 100.0
+    assert lessons and "ADX > 25" in lessons[0]["lesson"]

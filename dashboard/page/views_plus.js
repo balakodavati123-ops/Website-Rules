@@ -79,6 +79,25 @@
     const s = CD.candleChart(box, rows, { iv: '1day', label: 'Index candles for one year with moving averages and a projection band' });
     if (s) { const p = el('p', 'note'); p.textContent = `Last ${num(s.last, 2)}. Recent drift points to ${num(s.projEnd, 2)} in ${s.steps} sessions (${pct((s.projEnd / s.last - 1) * 100, 1)}); support near ${num(s.support, 2)}, resistance near ${num(s.resistance, 2)}. This is the slope of recent closes with a widening band, not a forecast.`; box.appendChild(p); } });
 
+  /* ---------- Signal desk ---------- */
+  const VD = { ENTER: 'g', WAIT_SIDEWAYS: 'a', WAIT_TREND: '', WAIT_VOLUME: '', SKIP_PRICED_IN: 'r', LOW_CONVICTION: '', NO_DATA: '' };
+  const SST = { OPEN: 'b', PENDING: 'a', WIN: 'g', LOSS: 'r', SIDEWAYS_EXIT: 'a', SKIPPED: '' };
+  dash.draw('sd_lead', (p) => { const r = need(p, ['signal_ledger', 'desk_signals']); if (!r) return; const [led, sig] = r;
+    const done = led.filter((t) => ['WIN', 'LOSS', 'SIDEWAYS_EXIT'].includes(t.status)); const pnl = done.reduce((a, t) => a + (t.pnl_rs || 0), 0);
+    p.replaceChildren(`The research agents handed over ${sig.length} structured signals, ${sig.filter((x) => x.eligible === 'yes').length} above the 0.75 conviction bar. The chart gates passed ${sig.filter((x) => x.verdict === 'ENTER').length} of them. Book: ${led.filter((t) => t.status === 'OPEN' || t.status === 'PENDING').length} live, ${done.length} closed, paper result `,
+      el('b', cls(pnl), (pnl > 0 ? '+' : '') + inr(pnl, 0)), ` on the ₹1,00,000 pool. Conviction is a fixed scoring rule on the agents' findings, not a probability.`); });
+  dash.draw('sd_sig_body', (body) => { const r = need(body, ['desk_signals']); if (!r) return;
+    CD.fillTable(body, r[0], [{ render: (d) => el('b', '', String(d.ticker).replace('.NS', '')) }, { render: (d) => d.trajectory.replace(/_/g, ' ') }, { render: (d) => d.sentiment.replace(/_/g, ' ') },
+      { cls: 'num r', render: (d) => num(d.conviction, 2) }, { render: (d) => tag(d.verdict.replace(/_/g, ' ') || '—', VD[d.verdict] || '') }, { cls: 'hs', render: (d) => d.note || d.drivers }], 'ticker'); });
+  dash.draw('sd_led_body', (body) => { const r = need(body, ['signal_ledger']); if (!r) return;
+    CD.fillTable(body, r[0].slice().sort((a, b) => b.id - a.id), [{ cls: 'num', render: (d) => String(d.id) }, { render: (d) => el('b', '', String(d.ticker).replace('.NS', '')) }, { render: (d) => tag(d.status.replace('_', ' '), SST[d.status] || '') },
+      { cls: 'num r', render: (d) => num(d.conviction, 2) }, { cls: 'num r', render: (d) => inr(d.deploy_rs, 0) }, { cls: 'num r', render: (d) => num(d.entry, 2) }, { cls: 'num r', render: (d) => num(d.stop, 2) },
+      { cls: 'num r hs', render: (d) => (d.qty ? String(d.qty) : '—') }, { cls: 'num r', render: (d) => { const v = ['WIN', 'LOSS', 'SIDEWAYS_EXIT'].includes(d.status) ? d.pnl_rs : d.status === 'OPEN' ? d.unreal_rs : null; return v == null ? '—' : el('span', cls(v), (v > 0 ? '+' : '') + inr(v, 0)); } }], 'id'); });
+  dash.draw('sd_lessons', (box) => { const r = need(box, ['signal_lessons']); if (!r) return;
+    if (!r[0].length) { box.replaceChildren(el('div', 'empty', 'No stop-outs yet, so no lessons. Every losing exit writes its diagnosis here, and the mechanical ones gate the next entries.')); return; }
+    box.replaceChildren(...r[0].slice(-8).reverse().map((x) => { const row = el('div', 'row sev-hi'); row.style.gridTemplateColumns = 'auto 1fr'; const b = el('div');
+      b.append(el('div', 'h', `${String(x.ticker).replace('.NS', '')} · ${x.exit} exit · ${inr(x.pnl_rs, 0)}`), el('div', 'w', `${x.diagnosis}. ${x.lesson}`)); row.append(el('span', 't', x.date), b); return row; })); });
+
   /* ---------- F&O desk ---------- */
   dash.draw('fo_lead', (p) => { const r = need(p, ['fo_stats', 'fo_book']); if (!r) return; const [st, book] = r; const open = book.filter((b) => b.status === 'OPEN');
     const pnl = st.reduce((a, s) => a + s.pnl, 0), n = st.reduce((a, s) => a + s.settled, 0), risk = open.reduce((a, b) => a + b.max_loss_rs, 0);
