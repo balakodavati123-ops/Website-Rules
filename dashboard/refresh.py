@@ -93,6 +93,24 @@ def scan_signals(provider, per_strategy: int = 2) -> list[dict]:
                         "signal_date": str(df.index[-1].date()), "signal_close": float(df.Close.iloc[-1])})
     except Exception as e:
         print("results reaction scan failed:", e)
+    hits = []                                                # shock dip: a 5%+ one-day fall in a stock above its 200-day average
+    for t in ticks:
+        if t not in data:
+            continue
+        df = data[t].dropna(subset=["Close"])
+        if len(df) < 220 or df.index[-1] != newest:
+            continue
+        c = df.Close
+        drop = float(c.iloc[-1] / c.iloc[-2] - 1)
+        if drop <= -0.05 and c.iloc[-1] > c.rolling(200).mean().iloc[-1] and c.iloc[-1] * df.Volume.iloc[-1] >= 1e8:
+            df2 = df.copy()
+            df2.index = __import__("pandas").to_datetime(df2.index.date)
+            hits.append((drop, t, df2))
+    found["shock_dip"] = hits
+    for _, t, df in sorted(hits)[:per_strategy]:
+        provider._pre[t] = df
+        out.append({"market": "NSE", "symbol": t.replace(".NS", ""), "strategy": "shock_dip",
+                    "signal_date": str(df.index[-1].date()), "signal_close": float(df.Close.iloc[-1])})
     print("signals:", {k: len(v) for k, v in found.items()}, "taken", len(out))
     return out
 

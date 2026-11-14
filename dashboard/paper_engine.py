@@ -35,6 +35,7 @@ PLAN = {
     "breakout_52w_trail": (0.05, None, 120, 3.0, None),
     "trend_ride": (0.05, None, 120, None, "sma50"),
     "rsi2_dip": (0.05, None, 10, None, "bounce"),
+    "shock_dip": (0.10, None, 6, None, None),
     "results_reaction": (0.05, None, 60, 3.0, None),
 }
 
