@@ -1,3 +1,8 @@
+> **Superseded for daily use.** The CEO asked for a dashboard that works without a Claude chat open. The
+> Live paper session card in the Algo lab (dashboard/page/ls_engine.js and live_session.js) now does the
+> market-hours trading by itself while the page is open. This runbook is only for when the CEO asks a
+> Claude session to run the headline watcher by hand.
+
 # News desk runbook (for the Claude session that runs it)
 
 Goal: during NSE hours, react to market-moving news with instant intraday PAPER trades, using as little

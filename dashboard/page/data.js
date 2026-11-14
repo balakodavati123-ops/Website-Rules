@@ -50,6 +50,17 @@ dash.loader('crypto_live', { description: 'Live global dollar prices from CoinGe
   fn: ({ answer }) => { const a = typeof answer === 'string' ? JSON.parse(answer) : answer;
     return (a.coins || []).map((c) => ({ symbol: String(c.symbol || '').toUpperCase(), name: c.name, price_usd: c.currentPrice, chg_24h_pct: c.priceChangePercentage24h, market_cap: c.marketCap, volume_24h: c.totalVolume, rank: c.marketCapRank, spark: JSON.stringify((c.sparkline7d || []).map((x) => Math.round(x * 100) / 100)) })); } });
 
+dash.loader('news_live', { description: 'INDmoney news for the watchlist stocks: the three newest items each, with INDmoney\'s sentiment tag and the item\'s date (by day, not by minute).',
+  fn: ({ answer }) => { const a = typeof answer === 'string' ? JSON.parse(answer) : answer; const M = { Jan: '01', Feb: '02', Mar: '03', Apr: '04', May: '05', Jun: '06', Jul: '07', Aug: '08', Sep: '09', Oct: '10', Nov: '11', Dec: '12' }; const out = [];
+    Object.keys(a || {}).forEach((k) => { const v = a[k]; if (!v || !v.news) return; const sym = (v.entity_basic || {}).symbol;
+      v.news.slice(0, 3).forEach((n, i) => { const m = String(n.title).match(/- (\d{1,2}) (\w{3}), (\d{4})\s*$/); out.push({ symbol: sym, rank: i, title: n.title, sentiment: n.sentiment, date: m ? `${m[3]}-${M[m[2]]}-${String(m[1]).padStart(2, '0')}` : '' }); }); });
+    return out; } });
+
+dash.loader('nifty_chain', { description: 'NIFTY option chain, seven strikes around the money for the nearest expiry: bid, ask, last and lot size, with the index level and its change.',
+  fn: ({ answer }) => { const a = typeof answer === 'string' ? JSON.parse(answer) : answer; const e = a.entity_details || {}; const x = String(a.selected_expiry || ''); const exp = x.length === 8 ? `${x.slice(0, 4)}-${x.slice(4, 6)}-${x.slice(6)}` : x; const out = [];
+    (a.option_chain_data || []).forEach((r) => [['CE', r.call_data], ['PE', r.put_data]].forEach(([kind, d]) => { if (d) out.push({ strike: r.strike_price, kind, bid: d.buy_price, ask: d.sell_price, last: d.current_price, lot: d.lot_size, expiry: exp, spot: e.live_price, chg_pct: e.day_change_percentage }); }));
+    return out; } });
+
 dash.loader('mf_ideas', { description: 'Top-ranked mutual funds in three long-term categories, from INDmoney.',
   fn: ({ answer }) => { const a = typeof answer === 'string' ? JSON.parse(answer) : answer;
     return (a.data || []).map((f) => ({ name: f.name, category: f.category, rank: f.ind_ranking && f.ind_ranking.rank, ret_1y: f.return_1yr, ret_3y: f.return_3yr, ret_5y: f.return_5yr, expense: f.expense_ratio, risk: f.risk, nav: f.nav, aum: f.aum, min_sip: f.min_sip, rating: f.rating })); } });

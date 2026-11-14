@@ -221,3 +221,14 @@ def test_signal_desk_handoff_gates_and_protection(tmp_path, monkeypatch):
     r = rows[0]
     assert r["status"] == "SIDEWAYS_EXIT" and r["qty"] == 300 and r["exit"] == 100.0
     assert lessons and "ADX > 25" in lessons[0]["lesson"]
+
+
+def test_live_session_rules_in_node():
+    import shutil
+    import subprocess
+    import pytest
+    if not shutil.which("node"):
+        pytest.skip("node is not installed")
+    script = Path(__file__).resolve().parents[1] / "dashboard" / "test" / "ls_engine_test.js"
+    out = subprocess.run(["node", str(script)], capture_output=True, text=True)
+    assert out.returncode == 0, out.stderr[-800:]

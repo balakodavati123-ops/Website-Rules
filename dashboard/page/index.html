@@ -11,6 +11,7 @@
       <span class="chip" data-draw="chip_session">—</span>
       <span class="chip" data-draw="chip_data" data-source="indices">—</span>
       <span class="chip agent" data-draw="chip_agents" data-source="agent_feed">—</span>
+      <span class="chip wrap" data-draw="ls_chip" data-source="indices watch_live m_gainers m_losers m_52high m_active m_upper nifty_chain news_live">—</span>
     </div>
   </header>
 
@@ -233,6 +234,14 @@
       <div class="card c12 console" id="card-console"><h2>AI trading console <em class="num" data-draw="fl_note">—</em></h2>
         <div class="fl-flowrow" style="margin:0 0 8px"><small>Working on</small><div class="fl-flow" data-draw="fl_flow" data-source="floor_rows"></div></div>
         <div class="fl-log" data-draw="fl_log"></div><p class="note">The desks' live hand-offs, as on the Live floor. Open the Live floor once so the desks start.</p></div>
+      <div class="card c12" id="card-live"><h2>Live paper session <em>runs by itself while this page is open</em></h2>
+        <div class="toolbar"><button class="cd-btn tog" id="btn-ls" type="button" aria-pressed="false">Live session</button><button class="cd-btn" id="btn-lscopy" type="button" data-label="Copy trades">Copy trades</button></div>
+        <p class="note" data-draw="ls_status" style="margin:0 0 10px">—</p>
+        <div class="kpis" style="margin-bottom:10px"><div class="kpi"><div class="l">Trades today</div><div class="v"><b data-draw="ls_kpi" data-k="n">—</b></div></div><div class="kpi"><div class="l">Open now</div><div class="v"><b data-draw="ls_kpi" data-k="open">—</b></div></div><div class="kpi"><div class="l">Win rate, closed</div><div class="v"><b data-draw="ls_kpi" data-k="win">—</b></div></div><div class="kpi"><div class="l">Paper profit or loss</div><div class="v"><b data-draw="ls_kpi" data-k="pnl">—</b></div></div></div>
+        <div class="tw" style="margin-bottom:10px"><table><thead><tr><th>Group</th><th class="r">Open</th><th class="r">Closed</th><th class="r">Win rate</th><th class="r">Paper P/L</th></tr></thead><tbody data-draw="ls_stats"></tbody></table></div>
+        <div class="tw"><table><thead><tr><th>Time</th><th>Trade</th><th class="hs">Based on</th><th>Status</th><th class="r">Entry</th><th class="r">Now / exit</th><th class="r">P/L</th></tr></thead><tbody data-draw="ls_body"></tbody></table></div>
+        <p class="note"><b>The rules.</b> Long a stock that is up 2% or more and within 1% of its day high; short one that is down 2% or more and within 1% of its day low; at least ₹10 crore traded, price ₹20 or more, not stuck at a circuit. INDmoney's news for the watchlist names can confirm the move ("price + news") or cancel it if its sentiment today is the opposite. NIFTY up or down 0.7% or more buys one at-the-money call or put (one lot, under ₹12,000). Stops: 1% on stocks, 30% of the premium on options. At most six trades (four stocks, two options); all close at 15:10. Shorts are intraday because a cash-market short must close the same day.</p>
+        <p class="note"><b>What it cannot do.</b> INDmoney's news is dated by day, so the real-time trigger is the price and volume move itself, after it has started. A rise on volume had no edge in our 5-year test, so expect many losses: this book exists to measure that, not to promise profit. Nothing is saved: closing or reloading this page ends the session and clears its trades (use Copy trades first). The daily results the dashboard keeps across days still come from the 08:15 run.</p></div>
       <div class="card c12" id="card-mode"><h2>Trading mode <em>your choice; the desk shows what its tests say</em></h2>
         <div class="toolbar"><button class="cd-btn tog" id="btn-paper" type="button" aria-pressed="true">Paper money</button><button class="cd-btn tog" id="btn-real" type="button" aria-pressed="false">Real money</button></div>
         <p class="note" data-draw="mode_note" data-source="paper_stats">—</p></div>
@@ -253,7 +262,7 @@
         <div class="cd-grid"><div class="c6"><div class="list" data-draw="nf_list" data-source="news_feed"></div></div>
           <div class="c6"><div class="tw" style="margin-bottom:10px"><table data-source="news_stats" data-row-key="group"><thead><tr><th data-field="group">Trade type</th><th class="r" data-field="open">Open</th><th class="r" data-field="closed">Closed</th><th class="r" data-field="win_rate">Win rate</th><th class="r" data-field="pnl">Paper P/L</th></tr></thead><tbody data-draw="news_stats_body"></tbody></table></div>
             <div class="tw"><table data-source="news_ledger" data-row-key="id"><thead><tr><th data-field="time">When</th><th data-field="label">Trade</th><th data-field="status">Status</th><th class="r" data-field="entry">Entry</th><th class="r" data-field="exit">Exit</th><th class="r" data-field="pnl_rs">P/L</th><th class="hs" data-field="headline">Headline</th></tr></thead><tbody data-draw="news_book_body"></tbody></table></div></div></div>
-        <p class="note">Headlines come from free feeds (Economic Times, Moneycontrol, Mint, Business Standard, the RBI, Google News, NSE filings), read about once a minute while a Claude session is watching. Only index-level news and filings from watchlist stocks trigger a trade, at most six a day: that cap is what keeps this inside your Claude plan. A trade opens at the live INDmoney price within about a minute and closes at about 15:10, because a cash-market short must close the same day. Calls on good news, puts on bad. Stops: 1% on stocks, 30% of the premium on options. This page shows what was last saved; it does not stream. A headline cannot say how far a price has already moved, so expect many of these to lose.</p></div>
+        <p class="note">This card is only filled when a Claude session is asked to run the news watcher; the Live paper session above works on its own. Headlines come from free feeds (Economic Times, Moneycontrol, Mint, Business Standard, the RBI, Google News, NSE filings). Only index-level news and filings from watchlist stocks trigger a trade, at most six a day: that cap is what keeps this inside your Claude plan. A trade opens at the live INDmoney price within about a minute and closes at about 15:10, because a cash-market short must close the same day. Calls on good news, puts on bad. Stops: 1% on stocks, 30% of the premium on options. This page shows what was last saved; it does not stream. A headline cannot say how far a price has already moved, so expect many of these to lose.</p></div>
       <div class="card c12" id="card-signal"><h2>Signal desk <em>research hand-off, chart gates, ₹1,00,000 paper pool</em></h2>
         <p class="lead" data-draw="sd_lead" data-source="signal_ledger desk_signals" style="margin-bottom:10px">—</p>
         <div class="tw" style="margin-bottom:10px"><table data-source="desk_signals" data-row-key="ticker"><thead><tr><th data-field="ticker">Signal</th><th data-field="trajectory">Trajectory</th><th data-field="sentiment">Sentiment</th><th class="r" data-field="conviction">Conviction</th><th data-field="verdict">Chart gate</th><th class="hs" data-field="note">At the last close</th></tr></thead><tbody data-draw="sd_sig_body"></tbody></table></div>
@@ -343,5 +352,7 @@
 <script src="views_algo.js"></script>
 <script src="views_markets.js"></script>
 <script src="views_room.js"></script>
+<script src="ls_engine.js"></script>
+<script src="live_session.js"></script>
 <script src="views_plus.js"></script>
 <script src="tabs.js"></script>
