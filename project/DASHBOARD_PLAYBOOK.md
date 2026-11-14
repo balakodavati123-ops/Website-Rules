@@ -91,3 +91,13 @@ conviction 0.90+ with ADX over 25), protects with a 1.5x ATR stop, breakeven at 
 lessons to signal_lessons.json; the run-up and ADX lessons mechanically gate later entries.
 Daily bars only: it cannot see intraday moves, and VWAP from the CEO's spec has no end-of-day
 equivalent, so the EMAs stand in for it.
+
+## Live paper session (runs in the open page, no Claude)
+
+`ls_engine.js` holds the rules (pure functions, tested by `node dashboard/test/ls_engine_test.js`);
+`live_session.js` is the button, the one-minute INDmoney refresh timer and the tables. It reads the
+movers lists, the watchlist quotes, INDmoney's per-stock news (`news_live`, dated by day) and a NIFTY
+option chain (`nifty_chain`), opens up to four stock and two option intraday paper trades, and closes
+everything at 15:10. The book lives in the page's memory only: nothing persists, by design of the
+dashboard platform (a page may not use storage and cannot write documents on its own). The refresh timer
+is the part not yet seen running on the real platform.

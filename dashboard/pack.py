@@ -63,6 +63,8 @@ LIVE = {
     "candles": live("Candles for the chosen instrument", "Open, high, low, close and volume for the instrument and timeframe picked on the chart.",
                     call(IND, "get_indian_stocks_ohlc", {"ind_key": "{{sym}}", "interval": "{{iv}}", "lookback": "{{lb}}"},
                          {"sym": {"enum": CAND_KEYS}, "iv": {"enum": ["5minute", "15minute", "60minute", "1day"]}, "lb": {"enum": ["1d", "7d", "14d", "1y"]}})),
+    "news_live": live("Watchlist news", "INDmoney news and sentiment tags for the watchlist stocks.", call(IND, "get_indian_stocks_details", {"ind_keys": WATCH_KEYS, "segments": ["news"]})),
+    "nifty_chain": live("NIFTY option chain", "Seven strikes around the money, nearest expiry, live.", call(IND, "get_indian_stocks_option_chain", {"ind_key": "INDI00012", "use_expiry_date": False, "strikes_around_atm": 3})),
     "mf_ideas": live("Long-term fund ideas", "Top-ranked funds in flexi cap, large and mid cap, and Nifty 50 index categories.",
                      call(IND, "get_mf_by_category", {"categories": ["flexi-cap", "large-mid-cap", "nifty-50-index-funds"], "size": 12, "sort_key": "category_ind_rank", "sort_asc": True})),
 }
@@ -90,7 +92,7 @@ FILES = {  # id -> (title, description, file name)
     "crypto_candles": ("Crypto candles in rupees", "CoinDCX daily, hourly and 15-minute candles for Bitcoin, Ethereum and Solana.", "crypto_candles.json"),
 }
 SCHEDULE = "Rebuilt each weekday at 08:15 IST by the CEO Desk Daily Refresh task."
-PAGE_FILES = ["index.html", "style.css", "lib.js", "data.js", "floor_data.js", "floor_engine.js", "floor_stage.js", "floor_views.js", "org_stage.js", "views_plus.js", "views_command.js", "views_pre.js", "views_alerts.js",
+PAGE_FILES = ["index.html", "style.css", "lib.js", "data.js", "floor_data.js", "floor_engine.js", "floor_stage.js", "floor_views.js", "org_stage.js", "ls_engine.js", "live_session.js", "views_plus.js", "views_command.js", "views_pre.js", "views_alerts.js",
               "views_algo.js", "views_markets.js", "views_room.js", "tabs.js"]
 
 
