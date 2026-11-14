@@ -232,3 +232,21 @@ def test_live_session_rules_in_node():
     script = Path(__file__).resolve().parents[1] / "dashboard" / "test" / "ls_engine_test.js"
     out = subprocess.run(["node", str(script)], capture_output=True, text=True)
     assert out.returncode == 0, out.stderr[-800:]
+
+
+def test_backend_intraday_rules():
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "backend"))
+    import intraday as I
+    R = lambda s, p, c, hi, lo, v=3e6: dict(symbol=s, price=p, chg_pct=c, day_high=hi, day_low=lo, volume=v)
+    book = {}
+    I.step(book, "2026-11-16", "09:10", [R("A", 100, 3, 100, 98)], {})
+    assert book["trades"] == []                                          # before 09:20
+    I.step(book, "2026-11-16", "09:30", [R("A", 100, 3, 100.2, 98), R("B", 200, -3, 205, 200), R("C", 50, 4, 50, 48, 1000),
+                                         R("D", 300, 2.5, 300, 296), R("F", 100, 9.9, 100, 90)], {"D": "negative"})
+    got = {t["label"] for t in book["trades"]}
+    assert got == {"A long", "B short"} and book["seen"]["D"] == "conflict"   # thin C, circuit-like F and news-conflicted D are skipped
+    I.step(book, "2026-11-16", "10:00", [R("A", 98.9, 1, 100.2, 98), R("B", 190, -5, 205, 190)], {})
+    st = {t["label"]: t for t in book["trades"]}
+    assert st["A long"]["status"] == "LOSS" and st["A long"]["why"] == "stop" and st["B short"]["status"] == "OPEN"
+    I.step(book, "2026-11-16", "15:10", [], {})
+    assert st["B short"]["status"] == "WIN" and st["B short"]["why"] == "time"

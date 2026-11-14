@@ -1,0 +1,67 @@
+[
+ {
+  "ticker": "PNB.NS",
+  "trajectory": "Exponential_Profit",
+  "sentiment": "Strong_Positive",
+  "urgency": "Short_Term_Swing",
+  "conviction": 0.8,
+  "eligible": "yes",
+  "drivers": "technical bullish; fundamentals bullish; sentiment neutral; concall bullish; EPS surprise +34.6%",
+  "red_flags": "entry signal: breakout_52w; stop and target set to the tested values; breakout_52w is on PROBATION, not validated: t-stat 1.92 below 2.0; not positive in both parts of the period; drawdown 21% above 2",
+  "run_date": "2026-11-11",
+  "verdict": "ENTER",
+  "note": "close 142.81, ADX 36.1, volume 1.89x, 10-day run-up 15.3%"
+ },
+ {
+  "ticker": "PETRONET.NS",
+  "trajectory": "Steady_Growth",
+  "sentiment": "Strong_Positive",
+  "urgency": "Short_Term_Swing",
+  "conviction": 0.6,
+  "eligible": "no",
+  "drivers": "technical bullish; fundamentals neutral; sentiment neutral; concall bullish",
+  "red_flags": "entry signal: breakout_52w; stop and target set to the tested values; breakout_52w is on PROBATION, not validated: t-stat 1.92 below 2.0; not positive in both parts of the period; drawdown 21% above 2",
+  "run_date": "2026-11-11",
+  "verdict": "LOW_CONVICTION",
+  "note": ""
+ },
+ {
+  "ticker": "KALYANKJIL.NS",
+  "trajectory": "Steady_Growth",
+  "sentiment": "Positive",
+  "urgency": "Short_Term_Swing",
+  "conviction": 0.55,
+  "eligible": "no",
+  "drivers": "technical bullish; fundamentals neutral; sentiment neutral; concall neutral",
+  "red_flags": "entry signal: breakout_52w; stop and target set to the tested values; breakout_52w is on PROBATION, not validated: t-stat 1.92 below 2.0; not positive in both parts of the period; drawdown 21% above 2",
+  "run_date": "2026-11-11",
+  "verdict": "LOW_CONVICTION",
+  "note": ""
+ },
+ {
+  "ticker": "GAIL.NS",
+  "trajectory": "Steady_Growth",
+  "sentiment": "Strong_Positive",
+  "urgency": "Short_Term_Swing",
+  "conviction": 0.6,
+  "eligible": "no",
+  "drivers": "technical bullish; fundamentals neutral; sentiment bullish; concall neutral",
+  "red_flags": "entry signal: breakout_52w; stop and target set to the tested values; breakout_52w is on PROBATION, not validated: t-stat 1.92 below 2.0; not positive in both parts of the period; drawdown 21% above 2",
+  "run_date": "2026-11-11",
+  "verdict": "LOW_CONVICTION",
+  "note": ""
+ },
+ {
+  "ticker": "TVSMOTOR.NS",
+  "trajectory": "Steady_Growth",
+  "sentiment": "Strong_Positive",
+  "urgency": "Short_Term_Swing",
+  "conviction": 0.6,
+  "eligible": "no",
+  "drivers": "technical bullish; fundamentals neutral; sentiment neutral; concall bullish",
+  "red_flags": "entry signal: breakout_52w; stop and target set to the tested values; breakout_52w is on PROBATION, not validated: t-stat 1.92 below 2.0; not positive in both parts of the period; drawdown 21% above 2",
+  "run_date": "2026-11-11",
+  "verdict": "LOW_CONVICTION",
+  "note": ""
+ }
+]

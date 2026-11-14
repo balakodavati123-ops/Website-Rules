@@ -1,0 +1,418 @@
+[
+ {
+  "time": "14 Nov 10:45",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nvidia has worst week since Trump tariff selloff as Huang exits",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "ET",
+  "category": "EARNINGS",
+  "headline": "Wall Street Week Ahead: Nvidia results, Anthropic IPO pose tests for tumultuous AI trade",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "ET",
+  "category": "GEOPOLITICS",
+  "headline": "US Treasury chief says Fed should not hike rates over energy shock tied to Iran war",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "ET",
+  "category": "APPROVAL",
+  "headline": "Razorpay, Sembcorp Green Infra get Sebi nod to float IPOs",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "ET",
+  "category": "DEAL/ORDER",
+  "headline": "Tesla-SpaceX Merger: Musk eyes December deal announcement",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "Ramayana effect? Prime Focus Q2 results: Revenue rises to  \u20b91,410.17 crore; PAT climbs to  \u20b991.04 crore from  \u20b95.8 crore",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "Mint",
+  "category": "APPROVAL",
+  "headline": "Upcoming IPO: Razorpay gets SEBI nod for IPO launch: Top things to know about the issue",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "Warships, aircraft or missiles? GRSE vs HAL vs BDL: Which defence PSU wins the post-Q2 results race? Technical outlook",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "Up 17% in YTD! Small-cap hotel stock under  \u20b9200 jumps 4% after Q2 Results 2026; do you own?",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Mukul Agrawal portfolio stock J Kumar defies selloff, jumps 5% post Q2",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Park Medi World shares plummet 10% as Q2 profit tanks 31%, margins slide",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "BusinessStandard",
+  "category": "EARNINGS",
+  "headline": "Alkem shares fall 3% after Q2 results; MOFSL retains Neutral rating",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "BusinessStandard",
+  "category": "EARNINGS",
+  "headline": "Action Construction rallies 6%, nears 52-week high on healthy Q2 results",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "BusinessStandard",
+  "category": "RBI-POLICY",
+  "headline": "Nifty Bank, Auto, Realty skid 1% as inflation stokes RBI rate hike fears",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "BusinessStandard",
+  "category": "LEADER-EXIT",
+  "headline": "Wall Street edges up, Nvidia drops after CEO Jensen Huang resigns",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "RBI",
+  "category": "EARNINGS",
+  "headline": "Government Stock - Full Auction Results",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "RBI",
+  "category": "EARNINGS",
+  "headline": "Government Stock - Auction Results: Cut-off",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "India's Paytm gets preliminary RBI nod for wallet licence; shares hit record high - Reuters",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Stock markets snap three-day rally on rate hike fears; Sensex drops 318 points - The Hindu",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Temasek-backed Sembcorp Green Infra gets SEBI nod for \u20b93,750 crore IPO - ET EnergyWorld",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "RBI gives Paytm Payments Services in-principle approval for wallet, PPI issuance - bfsi.economictimes.indiatimes.com",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "India's Paytm gets preliminary RBI nod for wallet licence; shares hit record high - The Hindu",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Paytm Gets RBI In-Principle Nod For Digital Wallet Licence, Moves Closer To Wallet Revival - BW Disrupt",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Razorpay Gets SEBI Nod For Rs 5,000-6,000 Cr IPO, Listing Likely In Q1 2027 - BW Disrupt",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Daily Voice: RBI rate hike in December cannot be ruled out, says Nine Rivers Capital founder - Moneycontrol.com",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Razorpay gets Sebi approval for Rs 6,000 cr IPO in India - The Times of India",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Razorpay, Sembcorp Green Infra get Sebi nod to float IPOs - YourStory.com",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "RBI Fraud Compensation: Banks Seek Central Claims System - Elets BFSI",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Paytm gets RBI\u2019s in-principle nod to revive wallet business; shares hit record high - The Hindu",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Paytm wallet likely to see revival following RBI's in-principle nod - Business Standard",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "RBI fines MobiKwik \u20b99 lakh over PPI transfer and fraud reporting lapses - Business Standard",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "RBI Fines MobiKwik \u20b99 Lakh Over Fraud Reporting Violations - The 420.in",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Temasek-backed Sembcorp Green Infra receives SEBI nod for \u20b93,750 crore IPO - BusinessLine",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Paytm's Payments Unit Wins In-Principle RBI Nod to Issue Wallets, Shares Hit Record - BigGo Finance",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Markets fall in early trade after 3-day rally; Sensex tumbles 460 points - The New Indian Express",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Nifty Bank, Auto, Realty skid 1% as inflation stokes RBI rate hike fears - Business Standard",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Paytm gets RBI's in-principle approval to issue prepaid wallets in India - Business Standard",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "RBI may raise repo rate to 6% by February as inflation breaches upper band - Business Standard",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Paytm Set To Revive Wallet Business With RBI In-Principle Nod - Inc42",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Pratap Singh Gets RBI Nod to Take Charge at Fino Payments Bank - IMPACT Magazine",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Paytm gets RBI's in-principle nod to revive wallet business through new subsidiary - YourStory.com",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Paytm shares reclaim listing price for first time in five years; RBI nod for wallet business boosts... - Moneycontrol.com",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Paytm shares hit record high as RBI grants in-principle approval to operate wallet; stock up 49% YTD - Upstox",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Paytm gets preliminary RBI nod for wallet licence; shares hit record high - BusinessLine",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Fino Payments Bank gets RBI nod for Pratap Singh as MD and CEO - Adgully",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Stock markets snap 3-day rally on rate hike fears, Sensex drops 318 pts - MillenniumPost",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Arihant Capital Markets gets SEBI nod to launch mutual fund biz - BusinessLine",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "November inflation may accelerate to 6.3%, strengthen case for another rate hike: UBI - bfsi.economictimes.indiatimes.com",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Paytm wallet to be back? What RBI\u2019s initial nod means, and why it restricted Paytm Payments Bank - The Indian Express",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Paytm Gets RBI\u2019s In Principle Approval to Issue Prepaid Wallets - Equitypandit",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Paytm Gets RBI Approval For Wallets, But One Step Remains - APAC Media",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "14 Nov 10:45",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Major Banks Raise Fixed Deposit Rates Following RBI's Repo Rate Hike - Rediff",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ }
+]

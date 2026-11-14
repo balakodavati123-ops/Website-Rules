@@ -1,30 +1,30 @@
 [
  {
-  "symbol": "TALBROAUTO",
+  "symbol": "BBOX",
   "kind": "Earnings",
-  "headline": "Results on 11 Nov: +7.5% on the day, high +17.1%",
-  "why": "Quarterly results filed. The price was +6.3% when it appeared and +1.1% after. Moved before the filing.",
-  "source": "NSE filing 13:52 and Yahoo prices, 11 Nov"
+  "headline": "Results on 13 Nov: +2.1% on the day, high +7.4%",
+  "why": "Quarterly results filed. The price was +2.8% when it appeared and -0.8% after. No clear reaction.",
+  "source": "NSE filing 12:09 and Yahoo prices, 13 Nov"
  },
  {
-  "symbol": "ASHOKA",
-  "kind": "Event",
-  "headline": "Order on 11 Nov: +10.7% on the day, high +13.9%",
-  "why": "Receipt of Letter of Acceptance (LOA) for Solar PV Power Plant in Bhutan. The price was +9.5% when it appeared and +1.1% after. Moved before the filing.",
-  "source": "NSE filing 10:35 and Yahoo prices, 11 Nov"
+  "symbol": "JKIL",
+  "kind": "Earnings",
+  "headline": "Results on 13 Nov: +0.7% on the day, high +6.4%",
+  "why": "Quarterly results filed. The price was -1.9% when it appeared and +2.6% after. No clear reaction.",
+  "source": "NSE filing 13:51 and Yahoo prices, 13 Nov"
  },
  {
-  "symbol": "GREENPOWER",
+  "symbol": "SOLEX",
   "kind": "Earnings",
-  "headline": "Results on 11 Nov: -1.3% on the day, high +4.9%",
-  "why": "Quarterly results filed. The price was +1.8% when it appeared and -3.0% after. Sold after the filing.",
-  "source": "NSE filing 12:29 and Yahoo prices, 11 Nov"
+  "headline": "Results on 13 Nov: -8.5% on the day, high +6.2%",
+  "why": "Quarterly results filed. The price was -2.4% when it appeared and -6.2% after. Sold after the filing.",
+  "source": "NSE filing 13:36 and Yahoo prices, 13 Nov"
  },
  {
-  "symbol": "INDOBORAX",
+  "symbol": "FACT",
   "kind": "Earnings",
-  "headline": "Results on 11 Nov: +1.7% on the day, high +4.0%",
-  "why": "Quarterly results filed. The price was +2.4% when it appeared and -0.8% after. No clear reaction.",
-  "source": "NSE filing 14:13 and Yahoo prices, 11 Nov"
+  "headline": "Results on 13 Nov: +0.1% on the day, high +5.3%",
+  "why": "Quarterly results filed. The price was +4.3% when it appeared and -3.9% after. Sold after the filing.",
+  "source": "NSE filing 13:30 and Yahoo prices, 13 Nov"
  }
 ]

@@ -1,0 +1,49 @@
+# Intraday paper desk: every 5 minutes in NSE hours (Mon-Fri). No Claude, no browser needed.
+name: market-hours
+on:
+  schedule:
+    - cron: "*/5 3-10 * * 1-5"     # 08:30 to 16:30 IST; the script itself acts only 09:10-15:40 IST
+  workflow_dispatch:
+concurrency:
+  group: desk
+  cancel-in-progress: false
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Skip outside market hours
+        id: gate
+        run: |
+          m=$(TZ=Asia/Kolkata date +%H%M); d=$(TZ=Asia/Kolkata date +%u)
+          if [ "$d" -le 5 ] && [ "$m" -ge 0910 ] && [ "$m" -le 1545 ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "go=yes" >> $GITHUB_OUTPUT; else echo "go=no" >> $GITHUB_OUTPUT; fi
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == 'yes'
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.go == 'yes'
+        with: { python-version: "3.11", cache: pip }
+      - if: steps.gate.outputs.go == 'yes'
+        run: pip install -q yfinance pandas numpy
+      - if: steps.gate.outputs.go == 'yes'
+        run: python backend/intraday.py
+      - name: Save the data
+        if: steps.gate.outputs.go == 'yes'
+        run: |
+          git config user.name "desk-bot"; git config user.email "desk-bot@users.noreply.github.com"
+          git add docs/data
+          git diff --cached --quiet || { git commit -q -m "data: market-hours run"; for i in 1 2 3; do git pull -q --rebase && git push -q && break || sleep 5; done; }
+      - uses: actions/configure-pages@v5
+        if: steps.gate.outputs.go == 'yes'
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.gate.outputs.go == 'yes'
+        with: { path: docs }
+      - id: deploy
+        if: steps.gate.outputs.go == 'yes'
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Trading Desk</title><meta name="color-scheme" content="dark">
+<style>
+:root{--bg:#060a13;--panel:#0c1424;--panel2:#101b30;--line:#1c2c48;--fg:#e8eef9;--mut:#8ea3c4;--dim:#5b7093;--blue:#4f8cff;--cyan:#29d3ee;--green:#2de3a5;--red:#ff5f75;--amber:#ffb64a;--violet:#a184ff;
+--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(1100px 480px at 12% -8%,#0e2147,transparent 60%),radial-gradient(800px 460px at 100% 0,#1a1238,transparent 55%),var(--bg);color:var(--fg);font:13px/1.45 var(--sans);padding:14px max(14px,env(safe-area-inset-left)) 48px}
+h1,h2,p{margin:0}.wrap{max-width:1240px;margin:0 auto}
+header{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;padding:4px 0 12px}
+.logo{width:34px;height:34px;border-radius:9px;background:conic-gradient(from 210deg,var(--blue),var(--violet),var(--cyan),var(--blue));display:grid;place-items:center;box-shadow:0 0 24px #4f8cff55}.logo:after{content:"";width:14px;height:14px;border-radius:50%;background:var(--bg)}
+h1{font-size:17px;font-weight:650}header small{display:block;color:var(--mut);font-size:11.5px}.sp{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:11.5px;border:1px solid #24385a;background:#0b1730}.chip i{width:7px;height:7px;border-radius:50%;background:var(--dim)}
+.chip.live i{background:var(--green);box-shadow:0 0 8px var(--green)}.chip.wait i{background:var(--amber)}.chip.off i{background:var(--red)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:12px}
+.kpi,.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0}
+.kpi .l{color:var(--mut);font-size:10.5px;text-transform:uppercase;letter-spacing:.7px}.kpi .v{font:650 21px var(--mono);margin-top:3px}
+.card{margin-bottom:12px}.card h2{font-size:12px;text-transform:uppercase;letter-spacing:.9px;color:var(--mut);font-weight:650;margin-bottom:10px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.card h2 em{font-style:normal;color:var(--dim);font-weight:500;text-transform:none;letter-spacing:0;margin-left:auto;font-size:11.5px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:860px){.grid2{grid-template-columns:1fr}}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{text-align:left;color:var(--dim);font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.6px;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:7px 8px;border-bottom:1px solid #14223a;vertical-align:top}tr:last-child td{border:0}.r{text-align:right}.num{font-family:var(--mono);white-space:nowrap}
+.up{color:var(--green)}.down{color:var(--red)}.mut{color:var(--mut)}.dim{color:var(--dim)}
+.tag{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11px;border:1px solid #24385a;color:var(--mut);white-space:nowrap}
+.tag.g{color:var(--green);border-color:#1c6b52;background:#0c2a24}.tag.r{color:var(--red);border-color:#6b2330;background:#2a0f16}.tag.a{color:var(--amber);border-color:#6b501c;background:#2a200c}.tag.b{color:var(--blue);border-color:#234a8c;background:#0d1d3d}
+.note{color:var(--mut);font-size:11.5px;margin-top:8px}.empty{color:var(--dim);padding:16px 6px;text-align:center;border:1px dashed #24385a;border-radius:10px}
+.bars{display:grid;gap:8px}.bar{display:grid;grid-template-columns:minmax(110px,1.2fr) 3fr;gap:10px;align-items:center;font-size:12px}
+.bar .t{height:18px;background:#0a1224;border:1px solid var(--line);border-radius:5px;position:relative;overflow:hidden}.bar .t b{position:absolute;top:0;bottom:0;border-radius:4px}
+.bar .t span{position:absolute;right:6px;top:1px;font:11px var(--mono)}
+.row{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:9px 11px;background:#0b1426;border:1px solid var(--line);border-radius:10px;margin-bottom:8px}.row .h{font-weight:600}.row .w{color:var(--mut);font-size:11.5px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}.mc{background:#0b1426;border:1px solid var(--line);border-radius:10px;padding:9px 11px}
+footer{color:var(--dim);font-size:11.5px;margin-top:6px}svg{display:block;width:100%;height:auto}
+</style></head><body><div class="wrap">
+<header><div class="logo"></div><div><h1>Trading Desk</h1><small>Paper trading, running on its own. Nothing here places a real order.</small></div>
+<div class="sp"><span class="chip wait" id="chip"><i></i><span>loading</span></span><span class="chip" id="chip2"><i></i><span>—</span></span></div></header>
+<div class="kpis" id="kpis"></div>
+<div class="card"><h2>Live session <em id="live-note">—</em></h2><div class="tw"><table><thead><tr><th>Time</th><th>Trade</th><th>Based on</th><th>Status</th><th class="r">Entry</th><th class="r">Now / exit</th><th class="r">P/L</th></tr></thead><tbody id="live"></tbody></table></div>
+<p class="note">Longs a stock up 2% or more near its day high, shorts one down 2% or more near its day low, at least ₹10 crore traded; a filing that points the other way cancels the trade. Stop 1%, at most four trades, everything closed at 15:10. Prices are Yahoo Finance's, delayed by up to about 15 minutes, and this page updates every few minutes, not tick by tick. A rise on volume had no edge in the 5-year test: this book exists to measure that.</p></div>
+<div class="grid2"><div class="card"><h2>Strategy league <em>each strategy trades its own paper book</em></h2><div class="bars" id="league"></div><p class="note">Profit or loss in rupees on closed and open paper trades. Judge a strategy on dozens of closed trades, not a few days.</p></div>
+<div class="card"><h2>Paper account <em>pretend ₹32,000 start</em></h2><div id="equity"></div></div></div>
+<div class="card"><h2>Every paper trade <em id="tr-note"></em></h2><div class="tw"><table><thead><tr><th>#</th><th>Strategy</th><th>Stock</th><th>Status</th><th class="r">Entry</th><th class="r">Stop</th><th class="r">Target</th><th class="r">Qty</th><th class="r">P/L</th></tr></thead><tbody id="trades"></tbody></table></div></div>
+<div class="grid2"><div class="card"><h2>Signal desk <em>₹1,00,000 pool, chart gates, ATR stops</em></h2><div class="tw"><table><thead><tr><th>Stock</th><th>Status</th><th class="r">Deployed</th><th class="r">Entry</th><th class="r">Stop</th><th class="r">P/L</th></tr></thead><tbody id="sig"></tbody></table></div><div id="lessons" style="margin-top:10px"></div></div>
+<div class="card"><h2>F&amp;O desk <em>NIFTY option structures, held to expiry</em></h2><div class="tw"><table><thead><tr><th>Strategy</th><th>Expiry</th><th>Status</th><th class="r">Credit</th><th class="r">Worst case</th><th class="r">P/L</th></tr></thead><tbody id="fo"></tbody></table></div><p class="note">Option sellers win often and lose big. Booked weekly by Claude from the INDmoney chain; settled here.</p></div></div>
+<div class="grid2"><div class="card"><h2>Headlines <em>free news feeds, matched to high-impact rules</em></h2><div id="news"></div></div>
+<div class="card"><h2>Results filed <em>NSE, since the last close</em></h2><div class="tw" style="max-height:340px;overflow-y:auto"><table><tbody id="results"></tbody></table></div></div></div>
+<div class="card"><h2>World markets <em>last close</em></h2><div class="cards" id="world"></div></div>
+<footer>Research output on a simulated account. Not investment advice. Trading can lose money you cannot spare. Real money stays off until a strategy has 100 closed paper trades and the confidence gate passes; even then every order is yours to place.</footer></div>
+<script>
+const $=(i)=>document.getElementById(i),B='data/';
+const get=async(f)=>{try{const r=await fetch(B+f+'.json?t='+Date.now(),{cache:'no-store'});return r.ok?await r.json():null}catch(e){return null}};
+const inr=(v,d=0)=>v==null||v===''?'—':(v<0?'−₹':'₹')+Math.abs(+v).toLocaleString('en-IN',{minimumFractionDigits:d,maximumFractionDigits:d});
+const num=(v,d=2)=>v==null||v===''?'—':(+v).toLocaleString('en-IN',{minimumFractionDigits:d,maximumFractionDigits:d});
+const pc=(v,d=1)=>v==null?'—':(v>0?'+':v<0?'−':'')+Math.abs(v).toFixed(d)+'%';const cl=(v)=>v>0?'up':v<0?'down':'';
+const pl=(v)=>`<span class="${cl(v)}">${v>0?'+':''}${inr(v)}</span>`;
+const tg=(t,k='')=>`<span class="tag ${k}">${String(t).replace(/_/g,' ')}</span>`;const esc=(s)=>String(s??'').replace(/[&<>"]/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ST={OPEN:'b',PENDING:'a',WIN:'g',LOSS:'r',SIDEWAYS_EXIT:'a','TIME STOP':'',SKIPPED:''};const done=['WIN','LOSS','TIME STOP','SIDEWAYS_EXIT'];
+const empty=(t)=>`<div class="empty">${t}</div>`;
+const openPnl=(t)=>(t.side==='SHORT'?-1:1)*(t.last-t.entry)*t.qty;
+function ago(iso){if(!iso)return null;const s=(Date.now()-new Date(iso).getTime())/1000;return s<90?Math.round(s)+' s ago':s<5400?Math.round(s/60)+' min ago':s<129600?Math.round(s/3600)+' h ago':Math.round(s/86400)+' d ago'}
+async function draw(){
+ const [book,status,led,eq,sig,les,fo,news,res,world,appr]=await Promise.all(['live_book','live_status','paper_ledger','paper_equity','signal_ledger','signal_lessons','fo_ledger','news_feed','results_filed','world_markets','approved_strategies'].map(get));
+ const age=status&&ago(status.updated_at);$('chip').className='chip '+(status&&status.state==='running'?'live':status&&status.state==='market closed'?'wait':'off');
+ $('chip').lastChild.textContent=status?`${status.state} · updated ${age}`:'no data yet';$('chip2').lastChild.textContent=status?'Yahoo prices, up to ~15 min delayed':'—';
+ const tr=(book&&book.trades)||[],lpl=tr.reduce((a,t)=>a+(t.status==='OPEN'?openPnl(t):t.pnl_rs),0);
+ const L=led||[],closed=L.filter((r)=>done.includes(r.status)),realised=closed.reduce((a,r)=>a+(+r.pnl_rs||0),0),unreal=L.filter((r)=>r.status==='OPEN').reduce((a,r)=>a+(+r.unrealized_rs||0),0);
+ const eqv=eq&&eq.length?eq[eq.length-1].equity:null;
+ $('kpis').innerHTML=[['Live session P/L today',pl(lpl)],['Live trades open',tr.filter((t)=>t.status==='OPEN').length],['Paper account',eqv==null?'—':inr(eqv)],['Closed paper trades',closed.length+' of 100'],['Open P/L, all books',pl(Math.round(unreal))]].map(([l,v])=>`<div class="kpi"><div class="l">${l}</div><div class="v">${v}</div></div>`).join('');
+ $('live-note').textContent=book&&book.day?`session of ${book.day}`:'';
+ $('live').innerHTML=tr.length?tr.slice().reverse().map((t)=>`<tr><td class="num">${t.time}</td><td>${esc(t.label)}</td><td>${t.basis}</td><td>${tg(t.status==='OPEN'?'OPEN':t.why==='stop'?'STOPPED':t.status,t.status==='OPEN'?'b':t.status==='WIN'?'g':'r')}</td><td class="num r">${num(t.entry)}</td><td class="num r">${num(t.status==='OPEN'?t.last:t.exit)}</td><td class="num r">${pl(t.status==='OPEN'?openPnl(t):t.pnl_rs)}</td></tr>`).join(''):`<tr><td colspan="7" class="dim">No trade yet today. The rules need a 2% move near the day high or low on real turnover, between 09:20 and 15:10 IST.</td></tr>`;
+ // strategy league
+ const by={};L.forEach((r)=>{const s=by[r.strategy]||(by[r.strategy]={n:r.strategy,open:0,closed:0,wins:0,pnl:0});if(r.status==='OPEN'||r.status==='PENDING')s.open++;if(r.status==='OPEN')s.pnl+=+r.unrealized_rs||0;if(done.includes(r.status)){s.closed++;s.pnl+=+r.pnl_rs||0;if(r.pnl_rs>0)s.wins++}});
+ const S=Object.values(by).sort((a,b)=>b.pnl-a.pnl),m=Math.max(1,...S.map((s)=>Math.abs(s.pnl)));
+ $('league').innerHTML=S.length?S.map((s)=>`<div class="bar"><div>${s.n}<div class="dim" style="font-size:10.5px">${s.open} live · ${s.closed} closed${s.closed?' · '+Math.round(s.wins/s.closed*100)+'% won':''}</div></div><div class="t"><b style="background:${s.pnl>=0?'var(--green)':'var(--red)'};opacity:.85;${s.pnl>=0?'left:50%':'right:50%'};width:${Math.abs(s.pnl)/m*50}%"></b><span class="${cl(s.pnl)}">${s.pnl>0?'+':''}${inr(s.pnl)}</span></div></div>`).join(''):empty('No trades booked yet.');
+ // equity
+ if(eq&&eq.length>1){const W=420,H=120,v=eq.map((e)=>e.equity),lo=Math.min(...v),hi=Math.max(...v,lo+1),x=(i)=>6+i*(W-12)/(v.length-1),y=(a)=>H-10-(a-lo)/(hi-lo)*(H-24);
+  $('equity').innerHTML=`<div class="num" style="font-size:24px;font-weight:650">${inr(v[v.length-1])} <span style="font-size:13px" class="${cl(v[v.length-1]-v[0])}">${v[v.length-1]-v[0]>0?'+':''}${inr(v[v.length-1]-v[0])}</span></div><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Paper account equity by day"><polyline fill="none" stroke="${v[v.length-1]>=v[0]?'#2de3a5':'#ff5f75'}" stroke-width="2" points="${v.map((a,i)=>x(i)+','+y(a)).join(' ')}"/></svg>`}
+ else $('equity').innerHTML=`<div class="num" style="font-size:24px;font-weight:650">${eqv==null?'—':inr(eqv)}</div>`+empty('The equity line starts once there are two days of trading.');
+ $('tr-note').textContent=L.length+' trades';
+ $('trades').innerHTML=L.length?L.slice().sort((a,b)=>b.id-a.id).map((r)=>`<tr><td class="num">${r.id}</td><td>${r.strategy}</td><td><b>${r.symbol}</b></td><td>${tg(r.status,ST[r.status])}</td><td class="num r">${num(r.entry)}</td><td class="num r">${num(r.stop)}</td><td class="num r">${r.target===''||r.target==null?'by rule':num(r.target)}</td><td class="num r">${r.qty||'—'}</td><td class="num r">${r.status==='PENDING'||r.status==='SKIPPED'?'—':pl(r.status==='OPEN'?+r.unrealized_rs||0:+r.pnl_rs||0)}</td></tr>`).join(''):`<tr><td colspan="9" class="dim">No trades yet.</td></tr>`;
+ $('sig').innerHTML=sig&&sig.length?sig.map((t)=>`<tr><td><b>${esc(t.ticker.replace('.NS',''))}</b></td><td>${tg(t.status,ST[t.status])}</td><td class="num r">${inr(t.deploy_rs)}</td><td class="num r">${num(t.entry)}</td><td class="num r">${num(t.stop)}</td><td class="num r">${t.status==='OPEN'?pl(+t.unreal_rs||0):done.includes(t.status)?pl(t.pnl_rs):'—'}</td></tr>`).join(''):`<tr><td colspan="6" class="dim">No signal trade yet.</td></tr>`;
+ $('lessons').innerHTML=les&&les.length?les.slice(-4).reverse().map((x)=>`<div class="row"><span class="dim num">${x.date}</span><div><div class="h">${esc(x.ticker)} · ${x.exit} exit · ${inr(x.pnl_rs)}</div><div class="w">${esc(x.diagnosis)}. ${esc(x.lesson)}</div></div></div>`).join(''):'<p class="note">No losing exit yet, so no lessons. Each one writes its diagnosis here and the mechanical lessons gate later entries.</p>';
+ $('fo').innerHTML=fo&&fo.length?fo.slice().reverse().map((r)=>`<tr><td>${r.strategy.replace(/_/g,' ')}</td><td class="num">${r.expiry.slice(5)}</td><td>${tg(r.status,ST[r.status])}</td><td class="num r">${inr(r.credit_rs)}</td><td class="num r">${inr(r.max_loss_rs)}</td><td class="num r">${r.status==='OPEN'?'—':pl(r.pnl_rs)}</td></tr>`).join(''):`<tr><td colspan="6" class="dim">No structure booked yet.</td></tr>`;
+ const NC={'RBI-POLICY':'a','CRASH/SHOCK':'r',GEOPOLITICS:'a','LEADER-EXIT':'r','LEGAL/REGULATORY':'r',EARNINGS:'b','DEAL/ORDER':'g',APPROVAL:'g'};
+ $('news').innerHTML=news&&news.length?news.slice(-12).reverse().map((x)=>`<div class="row"><div>${tg(x.category.replace('NSE-',''),NC[x.category]||'')}</div><div><div class="h">${esc(x.headline)}</div><div class="w">${esc(x.source)} · ${esc(x.time)} · ${esc(x.hint)}</div></div></div>`).join(''):empty('No high-impact headline saved yet.');
+ $('results').innerHTML=res&&res.length?res.map((x)=>`<tr><td class="num dim">${esc(x.time)}</td><td><b>${esc(x.symbol)}</b> <span class="dim">${esc(x.company)}</span></td></tr>`).join(''):`<tr><td class="dim">No results filed since the last close.</td></tr>`;
+ $('world').innerHTML=world?world.map((x)=>`<div class="mc"><div class="mut" style="font-size:11px">${esc(x.group)} · ${esc(x.name)}</div><div class="num" style="font-size:16px;font-weight:650">${x.last==null?'—':num(x.last)}</div><div class="num ${cl(x.chg_pct)}">${x.chg_pct==null?'':pc(x.chg_pct,2)}</div></div>`).join(''):'';
+}
+draw();setInterval(draw,60000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)draw()});
+</script></body></html>

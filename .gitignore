@@ -6,3 +6,5 @@ reports/
 watchlist.txt
 .env
 dashboard/pack/
+!docs/data/
+!docs/data/*.json
