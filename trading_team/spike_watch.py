@@ -38,6 +38,9 @@ TRIGGERS = [
     ("FUND RAISE", ["preferential", "warrant", "qip", "rights issue", "fund raising"]),
     ("APPROVAL", ["usfda", "approval", "patent", "licen"]),
     ("BONUS/SPLIT/BUYBACK", ["bonus", "split", "buyback", "buy back"]),
+    ("MANAGEMENT CHANGE", ["resignation", "resigns", "steps down", "cessation of"]),
+    ("LEGAL/REGULATORY", ["sebi order", "show cause", "investigation", "search and seizure",
+                          "insolvency", "default in payment", "fraud"]),
 ]
 IGNORE = ("copy of newspaper", "analysts/institutional", "trading window", "shareholders meeting")
 
