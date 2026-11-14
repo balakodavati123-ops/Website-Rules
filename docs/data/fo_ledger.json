@@ -1,0 +1,116 @@
+[
+ {
+  "id": 1,
+  "strategy": "short_iron_condor",
+  "underlying": "NIFTY",
+  "expiry": "2026-11-17",
+  "lot": 65,
+  "booked": "2026-11-13",
+  "spot_at_booking": 25110.95,
+  "status": "OPEN",
+  "legs": [
+   {
+    "side": "S",
+    "strike": 25400,
+    "kind": "CE",
+    "entry": 52.5
+   },
+   {
+    "side": "B",
+    "strike": 25550,
+    "kind": "CE",
+    "entry": 28.7
+   },
+   {
+    "side": "S",
+    "strike": 24850,
+    "kind": "PE",
+    "entry": 47.3
+   },
+   {
+    "side": "B",
+    "strike": 24700,
+    "kind": "PE",
+    "entry": 23.05
+   }
+  ],
+  "credit_rs": 3123.25,
+  "max_gain_rs": 2923.25,
+  "max_loss_rs": 6826.75,
+  "settle_close": "",
+  "pnl_rs": 0,
+  "note": "One lot, held to expiry. Shorts filled at the bid, longs at the ask."
+ },
+ {
+  "id": 2,
+  "strategy": "bull_put_spread",
+  "underlying": "NIFTY",
+  "expiry": "2026-11-17",
+  "lot": 65,
+  "booked": "2026-11-13",
+  "spot_at_booking": 25110.95,
+  "status": "OPEN",
+  "legs": [
+   {
+    "side": "S",
+    "strike": 24950,
+    "kind": "PE",
+    "entry": 73.6
+   },
+   {
+    "side": "B",
+    "strike": 24800,
+    "kind": "PE",
+    "entry": 37.45
+   }
+  ],
+  "credit_rs": 2349.75,
+  "max_gain_rs": 2249.75,
+  "max_loss_rs": 7500.25,
+  "settle_close": "",
+  "pnl_rs": 0,
+  "note": "One lot, held to expiry. Shorts filled at the bid, longs at the ask."
+ },
+ {
+  "id": 3,
+  "strategy": "iron_butterfly",
+  "underlying": "NIFTY",
+  "expiry": "2026-11-17",
+  "lot": 65,
+  "booked": "2026-11-13",
+  "spot_at_booking": 25110.95,
+  "status": "OPEN",
+  "legs": [
+   {
+    "side": "S",
+    "strike": 25100,
+    "kind": "CE",
+    "entry": 159.0
+   },
+   {
+    "side": "B",
+    "strike": 25250,
+    "kind": "CE",
+    "entry": 94.25
+   },
+   {
+    "side": "S",
+    "strike": 25100,
+    "kind": "PE",
+    "entry": 132.6
+   },
+   {
+    "side": "B",
+    "strike": 24950,
+    "kind": "PE",
+    "entry": 73.8
+   }
+  ],
+  "credit_rs": 8030.75,
+  "max_gain_rs": 7830.75,
+  "max_loss_rs": 1919.25,
+  "settle_close": "",
+  "pnl_rs": 0,
+  "note": "One lot, held to expiry. Shorts filled at the bid, longs at the ask."
+ }
+]

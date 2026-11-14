@@ -1,0 +1,36 @@
+# Daily rule-based engines at about 08:15 IST: paper strategies, F&O settlement, signal desk, world data, crypto.
+name: daily-engines
+on:
+  schedule:
+    - cron: "45 2 * * 1-5"          # 08:15 IST
+  workflow_dispatch:
+concurrency:
+  group: desk
+  cancel-in-progress: false
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11", cache: pip }
+      - run: pip install -q -r requirements.txt
+      - run: python backend/daily.py
+      - name: Save the data
+        run: |
+          git config user.name "desk-bot"; git config user.email "desk-bot@users.noreply.github.com"
+          git add docs/data
+          git diff --cached --quiet || { git commit -q -m "data: daily engines"; for i in 1 2 3; do git pull -q --rebase && git push -q && break || sleep 5; done; }
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: docs }
+      - id: deploy
+        uses: actions/deploy-pages@v4

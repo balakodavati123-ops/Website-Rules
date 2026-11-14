@@ -1,0 +1,27 @@
+[
+ {
+  "id": 1,
+  "ticker": "PNB.NS",
+  "strategy": "signal_desk",
+  "conviction": 0.8,
+  "status": "OPEN",
+  "signal_date": "2026-11-12",
+  "signal_close": 141.7899932861328,
+  "deploy_rs": 33333.33,
+  "all_in": false,
+  "adx_at_entry": 33.5,
+  "runup_10d": 17.9,
+  "entry": 141.7,
+  "stop": 136.08,
+  "atr0": 3.75,
+  "qty": 235,
+  "opened": "2026-11-13",
+  "closed": "",
+  "exit": "",
+  "pnl_rs": 0,
+  "be": false,
+  "note": "one tranche; fills at the next open",
+  "last_close": 142.81,
+  "unreal_rs": 177.6
+ }
+]

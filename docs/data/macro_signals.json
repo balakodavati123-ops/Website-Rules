@@ -1,0 +1,74 @@
+[
+ {
+  "symbol": "BTC-USD",
+  "name": "Bitcoin",
+  "market": "crypto",
+  "entry_signal_today": "no",
+  "last_close": 67137.58,
+  "last_date": "2026-11-14",
+  "buy_hold_pa": 26.9
+ },
+ {
+  "symbol": "ETH-USD",
+  "name": "Ethereum",
+  "market": "crypto",
+  "entry_signal_today": "no",
+  "last_close": 1900.08,
+  "last_date": "2026-11-14",
+  "buy_hold_pa": 26.7
+ },
+ {
+  "symbol": "SOL-USD",
+  "name": "Solana",
+  "market": "crypto",
+  "entry_signal_today": "no",
+  "last_close": 75.53,
+  "last_date": "2026-11-14",
+  "buy_hold_pa": 84.5
+ },
+ {
+  "symbol": "GC=F",
+  "name": "Gold",
+  "market": "commodity",
+  "entry_signal_today": "no",
+  "last_close": 3886.3,
+  "last_date": "2026-11-13",
+  "buy_hold_pa": 12.8
+ },
+ {
+  "symbol": "SI=F",
+  "name": "Silver",
+  "market": "commodity",
+  "entry_signal_today": "no",
+  "last_close": 49.03,
+  "last_date": "2026-11-13",
+  "buy_hold_pa": 12.1
+ },
+ {
+  "symbol": "CL=F",
+  "name": "Crude oil",
+  "market": "commodity",
+  "entry_signal_today": "no",
+  "last_close": 88.56,
+  "last_date": "2026-11-13",
+  "buy_hold_pa": 13.6
+ },
+ {
+  "symbol": "NG=F",
+  "name": "Natural gas",
+  "market": "commodity",
+  "entry_signal_today": "no",
+  "last_close": 3.23,
+  "last_date": "2026-11-13",
+  "buy_hold_pa": 3.1
+ },
+ {
+  "symbol": "HG=F",
+  "name": "Copper",
+  "market": "commodity",
+  "entry_signal_today": "no",
+  "last_close": 6.08,
+  "last_date": "2026-11-13",
+  "buy_hold_pa": 11.2
+ }
+]

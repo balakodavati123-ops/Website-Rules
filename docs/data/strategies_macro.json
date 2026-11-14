@@ -1,0 +1,68 @@
+[
+ {
+  "strategy": "donchian_20_10",
+  "market": "crypto",
+  "description": "Buy a close above the 20-day high, exit below the 10-day low",
+  "status": "APPROVED",
+  "trades": 138,
+  "win_rate": 0.4420289855072464,
+  "avg_R": 1.0058202734425876,
+  "conf_cluster": 0.9946,
+  "conf_adjusted": 0.9680342634470591
+ },
+ {
+  "strategy": "donchian_20_10",
+  "market": "commodity",
+  "description": "Buy a close above the 20-day high, exit below the 10-day low",
+  "status": "REJECTED",
+  "trades": 194,
+  "win_rate": 0.3247422680412371,
+  "avg_R": -0.016657971236509982,
+  "conf_cluster": 0.44320000000000004,
+  "conf_adjusted": 0.007578766213115625
+ },
+ {
+  "strategy": "golden_cross",
+  "market": "crypto",
+  "description": "Buy when the 50-day average crosses above the 200-day",
+  "status": "PROBATION",
+  "trades": 18,
+  "win_rate": 0.2777777777777778,
+  "avg_R": 2.6682326476653477,
+  "conf_cluster": 0.7363999999999999,
+  "conf_adjusted": 0.1594713530262391
+ },
+ {
+  "strategy": "golden_cross",
+  "market": "commodity",
+  "description": "Buy when the 50-day average crosses above the 200-day",
+  "status": "PROBATION",
+  "trades": 22,
+  "win_rate": 0.13636363636363635,
+  "avg_R": 1.172015516266225,
+  "conf_cluster": 0.6417999999999999,
+  "conf_adjusted": 0.06988730227394196
+ },
+ {
+  "strategy": "momentum_12_1",
+  "market": "crypto",
+  "description": "Buy positive 12-month momentum above the 100-day average",
+  "status": "PROBATION",
+  "trades": 134,
+  "win_rate": 0.1865671641791045,
+  "avg_R": 0.3240519703251303,
+  "conf_cluster": 0.8371999999999999,
+  "conf_adjusted": 0.3443303610845367
+ },
+ {
+  "strategy": "momentum_12_1",
+  "market": "commodity",
+  "description": "Buy positive 12-month momentum above the 100-day average",
+  "status": "PROBATION",
+  "trades": 163,
+  "win_rate": 0.3006134969325153,
+  "avg_R": 0.15294383555681437,
+  "conf_cluster": 0.7385999999999999,
+  "conf_adjusted": 0.1623513184580218
+ }
+]
