@@ -101,7 +101,7 @@ def results_filed(now, watch: set[str], cap: int = 60) -> list[dict]:
 def news(cap: int = 14) -> list[dict]:
     import yfinance as yf
     out, seen = [], set()
-    for market, sym in (("India", "^NSEI"), ("World", "^GSPC"), ("Oil", "BZ=F"), ("Gold", "GC=F")):
+    for market, sym in (("India", "^NSEI"), ("World", "^GSPC"), ("Tech", "NVDA"), ("Oil", "BZ=F"), ("Gold", "GC=F")):
         try:
             items = yf.Ticker(sym).news or []
         except Exception:
