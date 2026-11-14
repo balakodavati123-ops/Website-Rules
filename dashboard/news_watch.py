@@ -8,12 +8,18 @@ high-impact rule is printed once, as one line:
   [CATEGORY] headline | source | hh:mm IST | LONG-lean or SHORT-lean hint
 
 The hint is a keyword rule about the headline's tone, not a forecast. Nothing is traded here.
-Usage: python dashboard/news_watch.py [--once] [--max-per-hour 12]
+Event rules (kept narrow on purpose, to save the CEO's Claude usage): only index-level headlines
+(RBI policy, crashes, geopolitics) and NSE filings from watchlist stocks become events; every other
+classified headline goes to the dashboard feed only. At most --max-per-day events a day, counted in
+/tmp/news_state.json so re-arming the watcher does not reset the cap or replay headlines.
+Writes dashboard/data/news_feed.json (the last 60 headlines, with their category).
+Usage: python dashboard/news_watch.py [--once] [--max-per-day 6]
 """
 from __future__ import annotations
 
 import argparse
 import html
+import json
 import re
 import sys
 import time
@@ -44,6 +50,8 @@ RULES = [
     ("DEAL/ORDER", r"\b(order win|bags? order|wins? contract|acquires?|acquisition|merger|stake sale|buyback|bonus issue)\b", "LONG-lean headline"),
     ("APPROVAL", r"\b(usfda|approval|nod|licen[cs]e granted)\b", "LONG-lean headline"),
 ]
+MACRO = {"RBI-POLICY", "CRASH/SHOCK", "GEOPOLITICS"}
+STATE, FEED = Path("/tmp/news_state.json"), ROOT / "dashboard" / "data" / "news_feed.json"
 NSE_LABELS = {"RESULTS", "ORDER/CONTRACT", "ACQUISITION/STAKE", "MANAGEMENT CHANGE", "LEGAL/REGULATORY", "APPROVAL", "BONUS/SPLIT/BUYBACK"}
 
 
@@ -69,8 +77,14 @@ def classify(title: str):
     return None
 
 
-def poll(seen: set, learn: bool):
-    hits = []
+def watch_symbols() -> set:
+    f = ROOT / "watchlists" / "nifty200_plus_etfs.txt"
+    return {t.strip().replace(".NS", "") for t in f.read_text().splitlines() if t.strip() and not t.startswith("#")} if f.exists() else set()
+
+
+def poll(seen: set, learn: bool, feed: list, watch: set):
+    """Returns the events (macro headlines and watchlist filings); every classified item goes to feed."""
+    events, now = [], datetime.now(IST).strftime("%H:%M")
     for name, url in FEEDS.items():
         for title in items(fetch(url)):
             key = re.sub(r"\W+", "", title.lower())[:90]
@@ -79,7 +93,10 @@ def poll(seen: set, learn: bool):
             seen.add(key)
             c = None if learn else classify(title)
             if c:
-                hits.append((c[0], title[:150], name, c[1]))
+                is_event = c[0] in MACRO
+                feed.append({"time": now, "source": name, "category": c[0], "headline": title[:160], "event": "yes" if is_event else "no", "hint": c[1]})
+                if is_event:
+                    events.append((c[0], title[:150], name, c[1]))
     try:
         from trading_team.spike_watch import fetch_feed, trigger_of
         for a in fetch_feed():
@@ -89,32 +106,44 @@ def poll(seen: set, learn: bool):
             seen.add(key)
             lab = None if learn else trigger_of({"desc": a["desc"], "text": a["text"]})
             if lab in NSE_LABELS:
-                hits.append((f"NSE-{lab}", f"{a['symbol']}: {a['desc'][:110]}", "NSE", "company filing: check the price before reacting"))
+                mine = a["symbol"] in watch
+                feed.append({"time": now, "source": "NSE", "category": f"NSE-{lab}", "headline": f"{a['symbol']}: {a['desc'][:120]}", "event": "yes" if mine else "no",
+                             "hint": "company filing: check the price before reacting"})
+                if mine:
+                    events.append((f"NSE-{lab}", f"{a['symbol']}: {a['desc'][:110]}", "NSE", "company filing: check the price before reacting"))
     except Exception:
         pass
-    return hits
+    return events
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--once", action="store_true")
-    ap.add_argument("--max-per-hour", type=int, default=12)
+    ap.add_argument("--max-per-day", type=int, default=6)
     a = ap.parse_args()
-    seen: set = set()
-    poll(seen, learn=True)
-    print(f"watching: {len(seen)} headlines already out; alerts only for new high-impact items", flush=True)
+    today = datetime.now(IST).date().isoformat()
+    st = json.loads(STATE.read_text()) if STATE.exists() else {}
+    if st.get("date") != today:
+        st = {"date": today, "count": 0, "seen": []}
+    seen, watch = set(st["seen"]), watch_symbols()
+    feed = json.loads(FEED.read_text()) if FEED.exists() else []
+    if not st["seen"]:
+        poll(seen, True, feed, watch)
+    print(f"watching: {len(seen)} headlines already out, {st['count']} of {a.max_per_day} events used today", flush=True)
     if a.once:
         return
-    sent = []
     while True:
         time.sleep(60)
-        now = time.time()
-        sent = [t for t in sent if now - t < 3600]
-        for cat, title, src, hint in poll(seen, learn=False):
-            if len(sent) >= a.max_per_hour:
+        events = poll(seen, False, feed, watch)
+        FEED.parent.mkdir(parents=True, exist_ok=True)
+        FEED.write_text(json.dumps(feed[-60:], indent=1))
+        st.update(seen=sorted(seen)[-1500:])
+        for cat, title, src, hint in events:
+            if st["count"] >= a.max_per_day:
                 break
-            sent.append(now)
-            print(f"[{cat}] {title} | {src} | {datetime.now(IST):%H:%M} IST | {hint}", flush=True)
+            st["count"] += 1
+            print(f"[{cat}] {title} | {src} | {datetime.now(IST):%H:%M} IST | {hint} | event {st['count']} of {a.max_per_day}", flush=True)
+        STATE.write_text(json.dumps(st))
 
 
 if __name__ == "__main__":

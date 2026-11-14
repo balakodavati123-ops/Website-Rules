@@ -79,6 +79,18 @@
     const s = CD.candleChart(box, rows, { iv: '1day', label: 'Index candles for one year with moving averages and a projection band' });
     if (s) { const p = el('p', 'note'); p.textContent = `Last ${num(s.last, 2)}. Recent drift points to ${num(s.projEnd, 2)} in ${s.steps} sessions (${pct((s.projEnd / s.last - 1) * 100, 1)}); support near ${num(s.support, 2)}, resistance near ${num(s.resistance, 2)}. This is the slope of recent closes with a widening band, not a forecast.`; box.appendChild(p); } });
 
+  /* ---------- News desk ---------- */
+  const NC = { 'RBI-POLICY': 'a', 'CRASH/SHOCK': 'r', GEOPOLITICS: 'a', 'LEADER-EXIT': 'r', 'LEGAL/REGULATORY': 'r', EARNINGS: 'b', 'DEAL/ORDER': 'g', APPROVAL: 'g' };
+  dash.draw('nf_list', (box) => { const r = need(box, ['news_feed']); if (!r) return; if (!r[0].length) { box.replaceChildren(el('div', 'empty', 'No high-impact headline has been saved yet. The watcher writes here during market hours.')); return; }
+    box.replaceChildren(...r[0].slice(-14).reverse().map((x) => { const row = el('div', 'row' + (x.event === 'yes' ? ' sev-hi' : '')); row.style.gridTemplateColumns = 'auto 1fr'; const b = el('div'); b.append(el('div', 'h', x.headline), el('div', 'w', `${x.source} · ${x.time} IST · ${x.hint}`));
+      const t = el('div'); t.append(tag(x.category.replace('NSE-', ''), NC[x.category] || 'v')); row.append(t, b); return row; })); });
+  dash.draw('news_book_body', (body) => { const r = need(body, ['news_ledger']); if (!r) return; if (!r[0].length) { const tr = el('tr'), td = el('td', 'dim', 'No news trade yet. Each trade opens within a minute of a market-moving headline and closes by 15:10.'); td.colSpan = 7; tr.appendChild(td); body.replaceChildren(tr); return; }
+    CD.fillTable(body, r[0].slice().sort((a, b) => b.id - a.id), [{ cls: 'num', render: (d) => `${d.day.slice(5)} ${d.time}` }, { render: (d) => d.label }, { render: (d) => tag(d.status, d.status === 'OPEN' ? 'b' : d.status === 'WIN' ? 'g' : 'r') },
+      { cls: 'num r', render: (d) => num(d.entry, 2) }, { cls: 'num r', render: (d) => (d.exit === '' ? '—' : num(d.exit, 2)) }, { cls: 'num r', render: (d) => (d.status === 'OPEN' ? '—' : el('span', cls(d.pnl_rs), (d.pnl_rs > 0 ? '+' : '') + inr(d.pnl_rs, 0))) }, { cls: 'hs', render: (d) => d.headline }], 'id'); });
+  dash.draw('news_stats_body', (body) => { const r = need(body, ['news_stats']); if (!r) return;
+    CD.fillTable(body, r[0], [{ render: (d) => d.group }, { cls: 'num r', render: (d) => String(d.open) }, { cls: 'num r', render: (d) => String(d.closed) }, { cls: 'num r', render: (d) => (d.win_rate === null ? '—' : pct(d.win_rate, 0, false)) },
+      { cls: 'num r', render: (d) => el('span', cls(d.pnl), (d.pnl > 0 ? '+' : '') + inr(d.pnl, 0)) }], 'group'); });
+
   /* ---------- Signal desk ---------- */
   const VD = { ENTER: 'g', WAIT_SIDEWAYS: 'a', WAIT_TREND: '', WAIT_VOLUME: '', SKIP_PRICED_IN: 'r', LOW_CONVICTION: '', NO_DATA: '' };
   const SST = { OPEN: 'b', PENDING: 'a', WIN: 'g', LOSS: 'r', SIDEWAYS_EXIT: 'a', SKIPPED: '' };
