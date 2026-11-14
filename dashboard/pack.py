@@ -81,6 +81,8 @@ FILES = {  # id -> (title, description, file name)
     "desk_signals": ("Research signals", "The research agents' structured hand-off: trajectory, sentiment, conviction and the chart-gate verdict.", "desk_signals.json"),
     "signal_ledger": ("Signal desk ledger", "Every trade of the Rs 1,00,000 signal desk with conviction, deployment, stop and result.", "signal_ledger.json"),
     "signal_lessons": ("Signal desk lessons", "Diagnosis of every losing exit and the rule it adds to the pre-trade checklist.", "signal_lessons.json"),
+    "news_feed": ("News feed", "High-impact headlines caught by the real-time watcher, with their category and whether they triggered a trade.", "news_feed.json"),
+    "news_ledger": ("News desk ledger", "Intraday paper trades taken on market-moving headlines.", "news_ledger.json"),
     "fo_ledger": ("F&O paper positions", "NIFTY index option structures the desk paper trades, held to expiry.", "fo_ledger.json"),
     "world_markets": ("World markets before the bell", "Last close and change for world indices, the dollar, the rupee, crude, gold and US yields, from Yahoo Finance.", "world_markets.json"),
     "events_today": ("Company events", "Board meetings, results and corporate actions due in the next three days, from NSE.", "events_today.json"),

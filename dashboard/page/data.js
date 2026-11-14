@@ -120,6 +120,11 @@ dash.calc('fo_stats', { inputs: ['fo_ledger'], title: 'F&O results by strategy',
       if (r.status === 'OPEN') { s.open += 1; s.at_risk += r.max_loss_rs; } else { s.settled += 1; if (r.status === 'WIN') s.wins += 1; s.pnl += r.pnl_rs; } });
     return Object.values(by).map((s) => ({ ...s, pnl: Math.round(s.pnl * 100) / 100, win_rate: s.settled ? Math.round((s.wins / s.settled) * 1000) / 10 : null })).sort((a, b) => b.pnl - a.pnl); } });
 
+dash.calc('news_stats', { inputs: ['news_ledger'], title: 'News desk results', description: 'Intraday paper trades taken on headlines, split by instrument and direction: count, win rate, and profit or loss in rupees.',
+  fn: (rows) => { const by = {}; rows.forEach((r) => { const k = (r.kind === 'option' ? 'options' : 'stocks') + ' ' + r.side.toLowerCase(); const s = by[k] || (by[k] = { group: k, open: 0, closed: 0, wins: 0, pnl: 0 });
+      if (r.status === 'OPEN') s.open += 1; else { s.closed += 1; if (r.pnl_rs > 0) s.wins += 1; s.pnl += r.pnl_rs; } });
+    return Object.values(by).map((s) => ({ ...s, pnl: Math.round(s.pnl * 100) / 100, win_rate: s.closed ? Math.round((s.wins / s.closed) * 1000) / 10 : null })); } });
+
 dash.calc('kpi_rows', { inputs: ['snapshot', 'mf_holdings', 'metals_est', 'paper_stats'], title: 'Headline figures', description: 'The six figures at the top of the Command tab.',
   fn: (snap, mf, est, paper) => { const get = (k, n) => snap.find((r) => r.kind === k && r.name === n) || {}; const net = get('total', 'Net worth').current, as = get('total', 'Assets');
     const gold = get('asset', 'GOLD').current || 0, silver = get('asset', 'SILVER').current || 0, sa = get('asset', 'SA').current;
