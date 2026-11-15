@@ -31,7 +31,7 @@
     if (L.on && ready >= 6) E.step(L.book, snapshot()); const open = L.book.trades.filter((t) => t.status === 'OPEN').length, p = total(), t = ist();
     ['live', 'wait', 'off'].forEach((k) => c.classList.toggle(k, k === (L.on ? 'live' : 'wait')));
     c.replaceChildren(el('i'), document.createTextNode(!L.on ? 'Live paper session: off' : t.hhmm >= '15:10' ? `Live paper session: closed for the day · ${p >= 0 ? '+' : '−'}${inr(Math.abs(p))}` : `LIVE PAPER · ${open} open · ${L.book.trades.length} today · ${p >= 0 ? '+' : '−'}${inr(Math.abs(p))}`));
-    ['ls_kpi', 'ls_body', 'ls_stats', 'ls_status'].forEach((n) => dash.draw(n)); });
+    ['ls_kpi', 'ls_body', 'ls_stats', 'ls_status', 'rail_num', 'rail_trades'].forEach((n) => dash.draw(n)); });
 
   dash.draw('ls_status', (p) => { const t = ist(); const closed = ['Sat', 'Sun'].includes(t.wd) || t.hhmm < '09:15' || t.hhmm >= '15:30';
     p.textContent = !L.on ? 'Press Start to begin. It re-reads INDmoney every minute and trades by the rules below until 15:10, as long as this page stays open.'

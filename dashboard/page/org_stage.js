@@ -14,7 +14,7 @@
       const tip = el('div', 'tip'); tip.style.display = 'none'; box.replaceChildren(cv, tip);
       const M = { cv, ctx: cv.getContext('2d'), tip, nodes: [], pulses: [], raf: 0, W: 0, H: 0, hot: null, last: 0 };
       const at = (n, rot) => { const a = n.a + rot * n.spin; return [M.cx + n.r * Math.cos(a), M.cy + n.r * Math.sin(a) * M.sq]; };
-      M.frame = (t) => { M.raf = 0; if (document.hidden || !E.shown || !box.isConnected || !M.nodes.length) return; const ctx = M.ctx, rot = E.reduce ? 0 : t * 0.00004; ctx.clearRect(0, 0, M.W, M.H);
+      M.frame = (t) => { M.raf = 0; if (document.hidden || !E.shown || !box.isConnected || box.offsetParent === null || !M.nodes.length) return; const ctx = M.ctx, rot = E.reduce ? 0 : t * 0.00004; ctx.clearRect(0, 0, M.W, M.H);
         M.nodes.forEach((n) => { [n.x, n.y] = at(n, rot); });
         ctx.lineWidth = 1; M.nodes.forEach((n) => { if (!n.up) return; ctx.strokeStyle = n.kind === 'coo' ? 'rgba(140,180,255,0.35)' : n.kind === 'mgr' ? 'rgba(120,160,240,0.22)' : 'rgba(90,130,210,0.12)'; ctx.beginPath(); ctx.moveTo(n.x, n.y); ctx.lineTo(n.up.x, n.up.y); ctx.stroke(); });
         if (!E.reduce && t - M.last > 90) { M.last = t; const leaf = M.leaves[Math.floor(Math.random() * M.leaves.length)]; M.pulses.push({ n: leaf, t0: t }); }

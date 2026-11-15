@@ -18,6 +18,14 @@ at a time, and every sentence a desk says is a cell of the calcs in `floor_data.
 These desks are fixed rules on live prices, not Claude calls: they screen and rank, they do not
 predict, and the screen is not backtested. The Claude agents' research is the morning run.
 
+The main page is laid out as a terminal: two running tapes under the header (`tape_prices`,
+`tape_news` in `hero.js`), an index strip, the flow picture (`flow_stage.js`: one line per stock,
+through the chain of desks, out to the cleared and killed lists), and a right rail with the paper
+profit and loss (`book_totals` calc plus the in-page live session) and one card per trade. On the
+prices tape Indian indices, MCX and crypto are live; world indices are the last close saved by the
+08:15 run and are tagged "close". The "World and news" tab holds the same feeds as cards and lists.
+`floor_stage.js` (the old ring) is kept in the repo but no longer loaded by the page.
+
 ## Automatic refresh
 
 A scheduled task, "CEO Desk Daily Refresh", runs weekdays at 08:15 IST in a fresh cloud session. It

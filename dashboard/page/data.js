@@ -126,6 +126,11 @@ dash.calc('fo_book', { inputs: ['fo_ledger'], title: 'F&O paper positions', desc
     legs_txt: r.legs.map((l) => `${l.side === 'S' ? 'sell' : 'buy'} ${l.strike} ${l.kind} @ ${l.entry}`).join(' · '), lot: r.lot,
     credit_rs: r.credit_rs, max_gain_rs: r.max_gain_rs, max_loss_rs: r.max_loss_rs, settle_close: r.settle_close === '' ? null : r.settle_close, pnl_rs: r.status === 'OPEN' ? null : r.pnl_rs })).sort((a, b) => b.id - a.id) });
 
+dash.calc('book_totals', { inputs: ['trade_book', 'fo_book'], title: 'Paper profit and loss, all books', description: 'One row: unrealised profit or loss on open paper trades, booked profit or loss on closed ones, settled option structures, their total, and the counts behind them.',
+  fn: (book, fo) => { const sum = (a, k) => Math.round(a.reduce((x, r) => x + (Number(r[k]) || 0), 0) * 100) / 100; const open = book.filter((t) => t.status === 'OPEN'), closed = book.filter((t) => ['WIN', 'LOSS', 'TIME STOP'].includes(t.status)), foDone = fo.filter((t) => t.status !== 'OPEN');
+    const o = sum(open, 'pnl'), c = sum(closed, 'pnl'), f = sum(foDone, 'pnl_rs');
+    return [{ open_pnl: o, closed_pnl: c, fo_pnl: f, total_pnl: Math.round((o + c + f) * 100) / 100, open_n: open.length, pending_n: book.filter((t) => t.status === 'PENDING').length, closed_n: closed.length, fo_open: fo.length - foDone.length, deployed: sum(open, 'deployed') }]; } });
+
 dash.calc('fo_stats', { inputs: ['fo_ledger'], title: 'F&O results by strategy', description: 'Per option strategy: open and settled counts, wins, win rate, total paper profit or loss, and the worst case of what is open now.',
   fn: (rows) => { const by = {}; rows.forEach((r) => { const s = by[r.strategy] || (by[r.strategy] = { strategy: r.strategy, open: 0, settled: 0, wins: 0, pnl: 0, at_risk: 0 });
       if (r.status === 'OPEN') { s.open += 1; s.at_risk += r.max_loss_rs; } else { s.settled += 1; if (r.status === 'WIN') s.wins += 1; s.pnl += r.pnl_rs; } });

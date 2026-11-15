@@ -5,7 +5,7 @@
   <header class="cd-top" id="cd-header">
     <div class="cd-brand">
       <div class="cd-logo" aria-hidden="true"></div>
-      <div><h1 id="cd-title">Trading Desk</h1><small>Your desks work the tape. You make the final call.</small></div>
+      <div><h1 id="cd-title">Balaji's Trading Desk</h1><small>Your desks work the tape. You make the final call.</small></div>
     </div>
     <div class="cd-pulse">
       <span class="chip" data-draw="chip_session">—</span>
@@ -15,8 +15,14 @@
     </div>
   </header>
 
+  <div class="tapes" id="cd-tapes" aria-label="Running prices and news">
+    <div class="tape"><span class="tape-tag">MARKETS</span><div class="tape-view"><div class="tape-run" data-draw="tape_prices" data-source="indices comm_live crypto_live world_markets">—</div></div></div>
+    <div class="tape news"><span class="tape-tag">NEWS</span><div class="tape-view"><div class="tape-run" data-draw="tape_news" data-source="news_live world_news news_feed">—</div></div></div>
+  </div>
+
   <nav class="cd-tabs" role="tablist" aria-label="Desk sections">
     <button class="cd-tab" role="tab" id="tabbtn-floor" data-tab="floor" aria-selected="true">Live floor</button>
+    <button class="cd-tab" role="tab" id="tabbtn-world" data-tab="world" aria-selected="false">World and news</button>
     <button class="cd-tab" role="tab" id="tabbtn-trades" data-tab="trades" aria-selected="false">Today's trades</button>
     <button class="cd-tab" role="tab" id="tabbtn-command" data-tab="command" aria-selected="false">Personal portfolio</button>
     <button class="cd-tab" role="tab" id="tabbtn-premarket" data-tab="premarket" aria-selected="false">Pre-market 08:45</button>
@@ -43,6 +49,31 @@
         <button class="cd-btn" id="btn-pull" type="button">Pull prices now</button>
         <button class="cd-btn tog" id="btn-pause" type="button" aria-pressed="false">Pause desks</button>
       </div>
+    </div>
+    <div class="idx-strip" data-draw="idx_cards" data-source="indices"></div>
+    <div class="hero">
+      <div class="card hero-main" id="card-stage">
+        <h2>Money flow through your desks <em>each line is one stock on the live lists: cyan cleared all eight rules, orange was removed by one</em></h2>
+        <div class="fl-stage flow" data-draw="flow_stage" data-source="floor_rows floor_stats floor_side paper_live"></div>
+        <div class="fl-phases" id="floor-phases"><span data-ph="0">Pull</span><span data-ph="1">Rules</span><span data-ph="2">Crowd</span><span data-ph="3">Books</span><span data-ph="4">Filings</span><span data-ph="5">Debate</span><span data-ph="6">Size</span><span data-ph="7">Verdict</span><span data-ph="8">Log</span></div>
+        <div class="fl-say" data-draw="fl_say"></div>
+        <p class="fl-note num" data-draw="fl_note">—</p>
+        <div class="fl-flowrow"><small>This batch</small><div class="fl-flow" data-draw="fl_flow" data-source="floor_rows"></div></div>
+        <p class="note">Tap a name in the lists on the right of the picture to open its chart. A cleared name is a candidate for your attention, not a forecast.</p>
+      </div>
+      <aside class="hero-rail" aria-label="Paper profit and loss and trades">
+        <div class="card" id="card-pnl"><h2>Live P&amp;L <em>paper money</em></h2>
+          <div class="pnl-big"><b class="num" data-draw="rail_num" data-k="total" data-source="book_totals">—</b><small>all paper books; open trades at the latest price the page has</small></div>
+          <div class="pnl-grid">
+            <div><small>Open trades</small><b class="num" data-draw="rail_num" data-k="open" data-source="book_totals" data-field="open_pnl" data-row="0">—</b></div>
+            <div><small>Booked</small><b class="num" data-draw="rail_num" data-k="closed" data-source="book_totals" data-field="closed_pnl" data-row="0">—</b></div>
+            <div><small>Options settled</small><b class="num" data-draw="rail_num" data-k="fo" data-source="book_totals" data-field="fo_pnl" data-row="0">—</b></div>
+            <div><small>Live session today</small><b class="num" data-draw="rail_num" data-k="live">—</b></div>
+          </div>
+          <p class="note num" data-draw="rail_num" data-k="counts" data-source="book_totals">—</p>
+        </div>
+        <div class="card" id="card-railtrades"><h2>Trades <em>live session first, then open, orders, closed</em></h2><div class="rail-trades" data-draw="rail_trades" data-source="trade_book fo_book"></div></div>
+      </aside>
     </div>
     <div class="card" id="card-org" style="margin-bottom:12px"><h2>Your organisation <em><b data-draw="org_count">—</b> desks: a COO for each strategy, three trading managers each, nine analysts under them</em></h2>
       <div class="fl-stage org" data-draw="org_stage" data-source="strategy_board trade_book"></div>
@@ -75,13 +106,6 @@
           <p class="dk-rule">The final call. Nothing is placed without you.</p><p class="dk-now" data-draw="desk_now" data-agent="CEO">—</p></article>
       </aside>
       <div class="fl-main">
-        <div class="card" id="card-stage">
-          <h2>The floor <em>analysts report to the Trading Officer, the COO reviews the desks, you decide</em></h2>
-          <div class="fl-stage" data-draw="floor_stage" data-source="floor_rows floor_stats floor_side paper_live"></div>
-          <div class="fl-phases" id="floor-phases"><span data-ph="0">Pull</span><span data-ph="1">Rules</span><span data-ph="2">Crowd</span><span data-ph="3">Books</span><span data-ph="4">Filings</span><span data-ph="5">Debate</span><span data-ph="6">Size</span><span data-ph="7">Verdict</span><span data-ph="8">Log</span></div>
-          <p class="fl-note num" data-draw="fl_note">—</p>
-          <div class="fl-flowrow"><small>This batch</small><div class="fl-flow" data-draw="fl_flow" data-source="floor_rows"></div></div>
-        </div>
         <div class="fl-two">
           <div class="card" id="card-rules">
             <h2>Technical Analyst: 8 hard rules <em class="num" data-draw="rule_note">—</em></h2>
@@ -126,6 +150,19 @@
       <div class="card c5" id="card-log"><h2>desk.log <em>every hand-off as it happens</em></h2><div class="fl-log" data-draw="fl_log"></div></div>
       <div class="card c12"><p class="note" style="margin-top:0">What you are watching: the desks on this floor follow fixed rules on live INDmoney prices, in your browser, all day, without calling the Claude agents. They screen and rank; they do not predict, and the screen itself has not been backtested. The Claude agents that read results, filings and earnings calls run once each weekday morning and report on the Morning briefing tab. "Live refresh" re-reads prices every minute while the market is open and switches itself off after an hour. No order is ever placed from this page.</p></div>
     </div>
+    </div>
+  </section>
+
+  <!-- ============ WORLD AND NEWS ============ -->
+  <section id="tab-world" role="tabpanel" aria-labelledby="tabbtn-world" hidden>
+    <div class="cd-grid">
+      <div class="card c12" id="card-windia"><h2>Indian indices <em>live from INDmoney</em></h2><div class="cardgrid" data-draw="idx_cards" data-source="indices"></div></div>
+      <div class="card c12" id="card-wworld"><h2>World indices, currencies and commodities <em>last close, saved by the 08:15 run; these are not live</em></h2><div class="cardgrid" data-draw="world_cards" data-source="world_markets"></div></div>
+      <div class="card c6" id="card-wmcx"><h2>MCX futures <em>live from INDmoney</em></h2><div class="cardgrid" data-draw="mcx_cards" data-source="comm_live"></div></div>
+      <div class="card c6" id="card-wcrypto"><h2>Crypto <em>live dollar prices from CoinGecko</em></h2><div class="cardgrid" data-draw="crypto_live_cards" data-source="crypto_live"></div></div>
+      <div class="card c6" id="card-wstock"><h2>News on your watchlist <em>from INDmoney, dated by day; the tag is INDmoney's, not the desk's</em></h2><div class="list" data-draw="stocknews_list" data-source="news_live"></div></div>
+      <div class="card c6" id="card-wnews"><h2>World headlines <em>word for word, saved by the 08:15 run</em></h2><div class="list" data-draw="news_list" data-source="world_news"></div></div>
+      <div class="card c12" id="card-wfeed"><h2>Filings and high-impact headlines <em>saved by the watcher when it runs</em></h2><div class="list" data-draw="nf_list" data-source="news_feed"></div></div>
     </div>
   </section>
 
@@ -343,7 +380,7 @@
 <script src="data.js"></script>
 <script src="floor_data.js"></script>
 <script src="floor_engine.js"></script>
-<script src="floor_stage.js"></script>
+<script src="flow_stage.js"></script>
 <script src="floor_views.js"></script>
 <script src="org_stage.js"></script>
 <script src="views_command.js"></script>
@@ -354,5 +391,6 @@
 <script src="views_room.js"></script>
 <script src="ls_engine.js"></script>
 <script src="live_session.js"></script>
+<script src="hero.js"></script>
 <script src="views_plus.js"></script>
 <script src="tabs.js"></script>
