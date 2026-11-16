@@ -1,8 +1,7 @@
 {
- "updated_at": "2026-11-16T11:05:40+05:30",
- "updated_hm": "16 Nov 11:05",
- "state": "running",
- "names": 217,
- "note": "NSE prices from Yahoo Finance, delayed by up to about 15 minutes.",
- "filings_checked": "yes"
+ "updated_at": "2026-11-16T15:43:15+05:30",
+ "updated_hm": "16 Nov 15:43",
+ "state": "market closed",
+ "names": 0,
+ "note": "NSE prices from Yahoo Finance, delayed by up to about 15 minutes."
 }

@@ -2,126 +2,6 @@
  {
   "time": "14 Nov 10:45",
   "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Paytm Gets RBI In-Principle Nod For Digital Wallet Licence, Moves Closer To Wallet Revival - BW Disrupt",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Razorpay Gets SEBI Nod For Rs 5,000-6,000 Cr IPO, Listing Likely In Q1 2027 - BW Disrupt",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Daily Voice: RBI rate hike in December cannot be ruled out, says Nine Rivers Capital founder - Moneycontrol.com",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Razorpay gets Sebi approval for Rs 6,000 cr IPO in India - The Times of India",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Razorpay, Sembcorp Green Infra get Sebi nod to float IPOs - YourStory.com",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "RBI Fraud Compensation: Banks Seek Central Claims System - Elets BFSI",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Paytm gets RBI\u2019s in-principle nod to revive wallet business; shares hit record high - The Hindu",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Paytm wallet likely to see revival following RBI's in-principle nod - Business Standard",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "RBI fines MobiKwik \u20b99 lakh over PPI transfer and fraud reporting lapses - Business Standard",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "RBI Fines MobiKwik \u20b99 Lakh Over Fraud Reporting Violations - The 420.in",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Temasek-backed Sembcorp Green Infra receives SEBI nod for \u20b93,750 crore IPO - BusinessLine",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Paytm's Payments Unit Wins In-Principle RBI Nod to Issue Wallets, Shares Hit Record - BigGo Finance",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Markets fall in early trade after 3-day rally; Sensex tumbles 460 points - The New Indian Express",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Nifty Bank, Auto, Realty skid 1% as inflation stokes RBI rate hike fears - Business Standard",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Paytm gets RBI's in-principle approval to issue prepaid wallets in India - Business Standard",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
   "category": "RBI-POLICY",
   "headline": "RBI may raise repo rate to 6% by February as inflation breaches upper band - Business Standard",
   "event": "yes",
@@ -476,6 +356,126 @@
   "source": "BusinessStandard",
   "category": "CRASH/SHOCK",
   "headline": "Park Medi World shares plummet 10% as Q2 profit tanks 31%, margins slide",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 15:43",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "Belrise Industries shares surge 13% after Q2 results, H-One merger; stock rallies 44% in a year \u2014 What technical experts",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "16 Nov 15:43",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "Tata Motors PV vs Eicher Motors: Which auto stock is set to race ahead, and which should you buy after Q2 results?",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "16 Nov 15:43",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Amber Enterprises shares resume losing run, tank over 8% after weak Q2 from peer Kaynes Technology. Is more fall ahead?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 15:43",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "TVS Supply Chain Solutions shares jump 17% after Q2 results, surge 24% in 2 weeks; what lies ahead? Key levels to watch",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "16 Nov 15:43",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Why Kaynes Technology shares crashed 20% to 52-week low? stock down 54% in a year | What stock market experts say",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 15:43",
+  "source": "BusinessStandard",
+  "category": "DEAL/ORDER",
+  "headline": "Capacit'e Infraprojects shares gain 6% on \u20b9670-crore CIDCO order win",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "16 Nov 15:43",
+  "source": "BusinessStandard",
+  "category": "EARNINGS",
+  "headline": "Patanjali Foods dips 4% as Q2 profit slips but analysts upbeat; here's why",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "16 Nov 15:43",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Mahindra Logistics shares plunge 14% after MD and CEO Hemant Sikka resigns",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 15:43",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "India's Paytm gets preliminary RBI nod for wallet licence; shares hit record high - Reuters",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "16 Nov 15:43",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "RBI fines MobiKwik Rs 9 lakh over non-compliance with wallet transfer limit, delayed fraud reporting - MediaNama",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 15:43",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Tata Motors PV shares plunge 7%, top Nifty loser as weak JLR margins, guidance cut weigh on outlook - TradingView",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 15:43",
+  "source": "GoogleNews",
+  "category": "DEAL/ORDER",
+  "headline": "Capacit'e Infraprojects shares gain 6% on \u20b9670-crore CIDCO order win - Business Standard",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "16 Nov 15:43",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "Avadhut Sathe moves SAT challenging SEBI order directing more than Rs 600 crore disgorgement - Moneycontrol.com",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 15:43",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Jefferies sees up to 19% upside in Paytm stock, says RBI nod for PPI services \u2018avenue for... - Moneycontrol.com",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "16 Nov 15:43",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Mahindra Logistics shares plunge 14% after MD and CEO Hemant Sikka resigns - Business Standard",
   "event": "yes",
   "hint": "SHORT-lean headline"
  }
