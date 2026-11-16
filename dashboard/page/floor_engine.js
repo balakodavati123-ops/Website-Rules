@@ -115,7 +115,7 @@
   };
   E.setLive = (on) => {
     const L = E.live; clearInterval(L.timer); L.timer = null; L.on = !!on;
-    if (on) { L.since = Date.now(); L.n = 0; E.pull(); L.timer = setInterval(liveTick, 60000); }
+    if (on) { L.since = Date.now(); L.n = 0; E.pull(); L.timer = setInterval(liveTick, 180000); }
     document.querySelectorAll('#btn-live').forEach((b) => b.setAttribute('aria-pressed', String(L.on))); dash.draw('fl_mode');
   };
 })();
