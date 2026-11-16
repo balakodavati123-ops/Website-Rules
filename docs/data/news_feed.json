@@ -3,70 +3,6 @@
   "time": "14 Nov 10:45",
   "source": "GoogleNews",
   "category": "RBI-POLICY",
-  "headline": "RBI may raise repo rate to 6% by February as inflation breaches upper band - Business Standard",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Paytm Set To Revive Wallet Business With RBI In-Principle Nod - Inc42",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Pratap Singh Gets RBI Nod to Take Charge at Fino Payments Bank - IMPACT Magazine",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Paytm gets RBI's in-principle nod to revive wallet business through new subsidiary - YourStory.com",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Paytm shares reclaim listing price for first time in five years; RBI nod for wallet business boosts... - Moneycontrol.com",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Paytm shares hit record high as RBI grants in-principle approval to operate wallet; stock up 49% YTD - Upstox",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Paytm gets preliminary RBI nod for wallet licence; shares hit record high - BusinessLine",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Fino Payments Bank gets RBI nod for Pratap Singh as MD and CEO - Adgully",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
   "headline": "Stock markets snap 3-day rally on rate hike fears, Sensex drops 318 pts - MillenniumPost",
   "event": "yes",
   "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
@@ -477,6 +413,70 @@
   "category": "CRASH/SHOCK",
   "headline": "Mahindra Logistics shares plunge 14% after MD and CEO Hemant Sikka resigns - Business Standard",
   "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 18:35",
+  "source": "ET",
+  "category": "RBI-POLICY",
+  "headline": "India bonds dip as elevated inflation fuels rate hike expectations",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "16 Nov 18:35",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "Swiggy vs Eternal: Which stock has the stronger growth and better earnings outlook after Q2 results?",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "16 Nov 18:35",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Nvidia stock plunge threatens US retirement savings: How a 30% decline could hit 401(k) investors",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 18:35",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "42% rally in 11 sessions: This jewellery stock resumes its bull run after upbeat Q2 results, hits nearly 2-year high",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "16 Nov 18:35",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty rises 147 points despite Asian sell-off; Banks, FMCG support Sensex - TradingView",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 18:35",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Sembcorp Green Infra Gets SEBI Nod for INR 3,750 Crore IPO - Energetica India Magazine",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "16 Nov 18:35",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Paytm wallet revival awaits final RBI nod and system audit - MediaNama",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "16 Nov 18:35",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "One Mobikwik Systems Fined \u20b99 Lakh by RBI for PPI and Fraud Reporting Violations - Moneylife",
+  "event": "no",
   "hint": "SHORT-lean headline"
  }
 ]
