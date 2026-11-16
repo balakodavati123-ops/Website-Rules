@@ -19,7 +19,7 @@
 
   const refresh = (ids) => ids.forEach((id) => { try { dash.refresh(id); } catch (e) { /* keeps its last answer */ } });
   const tick = () => { const t = ist(); if (['Sat', 'Sun'].includes(t.wd) || t.hhmm >= '15:35' || Date.now() - L.since > 7 * 3600000) { L.set(false); return; }
-    if (t.hhmm >= '09:15' && t.hhmm < '15:35') { L.n = (L.n || 0) + 1; refresh(FAST); if (L.n % 5 === 1) refresh(SLOW); }
+    if (t.hhmm >= '09:15' && t.hhmm < '15:35') { L.n = (L.n || 0) + 1; if (L.n % 2 === 1) refresh(FAST); if (L.n % 10 === 1) refresh(SLOW); }
     dash.draw('ls_chip'); };
   L.set = (on) => { clearInterval(L.timer); L.timer = null; L.on = !!on; if (on) { L.since = Date.now(); L.n = 0; refresh(FAST.concat(SLOW)); L.timer = setInterval(tick, 60000); }
     document.querySelectorAll('#btn-ls').forEach((b) => b.setAttribute('aria-pressed', String(L.on))); dash.draw('ls_chip'); };

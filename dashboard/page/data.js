@@ -123,7 +123,7 @@ dash.calc('strategy_pnl', { inputs: ['trade_book'], title: 'Profit and loss by s
 
 dash.calc('fo_book', { inputs: ['fo_ledger'], title: 'F&O paper positions', description: 'Each index-option structure with its legs, credit taken in, best and worst case at expiry, and the result once settled.',
   fn: (rows) => rows.map((r) => ({ id: r.id, strategy: r.strategy, underlying: r.underlying, expiry: r.expiry, booked: r.booked, status: r.status,
-    legs_txt: r.legs.map((l) => `${l.side === 'S' ? 'sell' : 'buy'} ${l.strike} ${l.kind} @ ${l.entry}`).join(' · '), lot: r.lot,
+    legs_txt: (Array.isArray(r.legs) ? r.legs : JSON.parse(r.legs || '[]')).map((l) => `${l.side === 'S' ? 'sell' : 'buy'} ${l.strike} ${l.kind} @ ${l.entry}`).join(' · '), lot: r.lot,
     credit_rs: r.credit_rs, max_gain_rs: r.max_gain_rs, max_loss_rs: r.max_loss_rs, settle_close: r.settle_close === '' ? null : r.settle_close, pnl_rs: r.status === 'OPEN' ? null : r.pnl_rs })).sort((a, b) => b.id - a.id) });
 
 dash.calc('book_totals', { inputs: ['trade_book', 'fo_book'], title: 'Paper profit and loss, all books', description: 'One row: unrealised profit or loss on open paper trades, booked profit or loss on closed ones, settled option structures, their total, and the counts behind them.',
