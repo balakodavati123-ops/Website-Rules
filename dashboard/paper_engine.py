@@ -36,6 +36,7 @@ PLAN = {
     "trend_ride": (0.05, None, 120, None, "sma50"),
     "rsi2_dip": (0.05, None, 10, None, "bounce"),
     "shock_dip": (0.10, None, 6, None, None),
+    "ema_cross_up_dip": (0.05, None, 60, None, "emacross"),
     "results_reaction": (0.05, None, 60, 3.0, None),
 }
 
@@ -146,6 +147,7 @@ def replay(row, provider):
     leave = (c < c.shift(1).rolling(10).min()).to_numpy() if crypto else None
     _, _, hold, trail, rule = (None, None, None, None, None) if crypto else plan(row["strategy"])
     sma50, sma5 = c.rolling(50).mean().to_numpy(), c.rolling(5).mean().to_numpy()
+    ema_down = (c.ewm(span=20, adjust=False).mean() < c.ewm(span=50, adjust=False).mean()).to_numpy()
     atr = None
     if trail and "High" in bars:
         tr = pd.concat([bars.High - bars.Low, (bars.High - c.shift(1)).abs(), (bars.Low - c.shift(1)).abs()], axis=1).max(axis=1)
@@ -168,6 +170,8 @@ def replay(row, provider):
             px, why = target, "target"
         elif rule == "sma50" and age > 1 and cl < sma50[i]:
             px, why = cl, "a close under the 50-day average"
+        elif rule == "emacross" and age > 1 and ema_down[i]:
+            px, why = cl, "the 20-day line crossed back under the 50-day"
         elif rule == "bounce" and age > 1 and cl > sma5[i]:
             px, why = cl, "the bounce over the 5-day average"
         elif not crypto and age >= hold:

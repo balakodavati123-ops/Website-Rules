@@ -187,6 +187,48 @@
         "drawdown 23% above 20%"
       ],
       "description": "EPS beat of 5%+ with a 2%+ price reaction, 5% stop, no fixed target: trail 3 ATR below the highest close"
+    },
+    "ema_cross_up": {
+      "trades": 167,
+      "final_equity": 110162,
+      "cagr": 0.019547847189228085,
+      "max_dd": 0.20549046838701712,
+      "win_rate": 0.23353293413173654,
+      "avg_R": 0.07188129754225275,
+      "t_stat": 0.3238067727074714,
+      "avg_hold": 24.62874251497006,
+      "avg_R_first_60pct": 0.12870721299256258,
+      "avg_R_last_40pct": -0.015079573071100165,
+      "trades_first": 101,
+      "trades_last": 66,
+      "status": "REJECTED",
+      "failed_criteria": [
+        "t-stat 0.32 below 2.0",
+        "not positive in both parts of the period",
+        "drawdown 21% above 20%"
+      ],
+      "description": "20/50-day EMA bullish cross, 5% stop, exit on the opposite cross"
+    },
+    "ema_cross_up_dip": {
+      "trades": 175,
+      "final_equity": 146907,
+      "cagr": 0.07997336303262492,
+      "max_dd": 0.21609616654927621,
+      "win_rate": 0.2057142857142857,
+      "avg_R": 0.2196086424767753,
+      "t_stat": 0.8953122455875607,
+      "avg_hold": 23.194285714285716,
+      "avg_R_first_60pct": 0.44401010934172375,
+      "avg_R_last_40pct": -0.07959331334315607,
+      "trades_first": 100,
+      "trades_last": 75,
+      "status": "PROBATION",
+      "failed_criteria": [
+        "t-stat 0.90 below 2.0",
+        "not positive in both parts of the period",
+        "drawdown 22% above 20%"
+      ],
+      "description": "Bullish 20/50 EMA cross after a 10%+ dip, 5% stop, exit on the opposite cross"
     }
   }
 }

@@ -33,7 +33,7 @@ def stock_signals(provider) -> list[dict]:
              "signal_date": str(bars.index[-1].date()), "signal_close": float(bars.Close.iloc[-1])}]
 
 
-PRICE_STRATEGIES = ["breakout_52w", "breakout_52w_trail", "trend_ride", "momentum_screen", "pullback_in_uptrend", "rsi2_dip"]
+PRICE_STRATEGIES = ["breakout_52w", "breakout_52w_trail", "trend_ride", "momentum_screen", "pullback_in_uptrend", "rsi2_dip", "ema_cross_up_dip"]
 
 
 def scan_signals(provider, per_strategy: int = 2) -> list[dict]:

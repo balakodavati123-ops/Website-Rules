@@ -92,6 +92,27 @@ def earnings_drift(df):
     return sur.clip(upper=50).where(ok), None
 
 
+def ema_cross_up(df):
+    """Two-line crossover: the 20-day exponential average crosses above the 50-day
+    one (a bullish cross), the way a chart reader sees it. Score = how deep the dip
+    was before the cross. Exit on the opposite cross."""
+    c = df["Close"]
+    e20, e50 = c.ewm(span=20, adjust=False).mean(), c.ewm(span=50, adjust=False).mean()
+    cross = (e20 > e50) & (e20.shift(1) <= e50.shift(1))
+    dip = 1 - c.rolling(20).min() / c.rolling(120).max()
+    return dip.where(cross), e20 < e50
+
+
+def ema_cross_up_dip(df):
+    """Same bullish cross, but only after a real dip: the close was at least 10% below
+    its 120-day high at some point in the 20 sessions before the cross."""
+    c = df["Close"]
+    e20, e50 = c.ewm(span=20, adjust=False).mean(), c.ewm(span=50, adjust=False).mean()
+    cross = (e20 > e50) & (e20.shift(1) <= e50.shift(1))
+    dip = 1 - c.rolling(20).min() / c.rolling(120).max()
+    return dip.where(cross & (dip >= 0.10)), e20 < e50
+
+
 @dataclass(frozen=True)
 class Strategy:
     name: str
@@ -114,6 +135,10 @@ STRATEGIES = {s.name: s for s in [
              "52-week closing high on high volume, 5% stop, 20% target"),
     Strategy("rsi2_dip", rsi2_dip, 0.05, None, 10,
              "Short dip in an uptrend, exit on bounce, 5% stop, max 10 sessions"),
+    Strategy("ema_cross_up", ema_cross_up, 0.05, None, 60,
+             "20/50-day EMA bullish cross, 5% stop, exit on the opposite cross"),
+    Strategy("ema_cross_up_dip", ema_cross_up_dip, 0.05, None, 60,
+             "Bullish 20/50 EMA cross after a 10%+ dip, 5% stop, exit on the opposite cross"),
     Strategy("trend_ride", trend_ride, 0.05, None, 120,
              "12-month momentum, 5% stop, exit below the 50-day average"),
     Strategy("breakout_52w_trail", breakout_52w, 0.05, None, 120,

@@ -4,7 +4,7 @@
    handling trades. Pulses show reports travelling up to the CEO. One drawing. */
 (function () {
   const { el, inr, PAL } = CD; const E = CD.ENG, TAU = Math.PI * 2;
-  const TEAMS = [['breakout_52w', '52-week Breakout'], ['breakout_52w_trail', 'Breakout, Trailing Exit'], ['trend_ride', 'Trend Following'], ['momentum_screen', 'Momentum'],
+  const TEAMS = [['breakout_52w', '52-week Breakout'], ['breakout_52w_trail', 'Breakout, Trailing Exit'], ['ema_cross_up_dip', 'EMA 20/50 Cross'], ['trend_ride', 'Trend Following'], ['momentum_screen', 'Momentum'],
     ['pullback_in_uptrend', 'Pullback'], ['rsi2_dip', 'Dip Buying'], ['results_reaction', 'Results Reaction'], ['donchian_20_10', 'Crypto and Commodities']];
   const ROLES = ['Market data', 'Price action', 'Volume', 'Trend', 'Fundamentals', 'Filings', 'Sentiment', 'Noise filter', 'Risk'];
 

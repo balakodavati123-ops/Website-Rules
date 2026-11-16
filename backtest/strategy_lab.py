@@ -201,6 +201,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--years", type=int, default=5)
     ap.add_argument("--cache", type=Path, default=None)
+    ap.add_argument("--only", nargs="*", default=None)
     args = ap.parse_args()
     data = fetch_universe(args.years, args.cache)
     n_earn = add_earnings(data, args.cache)
@@ -221,6 +222,8 @@ def main():
               "tickers": tradable, "criteria": CRITERIA, "benchmark_nifty": bench,
               "strategies": {}}
     for name, strat in STRATEGIES.items():
+        if args.only and name not in args.only:
+            continue
         r = simulate(data, strat, start)
         r.pop("trade_table", None)   # per-trade rows are used by confidence.py only
         ok, fails = verdict(r)
@@ -241,7 +244,7 @@ def main():
               f"hold {r.get('avg_hold', 0):.0f}d")
         for f in fails:
             print(f"    - {f}")
-    out = Path(__file__).resolve().parent / "approved_strategies.json"
+    out = Path(__file__).resolve().parent / ("approved_strategies.json" if not args.only else "ema_cross_results.json")
     out.write_text(json.dumps(report, indent=2))
     print(f"\nwrote {out}")
 
