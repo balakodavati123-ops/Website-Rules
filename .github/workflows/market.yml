@@ -32,6 +32,9 @@ jobs:
       - if: steps.gate.outputs.go == 'yes'
         run: pip install -q yfinance pandas numpy
       - if: steps.gate.outputs.go == 'yes'
+        env:
+          UPSTOX_TOKEN: ${{ secrets.UPSTOX_TOKEN }}
+          LOOP_SECONDS: "270"
         run: python backend/intraday.py
       - name: Save the data
         if: steps.gate.outputs.go == 'yes'

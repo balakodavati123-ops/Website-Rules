@@ -15,6 +15,8 @@ Usage: python backend/intraday.py
 from __future__ import annotations
 
 import json
+import os
+import time
 import re
 import sys
 from datetime import datetime, timedelta, timezone
@@ -149,8 +151,32 @@ def update_news_feed(now: datetime):
     f.write_text(json.dumps(feed[-60:], indent=1))
 
 
+def upstox_rows(token: str) -> list[dict]:
+    """Real-time snapshot of every NSE equity from Upstox's read-only market-data API (500 names per call)."""
+    import gzip, urllib.parse, urllib.request
+    hdr = {"Accept": "application/json", "User-Agent": "paper-desk/1.0"}
+    if token != "proxy-injected":      # in this sandbox the network proxy adds the real header itself
+        hdr["Authorization"] = f"Bearer {token}"
+    raw = urllib.request.urlopen("https://assets.upstox.com/market-quote/instruments/exchange/NSE.json.gz", timeout=60).read()
+    keys = [x["instrument_key"] for x in json.loads(gzip.decompress(raw)) if x.get("segment") == "NSE_EQ" and x.get("instrument_type") == "EQ"]
+    rows = []
+    for i in range(0, len(keys), 500):
+        q = urllib.parse.quote(",".join(keys[i:i + 500]), safe=",")
+        req = urllib.request.Request("https://api.upstox.com/v2/market-quote/quotes?instrument_key=" + q, headers=hdr)
+        data = json.loads(urllib.request.urlopen(req, timeout=60).read()).get("data", {})
+        for v in data.values():
+            last, net, oh = v.get("last_price"), v.get("net_change"), v.get("ohlc") or {}
+            if not last or net is None or not v.get("volume"):
+                continue
+            prev = last - net
+            if prev <= 0:
+                continue
+            rows.append({"symbol": v["symbol"], "price": float(last), "chg_pct": net / prev * 100, "day_high": float(oh.get("high") or last),
+                         "day_low": float(oh.get("low") or last), "volume": float(v["volume"])})
+    return rows
+
+
 def main():
-    import yfinance as yf
     DOCS.mkdir(parents=True, exist_ok=True)
     now = datetime.now(IST)
     status = {"updated_at": now.isoformat(timespec="seconds"), "updated_hm": now.strftime("%d %b %H:%M"), "state": "idle", "names": 0,
@@ -163,14 +189,27 @@ def main():
     bf = DOCS / "live_book.json"
     book = json.loads(bf.read_text()) if bf.exists() else {"day": "", "trades": [], "seen": {}, "seq": 0}
     if wd:
-        ticks = watch_symbols()
-        data = yf.download(ticks, period="5d", interval="5m", group_by="ticker", auto_adjust=False, threads=True, progress=False)
-        rows, day = bars_to_rows(data, ticks, now)
-        status.update(names=len(rows), state="running" if rows else "no fresh prices")
-        if rows:
-            news = filings_news()
-            step(book, day, now.strftime("%H:%M"), rows, news)
-            status["filings_checked"] = "yes" if news is not None else "no"
+        token = os.environ.get("UPSTOX_TOKEN", "").strip()
+        end = time.time() + (int(os.environ.get("LOOP_SECONDS", "0")) if token else 0)
+        news = filings_news()
+        while True:
+            now = datetime.now(IST)
+            if token:
+                rows, day = upstox_rows(token), now.strftime("%Y-%m-%d")
+                status["note"] = "All NSE equities from the Upstox market-data API, real time, polled every 30 seconds."
+            else:
+                import yfinance as yf
+                ticks = watch_symbols()
+                data = yf.download(ticks, period="5d", interval="5m", group_by="ticker", auto_adjust=False, threads=True, progress=False)
+                rows, day = bars_to_rows(data, ticks, now)
+            status.update(names=len(rows), state="running" if rows else "no fresh prices", updated_at=now.isoformat(timespec="seconds"), updated_hm=now.strftime("%d %b %H:%M:%S"))
+            if rows:
+                step(book, day, now.strftime("%H:%M"), rows, news)
+                status["filings_checked"] = "yes" if news is not None else "no"
+                bf.write_text(json.dumps(book, indent=1))
+            if time.time() + 30 >= end or mins(now.strftime("%H:%M")) > mins("15:40"):
+                break
+            time.sleep(30)
     else:
         status["state"] = "market closed"
     bf.write_text(json.dumps(book, indent=1))
