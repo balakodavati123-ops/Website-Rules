@@ -30,7 +30,10 @@ jobs:
           git add docs/data
           git diff --cached --quiet || { git commit -q -m "data: daily engines"; for i in 1 2 3; do git pull -q --rebase && git push -q && break || sleep 5; done; }
       - uses: actions/configure-pages@v5
+        continue-on-error: true
       - uses: actions/upload-pages-artifact@v3
+        continue-on-error: true
         with: { path: docs }
       - id: deploy
+        continue-on-error: true
         uses: actions/deploy-pages@v4
