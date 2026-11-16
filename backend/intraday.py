@@ -23,7 +23,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs" / "data"
 IST = timezone(timedelta(hours=5, minutes=30))
-C = dict(notional=8000.0, max_trades=4, move=2.0, stop=0.01, start=9 * 60 + 20, end=15 * 60 + 10, stock_cost=0.001, circuit=9.5)
+C = dict(notional=8000.0, max_trades=4, move=2.0, stop=0.01, start=9 * 60 + 20, end=15 * 60 + 10, stock_cost=0.001, circuit=9.5, news_move=0.6)
 NEG = {"MANAGEMENT CHANGE", "LEGAL/REGULATORY"}
 POS = {"ORDER/CONTRACT", "APPROVAL", "ACQUISITION/STAKE", "BONUS/SPLIT/BUYBACK"}
 
@@ -62,9 +62,16 @@ def step(book: dict, day: str, hhmm: str, rows: list[dict], news: dict) -> dict:
             continue
         up = r["chg_pct"] >= C["move"] and r["price"] >= 0.99 * r["day_high"]
         dn = r["chg_pct"] <= -C["move"] and r["price"] <= 1.01 * r["day_low"]
-        if not (up or dn):
-            continue
         n = news.get(r["symbol"], "")
+        lead = False
+        if not (up or dn):
+            # news-led entry: a fresh filing tagged positive/negative AND the price already moving that way near its extreme
+            if n == "positive" and r["chg_pct"] >= C["news_move"] and r["price"] >= 0.985 * r["day_high"]:
+                up = lead = True
+            elif n == "negative" and r["chg_pct"] <= -C["news_move"] and r["price"] <= 1.015 * r["day_low"]:
+                dn = lead = True
+            else:
+                continue
         if (up and n == "negative") or (dn and n == "positive"):
             book["seen"][r["symbol"]] = "conflict"
             continue
@@ -74,7 +81,7 @@ def step(book: dict, day: str, hhmm: str, rows: list[dict], news: dict) -> dict:
         p = r["price"]
         book["trades"].append({"id": book["seq"], "day": day, "time": hhmm, "kind": "stock", "symbol": r["symbol"], "side": side, "entry": p, "last": p,
                                "qty": int(C["notional"] // p), "stop": round(p * (1 - C["stop"] if up else 1 + C["stop"]), 2),
-                               "basis": "price + news" if n else "price only", "label": f"{r['symbol']} {side.lower()}", "status": "OPEN", "pnl_rs": 0, "exit": "", "why": ""})
+                               "basis": "news-led" if lead else ("price + news" if n else "price only"), "reason": (f"{n} filing today and price {r['chg_pct']:+.1f}% near the day {'high' if up else 'low'}" if lead else f"{r['chg_pct']:+.1f}% move near the day {'high' if up else 'low'}" + (f", {n} filing agrees" if n else ", no filing seen")), "label": f"{r['symbol']} {side.lower()}", "status": "OPEN", "pnl_rs": 0, "exit": "", "why": ""})
     return book
 
 
