@@ -1,62 +1,6 @@
 [
  {
   "time": "14 Nov 10:45",
-  "source": "RBI",
-  "category": "EARNINGS",
-  "headline": "Government Stock - Full Auction Results",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "RBI",
-  "category": "EARNINGS",
-  "headline": "Government Stock - Auction Results: Cut-off",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "India's Paytm gets preliminary RBI nod for wallet licence; shares hit record high - Reuters",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Stock markets snap three-day rally on rate hike fears; Sensex drops 318 points - The Hindu",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Temasek-backed Sembcorp Green Infra gets SEBI nod for \u20b93,750 crore IPO - ET EnergyWorld",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "RBI gives Paytm Payments Services in-principle approval for wallet, PPI issuance - bfsi.economictimes.indiatimes.com",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "India's Paytm gets preliminary RBI nod for wallet licence; shares hit record high - The Hindu",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
   "source": "GoogleNews",
   "category": "APPROVAL",
   "headline": "Paytm Gets RBI In-Principle Nod For Digital Wallet Licence, Moves Closer To Wallet Revival - BW Disrupt",
@@ -478,5 +422,61 @@
   "headline": "Razorpay IPO: Fintech player gets SEBI approval for public issue - Upstox",
   "event": "no",
   "hint": "LONG-lean headline"
+ },
+ {
+  "time": "16 Nov 11:05",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nvidia has worst week since Trump tariff selloff as Huang exits",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 11:05",
+  "source": "ET",
+  "category": "EARNINGS",
+  "headline": "Wall Street Week Ahead: Nvidia results, Anthropic IPO pose tests for tumultuous AI trade",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "16 Nov 11:05",
+  "source": "ET",
+  "category": "GEOPOLITICS",
+  "headline": "US Treasury chief says Fed should not hike rates over energy shock tied to Iran war",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "16 Nov 11:05",
+  "source": "ET",
+  "category": "APPROVAL",
+  "headline": "Razorpay, Sembcorp Green Infra get Sebi nod to float IPOs",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "16 Nov 11:05",
+  "source": "ET",
+  "category": "DEAL/ORDER",
+  "headline": "Tesla-SpaceX Merger: Musk eyes December deal announcement",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "16 Nov 11:05",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Mukul Agrawal portfolio stock J Kumar defies selloff, jumps 5% post Q2",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 11:05",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Park Medi World shares plummet 10% as Q2 profit tanks 31%, margins slide",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
  }
 ]
