@@ -1,126 +1,6 @@
 [
  {
   "time": "14 Nov 10:45",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Nvidia has worst week since Trump tariff selloff as Huang exits",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "ET",
-  "category": "EARNINGS",
-  "headline": "Wall Street Week Ahead: Nvidia results, Anthropic IPO pose tests for tumultuous AI trade",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "ET",
-  "category": "GEOPOLITICS",
-  "headline": "US Treasury chief says Fed should not hike rates over energy shock tied to Iran war",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "ET",
-  "category": "APPROVAL",
-  "headline": "Razorpay, Sembcorp Green Infra get Sebi nod to float IPOs",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "ET",
-  "category": "DEAL/ORDER",
-  "headline": "Tesla-SpaceX Merger: Musk eyes December deal announcement",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "Mint",
-  "category": "EARNINGS",
-  "headline": "Ramayana effect? Prime Focus Q2 results: Revenue rises to  \u20b91,410.17 crore; PAT climbs to  \u20b991.04 crore from  \u20b95.8 crore",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "Mint",
-  "category": "APPROVAL",
-  "headline": "Upcoming IPO: Razorpay gets SEBI nod for IPO launch: Top things to know about the issue",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "Mint",
-  "category": "EARNINGS",
-  "headline": "Warships, aircraft or missiles? GRSE vs HAL vs BDL: Which defence PSU wins the post-Q2 results race? Technical outlook",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "Mint",
-  "category": "EARNINGS",
-  "headline": "Up 17% in YTD! Small-cap hotel stock under  \u20b9200 jumps 4% after Q2 Results 2026; do you own?",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Mukul Agrawal portfolio stock J Kumar defies selloff, jumps 5% post Q2",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Park Medi World shares plummet 10% as Q2 profit tanks 31%, margins slide",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "BusinessStandard",
-  "category": "EARNINGS",
-  "headline": "Alkem shares fall 3% after Q2 results; MOFSL retains Neutral rating",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "BusinessStandard",
-  "category": "EARNINGS",
-  "headline": "Action Construction rallies 6%, nears 52-week high on healthy Q2 results",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "BusinessStandard",
-  "category": "RBI-POLICY",
-  "headline": "Nifty Bank, Auto, Realty skid 1% as inflation stokes RBI rate hike fears",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "BusinessStandard",
-  "category": "LEADER-EXIT",
-  "headline": "Wall Street edges up, Nvidia drops after CEO Jensen Huang resigns",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
   "source": "RBI",
   "category": "EARNINGS",
   "headline": "Government Stock - Full Auction Results",
@@ -414,5 +294,189 @@
   "headline": "Major Banks Raise Fixed Deposit Rates Following RBI's Repo Rate Hike - Rediff",
   "event": "yes",
   "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "ET",
+  "category": "EARNINGS",
+  "headline": "RHI Magnesita Q2 net profit jumps 62 pc to over Rs 62 cr",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Inox Wind shares crash: Why energy stock price is falling today? Tanks 9.17% post Q2, down 60% in 1 year - Still a buy?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Tata Motors PV shares crash: What led to auto stock 8% ramming, Nifty laggard; down 27% in 2026 - Buy, sell or hold?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "Stock to buy after Q2 Results 2026: Up 70% in YTD! Should you buy retail stock after strong guidance? Target, stop-loss",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Kaynes Technology shares tank 18% as Q2 PAT plunges 65%, margin shrinks",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Tata Motors PV shares plunge 9% after Q2 results; brokerages cut target",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Crypto's slow-motion selloff leaves investors weary as Bitcoin nears lows",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Bitcoin tumbles to four-month low as leveraged bets face mass liquidations",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty, Sensex open higher despite Wall Street selloff; TMPV leads losses - BusinessLine",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty 500: Belrise jumps 10% on profit growth, Kaynes Technology plunges 17% to 52-wk low on Q2 results - CNBC TV18 - LinkedIn",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "GoogleNews",
+  "category": "DEAL/ORDER",
+  "headline": "IDBI Bank unions urge RBI to withhold approval for proposed Fairfax stake sale - bfsi.economictimes.indiatimes.com",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "NBFCs see up to 15 bps rise in cost of funds as RBI rate hike feeds through - bfsi.economictimes.indiatimes.com",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Tata Motors PV shares plunge 7%, top Nifty loser as weak JLR margins, guidance cut weigh on outlook - Moneycontrol.com",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "RBI Pushes Stronger Safeguards Against Digital Payment Fraud - The 420.in",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "RBI's 6-hour reporting rule to help curb cyber threats, fraud in digital payments: Experts - The Times of India",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Tata Motors PV shares plunge 9% after Q2 results; brokerages cut target - Business Standard",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Markets fall in early trade after three-day rally; Sensex tumbles 460 points - The Hindu",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "As inflation stays elevated, RBI's Dec repo rate increase appears certain - Business Standard",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "RBI Fines MobiKwik \u20b99.00 Lakh Over Transfers and Fraud Reporting - Fincrime Central",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Kaynes Technology shares tank 18% as Q2 PAT plunges 65%, margin shrinks - Business Standard",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty 500: Belrise jumps 10% on profit growth, Kaynes Technology plunges 17% to 52-wk low on Q2 results - CNBC TV18",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "GoogleNews",
+  "category": "EARNINGS",
+  "headline": "Turtlemint Q2 FY27 Results | Oil India Q2 FY27 Results | Top Buzzing Stocks Today - Equitymaster",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "16 Nov 10:43",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Razorpay IPO: Fintech player gets SEBI approval for public issue - Upstox",
+  "event": "no",
+  "hint": "LONG-lean headline"
  }
 ]
