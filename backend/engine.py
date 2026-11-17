@@ -23,6 +23,7 @@ import open_fill as OF   # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = Path(os.environ.get("DESK_DOCS") or ROOT / "docs" / "data")
 IST = D.IST
+PUBLISH_EVERY = 45
 IDX = {"nifty": "NSE_INDEX|Nifty 50", "banknifty": "NSE_INDEX|Nifty Bank", "vix": "NSE_INDEX|India VIX"}
 NIFTY = IDX["nifty"]
 
@@ -74,6 +75,28 @@ def close_stale(eq: dict, xb: dict, today: str) -> None:
             D.finish(t, t["last"], "carried over: closed late at the last price", now, t["pnl_rs"])
 
 
+def publish() -> None:
+    """Push a snapshot of docs/data to the `data` branch (one fresh commit, force-pushed, so history never grows).
+    The live page reads it from raw.githubusercontent.com, so it stays current while a long run is still going."""
+    tok, repo = os.environ.get("GITHUB_TOKEN"), os.environ.get("GITHUB_REPOSITORY")
+    if not (tok and repo):
+        return
+    import shutil
+    import subprocess
+    import tempfile
+    d = Path(tempfile.mkdtemp())
+    try:
+        for f in DOCS.glob("*.json"):
+            shutil.copy(f, d / f.name)
+        git = lambda *a: subprocess.run(["git", "-c", "user.name=desk-bot", "-c", "user.email=desk-bot@users.noreply.github.com", *a], cwd=d, check=True, capture_output=True, text=True)
+        git("init", "-q"); git("add", "-A"); git("commit", "-q", "-m", "live data")
+        git("push", "-q", "-f", f"https://x-access-token:{tok}@github.com/{repo}.git", "HEAD:refs/heads/data")
+    except Exception as e:
+        print("publish failed:", str(e)[:200].replace(tok, "***"))
+    finally:
+        shutil.rmtree(d, ignore_errors=True)
+
+
 def run() -> None:
     DOCS.mkdir(parents=True, exist_ok=True)
     token = os.environ.get("UPSTOX_TOKEN", "").strip()
@@ -85,6 +108,20 @@ def run() -> None:
     news, status, i = I.filings_news(), {"desks": {}}, 0
     mcx_c: list = []
     filled = False
+    def persist() -> None:
+        save("live_book.json", eq)
+        xb["trades"] = [t for t in xb["trades"] if t["status"] == "OPEN" or t["id"] not in archive]
+        save("desk_book.json", xb)
+        allt = list(archive.values()) + [t for t in unify_equity(eq) + xb["trades"] if t["status"] == "OPEN"]
+        allt.sort(key=lambda t: (t["day"], t["opened"]), reverse=True)
+        save("trade_archive.json", sorted((t for t in archive.values()), key=lambda t: (t["day"], t["opened"]))[-4000:])
+        save("all_trades.json", allt[:3000])
+        stats = D.learn(list(archive.values()))
+        save("strategy_stats.json", stats)
+        status["open"] = sum(t["status"] == "OPEN" for t in allt)
+        save("live_status.json", status)
+
+    last_pub = 0.0
     while True:
         now = datetime.now(IST)
         today, hhmm, ses = now.strftime("%Y-%m-%d"), now.strftime("%H:%M"), sessions(now)
@@ -153,20 +190,15 @@ def run() -> None:
         status.update(updated_at=now.isoformat(timespec="seconds"), updated_hm=now.strftime("%d %b %H:%M:%S"), loops=i + 1, sessions=ses,
                       note="Real-time Upstox prices for equities, NIFTY options and MCX; Kraken for crypto. Paper trades only." if token else "No Upstox token: delayed fallback prices.")
         i += 1
+        persist()
+        if time.time() - last_pub >= PUBLISH_EVERY:
+            publish()
+            last_pub = time.time()
         if time.time() + 15 >= end:
             break
         time.sleep(15)
-    save("live_book.json", eq)
-    xb["trades"] = [t for t in xb["trades"] if t["status"] == "OPEN" or t["id"] not in archive]
-    save("desk_book.json", xb)
-    allt = list(archive.values()) + [t for t in unify_equity(eq) + xb["trades"] if t["status"] == "OPEN"]
-    allt.sort(key=lambda t: (t["day"], t["opened"]), reverse=True)
-    save("trade_archive.json", sorted((t for t in archive.values()), key=lambda t: (t["day"], t["opened"]))[-4000:])
-    save("all_trades.json", allt[:3000])
-    stats = D.learn(list(archive.values()))
-    save("strategy_stats.json", stats)
-    status["open"] = sum(t["status"] == "OPEN" for t in allt)
-    save("live_status.json", status)
+    persist()
+    publish()
     print(status["updated_hm"], status["desks"], "open", status["open"], "closed", len(archive))
 
 

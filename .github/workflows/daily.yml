@@ -5,7 +5,7 @@ on:
     - cron: "45 2 * * 1-5"          # 08:15 IST
   workflow_dispatch:
 concurrency:
-  group: desk
+  group: desk-daily
   cancel-in-progress: false
 permissions:
   contents: write
@@ -28,7 +28,7 @@ jobs:
         run: |
           git config user.name "desk-bot"; git config user.email "desk-bot@users.noreply.github.com"
           git add docs/data
-          git diff --cached --quiet || { git commit -q -m "data: daily engines"; for i in 1 2 3; do git pull -q --rebase && git push -q && break || sleep 5; done; }
+          git diff --cached --quiet || { git commit -q -m "data: daily engines"; for i in 1 2 3; do git pull -q --rebase -X theirs && git push -q && break || sleep 5; done; }
       - uses: actions/configure-pages@v5
         continue-on-error: true
       - uses: actions/upload-pages-artifact@v3

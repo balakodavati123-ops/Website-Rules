@@ -245,8 +245,8 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
             continue
         net = sum(l["entry"] if l["side"] == "S" else -l["entry"] for l in legs)        # + credit, - debit (points per unit)
         base = abs(net)
-        if base < 3 or (risk == "fixed" and net <= 0):
-            continue
+        if base < 3 or (risk == "fixed" and (net <= 0 or net < 0.12 * (p["width"] or 1))):
+            continue                          # a fixed-return structure must pay at least 12% of its width, or the odds are bad
         lot = ctx["lot"]
         gain = (net if net > 0 else (p["width"] - base if p["width"] else None))
         loss = ((p["width"] - net) if (risk == "fixed") else base if net < 0 else None)

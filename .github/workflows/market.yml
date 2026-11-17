@@ -1,54 +1,62 @@
-# Intraday paper desk: every 5 minutes in NSE hours (Mon-Fri). No Claude, no browser needed.
+# The live desk. One long run loops for about 5 hours 40 minutes, reading real-time prices every 15 seconds and
+# publishing a snapshot to the `data` branch about every 45 seconds. When it ends it starts the next run itself, so the
+# desk keeps going without anyone watching. GitHub's own 5-minute timer is unreliable on a young repository, so it is
+# only a backup starter here.
 name: market-hours
 on:
   schedule:
-    - cron: "*/5 3-18 * * 1-5"     # 08:30 to 23:59 IST on weekdays: equities, F&O, MCX and crypto; each desk keeps its own hours
-    - cron: "0 * * * 0,6"          # weekends: crypto only
+    - cron: "7 3-18 * * 1-5"       # backup starter, hourly on weekdays
+    - cron: "7 */3 * * 0,6"        # weekends (crypto only)
   workflow_dispatch:
 concurrency:
-  group: desk
+  group: desk-live
   cancel-in-progress: false
 permissions:
   contents: write
   pages: write
   id-token: write
+  actions: write
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 355
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - name: Skip outside market hours
-        id: gate
-        run: echo "go=yes" >> $GITHUB_OUTPUT        # every desk decides for itself whether its market is open
+      - run: echo "T0=$(date +%s)" >> $GITHUB_ENV
       - uses: actions/checkout@v4
-        if: steps.gate.outputs.go == 'yes'
       - uses: actions/setup-python@v5
-        if: steps.gate.outputs.go == 'yes'
         with: { python-version: "3.11", cache: pip }
-      - if: steps.gate.outputs.go == 'yes'
-        run: pip install -q yfinance pandas numpy
-      - if: steps.gate.outputs.go == 'yes'
+      - run: pip install -q yfinance pandas numpy
+      - name: Resume the live books from the data branch
+        run: |
+          if git fetch -q --depth=1 origin data 2>/dev/null; then
+            for f in live_book desk_book trade_archive strategy_stats; do git show FETCH_HEAD:$f.json > docs/data/$f.json 2>/dev/null || true; done
+          fi
+      - name: Run the desks
         env:
           UPSTOX_TOKEN: ${{ secrets.UPSTOX_TOKEN }}
-          LOOP_SECONDS: "240"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LOOP_SECONDS: "20400"
         run: python backend/engine.py
-      - name: Save the data
-        if: steps.gate.outputs.go == 'yes'
+      - name: Save state to the branch
+        if: always()
         run: |
           git config user.name "desk-bot"; git config user.email "desk-bot@users.noreply.github.com"
           git add docs/data
-          git diff --cached --quiet || { git commit -q -m "data: market-hours run"; for i in 1 2 3; do git pull -q --rebase && git push -q && break || sleep 5; done; }
+          git diff --cached --quiet || { git commit -q -m "data: live desk state"; for i in 1 2 3; do git pull -q --rebase -X theirs && git push -q && break || sleep 5; done; }
       - uses: actions/configure-pages@v5
         continue-on-error: true
-        if: steps.gate.outputs.go == 'yes'
       - uses: actions/upload-pages-artifact@v3
         continue-on-error: true
-        if: steps.gate.outputs.go == 'yes'
         with: { path: docs }
       - id: deploy
         continue-on-error: true
-        if: steps.gate.outputs.go == 'yes'
         uses: actions/deploy-pages@v4
+      - name: Start the next run
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ $(( $(date +%s) - T0 )) -gt 600 ]; then gh workflow run market.yml --ref "${{ github.ref_name }}"; else echo "run was short, not chaining"; fi
