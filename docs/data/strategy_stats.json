@@ -24,6 +24,18 @@
   "verdict": "COLLECTING"
  },
  {
+  "desk": "CRYPTO",
+  "strategy": "crypto_dip_bounce",
+  "closed": 1,
+  "wins": 1,
+  "win_rate": 100.0,
+  "pnl_rs": 260.67,
+  "avg_rs": 260.67,
+  "t_stat": 0,
+  "confidence": 50.0,
+  "verdict": "COLLECTING"
+ },
+ {
   "desk": "EQUITY",
   "strategy": "price_only",
   "closed": 8,

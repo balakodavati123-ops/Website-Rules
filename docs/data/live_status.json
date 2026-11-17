@@ -3,15 +3,15 @@
   "commodities": "4 MCX futures, real time",
   "crypto": "6 coins from Kraken, real time"
  },
- "updated_at": "2026-11-17T22:45:59+05:30",
- "updated_hm": "17 Nov 22:45:59",
- "loops": 3009,
+ "updated_at": "2026-11-18T04:26:39+05:30",
+ "updated_hm": "18 Nov 04:26:39",
+ "loops": 3405,
  "sessions": {
   "equity": false,
   "fno": false,
-  "mcx": true,
+  "mcx": false,
   "crypto": true
  },
  "note": "Real-time Upstox prices for equities, NIFTY options and MCX; Kraken for crypto. Paper trades only.",
- "open": 17
+ "open": 19
 }

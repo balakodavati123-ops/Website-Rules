@@ -1,125 +1,5 @@
 [
  {
-  "time": "16 Nov 15:43",
-  "source": "GoogleNews",
-  "category": "DEAL/ORDER",
-  "headline": "Capacit'e Infraprojects shares gain 6% on \u20b9670-crore CIDCO order win - Business Standard",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "16 Nov 15:43",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "Avadhut Sathe moves SAT challenging SEBI order directing more than Rs 600 crore disgorgement - Moneycontrol.com",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 15:43",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Jefferies sees up to 19% upside in Paytm stock, says RBI nod for PPI services \u2018avenue for... - Moneycontrol.com",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "16 Nov 15:43",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Mahindra Logistics shares plunge 14% after MD and CEO Hemant Sikka resigns - Business Standard",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 18:35",
-  "source": "ET",
-  "category": "RBI-POLICY",
-  "headline": "India bonds dip as elevated inflation fuels rate hike expectations",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "16 Nov 18:35",
-  "source": "Mint",
-  "category": "EARNINGS",
-  "headline": "Swiggy vs Eternal: Which stock has the stronger growth and better earnings outlook after Q2 results?",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "16 Nov 18:35",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "Nvidia stock plunge threatens US retirement savings: How a 30% decline could hit 401(k) investors",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 18:35",
-  "source": "Mint",
-  "category": "EARNINGS",
-  "headline": "42% rally in 11 sessions: This jewellery stock resumes its bull run after upbeat Q2 results, hits nearly 2-year high",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "16 Nov 18:35",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Nifty rises 147 points despite Asian sell-off; Banks, FMCG support Sensex - TradingView",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 18:35",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Sembcorp Green Infra Gets SEBI Nod for INR 3,750 Crore IPO - Energetica India Magazine",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "16 Nov 18:35",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Paytm wallet revival awaits final RBI nod and system audit - MediaNama",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "16 Nov 18:35",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "One Mobikwik Systems Fined \u20b99 Lakh by RBI for PPI and Fraud Reporting Violations - Moneylife",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "17 Nov 11:21",
-  "source": "ET",
-  "category": "RBI-POLICY",
-  "headline": "Indian bonds gain as oil slide eases rate hike concerns",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "17 Nov 11:21",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Global Market Today: Asian stocks fall as Wall Street selloff deepens ahead of Nvidia earnings",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "17 Nov 11:21",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "Why Silver rates crashed from record high of  \u20b94 lakh per kg price to below  \u20b91.75 lakh? Experts explain 3 key reasons",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
   "time": "17 Nov 11:21",
   "source": "Mint",
   "category": "DEAL/ORDER",
@@ -478,5 +358,125 @@
   "headline": "RBI may hike repo rate by 25 bps each during next 2 MPC reviews as inflation rises: Report - cfo.economictimes.indiatimes.com",
   "event": "yes",
   "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "17 Nov 22:56",
+  "source": "BusinessStandard",
+  "category": "APPROVAL",
+  "headline": "Meganet, Rediff.com file IPO papers; Advanced Sys-Tek gets Sebi nod",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 23:01",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Meganet, Rediff.com file IPO papers; Advanced Sys-Tek gets Sebi nod - Business Standard",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 23:07",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Dow tumbles over 600 pts ahead of Nvidia Q3 earnings: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "17 Nov 23:52",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Dow tumbles over 750 pts ahead of Nvidia Q3 earnings: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 00:02",
+  "source": "Mint",
+  "category": "APPROVAL",
+  "headline": "Upcoming IPO: Advanced Sys-Tek gets Sebi nod for public issue \u2013 fundraising, fresh equity issue, OFS & other key facts",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "18 Nov 00:22",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Dow tumbles over 700 pts ahead of Nvidia Q3 earnings: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 00:53",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Dow tumbles over 800 pts ahead of Nvidia Q3 earnings: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 01:33",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Dow tumbles over 850 pts ahead of Nvidia Q3 earnings: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 01:53",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Dow crashes over 1,000 pts ahead of Nvidia Q3 earnings: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 02:03",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Dow crashes over 1,000 pts as jittery AI stocks drag US market lower: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 02:29",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "US yields ease as equities drop before Nvidia results",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "18 Nov 02:34",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Dow crashes over 900 pts as jittery AI stocks drag US market lower: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 02:54",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Dow plunges over 850 points as Nvidia turmoil deepens selloff in AI stocks: Stock Market Highlights",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 02:59",
+  "source": "ET",
+  "category": "RBI-POLICY",
+  "headline": "Indian bonds gain as oil slide eases rate hike concerns",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "18 Nov 04:25",
+  "source": "GoogleNews",
+  "category": "GEOPOLITICS",
+  "headline": "Nifty reclaims pre-war levels intraday as Indian stocks lead Asia with 10% monthly gain - Livemint",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
  }
 ]
