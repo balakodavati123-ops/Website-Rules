@@ -1,13 +1,11 @@
 {
  "desks": {
-  "equity": "2760 stocks, real time",
   "commodities": "4 MCX futures, real time",
-  "fno": "NIFTY 25387.4 , expiry 2026-11-17, 1 chain(s), real time",
   "crypto": "6 coins from Kraken, real time"
  },
- "updated_at": "2026-11-17T17:05:29+05:30",
- "updated_hm": "17 Nov 17:05:29",
- "loops": 2440,
+ "updated_at": "2026-11-17T22:45:59+05:30",
+ "updated_hm": "17 Nov 22:45:59",
+ "loops": 3009,
  "sessions": {
   "equity": false,
   "fno": false,
@@ -15,5 +13,5 @@
   "crypto": true
  },
  "note": "Real-time Upstox prices for equities, NIFTY options and MCX; Kraken for crypto. Paper trades only.",
- "open": 16
+ "open": 17
 }
