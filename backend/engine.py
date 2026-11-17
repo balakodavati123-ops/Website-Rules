@@ -18,6 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import desks as D        # noqa: E402
 import intraday as I     # noqa: E402
 import upstox as U       # noqa: E402
+import open_fill as OF   # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = Path(os.environ.get("DESK_DOCS") or ROOT / "docs" / "data")
@@ -49,6 +50,13 @@ def unify_equity(book: dict) -> list[dict]:
     return out
 
 
+def OF_opens(token: str, led: list[dict]) -> dict:
+    want = {r["symbol"] for r in led if r["status"] == "PENDING" and r["market"] == "NSE"}
+    keys = {x["trading_symbol"]: x["instrument_key"] for x in U.instruments("NSE") if x.get("segment") == "NSE_EQ" and x.get("instrument_type") == "EQ" and x["trading_symbol"] in want}
+    q = U.quotes(list(keys.values()), token)
+    return {s: float((q.get(k, {}).get("ohlc") or {}).get("open") or 0) or None for s, k in keys.items()}
+
+
 def sessions(now: datetime) -> dict:
     t, wk = D.mins(now.strftime("%H:%M")), now.weekday() < 5
     return {"equity": wk and D.mins("09:10") <= t <= D.mins("15:40"), "fno": wk and D.mins("09:15") <= t <= D.mins("15:30"),
@@ -76,6 +84,7 @@ def run() -> None:
     paused = {s["strategy"] for s in load("strategy_stats.json", []) if s["verdict"] == "PAUSED"}
     news, status, i = I.filings_news(), {"desks": {}}, 0
     mcx_c: list = []
+    filled = False
     while True:
         now = datetime.now(IST)
         today, hhmm, ses = now.strftime("%Y-%m-%d"), now.strftime("%H:%M"), sessions(now)
@@ -100,6 +109,18 @@ def run() -> None:
                 info["equity"] = f"error: {e}"
         elif ses["equity"]:
             info["equity"] = "no token: Yahoo fallback runs in intraday.py"
+        if token and ses["equity"] and hhmm >= "09:16" and not filled:
+            try:                                   # pending paper orders fill at today's real open, not a day late
+                lf, rf = DOCS / "paper_ledger.json", ROOT / "dashboard" / "data" / "desk_rules.json"
+                if lf.exists() and rf.exists():
+                    led = json.loads(lf.read_text())
+                    n = OF.fill_pending(led, json.loads(rf.read_text()), OF_opens(token, led), now.date(), (q_idx.get("NSE_INDEX|India VIX") or {}).get("last_price"))
+                    if n:
+                        lf.write_text(json.dumps(led, indent=1))
+                    info["paper_orders"] = f"{n} pending orders filled or expired at today's open"
+                filled = True
+            except Exception as e:
+                info["paper_orders"] = f"error: {e}"
         if token and ses["mcx"]:
             try:
                 mcx_c = mcx_c or D.mcx_contracts(U.instruments("MCX"), now.date())
