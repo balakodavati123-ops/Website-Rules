@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Trading Desk</title><meta name="color-scheme" content="dark">
+<title>Balaji's Trading Desk</title><meta name="color-scheme" content="dark">
 <style>
 :root{--bg:#060a13;--panel:#0c1424;--panel2:#101b30;--line:#1c2c48;--fg:#e8eef9;--mut:#8ea3c4;--dim:#5b7093;--blue:#4f8cff;--cyan:#29d3ee;--green:#2de3a5;--red:#ff5f75;--amber:#ffb64a;--violet:#a184ff;
 --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
@@ -30,11 +30,19 @@ td{padding:7px 8px;border-bottom:1px solid #14223a;vertical-align:top}tr:last-ch
 .bar .t span{position:absolute;right:6px;top:1px;font:11px var(--mono)}
 .row{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:9px 11px;background:#0b1426;border:1px solid var(--line);border-radius:10px;margin-bottom:8px}.row .h{font-weight:600}.row .w{color:var(--mut);font-size:11.5px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}.mc{background:#0b1426;border:1px solid var(--line);border-radius:10px;padding:9px 11px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}.tabs button{font:inherit;color:var(--mut);background:#0b1730;border:1px solid #24385a;border-radius:999px;padding:5px 13px;cursor:pointer}.tabs button.on{color:#fff;border-color:var(--blue);background:#12295a}
+.dk{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-bottom:12px}.dk .kpi .s{color:var(--mut);font-size:11px;margin-top:4px}.rc{color:var(--dim);font-size:10.5px}.why{color:var(--mut);font-size:11.5px;max-width:420px;white-space:normal}
 footer{color:var(--dim);font-size:11.5px;margin-top:6px}svg{display:block;width:100%;height:auto}
 </style></head><body><div class="wrap">
-<header><div class="logo"></div><div><h1>Trading Desk</h1><small>Paper trading, running on its own. Nothing here places a real order.</small></div>
+<header><div class="logo"></div><div><h1>Balaji's Trading Desk</h1><small>Paper trading, running on its own. Nothing here places a real order.</small></div>
 <div class="sp"><span class="chip wait" id="chip"><i></i><span>loading</span></span><span class="chip" id="chip2"><i></i><span>—</span></span></div></header>
 <div class="kpis" id="kpis"></div>
+<div class="dk" id="dk"></div>
+<div class="card"><h2>All desks, one list <em id="all-note">Equities, F&amp;O, commodities and crypto trade as one team; every trade says why it was taken</em></h2>
+<div class="tabs" id="tabs"></div><div class="tw"><table><thead><tr><th>Opened</th><th>Desk</th><th>Trade</th><th>Type</th><th>Status</th><th class="r">Entry</th><th class="r">Now / exit</th><th class="r">P/L</th><th>Why it was taken · why it closed</th></tr></thead><tbody id="all"></tbody></table></div>
+<p class="note">Paper money only. Equities and MCX use 6-month-tested rules of thumb, not proven edges: each strategy is judged below on its own closed trades.</p></div>
+<div class="card"><h2>Scoreboard: what the agents have learned <em>a strategy that loses over 30 trades is paused by itself</em></h2><div class="tw"><table><thead><tr><th>Desk</th><th>Strategy</th><th class="r">Closed</th><th class="r">Win rate</th><th class="r">Avg per trade</th><th class="r">Total</th><th class="r">Confidence</th><th>Verdict</th></tr></thead><tbody id="score"></tbody></table></div>
+<p class="note">COLLECTING: under 20 closed trades, no judgement yet. WORKING / WEAK: average per trade above or below zero. PAUSED: the desk stops opening it. READY FOR REVIEW: 100+ closed trades and 98% confidence the average is above zero; it still needs your own decision before any real money.</p></div>
 <div class="card"><h2>Live session <em id="live-note">—</em></h2><div class="tw"><table><thead><tr><th>Time</th><th>Trade</th><th>Based on</th><th>Status</th><th class="r">Entry</th><th class="r">Now / exit</th><th class="r">P/L</th></tr></thead><tbody id="live"></tbody></table></div>
 <p class="note">Longs a stock up 2% or more near its day high, shorts one down 2% or more near its day low, at least ₹10 crore traded; a filing that points the other way cancels the trade. Stop 1%, at most four trades, everything closed at 15:10. Prices are Yahoo Finance's, delayed by up to about 15 minutes, and this page updates every few minutes, not tick by tick. A rise on volume had no edge in the 5-year test: this book exists to measure that.</p></div>
 <div class="grid2"><div class="card"><h2>Strategy league <em>each strategy trades its own paper book</em></h2><div class="bars" id="league"></div><p class="note">Profit or loss in rupees on closed and open paper trades. Judge a strategy on dozens of closed trades, not a few days.</p></div>
@@ -60,8 +68,6 @@ const openPnl=(t)=>(t.side==='SHORT'?-1:1)*(t.last-t.entry)*t.qty;
 function ago(iso){if(!iso)return null;const s=(Date.now()-new Date(iso).getTime())/1000;return s<90?Math.round(s)+' s ago':s<5400?Math.round(s/60)+' min ago':s<129600?Math.round(s/3600)+' h ago':Math.round(s/86400)+' d ago'}
 async function draw(){
  const [book,status,led,eq,sig,les,fo,news,res,world,appr]=await Promise.all(['live_book','live_status','paper_ledger','paper_equity','signal_ledger','signal_lessons','fo_ledger','news_feed','results_filed','world_markets','approved_strategies'].map(get));
- const age=status&&ago(status.updated_at);$('chip').className='chip '+(status&&status.state==='running'?'live':status&&status.state==='market closed'?'wait':'off');
- $('chip').lastChild.textContent=status?`${status.state} · updated ${age}`:'no data yet';$('chip2').lastChild.textContent=status?'Yahoo prices, up to ~15 min delayed':'—';
  const tr=(book&&book.trades)||[],lpl=tr.reduce((a,t)=>a+(t.status==='OPEN'?openPnl(t):t.pnl_rs),0);
  const L=led||[],closed=L.filter((r)=>done.includes(r.status)),realised=closed.reduce((a,r)=>a+(+r.pnl_rs||0),0),unreal=L.filter((r)=>r.status==='OPEN').reduce((a,r)=>a+(+r.unrealized_rs||0),0);
  const eqv=eq&&eq.length?eq[eq.length-1].equity:null;
@@ -86,5 +92,20 @@ async function draw(){
  $('results').innerHTML=res&&res.length?res.map((x)=>`<tr><td class="num dim">${esc(x.time)}</td><td><b>${esc(x.symbol)}</b> <span class="dim">${esc(x.company)}</span></td></tr>`).join(''):`<tr><td class="dim">No results filed since the last close.</td></tr>`;
  $('world').innerHTML=world?world.map((x)=>`<div class="mc"><div class="mut" style="font-size:11px">${esc(x.group)} · ${esc(x.name)}</div><div class="num" style="font-size:16px;font-weight:650">${x.last==null?'—':num(x.last)}</div><div class="num ${cl(x.chg_pct)}">${x.chg_pct==null?'':pc(x.chg_pct,2)}</div></div>`).join(''):'';
 }
+
+let TAB='ALL';const DESKS={EQUITY:'Equities','FNO':'F&O',COMMODITY:'Commodities',CRYPTO:'Crypto'};
+async function drawDesks(){
+ const [all,stats,st]=await Promise.all(['all_trades','strategy_stats','live_status'].map(get));const A=all||[];
+ if(st&&st.updated_at){$('chip').className='chip live';$('chip').lastChild.textContent=`desks running · updated ${ago(st.updated_at)}`;$('chip2').lastChild.textContent=(st.note||'').slice(0,60)}
+ const today=new Date(Date.now()+5.5*3600e3).toISOString().slice(0,10);
+ $('dk').innerHTML=Object.keys(DESKS).map((d)=>{const T=A.filter((t)=>t.desk===d),c=T.filter((t)=>t.status!=='OPEN'),o=T.filter((t)=>t.status==='OPEN'),w=c.filter((t)=>t.pnl_rs>0).length,
+  tp=T.filter((t)=>t.day===today).reduce((a,t)=>a+(+t.pnl_rs||0),0),tot=T.reduce((a,t)=>a+(+t.pnl_rs||0),0);
+  return `<div class="kpi"><div class="l">${DESKS[d]}</div><div class="v">${pl(Math.round(tp))}</div><div class="s">today · ${o.length} open · ${c.length} closed${c.length?' · '+Math.round(w/c.length*100)+'% won':''}<br>all time ${pl(Math.round(tot))}</div>${st&&st.desks&&st.desks[{EQUITY:'equity',FNO:'fno',COMMODITY:'commodities',CRYPTO:'crypto'}[d]]?`<div class="rc">${esc(st.desks[{EQUITY:'equity',FNO:'fno',COMMODITY:'commodities',CRYPTO:'crypto'}[d]])}</div>`:''}</div>`}).join('');
+ $('tabs').innerHTML=['ALL',...Object.keys(DESKS)].map((d)=>`<button class="${TAB===d?'on':''}" data-d="${d}">${d==='ALL'?'All':DESKS[d]}</button>`).join('');
+ $('tabs').querySelectorAll('button').forEach((b)=>b.onclick=()=>{TAB=b.dataset.d;drawDesks()});
+ const R=A.filter((t)=>TAB==='ALL'||t.desk===TAB).slice(0,150);
+ $('all').innerHTML=R.length?R.map((t)=>{const o=t.status==='OPEN';return `<tr><td class="num">${esc(t.day.slice(5))} ${esc(t.opened)}</td><td>${DESKS[t.desk]}</td><td>${esc(t.label)}${t.legs?`<div class="rc">${t.legs.map((l)=>`${l.side==='S'?'sell':'buy'} ${l.strike} ${l.kind} @${l.entry}`).join(' · ')}</div>`:''}</td><td><span class="rc">${esc(t.strategy.replace(/_/g,' '))}</span><br>${esc(t.risk_class||'')}${t.max_loss_rs?`<div class="rc">max loss ${inr(t.max_loss_rs)} · margin ${inr(t.margin_rs)}</div>`:''}</td><td>${tg(o?'OPEN':t.why==='stop'?'STOPPED':t.status,o?'b':t.status==='WIN'?'g':'r')}</td><td class="num r">${num(t.entry)}</td><td class="num r">${num(o?t.last:t.exit)}</td><td class="num r">${pl(t.pnl_rs)}</td><td class="why">${esc(t.reason||'')}${t.why?`<br><span class="dim">closed: ${esc(t.why)}</span>`:''}</td></tr>`}).join(''):`<tr><td colspan="9" class="dim">No trades yet. Desks open trades only in their own market hours.</td></tr>`;
+ const S=stats||[];$('score').innerHTML=S.length?S.map((x)=>`<tr><td>${DESKS[x.desk]||x.desk}</td><td>${esc(x.strategy.replace(/_/g,' '))}</td><td class="num r">${x.closed}</td><td class="num r">${x.win_rate}%</td><td class="num r">${pl(x.avg_rs)}</td><td class="num r">${pl(x.pnl_rs)}</td><td class="num r">${x.confidence}%</td><td>${tg(x.verdict,x.verdict==='WORKING'||x.verdict==='READY FOR REVIEW'?'g':x.verdict==='PAUSED'||x.verdict==='WEAK'?'r':'a')}</td></tr>`).join(''):`<tr><td colspan="8" class="dim">Closed trades will appear here after the first session.</td></tr>`}
+drawDesks();setInterval(drawDesks,15000);
 draw();setInterval(draw,60000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)draw()});
 </script></body></html>

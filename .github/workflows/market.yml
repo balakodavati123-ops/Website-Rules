@@ -2,7 +2,8 @@
 name: market-hours
 on:
   schedule:
-    - cron: "*/5 3-10 * * 1-5"     # 08:30 to 16:30 IST; the script itself acts only 09:10-15:40 IST
+    - cron: "*/5 3-18 * * 1-5"     # 08:30 to 23:59 IST on weekdays: equities, F&O, MCX and crypto; each desk keeps its own hours
+    - cron: "0 * * * 0,6"          # weekends: crypto only
   workflow_dispatch:
 concurrency:
   group: desk
@@ -14,16 +15,14 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - name: Skip outside market hours
         id: gate
-        run: |
-          m=$(TZ=Asia/Kolkata date +%H%M); d=$(TZ=Asia/Kolkata date +%u)
-          if [ "$d" -le 5 ] && [ "$m" -ge 0910 ] && [ "$m" -le 1545 ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "go=yes" >> $GITHUB_OUTPUT; else echo "go=no" >> $GITHUB_OUTPUT; fi
+        run: echo "go=yes" >> $GITHUB_OUTPUT        # every desk decides for itself whether its market is open
       - uses: actions/checkout@v4
         if: steps.gate.outputs.go == 'yes'
       - uses: actions/setup-python@v5
@@ -34,8 +33,8 @@ jobs:
       - if: steps.gate.outputs.go == 'yes'
         env:
           UPSTOX_TOKEN: ${{ secrets.UPSTOX_TOKEN }}
-          LOOP_SECONDS: "270"
-        run: python backend/intraday.py
+          LOOP_SECONDS: "240"
+        run: python backend/engine.py
       - name: Save the data
         if: steps.gate.outputs.go == 'yes'
         run: |
