@@ -1,7 +1,17 @@
 {
- "updated_at": "2026-11-16T18:35:48+05:30",
- "updated_hm": "16 Nov 18:35",
- "state": "market closed",
- "names": 0,
- "note": "NSE prices from Yahoo Finance, delayed by up to about 15 minutes."
+ "desks": {
+  "commodities": "4 MCX futures, real time",
+  "crypto": "6 coins from Kraken, real time"
+ },
+ "updated_at": "2026-11-17T09:05:41+05:30",
+ "updated_hm": "17 Nov 09:05:41",
+ "loops": 16,
+ "sessions": {
+  "equity": false,
+  "fno": false,
+  "mcx": true,
+  "crypto": true
+ },
+ "note": "Real-time Upstox prices for equities, NIFTY options and MCX; Kraken for crypto. Paper trades only.",
+ "open": 1
 }

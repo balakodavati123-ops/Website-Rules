@@ -1,0 +1,14 @@
+[
+ {
+  "desk": "EQUITY",
+  "strategy": "price_only",
+  "closed": 4,
+  "wins": 3,
+  "win_rate": 75.0,
+  "pnl_rs": 31.92,
+  "avg_rs": 7.98,
+  "t_stat": 0.57,
+  "confidence": 71.5,
+  "verdict": "COLLECTING"
+ }
+]

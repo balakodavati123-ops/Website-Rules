@@ -1,0 +1,32 @@
+{
+ "trades": [
+  {
+   "id": "C261117-1",
+   "desk": "CRYPTO",
+   "strategy": "crypto_breakout",
+   "label": "SOL long",
+   "side": "LONG",
+   "entry": 72.65,
+   "last": 72.69,
+   "qty": 10000,
+   "status": "OPEN",
+   "pnl_rs": -34.49,
+   "exit": "",
+   "why": "",
+   "day": "2026-11-17",
+   "opened": "09:01:44",
+   "closed": "",
+   "ts": 1794886305.431871,
+   "symbol": "SOL",
+   "stop": 71.56025,
+   "target_px": 74.8295,
+   "risk_class": "Intraday spot",
+   "margin_rs": 10000,
+   "reason": "+1.6% on the day and within 0.5% of the 24-hour high; stop 1.5%, target 3%, out after 8 hours"
+  }
+ ],
+ "seen": {
+  "2026-11-17|SOL": "crypto_breakout"
+ },
+ "seq": 1
+}

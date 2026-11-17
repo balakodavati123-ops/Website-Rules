@@ -15,10 +15,10 @@
    "basis": "price only",
    "reason": "-7.8% move near the day low, no filing seen",
    "label": "TMPV short",
-   "status": "OPEN",
-   "pnl_rs": 0,
-   "exit": "",
-   "why": ""
+   "status": "WIN",
+   "pnl_rs": 23.55,
+   "exit": 264.04998779296875,
+   "why": "carried over: closed late at the last price"
   },
   {
    "id": 2,
@@ -34,10 +34,10 @@
    "basis": "price only",
    "reason": "+5.0% move near the day high, no filing seen",
    "label": "MAXHEALTH long",
-   "status": "OPEN",
-   "pnl_rs": 0,
-   "exit": "",
-   "why": ""
+   "status": "WIN",
+   "pnl_rs": 3.24,
+   "exit": 996.0,
+   "why": "carried over: closed late at the last price"
   },
   {
    "id": 3,
@@ -53,10 +53,10 @@
    "basis": "price only",
    "reason": "-4.5% move near the day low, no filing seen",
    "label": "SILVERBEES short",
-   "status": "OPEN",
-   "pnl_rs": 0,
-   "exit": "",
-   "why": ""
+   "status": "LOSS",
+   "pnl_rs": -29.46,
+   "exit": 161.6199951171875,
+   "why": "carried over: closed late at the last price"
   },
   {
    "id": 4,
@@ -72,10 +72,10 @@
    "basis": "price only",
    "reason": "+3.5% move near the day high, no filing seen",
    "label": "FORTIS long",
-   "status": "OPEN",
-   "pnl_rs": 0,
-   "exit": "",
-   "why": ""
+   "status": "WIN",
+   "pnl_rs": 34.59,
+   "exit": 794.75,
+   "why": "carried over: closed late at the last price"
   }
  ],
  "seen": {
