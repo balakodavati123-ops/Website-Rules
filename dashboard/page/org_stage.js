@@ -4,7 +4,7 @@
    handling trades. Pulses show reports travelling up to the CEO. One drawing. */
 (function () {
   const { el, inr, PAL } = CD; const E = CD.ENG, TAU = Math.PI * 2;
-  const TEAMS = [['breakout_52w', '52-week Breakout'], ['breakout_52w_trail', 'Breakout, Trailing Exit'], ['ema_cross_up_dip', 'EMA 20/50 Cross'], ['trend_ride', 'Trend Following'], ['momentum_screen', 'Momentum'],
+  const TEAMS_EQ = [['breakout_52w', '52-week Breakout'], ['breakout_52w_trail', 'Breakout, Trailing Exit'], ['ema_cross_up_dip', 'EMA 20/50 Cross'], ['trend_ride', 'Trend Following'], ['momentum_screen', 'Momentum'],
     ['pullback_in_uptrend', 'Pullback'], ['rsi2_dip', 'Dip Buying'], ['results_reaction', 'Results Reaction'], ['donchian_20_10', 'Crypto and Commodities']];
   const ROLES = ['Market data', 'Price action', 'Volume', 'Trend', 'Fundamentals', 'Filings', 'Sentiment', 'Noise filter', 'Risk'];
 
@@ -37,7 +37,8 @@
     update(box, M) {
       const W = Math.max(280, box.clientWidth), R = Math.min(W / 2 - 8, 340), sq = W >= 560 ? 0.62 : 0.9, H = Math.round(2 * R * sq + 30);
       Object.assign(M, { W, H, cx: W / 2, cy: H / 2, sq }); box.style.height = H + 'px'; const dpr = Math.min(2, window.devicePixelRatio || 1); M.cv.width = Math.round(W * dpr); M.cv.height = Math.round(H * dpr); M.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const sb = dash.data('strategy_board'), tb = dash.data('trade_book'); const stats = {}; if (sb.status === 'ok') sb.data.forEach((s) => { stats[s.strategy] = s; }); const book = tb.status === 'ok' ? tb.data : [];
+      const sb = dash.data('strategy_board'), tb = dash.data('trade_book'), ds = dash.data('desk_stats'), dt = dash.data('desk_trades'); const stats = {}; if (sb.status === 'ok') sb.data.forEach((s) => { stats[s.strategy] = s; }); if (ds.status === 'ok') ds.data.forEach((s) => { stats[s.strategy] = { strategy: s.strategy, closed: s.closed, pnl: s.pnl_rs, confidence: s.confidence }; });
+      const book = (tb.status === 'ok' ? tb.data : []).concat(dt.status === 'ok' ? dt.data.filter((t) => t.status === 'OPEN').map((t) => ({ strategy: t.strategy, symbol: t.label, status: 'OPEN' })) : []); const TEAMS = (CD.MKT && CD.MKT.teams && CD.MKT.teams()) || TEAMS_EQ;
       const ceo = { kind: 'ceo', a: 0, r: 0, spin: 0, size: 17, col: '#cfe0ff', tip: 'You, the CEO. Every COO reports here, and nothing is placed without you.' }; const nodes = [ceo], leaves = [];
       TEAMS.forEach(([key, title], i) => { const s = stats[key] || {}, mine = book.filter((t) => t.strategy === key && (t.status === 'OPEN' || t.status === 'PENDING')), a0 = (i / TEAMS.length) * TAU - Math.PI / 2, span = (TAU / TEAMS.length) * 0.84;
         const pnl = Number(s.pnl) || 0, col = pnl > 0 ? PAL.green : pnl < 0 ? PAL.red : PAL.blue;
