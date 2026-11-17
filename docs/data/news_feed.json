@@ -1,157 +1,5 @@
 [
  {
-  "time": "16 Nov 10:43",
-  "source": "GoogleNews",
-  "category": "DEAL/ORDER",
-  "headline": "IDBI Bank unions urge RBI to withhold approval for proposed Fairfax stake sale - bfsi.economictimes.indiatimes.com",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "NBFCs see up to 15 bps rise in cost of funds as RBI rate hike feeds through - bfsi.economictimes.indiatimes.com",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Tata Motors PV shares plunge 7%, top Nifty loser as weak JLR margins, guidance cut weigh on outlook - Moneycontrol.com",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "RBI Pushes Stronger Safeguards Against Digital Payment Fraud - The 420.in",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "RBI's 6-hour reporting rule to help curb cyber threats, fraud in digital payments: Experts - The Times of India",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Tata Motors PV shares plunge 9% after Q2 results; brokerages cut target - Business Standard",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Markets fall in early trade after three-day rally; Sensex tumbles 460 points - The Hindu",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "As inflation stays elevated, RBI's Dec repo rate increase appears certain - Business Standard",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "RBI Fines MobiKwik \u20b99.00 Lakh Over Transfers and Fraud Reporting - Fincrime Central",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Kaynes Technology shares tank 18% as Q2 PAT plunges 65%, margin shrinks - Business Standard",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Nifty 500: Belrise jumps 10% on profit growth, Kaynes Technology plunges 17% to 52-wk low on Q2 results - CNBC TV18",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "GoogleNews",
-  "category": "EARNINGS",
-  "headline": "Turtlemint Q2 FY27 Results | Oil India Q2 FY27 Results | Top Buzzing Stocks Today - Equitymaster",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Razorpay IPO: Fintech player gets SEBI approval for public issue - Upstox",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "16 Nov 11:05",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Nvidia has worst week since Trump tariff selloff as Huang exits",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 11:05",
-  "source": "ET",
-  "category": "EARNINGS",
-  "headline": "Wall Street Week Ahead: Nvidia results, Anthropic IPO pose tests for tumultuous AI trade",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "16 Nov 11:05",
-  "source": "ET",
-  "category": "GEOPOLITICS",
-  "headline": "US Treasury chief says Fed should not hike rates over energy shock tied to Iran war",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "16 Nov 11:05",
-  "source": "ET",
-  "category": "APPROVAL",
-  "headline": "Razorpay, Sembcorp Green Infra get Sebi nod to float IPOs",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "16 Nov 11:05",
-  "source": "ET",
-  "category": "DEAL/ORDER",
-  "headline": "Tesla-SpaceX Merger: Musk eyes December deal announcement",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "16 Nov 11:05",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Mukul Agrawal portfolio stock J Kumar defies selloff, jumps 5% post Q2",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
   "time": "16 Nov 11:05",
   "source": "BusinessStandard",
   "category": "CRASH/SHOCK",
@@ -478,5 +326,157 @@
   "headline": "Paytm secures preliminary RBI approval for digital wallets - Yahoo Finance",
   "event": "no",
   "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 11:25",
+  "source": "ET",
+  "category": "DEAL/ORDER",
+  "headline": "Why are Nokia shares falling? Nvidia stake sale sparks concerns",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 11:25",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Advanced Sys-Tek secures SEBI approval to launch IPO comprising fresh issue, OFS components - Upstox",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 12:00",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Sembcorp Green Infra Receives SEBI Nod for Rs. 37.5 bn IPO - Construction World",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 12:11",
+  "source": "GoogleNews",
+  "category": "GEOPOLITICS",
+  "headline": "Nifty recovers all the losses made since the US-Iran war began - Here are key reasons why - CNBC TV18",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "17 Nov 12:36",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Sembcorp Green Infra receives SEBI approval for Rs 37.5 billion IPO - Renewable Watch",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 12:36",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Economists Predict RBI to Hike Repo Rate by 50-75 Bps Amid Elevated Inflation - Rediff",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "17 Nov 12:36",
+  "source": "GoogleNews",
+  "category": "GEOPOLITICS",
+  "headline": "Nifty recovers all losses made since US-Iran war began - Here are key reasons why - CNBC TV18",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "17 Nov 13:12",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Axis Bank\u2019s Munish Sharda Gets RBI Approval For Second Executive Director Term - BW People",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 13:12",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Clearing corporations seek SEBI nod to diversify investments, eye state government bonds, index ETFs:... - Moneycontrol.com",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 14:07",
+  "source": "GoogleNews",
+  "category": "DEAL/ORDER",
+  "headline": "Tata Mutual Fund announces merger of Tata Nifty G-Sec Dec 2026 Index Fund into Tata Short Term Fund - Value Research",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 14:52",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "MobiKwik eyes Rs 100 cr UPI MDR boost, gets RBI nod for NBFC - MediaNama",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 15:23",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Razorpay wins SEBI nod for ~$600M IPO, eyes 2027 listing - Dealroom",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 15:33",
+  "source": "GoogleNews",
+  "category": "EARNINGS",
+  "headline": "Live: Bank Nifty tops 62,400 for the first time ever; Nvidia results eyed | Closing Bell - Moneycontrol.com",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "17 Nov 15:48",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "HDFC Bank vs Axis Bank: Both shares recover after Q2 sell-off; which banking stock offers higher upside? Check targets",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "17 Nov 15:48",
+  "source": "GoogleNews",
+  "category": "GEOPOLITICS",
+  "headline": "Sensex, Nifty recover US-Iran war losses: 5 reasons behind market rally as Nifty hits 9-month high - CNBC TV18",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "17 Nov 15:53",
+  "source": "GoogleNews",
+  "category": "GEOPOLITICS",
+  "headline": "Sensex, Nifty recover US-Iran war losses: 5 reasons behind market rally as Nifty hits 9-month high - CNBC TV18 - LinkedIn",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "17 Nov 15:58",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Advanced Sys-Tek IPO Gets Sebi Approval to Raise Rs 98 Cr - HDFC Sky",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 16:24",
+  "source": "GoogleNews",
+  "category": "GEOPOLITICS",
+  "headline": "Nifty is up 11% this month, its biggest monthly gain in 6 years, and all US-Iran war losses are recovered! FIIs have poured in over $9.5 bn, crude has cooled an",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "17 Nov 16:29",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "RBI's 2017 Fraud Compensation Circular Applies Retrospectively, Covers Private Banks: Madras High Court - LiveLawBiz",
+  "event": "no",
+  "hint": "SHORT-lean headline"
  }
 ]

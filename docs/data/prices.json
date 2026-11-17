@@ -1,0 +1,262 @@
+{
+ "updated_at": "2026-11-17T17:05:29+05:30",
+ "crypto": [
+  {
+   "name": "BTC",
+   "last": 64539.0,
+   "chg_pct": -0.42383014702138677,
+   "high": 65633.5,
+   "low": 63840.0,
+   "unit": "$"
+  },
+  {
+   "name": "ETH",
+   "last": 1809.4,
+   "chg_pct": -0.5140893470790275,
+   "high": 1864.27,
+   "low": 1784.52,
+   "unit": "$"
+  },
+  {
+   "name": "SOL",
+   "last": 73.28,
+   "chg_pct": 2.460850111856838,
+   "high": 73.29,
+   "low": 69.85,
+   "unit": "$"
+  },
+  {
+   "name": "XRP",
+   "last": 0.96553,
+   "chg_pct": 1.1280321756252931,
+   "high": 0.97648,
+   "low": 0.94178,
+   "unit": "$"
+  },
+  {
+   "name": "DOGE",
+   "last": 0.0590528,
+   "chg_pct": 0.28530282857375244,
+   "high": 0.0599192,
+   "low": 0.0579531,
+   "unit": "$"
+  },
+  {
+   "name": "ADA",
+   "last": 0.153907,
+   "chg_pct": 0.59215299246409,
+   "high": 0.155859,
+   "low": 0.150118,
+   "unit": "$"
+  }
+ ],
+ "indices": {
+  "Bank Nifty": {
+   "name": "Bank Nifty",
+   "last": 62273.25,
+   "chg_pct": 1.1325047624151656,
+   "high": 62442.2,
+   "low": 61488.0
+  },
+  "Nifty 50": {
+   "name": "Nifty 50",
+   "last": 25387.4,
+   "chg_pct": 0.380766356544397,
+   "high": 25501.35,
+   "low": 25267.3
+  },
+  "India VIX": {
+   "name": "India VIX",
+   "last": 15.52,
+   "chg_pct": -1.0204081632653061,
+   "high": 15.68,
+   "low": 14.04
+  },
+  "Sensex": {
+   "name": "Sensex",
+   "last": 82532.19,
+   "chg_pct": 0.5205542819121758,
+   "high": 82897.49,
+   "low": 82091.9
+  }
+ },
+ "mcx": [
+  {
+   "name": "Gold 1 g",
+   "last": 13554.0,
+   "chg_pct": -0.2428792227864871,
+   "unit": "\u20b9"
+  },
+  {
+   "name": "Silver 1 kg",
+   "last": 171179.0,
+   "chg_pct": 0.8959147466388462,
+   "unit": "\u20b9"
+  },
+  {
+   "name": "Crude oil mini",
+   "last": 8067.0,
+   "chg_pct": -0.11144130757800891,
+   "unit": "\u20b9"
+  },
+  {
+   "name": "Natural gas mini",
+   "last": 292.0,
+   "chg_pct": -0.8152173913043478,
+   "unit": "\u20b9"
+  }
+ ],
+ "movers": {
+  "gainers": [
+   {
+    "symbol": "TTKHLTCARE",
+    "price": 1099.0,
+    "chg_pct": 18.71,
+    "turnover_cr": 113.6
+   },
+   {
+    "symbol": "KMCSHIL",
+    "price": 199.0,
+    "chg_pct": 18.3,
+    "turnover_cr": 319.0
+   },
+   {
+    "symbol": "KDDL",
+    "price": 4521.1,
+    "chg_pct": 15.52,
+    "turnover_cr": 409.5
+   },
+   {
+    "symbol": "FIRSTCRY",
+    "price": 179.0,
+    "chg_pct": 12.87,
+    "turnover_cr": 2449.5
+   },
+   {
+    "symbol": "ASALCBR",
+    "price": 572.3,
+    "chg_pct": 10.54,
+    "turnover_cr": 12.1
+   },
+   {
+    "symbol": "LEAPIND",
+    "price": 134.4,
+    "chg_pct": 10.06,
+    "turnover_cr": 112.6
+   },
+   {
+    "symbol": "SIGNATURE",
+    "price": 837.0,
+    "chg_pct": 9.33,
+    "turnover_cr": 150.4
+   },
+   {
+    "symbol": "WELSPUNLIV",
+    "price": 266.0,
+    "chg_pct": 8.07,
+    "turnover_cr": 325.6
+   }
+  ],
+  "losers": [
+   {
+    "symbol": "DCAL",
+    "price": 129.38,
+    "chg_pct": -7.07,
+    "turnover_cr": 23.9
+   },
+   {
+    "symbol": "INDIAGLYCO",
+    "price": 274.5,
+    "chg_pct": -6.14,
+    "turnover_cr": 16.4
+   },
+   {
+    "symbol": "UTLSOLAR",
+    "price": 324.25,
+    "chg_pct": -5.78,
+    "turnover_cr": 13.2
+   },
+   {
+    "symbol": "URBANCO",
+    "price": 162.31,
+    "chg_pct": -5.47,
+    "turnover_cr": 467.2
+   },
+   {
+    "symbol": "CAPLIPOINT",
+    "price": 2220.0,
+    "chg_pct": -5.4,
+    "turnover_cr": 48.6
+   },
+   {
+    "symbol": "SAKSOFT",
+    "price": 125.3,
+    "chg_pct": -5.15,
+    "turnover_cr": 13.8
+   },
+   {
+    "symbol": "MSTCLTD",
+    "price": 718.7,
+    "chg_pct": -5.0,
+    "turnover_cr": 73.3
+   },
+   {
+    "symbol": "STLNETWORK",
+    "price": 42.71,
+    "chg_pct": -4.98,
+    "turnover_cr": 25.1
+   }
+  ],
+  "active": [
+   {
+    "symbol": "HDFCBANK",
+    "price": 814.95,
+    "chg_pct": -0.19,
+    "turnover_cr": 2844.8
+   },
+   {
+    "symbol": "BSE",
+    "price": 3864.9,
+    "chg_pct": -0.58,
+    "turnover_cr": 2787.9
+   },
+   {
+    "symbol": "FIRSTCRY",
+    "price": 179.0,
+    "chg_pct": 12.87,
+    "turnover_cr": 2449.5
+   },
+   {
+    "symbol": "ICICIBANK",
+    "price": 1598.7,
+    "chg_pct": 0.86,
+    "turnover_cr": 2442.8
+   },
+   {
+    "symbol": "ANGELONE",
+    "price": 349.8,
+    "chg_pct": 0.47,
+    "turnover_cr": 2330.7
+   },
+   {
+    "symbol": "RELIANCE",
+    "price": 1367.0,
+    "chg_pct": 1.65,
+    "turnover_cr": 2168.2
+   },
+   {
+    "symbol": "SBIN",
+    "price": 1108.6,
+    "chg_pct": 1.66,
+    "turnover_cr": 1807.9
+   },
+   {
+    "symbol": "BHARTIARTL",
+    "price": 2138.3,
+    "chg_pct": -0.71,
+    "turnover_cr": 1493.0
+   }
+  ],
+  "count": 2760
+ }
+}

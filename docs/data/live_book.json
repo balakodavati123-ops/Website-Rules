@@ -9,16 +9,16 @@
    "symbol": "RAYMONDREL",
    "side": "LONG",
    "entry": 611.6,
-   "last": 612.0,
+   "last": 605.05,
    "qty": 13,
    "stop": 605.48,
    "basis": "price only",
    "reason": "+8.0% move near the day high, no filing seen",
    "label": "RAYMONDREL long",
-   "status": "OPEN",
-   "pnl_rs": 0,
-   "exit": "",
-   "why": ""
+   "status": "LOSS",
+   "pnl_rs": -93.1,
+   "exit": 605.05,
+   "why": "stop"
   },
   {
    "id": 2,
@@ -28,16 +28,16 @@
    "symbol": "LEAPIND",
    "side": "LONG",
    "entry": 131.8,
-   "last": 131.0,
+   "last": 134.43,
    "qty": 60,
    "stop": 130.48,
    "basis": "price only",
    "reason": "+7.9% move near the day high, no filing seen",
    "label": "LEAPIND long",
-   "status": "OPEN",
-   "pnl_rs": 0,
-   "exit": "",
-   "why": ""
+   "status": "WIN",
+   "pnl_rs": 149.89,
+   "exit": 134.43,
+   "why": "time"
   },
   {
    "id": 3,
@@ -47,16 +47,16 @@
    "symbol": "KDDL",
    "side": "LONG",
    "entry": 4199.9,
-   "last": 4336.0,
+   "last": 4508.2,
    "qty": 1,
    "stop": 4157.9,
    "basis": "price only",
    "reason": "+7.3% move near the day high, no filing seen",
    "label": "KDDL long",
-   "status": "OPEN",
-   "pnl_rs": 0,
-   "exit": "",
-   "why": ""
+   "status": "WIN",
+   "pnl_rs": 304.1,
+   "exit": 4508.2,
+   "why": "time"
   },
   {
    "id": 4,
@@ -66,16 +66,16 @@
    "symbol": "ANGELONE",
    "side": "LONG",
    "entry": 373.4,
-   "last": 374.0,
+   "last": 369.6,
    "qty": 21,
    "stop": 369.67,
    "basis": "price only",
    "reason": "+7.3% move near the day high, no filing seen",
    "label": "ANGELONE long",
-   "status": "OPEN",
-   "pnl_rs": 0,
-   "exit": "",
-   "why": ""
+   "status": "LOSS",
+   "pnl_rs": -87.64,
+   "exit": 369.6,
+   "why": "stop"
   }
  ],
  "seen": {

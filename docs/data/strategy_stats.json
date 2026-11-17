@@ -1,14 +1,86 @@
 [
  {
+  "desk": "COMMODITY",
+  "strategy": "mcx_momentum",
+  "closed": 3,
+  "wins": 0,
+  "win_rate": 0.0,
+  "pnl_rs": -2212.11,
+  "avg_rs": -737.37,
+  "t_stat": -3.56,
+  "confidence": 0.0,
+  "verdict": "COLLECTING"
+ },
+ {
+  "desk": "CRYPTO",
+  "strategy": "crypto_breakout",
+  "closed": 1,
+  "wins": 1,
+  "win_rate": 100.0,
+  "pnl_rs": 35.71,
+  "avg_rs": 35.71,
+  "t_stat": 0,
+  "confidence": 50.0,
+  "verdict": "COLLECTING"
+ },
+ {
   "desk": "EQUITY",
   "strategy": "price_only",
-  "closed": 4,
-  "wins": 3,
-  "win_rate": 75.0,
-  "pnl_rs": 31.92,
-  "avg_rs": 7.98,
-  "t_stat": 0.57,
-  "confidence": 71.5,
+  "closed": 8,
+  "wins": 5,
+  "win_rate": 62.5,
+  "pnl_rs": 305.17,
+  "avg_rs": 38.15,
+  "t_stat": 0.82,
+  "confidence": 79.3,
+  "verdict": "COLLECTING"
+ },
+ {
+  "desk": "EQUITY",
+  "strategy": "pullback_in_uptrend",
+  "closed": 1,
+  "wins": 0,
+  "win_rate": 0.0,
+  "pnl_rs": -335.67,
+  "avg_rs": -335.67,
+  "t_stat": 0,
+  "confidence": 50.0,
+  "verdict": "COLLECTING"
+ },
+ {
+  "desk": "FNO",
+  "strategy": "debit_spread",
+  "closed": 1,
+  "wins": 1,
+  "win_rate": 100.0,
+  "pnl_rs": 1470.25,
+  "avg_rs": 1470.25,
+  "t_stat": 0,
+  "confidence": 50.0,
+  "verdict": "COLLECTING"
+ },
+ {
+  "desk": "FNO",
+  "strategy": "long_breakout",
+  "closed": 1,
+  "wins": 1,
+  "win_rate": 100.0,
+  "pnl_rs": 1780.0,
+  "avg_rs": 1780.0,
+  "t_stat": 0,
+  "confidence": 50.0,
+  "verdict": "COLLECTING"
+ },
+ {
+  "desk": "FNO",
+  "strategy": "short_strangle",
+  "closed": 1,
+  "wins": 1,
+  "win_rate": 100.0,
+  "pnl_rs": 388.0,
+  "avg_rs": 388.0,
+  "t_stat": 0,
+  "confidence": 50.0,
   "verdict": "COLLECTING"
  }
 ]
