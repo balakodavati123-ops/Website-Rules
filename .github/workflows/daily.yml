@@ -23,6 +23,11 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.11", cache: pip }
       - run: pip install -q -r requirements.txt
+      - name: Start from the live books, which hold the day's real fills
+        run: |
+          if git fetch -q --depth=1 origin data 2>/dev/null; then
+            for f in live_book desk_book trade_archive strategy_stats paper_ledger; do git show FETCH_HEAD:$f.json > docs/data/$f.json 2>/dev/null || true; done
+          fi
       - run: python backend/daily.py
       - name: Save the data
         run: |

@@ -1,141 +1,5 @@
 [
  {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Stock markets snap 3-day rally on rate hike fears, Sensex drops 318 pts - MillenniumPost",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Arihant Capital Markets gets SEBI nod to launch mutual fund biz - BusinessLine",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "November inflation may accelerate to 6.3%, strengthen case for another rate hike: UBI - bfsi.economictimes.indiatimes.com",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Paytm wallet to be back? What RBI\u2019s initial nod means, and why it restricted Paytm Payments Bank - The Indian Express",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Paytm Gets RBI\u2019s In Principle Approval to Issue Prepaid Wallets - Equitypandit",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Paytm Gets RBI Approval For Wallets, But One Step Remains - APAC Media",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "14 Nov 10:45",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Major Banks Raise Fixed Deposit Rates Following RBI's Repo Rate Hike - Rediff",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "ET",
-  "category": "EARNINGS",
-  "headline": "RHI Magnesita Q2 net profit jumps 62 pc to over Rs 62 cr",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "Inox Wind shares crash: Why energy stock price is falling today? Tanks 9.17% post Q2, down 60% in 1 year - Still a buy?",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "Tata Motors PV shares crash: What led to auto stock 8% ramming, Nifty laggard; down 27% in 2026 - Buy, sell or hold?",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "Mint",
-  "category": "EARNINGS",
-  "headline": "Stock to buy after Q2 Results 2026: Up 70% in YTD! Should you buy retail stock after strong guidance? Target, stop-loss",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Kaynes Technology shares tank 18% as Q2 PAT plunges 65%, margin shrinks",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Tata Motors PV shares plunge 9% after Q2 results; brokerages cut target",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Crypto's slow-motion selloff leaves investors weary as Bitcoin nears lows",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Bitcoin tumbles to four-month low as leveraged bets face mass liquidations",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Nifty, Sensex open higher despite Wall Street selloff; TMPV leads losses - BusinessLine",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "16 Nov 10:43",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Nifty 500: Belrise jumps 10% on profit growth, Kaynes Technology plunges 17% to 52-wk low on Q2 results - CNBC TV18 - LinkedIn",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
   "time": "16 Nov 10:43",
   "source": "GoogleNews",
   "category": "DEAL/ORDER",
@@ -478,5 +342,141 @@
   "headline": "One Mobikwik Systems Fined \u20b99 Lakh by RBI for PPI and Fraud Reporting Violations - Moneylife",
   "event": "no",
   "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "ET",
+  "category": "RBI-POLICY",
+  "headline": "Indian bonds gain as oil slide eases rate hike concerns",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Global Market Today: Asian stocks fall as Wall Street selloff deepens ahead of Nvidia earnings",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Why Silver rates crashed from record high of  \u20b94 lakh per kg price to below  \u20b91.75 lakh? Experts explain 3 key reasons",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "Mint",
+  "category": "DEAL/ORDER",
+  "headline": "TTK Healthcare shares soar 20%: Board to consider bonus issue of preference shares on Nov 20 - Key things to know",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "Mint",
+  "category": "DEAL/ORDER",
+  "headline": "China\u2019s Buyback Push Struggles to Put a Floor Under Stocks",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "Swiggy vs Zomato parent Eternal: Which stock has the stronger growth and better earnings outlook after Q2 results?",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "BusinessStandard",
+  "category": "GEOPOLITICS",
+  "headline": "Oil prices fall as supply surplus outlook outweighs tanker attack concerns",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "GIFT Nifty flat, signals muted start for Sensex, Nifty as Nasdaq plunges 2.5%, Asian markets fall; crude slips- Moneycontrol.com - LinkedIn",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Stock market today: Sensex, Nifty open higher despite global sell-off - BusinessLine",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "Avadhut Sathe moves SAT against Sebi order - The New Indian Express",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty rises 147 points despite Asian sell-off; Banks, FMCG support Sensex - BusinessLine",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "RBI may need tighter monetary policy to contain persistent inflation - Business Standard",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "XTGlobal wins RBI nod for \u20ac10K stake in new Irish arm - Dealroom",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "GIFT Nifty flat, signals muted start for Sensex, Nifty as Nasdaq plunges 2.5%, Asian markets fall; crude... - Moneycontrol.com",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Rising rate hike bets cloud market outlook as inflation breaches RBI's upper band - Moneycontrol.com",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Advanced Systek gets SEBI nod to proceed with proposed IPO - Moneycontrol.com",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "17 Nov 11:21",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Paytm secures preliminary RBI approval for digital wallets - Yahoo Finance",
+  "event": "no",
+  "hint": "LONG-lean headline"
  }
 ]

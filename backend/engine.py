@@ -19,12 +19,15 @@ import desks as D        # noqa: E402
 import intraday as I     # noqa: E402
 import upstox as U       # noqa: E402
 import open_fill as OF   # noqa: E402
+import ledger as L       # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = Path(os.environ.get("DESK_DOCS") or ROOT / "docs" / "data")
 IST = D.IST
-PUBLISH_EVERY = 45
-IDX = {"nifty": "NSE_INDEX|Nifty 50", "banknifty": "NSE_INDEX|Nifty Bank", "vix": "NSE_INDEX|India VIX"}
+PUBLISH_EVERY = 15
+IDX = {"nifty": "NSE_INDEX|Nifty 50", "banknifty": "NSE_INDEX|Nifty Bank", "vix": "NSE_INDEX|India VIX", "sensex": "BSE_INDEX|SENSEX"}
+DAILY_FILES = ["world_markets", "world_news", "events_today", "results_filed", "crypto_quotes", "crypto_candles", "alerts_log", "desk_signals", "signal_ledger", "signal_lessons", "fo_ledger",
+               "macro_signals", "strategies_macro", "paper_equity", "approved_strategies", "paper_ledger"]
 NIFTY = IDX["nifty"]
 
 
@@ -75,6 +78,38 @@ def close_stale(eq: dict, xb: dict, today: str) -> None:
             D.finish(t, t["last"], "carried over: closed late at the last price", now, t["pnl_rs"])
 
 
+def _git(*a, check=True):
+    import subprocess
+    return subprocess.run(["git", "-c", "user.name=desk-bot", "-c", "user.email=desk-bot@users.noreply.github.com", *a], cwd=ROOT, check=check, capture_output=True, text=True)
+
+
+def sync_daily() -> None:
+    """Bring in what the daily job committed (new signals, world data, results) so a long live run never works from stale files."""
+    br = os.environ.get("GITHUB_REF_NAME")
+    if not br or not os.environ.get("GITHUB_TOKEN"):
+        return
+    try:
+        _git("fetch", "-q", "--depth=1", "origin", br)
+        for f in DAILY_FILES:
+            _git("checkout", "FETCH_HEAD", "--", f"docs/data/{f}.json", check=False)
+    except Exception as e:
+        print("sync failed:", str(e)[:150])
+
+
+def commit_main(paths: list[str], msg: str) -> None:
+    if not os.environ.get("GITHUB_REF_NAME") or not os.environ.get("GITHUB_TOKEN"):
+        return
+    try:
+        _git("add", *paths)
+        if _git("diff", "--cached", "--quiet", check=False).returncode:
+            _git("commit", "-q", "-m", msg)
+            for _ in range(3):
+                if _git("pull", "-q", "--rebase", "-X", "theirs", check=False).returncode == 0 and _git("push", "-q", check=False).returncode == 0:
+                    break
+    except Exception as e:
+        print("commit failed:", str(e)[:150])
+
+
 def publish() -> None:
     """Push a snapshot of docs/data to the `data` branch (one fresh commit, force-pushed, so history never grows).
     The live page reads it from raw.githubusercontent.com, so it stays current while a long run is still going."""
@@ -107,19 +142,25 @@ def run() -> None:
     paused = {s["strategy"] for s in load("strategy_stats.json", []) if s["verdict"] == "PAUSED"}
     news, status, i = I.filings_news(), {"desks": {}}, 0
     mcx_c: list = []
-    filled = False
+    filled, snap, series, last_slow = False, {}, load("pnl_series.json", {}), 0.0
     def persist() -> None:
         save("live_book.json", eq)
         xb["trades"] = [t for t in xb["trades"] if t["status"] == "OPEN" or t["id"] not in archive]
         save("desk_book.json", xb)
-        allt = list(archive.values()) + [t for t in unify_equity(eq) + xb["trades"] if t["status"] == "OPEN"]
+        live_open = [t for t in unify_equity(eq) + xb["trades"] if t["status"] == "OPEN"]
+        books = L.swing(load("paper_ledger.json", [])) + L.weekly_fno(load("fo_ledger.json", [])) + L.signals(load("signal_ledger.json", []))
+        allt = list(archive.values()) + live_open + books
         allt.sort(key=lambda t: (t["day"], t["opened"]), reverse=True)
         save("trade_archive.json", sorted((t for t in archive.values()), key=lambda t: (t["day"], t["opened"]))[-4000:])
-        save("all_trades.json", allt[:3000])
-        stats = D.learn(list(archive.values()))
+        save("all_trades.json", allt[:4000])
+        stats = D.learn(list(archive.values()) + [t for t in books if t["status"] in ("WIN", "LOSS")])
         save("strategy_stats.json", stats)
         status["open"] = sum(t["status"] == "OPEN" for t in allt)
         save("live_status.json", status)
+        nf = (snap.get("indices") or {}).get("Nifty 50", {}).get("last")
+        series.update(L.day_series(series, datetime.now(IST).strftime("%Y-%m-%d"), datetime.now(IST).strftime("%H:%M:%S"), allt, nf))
+        save("pnl_series.json", series)
+        save("prices.json", {"updated_at": status.get("updated_at"), **snap})
 
     last_pub = 0.0
     while True:
@@ -130,7 +171,7 @@ def run() -> None:
             if t["status"] != "OPEN":
                 archive[t["id"]] = t
         info = status["desks"]
-        q_idx, ctx = {}, {}
+        q_idx, ctx, rows_now = {}, {}, []
         if token and (ses["fno"] or ses["mcx"] or ses["equity"]):
             try:
                 q_idx = U.quotes(list(IDX.values()), token)
@@ -138,7 +179,7 @@ def run() -> None:
                 info["indices"] = f"error: {e}"
         if token and ses["equity"]:
             try:
-                rows = U.equity_rows(token)
+                rows = rows_now = U.equity_rows(token)
                 if rows:
                     I.step(eq, today, hhmm, rows, news)
                 info["equity"] = f"{len(rows)} stocks, real time"
@@ -154,6 +195,7 @@ def run() -> None:
                     n = OF.fill_pending(led, json.loads(rf.read_text()), OF_opens(token, led), now.date(), (q_idx.get("NSE_INDEX|India VIX") or {}).get("last_price"))
                     if n:
                         lf.write_text(json.dumps(led, indent=1))
+                        commit_main(["docs/data/paper_ledger.json"], "data: pending paper orders filled at the open")
                     info["paper_orders"] = f"{n} pending orders filled or expired at today's open"
                 filled = True
             except Exception as e:
@@ -178,10 +220,26 @@ def run() -> None:
             except Exception as e:
                 info["fno"] = f"error: {e}"
         try:
-            D.crypto_step(xb, now, D.kraken_ticks(), paused)
+            ticks = D.kraken_ticks()
+            D.crypto_step(xb, now, ticks, paused)
+            snap["crypto"] = [{"name": k, "last": v["last"], "chg_pct": (v["last"] / v["open"] - 1) * 100, "high": v["high"], "low": v["low"], "unit": "$"} for k, v in ticks.items()]
             info["crypto"] = "6 coins from Kraken, real time"
         except Exception as e:
             info["crypto"] = f"error: {e}"
+        if q_idx:
+            names = {IDX["nifty"]: "Nifty 50", IDX["banknifty"]: "Bank Nifty", IDX["vix"]: "India VIX", IDX["sensex"]: "Sensex"}
+            snap["indices"] = {names[k]: {"name": names[k], "last": v.get("last_price"), "chg_pct": (v["net_change"] / (v["last_price"] - v["net_change"]) * 100) if v.get("net_change") is not None and v.get("last_price") else None,
+                                          "high": (v.get("ohlc") or {}).get("high"), "low": (v.get("ohlc") or {}).get("low")} for k, v in q_idx.items() if k in names}
+        if ses["mcx"] and mcx_c:
+            try:
+                qm = U.quotes([c["key"] for c in mcx_c], token)
+                snap["mcx"] = [{"name": c["label"], "last": qm[c["key"]]["last_price"], "chg_pct": qm[c["key"]]["net_change"] / (qm[c["key"]]["last_price"] - qm[c["key"]]["net_change"]) * 100, "unit": "₹"} for c in mcx_c if c["key"] in qm and qm[c["key"]].get("last_price")]
+            except Exception:
+                pass
+        if ses["equity"] and rows_now:
+            liq = [r for r in rows_now if r["price"] * r["volume"] >= 1e8 and r["price"] >= 20]
+            top = lambda lst: [{"symbol": r["symbol"], "price": r["price"], "chg_pct": round(r["chg_pct"], 2), "turnover_cr": round(r["price"] * r["volume"] / 1e7, 1)} for r in lst[:8]]
+            snap["movers"] = {"gainers": top(sorted(liq, key=lambda r: -r["chg_pct"])), "losers": top(sorted(liq, key=lambda r: r["chg_pct"])), "active": top(sorted(liq, key=lambda r: -r["price"] * r["volume"])), "count": len(rows_now)}
         # one shared list of trades
         trades = unify_equity(eq) + xb["trades"]
         for t in trades:
@@ -189,14 +247,21 @@ def run() -> None:
                 archive[t["id"]] = t
         status.update(updated_at=now.isoformat(timespec="seconds"), updated_hm=now.strftime("%d %b %H:%M:%S"), loops=i + 1, sessions=ses,
                       note="Real-time Upstox prices for equities, NIFTY options and MCX; Kraken for crypto. Paper trades only." if token else "No Upstox token: delayed fallback prices.")
+        if time.time() - last_slow >= 300:
+            last_slow = time.time()
+            sync_daily()
+            try:
+                I.update_news_feed(now)
+            except Exception as e:
+                info["news"] = f"error: {str(e)[:80]}"
         i += 1
         persist()
         if time.time() - last_pub >= PUBLISH_EVERY:
             publish()
             last_pub = time.time()
-        if time.time() + 15 >= end:
+        if time.time() + 5 >= end:
             break
-        time.sleep(15)
+        time.sleep(5)
     persist()
     publish()
     print(status["updated_hm"], status["desks"], "open", status["open"], "closed", len(archive))
