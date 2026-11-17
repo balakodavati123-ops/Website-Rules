@@ -81,13 +81,14 @@
   };
 
   M.chain = () => (MK[M.market].chain || []);
-  M.refresh = () => { if (M.market === 'EQUITY') { M.view = null; return; } const v = build[M.market](); v.chain = M.chain(); v.st.survivors = v.rows.filter((r) => !r.failed).length; v.st.killed = v.rows.length - v.st.survivors; v.st.quote_time = new Date().toISOString(); M.view = v; M.txt = v.txt; };
+  M.refresh = () => { if (M.market === 'EQUITY') { M.view = null; return; } const v = build[M.market](); v.chain = M.chain(); v.st.survivors = v.rows.filter((r) => !r.failed).length; v.st.killed = v.rows.length - v.st.survivors; v.st.quote_time = new Date().toLocaleString('sv-SE', { timeZone: 'Asia/Kolkata' }); M.view = v; M.txt = v.txt; };
   M.step = () => { if (M.market === 'EQUITY') return; M.refresh(); const ch = M.chain(), v = M.view; if (!v || !ch.length) return; M.i = (M.i + 1) % ch.length; if (M.i === 0) M.focus += 1;
     const ok = v.rows.filter((r) => !r.failed), pool = ok.length ? ok : v.rows; const row = pool.length ? pool[M.focus % pool.length] : null; M.cur = { agent: ch[M.i], state: STATE[M.i] || 'REVIEWING', row, text: M.txt[ch[M.i]] || '' };
     dash.draw('mkt_agents'); dash.draw('mkt_title'); };
   M.teams = () => ({ EQUITY: null, FNO: [['iron_condor', 'Iron Condor'], ['credit_spread', 'Credit Spread'], ['short_strangle', 'Short Strangle'], ['debit_spread', 'Debit Spread'], ['long_breakout', 'Long Option Breakout']],
     CRYPTO: [['crypto_breakout', 'Crypto Breakout'], ['crypto_dip_bounce', 'Crypto Dip Bounce']], COMM: [['mcx_momentum', 'MCX Momentum']] }[M.market]);
   M.set = (m) => { M.market = m; M.i = -1; M.focus = 0; M.cur = null; M.refresh(); document.querySelectorAll('[data-mk]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.mk === m)));
+    document.querySelectorAll('#card-stage #floor-phases, #card-stage .fl-say, #card-stage .fl-note, #card-stage .fl-flowrow').forEach((n) => { n.hidden = m !== 'EQUITY'; });
     if (m !== 'EQUITY') M.step(); ['flow_stage', 'mkt_agents', 'mkt_title', 'org_stage', 'org_count'].forEach((n) => dash.draw(n)); };
   document.querySelectorAll('[data-mk]').forEach((b) => b.addEventListener('click', () => M.set(b.dataset.mk)));
   M.timer = setInterval(() => { if (!document.hidden && E.shown && M.market !== 'EQUITY' && !E.paused) M.step(); }, 2600);

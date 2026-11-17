@@ -282,3 +282,15 @@
 .tbar { position: relative; height: 4px; border-radius: 99px; margin-top: 8px; background: linear-gradient(90deg, #ff5f7577, #1c2c48 35%, #1c2c48 65%, #2de3a577); } .tbar i { position: absolute; top: -3px; width: 3px; height: 10px; margin-left: -1px; background: #fff; border-radius: 2px; }
 @container fl (max-width: 980px) { .hero { grid-template-columns: minmax(0, 1fr); } .rail-trades { max-height: 440px; } }
 @media (max-width: 980px) { .hero { grid-template-columns: minmax(0, 1fr); } .rail-trades { max-height: 440px; } .tape-tag { width: 58px; font-size: 9px; } }
+
+/* market tabs and the agent cards of each market */
+.mk-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
+.mk-agents { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-top: 10px; }
+.mk-agents > .note { grid-column: 1 / -1; }
+.mk-card { border: 1px solid var(--line); border-top: 2px solid var(--c, var(--line2)); border-radius: 9px; padding: 8px 10px; background: #0a1324; min-width: 0; transition: background .2s, box-shadow .2s; }
+.mk-card.on { background: #0f1c38; box-shadow: 0 0 18px -6px var(--c, #4f8cff); border-color: var(--c, var(--line2)); }
+.mk-card header { display: flex; align-items: center; gap: 7px; min-width: 0; }
+.mk-card .ic { flex: none; width: 26px; height: 26px; border-radius: 7px; display: grid; place-items: center; font-style: normal; font-weight: 700; font-size: 9px; }
+.mk-card header b { font-size: 12px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mk-card header small { margin-left: auto; font-family: var(--mono); font-size: 9px; letter-spacing: .7px; color: var(--dim); } .mk-card.on header small { color: var(--c); }
+.mk-card p { margin: 6px 0 0; color: var(--mut); font-size: 12px; line-height: 1.45; overflow-wrap: anywhere; } .mk-card.on p { color: #eaf1ff; }

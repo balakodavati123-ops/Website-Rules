@@ -53,8 +53,10 @@
     <div class="idx-strip" data-draw="idx_cards" data-source="indices"></div>
     <div class="hero">
       <div class="card hero-main" id="card-stage">
-        <h2>Money flow through your desks <em>each line is one stock on the live lists: cyan cleared all eight rules, orange was removed by one</em></h2>
-        <div class="fl-stage flow" data-draw="flow_stage" data-source="floor_rows floor_stats floor_side paper_live"></div>
+        <h2><span data-draw="mkt_title">Equity desks</span> <em>each line is one name on the live feed: cyan passed its desk's rules, orange was removed by one</em></h2>
+        <div class="mk-tabs" role="group" aria-label="Choose a market"><button class="cd-btn tog" type="button" data-mk="EQUITY" aria-pressed="true">Equities</button><button class="cd-btn tog" type="button" data-mk="FNO" aria-pressed="false">F&amp;O</button><button class="cd-btn tog" type="button" data-mk="CRYPTO" aria-pressed="false">Crypto</button><button class="cd-btn tog" type="button" data-mk="COMM" aria-pressed="false">Commodities</button></div>
+        <div class="fl-stage flow" data-draw="flow_stage" data-source="floor_rows floor_stats floor_side paper_live crypto_live comm_live nifty_chain indices world_markets"></div>
+        <div class="mk-agents" data-draw="mkt_agents" data-source="crypto_live comm_live nifty_chain indices world_markets"></div>
         <div class="fl-phases" id="floor-phases"><span data-ph="0">Pull</span><span data-ph="1">Rules</span><span data-ph="2">Crowd</span><span data-ph="3">Books</span><span data-ph="4">Filings</span><span data-ph="5">Debate</span><span data-ph="6">Size</span><span data-ph="7">Verdict</span><span data-ph="8">Log</span></div>
         <div class="fl-say" data-draw="fl_say"></div>
         <p class="fl-note num" data-draw="fl_note">—</p>
@@ -76,7 +78,7 @@
       </aside>
     </div>
     <div class="card" id="card-org" style="margin-bottom:12px"><h2>Your organisation <em><b data-draw="org_count">—</b> desks: a COO for each strategy, three trading managers each, nine analysts under them</em></h2>
-      <div class="fl-stage org" data-draw="org_stage" data-source="strategy_board trade_book"></div>
+      <div class="fl-stage org" data-draw="org_stage" data-source="strategy_board trade_book desk_stats desk_trades"></div>
       <p class="note">Point at or tap any desk to see what it does. Green COOs are in paper profit, red in loss, blue have no result yet; amber managers are handling trades. These desks are rule programs run by the daily engine and this page, not separate AIs.</p></div>
     <div class="fl-grid">
       <aside class="fl-desks" id="floor-desks" aria-label="The desks">
@@ -392,5 +394,6 @@
 <script src="ls_engine.js"></script>
 <script src="live_session.js"></script>
 <script src="hero.js"></script>
+<script src="mkt_desks.js"></script>
 <script src="views_plus.js"></script>
 <script src="tabs.js"></script>

@@ -89,10 +89,12 @@ FILES = {  # id -> (title, description, file name)
     "world_markets": ("World markets before the bell", "Last close and change for world indices, the dollar, the rupee, crude, gold and US yields, from Yahoo Finance.", "world_markets.json"),
     "events_today": ("Company events", "Board meetings, results and corporate actions due in the next three days, from NSE.", "events_today.json"),
     "world_news": ("Headlines", "News headlines from Yahoo Finance, word for word with their publisher.", "world_news.json"),
+    "desk_trades": ("Desk trades", "Every trade of the background desks (equities, F&O, MCX, crypto), with the reason it was taken. Snapshot from the last daily run.", "desk_trades.json"),
+    "desk_stats": ("Desk scoreboard", "Closed trades, win rate and verdict per desk and strategy. Snapshot from the last daily run.", "desk_stats.json"),
     "crypto_candles": ("Crypto candles in rupees", "CoinDCX daily, hourly and 15-minute candles for Bitcoin, Ethereum and Solana.", "crypto_candles.json"),
 }
 SCHEDULE = "Rebuilt each weekday at 08:15 IST by the CEO Desk Daily Refresh task."
-PAGE_FILES = ["index.html", "style.css", "lib.js", "data.js", "floor_data.js", "floor_engine.js", "flow_stage.js", "floor_views.js", "org_stage.js", "ls_engine.js", "live_session.js", "hero.js", "views_plus.js", "views_command.js", "views_pre.js", "views_alerts.js",
+PAGE_FILES = ["index.html", "style.css", "lib.js", "data.js", "floor_data.js", "floor_engine.js", "flow_stage.js", "floor_views.js", "org_stage.js", "ls_engine.js", "live_session.js", "hero.js", "mkt_desks.js", "views_plus.js", "views_command.js", "views_pre.js", "views_alerts.js",
               "views_algo.js", "views_markets.js", "views_room.js", "tabs.js"]
 
 
