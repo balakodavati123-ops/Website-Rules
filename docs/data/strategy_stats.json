@@ -2,13 +2,13 @@
  {
   "desk": "COMMODITY",
   "strategy": "mcx_momentum",
-  "closed": 7,
-  "wins": 3,
-  "win_rate": 42.9,
-  "pnl_rs": -2234.69,
-  "avg_rs": -319.24,
-  "t_stat": -1.66,
-  "confidence": 4.9,
+  "closed": 8,
+  "wins": 4,
+  "win_rate": 50.0,
+  "pnl_rs": -1789.18,
+  "avg_rs": -223.65,
+  "t_stat": -1.16,
+  "confidence": 12.2,
   "verdict": "COLLECTING"
  },
  {
@@ -38,13 +38,13 @@
  {
   "desk": "CRYPTO",
   "strategy": "crypto_dip_bounce",
-  "closed": 1,
+  "closed": 3,
   "wins": 1,
-  "win_rate": 100.0,
-  "pnl_rs": 260.67,
-  "avg_rs": 260.67,
-  "t_stat": 0,
-  "confidence": 50.0,
+  "win_rate": 33.3,
+  "pnl_rs": 162.57,
+  "avg_rs": 54.19,
+  "t_stat": 0.52,
+  "confidence": 70.0,
   "verdict": "COLLECTING"
  },
  {

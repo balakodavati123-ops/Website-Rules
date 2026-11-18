@@ -1,109 +1,5 @@
 [
  {
-  "time": "18 Nov 02:29",
-  "source": "Mint",
-  "category": "EARNINGS",
-  "headline": "US yields ease as equities drop before Nvidia results",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "18 Nov 02:34",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Dow crashes over 900 pts as jittery AI stocks drag US market lower: Stock Market Live Updates",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 02:54",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Dow plunges over 850 points as Nvidia turmoil deepens selloff in AI stocks: Stock Market Highlights",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 02:59",
-  "source": "ET",
-  "category": "RBI-POLICY",
-  "headline": "Indian bonds gain as oil slide eases rate hike concerns",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 04:25",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Nifty reclaims pre-war levels intraday as Indian stocks lead Asia with 10% monthly gain - Livemint",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "18 Nov 05:17",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Sembcorp Green Infra, Razorpay get SEBI's IPO approval - Prop News Time",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 08:29",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Trade Setup for Today: Wall Street Slump and Commodity Sell-off Weigh on Sentiment; GIFT Nifty Points to Gap-Down as of November 18, 2026 - scanx.trade",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 09:14",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Nifty Outlook - Soft oil ease rate hike fears by Geojit Investments Ltd - Investment Guru India",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 09:45",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex, Nifty open flat as Nvidia earnings beat offsets Wall Street sell-off; Bank Nifty near record high - BusinessLine",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 09:50",
-  "source": "BusinessStandard",
-  "category": "GEOPOLITICS",
-  "headline": "Oil prices fall as supply surplus outlook outweighs tanker attack concerns",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "18 Nov 09:55",
-  "source": "BusinessStandard",
-  "category": "GEOPOLITICS",
-  "headline": "Oil prices fall as US stockpile gains ease supply concerns amid Iran war",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "18 Nov 09:55",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex falls 87 points, Nifty sheds 47 as dollar index hits 19-month high, global sell-off weighs - ANI News",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 10:00",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Stock market today: Sensex, Nifty open higher despite global sell-off - BusinessLine",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
   "time": "18 Nov 10:13",
   "source": "GoogleNews",
   "category": "CRASH/SHOCK",
@@ -478,5 +374,109 @@
   "headline": "Real estate firm Assetz gets Sebi nod to float Rs 1,200-cr IPO",
   "event": "no",
   "hint": "LONG-lean headline"
+ },
+ {
+  "time": "18 Nov 20:00",
+  "source": "ET",
+  "category": "EARNINGS",
+  "headline": "PSBs' net profit rises 17% to Rs 1.10 lakh cr in H1 FY27; business crosses Rs 300 lakh crore",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "18 Nov 20:05",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "US yields ease as equities drop before Nvidia results",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "18 Nov 20:15",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Assetz gets Sebi nod to float \u20b91,200-crore IPO - ET Realty",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "18 Nov 20:15",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Goldman Sachs sees RBI repo rate rising by 75 bps to 6.25% by mid-2027 - Business Standard",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "18 Nov 20:35",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Stock Markets Drop: Sensex Falls 500 Pts Amid Rate Hike Fears - Rediff MoneyWiz",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "18 Nov 20:40",
+  "source": "Mint",
+  "category": "APPROVAL",
+  "headline": "Assetz IPO gets SEBI nod; Bengaluru realty developer reportedly plans to raise  \u20b91,200 crore",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "18 Nov 21:21",
+  "source": "ET",
+  "category": "DEAL/ORDER",
+  "headline": "Dalmia Bharat to consider share buyback at Nov 23 board meeting",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "18 Nov 21:21",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Dow tumbles over 500 pts as Nvidia-led AI relief fails to lift broader market: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 21:41",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Assetz IPO gets SEBI nod; Bengaluru realty developer reportedly plans to raise \u20b91,200 crore - Livemint",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "18 Nov 21:46",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex, Nifty open flat as Nvidia earnings beat offsets Wall Street sell-off; Bank Nifty near record high - BusinessLine",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 22:38",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Markets snap two-day rally; Sensex drops 500 points amid profit booking, US Fed rate hike speculations - Telegraph India",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "18 Nov 22:43",
+  "source": "BusinessStandard",
+  "category": "GEOPOLITICS",
+  "headline": "Oil prices fall as US stockpile gains ease supply concerns amid Iran war",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "18 Nov 22:53",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq turns red as Nvidia-led AI relief fails to lift broader market; Dow tumbles 600 pts: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
  }
 ]
