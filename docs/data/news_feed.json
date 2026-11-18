@@ -1,13 +1,5 @@
 [
  {
-  "time": "17 Nov 11:25",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Advanced Sys-Tek secures SEBI approval to launch IPO comprising fresh issue, OFS components - Upstox",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
   "time": "17 Nov 12:00",
   "source": "GoogleNews",
   "category": "APPROVAL",
@@ -478,5 +470,13 @@
   "headline": "Price Action: Ashoka Buildcon up 4% on winning NHAI project; Advait Energy jumps 2% post order win - TradingView",
   "event": "no",
   "hint": "LONG-lean headline"
+ },
+ {
+  "time": "18 Nov 11:47",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Hindalco, SAIL, Hindustan Zinc shares in focus as NIFTY Metal tumbles 2% on Nov 18; check details - Upstox",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
  }
 ]

@@ -13,17 +13,16 @@
   "entry": 138.7,
   "stop": 131.765,
   "target": 166.44,
-  "qty": 13,
-  "risk_rs": 90.15,
+  "qty": 23,
+  "risk_rs": 159.5,
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0.543,
-  "note": "Filled at the open of 2026-11-12. Resized to fit the Rs 1,00,000 account.",
+  "note": "Filled at the open of 2026-11-12.",
   "stop0": 131.765,
   "fx": 1.0,
-  "unrealized_rs": 48.92,
-  "last_close": 142.81,
-  "rebased": true
+  "unrealized_rs": 86.55,
+  "last_close": 142.81
  },
  {
   "id": 2,
@@ -39,17 +38,16 @@
   "entry": 188.99,
   "stop": 179.5405,
   "target": 226.79,
-  "qty": 9,
-  "risk_rs": 85.04,
+  "qty": 16,
+  "risk_rs": 151.19,
   "exit": "",
   "pnl_rs": 0,
   "r_mult": -0.155,
-  "note": "Filled at the open of 2026-11-12. Resized to fit the Rs 1,00,000 account.",
+  "note": "Filled at the open of 2026-11-12.",
   "stop0": 179.5405,
   "fx": 1.0,
-  "unrealized_rs": -13.16,
-  "last_close": 188.0,
-  "rebased": true
+  "unrealized_rs": -23.4,
+  "last_close": 188.0
  },
  {
   "id": 3,
@@ -70,12 +68,11 @@
   "exit": "",
   "pnl_rs": 0,
   "r_mult": -0.187,
-  "note": "Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account.",
+  "note": "Filled at the open of 2026-11-13.",
   "stop0": 4600.85,
   "fx": 1.0,
   "unrealized_rs": -45.31,
-  "last_close": 4809.8,
-  "rebased": true
+  "last_close": 4809.8
  },
  {
   "id": 4,
@@ -91,17 +88,16 @@
   "entry": 1380.7,
   "stop": 1311.66,
   "target": "",
-  "qty": 2,
-  "risk_rs": 138.07,
+  "qty": 4,
+  "risk_rs": 276.14,
   "exit": "",
   "pnl_rs": 0,
   "r_mult": -0.089,
-  "note": "Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account.",
+  "note": "Filled at the open of 2026-11-13.",
   "stop0": 1311.665,
   "fx": 1.0,
-  "unrealized_rs": -12.3,
-  "last_close": 1378.0,
-  "rebased": true
+  "unrealized_rs": -24.61,
+  "last_close": 1378.0
  },
  {
   "id": 5,
@@ -141,17 +137,16 @@
   "entry": 1920.0,
   "stop": 1843.2,
   "target": 2304.0,
-  "qty": 2,
-  "risk_rs": 153.6,
+  "qty": 4,
+  "risk_rs": 307.2,
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0.197,
-  "note": "Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account.",
+  "note": "Filled at the open of 2026-11-13.",
   "stop0": 1843.2,
   "fx": 1.0,
-  "unrealized_rs": 30.2,
-  "last_close": 1939.9,
-  "rebased": true
+  "unrealized_rs": 60.4,
+  "last_close": 1939.9
  },
  {
   "id": 7,
@@ -167,17 +162,16 @@
   "entry": 2400.0,
   "stop": 2304.0,
   "target": 2880.0,
-  "qty": 1,
-  "risk_rs": 96.0,
+  "qty": 3,
+  "risk_rs": 288.0,
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0.188,
-  "note": "Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account.",
+  "note": "Filled at the open of 2026-11-13.",
   "stop0": 2304.0,
   "fx": 1.0,
-  "unrealized_rs": 18.0,
-  "last_close": 2424.0,
-  "rebased": true
+  "unrealized_rs": 54.0,
+  "last_close": 2424.0
  },
  {
   "id": 8,
@@ -193,17 +187,16 @@
   "entry": 925.0,
   "stop": 888.0,
   "target": 1110.0,
-  "qty": 4,
-  "risk_rs": 148.0,
+  "qty": 8,
+  "risk_rs": 296.0,
   "exit": "",
   "pnl_rs": 0,
   "r_mult": -0.225,
-  "note": "Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account.",
+  "note": "Filled at the open of 2026-11-13.",
   "stop0": 888.0,
   "fx": 1.0,
-  "unrealized_rs": -33.25,
-  "last_close": 919.0,
-  "rebased": true
+  "unrealized_rs": -66.5,
+  "last_close": 919.0
  },
  {
   "id": 9,
@@ -219,17 +212,16 @@
   "entry": 332.0,
   "stop": 315.4,
   "target": 398.4,
-  "qty": 11,
-  "risk_rs": 182.6,
+  "qty": 19,
+  "risk_rs": 315.4,
   "exit": "",
   "pnl_rs": 0,
   "r_mult": -0.529,
-  "note": "Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account.",
+  "note": "Filled at the open of 2026-11-13.",
   "stop0": 315.4,
   "fx": 1.0,
-  "unrealized_rs": -96.58,
-  "last_close": 324.05,
-  "rebased": true
+  "unrealized_rs": -166.82,
+  "last_close": 324.05
  },
  {
   "id": 10,
@@ -245,17 +237,16 @@
   "entry": 141.7,
   "stop": 134.615,
   "target": "",
-  "qty": 26,
-  "risk_rs": 184.21,
+  "qty": 44,
+  "risk_rs": 311.74,
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0.107,
-  "note": "Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account.",
+  "note": "Filled at the open of 2026-11-13.",
   "stop0": 134.615,
   "fx": 1.0,
-  "unrealized_rs": 19.65,
-  "last_close": 142.81,
-  "rebased": true
+  "unrealized_rs": 33.25,
+  "last_close": 142.81
  },
  {
   "id": 11,
@@ -271,17 +262,16 @@
   "entry": 332.0,
   "stop": 315.4,
   "target": "",
-  "qty": 11,
-  "risk_rs": 182.6,
+  "qty": 19,
+  "risk_rs": 315.4,
   "exit": "",
   "pnl_rs": 0,
   "r_mult": -0.529,
-  "note": "Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account.",
+  "note": "Filled at the open of 2026-11-13.",
   "stop0": 315.4,
   "fx": 1.0,
-  "unrealized_rs": -96.58,
-  "last_close": 324.05,
-  "rebased": true
+  "unrealized_rs": -166.82,
+  "last_close": 324.05
  },
  {
   "id": 12,
@@ -297,17 +287,16 @@
   "entry": 925.0,
   "stop": 878.75,
   "target": "",
-  "qty": 3,
-  "risk_rs": 138.75,
+  "qty": 6,
+  "risk_rs": 277.5,
   "exit": "",
   "pnl_rs": 0,
   "r_mult": -0.18,
-  "note": "Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account.",
+  "note": "Filled at the open of 2026-11-13.",
   "stop0": 878.75,
   "fx": 1.0,
-  "unrealized_rs": -24.94,
-  "last_close": 919.0,
-  "rebased": true
+  "unrealized_rs": -49.88,
+  "last_close": 919.0
  },
  {
   "id": 13,
@@ -323,24 +312,23 @@
   "entry": 91.3,
   "stop": 86.735,
   "target": "",
-  "qty": 41,
-  "risk_rs": 187.17,
+  "qty": 69,
+  "risk_rs": 314.99,
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0.038,
-  "note": "Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account.",
+  "note": "Filled at the open of 2026-11-13.",
   "stop0": 86.735,
   "fx": 1.0,
-  "unrealized_rs": 7.04,
-  "last_close": 91.7,
-  "rebased": true
+  "unrealized_rs": 11.85,
+  "last_close": 91.7
  },
  {
   "id": 14,
   "market": "NSE",
   "symbol": "GRASIM",
   "strategy": "rsi2_dip",
-  "status": "SKIPPED",
+  "status": "PENDING",
   "signal_date": "2026-11-13",
   "signal_close": 3034.0,
   "atr": "",
@@ -354,14 +342,14 @@
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0,
-  "note": "Expired: no fill price for the session after the 2026-11-13 signal."
+  "note": "Signal at the close. Fills at the next open if the gap is within 3%."
  },
  {
   "id": 15,
   "market": "NSE",
   "symbol": "TCS",
   "strategy": "rsi2_dip",
-  "status": "SKIPPED",
+  "status": "PENDING",
   "signal_date": "2026-11-13",
   "signal_close": 2407.5,
   "atr": "",
@@ -375,14 +363,14 @@
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0,
-  "note": "Expired: no fill price for the session after the 2026-11-13 signal."
+  "note": "Signal at the close. Fills at the next open if the gap is within 3%."
  },
  {
   "id": 16,
   "market": "NSE",
   "symbol": "PETRONET",
   "strategy": "momentum_screen",
-  "status": "SKIPPED",
+  "status": "PENDING",
   "signal_date": "2026-11-13",
   "signal_close": 324.04998779296875,
   "atr": "",
@@ -396,14 +384,14 @@
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0,
-  "note": "Expired: no fill price for the session after the 2026-11-13 signal."
+  "note": "Signal at the close. Fills at the next open if the gap is within 3%."
  },
  {
   "id": 17,
   "market": "NSE",
   "symbol": "BHEL",
   "strategy": "trend_ride",
-  "status": "SKIPPED",
+  "status": "PENDING",
   "signal_date": "2026-11-13",
   "signal_close": 436.29998779296875,
   "atr": "",
@@ -417,14 +405,14 @@
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0,
-  "note": "Expired: no fill price for the session after the 2026-11-13 signal."
+  "note": "Signal at the close. Fills at the next open if the gap is within 3%."
  },
  {
   "id": 18,
   "market": "NSE",
   "symbol": "NYKAA",
   "strategy": "trend_ride",
-  "status": "SKIPPED",
+  "status": "PENDING",
   "signal_date": "2026-11-13",
   "signal_close": 365.20001220703125,
   "atr": "",
@@ -438,14 +426,14 @@
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0,
-  "note": "Expired: no fill price for the session after the 2026-11-13 signal."
+  "note": "Signal at the close. Fills at the next open if the gap is within 3%."
  },
  {
   "id": 19,
   "market": "NSE",
   "symbol": "NYKAA",
   "strategy": "pullback_in_uptrend",
-  "status": "SKIPPED",
+  "status": "PENDING",
   "signal_date": "2026-11-13",
   "signal_close": 365.20001220703125,
   "atr": "",
@@ -459,6 +447,6 @@
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0,
-  "note": "Expired: no fill price for the session after the 2026-11-13 signal."
+  "note": "Signal at the close. Fills at the next open if the gap is within 3%."
  }
 ]

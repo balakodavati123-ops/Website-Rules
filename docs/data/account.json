@@ -1,0 +1,51 @@
+{
+ "updated_at": "2026-11-18T11:49:17+05:30",
+ "start": 100000.0,
+ "realised": 14.81,
+ "unrealised": 19.6,
+ "equity": 100034.41,
+ "in_use": 131779.39,
+ "cash": -31744.98,
+ "pnl": 34.41,
+ "pnl_pct": 0.03,
+ "open": 18,
+ "closed": 33,
+ "buckets": {
+  "swing": {
+   "label": "Swing (daily bars)",
+   "budget": 42000,
+   "used": 69560,
+   "room": 0
+  },
+  "signal": {
+   "label": "Signal desk",
+   "budget": 8000,
+   "used": 33300,
+   "room": 0
+  },
+  "intraday": {
+   "label": "Intraday equities",
+   "budget": 15000,
+   "used": 7934,
+   "room": 0
+  },
+  "FNO": {
+   "label": "F&O margin",
+   "budget": 20000,
+   "used": 16246,
+   "room": 0
+  },
+  "COMMODITY": {
+   "label": "Commodities margin",
+   "budget": 10000,
+   "used": 4739,
+   "room": 0
+  },
+  "CRYPTO": {
+   "label": "Crypto",
+   "budget": 5000,
+   "used": 0,
+   "room": 0
+  }
+ }
+}
