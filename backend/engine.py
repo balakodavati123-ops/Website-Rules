@@ -10,6 +10,7 @@ from __future__ import annotations
 import json
 import os
 import sys
+import threading
 import time
 from datetime import datetime
 from pathlib import Path
@@ -191,7 +192,8 @@ def run() -> None:
         xb["rebased"] = True
     archive = {t["id"]: t for t in load("trade_archive.json", [])}
     paused = {s["strategy"] for s in load("strategy_stats.json", []) if s["verdict"] == "PAUSED"}
-    news, status, i = I.filings_news(), {"desks": {}}, 0
+    news, status, i = {}, {"desks": {}}, 0
+    news_thread = None
     mcx_c: list = []
     filled, snap, series, last_slow = False, {}, load("pnl_series.json", {}), 0.0
     qs: dict = {}
@@ -375,13 +377,18 @@ def run() -> None:
             last_slow = time.time()
             sync_daily()
             migrate()
-            n2 = I.filings_news()
-            if n2:
-                news = n2
-            try:
-                I.update_news_feed(now)
-            except Exception as e:
-                info["news"] = f"error: {str(e)[:80]}"
+            if not (news_thread and news_thread.is_alive()):        # the news fetches can be slow from a cloud address: never hold up the price loop for them
+                def _news(at=now):
+                    try:
+                        n2 = I.filings_news()
+                        if n2:
+                            news.clear()
+                            news.update(n2)
+                        I.update_news_feed(at)
+                    except Exception as e:
+                        info["news"] = f"error: {str(e)[:80]}"
+                news_thread = threading.Thread(target=_news, daemon=True)
+                news_thread.start()
         if token and time.time() - last_intra >= 60 and nonlocal_state.get("tick"):
             last_intra = time.time()
             try:                                   # today's 5-minute candles for every stock we hold or traded today, for the page's charts
