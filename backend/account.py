@@ -1,0 +1,48 @@
+"""The paper account: one pool of money for every desk. Rupees, not points.
+
+Starts at START. Equity = start + closed profit + open profit. A trade ties up its cost (shares and crypto) or its
+margin (futures and options). Each kind of trade gets a share of the account, so no desk can spend what the others need.
+"""
+from __future__ import annotations
+
+START = 100000.0
+BUDGET = {"swing": 0.42, "signal": 0.08, "intraday": 0.15, "FNO": 0.20, "COMMODITY": 0.10, "CRYPTO": 0.05}
+LABEL = {"swing": "Swing (daily bars)", "signal": "Signal desk", "intraday": "Intraday equities", "FNO": "F&O margin", "COMMODITY": "Commodities margin", "CRYPTO": "Crypto"}
+
+
+def bucket(t: dict) -> str:
+    if t["desk"] == "EQUITY":
+        return "swing" if t.get("opened") == "swing" else "signal" if t.get("opened") == "signal" else "intraday"
+    return t["desk"]
+
+
+def invested(t: dict) -> float:
+    """What the position ties up: cost for shares, the notional put in for crypto, margin for futures and options."""
+    try:
+        if t["desk"] == "EQUITY":
+            return float(t["entry"] or 0) * float(t["qty"] or 0)
+        if t["desk"] == "CRYPTO":
+            return float(t["qty"] or 0)
+        return float(t.get("margin_rs") or 0)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def summary(trades: list[dict]) -> dict:
+    opn = [t for t in trades if t["status"] == "OPEN"]
+    closed = [t for t in trades if t["status"] in ("WIN", "LOSS")]
+    realised = sum(float(t["pnl_rs"] or 0) for t in closed)
+    unreal = sum(float(t["pnl_rs"] or 0) for t in opn)
+    used = {k: 0.0 for k in BUDGET}
+    for t in opn:
+        used[bucket(t)] += invested(t)
+    in_use = sum(used.values())
+    equity = START + realised + unreal
+    return {"start": START, "realised": round(realised, 2), "unrealised": round(unreal, 2), "equity": round(equity, 2), "in_use": round(in_use, 2), "cash": round(equity - in_use, 2),
+            "pnl": round(equity - START, 2), "pnl_pct": round((equity / START - 1) * 100, 2), "open": len(opn), "closed": len(closed),
+            "buckets": {k: {"label": LABEL[k], "budget": round(BUDGET[k] * START), "used": round(used[k]), "room": round(max(0.0, min(BUDGET[k] * START - used[k], equity - in_use)))} for k in BUDGET}}
+
+
+def rooms(trades: list[dict]) -> dict:
+    """Room left per bucket as one-item lists, so a desk can spend from it while it opens trades."""
+    return {k: [v["room"]] for k, v in summary(trades)["buckets"].items()}

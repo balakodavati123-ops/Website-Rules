@@ -25,7 +25,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs" / "data"
 IST = timezone(timedelta(hours=5, minutes=30))
-C = dict(notional=8000.0, max_trades=4, move=2.0, stop=0.01, start=9 * 60 + 20, end=15 * 60 + 10, stock_cost=0.001, circuit=9.5, news_move=0.6)
+C = dict(notional=5000.0, max_trades=4, move=2.0, stop=0.01, start=9 * 60 + 20, end=15 * 60 + 10, stock_cost=0.001, circuit=9.5, news_move=0.6)
 NEG = {"MANAGEMENT CHANGE", "LEGAL/REGULATORY"}
 POS = {"ORDER/CONTRACT", "APPROVAL", "ACQUISITION/STAKE", "BONUS/SPLIT/BUYBACK"}
 
@@ -41,7 +41,7 @@ def close_trade(tr: dict, px: float, why: str):
     tr.update(exit=px, last=px, pnl_rs=round(pnl, 2), status="WIN" if pnl > 0 else "LOSS", why=why)
 
 
-def step(book: dict, day: str, hhmm: str, rows: list[dict], news: dict) -> dict:
+def step(book: dict, day: str, hhmm: str, rows: list[dict], news: dict, room=None) -> dict:
     """rows: [{symbol, price, chg_pct, day_high, day_low, volume}]; news: {symbol: 'positive'|'negative'}."""
     if book.get("day") != day:
         book.update(day=day, trades=[], seen={}, seq=0)
@@ -77,6 +77,10 @@ def step(book: dict, day: str, hhmm: str, rows: list[dict], news: dict) -> dict:
         if (up and n == "negative") or (dn and n == "positive"):
             book["seen"][r["symbol"]] = "conflict"
             continue
+        if room is not None and room[0] < C["notional"]:
+            break                                   # the account has no money left for another intraday trade
+        if room is not None:
+            room[0] -= C["notional"]
         side = "LONG" if up else "SHORT"
         book["seen"][r["symbol"]] = side
         book["seq"] += 1

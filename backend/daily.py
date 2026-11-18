@@ -23,7 +23,7 @@ WORK, DOCS = ROOT / "dashboard" / "data", ROOT / "docs" / "data"
 STATE = ["paper_ledger.json", "paper_equity.json", "fo_ledger.json", "signal_ledger.json", "signal_lessons.json"]
 OUTPUT = STATE + ["desk_signals.json", "world_markets.json", "events_today.json", "world_news.json", "results_filed.json", "crypto_quotes.json",
                   "crypto_candles.json", "alerts_log.json"]
-RULES = [{"key": "trading_cash", "value": 32000}, {"key": "paper_start", "value": 32000}, {"key": "risk_normal", "value": 1.0},
+RULES = [{"key": "trading_cash", "value": 32000}, {"key": "paper_start", "value": 100000}, {"key": "swing_budget", "value": 42000}, {"key": "swing_max_pos", "value": 4000}, {"key": "risk_normal", "value": 1.0},
          {"key": "risk_caution", "value": 0.5}, {"key": "gate_conf", "value": 98}, {"key": "gate_trades", "value": 100},
          {"key": "gate_dd", "value": 20}, {"key": "stop_pct", "value": 5}, {"key": "target_pct", "value": 20}]
 

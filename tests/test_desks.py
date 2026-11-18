@@ -23,7 +23,7 @@ def test_fno_books_all_five_and_exits():
     ctx = {"spot": 25150.0, "prev": 25000.0, "chains": {"2026-11-19": chain(25150)}, "expiry": "2026-11-19", "lot": 65}
     D.fno_step(book, now, ctx, set())
     names = {t["strategy"] for t in book["trades"]}
-    assert {"iron_condor", "credit_spread", "short_strangle", "debit_spread", "long_breakout"} <= names
+    assert {"iron_condor", "credit_spread", "long_straddle", "debit_spread", "long_breakout"} <= names
     classes = {t["risk_class"] for t in book["trades"]}
     assert classes == set(D.RISK.values())
     ic = next(t for t in book["trades"] if t["strategy"] == "iron_condor")
@@ -38,7 +38,7 @@ def test_fno_books_all_five_and_exits():
 def test_fno_target_and_stop():
     book, now = D.new_book(), datetime(2026, 11, 17, 10, 0, tzinfo=IST)
     ctx = {"spot": 25000.0, "prev": 24990.0, "chains": {"E": chain(25000)}, "expiry": "E", "lot": 65}
-    D.fno_step(book, now, ctx, {"iron_condor", "short_strangle", "debit_spread", "long_breakout"})
+    D.fno_step(book, now, ctx, {"iron_condor", "long_straddle", "debit_spread", "long_breakout"})
     t = book["trades"][0]
     assert t["strategy"] == "credit_spread"
     ctx["chains"]["E"] = chain(25000)

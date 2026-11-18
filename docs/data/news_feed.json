@@ -1,21 +1,5 @@
 [
  {
-  "time": "17 Nov 11:21",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Paytm secures preliminary RBI approval for digital wallets - Yahoo Finance",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "17 Nov 11:25",
-  "source": "ET",
-  "category": "DEAL/ORDER",
-  "headline": "Why are Nokia shares falling? Nvidia stake sale sparks concerns",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
   "time": "17 Nov 11:25",
   "source": "GoogleNews",
   "category": "APPROVAL",
@@ -476,6 +460,22 @@
   "source": "GoogleNews",
   "category": "APPROVAL",
   "headline": "Industrial automation enabler Advanced Sys-Tek gets Sebi nod for IPO - Venture Intelligence News",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "18 Nov 11:37",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Polycab, KEI, RR Kabel & others fall up to 3% as copper plunges for 5th day",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 11:37",
+  "source": "GoogleNews",
+  "category": "DEAL/ORDER",
+  "headline": "Price Action: Ashoka Buildcon up 4% on winning NHAI project; Advait Energy jumps 2% post order win - TradingView",
   "event": "no",
   "hint": "LONG-lean headline"
  }

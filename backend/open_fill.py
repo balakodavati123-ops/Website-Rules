@@ -63,7 +63,8 @@ def fill_pending(ledger: list[dict], rules: list[dict], opens: dict, day: date, 
 
 def main() -> None:
     ledger_path = Path(sys.argv[1])
-    rules = json.loads(Path(sys.argv[2] if len(sys.argv) > 2 else ROOT / "dashboard" / "data" / "desk_rules.json").read_text())
+    import daily as DLY
+    rules = json.loads(Path(sys.argv[2]).read_text()) if len(sys.argv) > 2 else DLY.RULES
     ledger = json.loads(ledger_path.read_text())
     token, day = os.environ.get("UPSTOX_TOKEN", ""), datetime.now(timezone(timedelta(hours=5, minutes=30))).date()
     want = {r["symbol"] for r in ledger if r["status"] == "PENDING" and r["market"] == "NSE"}

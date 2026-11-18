@@ -44,7 +44,7 @@ def _get_json(url: str, timeout: int = 20):
 
 
 # ---------------------------------------------------------------- commodities (MCX futures)
-MCX = [("GOLDPETAL FUT", "Gold 1 g"), ("SILVERMIC FUT", "Silver 1 kg"), ("CRUDEOILM FUT", "Crude oil mini"), ("NATGASMINI FUT", "Natural gas mini")]
+MCX = [("GOLDPETAL FUT", "Gold 1 g"), ("NATGASMINI FUT", "Natural gas mini"), ("CRUDEOILM FUT", "Crude oil mini"), ("SILVERMIC FUT", "Silver 1 kg")]   # smallest first, so one big contract cannot use the whole limit
 MCX_RULES = {"move": 0.8, "near": 0.003, "stop": 0.006, "target": 0.012, "close": "23:15", "open": "09:15", "last_entry": "22:30", "max_open": 4, "notional": 60000}
 
 
@@ -58,7 +58,7 @@ def mcx_contracts(ins: list[dict], today) -> list[dict]:
     return out
 
 
-def mcx_step(book: dict, now: datetime, q: dict, contracts: list[dict], paused: set) -> None:
+def mcx_step(book: dict, now: datetime, q: dict, contracts: list[dict], paused: set, room=None) -> None:
     R, t = MCX_RULES, mins(now.strftime("%H:%M"))
     by = {c["key"]: c for c in contracts}
     for tr in book["trades"]:
@@ -73,7 +73,7 @@ def mcx_step(book: dict, now: datetime, q: dict, contracts: list[dict], paused: 
         tgt = px >= tr["target_px"] if d == 1 else px <= tr["target_px"]
         if hit or tgt or t >= mins(R["close"]):
             finish(tr, px, "stop" if hit else "target" if tgt else "time", now, pnl)
-    if "mcx_momentum" in paused or not (mins(R["open"]) <= t < mins(R["last_entry"])):
+    if not (mins(R["open"]) <= t < mins(R["last_entry"])):
         return
     day = now.strftime("%Y-%m-%d")
     for c in contracts:
@@ -84,21 +84,31 @@ def mcx_step(book: dict, now: datetime, q: dict, contracts: list[dict], paused: 
         if net is None or px - net <= 0:
             continue
         chg, hi, lo = net / (px - net) * 100, oh.get("high") or px, oh.get("low") or px
-        up, dn = chg >= R["move"] and px >= hi * (1 - R["near"]), chg <= -R["move"] and px <= lo * (1 + R["near"])
-        if not (up or dn):
+        strat, stop_p, tgt_p, why = None, R["stop"], R["target"], ""
+        if "mcx_momentum" not in paused and (chg >= R["move"] and px >= hi * (1 - R["near"]) or chg <= -R["move"] and px <= lo * (1 + R["near"])):
+            up = chg > 0
+            strat, why = "mcx_momentum", f"{chg:+.1f}% on the previous close and within 0.3% of the day {'high' if up else 'low'}; stop 0.6%, target 1.2%"
+        elif "mcx_pullback" not in paused and ((chg >= 0.5 and hi * 0.988 <= px <= hi * 0.996) or (chg <= -0.5 and lo * 1.004 <= px <= lo * 1.012)):
+            up, stop_p, tgt_p = chg > 0, 0.005, 0.009
+            strat, why = "mcx_pullback", f"{chg:+.1f}% on the day and pulled back {abs(px / (hi if up else lo) - 1) * 100:.1f}% from its {'high' if up else 'low'}: buying the dip in an up day, selling the bounce in a down day; stop 0.5%, target 0.9%"
+        if not strat:
             continue
         side = "LONG" if up else "SHORT"
         qty = max(1, int(R["notional"] // (px * c["mult"])))
+        margin = round(px * c["mult"] * qty * 0.06)
+        if room is not None and margin > room[0]:
+            continue                                  # not enough account money for this contract today
+        if room is not None:
+            room[0] -= margin
         book["seen"][f"{day}|{c['symbol']}"] = side
-        mk(book, "COMMODITY", "mcx_momentum", f"{c['label']} {side.lower()}", side, px, qty, now, key=c["key"], mult=c["mult"], symbol=c["symbol"],
-           stop=round(px * (1 - R["stop"] if up else 1 + R["stop"]), 2), target_px=round(px * (1 + R["target"] if up else 1 - R["target"]), 2),
-           risk_class="Intraday momentum", margin_rs=round(px * c["mult"] * qty * 0.06),
-           reason=f"{chg:+.1f}% on the previous close and within 0.3% of the day {'high' if up else 'low'}; stop 0.6%, target 1.2%")
+        mk(book, "COMMODITY", strat, f"{c['label']} {side.lower()}", side, px, qty, now, key=c["key"], mult=c["mult"], symbol=c["symbol"],
+           stop=round(px * (1 - stop_p if up else 1 + stop_p), 2), target_px=round(px * (1 + tgt_p if up else 1 - tgt_p), 2),
+           risk_class="Intraday momentum" if strat == "mcx_momentum" else "Intraday pullback", margin_rs=margin, reason=why)
 
 
 # ---------------------------------------------------------------- crypto (spot, long only: Indian retail cannot short spot)
 PAIRS = {"BTC": "XBT", "ETH": "ETH", "SOL": "SOL", "XRP": "XRP", "DOGE": "XDG", "ADA": "ADA"}
-CRYPTO_RULES = {"move": 1.5, "near": 0.005, "dip": 4.0, "stop": 0.015, "target": 0.03, "max_hours": 8, "notional": 10000, "cost": 0.004, "max_open": 3}
+CRYPTO_RULES = {"move": 1.0, "near": 0.006, "dip": 3.0, "stop": 0.015, "target": 0.03, "max_hours": 8, "notional": 2500, "cost": 0.004, "max_open": 2}
 
 
 def kraken_ticks() -> dict:
@@ -111,7 +121,7 @@ def kraken_ticks() -> dict:
     return out
 
 
-def crypto_step(book: dict, now: datetime, ticks: dict, paused: set) -> None:
+def crypto_step(book: dict, now: datetime, ticks: dict, paused: set, room=None) -> None:
     R = CRYPTO_RULES
     for tr in book["trades"]:
         if tr["desk"] != "CRYPTO" or tr["status"] != "OPEN" or tr["symbol"] not in ticks:
@@ -130,11 +140,15 @@ def crypto_step(book: dict, now: datetime, ticks: dict, paused: set) -> None:
         chg, px = (k["last"] / k["open"] - 1) * 100, k["last"]
         strat = why = None
         if "crypto_breakout" not in paused and chg >= R["move"] and px >= k["high"] * (1 - R["near"]):
-            strat, why = "crypto_breakout", f"{chg:+.1f}% on the day and within 0.5% of the 24-hour high"
+            strat, why = "crypto_breakout", f"{chg:+.1f}% on the day and within 0.6% of the 24-hour high"
         elif "crypto_dip_bounce" not in paused and px <= k["high"] * (1 - R["dip"] / 100) and px >= k["low"] * 1.005 and chg > -6:
             strat, why = "crypto_dip_bounce", f"{(px / k['high'] - 1) * 100:.1f}% below the 24-hour high and already 0.5% off its low"
         if not strat:
             continue
+        if room is not None and room[0] < R["notional"]:
+            break
+        if room is not None:
+            room[0] -= R["notional"]
         book["seen"][f"{day}|{sym}"] = strat
         mk(book, "CRYPTO", strat, f"{sym} long", "LONG", px, R["notional"], now, symbol=sym, stop=round(px * (1 - R["stop"]), 6), target_px=round(px * (1 + R["target"]), 6),
            risk_class="Intraday spot", margin_rs=R["notional"], reason=why + "; stop 1.5%, target 3%, out after 8 hours")
@@ -175,8 +189,8 @@ def _build(name: str, spot: float, prev: float, rows: list[dict]):
         else:
             s = near(spot * 1.006); b = near(s + 150); legs = [("S", s, "CE"), ("B", b, "CE")]
         return (legs, "fixed", {"width": abs(s - b), "target": 0.5, "stop": 1.0}) if s != b else None
-    if name == "short_strangle":
-        return [("S", near(spot * 1.006), "CE"), ("S", near(spot * 0.994), "PE")], "hrhl", {"width": None, "target": 0.4, "stop": 1.0}
+    if name == "long_straddle":
+        return [("B", atm, "CE"), ("B", atm, "PE")], "hrhl", {"width": None, "target": 0.5, "stop": 0.35}
     if name == "debit_spread":
         if abs(chg) < FNO_RULES["trend"]:
             return None
@@ -189,7 +203,7 @@ def _build(name: str, spot: float, prev: float, rows: list[dict]):
     return None
 
 
-FNO_STRATEGIES = ["iron_condor", "credit_spread", "short_strangle", "debit_spread", "long_breakout"]
+FNO_STRATEGIES = ["iron_condor", "credit_spread", "long_straddle", "debit_spread", "long_breakout"]
 
 
 def _unit_pnl(legs: list[dict], rows: list[dict]):
@@ -250,11 +264,16 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
         lot = ctx["lot"]
         gain = (net if net > 0 else (p["width"] - base if p["width"] else None))
         loss = ((p["width"] - net) if (risk == "fixed") else base if net < 0 else None)
+        margin = round(loss * lot) if loss else round(base * lot)
+        if ctx.get("room") is not None and margin > ctx["room"][0]:
+            continue                                  # the account cannot carry this structure's margin today
+        if ctx.get("room") is not None:
+            ctx["room"][0] -= margin
         book["seen"][f"{day}|{name}"] = "booked"
         mk(book, "FNO", name, f"NIFTY {name.replace('_', ' ')} · {ctx['expiry'][5:]}", "SHORT" if net > 0 else "LONG", net, 1, now, expiry=ctx["expiry"], lot=lot, legs=legs,
            unit_base=base, target_u=round(base * p["target"], 2), stop_u=round(base * p["stop"], 2), risk_class=RISK[risk],
            max_gain_rs=round(gain * lot) if gain else None, max_loss_rs=round(loss * lot) if loss else None,
-           margin_rs=round(loss * lot) if loss else (round(0.11 * spot * lot) if name == "short_strangle" else round(base * lot)),
+           margin_rs=margin,
            reason=f"NIFTY {spot:,.0f} ({(spot / prev - 1) * 100:+.2f}% on the close). {'Credit' if net > 0 else 'Debit'} {base:.1f} points; target {p['target']:.0%} of it, stop {p['stop']:.0%} of it; out by 15:15")
 
 

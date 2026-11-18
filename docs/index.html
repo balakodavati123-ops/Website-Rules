@@ -6,7 +6,7 @@
 --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
 body{margin:0;background:radial-gradient(1100px 480px at 12% -8%,#0e2147,transparent 60%),radial-gradient(800px 460px at 100% 0,#1a1238,transparent 55%),var(--bg);color:var(--fg);font:13px/1.45 var(--sans);padding:12px max(12px,env(safe-area-inset-left)) 40px}
-h1,h2,p{margin:0}.wrap{max-width:1280px;margin:0 auto}
+h1,h2,p{margin:0}.wrap{max-width:1680px;margin:0 auto}
 header{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;padding:2px 0 12px}
 .logo{width:34px;height:34px;border-radius:9px;background:conic-gradient(from 210deg,var(--blue),var(--violet),var(--cyan),var(--blue));display:grid;place-items:center;box-shadow:0 0 24px #4f8cff55}.logo:after{content:"";width:14px;height:14px;border-radius:50%;background:var(--bg)}
 h1{font-size:17px;font-weight:650}header small{display:block;color:var(--mut);font-size:11.5px}.sp{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
@@ -42,24 +42,37 @@ nav.nav{display:flex;gap:6px;overflow-x:auto;margin:0 0 12px;scrollbar-width:non
 #chart-wrap{position:relative}#cv{width:100%;display:block;border-radius:10px;background:#070d1a;border:1px solid var(--line);touch-action:pan-y}#tipc{position:absolute;pointer-events:none;background:#0b1630ee;border:1px solid #24385a;border-radius:8px;padding:6px 9px;font:11.5px var(--mono);display:none;white-space:nowrap;z-index:3}
 .picks{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}.picks button{font:inherit;font-size:12px;color:var(--mut);background:#0b1730;border:1px solid #24385a;border-radius:999px;padding:3px 11px;cursor:pointer}.picks button:hover{color:#fff;border-color:var(--blue)}
 .sym{font:inherit;color:var(--fg);background:#0b1730;border:1px solid #24385a;border-radius:10px;padding:8px 12px;min-width:230px}
+#t-over .hero3{display:grid;grid-template-columns:minmax(300px,1fr) minmax(0,1.5fr) minmax(0,1.2fr);gap:12px;margin-bottom:12px;align-items:stretch}.hero3>.card{margin:0;display:flex;flex-direction:column}@media(max-width:1100px){#t-over .hero3{grid-template-columns:1fr}}
+.g2o{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:12px;margin-bottom:12px;align-items:stretch}.g2o>.card{margin:0}@media(max-width:1100px){.g2o{grid-template-columns:1fr}}
+.acct-big{font:700 34px var(--mono);letter-spacing:-1px;line-height:1.1;display:inline-block;border-radius:6px}.acct-rows{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}.acct-rows div{background:#0a1222;border:1px solid var(--line);border-radius:8px;padding:6px 9px}.acct-rows small{display:block;color:var(--mut);font-size:10px;text-transform:uppercase;letter-spacing:.6px}.acct-rows b{font:600 14px var(--mono);border-radius:4px;display:inline-block}
+.bk{display:grid;grid-template-columns:110px 1fr 92px;gap:8px;align-items:center;font-size:11.5px;margin:5px 0}.bk .t{height:8px;background:#0a1224;border:1px solid var(--line);border-radius:4px;position:relative;overflow:hidden}.bk .t b{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:var(--blue)}.bk span:last-child{text-align:right;font-family:var(--mono);color:var(--mut)}
+.fill{flex:1;display:flex;flex-direction:column;justify-content:flex-end}svg.ch{height:210px}
+.mk3{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-bottom:10px}.mk3 .tk{background:#0a1222}
+.legs td{background:#09111f;color:var(--mut);font-size:11.5px;padding:3px 8px 8px 24px;white-space:normal}.legs span{display:inline-block;margin-right:16px}.legs b{color:var(--fg);font-weight:600}
 footer{color:var(--dim);font-size:11.5px;margin-top:8px}
 </style></head><body><div class="wrap">
 <header><div class="logo"></div><div><h1>Balaji's Trading Desk</h1><small>One ledger, running on its own. Paper money; nothing here places a real order.</small></div>
 <div class="sp"><span class="chip wait" id="chip"><i></i><span>connecting…</span></span><span class="chip" id="s-eq">Equities</span><span class="chip" id="s-fno">F&amp;O</span><span class="chip" id="s-mcx">MCX</span><span class="chip" id="s-cry">Crypto</span></div></header>
 <div class="ticks" id="ticks"></div>
-<nav class="nav" id="nav"><button data-t="over" class="on">Overview</button><button data-t="today">Today's trades</button><button data-t="chart">Charts</button><button data-t="ledger">All trades</button></nav>
-<section id="t-over"><div class="hero">
+<nav class="nav" id="nav"><button data-t="over" class="on">Overview</button><button data-t="today">Today's trades</button><button data-t="fno">F&amp;O</button><button data-t="comm">Commodities</button><button data-t="crypto">Crypto</button><button data-t="chart">Charts</button><button data-t="ledger">All trades</button></nav>
+<section id="t-over"><div class="hero3">
+ <div class="card" id="acct"><h2>Paper account <em>one pool of money for every desk</em></h2>
+  <div><span class="acct-big" id="a-eq">—</span></div><div class="mut" id="a-sub" style="margin-top:2px">—</div>
+  <div class="acct-rows"><div><small>Cash available</small><b id="a-cash">—</b></div><div><small>Invested / margin in use</small><b id="a-use">—</b></div><div><small>Booked profit</small><b id="a-real">—</b></div><div><small>Open profit</small><b id="a-unr">—</b></div></div>
+  <div class="fill" id="a-bk"></div></div>
  <div class="card"><h2>Today's profit and loss <em id="pl-note">trades opened today, all desks</em></h2>
   <div><span class="big" id="pnl">—</span></div><div class="mut" id="pnl-sub" style="margin:4px 0 8px">—</div>
-  <svg class="ch" id="pl-chart" viewBox="0 0 640 180" preserveAspectRatio="none"><line id="pl-zero" x1="0" x2="640" y1="90" y2="90" stroke="#24385a" stroke-dasharray="4 4"/><g id="pl-lines"></g></svg>
-  <div class="legend" id="pl-legend"></div></div>
- <div class="card"><h2>Nifty 50 today <em id="nf-note">live ticks the desk has seen</em></h2><svg class="ch" id="nf-chart" viewBox="0 0 640 180" preserveAspectRatio="none"><path id="nf-area" fill="#4f8cff22" stroke="none"/><path id="nf-line" fill="none" stroke="#4f8cff" stroke-width="2"/></svg>
-  <div class="kpis" style="margin-top:10px" id="desk-kpis"></div></div>
+  <div class="fill"><svg class="ch" id="pl-chart" viewBox="0 0 640 180" preserveAspectRatio="none"><line id="pl-zero" x1="0" x2="640" y1="90" y2="90" stroke="#24385a" stroke-dasharray="4 4"/><g id="pl-lines"></g></svg>
+  <div class="legend" id="pl-legend"></div></div></div>
+ <div class="card"><h2>Nifty 50 today <em id="nf-note">live ticks the desk has seen</em></h2>
+  <div class="fill"><svg class="ch" id="nf-chart" viewBox="0 0 640 180" preserveAspectRatio="none"><path id="nf-area" fill="#4f8cff22" stroke="none"/><path id="nf-line" fill="none" stroke="#4f8cff" stroke-width="2"/></svg></div>
+  <div class="mk3" id="nf-k" style="margin:10px 0 0"></div></div>
 </div>
-<div class="kpis" id="kpis" style="margin:12px 0"></div>
-<div class="card"><h2>Top performing agents <em>each strategy is run by its own desk; ranked by profit, closed and open</em></h2>
+<div class="kpis" id="kpis" style="margin:0 0 12px"></div>
+<div class="g2o"><div class="card"><h2>Top performing agents <em>each strategy is run by its own desk; ranked by profit, closed and open</em></h2>
  <div class="tw"><table class="lb"><thead><tr><th>#</th><th>Agent desk</th><th>Market</th><th class="r">Trades</th><th class="r">Win rate</th><th class="r">Closed P/L</th><th class="r">Open P/L</th><th>Profit</th><th>Verdict</th></tr></thead><tbody id="lb"></tbody></table></div>
  <p class="rc" style="margin-top:8px">COLLECTING: under 20 closed trades, no judgement yet. PAUSED: a strategy that loses over 30 trades stops opening trades by itself. READY FOR REVIEW: 100+ closed trades with 98% confidence the average is above zero; it still needs your decision before any real money. <b id="gate"></b></p></div>
+<div class="card"><h2>Open positions <em>largest profit or loss first · tap Today's trades for charts</em></h2><div class="tw"><table id="op"><thead><tr><th>Instrument</th><th>Market</th><th class="r">Qty</th><th class="r">Invested</th><th class="r">P/L</th><th class="r">P/L %</th></tr></thead></table></div></div></div>
 <div class="grid3"><div class="card"><h2>Top gainers <em>₹10 cr+ traded</em></h2><table class="mv"><tbody id="mv-g"></tbody></table></div><div class="card"><h2>Top losers</h2><table class="mv"><tbody id="mv-l"></tbody></table></div><div class="card"><h2>Most active <em>by turnover</em></h2><table class="mv"><tbody id="mv-a"></tbody></table></div></div>
 <div class="grid3"><div class="card"><h2>Headlines <em>free feeds, high-impact rules</em></h2><div id="news"></div></div><div class="card"><h2>Results filed <em>NSE</em></h2><div id="results"></div></div><div class="card"><h2>World markets <em>last close</em></h2><div id="world"></div></div></div>
 </section>
@@ -69,6 +82,21 @@ footer{color:var(--dim);font-size:11.5px;margin-top:8px}
  <div class="tot" id="tt-tot"></div>
  <div class="tw"><table id="tt"><thead><tr><th>Instrument</th><th>Side</th><th class="r">Qty</th><th class="r">Invested</th><th class="r">Entry</th><th class="r">Price now</th><th class="r">P/L</th><th class="r">P/L %</th><th class="r">Stop</th><th class="r">Target</th><th>Price line today</th></tr></thead></table></div>
  <p class="rc" style="margin-top:8px">The line shows the price since entry; white dashed is your entry, red the stop, green the target. Strategy, booking time and the reason for each trade are in the Excel file.</p></div></section>
+<section id="t-fno" hidden>
+<div class="card"><h2>F&amp;O desk <em id="fno-note">NIFTY options, booked every day within a ₹20,000 margin limit</em></h2>
+ <div class="kpis" id="fno-k" style="margin-bottom:10px"></div><div class="mk3" id="fno-m"></div>
+ <div class="ctl" id="fno-ctl"><button data-m="open">Open</button><button class="on" data-m="today">Today</button><button data-m="all">All days</button></div>
+ <div class="tw"><table id="fno-t"><thead><tr><th>Instrument</th><th>Side</th><th class="r">Qty</th><th class="r">Invested</th><th class="r">Entry</th><th class="r">Price now</th><th class="r">P/L</th><th class="r">P/L %</th><th>Status</th></tr></thead></table></div></div></section>
+<section id="t-comm" hidden>
+<div class="card"><h2>Commodities desk <em id="comm-note">MCX futures, intraday, within a ₹10,000 margin limit</em></h2>
+ <div class="kpis" id="comm-k" style="margin-bottom:10px"></div><div class="mk3" id="comm-m"></div>
+ <div class="ctl" id="comm-ctl"><button data-m="open">Open</button><button class="on" data-m="today">Today</button><button data-m="all">All days</button></div>
+ <div class="tw"><table id="comm-t"><thead><tr><th>Instrument</th><th>Side</th><th class="r">Qty</th><th class="r">Invested</th><th class="r">Entry</th><th class="r">Price now</th><th class="r">P/L</th><th class="r">P/L %</th><th>Status</th></tr></thead></table></div></div></section>
+<section id="t-crypto" hidden>
+<div class="card"><h2>Crypto desk <em id="crypto-note">spot coins, long only, within a ₹5,000 limit</em></h2>
+ <div class="kpis" id="crypto-k" style="margin-bottom:10px"></div><div class="mk3" id="crypto-m"></div>
+ <div class="ctl" id="crypto-ctl"><button data-m="open">Open</button><button class="on" data-m="today">Today</button><button data-m="all">All days</button></div>
+ <div class="tw"><table id="crypto-t"><thead><tr><th>Instrument</th><th>Side</th><th class="r">Qty</th><th class="r">Invested</th><th class="r">Entry</th><th class="r">Price now</th><th class="r">P/L</th><th class="r">P/L %</th><th>Status</th></tr></thead></table></div></div></section>
 <section id="t-chart" hidden>
 <div class="card"><h2>Chart <em id="c-note">any of the NSE stocks, with your entries, stops and targets</em></h2>
  <div class="ctl"><input class="sym" id="c-in" list="c-list" placeholder="Search any stock, e.g. RELIANCE" autocomplete="off"><datalist id="c-list"></datalist><button class="on" data-r="60">3M</button><button data-r="130">6M</button><button data-r="260">1Y</button><button data-m="I" id="c-intra">Today 5-min</button></div>
@@ -114,7 +142,7 @@ function movers(tb,list){let m=MV.get(tb);if(!m){m={};MV.set(tb,m)}const nodes=l
 /* ---------- charts ---------- */
 const SV='http://www.w3.org/2000/svg',PL={};
 function path(g,key,colour,w){let p=PL[key];if(!p){p=document.createElementNS(SV,'path');p.setAttribute('fill','none');p.setAttribute('stroke',colour);p.setAttribute('stroke-width',w||2);p.setAttribute('vector-effect','non-scaling-stroke');g.appendChild(p);PL[key]=p}return p}
-function drawSeries(s){if(!s||!s.points||!s.points.length)return;S.series=s;const pts=s.points,xs=(i)=>pts.length>1?i*640/(pts.length-1):320;
+function drawSeries(s){if(!s||!s.points||!s.points.length)return;S.series=s;let pts=s.points.filter((p)=>p[0]>='09:00');if(pts.length<2)pts=s.points;const xs=(i)=>pts.length>1?i*640/(pts.length-1):320;
  const cols=[['Total','#e8eef9',1],['Equities','#29d3ee',2],['F&O','#a184ff',3],['Commodities','#ffb64a',4],['Crypto','#2de3a5',5]];
  let lo=0,hi=0;pts.forEach((p)=>cols.forEach(([,,k])=>{lo=Math.min(lo,p[k]);hi=Math.max(hi,p[k])}));const sp=(hi-lo)||1,y=(v)=>170-(v-lo)/sp*160;$('pl-zero').setAttribute('y1',y(0));$('pl-zero').setAttribute('y2',y(0));
  cols.forEach(([n,c,k],i)=>path($('pl-lines'),'pl'+k,c,i?1.5:2.5).setAttribute('d',pts.map((p,j)=>(j?'L':'M')+xs(j).toFixed(1)+' '+y(p[k]).toFixed(1)).join('')));
@@ -126,7 +154,7 @@ const CL=(t)=>t.status==='WIN'||t.status==='LOSS',INTRA=(t)=>!['swing','weekly',
 const KP={};function kpi(box,key,label,text,n,colour,sub){let k=KP[key];if(!k){k={el:E('div','kpi'),l:E('div','l',label),v:E('div','v'),s:E('div','s')};k.el.append(k.l,k.v,k.s);box.appendChild(k.el);KP[key]=k}setv(k.v,text,n,colour);if(k.s.textContent!==(sub||''))k.s.textContent=sub||''}
 function drawNumbers(){const T=S.trades,d=today(),td=T.filter((t)=>t.day===d&&INTRA(t)),cl_=T.filter(CL),open=T.filter((t)=>t.status==='OPEN'),sum=(a)=>a.reduce((x,t)=>x+(+t.pnl_rs||0),0);
  const tp=sum(td);setv($('pnl'),sg(Math.round(tp)),tp,cl(tp));$('pnl-sub').textContent=`${td.length} trades opened today · ${td.filter((t)=>t.status==='OPEN').length} still open · ${td.filter(CL).length} closed`;
- Object.keys(DESK).forEach((k)=>{const x=td.filter((t)=>t.desk===k),c=T.filter((t)=>t.desk===k&&CL(t)),w=c.filter((t)=>t.status==='WIN').length;kpi($('desk-kpis'),'d'+k,DESK[k]+' today',sg(Math.round(sum(x))),sum(x),cl(sum(x)),`${T.filter((t)=>t.desk===k&&t.status==='OPEN').length} open · ${c.length} closed${c.length?' · '+Math.round(w/c.length*100)+'% won':''}`)});
+ Object.keys(DESK).forEach((k)=>{const x=td.filter((t)=>t.desk===k),c=T.filter((t)=>t.desk===k&&CL(t)),w=c.filter((t)=>t.status==='WIN').length;kpi($('kpis'),'d'+k,DESK[k]+' today',sg(Math.round(sum(x))),sum(x),cl(sum(x)),`${T.filter((t)=>t.desk===k&&t.status==='OPEN').length} open · ${c.length} closed${c.length?' · '+Math.round(w/c.length*100)+'% won':''}`)});
  const w=cl_.filter((t)=>t.status==='WIN').length,bk=$('kpis');
  kpi(bk,'open','Open P/L, all books',sg(Math.round(sum(open))),sum(open),cl(sum(open)),open.length+' open positions');kpi(bk,'booked','Booked P/L, all time',sg(Math.round(sum(cl_))),sum(cl_),cl(sum(cl_)),cl_.length+' closed trades');
  kpi(bk,'win','Win rate',cl_.length?Math.round(w/cl_.length*100)+'%':'—',cl_.length?w/cl_.length:null,'',w+' won · '+(cl_.length-w)+' lost');kpi(bk,'pend','Orders waiting for the open',String(T.filter((t)=>t.status==='PENDING').length),T.filter((t)=>t.status==='PENDING').length,'','daily-bar strategies fill at the open');
@@ -151,9 +179,9 @@ async function slow(){const [news,res,world]=await Promise.all(['news_feed','res
 /* ---------- helpers shared by the books ---------- */
 const RAWC='https://raw.githubusercontent.com/balakodavati123-ops/Website-Rules/charts/',IST_TODAY=today;
 const fnm=(s)=>String(s).replace(/&/g,'_and_').replace(/\//g,'_').replace(/ /g,'_');
-const px=(t)=>{if(t.desk==='EQUITY'&&t.symbol&&S.quotes&&S.quotes[t.symbol]&&(t.status==='OPEN'||t.status==='PENDING'))return S.quotes[t.symbol][0];return t.status==='OPEN'||t.status==='PENDING'?t.last:t.exit};
+const px=(t)=>{if(t.desk==='EQUITY'&&t.symbol&&S.quotes&&S.quotes[t.symbol]&&(t.status==='OPEN'||t.status==='PENDING'))return S.quotes[t.symbol][0];if(t.desk==='CRYPTO'&&t.status==='OPEN'&&S.prices){const c=(S.prices.crypto||[]).find((x)=>x.name===t.symbol);if(c)return c.last}return t.status==='OPEN'||t.status==='PENDING'?t.last:t.exit};
 const mult=(t)=>+t.mult||1;
-function invested(t){const q=+t.qty,e=+t.entry;if(t.desk==='EQUITY')return q&&e?q*e:null;if(t.desk==='COMMODITY')return q&&e?q*e*mult(t):t.margin_rs;if(t.desk==='CRYPTO')return q||null;return t.margin_rs||null}
+function invested(t){const q=+t.qty,e=+t.entry;if(t.desk==='EQUITY')return q&&e?q*e:null;if(t.desk==='COMMODITY')return t.margin_rs||(q&&e?q*e*mult(t)*0.06:null);if(t.desk==='CRYPTO')return q||null;return t.margin_rs||null}
 function qtyTxt(t){if(t.desk==='FNO')return t.lot?`1 lot (${t.lot})`:'1 lot';if(t.desk==='CRYPTO')return '—';return t.qty===''||t.qty==null?'—':String(t.qty)}
 function livePnl(t){if(t.status!=='OPEN'||t.desk!=='EQUITY'||!S.quotes||!S.quotes[t.symbol]||!(+t.qty))return +t.pnl_rs||0;const d=t.side==='SHORT'?-1:1;return Math.round(d*(S.quotes[t.symbol][0]-t.entry)*t.qty*100)/100}
 const sideTag=(t)=>t.side==='SHORT'?'SELL':'BUY';
@@ -228,17 +256,45 @@ document.querySelectorAll('#t-chart .ctl button').forEach((b)=>b.onclick=()=>{if
 window.addEventListener('resize',()=>{if(!$('t-chart').hidden)drawChart()});
 function drawPicks(){const sy=[...new Set(S.trades.filter((t)=>t.desk==='EQUITY'&&t.symbol&&t.status==='OPEN').map((t)=>t.symbol))].sort(),box=$('c-picks'),w=sy.join();if(box._w===w)return;box._w=w;box.replaceChildren(...sy.map((x)=>{const b=E('button','',x);b.onclick=()=>openChart(x);return b}))}
 async function loadSyms(){const s=await jget([RAWC+'symbols.json','charts/symbols.json']);if(!s)return;SYMS=s;$('c-list').replaceChildren(...s.map((x)=>{const o=E('option');o.value=x[0];o.label=x[1];return o}))}
+/* ---------- the paper account, open positions, desk tabs ---------- */
+function drawAccount(a){if(!a)return;S.account=a;const g=(id)=>$(id);setv(g('a-eq'),inr(Math.round(a.equity)),a.equity,cl(a.pnl));g('a-sub').textContent=`${sg(Math.round(a.pnl))} (${pc(a.pnl_pct)}) since the ₹${num(a.start,0)} start · ${a.open} open · ${a.closed} closed`;
+ setv(g('a-cash'),inr(Math.round(a.cash)),a.cash,a.cash<0?'down':'');setv(g('a-use'),inr(Math.round(a.in_use)),a.in_use);setv(g('a-real'),sg(Math.round(a.realised)),a.realised,cl(a.realised));setv(g('a-unr'),sg(Math.round(a.unrealised)),a.unrealised,cl(a.unrealised));
+ const box=g('a-bk');Object.entries(a.buckets).forEach(([k,v])=>{let r=box._r&&box._r[k];if(!r){box._r=box._r||{};r={el:E('div','bk'),l:E('span','',v.label),t:E('div','t'),b:E('b'),n:E('span')};r.t.appendChild(r.b);r.el.append(r.l,r.t,r.n);box.appendChild(r.el);box._r[k]=r}
+  const f=v.budget?Math.min(100,v.used/v.budget*100):0;r.b.style.width=f+'%';r.b.style.background=f>=100?'#ffb64a':'#4f8cff';const t=`${inr(v.used)} / ${inr(v.budget)}`;if(r.n.textContent!==t)r.n.textContent=t})}
+const OP={};
+function drawOpenPos(){const L=S.trades.filter((t)=>t.status==='OPEN').sort((a,b)=>Math.abs(livePnl(b))-Math.abs(livePnl(a))).slice(0,10);
+ const nodes=L.map((t)=>{let r=OP[t.id];if(!r){r={el:E('tr'),c:[E('td'),E('td'),E('td','num r'),E('td','num r'),E('td','num r'),E('td','num r')]};r.el.style.cursor='pointer';r.el.onclick=()=>{if(t.symbol&&t.desk==='EQUITY')openChart(t.symbol);else setTab(t.desk==='FNO'?'fno':t.desk==='COMMODITY'?'comm':'crypto')};r.el.append(...r.c);OP[t.id]=r}
+  const pnl=livePnl(t),iv=invested(t),tx=(c,v)=>{if(c.textContent!==v)c.textContent=v};tx(r.c[0],t.label);tx(r.c[1],DESK[t.desk]);tx(r.c[2],qtyTxt(t));tx(r.c[3],iv?inr(Math.round(iv)):'—');setv(r.c[4],sg(Math.round(pnl)),pnl,cl(pnl));setv(r.c[5],iv?pc(pnl/iv*100,2):'—',iv?pnl/iv:null,cl(pnl));return r.el});reorder($('op'),nodes,1)}
+const MC={};
+function mcard(box,key,name,text,n,sub,chg){let c=MC[box.id+key];if(!c){c={el:E('div','tk'),n:E('div','n',name),v:E('span','v'),c:E('div','c')};const w=E('div');w.appendChild(c.v);c.el.append(c.n,w,c.c);box.appendChild(c.el);MC[box.id+key]=c}setv(c.v,text,n);setv(c.c,sub,chg==null?null:chg,cl(chg))}
+const DT={fno:{desk:'FNO',m:'today',b:'FNO'},comm:{desk:'COMMODITY',m:'today',b:'COMMODITY'},crypto:{desk:'CRYPTO',m:'today',b:'CRYPTO'}},DR={};
+function deskMarket(id){const p=S.prices||{},box=$(id+'-m');if(id==='fno'){const f=p.fno;if(f){mcard(box,'s','NIFTY 50',num(f.spot,2),f.spot,'now',null);mcard(box,'st','ATM straddle',num(f.straddle,1)+' pts',f.straddle,'±'+(f.straddle/f.spot*100).toFixed(2)+'% expected move',null);mcard(box,'e','Expiry',f.expiry.slice(5),null,'lot '+f.lot+' · ATM '+f.atm,null);if(f.vix)mcard(box,'v','India VIX',num(f.vix,2),f.vix,'',null)}}
+ else if(id==='comm')(p.mcx||[]).forEach((x)=>mcard(box,x.name,x.name,'₹'+num(x.last,x.last<1000?2:0),x.last,pc(x.chg_pct),x.chg_pct));
+ else(p.crypto||[]).forEach((x)=>mcard(box,x.name,x.name,'$'+num(x.last,x.last<10?4:x.last<1000?2:0),x.last,pc(x.chg_pct)+' today',x.chg_pct))}
+function drawDeskTab(id){const c=DT[id],d=today(),T=S.trades.filter((t)=>t.desk===c.desk&&t.status!=='PENDING'),td=T.filter((t)=>t.day===d),op=T.filter((t)=>t.status==='OPEN'),cd=T.filter(CL),sum=(a)=>a.reduce((x,t)=>x+livePnl(t),0);
+ const k=$(id+'-k'),bk=S.account&&S.account.buckets[c.b],w=cd.filter((t)=>t.status==='WIN').length;
+ kpi(k,id+'a','Today P/L',sg(Math.round(sum(td))),sum(td),cl(sum(td)),`${td.length} trades today`);kpi(k,id+'b','Open P/L',sg(Math.round(sum(op))),sum(op),cl(sum(op)),`${op.length} open`);kpi(k,id+'c','Booked P/L, all days',sg(Math.round(sum(cd))),sum(cd),cl(sum(cd)),`${cd.length} closed`);
+ kpi(k,id+'d','Win rate',cd.length?Math.round(w/cd.length*100)+'%':'—',cd.length?w/cd.length:null,'',`${w} won · ${cd.length-w} lost`);if(bk)kpi(k,id+'e','Limit in use',`${inr(bk.used)} of ${inr(bk.budget)}`,bk.used,'',bk.room?`${inr(bk.room)} free`:'fully used: new trades wait');
+ deskMarket(id);const L=(c.m==='open'?op:c.m==='today'?td:T).slice().sort((a,b)=>(a.status==='OPEN'?0:1)-(b.status==='OPEN'?0:1)||(b.day+b.opened).localeCompare(a.day+a.opened)).slice(0,150);
+ $(id+'-note').textContent=`${L.length} shown · ${op.length} open now`;
+ const nodes=L.map((t)=>{const key=id+t.id;let r=DR[key];if(!r){r={el:E('tbody','trw'),m:E('tr'),g:E('tr','legs'),c:[E('td'),E('td'),E('td','num r'),E('td','num r'),E('td','num r'),E('td','num r'),E('td','num r'),E('td','num r'),E('td')]};r.c[1].appendChild(E('span','tag'));r.c[8].appendChild(E('span','tag'));r.m.append(...r.c);r.gt=E('td');r.gt.colSpan=9;r.g.appendChild(r.gt);r.el.append(r.m,r.g);DR[key]=r}
+  const pnl=livePnl(t),iv=invested(t),tx=(cc,v)=>{if(cc.textContent!==v)cc.textContent=v};const nm=r.c[0];if(nm._s!==t.label){nm._s=t.label;nm.replaceChildren(E('b','',t.label.replace(/ (long|short)$/,'')))}
+  setTag(r.c[1].firstChild,sideTag(t),t.side==='SHORT'?'r':'g');tx(r.c[2],qtyTxt(t));tx(r.c[3],iv?inr(Math.round(iv)):'—');tx(r.c[4],t.desk==='FNO'?num(t.entry,1)+' pts':num(t.entry,t.entry<10?4:2));const pn=px(t);setv(r.c[5],t.desk==='FNO'?'—':num(pn,pn<10?4:2),+pn);
+  setv(r.c[6],sg(Math.round(pnl)),pnl,cl(pnl));setv(r.c[7],iv?pc(pnl/iv*100,2):'—',iv?pnl/iv:null,cl(pnl));setTag(r.c[8].firstChild,stTxt(t),t.status==='OPEN'?'b':t.status==='WIN'?'g':t.status==='LOSS'?'r':'a');
+  const legs=Array.isArray(t.legs)?t.legs:null;const key2=legs?legs.map((l)=>l.strike+l.kind+l.last).join('|'):'';if(r.lk!==key2){r.lk=key2;r.g.hidden=!legs;r.gt.replaceChildren();if(legs)legs.forEach((l)=>{const s=E('span');s.append(E('b','',(l.side==='S'?'SELL ':'BUY ')+l.strike+' '+l.kind),document.createTextNode(`  in ${num(l.entry)} → now ${l.last==null?'—':num(l.last)}`));r.gt.appendChild(s)});if(legs&&t.max_loss_rs){const s=E('span');s.append(document.createTextNode('Max loss '),E('b','',inr(t.max_loss_rs)),document.createTextNode('  Max gain '),E('b','',t.max_gain_rs?inr(t.max_gain_rs):'unlimited'));r.gt.appendChild(s)}}
+  return r.el});reorder($(id+'-t'),nodes,1)}
+Object.keys(DT).forEach((id)=>document.querySelectorAll('#'+id+'-ctl button').forEach((b)=>b.onclick=()=>{DT[id].m=b.dataset.m;document.querySelectorAll('#'+id+'-ctl button').forEach((x)=>x.classList.toggle('on',x===b));drawDeskTab(id)}));
 /* ---------- tabs and polling ---------- */
-function setTab(t){document.querySelectorAll('#nav button').forEach((b)=>b.classList.toggle('on',b.dataset.t===t));['over','today','chart','ledger'].forEach((k)=>{$('t-'+k).hidden=k!==t});if(t==='chart')drawChart();if(t==='today')drawToday();if(location.hash!=='#'+t)history.replaceState(null,'','#'+t)}
+function setTab(t){document.querySelectorAll('#nav button').forEach((b)=>b.classList.toggle('on',b.dataset.t===t));['over','today','fno','comm','crypto','chart','ledger'].forEach((k)=>{$('t-'+k).hidden=k!==t});if(t==='chart')drawChart();if(t==='today')drawToday();if(DT[t])drawDeskTab(t);if(location.hash!=='#'+t)history.replaceState(null,'','#'+t)}
 document.querySelectorAll('#nav button').forEach((b)=>b.onclick=()=>setTab(b.dataset.t));
 document.querySelectorAll('#t-today .ctl button[data-m]').forEach((b)=>b.onclick=()=>{TM=b.dataset.m;document.querySelectorAll('#t-today .ctl button[data-m]').forEach((x)=>x.classList.toggle('on',x===b));drawToday()});
 let busy=false,tick2=0;
-async function core(){if(busy)return;busy=true;try{const [t,s,se,st]=await Promise.all(['all_trades','live_status','pnl_series','strategy_stats'].map(get));if(t){S.trades=t;S.stats=st||[]}if(s){S.status=s}drawStatus();if(t){drawNumbers();drawLedger();drawToday();drawPicks()}drawSeries(se)}finally{busy=false}}
+async function core(){if(busy)return;busy=true;try{const [t,s,se,st,ac]=await Promise.all(['all_trades','live_status','pnl_series','strategy_stats','account'].map(get));if(t){S.trades=t;S.stats=st||[]}if(s){S.status=s}drawStatus();drawAccount(ac);if(t){drawNumbers();drawLedger();drawToday();drawPicks();drawOpenPos();Object.keys(DT).forEach((k)=>{if(!$('t-'+k).hidden)drawDeskTab(k)})}drawSeries(se)}finally{busy=false}}
 async function mid(){const q=await get('quotes');if(q&&q.q){S.quotes=q.q;drawToday();if(!$('t-chart').hidden)drawChart()}if(tick2++%4===0){const i=await get('intraday');if(i){S.intra=i;drawToday()}}}
-async function fast(){const p=await get('prices');drawPrices(p)}
+async function fast(){const p=await get('prices');drawPrices(p);if(p){const n=(p.indices||{})['Nifty 50'];if(n){const b=$('nf-k');mcard(b,'n','Now',num(n.last,2),n.last,pc(n.chg_pct),n.chg_pct);mcard(b,'h','Day high',num(n.high,2),n.high,'',null);mcard(b,'l','Day low',num(n.low,2),n.low,'',null)}Object.keys(DT).forEach((k)=>{if(!$('t-'+k).hidden)deskMarket(k)})}}
 $('f-day').onchange=(e)=>{S.day=e.target.value;drawLedger()};$('f-st').onchange=drawLedger;$('f-q').oninput=drawLedger;
 const fd=$('f-desk');['ALL',...Object.keys(DESK)].forEach((k)=>{const b=E('button',k==='ALL'?'on':'',k==='ALL'?'All markets':DESK[k]);b.onclick=()=>{S.desk=k;[...fd.children].forEach((x)=>x.classList.toggle('on',x===b));drawLedger()};fd.appendChild(b)});fd.style.display='contents';
 loadSyms();fast();core();mid();slow();setInterval(fast,4000);setInterval(core,8000);setInterval(mid,15000);setInterval(slow,120000);setInterval(drawStatus,1000);
-const h0=(location.hash||'').slice(1);if(['today','chart','ledger'].includes(h0))setTab(h0);
+const h0=(location.hash||'').slice(1);if(['today','fno','comm','crypto','chart','ledger'].includes(h0))setTab(h0);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden){fast();core();mid()}});
 </script></body></html>

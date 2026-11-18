@@ -20,6 +20,8 @@ import intraday as I     # noqa: E402
 import upstox as U       # noqa: E402
 import open_fill as OF   # noqa: E402
 import ledger as L       # noqa: E402
+import account as A      # noqa: E402
+import daily as DLY      # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = Path(os.environ.get("DESK_DOCS") or ROOT / "docs" / "data")
@@ -132,12 +134,50 @@ def publish() -> None:
         shutil.rmtree(d, ignore_errors=True)
 
 
+def migrate() -> None:
+    """One time: trades opened before the Rs 1,00,000 account existed were sized for other pools. Shrink the open ones
+    so the swing and signal books fit their slices; closed trades and their results are untouched."""
+    for name, bucket, budget in (("paper_ledger.json", "swing", A.START * A.BUDGET["swing"]), ("signal_ledger.json", "signal", A.START * A.BUDGET["signal"])):
+        f = DOCS / name
+        if not f.exists():
+            continue
+        rows = json.loads(f.read_text())
+        todo = [r for r in rows if r["status"] == "OPEN" and not r.get("rebased")]
+        if not todo:
+            continue
+        val = lambda r: float(r.get("entry") or 0) * float(r.get("qty") or 0)
+        total = sum(val(r) for r in rows if r["status"] == "OPEN")
+        k = min(1.0, budget / total) if total else 1.0
+        for r in todo:
+            q0 = float(r["qty"] or 0)
+            q1 = max(1, int(q0 * k)) if q0 else q0
+            f_ = q1 / q0 if q0 else 1
+            r["qty"] = q1
+            for key in ("risk_rs", "unrealized_rs", "unreal_rs"):
+                if r.get(key) not in (None, ""):
+                    r[key] = round(float(r[key]) * f_, 2)
+            if r.get("deploy_rs") not in (None, ""):
+                r["deploy_rs"] = round(float(r["deploy_rs"]) * f_, 2)
+            r["rebased"] = True
+            r["note"] = (r.get("note") or "") + " Resized to fit the Rs 1,00,000 account."
+        f.write_text(json.dumps(rows, indent=1))
+        commit_main([f"docs/data/{name}"], "data: open positions resized to the Rs 1,00,000 account")
+
+
 def run() -> None:
     DOCS.mkdir(parents=True, exist_ok=True)
+    migrate()
     token = os.environ.get("UPSTOX_TOKEN", "").strip()
     end = time.time() + int(os.environ.get("LOOP_SECONDS", "0"))
     eq = load("live_book.json", {"day": "", "trades": [], "seen": {}, "seq": 0})
     xb = load("desk_book.json", D.new_book())
+    if not xb.get("rebased"):                  # one time: positions opened before the Rs 1,00,000 account are closed at their last price, and today's desks may trade again within their limits
+        nowr, todayr = datetime.now(IST), datetime.now(IST).strftime("%Y-%m-%d")
+        for t in xb["trades"]:
+            if t["status"] == "OPEN":
+                D.finish(t, t["last"], "closed: the account was reset to Rs 1,00,000 and this position was larger than its limit", nowr, t["pnl_rs"])
+        xb["seen"] = {k: v for k, v in xb["seen"].items() if not k.startswith(todayr)}
+        xb["rebased"] = True
     archive = {t["id"]: t for t in load("trade_archive.json", [])}
     paused = {s["strategy"] for s in load("strategy_stats.json", []) if s["verdict"] == "PAUSED"}
     news, status, i = I.filings_news(), {"desks": {}}, 0
@@ -146,14 +186,18 @@ def run() -> None:
     qs: dict = {}
     intra: dict = load("intraday.json", {"day": "", "s": {}})
     last_intra, key_of = 0.0, {}
-    def persist() -> None:
-        save("live_book.json", eq)
-        xb["trades"] = [t for t in xb["trades"] if t["status"] == "OPEN" or t["id"] not in archive]
-        save("desk_book.json", xb)
+    def compose():
         live_open = [t for t in unify_equity(eq) + xb["trades"] if t["status"] == "OPEN"]
         books = L.swing(load("paper_ledger.json", [])) + L.weekly_fno(load("fo_ledger.json", [])) + L.signals(load("signal_ledger.json", []))
         allt = list(archive.values()) + live_open + books
         allt.sort(key=lambda t: (t["day"], t["opened"]), reverse=True)
+        return allt, books
+
+    def persist() -> None:
+        save("live_book.json", eq)
+        xb["trades"] = [t for t in xb["trades"] if t["status"] == "OPEN" or t["id"] not in archive]
+        save("desk_book.json", xb)
+        allt, books = compose()
         save("trade_archive.json", sorted((t for t in archive.values()), key=lambda t: (t["day"], t["opened"]))[-4000:])
         save("all_trades.json", allt[:4000])
         stats = D.learn(list(archive.values()) + [t for t in books if t["status"] in ("WIN", "LOSS")])
@@ -167,6 +211,7 @@ def run() -> None:
         if qs:
             save("quotes.json", {"updated_at": status.get("updated_at"), "q": qs})
         nonlocal_state["tick"] = allt
+        save("account.json", {"updated_at": status.get("updated_at"), **A.summary(allt)})
 
     nonlocal_state: dict = {}
     last_pub = 0.0
@@ -174,6 +219,7 @@ def run() -> None:
         now = datetime.now(IST)
         today, hhmm, ses = now.strftime("%Y-%m-%d"), now.strftime("%H:%M"), sessions(now)
         close_stale(eq, xb, today)
+        rm = A.rooms(nonlocal_state.get("tick") or compose()[0])
         for t in unify_equity(eq) + xb["trades"]:       # keep every closed trade before the day's book resets
             if t["status"] != "OPEN":
                 archive[t["id"]] = t
@@ -190,7 +236,7 @@ def run() -> None:
                 qs.clear()
                 qs.update({r["symbol"]: [round(r["price"], 2), round(r["chg_pct"], 2), r["day_high"], r["day_low"], int(r["volume"])] for r in rows})
                 if rows:
-                    I.step(eq, today, hhmm, rows, news)
+                    I.step(eq, today, hhmm, rows, news, rm["intraday"])
                 info["equity"] = f"{len(rows)} stocks, real time"
             except Exception as e:
                 info["equity"] = f"error: {e}"
@@ -198,10 +244,10 @@ def run() -> None:
             info["equity"] = "no token: Yahoo fallback runs in intraday.py"
         if token and ses["equity"] and hhmm >= "09:16" and not filled:
             try:                                   # pending paper orders fill at today's real open, not a day late
-                lf, rf = DOCS / "paper_ledger.json", ROOT / "dashboard" / "data" / "desk_rules.json"
-                if lf.exists() and rf.exists():
+                lf = DOCS / "paper_ledger.json"
+                if lf.exists():
                     led = json.loads(lf.read_text())
-                    n = OF.fill_pending(led, json.loads(rf.read_text()), OF_opens(token, led), now.date(), (q_idx.get("NSE_INDEX|India VIX") or {}).get("last_price"))
+                    n = OF.fill_pending(led, DLY.RULES, OF_opens(token, led), now.date(), (q_idx.get("NSE_INDEX|India VIX") or {}).get("last_price"))
                     if n:
                         lf.write_text(json.dumps(led, indent=1))
                         commit_main(["docs/data/paper_ledger.json"], "data: pending paper orders filled at the open")
@@ -212,7 +258,7 @@ def run() -> None:
         if token and ses["mcx"]:
             try:
                 mcx_c = mcx_c or D.mcx_contracts(U.instruments("MCX"), now.date())
-                D.mcx_step(xb, now, U.quotes([c["key"] for c in mcx_c], token), mcx_c, paused)
+                D.mcx_step(xb, now, U.quotes([c["key"] for c in mcx_c], token), mcx_c, paused, rm["COMMODITY"])
                 info["commodities"] = f"{len(mcx_c)} MCX futures, real time"
             except Exception as e:
                 info["commodities"] = f"error: {e}"
@@ -223,14 +269,19 @@ def run() -> None:
                 exps = [e for e in U.expiries(token, NIFTY) if e >= today]
                 open_exp = {t["expiry"] for t in xb["trades"] if t["desk"] == "FNO" and t["status"] == "OPEN"}
                 chains = {e: U.option_chain(token, NIFTY, e) for e in sorted(open_exp | {exps[0]}) if e >= today or e in open_exp}
-                ctx = {"spot": spot, "prev": (spot - n["net_change"]) if spot and n.get("net_change") is not None else None, "chains": chains, "expiry": exps[0], "lot": U.lot_size(NIFTY, exps[0])}
+                ctx = {"spot": spot, "prev": (spot - n["net_change"]) if spot and n.get("net_change") is not None else None, "chains": chains, "expiry": exps[0], "lot": U.lot_size(NIFTY, exps[0]), "room": rm["FNO"]}
                 D.fno_step(xb, now, ctx, paused)
+                rows_ = chains.get(exps[0]) or []
+                if rows_ and spot:
+                    atm = min((r["strike_price"] for r in rows_), key=lambda k: abs(k - spot))
+                    st_ = D._buy(D._px(rows_, atm, "CE")) + D._buy(D._px(rows_, atm, "PE"))
+                    snap["fno"] = {"spot": spot, "expiry": exps[0], "lot": ctx["lot"], "atm": atm, "straddle": round(st_, 1), "vix": (q_idx.get(IDX["vix"]) or {}).get("last_price")}
                 info["fno"] = f"NIFTY {spot} , expiry {exps[0]}, {len(chains)} chain(s), real time"
             except Exception as e:
                 info["fno"] = f"error: {e}"
         try:
             ticks = D.kraken_ticks()
-            D.crypto_step(xb, now, ticks, paused)
+            D.crypto_step(xb, now, ticks, paused, rm["CRYPTO"])
             snap["crypto"] = [{"name": k, "last": v["last"], "chg_pct": (v["last"] / v["open"] - 1) * 100, "high": v["high"], "low": v["low"], "unit": "$"} for k, v in ticks.items()]
             info["crypto"] = "6 coins from Kraken, real time"
         except Exception as e:

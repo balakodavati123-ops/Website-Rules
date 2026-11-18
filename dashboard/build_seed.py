@@ -20,7 +20,7 @@ IST = timezone(timedelta(hours=5, minutes=30))
 
 # The CEO's own numbers.
 TRADING_CASH = 32000
-PAPER_START = 32000
+PAPER_START = 100000
 
 AGENTS = {  # id -> (display name, role, tone colour key)
     "DATA": ("Market Data Analyst", "Research"), "TECH": ("Technical Analyst", "Research"),
@@ -206,6 +206,8 @@ def main():
     rules = [
         {"key": "trading_cash", "label": "Trading cash (CEO)", "value": TRADING_CASH, "unit": "rupees"},
         {"key": "paper_start", "label": "Paper account start", "value": PAPER_START, "unit": "rupees"},
+        {"key": "swing_budget", "label": "Swing book slice of the account", "value": 42000, "unit": "rupees"},
+        {"key": "swing_max_pos", "label": "Largest swing position", "value": 4000, "unit": "rupees"},
         {"key": "risk_normal", "label": "Risk per trade, normal market", "value": 1.0, "unit": "% of equity"},
         {"key": "risk_caution", "label": "Risk per trade, caution market (VIX 16 to 20)", "value": 0.5, "unit": "% of equity"},
         {"key": "gate_conf", "label": "Confidence needed for real money", "value": 98, "unit": "%"},

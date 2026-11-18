@@ -36,7 +36,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "dashboard" / "data"
 IST = timezone(timedelta(hours=5, minutes=30))
-BOOK, COST, TRANCHES, MAX_OPEN = 100000.0, 0.0025, 3, 3
+BOOK, COST, TRANCHES, MAX_OPEN = 8000.0, 0.0025, 3, 3     # the signal desk's slice of the Rs 1,00,000 paper account
 LED, LES, SIG = DATA / "signal_ledger.json", DATA / "signal_lessons.json", DATA / "desk_signals.json"
 
 TRAJ = [(15, "Exponential_Profit"), (5, "Steady_Growth"), (-5, "Flat"), (-999, "Loss_Widening")]

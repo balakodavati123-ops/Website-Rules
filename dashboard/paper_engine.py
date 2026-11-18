@@ -126,6 +126,19 @@ def try_fill(row, ledger, rules, provider):
         row.update(status="SKIPPED", note="Position size rounds to nothing at this risk.")
         return
     qty, risk = sized
+    if row["market"] == "NSE":                  # the swing book is one slice of the shared paper account
+        cap_pos = next((r["value"] for r in rules if r["key"] == "swing_max_pos"), None)
+        budget = next((r["value"] for r in rules if r["key"] == "swing_budget"), None)
+        if cap_pos:
+            qty = min(qty, math.floor(cap_pos / o))
+            if qty < 1:
+                row.update(status="SKIPPED", note=f"One share costs more than the Rs {cap_pos:,.0f} limit for a swing position.")
+                return
+            risk = round(qty * (o - stop), 2)
+        used = sum(float(r.get("entry") or 0) * float(r.get("qty") or 0) for r in ledger if r["status"] == "OPEN" and r["market"] == "NSE")
+        if budget and used + qty * o > budget:
+            row.update(status="SKIPPED", note=f"The swing book's Rs {budget:,.0f} slice of the account is fully used.")
+            return
     if sum(r["risk_rs"] for r in open_rows) + risk > 0.04 * equity + 1e-9:
         row.update(status="SKIPPED", note="This strategy's open risk would pass 4% of equity.")
         return
