@@ -610,7 +610,8 @@
   "opened": "09:20",
   "closed": "",
   "risk_class": "Intraday momentum",
-  "margin_rs": 1573
+  "margin_rs": 1573,
+  "instrument_key": "NSE_EQ|INE345A01011"
  },
  {
   "id": "E261118-1",
@@ -632,7 +633,8 @@
   "opened": "09:20",
   "closed": "",
   "risk_class": "Intraday momentum",
-  "margin_rs": 1482
+  "margin_rs": 1482,
+  "instrument_key": "NSE_EQ|INE530B01024"
  },
  {
   "id": "E261118-4",
@@ -654,7 +656,8 @@
   "opened": "09:20",
   "closed": "",
   "risk_class": "Intraday momentum",
-  "margin_rs": 1448
+  "margin_rs": 1448,
+  "instrument_key": "NSE_EQ|INE570L01029"
  },
  {
   "id": "E261118-2",
@@ -676,7 +679,8 @@
   "opened": "09:20",
   "closed": "",
   "risk_class": "Intraday momentum",
-  "margin_rs": 1587
+  "margin_rs": 1587,
+  "instrument_key": "NSE_EQ|INE945H01021"
  },
  {
   "id": "M261118-16",

@@ -7,10 +7,10 @@
    "label": "Crude oil mini short",
    "side": "SHORT",
    "entry": 7899.0,
-   "last": 7861.0,
+   "last": 7878.0,
    "qty": 1,
    "status": "OPEN",
-   "pnl_rs": 340.5,
+   "pnl_rs": 170.5,
    "exit": "",
    "why": "",
    "day": "2026-11-18",
@@ -33,10 +33,10 @@
    "label": "Gold 1 g short",
    "side": "SHORT",
    "entry": 13245.0,
-   "last": 13238.0,
+   "last": 13219.0,
    "qty": 4,
    "status": "OPEN",
-   "pnl_rs": 1.51,
+   "pnl_rs": 77.51,
    "exit": "",
    "why": "",
    "day": "2026-11-18",
@@ -59,10 +59,10 @@
    "label": "NIFTY iron condor \u00b7 11-23",
    "side": "SHORT",
    "entry": 92.9,
-   "last": -1.2,
+   "last": 1.7,
    "qty": 1,
    "status": "OPEN",
-   "pnl_rs": -238.0,
+   "pnl_rs": -49.5,
    "exit": "",
    "why": "",
    "day": "2026-11-18",
@@ -77,28 +77,28 @@
      "strike": 25450.0,
      "kind": "CE",
      "entry": 93.55,
-     "last": 79.3
+     "last": 88.1
     },
     {
      "side": "B",
      "strike": 25650.0,
      "kind": "CE",
      "entry": 46.75,
-     "last": 39.5
+     "last": 42.65
     },
     {
      "side": "S",
      "strike": 25050.0,
      "kind": "PE",
      "entry": 88.3,
-     "last": 104.3
+     "last": 86.95
     },
     {
      "side": "B",
      "strike": 24850.0,
      "kind": "PE",
      "entry": 42.2,
-     "last": 50.0
+     "last": 41.2
     }
    ],
    "unit_base": 92.89999999999999,
@@ -117,10 +117,10 @@
    "label": "NIFTY credit spread \u00b7 11-23",
    "side": "SHORT",
    "entry": 44.0,
-   "last": 6.65,
+   "last": 1.35,
    "qty": 1,
    "status": "OPEN",
-   "pnl_rs": 352.25,
+   "pnl_rs": 7.75,
    "exit": "",
    "why": "",
    "day": "2026-11-18",
@@ -135,14 +135,14 @@
      "strike": 25400.0,
      "kind": "CE",
      "entry": 110.35,
-     "last": 93.6
+     "last": 104.35
     },
     {
      "side": "B",
      "strike": 25550.0,
      "kind": "CE",
      "entry": 66.35,
-     "last": 56.25
+     "last": 61.7
     }
    ],
    "unit_base": 44.0,
@@ -161,10 +161,10 @@
    "label": "NIFTY debit spread \u00b7 11-23",
    "side": "LONG",
    "entry": -64.35,
-   "last": 7.3,
+   "last": -0.25,
    "qty": 1,
    "status": "OPEN",
-   "pnl_rs": 394.5,
+   "pnl_rs": -96.25,
    "exit": "",
    "why": "",
    "day": "2026-11-18",
@@ -179,14 +179,14 @@
      "strike": 25250.0,
      "kind": "PE",
      "entry": 169.45,
-     "last": 195.1
+     "last": 167.6
     },
     {
      "side": "S",
      "strike": 25100.0,
      "kind": "PE",
      "entry": 105.1,
-     "last": 123.45
+     "last": 103.5
     }
    ],
    "unit_base": 64.35,
@@ -205,10 +205,10 @@
    "label": "XRP long",
    "side": "LONG",
    "entry": 0.9929,
-   "last": 0.99209,
+   "last": 1.00072,
    "qty": 2500,
    "status": "OPEN",
-   "pnl_rs": -12.04,
+   "pnl_rs": 9.69,
    "exit": "",
    "why": "",
    "day": "2026-11-18",

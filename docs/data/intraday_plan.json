@@ -1,0 +1,345 @@
+{
+ "day": "2026-11-18",
+ "built_at": "13:02",
+ "stage": 2,
+ "tone": {
+  "label": "Weak",
+  "score": -0.45,
+  "notes": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%.",
+   "Brent crude 95.84 (+0.02%).",
+   "Dollar-rupee 94.24 (+0.22%).",
+   "India VIX 15.91: normal."
+  ]
+ },
+ "nifty": {
+  "last": 25183.7,
+  "chg_pct": -0.8
+ },
+ "world": [
+  {
+   "name": "S&P 500",
+   "last": 7561.67,
+   "chg_pct": -0.4
+  },
+  {
+   "name": "Nasdaq",
+   "last": 25136.27,
+   "chg_pct": -0.91
+  },
+  {
+   "name": "Dow Jones",
+   "last": 52347.55,
+   "chg_pct": 0.1
+  },
+  {
+   "name": "US fear index (VIX)",
+   "last": 19.3,
+   "chg_pct": 3.21
+  },
+  {
+   "name": "Nikkei 225",
+   "last": 61142.35,
+   "chg_pct": 0.53
+  },
+  {
+   "name": "Hang Seng",
+   "last": 23637.6,
+   "chg_pct": -1.55
+  },
+  {
+   "name": "Shanghai",
+   "last": 3634.35,
+   "chg_pct": -0.59
+  },
+  {
+   "name": "FTSE 100",
+   "last": 10902.6,
+   "chg_pct": 0.36
+  },
+  {
+   "name": "DAX",
+   "last": 26749.95,
+   "chg_pct": -0.08
+  },
+  {
+   "name": "Nifty 50",
+   "last": 25144.3,
+   "chg_pct": -0.61
+  }
+ ],
+ "events": [],
+ "results": [
+  {
+   "symbol": "ARSHIYA",
+   "company": "Arshiya Limited",
+   "time": "13 Nov 20:35"
+  },
+  {
+   "symbol": "DPSCLTD",
+   "company": "DPSC Limited",
+   "time": "13 Nov 19:22"
+  },
+  {
+   "symbol": "GBGLOBAL",
+   "company": "GB Global Limited",
+   "time": "13 Nov 19:12"
+  },
+  {
+   "symbol": "NAGAFERT",
+   "company": "Nagarjuna Fertilizers and Chemicals Limited",
+   "time": "13 Nov 18:34"
+  },
+  {
+   "symbol": "SETCO",
+   "company": "Setco Automotive Limited",
+   "time": "13 Nov 16:02"
+  },
+  {
+   "symbol": "SKIL",
+   "company": "SKIL Infrastructure Limited",
+   "time": "13 Nov 19:12"
+  }
+ ],
+ "headlines": [
+  {
+   "headline": "Metal meltdown: SAIL, NALCO, Hindalco drag Nifty Metal 2% lower; here's why - Business Standard",
+   "category": "CRASH/SHOCK",
+   "source": "GoogleNews",
+   "time": "18 Nov 12:25"
+  },
+  {
+   "headline": "Metal meltdown: SAIL, NALCO, Hindalco drag Nifty Metal 2% lower; here's why",
+   "category": "CRASH/SHOCK",
+   "source": "BusinessStandard",
+   "time": "18 Nov 12:25"
+  },
+  {
+   "headline": "SanDisk stock selloff deepens: What's driving the crash?",
+   "category": "CRASH/SHOCK",
+   "source": "ET",
+   "time": "18 Nov 11:59"
+  },
+  {
+   "headline": "Stock Market Today Live Updates: BSE Sensex tumbles over 470 points, NSE Nifty50 trades below 25300 - The Times of India",
+   "category": "CRASH/SHOCK",
+   "source": "GoogleNews",
+   "time": "18 Nov 11:54"
+  },
+  {
+   "headline": "Hindalco, SAIL, Hindustan Zinc shares in focus as NIFTY Metal tumbles 2% on Nov 18; check details - Upstox",
+   "category": "CRASH/SHOCK",
+   "source": "GoogleNews",
+   "time": "18 Nov 11:47"
+  },
+  {
+   "headline": "Price Action: Ashoka Buildcon up 4% on winning NHAI project; Advait Energy jumps 2% post order win - TradingView",
+   "category": "DEAL/ORDER",
+   "source": "GoogleNews",
+   "time": "18 Nov 11:36"
+  },
+  {
+   "headline": "Polycab, KEI, RR Kabel & others fall up to 3% as copper plunges for 5th day",
+   "category": "CRASH/SHOCK",
+   "source": "BusinessStandard",
+   "time": "18 Nov 11:26"
+  },
+  {
+   "headline": "Industrial automation enabler Advanced Sys-Tek gets Sebi nod for IPO - Venture Intelligence News",
+   "category": "APPROVAL",
+   "source": "GoogleNews",
+   "time": "18 Nov 11:14"
+  }
+ ],
+ "watch": [
+  {
+   "symbol": "ACMESOLAR",
+   "why": [
+    "positive filing"
+   ],
+   "prev_close": 403.6,
+   "long_above": 406.02,
+   "short_below": 395.53,
+   "stop_pct": 1.0,
+   "bias": "long"
+  },
+  {
+   "symbol": "CLEANMAX",
+   "why": [
+    "positive filing"
+   ],
+   "prev_close": 1261.3,
+   "long_above": 1268.87,
+   "short_below": 1236.07,
+   "stop_pct": 1.0,
+   "bias": "long"
+  },
+  {
+   "symbol": "GATEWAY",
+   "why": [
+    "positive filing"
+   ],
+   "prev_close": 47.4,
+   "long_above": 47.68,
+   "short_below": 46.45,
+   "stop_pct": 1.0,
+   "bias": "long"
+  },
+  {
+   "symbol": "GENUSPOWER",
+   "why": [
+    "positive filing"
+   ],
+   "prev_close": 276.85,
+   "long_above": 278.51,
+   "short_below": 271.31,
+   "stop_pct": 1.0,
+   "bias": "long"
+  },
+  {
+   "symbol": "LANCER",
+   "why": [
+    "negative filing"
+   ],
+   "prev_close": 11.37,
+   "long_above": 11.6,
+   "short_below": 11.3,
+   "stop_pct": 1.0,
+   "bias": "short"
+  },
+  {
+   "symbol": "SETCO",
+   "why": [
+    "results filed"
+   ],
+   "prev_close": 16.54,
+   "long_above": 16.87,
+   "short_below": 16.21,
+   "stop_pct": 1.0,
+   "bias": "either"
+  }
+ ],
+ "fno": [
+  {
+   "strategy": "Iron condor, credit spread (fixed return)",
+   "note": "Favoured on a quiet day"
+  },
+  {
+   "strategy": "Debit spread, long breakout (high return, low loss)",
+   "note": "Needs a 0.25% to 0.5% move from the previous close first; waits for the trend"
+  },
+  {
+   "strategy": "Long straddle (high return, high loss)",
+   "note": "Pays only on a big move; the desk skips it when its cost does not fit the F&O limit"
+  }
+ ],
+ "outlook": "Tone weak. 6 names in the news to watch; the desks act only when price confirms: a 2% move near the day's extreme (0.6% when a filing agrees) on real turnover.",
+ "gaps": {
+  "up": [
+   {
+    "symbol": "OMPOWER",
+    "price": 152.74,
+    "chg_pct": 19.99
+   },
+   {
+    "symbol": "BALAXI",
+    "price": 30.83,
+    "chg_pct": 16.47
+   },
+   {
+    "symbol": "FAZE3Q",
+    "price": 648.7,
+    "chg_pct": 13.39
+   },
+   {
+    "symbol": "VESUVIUS",
+    "price": 376.0,
+    "chg_pct": 10.46
+   },
+   {
+    "symbol": "INDOCO",
+    "price": 244.5,
+    "chg_pct": 8.68
+   },
+   {
+    "symbol": "BPLPHARMA",
+    "price": 2380.2,
+    "chg_pct": 7.8
+   },
+   {
+    "symbol": "SANGAMIND",
+    "price": 684.6,
+    "chg_pct": 6.83
+   },
+   {
+    "symbol": "AJAXENGG",
+    "price": 615.15,
+    "chg_pct": 6.57
+   },
+   {
+    "symbol": "SYNCOMF",
+    "price": 22.19,
+    "chg_pct": 6.22
+   },
+   {
+    "symbol": "NDRAUTO",
+    "price": 765.95,
+    "chg_pct": 6.19
+   }
+  ],
+  "down": [
+   {
+    "symbol": "STANLEY",
+    "price": 119.98,
+    "chg_pct": -10.15
+   },
+   {
+    "symbol": "CAPLIPOINT",
+    "price": 2084.0,
+    "chg_pct": -7.26
+   },
+   {
+    "symbol": "DCAL",
+    "price": 121.6,
+    "chg_pct": -6.71
+   },
+   {
+    "symbol": "DEEPA",
+    "price": 200.2,
+    "chg_pct": -6.23
+   },
+   {
+    "symbol": "MKJEWELS",
+    "price": 176.74,
+    "chg_pct": -5.82
+   },
+   {
+    "symbol": "FCL",
+    "price": 44.43,
+    "chg_pct": -5.69
+   },
+   {
+    "symbol": "CREDITACC",
+    "price": 1047.2,
+    "chg_pct": -5.66
+   },
+   {
+    "symbol": "PARACABLES",
+    "price": 61.61,
+    "chg_pct": -5.61
+   },
+   {
+    "symbol": "SHANTIGOLD",
+    "price": 246.0,
+    "chg_pct": -5.57
+   },
+   {
+    "symbol": "TONBO",
+    "price": 1497.9,
+    "chg_pct": -5.51
+   }
+  ],
+  "at": "13:02"
+ }
+}

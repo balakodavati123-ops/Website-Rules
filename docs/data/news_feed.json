@@ -1,45 +1,5 @@
 [
  {
-  "time": "17 Nov 12:36",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Nifty recovers all losses made since US-Iran war began - Here are key reasons why - CNBC TV18",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "17 Nov 13:12",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Axis Bank\u2019s Munish Sharda Gets RBI Approval For Second Executive Director Term - BW People",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "17 Nov 13:12",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Clearing corporations seek SEBI nod to diversify investments, eye state government bonds, index ETFs:... - Moneycontrol.com",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "17 Nov 14:07",
-  "source": "GoogleNews",
-  "category": "DEAL/ORDER",
-  "headline": "Tata Mutual Fund announces merger of Tata Nifty G-Sec Dec 2026 Index Fund into Tata Short Term Fund - Value Research",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "17 Nov 14:52",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "MobiKwik eyes Rs 100 cr UPI MDR boost, gets RBI nod for NBFC - MediaNama",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
   "time": "17 Nov 15:23",
   "source": "GoogleNews",
   "category": "APPROVAL",
@@ -476,6 +436,46 @@
   "source": "GoogleNews",
   "category": "CRASH/SHOCK",
   "headline": "Metal meltdown: SAIL, NALCO, Hindalco drag Nifty Metal 2% lower; here's why - Business Standard",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 13:39",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Stock Market Today: Sensex Falls 620 Points, Nifty 50 Below 25,200; Titan Tanks 5%, Caplin Point 8% - NDTV Profit",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 13:39",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Cooling crude lifts bond prices, but inflation may prompt 50-bps RBI rate hike: PGIM India's Puneet Pal - The Economic Times",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "18 Nov 13:54",
+  "source": "BusinessStandard",
+  "category": "DEAL/ORDER",
+  "headline": "Multibagger ACME Solar jumps 3% on order win, trades 113% up from Jan lows",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "18 Nov 13:59",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "SENSEX tumbles 650 pts, NIFTY50 below 25,200 in noon deals; IIFL Finance, SpiceJet, Biocon among buzzing stocks - Upstox",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 14:04",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex crashes over 700 points, Nifty slips below 25,200; Market cap takes a major hit - Punjab Newsline",
   "event": "yes",
   "hint": "SHORT-lean headline"
  }
