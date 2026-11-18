@@ -340,7 +340,7 @@
   "market": "NSE",
   "symbol": "GRASIM",
   "strategy": "rsi2_dip",
-  "status": "PENDING",
+  "status": "SKIPPED",
   "signal_date": "2026-11-13",
   "signal_close": 3034.0,
   "atr": "",
@@ -354,14 +354,14 @@
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0,
-  "note": "Signal at the close. Fills at the next open if the gap is within 3%."
+  "note": "Expired: no fill price for the session after the 2026-11-13 signal."
  },
  {
   "id": 15,
   "market": "NSE",
   "symbol": "TCS",
   "strategy": "rsi2_dip",
-  "status": "PENDING",
+  "status": "SKIPPED",
   "signal_date": "2026-11-13",
   "signal_close": 2407.5,
   "atr": "",
@@ -375,14 +375,14 @@
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0,
-  "note": "Signal at the close. Fills at the next open if the gap is within 3%."
+  "note": "Expired: no fill price for the session after the 2026-11-13 signal."
  },
  {
   "id": 16,
   "market": "NSE",
   "symbol": "PETRONET",
   "strategy": "momentum_screen",
-  "status": "PENDING",
+  "status": "SKIPPED",
   "signal_date": "2026-11-13",
   "signal_close": 324.04998779296875,
   "atr": "",
@@ -396,14 +396,14 @@
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0,
-  "note": "Signal at the close. Fills at the next open if the gap is within 3%."
+  "note": "Expired: no fill price for the session after the 2026-11-13 signal."
  },
  {
   "id": 17,
   "market": "NSE",
   "symbol": "BHEL",
   "strategy": "trend_ride",
-  "status": "PENDING",
+  "status": "SKIPPED",
   "signal_date": "2026-11-13",
   "signal_close": 436.29998779296875,
   "atr": "",
@@ -417,14 +417,14 @@
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0,
-  "note": "Signal at the close. Fills at the next open if the gap is within 3%."
+  "note": "Expired: no fill price for the session after the 2026-11-13 signal."
  },
  {
   "id": 18,
   "market": "NSE",
   "symbol": "NYKAA",
   "strategy": "trend_ride",
-  "status": "PENDING",
+  "status": "SKIPPED",
   "signal_date": "2026-11-13",
   "signal_close": 365.20001220703125,
   "atr": "",
@@ -438,14 +438,14 @@
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0,
-  "note": "Signal at the close. Fills at the next open if the gap is within 3%."
+  "note": "Expired: no fill price for the session after the 2026-11-13 signal."
  },
  {
   "id": 19,
   "market": "NSE",
   "symbol": "NYKAA",
   "strategy": "pullback_in_uptrend",
-  "status": "PENDING",
+  "status": "SKIPPED",
   "signal_date": "2026-11-13",
   "signal_close": 365.20001220703125,
   "atr": "",
@@ -459,6 +459,6 @@
   "exit": "",
   "pnl_rs": 0,
   "r_mult": 0,
-  "note": "Signal at the close. Fills at the next open if the gap is within 3%."
+  "note": "Expired: no fill price for the session after the 2026-11-13 signal."
  }
 ]
