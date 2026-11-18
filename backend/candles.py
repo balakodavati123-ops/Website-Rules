@@ -71,7 +71,27 @@ def main() -> None:
         else:
             pending += 1
         time.sleep(1.0)
-    (out / "symbols.json").write_text(json.dumps(sorted([[x["trading_symbol"], x.get("name", ""), x["instrument_key"]] for x in eq]), separators=(",", ":")))
+    # the strip at the top of the dashboard: four indices, the MCX contracts, six coins
+    import desks as D
+    special = [("Nifty 50", "NSE_INDEX|Nifty 50"), ("Bank Nifty", "NSE_INDEX|Nifty Bank"), ("India VIX", "NSE_INDEX|India VIX"), ("Sensex", "BSE_INDEX|SENSEX")]
+    special += [(c["label"], c["key"]) for c in D.mcx_contracts(U.instruments("MCX"), date.today())]
+    for nm, key in special:
+        try:
+            c = json.loads(U._get(f"https://api.upstox.com/v2/historical-candle/{urllib.parse.quote(key, safe='')}/day/{to}/{frm}", token)).get("data", {}).get("candles", [])
+            rows = [[k[0][:10], k[1], k[2], k[3], k[4], int(k[5])] for k in reversed(c)]
+            if rows:
+                (out / "c" / (fname(nm) + ".json")).write_text(json.dumps(rows, separators=(",", ":")))
+        except Exception as e:
+            print("special failed:", nm, str(e)[:80])
+        time.sleep(1.0)
+    for coin in D.PAIRS:
+        try:
+            rows = D.kraken_ohlc(coin, 1440, 720)
+            (out / "c" / (fname(coin) + ".json")).write_text(json.dumps(rows, separators=(",", ":")))
+            special.append((coin, "KRAKEN|" + coin))
+        except Exception as e:
+            print("crypto failed:", coin, str(e)[:80])
+    (out / "symbols.json").write_text(json.dumps(sorted([[x["trading_symbol"], x.get("name", ""), x["instrument_key"]] for x in eq]) + [[nm, nm + " (index, commodity or crypto)", k] for nm, k in special], separators=(",", ":")))
     (out / "remaining.txt").write_text(str(pending))
     print(f"{len(eq) - pending} of {len(eq)} stocks current; {pending} remaining")
 

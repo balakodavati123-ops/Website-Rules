@@ -121,6 +121,18 @@ def kraken_ticks() -> dict:
     return out
 
 
+def kraken_ohlc(sym: str, interval: int = 5, last: int = 288) -> list[list]:
+    """Recent candles for one coin, oldest first: [HH:MM in IST, open, high, low, close, volume] (5-minute) or [date, ...] (daily)."""
+    code = PAIRS[sym]
+    j = _get_json(f"https://api.kraken.com/0/public/OHLC?pair={code}USD&interval={interval}")
+    rows = next(v for k, v in j["result"].items() if k != "last")
+    out = []
+    for r in rows[-last:]:
+        t = datetime.fromtimestamp(int(r[0]), IST)
+        out.append([t.strftime("%H:%M") if interval < 1440 else t.strftime("%Y-%m-%d"), float(r[1]), float(r[2]), float(r[3]), float(r[4]), float(r[6])])
+    return out
+
+
 def crypto_step(book: dict, now: datetime, ticks: dict, paused: set, room=None) -> None:
     R = CRYPTO_RULES
     for tr in book["trades"]:

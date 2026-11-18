@@ -317,7 +317,7 @@ def run() -> None:
         if ses["mcx"] and mcx_c:
             try:
                 qm = U.quotes([c["key"] for c in mcx_c], token)
-                snap["mcx"] = [{"key": c["key"], "name": c["label"], "last": qm[c["key"]]["last_price"], "chg_pct": qm[c["key"]]["net_change"] / (qm[c["key"]]["last_price"] - qm[c["key"]]["net_change"]) * 100, "unit": "₹"} for c in mcx_c if c["key"] in qm and qm[c["key"]].get("last_price")]
+                snap["mcx"] = [{"key": c["key"], "name": c["label"], "last": qm[c["key"]]["last_price"], "chg_pct": qm[c["key"]]["net_change"] / (qm[c["key"]]["last_price"] - qm[c["key"]]["net_change"]) * 100, "high": (qm[c["key"]].get("ohlc") or {}).get("high"), "low": (qm[c["key"]].get("ohlc") or {}).get("low"), "unit": "₹"} for c in mcx_c if c["key"] in qm and qm[c["key"]].get("last_price")]
             except Exception:
                 pass
         if ses["equity"] and rows_now:
@@ -392,6 +392,17 @@ def run() -> None:
                 for sy in want:
                     if sy in key_of:
                         intra["s"][sy] = U.intraday(token, key_of[sy], 5)
+                extra = {"Nifty 50": IDX["nifty"], "Bank Nifty": IDX["banknifty"], "India VIX": IDX["vix"], "Sensex": IDX["sensex"], **{c["label"]: c["key"] for c in mcx_c}}     # the instruments in the strip at the top get charts too
+                for nm, k in extra.items():
+                    try:
+                        intra["s"][nm] = U.intraday(token, k, 5)
+                    except Exception:
+                        pass
+                for coin in D.PAIRS:
+                    try:
+                        intra["s"][coin] = D.kraken_ohlc(coin, 5, 288)
+                    except Exception:
+                        pass
                 save("intraday.json", intra)
             except Exception as e:
                 info["intraday"] = f"error: {str(e)[:80]}"
