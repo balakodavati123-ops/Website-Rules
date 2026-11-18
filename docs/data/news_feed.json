@@ -1,70 +1,6 @@
 [
  {
   "time": "17 Nov 11:21",
-  "source": "Mint",
-  "category": "DEAL/ORDER",
-  "headline": "TTK Healthcare shares soar 20%: Board to consider bonus issue of preference shares on Nov 20 - Key things to know",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "17 Nov 11:21",
-  "source": "Mint",
-  "category": "DEAL/ORDER",
-  "headline": "China\u2019s Buyback Push Struggles to Put a Floor Under Stocks",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "17 Nov 11:21",
-  "source": "Mint",
-  "category": "EARNINGS",
-  "headline": "Swiggy vs Zomato parent Eternal: Which stock has the stronger growth and better earnings outlook after Q2 results?",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "17 Nov 11:21",
-  "source": "BusinessStandard",
-  "category": "GEOPOLITICS",
-  "headline": "Oil prices fall as supply surplus outlook outweighs tanker attack concerns",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "17 Nov 11:21",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "GIFT Nifty flat, signals muted start for Sensex, Nifty as Nasdaq plunges 2.5%, Asian markets fall; crude slips- Moneycontrol.com - LinkedIn",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "17 Nov 11:21",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Stock market today: Sensex, Nifty open higher despite global sell-off - BusinessLine",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "17 Nov 11:21",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "Avadhut Sathe moves SAT against Sebi order - The New Indian Express",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "17 Nov 11:21",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Nifty rises 147 points despite Asian sell-off; Banks, FMCG support Sensex - BusinessLine",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "17 Nov 11:21",
   "source": "GoogleNews",
   "category": "RBI-POLICY",
   "headline": "RBI may need tighter monetary policy to contain persistent inflation - Business Standard",
@@ -478,5 +414,69 @@
   "headline": "Nifty reclaims pre-war levels intraday as Indian stocks lead Asia with 10% monthly gain - Livemint",
   "event": "yes",
   "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "18 Nov 05:17",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Sembcorp Green Infra, Razorpay get SEBI's IPO approval - Prop News Time",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "18 Nov 08:29",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Trade Setup for Today: Wall Street Slump and Commodity Sell-off Weigh on Sentiment; GIFT Nifty Points to Gap-Down as of November 18, 2026 - scanx.trade",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 09:14",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Nifty Outlook - Soft oil ease rate hike fears by Geojit Investments Ltd - Investment Guru India",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "18 Nov 09:45",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex, Nifty open flat as Nvidia earnings beat offsets Wall Street sell-off; Bank Nifty near record high - BusinessLine",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 09:50",
+  "source": "BusinessStandard",
+  "category": "GEOPOLITICS",
+  "headline": "Oil prices fall as supply surplus outlook outweighs tanker attack concerns",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "18 Nov 09:55",
+  "source": "BusinessStandard",
+  "category": "GEOPOLITICS",
+  "headline": "Oil prices fall as US stockpile gains ease supply concerns amid Iran war",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "18 Nov 09:55",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex falls 87 points, Nifty sheds 47 as dollar index hits 19-month high, global sell-off weighs - ANI News",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 10:00",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Stock market today: Sensex, Nifty open higher despite global sell-off - BusinessLine",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
  }
 ]
