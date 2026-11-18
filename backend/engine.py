@@ -245,6 +245,7 @@ def run() -> None:
     while True:
         now = datetime.now(IST)
         today, hhmm, ses = now.strftime("%Y-%m-%d"), now.strftime("%H:%M"), sessions(now)
+        it0, T = time.time(), {}
         close_stale(eq, xb, today)
         rm = A.rooms(nonlocal_state.get("tick") or compose()[0])
         for t in unify_equity(eq) + xb["trades"]:       # keep every closed trade before the day's book resets
@@ -269,6 +270,7 @@ def run() -> None:
                 info["equity"] = f"error: {e}"
         elif ses["equity"]:
             info["equity"] = "no token: Yahoo fallback runs in intraday.py"
+        T["equity"] = round(time.time() - it0, 1)
         if token and ses["equity"] and hhmm >= "09:16" and not filled:
             try:                                   # pending paper orders fill at today's real open, not a day late
                 lf = DOCS / "paper_ledger.json"
@@ -281,6 +283,7 @@ def run() -> None:
                 filled = True
             except Exception as e:
                 info["paper_orders"] = f"error: {e}"
+        T["fill"] = round(time.time() - it0, 1)
         if token and ses["mcx"]:
             try:
                 mcx_c = mcx_c or D.mcx_contracts(U.instruments("MCX"), now.date())
@@ -288,6 +291,7 @@ def run() -> None:
                 info["commodities"] = f"{len(mcx_c)} MCX futures, real time"
             except Exception as e:
                 info["commodities"] = f"error: {e}"
+        T["mcx"] = round(time.time() - it0, 1)
         if token and ses["fno"]:
             try:
                 n = q_idx.get(NIFTY, {})
@@ -305,6 +309,7 @@ def run() -> None:
                 info["fno"] = f"NIFTY {spot} , expiry {exps[0]}, {len(chains)} chain(s), real time"
             except Exception as e:
                 info["fno"] = f"error: {e}"
+        T["fno"] = round(time.time() - it0, 1)
         try:
             ticks = D.kraken_ticks()
             D.crypto_step(xb, now, ticks, paused, rm["CRYPTO"])
@@ -312,6 +317,7 @@ def run() -> None:
             info["crypto"] = "6 coins from Kraken, real time"
         except Exception as e:
             info["crypto"] = f"error: {e}"
+        T["crypto"] = round(time.time() - it0, 1)
         if q_idx:
             names = {IDX["nifty"]: "Nifty 50", IDX["banknifty"]: "Bank Nifty", IDX["vix"]: "India VIX", IDX["sensex"]: "Sensex"}
             snap["indices"] = {names[k]: {"name": names[k], "last": v.get("last_price"), "chg_pct": (v["net_change"] / (v["last_price"] - v["net_change"]) * 100) if v.get("net_change") is not None and v.get("last_price") else None,
@@ -326,6 +332,7 @@ def run() -> None:
             liq = [r for r in rows_now if r["price"] * r["volume"] >= 1e8 and r["price"] >= 20]
             top = lambda lst: [{"symbol": r["symbol"], "price": r["price"], "chg_pct": round(r["chg_pct"], 2), "turnover_cr": round(r["price"] * r["volume"] / 1e7, 1)} for r in lst[:8]]
             snap["movers"] = {"gainers": top(sorted(liq, key=lambda r: -r["chg_pct"])), "losers": top(sorted(liq, key=lambda r: r["chg_pct"])), "active": top(sorted(liq, key=lambda r: -r["price"] * r["volume"])), "count": len(rows_now)}
+        T["snapshots"] = round(time.time() - it0, 1)
         if token and now.weekday() < 5:
             try:
                 if hhmm >= "08:45" and plan.get("day") != today:                      # start of day: tone, news, the names to watch and their trigger levels
@@ -366,6 +373,7 @@ def run() -> None:
                 save("notified.json", {**told, "open": told["open"][-300:], "closed": told["closed"][-300:]})
             except Exception as e:
                 info["plan"] = f"error: {str(e)[:100]}"
+        T["plan"] = round(time.time() - it0, 1)
         # one shared list of trades
         trades = unify_equity(eq) + xb["trades"]
         for t in trades:
@@ -413,8 +421,13 @@ def run() -> None:
                 save("intraday.json", intra)
             except Exception as e:
                 info["intraday"] = f"error: {str(e)[:80]}"
+        T["slow_and_intraday"] = round(time.time() - it0, 1)
         i += 1
         persist()
+        T["persist"] = round(time.time() - it0, 1)
+        if i == 1:
+            status["first_iteration"] = T
+            save("live_status.json", status)
         if time.time() - last_pub >= PUBLISH_EVERY:
             publish()
             last_pub = time.time()
