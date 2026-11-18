@@ -30,7 +30,7 @@ BUFFER = 0.003            # limit price this far through the market, so the orde
 def cfg() -> dict:
     mode = os.environ.get("EXEC_MODE", "off").lower()
     return {"mode": mode if mode in ("sandbox", "live") else "off", "token": os.environ.get("UPSTOX_EXEC_TOKEN", "").strip(), "algo": os.environ.get("EXEC_ALGO_NAME", "").strip(),
-            "max_order": float(os.environ.get("EXEC_MAX_ORDER_RS", "5000")), "max_day_loss": float(os.environ.get("EXEC_MAX_DAY_LOSS_RS", "2000")),
+            "max_order": float(os.environ.get("EXEC_MAX_ORDER_RS") or "5000"), "max_day_loss": float(os.environ.get("EXEC_MAX_DAY_LOSS_RS") or "2000"),
             "live_ok": os.environ.get("EXEC_LIVE_CONFIRM", "") == "I-UNDERSTAND-REAL-MONEY", "kill": os.environ.get("EXEC_KILL", "") == "1"}
 
 
