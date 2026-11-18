@@ -28,16 +28,16 @@
    "symbol": "V2RETAIL",
    "side": "SHORT",
    "entry": 136.8,
-   "last": 133.89,
+   "last": 138.43,
    "qty": 58,
    "stop": 138.17,
    "basis": "price only",
    "reason": "-5.7% move near the day low, no filing seen",
    "label": "V2RETAIL short",
-   "status": "OPEN",
-   "pnl_rs": 0,
-   "exit": "",
-   "why": ""
+   "status": "LOSS",
+   "pnl_rs": -102.47,
+   "exit": 138.43,
+   "why": "stop"
   },
   {
    "id": 3,

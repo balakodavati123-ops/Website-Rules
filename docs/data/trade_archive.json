@@ -657,6 +657,28 @@
   "margin_rs": 1448
  },
  {
+  "id": "E261118-2",
+  "desk": "EQUITY",
+  "strategy": "price_only",
+  "label": "V2RETAIL short",
+  "symbol": "V2RETAIL",
+  "side": "SHORT",
+  "entry": 136.8,
+  "last": 138.43,
+  "exit": 138.43,
+  "qty": 58,
+  "stop": 138.17,
+  "status": "LOSS",
+  "pnl_rs": -102.47,
+  "reason": "-5.7% move near the day low, no filing seen",
+  "why": "stop",
+  "day": "2026-11-18",
+  "opened": "09:20",
+  "closed": "",
+  "risk_class": "Intraday momentum",
+  "margin_rs": 1587
+ },
+ {
   "id": "M261118-16",
   "desk": "COMMODITY",
   "strategy": "mcx_momentum",

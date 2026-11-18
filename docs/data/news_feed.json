@@ -1,37 +1,5 @@
 [
  {
-  "time": "17 Nov 12:00",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Sembcorp Green Infra Receives SEBI Nod for Rs. 37.5 bn IPO - Construction World",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "17 Nov 12:11",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Nifty recovers all the losses made since the US-Iran war began - Here are key reasons why - CNBC TV18",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "17 Nov 12:36",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Sembcorp Green Infra receives SEBI approval for Rs 37.5 billion IPO - Renewable Watch",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "17 Nov 12:36",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Economists Predict RBI to Hike Repo Rate by 50-75 Bps Amid Elevated Inflation - Rediff",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
   "time": "17 Nov 12:36",
   "source": "GoogleNews",
   "category": "GEOPOLITICS",
@@ -476,6 +444,38 @@
   "source": "GoogleNews",
   "category": "CRASH/SHOCK",
   "headline": "Hindalco, SAIL, Hindustan Zinc shares in focus as NIFTY Metal tumbles 2% on Nov 18; check details - Upstox",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 11:54",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Stock Market Today Live Updates: BSE Sensex tumbles over 470 points, NSE Nifty50 trades below 25300 - The Times of India",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 11:59",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "SanDisk stock selloff deepens: What's driving the crash?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 12:25",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Metal meltdown: SAIL, NALCO, Hindalco drag Nifty Metal 2% lower; here's why",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 12:25",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Metal meltdown: SAIL, NALCO, Hindalco drag Nifty Metal 2% lower; here's why - Business Standard",
   "event": "yes",
   "hint": "SHORT-lean headline"
  }
