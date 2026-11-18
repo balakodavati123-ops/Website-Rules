@@ -56,10 +56,11 @@ def view(name: str, hist: list[list], today: str, tone: dict, vix: float | None,
         age = (date.fromisoformat(today) - date.fromisoformat(ao)).days
         if age > 4:
             stale, ts = age, None
+    ao_txt = (ao[8:10] + "/" + ao[5:7]) if ao else "last"
     if stale:
         parts_note = f"World-market data is {stale} days old (last close {ao}), so it is left out of today's score until it refreshes."
     if ts is not None:
-        parts["world"] = (clip(ts / 0.8), f"World tone is {tone.get('label', '').lower()}: US and Asia weighted average {ts:+.2f}% at the {(ao[8:10] + "/" + ao[5:7]) if ao else "last"} close" + (f"; {tone['notes'][2].rstrip('.')}" if len(tone.get("notes", [])) > 2 else "") + ".")
+        parts["world"] = (clip(ts / 0.8), f"World tone is {tone.get('label', '').lower()}: US and Asia weighted average {ts:+.2f}% at the {ao_txt} close" + (f"; {tone['notes'][2].rstrip('.')}" if len(tone.get("notes", [])) > 2 else "") + ".")
     trend = clip((prev / ma20 - 1) / 0.03) * 0.5 + clip(ret5 / 0.03) * 0.5
     parts["trend"] = (trend, f"{name} closed at {prev:,.0f}, {(prev / ma20 - 1) * 100:+.1f}% from its 20-day average ({ma20:,.0f}) and {ret5 * 100:+.1f}% over five sessions: the trend is {'up' if trend > 0.15 else 'down' if trend < -0.15 else 'flat'}.")
     pos = (last[4] - last[3]) / (last[2] - last[3]) if last[2] > last[3] else 0.5
