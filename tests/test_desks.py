@@ -14,7 +14,7 @@ def chain(spot=25000, step=50, iv_base=100):
         tv = 120 * 2.718 ** (-abs(spot - k) / 150) + 1
         c, p = max(spot - k, 0) + tv, max(k - spot, 0) + tv
         mk = lambda v: {"market_data": {"ltp": v, "bid_price": round(v - 0.5, 2), "ask_price": round(v + 0.5, 2)}}
-        rows.append({"strike_price": float(k), "call_options": mk(c), "put_options": mk(p)})
+        rows.append({"strike_price": float(k), "call_options": {**mk(c), "instrument_key": f"NSE_FO|C{k}"}, "put_options": {**mk(p), "instrument_key": f"NSE_FO|P{k}"}})
     return rows
 
 
@@ -27,6 +27,7 @@ def test_fno_books_all_five_and_exits():
     classes = {t["risk_class"] for t in book["trades"]}
     assert classes == set(D.RISK.values())
     ic = next(t for t in book["trades"] if t["strategy"] == "iron_condor")
+    assert all(l["key"].startswith("NSE_FO|") for l in ic["legs"])           # every leg carries the instrument an order needs
     assert ic["max_loss_rs"] and ic["max_gain_rs"] and ic["margin_rs"] == ic["max_loss_rs"]
     D.fno_step(book, now, ctx, set())
     assert len(book["trades"]) == 5                                   # one per strategy per day

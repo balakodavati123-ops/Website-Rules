@@ -21,6 +21,7 @@ import upstox as U       # noqa: E402
 import open_fill as OF   # noqa: E402
 import ledger as L       # noqa: E402
 import account as A      # noqa: E402
+import executor as X     # noqa: E402
 import daily as DLY      # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -194,11 +195,20 @@ def run() -> None:
     qs: dict = {}
     intra: dict = load("intraday.json", {"day": "", "s": {}})
     last_intra, key_of = 0.0, {}
+    if token:
+        try:
+            key_of = {x["trading_symbol"]: x["instrument_key"] for x in U.instruments("NSE") if x.get("segment") == "NSE_EQ" and x.get("instrument_type") == "EQ"}
+        except Exception:
+            pass
     def compose():
         live_open = [t for t in unify_equity(eq) + xb["trades"] if t["status"] == "OPEN"]
         books = L.swing(load("paper_ledger.json", [])) + L.weekly_fno(load("fo_ledger.json", [])) + L.signals(load("signal_ledger.json", []))
         allt = list(archive.values()) + live_open + books
         allt.sort(key=lambda t: (t["day"], t["opened"]), reverse=True)
+        if key_of:
+            for t in allt:
+                if t["desk"] == "EQUITY" and t.get("symbol") and not t.get("instrument_key"):
+                    t["instrument_key"] = key_of.get(t["symbol"])
         return allt, books
 
     def persist() -> None:
@@ -210,6 +220,10 @@ def run() -> None:
         save("all_trades.json", allt[:4000])
         stats = D.learn(list(archive.values()) + [t for t in books if t["status"] in ("WIN", "LOSS")])
         save("strategy_stats.json", stats)
+        try:                                           # the bridge to the broker: off unless EXEC_MODE is set
+            X.run(allt, stats, DOCS / "executions.json")
+        except Exception as e:
+            status["desks"]["execution"] = f"error: {str(e)[:100]}"
         status["open"] = sum(t["status"] == "OPEN" for t in allt)
         save("live_status.json", status)
         nf = (snap.get("indices") or {}).get("Nifty 50", {}).get("last")

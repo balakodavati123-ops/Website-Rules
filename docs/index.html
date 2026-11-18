@@ -80,7 +80,7 @@ footer{color:var(--dim);font-size:11.5px;margin-top:8px}
 <div class="card"><h2>Today's trade book <em id="tt-note">open positions and trades opened today · live prices</em></h2>
  <div class="ctl"><button class="on" data-m="all">Open + today</button><button data-m="open">Open positions</button><button data-m="today">Opened today</button><button data-m="closed">Closed</button><span style="flex:1"></span><button class="btn" id="xl1">Download Excel</button></div>
  <div class="tot" id="tt-tot"></div>
- <div class="tw"><table id="tt"><thead><tr><th>Instrument</th><th>Side</th><th class="r">Qty</th><th class="r">Invested</th><th class="r">Entry</th><th class="r">Price now</th><th class="r">P/L</th><th class="r">P/L %</th><th class="r">Stop</th><th class="r">Target</th><th>Price line today</th></tr></thead></table></div>
+ <div class="tw"><table id="tt"><thead><tr><th>Instrument</th><th>Side</th><th class="r">Qty</th><th class="r">Invested</th><th class="r">Entry</th><th class="r">Price now</th><th class="r">P/L</th><th class="r">P/L %</th><th class="r">Stop</th><th class="r">Target</th><th>Price line today</th><th>Broker</th></tr></thead></table></div>
  <p class="rc" style="margin-top:8px">The line shows the price since entry; white dashed is your entry, red the stop, green the target. Strategy, booking time and the reason for each trade are in the Excel file.</p></div></section>
 <section id="t-fno" hidden>
 <div class="card"><h2>F&amp;O desk <em id="fno-note">NIFTY options, booked every day within a ₹20,000 margin limit</em></h2>
@@ -129,7 +129,7 @@ function reorder(parent,nodes,skip=0){nodes.forEach((n,i)=>{if(parent.children[i
 const S={prices:null,trades:[],status:null,series:null,stats:[],hist:{},age:null,day:'ALL',desk:'ALL'};
 /* ---------- ticker cards ---------- */
 const TK={};
-function tick(key,name,last,chg,unit,dec){let c=TK[key];if(!c){c={el:E('div','tk'),n:E('div','n',name),v:E('span','v'),c:E('div','c')};c.svg=document.createElementNS('http://www.w3.org/2000/svg','svg');c.svg.setAttribute('viewBox','0 0 100 26');c.svg.setAttribute('preserveAspectRatio','none');c.pl=document.createElementNS('http://www.w3.org/2000/svg','polyline');c.pl.setAttribute('fill','none');c.pl.setAttribute('stroke-width','1.5');c.svg.appendChild(c.pl);
+function tick(key,name,last,chg,unit,dec){let c=TK[key];if(!c){c={fmt:(v)=>(unit||'')+num(v,dec),el:E('div','tk'),n:E('div','n',name),v:E('span','v'),c:E('div','c')};c.svg=document.createElementNS('http://www.w3.org/2000/svg','svg');c.svg.setAttribute('viewBox','0 0 100 26');c.svg.setAttribute('preserveAspectRatio','none');c.pl=document.createElementNS('http://www.w3.org/2000/svg','polyline');c.pl.setAttribute('fill','none');c.pl.setAttribute('stroke-width','1.5');c.svg.appendChild(c.pl);
  const wrap=E('div');wrap.appendChild(c.v);c.el.append(c.n,wrap,c.c,c.svg);$('ticks').appendChild(c.el);TK[key]=c}
  setv(c.v,(unit||'')+num(last,dec),last);setv(c.c,chg==null?'':(chg>0?'▲ ':chg<0?'▼ ':'')+pc(chg),chg,cl(chg));
  const h=S.hist[key]||(S.hist[key]=[]);if(h[h.length-1]!==last){h.push(last);if(h.length>90)h.shift()}
@@ -152,7 +152,7 @@ function drawSeries(s){if(!s||!s.points||!s.points.length)return;S.series=s;let 
 const today=()=>new Date(Date.now()+5.5*3600e3).toISOString().slice(0,10);
 const CL=(t)=>t.status==='WIN'||t.status==='LOSS',INTRA=(t)=>!['swing','weekly','signal'].includes(t.opened);
 const KP={};function kpi(box,key,label,text,n,colour,sub){let k=KP[key];if(!k){k={el:E('div','kpi'),l:E('div','l',label),v:E('div','v'),s:E('div','s')};k.el.append(k.l,k.v,k.s);box.appendChild(k.el);KP[key]=k}setv(k.v,text,n,colour);if(k.s.textContent!==(sub||''))k.s.textContent=sub||''}
-function drawNumbers(){const T=S.trades,d=today(),td=T.filter((t)=>t.day===d&&INTRA(t)),cl_=T.filter(CL),open=T.filter((t)=>t.status==='OPEN'),sum=(a)=>a.reduce((x,t)=>x+(+t.pnl_rs||0),0);
+function drawNumbers(){const T=S.trades,d=today(),td=T.filter((t)=>t.day===d&&INTRA(t)),cl_=T.filter(CL),open=T.filter((t)=>t.status==='OPEN'),sum=(a)=>a.reduce((x,t)=>x+livePnl(t),0);
  const tp=sum(td);setv($('pnl'),sg(Math.round(tp)),tp,cl(tp));$('pnl-sub').textContent=`${td.length} trades opened today · ${td.filter((t)=>t.status==='OPEN').length} still open · ${td.filter(CL).length} closed`;
  Object.keys(DESK).forEach((k)=>{const x=td.filter((t)=>t.desk===k),c=T.filter((t)=>t.desk===k&&CL(t)),w=c.filter((t)=>t.status==='WIN').length;kpi($('kpis'),'d'+k,DESK[k]+' today',sg(Math.round(sum(x))),sum(x),cl(sum(x)),`${T.filter((t)=>t.desk===k&&t.status==='OPEN').length} open · ${c.length} closed${c.length?' · '+Math.round(w/c.length*100)+'% won':''}`)});
  const w=cl_.filter((t)=>t.status==='WIN').length,bk=$('kpis');
@@ -168,7 +168,7 @@ function drawBoard(T){const g={};T.forEach((t)=>{const k=t.desk+'|'+t.strategy,x
   setTag(r.vt,v.replace(/_/g,' '),v==='WORKING'||v==='READY FOR REVIEW'?'g':v==='PAUSED'||v==='WEAK'?'r':'a');return r.el});S.board=L;reorder($('lb'),nodes)}
 /* ---------- chips ---------- */
 function drawStatus(){const s=S.status;if(!s)return;const age=(Date.now()-new Date(s.updated_at).getTime())/1000,c=$('chip');S.age=age;const k=age<90?'live':age<600?'wait':'off';if(c._k!==k){c._k=k;c.className='chip '+k}
- const t=age<90?`LIVE · updated ${Math.round(age)} s ago`:age<600?`delayed · updated ${Math.round(age/60)} min ago`:`STALE · last update ${Math.round(age/60)} min ago`;if(c.lastChild.textContent!==t)c.lastChild.textContent=t;
+ const t=(Date.now()-liveAt<4000)?'LIVE STREAM · prices every second':age<90?`LIVE · updated ${Math.round(age)} s ago`:age<600?`delayed · updated ${Math.round(age/60)} min ago`:`STALE · last update ${Math.round(age/60)} min ago`;if(c.lastChild.textContent!==t)c.lastChild.textContent=t;
  [['s-eq','equity'],['s-fno','fno'],['s-mcx','mcx'],['s-cry','crypto']].forEach(([id,k])=>{const e=$(id),on=(s.sessions||{})[k];e.className='chip'+(on?' on':'');const t=e.textContent.replace(/ ·.*/,'')+(on?' · open':' · closed');if(e.textContent!==t)e.textContent=t})}
 /* ---------- slower panels ---------- */
 function list(box,items,keyFn,make){const m=box._m||(box._m={});const nodes=items.map((x)=>{const k=keyFn(x);if(!m[k])m[k]=make(x);return m[k]});reorder(box,nodes);if(!nodes.length)box.appendChild(E('div','empty','Nothing yet.'))}
@@ -176,14 +176,20 @@ async function slow(){const [news,res,world]=await Promise.all(['news_feed','res
  if(news)list($('news'),news.slice(-10).reverse(),(x)=>x.time+x.headline,(x)=>{const r=E('div','row');r.append(E('b','',x.headline),E('div','rc',`${x.category} · ${x.source} · ${x.time}`));return r});
  if(res)list($('results'),res.slice(0,12),(x)=>x.time+x.symbol,(x)=>{const r=E('div','row');r.append(E('b','',x.symbol),E('span','dim',' '+x.company),E('div','rc',x.time));return r});
  if(world)list($('world'),world,(x)=>x.symbol,(x)=>{const r=E('div','row');const a=E('span','num',num(x.last)),b=E('span','num '+cl(x.chg_pct),' '+pc(x.chg_pct));r.append(E('b','',x.name+' '),a,b);return r})}
+/* ---------- broker bridge status and the one-second stream ---------- */
+function brokerTxt(t){const x=S.exec;if(!x||x.mode==='off')return 'paper only';if(t.desk!=='EQUITY'&&t.desk!=='FNO')return 'not sent (broker does not offer it)';const o=(x.orders||[]).filter((q)=>q.paper_id===t.id);if(o.length){const q=o[o.length-1];return `${x.mode}: ${q.phase==='out'?'closed':'sent'} ${q.side} ${q.qty} @ ${num(q.price)}${q.order_id?'':' (rejected)'}`}const h=(x.held||[]).find((q)=>q.paper_id===t.id);return h?'held: '+h.why:`${x.mode}: not sent`}
+const LIVE={};let liveAt=0,liveTimer=0;
+function lv(sym){const v=LIVE[sym];return v?v[0]:null}
+function liveRedraw(){liveTimer=0;Object.keys(LIVE).forEach((n)=>{const c=TK['i'+n]||TK['m'+n];if(c&&c.fmt){setv(c.v,c.fmt(LIVE[n][0]),LIVE[n][0]);setv(c.c,(LIVE[n][1]>0?'▲ ':LIVE[n][1]<0?'▼ ':'')+pc(LIVE[n][1]),LIVE[n][1],cl(LIVE[n][1]))}});drawNumbers();drawToday();drawOpenPos();Object.keys(DT).forEach((k)=>{if(!$('t-'+k).hidden)drawDeskTab(k)});if(S.account)drawAccount(S.account)}
+async function startStream(){const q=new URLSearchParams(location.search).get('stream'),c=await jget(['stream.json']);const url=q||(c&&c.url);if(!url||!window.EventSource)return;const es=new EventSource(url.replace(/\/$/,'')+'/ticks');es.onmessage=(e)=>{try{Object.assign(LIVE,JSON.parse(e.data).p);liveAt=Date.now();if(!liveTimer)liveTimer=setTimeout(liveRedraw,700)}catch(x){}};es.onerror=()=>{liveAt=0}}
 /* ---------- helpers shared by the books ---------- */
 const RAWC='https://raw.githubusercontent.com/balakodavati123-ops/Website-Rules/charts/',IST_TODAY=today;
 const fnm=(s)=>String(s).replace(/&/g,'_and_').replace(/\//g,'_').replace(/ /g,'_');
-const px=(t)=>{if(t.desk==='EQUITY'&&t.symbol&&S.quotes&&S.quotes[t.symbol]&&(t.status==='OPEN'||t.status==='PENDING'))return S.quotes[t.symbol][0];if(t.desk==='CRYPTO'&&t.status==='OPEN'&&S.prices){const c=(S.prices.crypto||[]).find((x)=>x.name===t.symbol);if(c)return c.last}return t.status==='OPEN'||t.status==='PENDING'?t.last:t.exit};
+const px=(t)=>{if(t.desk==='EQUITY'&&t.symbol&&(t.status==='OPEN'||t.status==='PENDING')){const l=lv(t.symbol);if(l!=null)return l;if(S.quotes&&S.quotes[t.symbol])return S.quotes[t.symbol][0]}if(t.desk==='CRYPTO'&&t.status==='OPEN'&&S.prices){const c=(S.prices.crypto||[]).find((x)=>x.name===t.symbol);if(c)return c.last}return t.status==='OPEN'||t.status==='PENDING'?t.last:t.exit};
 const mult=(t)=>+t.mult||1;
 function invested(t){const q=+t.qty,e=+t.entry;if(t.desk==='EQUITY')return q&&e?q*e:null;if(t.desk==='COMMODITY')return t.margin_rs||(q&&e?q*e*mult(t)*0.06:null);if(t.desk==='CRYPTO')return q||null;return t.margin_rs||null}
 function qtyTxt(t){if(t.desk==='FNO')return t.lot?`1 lot (${t.lot})`:'1 lot';if(t.desk==='CRYPTO')return '—';return t.qty===''||t.qty==null?'—':String(t.qty)}
-function livePnl(t){if(t.status!=='OPEN'||t.desk!=='EQUITY'||!S.quotes||!S.quotes[t.symbol]||!(+t.qty))return +t.pnl_rs||0;const d=t.side==='SHORT'?-1:1;return Math.round(d*(S.quotes[t.symbol][0]-t.entry)*t.qty*100)/100}
+function livePnl(t){if(t.status!=='OPEN')return +t.pnl_rs||0;const d=t.side==='SHORT'?-1:1;if(t.desk==='EQUITY'&&+t.qty){const p=px(t);if(p!=null&&!isNaN(p))return Math.round(d*(p-t.entry)*t.qty*100)/100}if(t.desk==='COMMODITY'&&+t.qty){const l=lv(t.label.replace(/ (long|short)$/,''));if(l!=null)return Math.round((d*(l-t.entry)*mult(t)*t.qty-0.0005*t.entry*mult(t)*t.qty)*100)/100}return +t.pnl_rs||0}
 const sideTag=(t)=>t.side==='SHORT'?'SELL':'BUY';
 function stTxt(t){return t.status==='OPEN'?'OPEN':t.status==='PENDING'?'PENDING':t.why==='stop'?'STOPPED':t.status}
 /* a small price line with the entry, stop and target drawn on it */
@@ -201,10 +207,10 @@ function drawToday(){const d=today(),T=S.trades.filter((t)=>t.status!=='PENDING'
  const inv=L.filter((t)=>t.status==='OPEN').reduce((x,t)=>x+(invested(t)||0),0),pl=L.reduce((x,t)=>x+livePnl(t),0),bk=L.filter(CL).reduce((x,t)=>x+(+t.pnl_rs||0),0),op=L.filter((t)=>t.status==='OPEN').reduce((x,t)=>x+livePnl(t),0);
  const tot=$('tt-tot');[['Invested (open)',inr(Math.round(inv)),inv,''],['Open P/L',sg(Math.round(op)),op,cl(op)],['Closed P/L',sg(Math.round(bk)),bk,cl(bk)],['Total P/L',sg(Math.round(pl)),pl,cl(pl)],['Positions',String(L.length),L.length,'']].forEach(([l,v,n,c],i)=>{let e=tot.children[i];if(!e){e=E('div');e.append(document.createTextNode(l),E('b'));tot.appendChild(e)}setv(e.lastChild,v,n,c)});
  $('tt-note').textContent=`${L.length} shown · live prices${S.quotes?'':' (waiting for the quote feed)'}`;
- const nodes=L.map((t)=>{let r=TT[t.id];if(!r){r={el:E('tr'),c:[E('td'),E('td'),E('td','num r'),E('td','num r'),E('td','num r'),E('td','num r'),E('td','num r'),E('td','num r'),E('td','num r'),E('td','num r'),E('td')]};r.c[1].appendChild(E('span','tag'));r.sv=document.createElementNS(SV,'svg');r.sv.setAttribute('class','sp-svg');r.sv.setAttribute('viewBox','0 0 130 38');r.sv.setAttribute('preserveAspectRatio','none');r.c[10].appendChild(r.sv);r.c[0].style.cursor='pointer';r.c[0].onclick=()=>{if(t.symbol)openChart(t.symbol)};r.el.append(...r.c);TT[t.id]=r}
+ const nodes=L.map((t)=>{let r=TT[t.id];if(!r){r={el:E('tr'),c:[E('td'),E('td'),E('td','num r'),E('td','num r'),E('td','num r'),E('td','num r'),E('td','num r'),E('td','num r'),E('td','num r'),E('td','num r'),E('td'),E('td','rc')]};r.c[1].appendChild(E('span','tag'));r.sv=document.createElementNS(SV,'svg');r.sv.setAttribute('class','sp-svg');r.sv.setAttribute('viewBox','0 0 130 38');r.sv.setAttribute('preserveAspectRatio','none');r.c[10].appendChild(r.sv);r.c[0].style.cursor='pointer';r.c[0].onclick=()=>{if(t.symbol)openChart(t.symbol)};r.el.append(...r.c);TT[t.id]=r}
   const pnl=livePnl(t),iv=invested(t),tx=(c,v)=>{if(c.textContent!==v)c.textContent=v};const nm=r.c[0];if(nm._s!==t.label){nm._s=t.label;nm.replaceChildren(E('b','',t.label.replace(/ (long|short)$/,'')),E('div','rc',DESK[t.desk]))}
   setTag(r.c[1].firstChild,sideTag(t),t.side==='SHORT'?'r':'g');tx(r.c[2],qtyTxt(t));tx(r.c[3],iv?inr(Math.round(iv)):'—');tx(r.c[4],t.desk==='FNO'?num(t.entry)+' pts':num(t.entry));const pn=px(t);setv(r.c[5],t.desk==='FNO'?'—':num(pn),+pn);
-  setv(r.c[6],sg(Math.round(pnl)),pnl,cl(pnl));setv(r.c[7],iv?pc(pnl/iv*100,2):'—',iv?pnl/iv:null,cl(pnl));tx(r.c[8],t.stop?num(t.stop):'—');tx(r.c[9],t.target_px?num(t.target_px):'—');if(t.desk==='EQUITY')spark(r.sv,t);else if(r.sv._k!=='none'){r.sv._k='none';r.sv.replaceChildren()};
+  setv(r.c[6],sg(Math.round(pnl)),pnl,cl(pnl));setv(r.c[7],iv?pc(pnl/iv*100,2):'—',iv?pnl/iv:null,cl(pnl));tx(r.c[8],t.stop?num(t.stop):'—');tx(r.c[9],t.target_px?num(t.target_px):'—');if(t.desk==='EQUITY')spark(r.sv,t);else if(r.sv._k!=='none'){r.sv._k='none';r.sv.replaceChildren()};tx(r.c[11],brokerTxt(t));
   return r.el});reorder($('tt'),nodes,1)}
 /* ---------- all trades ---------- */
 const LG={};
@@ -257,7 +263,7 @@ window.addEventListener('resize',()=>{if(!$('t-chart').hidden)drawChart()});
 function drawPicks(){const sy=[...new Set(S.trades.filter((t)=>t.desk==='EQUITY'&&t.symbol&&t.status==='OPEN').map((t)=>t.symbol))].sort(),box=$('c-picks'),w=sy.join();if(box._w===w)return;box._w=w;box.replaceChildren(...sy.map((x)=>{const b=E('button','',x);b.onclick=()=>openChart(x);return b}))}
 async function loadSyms(){const s=await jget([RAWC+'symbols.json','charts/symbols.json']);if(!s)return;SYMS=s;$('c-list').replaceChildren(...s.map((x)=>{const o=E('option');o.value=x[0];o.label=x[1];return o}))}
 /* ---------- the paper account, open positions, desk tabs ---------- */
-function drawAccount(a){if(!a)return;S.account=a;const g=(id)=>$(id);setv(g('a-eq'),inr(Math.round(a.equity)),a.equity,cl(a.pnl));g('a-sub').textContent=`${sg(Math.round(a.pnl))} (${pc(a.pnl_pct)}) since the ₹${num(a.start,0)} start · ${a.open} open · ${a.closed} closed`;
+function drawAccount(a0){if(!a0)return;S.account=a0;const un=(S.trades||[]).filter((t)=>t.status==='OPEN').reduce((x,t)=>x+livePnl(t),0),a=Object.assign({},a0,{unrealised:un,equity:a0.start+a0.realised+un,pnl:a0.realised+un,pnl_pct:(a0.realised+un)/a0.start*100});const g=(id)=>$(id);setv(g('a-eq'),inr(Math.round(a.equity)),a.equity,cl(a.pnl));g('a-sub').textContent=`${sg(Math.round(a.pnl))} (${pc(a.pnl_pct)}) since the ₹${num(a.start,0)} start · ${a.open} open · ${a.closed} closed`;
  setv(g('a-cash'),inr(Math.round(a.cash)),a.cash,a.cash<0?'down':'');setv(g('a-use'),inr(Math.round(a.in_use)),a.in_use);setv(g('a-real'),sg(Math.round(a.realised)),a.realised,cl(a.realised));setv(g('a-unr'),sg(Math.round(a.unrealised)),a.unrealised,cl(a.unrealised));
  const box=g('a-bk');Object.entries(a.buckets).forEach(([k,v])=>{let r=box._r&&box._r[k];if(!r){box._r=box._r||{};r={el:E('div','bk'),l:E('span','',v.label),t:E('div','t'),b:E('b'),n:E('span')};r.t.appendChild(r.b);r.el.append(r.l,r.t,r.n);box.appendChild(r.el);box._r[k]=r}
   const f=v.budget?Math.min(100,v.used/v.budget*100):0;r.b.style.width=f+'%';r.b.style.background=f>=100?'#ffb64a':'#4f8cff';const t=`${inr(v.used)} / ${inr(v.budget)}`;if(r.n.textContent!==t)r.n.textContent=t})}
@@ -290,11 +296,11 @@ document.querySelectorAll('#nav button').forEach((b)=>b.onclick=()=>setTab(b.dat
 document.querySelectorAll('#t-today .ctl button[data-m]').forEach((b)=>b.onclick=()=>{TM=b.dataset.m;document.querySelectorAll('#t-today .ctl button[data-m]').forEach((x)=>x.classList.toggle('on',x===b));drawToday()});
 let busy=false,tick2=0;
 async function core(){if(busy)return;busy=true;try{const [t,s,se,st,ac]=await Promise.all(['all_trades','live_status','pnl_series','strategy_stats','account'].map(get));if(t){S.trades=t;S.stats=st||[]}if(s){S.status=s}drawStatus();drawAccount(ac);if(t){drawNumbers();drawLedger();drawToday();drawPicks();drawOpenPos();Object.keys(DT).forEach((k)=>{if(!$('t-'+k).hidden)drawDeskTab(k)})}drawSeries(se)}finally{busy=false}}
-async function mid(){const q=await get('quotes');if(q&&q.q){S.quotes=q.q;drawToday();if(!$('t-chart').hidden)drawChart()}if(tick2++%4===0){const i=await get('intraday');if(i){S.intra=i;drawToday()}}}
+async function mid(){const ex=await get('executions');if(ex)S.exec=ex;const q=await get('quotes');if(q&&q.q){S.quotes=q.q;drawToday();if(!$('t-chart').hidden)drawChart()}if(tick2++%4===0){const i=await get('intraday');if(i){S.intra=i;drawToday()}}}
 async function fast(){const p=await get('prices');drawPrices(p);if(p){const n=(p.indices||{})['Nifty 50'];if(n){const b=$('nf-k');mcard(b,'n','Now',num(n.last,2),n.last,pc(n.chg_pct),n.chg_pct);mcard(b,'h','Day high',num(n.high,2),n.high,'',null);mcard(b,'l','Day low',num(n.low,2),n.low,'',null)}Object.keys(DT).forEach((k)=>{if(!$('t-'+k).hidden)deskMarket(k)})}}
 $('f-day').onchange=(e)=>{S.day=e.target.value;drawLedger()};$('f-st').onchange=drawLedger;$('f-q').oninput=drawLedger;
 const fd=$('f-desk');['ALL',...Object.keys(DESK)].forEach((k)=>{const b=E('button',k==='ALL'?'on':'',k==='ALL'?'All markets':DESK[k]);b.onclick=()=>{S.desk=k;[...fd.children].forEach((x)=>x.classList.toggle('on',x===b));drawLedger()};fd.appendChild(b)});fd.style.display='contents';
-loadSyms();fast();core();mid();slow();setInterval(fast,4000);setInterval(core,8000);setInterval(mid,15000);setInterval(slow,120000);setInterval(drawStatus,1000);
+loadSyms();startStream();fast();core();mid();slow();setInterval(fast,4000);setInterval(core,8000);setInterval(mid,15000);setInterval(slow,120000);setInterval(drawStatus,1000);
 const h0=(location.hash||'').slice(1);if(['today','fno','comm','crypto','chart','ledger'].includes(h0))setTab(h0);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden){fast();core();mid()}});
 </script></body></html>

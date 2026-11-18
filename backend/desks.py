@@ -166,6 +166,13 @@ def _px(rows: list[dict], strike: float, kind: str) -> dict:
     return {}
 
 
+def _key(rows: list[dict], strike: float, kind: str):
+    for r in rows:
+        if r["strike_price"] == strike:
+            return ((r.get("call_options") if kind == "CE" else r.get("put_options")) or {}).get("instrument_key")
+    return None
+
+
 def _buy(m): return float(m.get("ask_price") or 0)
 def _sell(m): return float(m.get("bid_price") or 0)
 
@@ -254,7 +261,7 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
             if e <= 0 or bid <= 0 or ask - bid > max(1.0, 0.12 * (ask + bid) / 2) or (m.get("volume") is not None and not m.get("volume")):
                 ok = False                      # no two-sided market, a wide spread or no trades today: not a price worth trading
                 break
-            legs.append({"side": side, "strike": strike, "kind": kind, "entry": round(e, 2), "last": round(e, 2)})
+            legs.append({"side": side, "strike": strike, "kind": kind, "entry": round(e, 2), "last": round(e, 2), "key": _key(rows, strike, kind)})
         if not ok:
             continue
         net = sum(l["entry"] if l["side"] == "S" else -l["entry"] for l in legs)        # + credit, - debit (points per unit)
