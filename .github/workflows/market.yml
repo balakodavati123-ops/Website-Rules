@@ -38,6 +38,11 @@ jobs:
         env:
           UPSTOX_TOKEN: ${{ secrets.UPSTOX_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          UPSTOX_EXEC_TOKEN: ${{ secrets.UPSTOX_EXEC_TOKEN }}
+          EXEC_MODE: ${{ vars.EXEC_MODE }}
+          EXEC_MAX_ORDER_RS: ${{ vars.EXEC_MAX_ORDER_RS }}
+          EXEC_MAX_DAY_LOSS_RS: ${{ vars.EXEC_MAX_DAY_LOSS_RS }}
           LOOP_SECONDS: "20400"
         run: python backend/engine.py
       - name: Save state to the branch

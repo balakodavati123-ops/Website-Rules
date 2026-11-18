@@ -22,6 +22,8 @@ import open_fill as OF   # noqa: E402
 import ledger as L       # noqa: E402
 import account as A      # noqa: E402
 import executor as X     # noqa: E402
+import sod as SOD        # noqa: E402
+import notify as N       # noqa: E402
 import daily as DLY      # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -193,6 +195,7 @@ def run() -> None:
     mcx_c: list = []
     filled, snap, series, last_slow = False, {}, load("pnl_series.json", {}), 0.0
     qs: dict = {}
+    plan, eod_hist, told = load("intraday_plan.json", {}), load("eod_history.json", []), load("notified.json", {"open": [], "closed": [], "plan": "", "eod": ""})
     intra: dict = load("intraday.json", {"day": "", "s": {}})
     last_intra, key_of = 0.0, {}
     if token:
@@ -314,13 +317,53 @@ def run() -> None:
         if ses["mcx"] and mcx_c:
             try:
                 qm = U.quotes([c["key"] for c in mcx_c], token)
-                snap["mcx"] = [{"name": c["label"], "last": qm[c["key"]]["last_price"], "chg_pct": qm[c["key"]]["net_change"] / (qm[c["key"]]["last_price"] - qm[c["key"]]["net_change"]) * 100, "unit": "₹"} for c in mcx_c if c["key"] in qm and qm[c["key"]].get("last_price")]
+                snap["mcx"] = [{"key": c["key"], "name": c["label"], "last": qm[c["key"]]["last_price"], "chg_pct": qm[c["key"]]["net_change"] / (qm[c["key"]]["last_price"] - qm[c["key"]]["net_change"]) * 100, "unit": "₹"} for c in mcx_c if c["key"] in qm and qm[c["key"]].get("last_price")]
             except Exception:
                 pass
         if ses["equity"] and rows_now:
             liq = [r for r in rows_now if r["price"] * r["volume"] >= 1e8 and r["price"] >= 20]
             top = lambda lst: [{"symbol": r["symbol"], "price": r["price"], "chg_pct": round(r["chg_pct"], 2), "turnover_cr": round(r["price"] * r["volume"] / 1e7, 1)} for r in lst[:8]]
             snap["movers"] = {"gainers": top(sorted(liq, key=lambda r: -r["chg_pct"])), "losers": top(sorted(liq, key=lambda r: r["chg_pct"])), "active": top(sorted(liq, key=lambda r: -r["price"] * r["volume"])), "count": len(rows_now)}
+        if token and now.weekday() < 5:
+            try:
+                if hhmm >= "08:45" and plan.get("day") != today:                      # start of day: tone, news, the names to watch and their trigger levels
+                    qi = q_idx or U.quotes(list(IDX.values()), token)
+                    nf, vx = qi.get(NIFTY) or {}, qi.get(IDX["vix"]) or {}
+                    results, events = load("results_filed.json", []), load("events_today.json", [])
+                    syms = set(news) | {r.get("symbol") for r in results} | {e.get("symbol") for e in events if str(e.get("date", ""))[:10] == today}
+                    keys = {sy: key_of[sy] for sy in syms if sy in key_of}
+                    qq = U.quotes(list(keys.values()), token) if keys else {}
+                    quotes = {sy: (qq[k]["last_price"], qq[k].get("net_change") or 0) for sy, k in keys.items() if k in qq and qq[k].get("last_price")}
+                    prev_n = (nf.get("last_price") or 0) - (nf.get("net_change") or 0)
+                    plan = SOD.build_plan(None, today, hhmm, load("world_markets.json", []), events, results, load("news_feed.json", []), news, quotes, vx.get("last_price"),
+                                          {"last": nf.get("last_price"), "chg_pct": round(nf["net_change"] / prev_n * 100, 2) if nf.get("net_change") is not None and prev_n else None})
+                    save("intraday_plan.json", plan)
+                    if told.get("plan") != today:
+                        N.push("Day plan", f"Tone {plan['tone']['label']}. {len(plan['watch'])} names to watch. " + " ".join(plan["tone"]["notes"][:2]), 3, "sunrise")
+                        told["plan"] = today
+                if plan.get("day") == today and plan.get("stage", 0) < 2 and hhmm >= "09:12" and rows_now:    # at the open: who is gapping
+                    plan = SOD.add_gaps(plan, rows_now, hhmm)
+                    save("intraday_plan.json", plan)
+                if hhmm >= "15:45" and (not eod_hist or eod_hist[-1]["day"] != today):                          # end of day report
+                    allt_, _b = compose()
+                    e = SOD.build_eod(allt_, today, plan if plan.get("day") == today else None, A.summary(allt_)["equity"])
+                    save("eod.json", e)
+                    eod_hist = [x for x in eod_hist if x["day"] != today] + [{k: e[k] for k in ("day", "trades", "closed", "wins", "win_rate", "pnl", "equity")}]
+                    save("eod_history.json", eod_hist[-60:])
+                    N.push("End of day", e["notes"][0] if e["notes"] else "No trades today.", 3, "chart_with_upwards_trend")
+                # alerts: each trade the desks open or close today, as a ticket you can key into the Upstox app
+                for t in unify_equity(eq) + xb["trades"]:
+                    if t["desk"] in ("EQUITY", "FNO") and t["day"] == today:
+                        if t["status"] == "OPEN" and t["id"] not in told["open"]:
+                            ti, bo = N.ticket(t)
+                            if N.push(ti, bo, 4, "arrow_up" if t["side"] == "LONG" else "arrow_down"):
+                                told["open"].append(t["id"])
+                        elif t["status"] in ("WIN", "LOSS") and t["id"] in told["open"] and t["id"] not in told["closed"]:
+                            if N.push(f"EXIT: {t['label']}", f"Closed at {t.get('exit')} ({t.get('why')}). Result {t['pnl_rs']:+,.0f} rupees. Close your position if you took the trade.", 4, "stop_sign"):
+                                told["closed"].append(t["id"])
+                save("notified.json", {**told, "open": told["open"][-300:], "closed": told["closed"][-300:]})
+            except Exception as e:
+                info["plan"] = f"error: {str(e)[:100]}"
         # one shared list of trades
         trades = unify_equity(eq) + xb["trades"]
         for t in trades:
@@ -332,6 +375,9 @@ def run() -> None:
             last_slow = time.time()
             sync_daily()
             migrate()
+            n2 = I.filings_news()
+            if n2:
+                news = n2
             try:
                 I.update_news_feed(now)
             except Exception as e:
