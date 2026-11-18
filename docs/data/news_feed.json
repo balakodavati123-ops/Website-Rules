@@ -1,13 +1,5 @@
 [
  {
-  "time": "17 Nov 15:23",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Razorpay wins SEBI nod for ~$600M IPO, eyes 2027 listing - Dealroom",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
   "time": "17 Nov 15:33",
   "source": "GoogleNews",
   "category": "EARNINGS",
@@ -478,5 +470,13 @@
   "headline": "Sensex crashes over 700 points, Nifty slips below 25,200; Market cap takes a major hit - Punjab Newsline",
   "event": "yes",
   "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 14:12",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "Metal stocks to buy! APL Apollo Tubes, Hindalco: Axis Sec lists 2 conviction picks post Q2 results 2026; check targets",
+  "event": "no",
+  "hint": "read the numbers: tone only"
  }
 ]
