@@ -23,8 +23,9 @@ def tone(world: list[dict], vix) -> dict:
     score = (sum(us) / len(us) * 0.6 if us else 0) + (sum(asia) / len(asia) * 0.4 if asia else 0)
     label = "Positive" if score >= 0.4 else "Weak" if score <= -0.4 else "Mixed"
     notes = []
+    as_of = str(_row(world, "S&P 500").get("as_of") or "")
     if us:
-        notes.append(f"US markets averaged {sum(us) / len(us):+.2f}% at the last close.")
+        notes.append(f"US markets averaged {sum(us) / len(us):+.2f}% at the {as_of[8:10] + '/' + as_of[5:7] if as_of else 'last'} close.")
     if asia:
         notes.append(f"Asia averaged {sum(asia) / len(asia):+.2f}%.")
     crude, usd = _row(world, "Brent crude"), _row(world, "Dollar in rupees")
@@ -35,7 +36,7 @@ def tone(world: list[dict], vix) -> dict:
     if vix:
         band = "calm" if vix < 13 else "normal" if vix < 18 else "elevated" if vix < 22 else "stressed"
         notes.append(f"India VIX {vix:.2f}: {band}.")
-    return {"label": label, "score": round(score, 2), "notes": notes}
+    return {"label": label, "score": round(score, 2), "notes": notes, "as_of": as_of}
 
 
 def fno_notes(vix, chg) -> list[dict]:
@@ -92,7 +93,7 @@ def add_gaps(plan: dict, rows: list[dict], hhmm: str) -> dict:
 
 
 def build_eod(trades: list[dict], day: str, plan: dict | None, equity: float | None) -> dict:
-    today = [t for t in trades if t["day"] == day and t.get("opened") not in ("swing", "weekly", "signal")]
+    today = [t for t in trades if t["day"] == day and t.get("opened") not in ("swing", "weekly", "signal") and t.get("horizon") not in ("weekly", "monthly")]
     closed = [t for t in today if t["status"] in ("WIN", "LOSS")]
     pnl = lambda ts: round(sum(float(t["pnl_rs"] or 0) for t in ts), 2)
     wins = sum(t["status"] == "WIN" for t in closed)

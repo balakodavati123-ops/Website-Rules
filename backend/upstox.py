@@ -21,6 +21,22 @@ def _get(url: str, token: str = "") -> bytes:
     return urllib.request.urlopen(urllib.request.Request(url, headers=h), timeout=60).read()
 
 
+def _post(url: str, body: dict, token: str = "") -> bytes:
+    h = {"Accept": "application/json", "Content-Type": "application/json", "User-Agent": UA}
+    if token and token != "proxy-injected":
+        h["Authorization"] = f"Bearer {token}"
+    return urllib.request.urlopen(urllib.request.Request(url, data=json.dumps(body).encode(), headers=h, method="POST"), timeout=30).read()
+
+
+def margin_calc(token: str, legs: list[tuple]) -> dict:
+    """Upstox's own margin calculator. legs: [(instrument_key, quantity, 'BUY'|'SELL')]; NSE quantity is in units (lots x lot size), MCX in lots.
+    Buys go first so the hedge benefit is counted. Returns {'final': rupees, 'required': rupees, 'legs': [rupees per leg]}."""
+    legs = sorted(legs, key=lambda x: x[2] != "BUY")
+    body = {"instruments": [{"instrument_key": k, "quantity": int(q), "transaction_type": s, "product": "D"} for k, q, s in legs]}
+    d = json.loads(_post("https://api.upstox.com/v2/charges/margin", body, token)).get("data", {})
+    return {"final": float(d["final_margin"]), "required": float(d["required_margin"]), "legs": [float(m.get("total_margin") or 0) for m in d.get("margins", [])]}
+
+
 def instruments(exchange: str) -> list[dict]:
     if exchange not in _cache:
         _cache[exchange] = json.loads(gzip.decompress(_get(f"https://assets.upstox.com/market-quote/instruments/exchange/{exchange}.json.gz")))

@@ -6,7 +6,9 @@ margin (futures and options). Each kind of trade gets a share of the account, so
 from __future__ import annotations
 
 START = 100000.0
-BUDGET = {"swing": 0.42, "signal": 0.08, "intraday": 0.15, "FNO": 0.20, "COMMODITY": 0.10, "CRYPTO": 0.05}
+# Limits, not reservations: no desk may tie up more than its share, and every desk is also held to the cash actually free.
+# Real broker margins on this account size: one NIFTY spread needs about Rs 38,000, a crude oil mini lot about Rs 25,000, so F&O and commodities get the larger limits.
+BUDGET = {"swing": 0.22, "signal": 0.05, "intraday": 0.06, "FNO": 0.50, "COMMODITY": 0.25, "CRYPTO": 0.05}
 LABEL = {"swing": "Swing (daily bars)", "signal": "Signal desk", "intraday": "Intraday equities", "FNO": "F&O margin", "COMMODITY": "Commodities margin", "CRYPTO": "Crypto"}
 
 
@@ -43,6 +45,24 @@ def summary(trades: list[dict]) -> dict:
             "buckets": {k: {"label": LABEL[k], "budget": round(BUDGET[k] * START), "used": round(used[k]), "room": round(max(0.0, min(BUDGET[k] * START - used[k], equity - in_use)))} for k in BUDGET}}
 
 
+class Room:
+    """A desk's room as a one-item list a desk can read and spend from (room[0] -= margin). Every desk also draws on one shared pool of free
+    cash, so two desks opening trades in the same moment cannot spend the same rupees."""
+
+    def __init__(self, own: float, cash: list):
+        self.own, self.cash = float(own), cash
+
+    def __getitem__(self, i: int) -> float:
+        return max(0.0, min(self.own, self.cash[0]))
+
+    def __setitem__(self, i: int, v: float) -> None:
+        spent = self[0] - v
+        self.own -= spent
+        self.cash[0] -= spent
+
+
 def rooms(trades: list[dict]) -> dict:
-    """Room left per bucket as one-item lists, so a desk can spend from it while it opens trades."""
-    return {k: [v["room"]] for k, v in summary(trades)["buckets"].items()}
+    """Room left per bucket, each limited by its own share and by the cash everyone shares."""
+    s = summary(trades)
+    cash = [max(0.0, s["cash"])]
+    return {k: Room(v["room"], cash) for k, v in s["buckets"].items()}

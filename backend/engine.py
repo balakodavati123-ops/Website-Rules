@@ -26,6 +26,11 @@ import executor as X     # noqa: E402
 import sod as SOD        # noqa: E402
 import notify as N       # noqa: E402
 import daily as DLY      # noqa: E402
+import margin as MG         # noqa: E402
+import forecast as FC       # noqa: E402
+import smart_money as SM    # noqa: E402
+import horizons as HZ       # noqa: E402
+import thesis as TH         # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = Path(os.environ.get("DESK_DOCS") or ROOT / "docs" / "data")
@@ -35,6 +40,8 @@ IDX = {"nifty": "NSE_INDEX|Nifty 50", "banknifty": "NSE_INDEX|Nifty Bank", "vix"
 DAILY_FILES = ["world_markets", "world_news", "events_today", "results_filed", "crypto_quotes", "crypto_candles", "alerts_log", "desk_signals", "signal_ledger", "signal_lessons", "fo_ledger",
                "macro_signals", "strategies_macro", "paper_equity", "approved_strategies"]
 NIFTY = IDX["nifty"]
+UNDER = {"NIFTY": NIFTY, "BANKNIFTY": IDX["banknifty"]}              # the two indexes with options we trade
+VIEW_NAME = {"NIFTY": "Nifty 50", "BANKNIFTY": "Bank Nifty"}
 
 
 def load(name: str, default):
@@ -56,7 +63,7 @@ def unify_equity(book: dict) -> list[dict]:
         pnl = t["pnl_rs"] if t["status"] != "OPEN" else round(d * (t["last"] - t["entry"]) * t["qty"], 2)
         out.append({"id": f"E{str(t['day']).replace('-', '')[2:]}-{t['id']}", "desk": "EQUITY", "strategy": t.get("basis", "price only").replace(" ", "_"), "label": t["label"], "symbol": t.get("symbol"), "side": t["side"],
                     "entry": t["entry"], "last": t["last"], "exit": t.get("exit", ""), "qty": t["qty"], "stop": t.get("stop"), "status": t["status"], "pnl_rs": pnl, "reason": t.get("reason", ""),
-                    "why": t.get("why", ""), "day": t["day"], "opened": t["time"], "closed": "", "risk_class": "Intraday momentum", "margin_rs": round(t["entry"] * t["qty"] * 0.2)})
+                    "why": t.get("why", ""), "day": t["day"], "opened": t["time"], "closed": t.get("closed", ""), "risk_class": "Intraday momentum", "margin_rs": round(t["entry"] * t["qty"] * 0.2)})
     return out
 
 
@@ -80,7 +87,7 @@ def close_stale(eq: dict, xb: dict, today: str) -> None:
         if t["status"] == "OPEN" and t["day"] != today:
             I.close_trade(t, t["last"], "carried over: closed late at the last price")
     for t in xb["trades"]:
-        if t["status"] == "OPEN" and t["day"] != today and t["desk"] in ("FNO", "COMMODITY"):
+        if t["status"] == "OPEN" and t["day"] != today and t["desk"] in ("FNO", "COMMODITY") and t.get("horizon", "daily") in ("daily", "intraday"):
             D.finish(t, t["last"], "carried over: closed late at the last price", now, t["pnl_rs"])
 
 
@@ -200,16 +207,136 @@ def run() -> None:
     plan, eod_hist, told = load("intraday_plan.json", {}), load("eod_history.json", []), load("notified.json", {"open": [], "closed": [], "plan": "", "eod": ""})
     intra: dict = load("intraday.json", {"day": "", "s": {}})
     last_intra, key_of = 0.0, {}
+    M = MG.Margin(token) if token else None
+    fc_try = [0.0]
+    fc, fc_hist = load("forecast.json", {}), load("forecast_history.json", [])
+    sm, parts = load("smart_money.json", {}), load("participants.json", {})
+    hist_cache: dict = {}                                            # (index name, day) -> daily candles
+    chain_cache: dict = {}                                           # (underlying, expiry) -> (time, rows)
+    acct = [A.START]                                                 # account equity, for "per cent of the account" in the written thesis
+    world_at = [0.0]                                                 # when world markets were last refreshed from the web
+
+    def get_chain(under: str, expiry: str, ttl: float = 10.0):
+        hit = chain_cache.get((under, expiry))
+        if hit and time.time() - hit[0] < ttl:
+            return hit[1]
+        rows = U.option_chain(token, UNDER[under], expiry)
+        chain_cache[(under, expiry)] = (time.time(), rows)
+        return rows
+
+    def lot_of(under: str, expiry: str) -> int:
+        U.expiries(token, UNDER[under])
+        return U.lot_size(UNDER[under], expiry)
+
+    def world_rows() -> list[dict]:
+        live, base = load("world_live.json", {"rows": []})["rows"], load("world_markets.json", [])
+        asof = lambda rows: max((r.get("as_of") or "" for r in rows), default="")
+        return live if live and asof(live) >= asof(base) else base
+
+    def make_env() -> dict:
+        """What every trade's written thesis may quote: today's views, option walls, institutional positions, world tone and headlines."""
+        pl = plan if plan.get("day") else {}
+        fii = next((p for p in (sm.get("participants") or []) if p["who"] == "FII"), None)
+        news_, seen_ = list((pl.get("tone") or {}).get("notes", [])[:3]), set()
+        for h in (pl.get("headlines") or []):
+            k_ = str(h.get("headline", ""))[:40].lower()
+            if h.get("headline") and k_ not in seen_ and len(seen_) < 3:
+                seen_.add(k_)
+                news_.append(f"{h['headline']} ({h.get('source', '')})")
+        if pl.get("results"):
+            news_.append(f"{len(pl['results'])} companies filed results or hold board meetings today.")
+        views_ = fc.get("views") if fc.get("day") == datetime.now(IST).strftime("%Y-%m-%d") else {}
+        return {"view": {u: (views_ or {}).get(n) for u, n in VIEW_NAME.items()}, "chain": {u: (sm.get("chains") or {}).get(u) for u in UNDER}, "tone": pl.get("tone"), "news": news_,
+                "world": {r["name"]: r for r in world_rows()},
+                "participants": (f"Foreign institutions hold net {fii['fut']:+,} index futures, net {fii['puts']:+,} puts and {fii['calls']:+,} calls (NSE participant data, {sm.get('day')})." if fii else None)}
+
+    def build_forecast(now, qi: dict, opens: bool) -> None:
+        """Today's view of Nifty and Bank Nifty with the reasons; rebuilt at the open once the gap is known."""
+        nonlocal fc
+        today_ = now.date()
+        names = {"Nifty 50": IDX["nifty"], "Bank Nifty": IDX["banknifty"]}
+        for nm, k in names.items():
+            if (nm, today_.isoformat()) not in hist_cache:
+                hist_cache[(nm, today_.isoformat())] = FC.daily(token, k, today_)
+        chains_ = {}
+        for u, nm in VIEW_NAME.items():
+            exps_ = [e for e in U.expiries(token, UNDER[u]) if e >= today_.isoformat()]
+            chains_[nm] = {**SM.chain_stats(get_chain(u, exps_[0], 60)), "expiry": exps_[0]} if exps_ else {}
+        vx = qi.get(IDX["vix"]) or {}
+        vix_chg = (vx["net_change"] / (vx["last_price"] - vx["net_change"]) * 100) if vx.get("net_change") is not None and vx.get("last_price") else None
+        fii = next((p for p in (sm.get("participants") or []) if p["who"] == "FII"), None)
+        op = {nm: ((qi.get(k) or {}).get("ohlc") or {}).get("open") for nm, k in names.items()} if opens else {}
+        views = FC.build(token, today_, {nm: hist_cache[(nm, today_.isoformat())] for nm in names}, names, plan.get("tone") or {}, vx.get("last_price"), vix_chg, chains_, fii, op,
+                         [h["headline"] for h in (plan.get("headlines") or []) if h.get("headline")])
+        pre = fc.get("pre") if fc.get("day") == today_.isoformat() else None
+        if opens and fc.get("day") == today_.isoformat() and fc.get("stage") == 1:
+            pre = {nm: {k: v[k] for k in ("bias", "score", "lo", "hi", "centre")} for nm, v in (fc.get("views") or {}).items()}
+        fc = {"day": today_.isoformat(), "built_at": now.strftime("%H:%M"), "stage": 2 if opens else 1, "views": views, "pre": pre, "scored": False,
+              "record": {nm: FC.hit_rate(fc_hist, nm) for nm in names}, "world_as_of": (plan.get("tone") or {}).get("as_of")}
+        save("forecast.json", fc)
     if token:
         try:
             key_of = {x["trading_symbol"]: x["instrument_key"] for x in U.instruments("NSE") if x.get("segment") == "NSE_EQ" and x.get("instrument_type") == "EQ"}
         except Exception:
             pass
+    via_ref = {"rows": load("viability.json", {}).get("reference", []), "day": load("viability.json", {}).get("ref_day", "")}
+    world_at[0] = load("world_live.json", {"at": 0}).get("at", 0)
+
+    def refresh_world(at) -> None:
+        live = load("world_live.json", {"at": 0, "rows": []})
+        every = 1800 if "05:30" <= at.strftime("%H:%M") <= "09:30" else 4 * 3600
+        if at.weekday() >= 5 and live.get("rows") or time.time() - live.get("at", 0) < every:
+            return
+        import importlib.util as iu
+        spec = iu.spec_from_file_location("make_world", ROOT / "dashboard" / "make_world.py")
+        mod = iu.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        rows = mod.markets()
+        if sum(r.get("last") is not None for r in rows) >= 8:      # a half-empty download must never replace a good one
+            save("world_live.json", {"at": time.time(), "rows": rows})
+            world_at[0] = time.time()
+
+    def refresh_smart(at) -> None:
+        nonlocal sm, parts
+        parts = SM.history(at.date(), parts)
+        save("participants.json", parts)
+        dg, ch = SM.digest(parts), {}
+        for u in UNDER:
+            exps_ = [e for e in U.expiries(token, UNDER[u]) if e >= at.strftime("%Y-%m-%d")]
+            if exps_:
+                rows = get_chain(u, exps_[0], 120)
+                ch[u] = {**SM.chain_stats(rows), "expiry": exps_[0], "spot": rows[0].get("underlying_spot_price") if rows else None}
+        sm = {"updated_at": at.isoformat(timespec="seconds"), **dg, "chains": ch, "explain": SM.EXPLAIN, "who": SM.WHO, "summary": SM.overall(dg, ch)}
+        save("smart_money.json", sm)
+
+    REF = [("CRUDEOIL", "Crude oil (100 barrels)"), ("CRUDEOILM", "Crude oil mini (10 barrels)"), ("NATURALGAS", "Natural gas (1,250 mmBtu)"), ("NATGASMINI", "Natural gas mini (250 mmBtu)"),
+           ("GOLD", "Gold (1 kg)"), ("GOLDM", "Gold mini (100 g)"), ("GOLDPETAL", "Gold petal (1 g)"), ("SILVER", "Silver (30 kg)"), ("SILVERM", "Silver mini (5 kg)"), ("SILVERMIC", "Silver micro (1 kg)")]
+
+    def margin_reference(at) -> None:
+        """Once a day: the broker's margin for one lot of each MCX contract, against what this account's commodities limit and cash can carry."""
+        if not M or via_ref["day"] == at.strftime("%Y-%m-%d"):
+            return
+        ins, rows = U.instruments("MCX"), []
+        for pre, name in REF:
+            c = sorted((x for x in ins if x.get("instrument_type") == "FUT" and x["trading_symbol"].startswith(pre + " FUT")
+                        and (datetime.fromtimestamp(x["expiry"] / 1000, IST).date() - at.date()).days >= D.ROLL_DAYS), key=lambda x: x["expiry"])
+            if not c:
+                continue
+            m = M.final([(c[0]["instrument_key"], 1, "SELL")])
+            if m:
+                rows.append({"name": name, "contract": c[0]["trading_symbol"], "margin": m})
+        if rows:
+            via_ref.update(rows=rows, day=at.strftime("%Y-%m-%d"))
+
     def compose():
         live_open = [t for t in unify_equity(eq) + xb["trades"] if t["status"] == "OPEN"]
         books = L.swing(load("paper_ledger.json", [])) + L.weekly_fno(load("fo_ledger.json", [])) + L.signals(load("signal_ledger.json", []))
         allt = list(archive.values()) + live_open + books
         allt.sort(key=lambda t: (t["day"], t["opened"]), reverse=True)
+        env_ = make_env()
+        for i_, t in enumerate(allt):
+            if not t.get("thesis") and t["desk"] == "EQUITY" and (t["status"] == "OPEN" or t["day"] == datetime.now(IST).strftime("%Y-%m-%d") or t.get("opened") in ("swing", "signal")):
+                allt[i_] = {**t, "thesis": TH.for_trade(t, env_, acct[0])}
         if key_of:
             for t in allt:
                 if t["desk"] == "EQUITY" and t.get("symbol") and not t.get("instrument_key"):
@@ -222,7 +349,9 @@ def run() -> None:
         save("desk_book.json", xb)
         allt, books = compose()
         save("trade_archive.json", sorted((t for t in archive.values()), key=lambda t: (t["day"], t["opened"]))[-4000:])
-        save("all_trades.json", allt[:4000])
+        th_ = {t["id"]: t["thesis"] for t in allt[:600] if t.get("thesis")}
+        save("theses.json", th_)
+        save("all_trades.json", [{k: v for k, v in t.items() if k != "thesis"} | ({"has_thesis": True} if t.get("thesis") else {}) for t in allt[:4000]])
         stats = D.learn(list(archive.values()) + [t for t in books if t["status"] in ("WIN", "LOSS")])
         save("strategy_stats.json", stats)
         try:                                           # the bridge to the broker: off unless EXEC_MODE is set
@@ -238,7 +367,14 @@ def run() -> None:
         if qs:
             save("quotes.json", {"updated_at": status.get("updated_at"), "q": qs})
         nonlocal_state["tick"] = allt
-        save("account.json", {"updated_at": status.get("updated_at"), **A.summary(allt)})
+        summ = A.summary(allt)
+        acct[0] = summ["equity"]
+        save("account.json", {"updated_at": status.get("updated_at"), **summ})
+        if M:
+            today_s = datetime.now(IST).strftime("%Y-%m-%d")
+            save("viability.json", {"updated_at": status.get("updated_at"), "skipped": sorted((v for v in M.log.values() if v["day"] == today_s), key=lambda v: v["at"], reverse=True)[:30],
+                                    "reference": via_ref["rows"], "ref_day": via_ref["day"],
+                                    "limits": {k: v["budget"] for k, v in summ["buckets"].items()}})
 
     nonlocal_state: dict = {}
     last_pub = 0.0
@@ -287,7 +423,7 @@ def run() -> None:
         if token and ses["mcx"]:
             try:
                 mcx_c = mcx_c or D.mcx_contracts(U.instruments("MCX"), now.date())
-                D.mcx_step(xb, now, U.quotes([c["key"] for c in mcx_c], token), mcx_c, paused, rm["COMMODITY"])
+                D.mcx_step(xb, now, U.quotes([c["key"] for c in mcx_c], token), mcx_c, paused, rm["COMMODITY"], {"margin": M, "env": make_env(), "acct": acct[0]})
                 info["commodities"] = f"{len(mcx_c)} MCX futures, real time"
             except Exception as e:
                 info["commodities"] = f"error: {e}"
@@ -297,22 +433,41 @@ def run() -> None:
                 n = q_idx.get(NIFTY, {})
                 spot = n.get("last_price")
                 exps = [e for e in U.expiries(token, NIFTY) if e >= today]
-                open_exp = {t["expiry"] for t in xb["trades"] if t["desk"] == "FNO" and t["status"] == "OPEN"}
-                chains = {e: U.option_chain(token, NIFTY, e) for e in sorted(open_exp | {exps[0]}) if e >= today or e in open_exp}
-                ctx = {"spot": spot, "prev": (spot - n["net_change"]) if spot and n.get("net_change") is not None else None, "chains": chains, "expiry": exps[0], "lot": U.lot_size(NIFTY, exps[0]), "room": rm["FNO"]}
+                open_exp = {t["expiry"] for t in xb["trades"] if t["desk"] == "FNO" and t["status"] == "OPEN" and t.get("underlying", "NIFTY") == "NIFTY" and t.get("horizon", "daily") == "daily"}
+                chains = {e: get_chain("NIFTY", e, 5) for e in sorted(open_exp | {exps[0]}) if e >= today or e in open_exp}
+                prev_n = (spot - n["net_change"]) if spot and n.get("net_change") is not None else None
+                env = make_env()
+                vixq = (q_idx.get(IDX["vix"]) or {}).get("last_price")
+                ctx = {"spot": spot, "prev": prev_n, "chains": chains, "expiry": exps[0], "lot": U.lot_size(NIFTY, exps[0]), "room": rm["FNO"], "margin": M, "env": env, "vix": vixq,
+                       "iv": D.atm_iv(chains.get(exps[0]) or [], spot), "acct": acct[0]}
+                # weekly and monthly structures claim margin first: they are held for days, the daily ones are flat by 15:15 and take what is left
+                uq, fv_ = {}, ((fc.get("views") or {}) if fc.get("day") == today else {})
+                for u_, k_ in UNDER.items():
+                    qq_ = q_idx.get(k_) or {}
+                    if qq_.get("last_price"):
+                        uq[u_] = {"spot": qq_["last_price"], "prev": (qq_["last_price"] - qq_["net_change"]) if qq_.get("net_change") is not None else None, "exps": [e for e in U.expiries(token, k_) if e >= today]}
+                try:
+                    HZ.hold_step(xb, now, {"u": uq, "chain": lambda u_, e_: get_chain(u_, e_), "lot": lot_of, "margin": M, "room": rm["FNO"], "env": env, "acct": acct[0], "vix": vixq,
+                                       "view": {u_: {"score": (fv_.get(VIEW_NAME[u_]) or {}).get("score", 0.0), "rv": (fv_.get(VIEW_NAME[u_]) or {}).get("rv")} for u_ in UNDER}}, paused)
+                except Exception as e:                       # a fault in the held structures must never stop the daily desk
+                    import traceback
+                    traceback.print_exc()
+                    info["fno_hold"] = f"error: {str(e)[:100]}"
                 D.fno_step(xb, now, ctx, paused)
                 rows_ = chains.get(exps[0]) or []
                 if rows_ and spot:
                     atm = min((r["strike_price"] for r in rows_), key=lambda k: abs(k - spot))
                     st_ = D._buy(D._px(rows_, atm, "CE")) + D._buy(D._px(rows_, atm, "PE"))
-                    snap["fno"] = {"spot": spot, "expiry": exps[0], "lot": ctx["lot"], "atm": atm, "straddle": round(st_, 1), "vix": (q_idx.get(IDX["vix"]) or {}).get("last_price")}
+                    snap["fno"] = {"spot": spot, "expiry": exps[0], "lot": ctx["lot"], "atm": atm, "straddle": round(st_, 1), "vix": vixq}
                 info["fno"] = f"NIFTY {spot} , expiry {exps[0]}, {len(chains)} chain(s), real time"
             except Exception as e:
+                import traceback
+                traceback.print_exc()
                 info["fno"] = f"error: {e}"
         T["fno"] = round(time.time() - it0, 1)
         try:
             ticks = D.kraken_ticks()
-            D.crypto_step(xb, now, ticks, paused, rm["CRYPTO"])
+            D.crypto_step(xb, now, ticks, paused, rm["CRYPTO"], {"env": make_env(), "acct": acct[0]})
             snap["crypto"] = [{"name": k, "last": v["last"], "chg_pct": (v["last"] / v["open"] - 1) * 100, "high": v["high"], "low": v["low"], "unit": "$"} for k, v in ticks.items()]
             info["crypto"] = "6 coins from Kraken, real time"
         except Exception as e:
@@ -335,7 +490,7 @@ def run() -> None:
         T["snapshots"] = round(time.time() - it0, 1)
         if token and now.weekday() < 5:
             try:
-                if hhmm >= "08:45" and plan.get("day") != today:                      # start of day: tone, news, the names to watch and their trigger levels
+                if hhmm >= "08:45" and (plan.get("day") != today or (plan.get("world_at", 0) < world_at[0] and hhmm < "09:30")):                      # start of day: tone, news, the names to watch and their trigger levels
                     qi = q_idx or U.quotes(list(IDX.values()), token)
                     nf, vx = qi.get(NIFTY) or {}, qi.get(IDX["vix"]) or {}
                     results, events = load("results_filed.json", []), load("events_today.json", [])
@@ -344,12 +499,38 @@ def run() -> None:
                     qq = U.quotes(list(keys.values()), token) if keys else {}
                     quotes = {sy: (qq[k]["last_price"], qq[k].get("net_change") or 0) for sy, k in keys.items() if k in qq and qq[k].get("last_price")}
                     prev_n = (nf.get("last_price") or 0) - (nf.get("net_change") or 0)
-                    plan = SOD.build_plan(None, today, hhmm, load("world_markets.json", []), events, results, load("news_feed.json", []), news, quotes, vx.get("last_price"),
+                    plan = SOD.build_plan(None, today, hhmm, world_rows(), events, results, load("news_feed.json", []), news, quotes, vx.get("last_price"),
                                           {"last": nf.get("last_price"), "chg_pct": round(nf["net_change"] / prev_n * 100, 2) if nf.get("net_change") is not None and prev_n else None})
+                    plan["world_at"] = world_at[0]
                     save("intraday_plan.json", plan)
                     if told.get("plan") != today:
                         N.push("Day plan", f"Tone {plan['tone']['label']}. {len(plan['watch'])} names to watch. " + " ".join(plan["tone"]["notes"][:2]), 3, "sunrise")
                         told["plan"] = today
+                if plan.get("day") == today and time.time() - fc_try[0] > 120 and (fc.get("day") != today or fc.get("plan_world_at") != plan.get("world_at")):          # today's forecast for the indexes
+                    fc_try[0] = time.time()
+                    qi_ = q_idx or U.quotes(list(IDX.values()), token)
+                    build_forecast(now, qi_, fc.get("day") == today and fc.get("stage") == 2)
+                    fc["plan_world_at"] = plan.get("world_at")
+                    save("forecast.json", fc)
+                    info["forecast"] = f"built at {hhmm}"
+                if fc.get("day") == today and fc.get("stage") == 1 and hhmm >= "09:16" and q_idx.get(NIFTY) and ((q_idx[NIFTY].get("ohlc") or {}).get("open")) and time.time() - fc_try[0] > 60:   # the open is known: add the gap
+                    fc_try[0] = time.time()
+                    build_forecast(now, q_idx, True)
+                    fc["plan_world_at"] = plan.get("world_at")
+                    save("forecast.json", fc)
+                if fc.get("day") == today and not fc.get("scored") and hhmm >= "15:45" and q_idx.get(NIFTY):   # score the forecast against what the indexes did
+                    rows_sc = []
+                    for nm, k in (("Nifty 50", IDX["nifty"]), ("Bank Nifty", IDX["banknifty"])):
+                        qv, vw = q_idx.get(k) or {}, (fc.get("views") or {}).get(nm)
+                        if vw and qv.get("last_price"):
+                            oh = qv.get("ohlc") or {}
+                            rows_sc.append(FC.score_day({**vw, "day": today}, oh.get("open"), oh.get("high") or qv["last_price"], oh.get("low") or qv["last_price"], qv["last_price"]))
+                    if rows_sc:
+                        fc_hist[:] = FC.record(fc_hist, rows_sc, today)[-240:]
+                        save("forecast_history.json", fc_hist)
+                        fc["scored"], fc["result"] = True, rows_sc
+                        fc["record"] = {nm: FC.hit_rate(fc_hist, nm) for nm in ("Nifty 50", "Bank Nifty")}
+                        save("forecast.json", fc)
                 if plan.get("day") == today and plan.get("stage", 0) < 2 and hhmm >= "09:12" and rows_now:    # at the open: who is gapping
                     plan = SOD.add_gaps(plan, rows_now, hhmm)
                     save("intraday_plan.json", plan)
@@ -385,17 +566,15 @@ def run() -> None:
             last_slow = time.time()
             sync_daily()
             migrate()
-            if not (news_thread and news_thread.is_alive()):        # the news fetches can be slow from a cloud address: never hold up the price loop for them
-                def _news(at=now):
-                    try:
-                        n2 = I.filings_news()
-                        if n2:
-                            news.clear()
-                            news.update(n2)
-                        I.update_news_feed(at)
-                    except Exception as e:
-                        info["news"] = f"error: {str(e)[:80]}"
-                news_thread = threading.Thread(target=_news, daemon=True)
+            if not (news_thread and news_thread.is_alive()):        # the slow fetches (news, world markets, NSE files) can take a while from a cloud address: never hold up the price loop for them
+                def _slow(at=now):
+                    for name_, fn_ in (("news", lambda: (lambda n2: (news.clear(), news.update(n2)) if n2 else None)(I.filings_news())), ("news_feed", lambda: I.update_news_feed(at)),
+                                       ("world", lambda: refresh_world(at)), ("smart_money", lambda: token and refresh_smart(at)), ("margin_reference", lambda: margin_reference(at))):
+                        try:
+                            fn_()
+                        except Exception as e:
+                            info[name_] = f"error: {str(e)[:80]}"
+                news_thread = threading.Thread(target=_slow, daemon=True)
                 news_thread.start()
         if token and time.time() - last_intra >= 60 and nonlocal_state.get("tick"):
             last_intra = time.time()

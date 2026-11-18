@@ -24,7 +24,9 @@ def push(title: str, body: str, priority: int = 3, tags: str = "") -> bool:
 def ticket(t: dict) -> tuple[str, str]:
     """A trade as a ticket you can key into the Upstox app yourself: what to buy or sell, how many, at what price, where the stop is."""
     if t["desk"] == "FNO":
-        legs = "\n".join(f"{'SELL' if l['side'] == 'S' else 'BUY'} NIFTY {l['strike']} {l['kind']} @ {l['entry']}" for l in (t.get("legs") or []))
-        return f"F&O: {t['label']}", f"{legs}\nLot {t.get('lot')} x {t.get('qty')}. Max loss {t.get('max_loss_rs') or 'see margin'}, margin {t.get('margin_rs')}.\n{t.get('reason', '')}"
+        u, hz = t.get("underlying", "NIFTY"), t.get("horizon", "daily")
+        legs = "\n".join(f"{'SELL' if l['side'] == 'S' else 'BUY'} {u} {l['strike']} {l['kind']} @ {l['entry']}" for l in (t.get("legs") or []))
+        hold = "Held position: keep it until the target, stop or expiry rule fires; the exit alert tells you when." if hz in ("weekly", "monthly") else "Intraday: flat by 15:15."
+        return f"F&O {hz}: {t['label']}", f"{legs}\nLot {t.get('lot')} x {t.get('qty')}. Max loss {t.get('max_loss_rs') or 'see margin'}, margin {t.get('margin_rs')}.\n{hold}\n{t.get('reason', '')}"
     side = "SELL (short, intraday)" if t["side"] == "SHORT" else "BUY"
     return f"{side}: {t['label'].rsplit(' ', 1)[0]}", f"Qty {t['qty']} at about {t['entry']} (use a limit order a hair through the market). Stop {t.get('stop')}. Exit by 15:10.\n{t.get('reason', '')}"

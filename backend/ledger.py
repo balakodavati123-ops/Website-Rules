@@ -62,7 +62,7 @@ def day_series(prev: dict, day: str, hms: str, trades: list[dict], nifty, every:
             return prev
     by = {"EQUITY": 0.0, "FNO": 0.0, "COMMODITY": 0.0, "CRYPTO": 0.0}
     for t in trades:
-        if t["day"] == day and t["desk"] in by and t.get("opened") not in ("swing", "weekly", "signal"):
+        if t["day"] == day and t["desk"] in by and t.get("opened") not in ("swing", "weekly", "signal") and t.get("horizon") not in ("weekly", "monthly"):
             by[t["desk"]] += float(t["pnl_rs"] or 0)
     pts.append([hms, round(sum(by.values()), 2), *(round(by[k], 2) for k in by), nifty])
     return prev

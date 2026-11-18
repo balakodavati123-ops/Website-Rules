@@ -55,6 +55,7 @@ def step(book: dict, day: str, hhmm: str, rows: list[dict], news: dict, room=Non
         hit = tr["last"] <= tr["stop"] if tr["side"] == "LONG" else tr["last"] >= tr["stop"]
         if hit or t >= C["end"]:
             close_trade(tr, tr["last"], "stop" if hit else "time")
+            tr["closed"] = hhmm
     if t < C["start"] or t >= C["end"]:
         return book
     for r in sorted(rows, key=lambda x: -abs(x["chg_pct"])):

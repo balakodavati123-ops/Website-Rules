@@ -12,6 +12,8 @@ import time
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
+import thesis as T
+
 IST = timezone(timedelta(hours=5, minutes=30))
 PREFIX = {"EQUITY": "E", "COMMODITY": "M", "CRYPTO": "C", "FNO": "F"}
 
@@ -48,18 +50,26 @@ MCX = [("GOLDPETAL FUT", "Gold 1 g"), ("NATGASMINI FUT", "Natural gas mini"), ("
 MCX_RULES = {"move": 0.8, "near": 0.003, "stop": 0.006, "target": 0.012, "close": "23:15", "open": "09:15", "last_entry": "22:30", "max_open": 4, "notional": 60000}
 
 
+ROLL_DAYS = 5          # a contract this close to expiry carries tender-period margin and thin trading: the desk uses the next one
+
+
 def mcx_contracts(ins: list[dict], today) -> list[dict]:
     out = []
     for pre, name in MCX:
-        c = [x for x in ins if x.get("instrument_type") == "FUT" and x["trading_symbol"].startswith(pre) and datetime.fromtimestamp(x["expiry"] / 1000, IST).date() > today]
+        c = [x for x in ins if x.get("instrument_type") == "FUT" and x["trading_symbol"].startswith(pre) and (datetime.fromtimestamp(x["expiry"] / 1000, IST).date() - today).days >= ROLL_DAYS]
         if c:
             x = min(c, key=lambda y: y["expiry"])
             out.append({"key": x["instrument_key"], "label": name, "symbol": x["trading_symbol"], "mult": float(x.get("qty_multiplier") or 1)})
     return out
 
 
-def mcx_step(book: dict, now: datetime, q: dict, contracts: list[dict], paused: set, room=None) -> None:
+WORLD_OF = {"Gold 1 g": "Gold", "Silver 1 kg": "Silver", "Crude oil mini": "Brent crude"}
+
+
+def mcx_step(book: dict, now: datetime, q: dict, contracts: list[dict], paused: set, room=None, ctx: dict | None = None) -> None:
+    """ctx (optional): {'margin': Margin, 'env': market context, 'acct': account equity}. With a margin checker a trade opens only if the broker's own margin for it fits the room."""
     R, t = MCX_RULES, mins(now.strftime("%H:%M"))
+    ctx = ctx or {}
     by = {c["key"]: c for c in contracts}
     for tr in book["trades"]:
         if tr["desk"] != "COMMODITY" or tr["status"] != "OPEN" or tr["key"] not in q:
@@ -95,15 +105,38 @@ def mcx_step(book: dict, now: datetime, q: dict, contracts: list[dict], paused: 
             continue
         side = "LONG" if up else "SHORT"
         qty = max(1, int(R["notional"] // (px * c["mult"])))
-        margin = round(px * c["mult"] * qty * 0.06)
-        if room is not None and margin > room[0]:
-            continue                                  # not enough account money for this contract today
+        M, tx = ctx.get("margin"), "BUY" if up else "SELL"
+        if M:
+            while qty >= 1:                              # the broker's own number for this many lots; fewer lots until it fits
+                margin = M.final([(c["key"], qty, tx)])
+                if margin is None or room is None or margin <= room[0]:
+                    break
+                qty -= 1
+            if margin is None or qty < 1:
+                one = M.final([(c["key"], 1, tx)])
+                M.skip("COMMODITY", c["label"], one, room[0] if room else 0, "needs more margin than the commodities limit has free" if one else "margin could not be checked", now)
+                continue
+            src = "Upstox margin calculator"
+        else:
+            margin, src = round(px * c["mult"] * qty * 0.06), "estimate (6% of contract value)"
+            if room is not None and margin > room[0]:
+                continue
         if room is not None:
             room[0] -= margin
         book["seen"][f"{day}|{c['symbol']}"] = side
-        mk(book, "COMMODITY", strat, f"{c['label']} {side.lower()}", side, px, qty, now, key=c["key"], mult=c["mult"], symbol=c["symbol"],
-           stop=round(px * (1 - stop_p if up else 1 + stop_p), 2), target_px=round(px * (1 + tgt_p if up else 1 - tgt_p), 2),
-           risk_class="Intraday momentum" if strat == "mcx_momentum" else "Intraday pullback", margin_rs=margin, reason=why)
+        stop_px, tgt_px = round(px * (1 - stop_p if up else 1 + stop_p), 2), round(px * (1 + tgt_p if up else 1 - tgt_p), 2)
+        unit = c["mult"] * qty
+        env = ctx.get("env") or {}
+        wr = (env.get("world") or {}).get(WORLD_OF.get(c["label"], ""))
+        data = [f"{c['label']} ({c['symbol']}) at {px:,.2f}, {chg:+.2f}% on the previous close; day range {lo:,.2f} to {hi:,.2f}, price is {abs(px / (hi if up else lo) - 1) * 100:.2f}% from the day {'high' if up else 'low'}.",
+                f"Lot: {c['mult']:g} unit(s) × {qty} lot(s); contract value {T.inr(px * unit)}."]
+        if wr and wr.get("last") is not None:
+            data.append(f"Global reference: {wr['name']} {wr['last']} ({wr['chg_pct']:+.2f}% at the {str(wr.get('as_of', ''))[5:]} close).")
+        news = [n for n in (env.get("news") or [])[:3]] or ["No commodity-specific headline in our feed today; this trade rests on price action alone."]
+        th = T.directional("COMMODITY", strat, "intraday", f"{c['label']} {side.lower()}", side, px, stop_px, tgt_px, abs(px - stop_px) * unit, abs(tgt_px - px) * unit, margin, (ctx.get("acct") or 100000.0), data, news,
+                           "Out at the stop, the target, or 23:15, whichever comes first.", f"MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key {c['key']}).")
+        mk(book, "COMMODITY", strat, f"{c['label']} {side.lower()}", side, px, qty, now, key=c["key"], mult=c["mult"], symbol=c["symbol"], stop=stop_px, target_px=tgt_px, horizon="intraday",
+           risk_class="Intraday momentum" if strat == "mcx_momentum" else "Intraday pullback", margin_rs=margin, margin_src=src, thesis=th, reason=why)
 
 
 # ---------------------------------------------------------------- crypto (spot, long only: Indian retail cannot short spot)
@@ -133,7 +166,7 @@ def kraken_ohlc(sym: str, interval: int = 5, last: int = 288) -> list[list]:
     return out
 
 
-def crypto_step(book: dict, now: datetime, ticks: dict, paused: set, room=None) -> None:
+def crypto_step(book: dict, now: datetime, ticks: dict, paused: set, room=None, ctx: dict | None = None) -> None:
     R = CRYPTO_RULES
     for tr in book["trades"]:
         if tr["desk"] != "CRYPTO" or tr["status"] != "OPEN" or tr["symbol"] not in ticks:
@@ -162,13 +195,36 @@ def crypto_step(book: dict, now: datetime, ticks: dict, paused: set, room=None) 
         if room is not None:
             room[0] -= R["notional"]
         book["seen"][f"{day}|{sym}"] = strat
-        mk(book, "CRYPTO", strat, f"{sym} long", "LONG", px, R["notional"], now, symbol=sym, stop=round(px * (1 - R["stop"]), 6), target_px=round(px * (1 + R["target"]), 6),
-           risk_class="Intraday spot", margin_rs=R["notional"], reason=why + "; stop 1.5%, target 3%, out after 8 hours")
+        stop_px, tgt_px = round(px * (1 - R["stop"]), 6), round(px * (1 + R["target"]), 6)
+        env = ctx.get("env") if ctx else None
+        th = T.directional("CRYPTO", strat, "intraday", f"{sym} long", "LONG", px, stop_px, tgt_px, R["notional"] * R["stop"], R["notional"] * R["target"], R["notional"], (ctx or {}).get("acct") or 100000.0,
+                           [f"{sym} at ${px:,.2f}, {chg:+.2f}% over the last 24 hours; 24-hour range ${k['low']:,.2f} to ${k['high']:,.2f}.", f"Spot only: ₹{R['notional']:,} of coin, no leverage. Round-trip cost assumed {R['cost'] * 100:.1f}% (exchange fee and spread)."],
+                           [n for n in ((env or {}).get("news") or [])[:2]] or ["No crypto headline in our feed; this trade rests on price action alone."], "Out at the stop, the target, or after 8 hours.",
+                           "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange.")
+        mk(book, "CRYPTO", strat, f"{sym} long", "LONG", px, R["notional"], now, symbol=sym, stop=stop_px, target_px=tgt_px, horizon="intraday",
+           risk_class="Intraday spot", margin_rs=R["notional"], thesis=th, reason=why + "; stop 1.5%, target 3%, out after 8 hours")
 
 
 # ---------------------------------------------------------------- NIFTY F&O
 RISK = {"fixed": "Fixed return · controlled loss", "hrhl": "High return · high loss", "hrll": "High return · low loss"}
 FNO_RULES = {"first": "09:45", "last": "13:30", "close": "15:15", "leg_cost": 40, "trend": 0.25, "breakout": 0.5}
+
+
+def days_to(expiry: str, now: datetime) -> float:
+    try:
+        return max(0.25, float((datetime.fromisoformat(expiry).date() - now.date()).days))
+    except ValueError:
+        return 1.0
+
+
+def atm_iv(rows: list[dict], spot: float) -> float | None:
+    """Implied volatility (percent a year) at the strike nearest the index, averaged over its call and put."""
+    if not rows or not spot:
+        return None
+    r = min(rows, key=lambda x: abs(x["strike_price"] - spot))
+    v = [((r.get(s) or {}).get("option_greeks") or {}).get("iv") for s in ("call_options", "put_options")]
+    v = [float(x) for x in v if x]
+    return sum(v) / len(v) if v else None
 
 
 def _px(rows: list[dict], strike: float, kind: str) -> dict:
@@ -242,7 +298,7 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
     """ctx: {spot, prev, chains: {expiry: rows}, expiry, lot}"""
     R, t = FNO_RULES, mins(now.strftime("%H:%M"))
     for tr in book["trades"]:
-        if tr["desk"] != "FNO" or tr["status"] != "OPEN":
+        if tr["desk"] != "FNO" or tr["status"] != "OPEN" or tr.get("horizon", "daily") != "daily":
             continue
         rows = ctx["chains"].get(tr["expiry"])
         if rows is None:
@@ -284,15 +340,26 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
         gain = (net if net > 0 else (p["width"] - base if p["width"] else None))
         loss = ((p["width"] - net) if (risk == "fixed") else base if net < 0 else None)
         margin = round(loss * lot) if loss else round(base * lot)
-        if ctx.get("room") is not None and margin > ctx["room"][0]:
+        src, M = "estimate (largest possible loss)", ctx.get("margin")
+        if M:
+            real = M.final([(l["key"], lot, "BUY" if l["side"] == "B" else "SELL") for l in legs])
+            if real is None or (ctx.get("room") is not None and real > ctx["room"][0]):
+                M.skip("FNO", f"NIFTY {name.replace('_', ' ')} (daily)", real, ctx["room"][0] if ctx.get("room") is not None else 0,
+                       "needs more margin than the F&O limit has free" if real else "margin could not be checked", now)
+                continue                              # not viable on this account today: the broker would ask for more than we can post
+            margin, src = real, "Upstox margin calculator"
+        elif ctx.get("room") is not None and margin > ctx["room"][0]:
             continue                                  # the account cannot carry this structure's margin today
         if ctx.get("room") is not None:
             ctx["room"][0] -= margin
         book["seen"][f"{day}|{name}"] = "booked"
-        mk(book, "FNO", name, f"NIFTY {name.replace('_', ' ')} · {ctx['expiry'][5:]}", "SHORT" if net > 0 else "LONG", net, 1, now, expiry=ctx["expiry"], lot=lot, legs=legs,
+        days = days_to(ctx["expiry"], now)
+        th = T.fno(name, "daily", legs, net, spot, prev, ctx.get("iv"), ctx.get("vix"), days, lot, margin, ctx.get("acct") or 100000.0, ctx["expiry"], ctx.get("env") or {},
+                   exit_rule=f"Take profit at {p['target']:.0%} of the {'credit' if net > 0 else 'debit'}, cut at {p['stop']:.0%}, and be flat by 15:15 whatever happens.", unit_target=base * p["target"], unit_stop=base * p["stop"])
+        mk(book, "FNO", name, f"NIFTY {name.replace('_', ' ')} · {ctx['expiry'][5:]}", "SHORT" if net > 0 else "LONG", net, 1, now, expiry=ctx["expiry"], lot=lot, legs=legs, horizon="daily", underlying="NIFTY",
            unit_base=base, target_u=round(base * p["target"], 2), stop_u=round(base * p["stop"], 2), risk_class=RISK[risk],
            max_gain_rs=round(gain * lot) if gain else None, max_loss_rs=round(loss * lot) if loss else None,
-           margin_rs=margin,
+           margin_rs=margin, margin_src=src, thesis=th,
            reason=f"NIFTY {spot:,.0f} ({(spot / prev - 1) * 100:+.2f}% on the close). {'Credit' if net > 0 else 'Debit'} {base:.1f} points; target {p['target']:.0%} of it, stop {p['stop']:.0%} of it; out by 15:15")
 
 
