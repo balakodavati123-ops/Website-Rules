@@ -1,0 +1,90 @@
+{
+ "day": "2026-11-18",
+ "trades": 21,
+ "closed": 18,
+ "open": 3,
+ "wins": 8,
+ "win_rate": 44,
+ "pnl": -1546.31,
+ "by_desk": {
+  "EQUITY": {
+   "trades": 4,
+   "pnl": -364.77
+  },
+  "FNO": {
+   "trades": 8,
+   "pnl": -1598.5
+  },
+  "COMMODITY": {
+   "trades": 5,
+   "pnl": 374.93
+  },
+  "CRYPTO": {
+   "trades": 4,
+   "pnl": 42.03
+  }
+ },
+ "by_strategy": [
+  {
+   "strategy": "short_strangle",
+   "n": 1,
+   "pnl": 703.25
+  },
+  {
+   "strategy": "mcx_momentum",
+   "n": 5,
+   "pnl": 374.93
+  },
+  {
+   "strategy": "crypto_breakout",
+   "n": 4,
+   "pnl": 42.03
+  },
+  {
+   "strategy": "iron_condor",
+   "n": 2,
+   "pnl": -63.25
+  },
+  {
+   "strategy": "credit_spread",
+   "n": 2,
+   "pnl": -221.75
+  },
+  {
+   "strategy": "price_only",
+   "n": 4,
+   "pnl": -364.77
+  },
+  {
+   "strategy": "debit_spread",
+   "n": 2,
+   "pnl": -455.75
+  },
+  {
+   "strategy": "long_breakout",
+   "n": 1,
+   "pnl": -1561.0
+  }
+ ],
+ "equity": 102839.03,
+ "best": {
+  "label": "NIFTY short strangle \u00b7 11-23",
+  "pnl": 703.25
+ },
+ "worst": {
+  "label": "NIFTY long breakout \u00b7 11-23",
+  "pnl": -1561.0
+ },
+ "news": {
+  "n": 0,
+  "pnl": 0
+ },
+ "planned": {
+  "n": 0,
+  "pnl": 0
+ },
+ "notes": [
+  "21 trades: 8 won and 10 lost of 18 closed; net -1,546 rupees.",
+  "Best market: COMMODITY (+375). Weakest: FNO (-1,598)."
+ ]
+}

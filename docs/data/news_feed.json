@@ -1,229 +1,5 @@
 [
  {
-  "time": "17 Nov 15:48",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "HDFC Bank vs Axis Bank: Both shares recover after Q2 sell-off; which banking stock offers higher upside? Check targets",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "17 Nov 15:48",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Sensex, Nifty recover US-Iran war losses: 5 reasons behind market rally as Nifty hits 9-month high - CNBC TV18",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "17 Nov 15:53",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Sensex, Nifty recover US-Iran war losses: 5 reasons behind market rally as Nifty hits 9-month high - CNBC TV18 - LinkedIn",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "17 Nov 15:58",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Advanced Sys-Tek IPO Gets Sebi Approval to Raise Rs 98 Cr - HDFC Sky",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "17 Nov 16:24",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Nifty is up 11% this month, its biggest monthly gain in 6 years, and all US-Iran war losses are recovered! FIIs have poured in over $9.5 bn, crude has cooled an",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "17 Nov 16:29",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "RBI's 2017 Fraud Compensation Circular Applies Retrospectively, Covers Private Banks: Madras High Court - LiveLawBiz",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "17 Nov 17:16",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "MobiKwik eyes Rs 100 cr revenue boost from UPI MDR; gets RBI nod to launch NBFC operations - MediaNama",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "17 Nov 17:26",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "RBI may hike repo rate by 25 bps each during next 2 MPC reviews as inflation rises: Report - MorungExpress",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "17 Nov 17:51",
-  "source": "ET",
-  "category": "RBI-POLICY",
-  "headline": "Indian bonds surge after oil slide eases aggressive rate hike concerns",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "17 Nov 18:16",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Axis Bank\u2019s Munish Sharda Gets RBI Approval For Second Executive Director Term - TradingView",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "17 Nov 19:17",
-  "source": "ET",
-  "category": "EARNINGS",
-  "headline": "Nasdaq futures rise as tech stocks firm up ahead of Nvidia results, Anthropic IPO: Stock Market Live Updates",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "17 Nov 20:13",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Nifty Outlook for November 18: Index recovers pre-war losses, but 25,500 holds the key - CNBC TV18",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "17 Nov 20:18",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Sensex, Nifty erase US-Iran war losses: 5 factors that drove market rally - Firstpost",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "17 Nov 21:28",
-  "source": "Mint",
-  "category": "GEOPOLITICS",
-  "headline": "Nifty reclaims pre-war levels intraday as Indian stocks lead Asia with 10% monthly gain",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "17 Nov 21:44",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Dow tumbles 900 pts, Nasdaq drops 2%  ahead of Nvidia Q3 earnings: Stock Market Live Updates",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "17 Nov 21:59",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Dow tumbles 650 pts, Nasdaq drops over 1%  ahead of Nvidia Q3 earnings: Stock Market Live Updates",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "17 Nov 21:59",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Advanced Sys-Tek Gets Sebi\u2019s Nod To Raise Funds via IPO - HDFC Sky",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "17 Nov 22:24",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "RBI may hike repo rate by 25 bps each during next 2 MPC reviews as inflation rises: Report - cfo.economictimes.indiatimes.com",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "17 Nov 22:56",
-  "source": "BusinessStandard",
-  "category": "APPROVAL",
-  "headline": "Meganet, Rediff.com file IPO papers; Advanced Sys-Tek gets Sebi nod",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "17 Nov 23:01",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Meganet, Rediff.com file IPO papers; Advanced Sys-Tek gets Sebi nod - Business Standard",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "17 Nov 23:07",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Dow tumbles over 600 pts ahead of Nvidia Q3 earnings: Stock Market Live Updates",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "17 Nov 23:52",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Dow tumbles over 750 pts ahead of Nvidia Q3 earnings: Stock Market Live Updates",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 00:02",
-  "source": "Mint",
-  "category": "APPROVAL",
-  "headline": "Upcoming IPO: Advanced Sys-Tek gets Sebi nod for public issue \u2013 fundraising, fresh equity issue, OFS & other key facts",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 00:22",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Dow tumbles over 700 pts ahead of Nvidia Q3 earnings: Stock Market Live Updates",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 00:53",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Dow tumbles over 800 pts ahead of Nvidia Q3 earnings: Stock Market Live Updates",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 01:33",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Dow tumbles over 850 pts ahead of Nvidia Q3 earnings: Stock Market Live Updates",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 01:53",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Dow crashes over 1,000 pts ahead of Nvidia Q3 earnings: Stock Market Live Updates",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 02:03",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Dow crashes over 1,000 pts as jittery AI stocks drag US market lower: Stock Market Live Updates",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
   "time": "18 Nov 02:29",
   "source": "Mint",
   "category": "EARNINGS",
@@ -472,10 +248,234 @@
   "hint": "read the numbers: tone only"
  },
  {
-  "time": "18 Nov 14:17",
+  "time": "18 Nov 14:24",
+  "source": "BusinessStandard",
+  "category": "GEOPOLITICS",
+  "headline": "Brent's war premium fades, but lingering risks keep $90 intact: Kotak Neo",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "18 Nov 14:24",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Goldman Sachs sees RBI raising repo rate to 6.25% by mid-2027, India growth slowing to 7.2% - Moneycontrol.com",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "18 Nov 14:29",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex Today | Stock Market Live: Sensex falls over 400 pts, Nifty near 25,250; consumer durables, metals plunge; Titan, Bajaj Finance drag - LinkedIn",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 14:55",
+  "source": "BusinessStandard",
+  "category": "EARNINGS",
+  "headline": "Relaxo Footwears slips 6%, nears 52-week low on disappointing Q2 results",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "18 Nov 14:55",
+  "source": "GoogleNews",
+  "category": "EARNINGS",
+  "headline": "Relaxo Footwears slips 6%, nears 52-week low on disappointing Q2 results - Business Standard",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "18 Nov 15:00",
+  "source": "GoogleNews",
+  "category": "GEOPOLITICS",
+  "headline": "Sensex, Nifty recover US-Iran war losses: 5 reasons behind market rally as Nifty hits 9-month high - CNBC TV18 - LinkedIn",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "18 Nov 15:05",
+  "source": "GoogleNews",
+  "category": "GEOPOLITICS",
+  "headline": "Nifty is up 11% this month, its biggest monthly gain in 6 years, and all US-Iran war losses are recovered! FIIs have poured in over $9.5 bn, crude has cooled an",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "18 Nov 15:26",
+  "source": "BusinessStandard",
+  "category": "DEAL/ORDER",
+  "headline": "Glass Wall Systems shares jump 4% on new order win, up 55% from IPO price",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "18 Nov 16:01",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex plunges 500 points, Nifty dips amid profit booking - Awaz The Voice",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 16:01",
+  "source": "GoogleNews",
+  "category": "GEOPOLITICS",
+  "headline": "Nifty reclaims pre-war levels intraday as Indian stocks lead Asia with 10% monthly gain - TradingView",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "18 Nov 16:01",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex Today Tanks 502 Points | Nifty Below 25,250 | Nifty IT Index Down 1.2% - Equitymaster",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 16:06",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex falls 87 points, Nifty sheds 47 as dollar index hits 19-month high, global sell-off weighs - ChiniMandi",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 16:32",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Dalal Street crash: How Nifty, Sensex slipped from nine-month highs - The Week",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 16:37",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Markets snap 2-day rally; Sensex drops amid profit booking, US Fed rate hike speculations - DD India",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "18 Nov 16:42",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Markets snap 2-day rally; Sensex drops amid profit booking, US Fed rate hike speculations - DD News",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "18 Nov 17:12",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Sensex Falls 500 Points on Profit Booking, US Fed Rate Hike Speculations - Rediff",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "18 Nov 17:22",
+  "source": "GoogleNews",
+  "category": "GEOPOLITICS",
+  "headline": "RBI The Competent Authority, Not ICICI Bank's Board: Bombay High Court While Quashing Sanction To... - Live Law",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "18 Nov 17:28",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Markets snap 2-day rally; Sensex drops 500 pts amid profit booking, US Fed rate hike speculations - Deccan Herald",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "18 Nov 17:43",
   "source": "GoogleNews",
   "category": "APPROVAL",
-  "headline": "Razorpay wins SEBI nod for ~$600M IPO, eyes 2027 listing - Dealroom",
+  "headline": "Bengaluru-based realty firm Assetz gets SEBI nod to proceed with IPO plans - Moneycontrol.com",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "18 Nov 17:48",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex falls 87 points, Nifty sheds 47 as dollar index hits 19-month high, global sell-off weighs - Public TV English",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 17:53",
+  "source": "BusinessStandard",
+  "category": "APPROVAL",
+  "headline": "Meganet, Rediff.com file IPO papers; Advanced Sys-Tek gets Sebi nod",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "18 Nov 17:53",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Stock markets snap 2-day rally; Sensex drops 500 points amid profit booking, U.S. Fed rate hike fears - The Hindu",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "18 Nov 17:53",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Stock markets snap 2-day rally; Sensex drops 500 pts amid profit booking, US Fed rate hike fears - ThePrint",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "18 Nov 18:08",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Top gainers and losers, Nov 18: Titan tumbles 4%, HDFC Life falls 3%, Cipla shares jump 3%; check list - Upstox",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 18:19",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "Nvidia shares gain 3% in premarket after Q3 results, upbeat forecast top estimates: Is the AI rally back on track?",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "18 Nov 18:24",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex, Nifty Snap Two-Day Winning Streak as Profit Booking Triggers Sell-Off \u2013 Wednesday Closing Report - Moneylife",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 18:44",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex slips 87 points, Nifty down 47 amid global sell-off - Awaz The Voice",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "18 Nov 19:00",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Upcoming IPO: Real estate firm Assetz gets SEBI nod to float \u20b91,200 crore issue - Upstox",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "18 Nov 19:05",
+  "source": "ET",
+  "category": "APPROVAL",
+  "headline": "Real estate firm Assetz gets Sebi nod to float Rs 1,200-cr IPO",
   "event": "no",
   "hint": "LONG-lean headline"
  }
