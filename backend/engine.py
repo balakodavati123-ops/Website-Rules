@@ -29,7 +29,7 @@ IST = D.IST
 PUBLISH_EVERY = 15
 IDX = {"nifty": "NSE_INDEX|Nifty 50", "banknifty": "NSE_INDEX|Nifty Bank", "vix": "NSE_INDEX|India VIX", "sensex": "BSE_INDEX|SENSEX"}
 DAILY_FILES = ["world_markets", "world_news", "events_today", "results_filed", "crypto_quotes", "crypto_candles", "alerts_log", "desk_signals", "signal_ledger", "signal_lessons", "fo_ledger",
-               "macro_signals", "strategies_macro", "paper_equity", "approved_strategies", "paper_ledger"]
+               "macro_signals", "strategies_macro", "paper_equity", "approved_strategies"]
 NIFTY = IDX["nifty"]
 
 
@@ -94,6 +94,15 @@ def sync_daily() -> None:
         _git("fetch", "-q", "--depth=1", "origin", br)
         for f in DAILY_FILES:
             _git("checkout", "FETCH_HEAD", "--", f"docs/data/{f}.json", check=False)
+        # the paper ledger has two writers: the daily job adds new orders, this engine fills them at the open. Keep ours, add theirs.
+        theirs = _git("show", "FETCH_HEAD:docs/data/paper_ledger.json", check=False)
+        lf = DOCS / "paper_ledger.json"
+        if theirs.returncode == 0 and lf.exists():
+            mine = json.loads(lf.read_text())
+            have = {r["id"] for r in mine}
+            add = [r for r in json.loads(theirs.stdout) if r["id"] not in have]
+            if add:
+                lf.write_text(json.dumps(mine + add, indent=1))
     except Exception as e:
         print("sync failed:", str(e)[:150])
 
@@ -161,7 +170,6 @@ def migrate() -> None:
             r["rebased"] = True
             r["note"] = (r.get("note") or "") + " Resized to fit the Rs 1,00,000 account."
         f.write_text(json.dumps(rows, indent=1))
-        commit_main([f"docs/data/{name}"], "data: open positions resized to the Rs 1,00,000 account")
 
 
 def run() -> None:
@@ -250,7 +258,6 @@ def run() -> None:
                     n = OF.fill_pending(led, DLY.RULES, OF_opens(token, led), now.date(), (q_idx.get("NSE_INDEX|India VIX") or {}).get("last_price"))
                     if n:
                         lf.write_text(json.dumps(led, indent=1))
-                        commit_main(["docs/data/paper_ledger.json"], "data: pending paper orders filled at the open")
                     info["paper_orders"] = f"{n} pending orders filled or expired at today's open"
                 filled = True
             except Exception as e:
@@ -310,6 +317,7 @@ def run() -> None:
         if time.time() - last_slow >= 300:
             last_slow = time.time()
             sync_daily()
+            migrate()
             try:
                 I.update_news_feed(now)
             except Exception as e:
