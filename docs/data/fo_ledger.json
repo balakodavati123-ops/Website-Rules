@@ -7,7 +7,7 @@
   "lot": 65,
   "booked": "2026-11-13",
   "spot_at_booking": 25110.95,
-  "status": "OPEN",
+  "status": "WIN",
   "legs": [
    {
     "side": "S",
@@ -37,9 +37,9 @@
   "credit_rs": 3123.25,
   "max_gain_rs": 2923.25,
   "max_loss_rs": 6826.75,
-  "settle_close": "",
-  "pnl_rs": 0,
-  "note": "One lot, held to expiry. Shorts filled at the bid, longs at the ask."
+  "settle_close": 25387.400390625,
+  "pnl_rs": 2923.25,
+  "note": "Settled at the 2026-11-17 index close of 25,387.40."
  },
  {
   "id": 2,
@@ -49,7 +49,7 @@
   "lot": 65,
   "booked": "2026-11-13",
   "spot_at_booking": 25110.95,
-  "status": "OPEN",
+  "status": "WIN",
   "legs": [
    {
     "side": "S",
@@ -67,9 +67,9 @@
   "credit_rs": 2349.75,
   "max_gain_rs": 2249.75,
   "max_loss_rs": 7500.25,
-  "settle_close": "",
-  "pnl_rs": 0,
-  "note": "One lot, held to expiry. Shorts filled at the bid, longs at the ask."
+  "settle_close": 25387.400390625,
+  "pnl_rs": 2249.75,
+  "note": "Settled at the 2026-11-17 index close of 25,387.40."
  },
  {
   "id": 3,
@@ -79,7 +79,7 @@
   "lot": 65,
   "booked": "2026-11-13",
   "spot_at_booking": 25110.95,
-  "status": "OPEN",
+  "status": "LOSS",
   "legs": [
    {
     "side": "S",
@@ -109,8 +109,8 @@
   "credit_rs": 8030.75,
   "max_gain_rs": 7830.75,
   "max_loss_rs": 1919.25,
-  "settle_close": "",
-  "pnl_rs": 0,
-  "note": "One lot, held to expiry. Shorts filled at the bid, longs at the ask."
+  "settle_close": 25387.400390625,
+  "pnl_rs": -1919.25,
+  "note": "Settled at the 2026-11-17 index close of 25,387.40."
  }
 ]
