@@ -214,7 +214,7 @@ function drawStatus(){const s=S.status;if(!s)return;const age=(Date.now()-new Da
  [['s-eq','equity'],['s-fno','fno'],['s-mcx','mcx'],['s-cry','crypto']].forEach(([id,k])=>{const e=$(id),on=(s.sessions||{})[k];e.className='chip'+(on?' on':'');const t=e.textContent.replace(/ ·.*/,'')+(on?' · open':' · closed');if(e.textContent!==t)e.textContent=t})}
 /* ---------- slower panels ---------- */
 function list(box,items,keyFn,make){const m=box._m||(box._m={});const nodes=items.map((x)=>{const k=keyFn(x);if(!m[k])m[k]=make(x);return m[k]});reorder(box,nodes);if(!nodes.length)box.appendChild(E('div','empty','Nothing yet.'))}
-async function slow(){const [news,res,world]=await Promise.all(['news_feed','results_filed','world_markets'].map(get));
+async function slow(){const [news,res,world0,wl]=await Promise.all(['news_feed','results_filed','world_markets','world_live'].map(get));const world=(wl&&wl.rows&&wl.rows.length&&(wl.rows[0].as_of||'')>=((world0&&world0[0]&&world0[0].as_of)||''))?wl.rows:world0;
  if(news)list($('news'),news.slice(-10).reverse(),(x)=>x.time+x.headline,(x)=>{const r=E('div','row');r.append(E('b','',x.headline),E('div','rc',`${x.category} · ${x.source} · ${x.time}`));return r});
  if(res)list($('results'),res.slice(0,12),(x)=>x.time+x.symbol,(x)=>{const r=E('div','row');r.append(E('b','',x.symbol),E('span','dim',' '+x.company),E('div','rc',x.time));return r});
  if(world)list($('world'),world,(x)=>x.symbol,(x)=>{const r=E('div','row');const a=E('span','num',num(x.last)),b=E('span','num '+cl(x.chg_pct),' '+pc(x.chg_pct));r.append(E('b','',x.name+' '),a,b);return r})}
