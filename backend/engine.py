@@ -48,7 +48,7 @@ def unify_equity(book: dict) -> list[dict]:
     for t in book.get("trades", []):
         d = 1 if t["side"] == "LONG" else -1
         pnl = t["pnl_rs"] if t["status"] != "OPEN" else round(d * (t["last"] - t["entry"]) * t["qty"], 2)
-        out.append({"id": f"E{str(t['day']).replace('-', '')[2:]}-{t['id']}", "desk": "EQUITY", "strategy": t.get("basis", "price only").replace(" ", "_"), "label": t["label"], "side": t["side"],
+        out.append({"id": f"E{str(t['day']).replace('-', '')[2:]}-{t['id']}", "desk": "EQUITY", "strategy": t.get("basis", "price only").replace(" ", "_"), "label": t["label"], "symbol": t.get("symbol"), "side": t["side"],
                     "entry": t["entry"], "last": t["last"], "exit": t.get("exit", ""), "qty": t["qty"], "stop": t.get("stop"), "status": t["status"], "pnl_rs": pnl, "reason": t.get("reason", ""),
                     "why": t.get("why", ""), "day": t["day"], "opened": t["time"], "closed": "", "risk_class": "Intraday momentum", "margin_rs": round(t["entry"] * t["qty"] * 0.2)})
     return out
@@ -143,6 +143,9 @@ def run() -> None:
     news, status, i = I.filings_news(), {"desks": {}}, 0
     mcx_c: list = []
     filled, snap, series, last_slow = False, {}, load("pnl_series.json", {}), 0.0
+    qs: dict = {}
+    intra: dict = load("intraday.json", {"day": "", "s": {}})
+    last_intra, key_of = 0.0, {}
     def persist() -> None:
         save("live_book.json", eq)
         xb["trades"] = [t for t in xb["trades"] if t["status"] == "OPEN" or t["id"] not in archive]
@@ -161,7 +164,11 @@ def run() -> None:
         series.update(L.day_series(series, datetime.now(IST).strftime("%Y-%m-%d"), datetime.now(IST).strftime("%H:%M:%S"), allt, nf))
         save("pnl_series.json", series)
         save("prices.json", {"updated_at": status.get("updated_at"), **snap})
+        if qs:
+            save("quotes.json", {"updated_at": status.get("updated_at"), "q": qs})
+        nonlocal_state["tick"] = allt
 
+    nonlocal_state: dict = {}
     last_pub = 0.0
     while True:
         now = datetime.now(IST)
@@ -180,6 +187,8 @@ def run() -> None:
         if token and ses["equity"]:
             try:
                 rows = rows_now = U.equity_rows(token)
+                qs.clear()
+                qs.update({r["symbol"]: [round(r["price"], 2), round(r["chg_pct"], 2), r["day_high"], r["day_low"], int(r["volume"])] for r in rows})
                 if rows:
                     I.step(eq, today, hhmm, rows, news)
                 info["equity"] = f"{len(rows)} stocks, real time"
@@ -254,6 +263,19 @@ def run() -> None:
                 I.update_news_feed(now)
             except Exception as e:
                 info["news"] = f"error: {str(e)[:80]}"
+        if token and time.time() - last_intra >= 60 and nonlocal_state.get("tick"):
+            last_intra = time.time()
+            try:                                   # today's 5-minute candles for every stock we hold or traded today, for the page's charts
+                if intra.get("day") != today:
+                    intra = {"day": today, "s": {}}
+                key_of = key_of or {x["trading_symbol"]: x["instrument_key"] for x in U.instruments("NSE") if x.get("segment") == "NSE_EQ" and x.get("instrument_type") == "EQ"}
+                want = sorted({t["symbol"] for t in nonlocal_state["tick"] if t["desk"] == "EQUITY" and t.get("symbol") and (t["status"] == "OPEN" or t["day"] == today)})[:45]
+                for sy in want:
+                    if sy in key_of:
+                        intra["s"][sy] = U.intraday(token, key_of[sy], 5)
+                save("intraday.json", intra)
+            except Exception as e:
+                info["intraday"] = f"error: {str(e)[:80]}"
         i += 1
         persist()
         if time.time() - last_pub >= PUBLISH_EVERY:

@@ -18,7 +18,7 @@ def swing(rows: list[dict]) -> list[dict]:
         closed = r["status"] not in ("OPEN", "PENDING")
         pnl = float(r.get("pnl_rs") or 0) if closed else float(r.get("unrealized_rs") or 0)
         last = float(r.get("exit") or 0) if closed and r.get("exit") not in ("", None) else r.get("last_close", r.get("entry"))
-        out.append({"id": f"S{r['id']}", "desk": "EQUITY", "strategy": r["strategy"], "label": f"{r['symbol']} long", "side": "LONG", "entry": r.get("entry") or r.get("signal_close"),
+        out.append({"id": f"S{r['id']}", "desk": "EQUITY", "strategy": r["strategy"], "label": f"{r['symbol']} long", "symbol": r["symbol"], "side": "LONG", "entry": r.get("entry") or r.get("signal_close"),
                     "last": last, "exit": r.get("exit", ""), "qty": r.get("qty", ""), "stop": r.get("stop"), "target_px": r.get("target") or None, "status": _status(r["status"], pnl), "pnl_rs": round(pnl, 2),
                     "reason": r.get("note", ""), "why": "", "day": str(r.get("opened") or r["signal_date"]), "opened": "swing", "closed": str(r.get("closed") or ""), "risk_class": "Swing (daily bars)",
                     "margin_rs": round(float(r.get("entry") or 0) * float(r.get("qty") or 0)) if r.get("qty") != "" else None})
@@ -43,7 +43,7 @@ def signals(rows: list[dict]) -> list[dict]:
     for r in rows:
         closed = r["status"] not in ("OPEN", "PENDING")
         pnl = float(r.get("pnl_rs") or 0) if closed else float(r.get("unreal_rs") or 0)
-        out.append({"id": f"G{r['id']}", "desk": "EQUITY", "strategy": "signal_desk", "label": f"{str(r['ticker']).replace('.NS', '')} long", "side": "LONG", "entry": r.get("entry") or r.get("signal_close"),
+        out.append({"id": f"G{r['id']}", "desk": "EQUITY", "strategy": "signal_desk", "label": f"{str(r['ticker']).replace('.NS', '')} long", "symbol": str(r["ticker"]).replace(".NS", ""), "side": "LONG", "entry": r.get("entry") or r.get("signal_close"),
                     "last": r.get("last_close", ""), "exit": r.get("exit", ""), "qty": r.get("qty", ""), "stop": r.get("stop"), "status": _status(r["status"], pnl), "pnl_rs": round(pnl, 2),
                     "reason": f"Conviction {r.get('conviction')}; {r.get('note', '')}", "why": "", "day": str(r.get("opened") or r["signal_date"]), "opened": "signal", "closed": str(r.get("closed") or ""),
                     "risk_class": "Signal desk (chart-gated)", "margin_rs": r.get("deploy_rs")})

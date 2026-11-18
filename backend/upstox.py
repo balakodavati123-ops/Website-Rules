@@ -65,3 +65,10 @@ def lot_size(underlying_key: str, expiry: str) -> int:
 def option_chain(token: str, underlying_key: str, expiry: str) -> list[dict]:
     q = f"instrument_key={urllib.parse.quote(underlying_key, safe='')}&expiry_date={expiry}"
     return json.loads(_get("https://api.upstox.com/v2/option/chain?" + q, token)).get("data", [])
+
+
+def intraday(token: str, key: str, minutes: int = 5) -> list[list]:
+    """Today's candles for one instrument, oldest first: [HH:MM, open, high, low, close, volume]."""
+    url = f"https://api.upstox.com/v3/historical-candle/intraday/{urllib.parse.quote(key, safe='')}/minutes/{minutes}"
+    c = json.loads(_get(url, token)).get("data", {}).get("candles", [])
+    return [[k[0][11:16], k[1], k[2], k[3], k[4], int(k[5])] for k in reversed(c)]

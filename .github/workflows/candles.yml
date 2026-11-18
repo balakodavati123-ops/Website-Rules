@@ -1,0 +1,28 @@
+# Daily candles for every NSE stock, saved on the `charts` branch so the page can draw any of them.
+name: candles
+on:
+  schedule:
+    - cron: "30 10 * * 1-5"       # 16:00 IST, after the close
+    - cron: "40 2 * * 1-5"        # 08:10 IST, before the open
+  workflow_dispatch:
+concurrency:
+  group: candles
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: mkdir -p /tmp/charts && python backend/candles.py /tmp/charts
+        env:
+          UPSTOX_TOKEN: ${{ secrets.UPSTOX_TOKEN }}
+      - name: Publish to the charts branch
+        run: |
+          cd /tmp/charts && git init -q && git add -A
+          git -c user.name=desk-bot -c user.email=desk-bot@users.noreply.github.com commit -q -m "daily candles"
+          git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:refs/heads/charts
