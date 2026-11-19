@@ -1,109 +1,5 @@
 [
  {
-  "time": "18 Nov 15:26",
-  "source": "BusinessStandard",
-  "category": "DEAL/ORDER",
-  "headline": "Glass Wall Systems shares jump 4% on new order win, up 55% from IPO price",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 16:01",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex plunges 500 points, Nifty dips amid profit booking - Awaz The Voice",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 16:01",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Nifty reclaims pre-war levels intraday as Indian stocks lead Asia with 10% monthly gain - TradingView",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "18 Nov 16:01",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex Today Tanks 502 Points | Nifty Below 25,250 | Nifty IT Index Down 1.2% - Equitymaster",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 16:06",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex falls 87 points, Nifty sheds 47 as dollar index hits 19-month high, global sell-off weighs - ChiniMandi",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 16:32",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Dalal Street crash: How Nifty, Sensex slipped from nine-month highs - The Week",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 16:37",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Markets snap 2-day rally; Sensex drops amid profit booking, US Fed rate hike speculations - DD India",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 16:42",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Markets snap 2-day rally; Sensex drops amid profit booking, US Fed rate hike speculations - DD News",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 17:12",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Sensex Falls 500 Points on Profit Booking, US Fed Rate Hike Speculations - Rediff",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 17:22",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "RBI The Competent Authority, Not ICICI Bank's Board: Bombay High Court While Quashing Sanction To... - Live Law",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "18 Nov 17:28",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Markets snap 2-day rally; Sensex drops 500 pts amid profit booking, US Fed rate hike speculations - Deccan Herald",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 17:43",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Bengaluru-based realty firm Assetz gets SEBI nod to proceed with IPO plans - Moneycontrol.com",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 17:48",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex falls 87 points, Nifty sheds 47 as dollar index hits 19-month high, global sell-off weighs - Public TV English",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
   "time": "18 Nov 17:53",
   "source": "BusinessStandard",
   "category": "APPROVAL",
@@ -476,6 +372,110 @@
   "source": "Mint",
   "category": "CRASH/SHOCK",
   "headline": "Why gold, silver prices are going down? What experts say about rate fall - More plunge ahead or bounce back expected?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 13:14",
+  "source": "BusinessStandard",
+  "category": "LEADER-EXIT",
+  "headline": "PB Fintech shares slide over 6% after co-founder Alok Bansal steps down",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 13:19",
+  "source": "BusinessStandard",
+  "category": "DEAL/ORDER",
+  "headline": "Glass Wall Systems shares jump 4% on new order win, up 55% from IPO price",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "19 Nov 13:39",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty IT tanks for 3rd day, down 6.5% in Nov so far: What's behind fall?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 13:39",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty IT tanks for 3rd day, down 6.5% in Nov so far: What's behind fall? - Business Standard",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 14:51",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Shrinkflation: Why the RBI Rate Hike May Fail in 2026 - Frontline Magazine",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "19 Nov 15:01",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "This small-cap stock plunges 42% in 1 year, but Jefferies sees 53% upside - Is a big turnaround coming? Check target",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 15:43",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "ICICI Securities secures Sebi approval for PMS business transfer - Awaz The Voice",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "19 Nov 15:48",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty at 22,000: Why this key level saved investors during two major market crashes of 2026 - Business Today",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 15:48",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "IT Stocks Selloff: Nifty IT Down For Third Straight Session; Infosys, TCS, HCL Tech, Wipro, Coforge Slip - NDTV Profit",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 15:48",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Sensex, Nifty open flat amid Fed rate hike concerns; investors remain cautious - The Tribune",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "19 Nov 15:53",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Markets snap 2-day rally; Sensex drops amid profit booking, US Fed rate hike speculations - DD News",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "19 Nov 16:13",
+  "source": "GoogleNews",
+  "category": "GEOPOLITICS",
+  "headline": "Market wrap, Nov 19: Indices erase Middle East war losses; NIFTY50, SENSEX hit 9-month highs, Maruti Suzuki leads gain - Upstox",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "19 Nov 18:05",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Paytm, Pine Labs, MobiKwik shares tumble up to 9% on MDR delay concerns: Should investors stay away from fintech stocks?",
   "event": "yes",
   "hint": "SHORT-lean headline"
  }

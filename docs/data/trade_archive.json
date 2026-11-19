@@ -1280,6 +1280,158 @@
   "reason": "-4.0% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
  },
  {
+  "id": "C261119-33",
+  "desk": "CRYPTO",
+  "strategy": "crypto_dip_bounce",
+  "label": "BTC long",
+  "side": "LONG",
+  "entry": 62605.1,
+  "last": 63689.1,
+  "qty": 2500,
+  "status": "WIN",
+  "pnl_rs": 33.29,
+  "exit": 63689.1,
+  "why": "time",
+  "day": "2026-11-19",
+  "opened": "05:52:01",
+  "closed": "13:51:57",
+  "ts": 1795047721.8293037,
+  "symbol": "BTC",
+  "stop": 61666.0235,
+  "target_px": 64483.253,
+  "horizon": "intraday",
+  "risk_class": "Intraday spot",
+  "margin_rs": 2500,
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "BTC long",
+   "news": [
+    "US markets averaged -0.40% at the last close.",
+    "Asia averaged -0.51%."
+   ],
+   "data": [
+    "BTC at $62,605.10, -0.60% over the last 24 hours; 24-hour range $62,000.00 to $64,874.50.",
+    "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+   ],
+   "strategy": "Buy a coin that has dropped and started to recover.",
+   "why": [
+    "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+    "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "62,605.10",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "61,666.02",
+     "Costs about \u20b938"
+    ],
+    [
+     "Target (exit if right)",
+     "64,483.25",
+     "Earns about \u20b975"
+    ],
+    [
+     "Reward for the risk",
+     "2.0 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "33% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b92,500",
+     "2% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+   "viability": "Needs \u20b92,500 to hold."
+  },
+  "reason": "-3.5% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
+ },
+ {
+  "id": "C261119-34",
+  "desk": "CRYPTO",
+  "strategy": "crypto_dip_bounce",
+  "label": "XRP long",
+  "side": "LONG",
+  "entry": 0.968,
+  "last": 0.9794,
+  "qty": 2500,
+  "status": "WIN",
+  "pnl_rs": 19.52,
+  "exit": 0.9794,
+  "why": "time",
+  "day": "2026-11-19",
+  "opened": "06:15:55",
+  "closed": "14:15:57",
+  "ts": 1795049156.2050946,
+  "symbol": "XRP",
+  "stop": 0.953529,
+  "target_px": 0.997092,
+  "horizon": "intraday",
+  "risk_class": "Intraday spot",
+  "margin_rs": 2500,
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "XRP long",
+   "news": [
+    "US markets averaged -0.40% at the last close.",
+    "Asia averaged -0.51%."
+   ],
+   "data": [
+    "XRP at $0.97, +0.17% over the last 24 hours; 24-hour range $0.95 to $1.01.",
+    "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+   ],
+   "strategy": "Buy a coin that has dropped and started to recover.",
+   "why": [
+    "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+    "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "0.97",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "0.95",
+     "Costs about \u20b938"
+    ],
+    [
+     "Target (exit if right)",
+     "1.00",
+     "Earns about \u20b975"
+    ],
+    [
+     "Reward for the risk",
+     "2.0 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "33% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b92,500",
+     "2% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+   "viability": "Needs \u20b92,500 to hold."
+  },
+  "reason": "-3.8% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
+ },
+ {
   "id": "M261119-35",
   "desk": "COMMODITY",
   "strategy": "mcx_momentum",
@@ -1379,8 +1531,11 @@
   "day": "2026-11-19",
   "opened": "09:20",
   "closed": "10:54",
-  "risk_class": "Intraday momentum",
-  "margin_rs": 987
+  "risk_class": "Intraday hunter",
+  "margin_rs": 987,
+  "target_px": null,
+  "leverage": null,
+  "setup": null
  },
  {
   "id": "M261119-36",
@@ -1461,6 +1616,268 @@
    "viability": "Needs \u20b922,149 to hold (Upstox margin calculator)."
   },
   "reason": "+0.8% on the previous close and within 0.3% of the day high; stop 0.6%, target 1.2%"
+ },
+ {
+  "id": "F261119-37",
+  "desk": "FNO",
+  "strategy": "long_straddle",
+  "label": "NIFTY long straddle \u00b7 11-23",
+  "side": "LONG",
+  "entry": -291.3,
+  "last": 69.65,
+  "qty": 1,
+  "status": "WIN",
+  "pnl_rs": 4447.25,
+  "exit": 69.65,
+  "why": "time",
+  "day": "2026-11-19",
+  "opened": "09:45:06",
+  "closed": "15:15:14",
+  "ts": 1795061711.1213849,
+  "expiry": "2026-11-23",
+  "lot": 65,
+  "legs": [
+   {
+    "side": "B",
+    "strike": 25250.0,
+    "kind": "CE",
+    "entry": 125.7,
+    "last": 316.3,
+    "key": "NSE_FO|64453"
+   },
+   {
+    "side": "B",
+    "strike": 25250.0,
+    "kind": "PE",
+    "entry": 165.6,
+    "last": 44.65,
+    "key": "NSE_FO|64455"
+   }
+  ],
+  "horizon": "daily",
+  "underlying": "NIFTY",
+  "unit_base": 291.3,
+  "target_u": 145.65,
+  "stop_u": 101.95,
+  "risk_class": "High return \u00b7 high loss",
+  "max_gain_rs": null,
+  "max_loss_rs": 18934,
+  "margin_rs": 18636,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "daily",
+   "headline": "Buy 25,250 CE, Buy 25,250 PE \u00b7 NIFTY 2026-11-23",
+   "news": [
+    "US markets averaged -0.31% at the 18/11 close.",
+    "Asia averaged -0.92%.",
+    "Brent crude 88.96 (-4.49%).",
+    "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com (GoogleNews)",
+    "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh (BusinessStandard)",
+    "Sensex Falls 500 Pts, Nifty Slips As Auto, Metal Stocks Lead Sell-off - TradingView (GoogleNews)",
+    "6 companies filed results or hold board meetings today."
+   ],
+   "data": [
+    "NIFTY 25,229, +0.00% on the previous close. India VIX 15.9.",
+    "Implied volatility at the money 13.3% a year. Over 4 days to 2026-11-23 that prices a one-standard-deviation move of about \u00b1352 points (\u00b11.4%), so the market gives roughly a 68% chance of finishing between 24,877 and 25,581.",
+    "Option positioning: put-to-call ratio 0.87, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,000 (a floor), max pain 25,200.",
+    "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+    "Our forecast for today: Bearish (score -0.22); likely range 24,957 to 25,465."
+   ],
+   "strategy": "Buy the at-the-money call and put.",
+   "why": [
+    "Used when a big move is plausible but its direction is not: either leg can pay for both. It loses if the index drifts, because time decay eats the premium."
+   ],
+   "numbers": [
+    [
+     "Net debit",
+     "291.3 points = \u20b918,934 per lot",
+     "What you receive (or pay) up front"
+    ],
+    [
+     "Most you can make",
+     "\u20b9474,398",
+     "At expiry, if everything goes right"
+    ],
+    [
+     "Most you can lose",
+     "\u20b918,663",
+     "At expiry, if everything goes wrong (fixed by the bought options)"
+    ],
+    [
+     "Break-even at expiry",
+     "24,959 and 25,541",
+     "Where the structure stops losing money"
+    ],
+    [
+     "Chance of profit at expiry",
+     "41%",
+     "From the options market's own implied volatility; not our edge, the market's odds"
+    ],
+    [
+     "Expected move to expiry",
+     "\u00b1352 points",
+     "4 days at 13.3% implied volatility"
+    ],
+    [
+     "Reward for the risk",
+     "25.42 to 1",
+     "Best case divided by worst case"
+    ],
+    [
+     "Margin the broker asks",
+     "\u20b918,636",
+     "18% of the account (Upstox margin calculator)"
+    ],
+    [
+     "Our exit levels",
+     "Take profit at \u20b99,467, cut at \u20b96,627",
+     "Rupees on one lot, before the exit rule below"
+    ]
+   ],
+   "risk": "Take profit at 50% of the debit, cut at 35%, and be flat by 15:15 whatever happens. Fails when: A quiet day. The cost of both options is the most you can lose.",
+   "viability": "One lot of 65 needs \u20b918,636 of margin, checked with the broker's calculator when the trade was booked."
+  },
+  "reason": "NIFTY 25,229 (+0.00% on the close). Debit 291.3 points; target 50% of it, stop 35% of it; out by 15:15"
+ },
+ {
+  "id": "E261119-2",
+  "desk": "EQUITY",
+  "strategy": "price_only",
+  "label": "PAYTM short",
+  "symbol": "PAYTM",
+  "side": "SHORT",
+  "entry": 1726.5,
+  "last": 1745.1,
+  "exit": 1745.1,
+  "qty": 2,
+  "stop": 1743.77,
+  "status": "LOSS",
+  "pnl_rs": -62.02,
+  "reason": "-8.7% move near the day low, no filing seen",
+  "why": "stop",
+  "day": "2026-11-19",
+  "opened": "10:54",
+  "closed": "14:20",
+  "risk_class": "Intraday hunter",
+  "margin_rs": 691,
+  "target_px": null,
+  "leverage": null,
+  "setup": null
+ },
+ {
+  "id": "F261119-38",
+  "desk": "FNO",
+  "strategy": "long_breakout",
+  "label": "NIFTY long breakout \u00b7 11-23",
+  "side": "LONG",
+  "entry": -153.0,
+  "last": 83.25,
+  "qty": 1,
+  "status": "WIN",
+  "pnl_rs": 5371.25,
+  "exit": 83.25,
+  "why": "target",
+  "day": "2026-11-19",
+  "opened": "11:54:49",
+  "closed": "14:26:05",
+  "ts": 1795069495.2157717,
+  "expiry": "2026-11-23",
+  "lot": 65,
+  "legs": [
+   {
+    "side": "B",
+    "strike": 25350.0,
+    "kind": "CE",
+    "entry": 153.0,
+    "last": 236.25,
+    "key": "NSE_FO|64458"
+   }
+  ],
+  "horizon": "daily",
+  "underlying": "NIFTY",
+  "unit_base": 153.0,
+  "target_u": 76.5,
+  "stop_u": 45.9,
+  "risk_class": "High return \u00b7 low loss",
+  "max_gain_rs": null,
+  "max_loss_rs": 9945,
+  "margin_rs": 9926,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "daily",
+   "headline": "Buy 25,350 CE \u00b7 NIFTY 2026-11-23",
+   "news": [
+    "US markets averaged -0.31% at the 18/11 close.",
+    "Asia averaged -0.92%.",
+    "Brent crude 88.96 (-4.49%).",
+    "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com (GoogleNews)",
+    "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh (BusinessStandard)",
+    "Sensex Falls 500 Pts, Nifty Slips As Auto, Metal Stocks Lead Sell-off - TradingView (GoogleNews)",
+    "6 companies filed results or hold board meetings today."
+   ],
+   "data": [
+    "NIFTY 25,356, +0.51% on the previous close. India VIX 16.1.",
+    "Implied volatility at the money 12.9% a year. Over 4 days to 2026-11-23 that prices a one-standard-deviation move of about \u00b1342 points (\u00b11.3%), so the market gives roughly a 68% chance of finishing between 25,013 and 25,698.",
+    "Option positioning: put-to-call ratio 1.19, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,000 (a floor), max pain 25,000.",
+    "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+    "Our forecast for today: Bearish (score -0.22); likely range 24,957 to 25,465."
+   ],
+   "strategy": "Buy a single at-the-money call (up day) or put (down day).",
+   "why": [
+    "Used when the index has already moved 0.5% or more: a continuing trend pays quickly because the option gains from direction and from rising volatility.",
+    "Direction: today's forecast leans bearish (World tone is weak: US and Asia weighted average -0.55% at the 18/11 close; Brent crude 88.96 (-4.49%).; Nifty 50 closed at 25,228, +4.7% from its 20-day average (24,095) and -0.1% over five sessions: the trend is up.)."
+   ],
+   "numbers": [
+    [
+     "Net debit",
+     "153.0 points = \u20b99,945 per lot",
+     "What you receive (or pay) up front"
+    ],
+    [
+     "Most you can make",
+     "\u20b9484,845",
+     "At expiry, if everything goes right"
+    ],
+    [
+     "Most you can lose",
+     "\u20b99,945",
+     "At expiry, if everything goes wrong (fixed by the bought options)"
+    ],
+    [
+     "Break-even at expiry",
+     "25,503",
+     "Where the structure stops losing money"
+    ],
+    [
+     "Chance of profit at expiry",
+     "33%",
+     "From the options market's own implied volatility; not our edge, the market's odds"
+    ],
+    [
+     "Expected move to expiry",
+     "\u00b1342 points",
+     "4 days at 12.9% implied volatility"
+    ],
+    [
+     "Reward for the risk",
+     "48.75 to 1",
+     "Best case divided by worst case"
+    ],
+    [
+     "Margin the broker asks",
+     "\u20b99,926",
+     "10% of the account (Upstox margin calculator)"
+    ],
+    [
+     "Our exit levels",
+     "Take profit at \u20b94,972, cut at \u20b92,984",
+     "Rupees on one lot, before the exit rule below"
+    ]
+   ],
+   "risk": "Take profit at 50% of the debit, cut at 30%, and be flat by 15:15 whatever happens. Fails when: The move stalls. The premium is the most you can lose.",
+   "viability": "One lot of 65 needs \u20b99,926 of margin, checked with the broker's calculator when the trade was booked."
+  },
+  "reason": "NIFTY 25,356 (+0.51% on the close). Debit 153.0 points; target 50% of it, stop 30% of it; out by 15:15"
  },
  {
   "id": "K261119-39",
@@ -1906,5 +2323,186 @@
    "viability": "Needs \u20b97,970 to hold."
   },
   "instrument_key": "NSE_EQ|INE160A01022"
+ },
+ {
+  "id": "E261119-3",
+  "desk": "EQUITY",
+  "strategy": "headline-led",
+  "label": "DALBHARAT long",
+  "symbol": "DALBHARAT",
+  "side": "LONG",
+  "entry": 1522.4,
+  "last": 1551.5,
+  "exit": 1551.5,
+  "qty": 11,
+  "stop": 1522.4,
+  "status": "WIN",
+  "pnl_rs": 290.51,
+  "reason": "News-led: headline: Dalmia Bharat buyback alert! Board to consider share repurchase proposal next week on Nov ; price +0.8% near the day high. Stop 1,509.53 (0.85%), target 1,548.15 (2R), stop moves to entry after a 1R gain, out by 15:10.",
+  "why": "target",
+  "day": "2026-11-19",
+  "opened": "12:58",
+  "closed": "14:49",
+  "risk_class": "Intraday hunter",
+  "margin_rs": 3349,
+  "target_px": 1548.15,
+  "leverage": 5.0,
+  "setup": "news"
+ },
+ {
+  "id": "E261119-4",
+  "desk": "EQUITY",
+  "strategy": "gap-and-go",
+  "label": "KWIL long",
+  "symbol": "KWIL",
+  "side": "LONG",
+  "entry": 44.23,
+  "last": 44.5,
+  "exit": 44.5,
+  "qty": 282,
+  "stop": 43.7,
+  "status": "WIN",
+  "pnl_rs": 48.12,
+  "reason": "Gap and go: opened +3.2% higher and is holding above the open and VWAP, near the day high. Stop 43.70 (1.20%), target 45.29 (2R), stop moves to entry after a 1R gain, out by 15:10.",
+  "why": "time",
+  "day": "2026-11-19",
+  "opened": "12:58",
+  "closed": "15:10",
+  "risk_class": "Intraday hunter",
+  "margin_rs": 2495,
+  "target_px": 45.29,
+  "leverage": 5.0,
+  "setup": "gap"
+ },
+ {
+  "id": "E261119-5",
+  "desk": "EQUITY",
+  "strategy": "news-led",
+  "label": "NBCC long",
+  "symbol": "NBCC",
+  "side": "LONG",
+  "entry": 78.75,
+  "last": 79.35,
+  "exit": 79.35,
+  "qty": 170,
+  "stop": 77.87,
+  "status": "WIN",
+  "pnl_rs": 73.65,
+  "reason": "News-led: a positive filing today; price +1.8% near the day high. Stop 77.87 (1.12%), target 80.51 (2R), stop moves to entry after a 1R gain, out by 15:10.",
+  "why": "time",
+  "day": "2026-11-19",
+  "opened": "13:00",
+  "closed": "15:10",
+  "risk_class": "Intraday hunter",
+  "margin_rs": 2678,
+  "target_px": 80.51,
+  "leverage": 5.0,
+  "setup": "news"
+ },
+ {
+  "id": "M261119-44",
+  "desk": "COMMODITY",
+  "strategy": "mcx_momentum",
+  "label": "Crude oil mini long",
+  "side": "LONG",
+  "entry": 7716.0,
+  "last": 7667.0,
+  "qty": 1,
+  "status": "LOSS",
+  "pnl_rs": -528.58,
+  "exit": 7667.0,
+  "why": "stop",
+  "day": "2026-11-19",
+  "opened": "14:22:17",
+  "closed": "17:00:41",
+  "ts": 1795078340.3255095,
+  "key": "MCX_FO|576265",
+  "mult": 10.0,
+  "symbol": "CRUDEOILM FUT 18 DEC 26",
+  "stop": 7669.7,
+  "target_px": 7808.59,
+  "horizon": "intraday",
+  "risk_class": "Intraday momentum",
+  "margin_rs": 23906,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "Crude oil mini long",
+   "news": [
+    "US markets averaged -0.31% at the 18/11 close.",
+    "Asia averaged -0.92%.",
+    "Brent crude 88.96 (-4.49%)."
+   ],
+   "data": [
+    "Crude oil mini (CRUDEOILM FUT 18 DEC 26) at 7,716.00, +0.92% on the previous close; day range 7,659.00 to 7,735.00, price is 0.25% from the day high.",
+    "Lot: 10 unit(s) \u00d7 1 lot(s); contract value \u20b977,160.",
+    "Global reference: Brent crude 89.53 (-2.63% at the 11-19 close)."
+   ],
+   "strategy": "A futures position in the direction the market is already moving hard.",
+   "why": [
+    "Used when a commodity is up or down 0.8% or more and sitting at its day extreme: strong days tend to extend into the evening session when global markets open.",
+    "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|576265)."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "7,716.00",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "7,669.70",
+     "Costs about \u20b9463"
+    ],
+    [
+     "Target (exit if right)",
+     "7,808.59",
+     "Earns about \u20b9926"
+    ],
+    [
+     "Reward for the risk",
+     "2.0 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "33% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b923,906",
+     "22% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
+   "viability": "Needs \u20b923,906 to hold (Upstox margin calculator)."
+  },
+  "reason": "+0.9% on the previous close and within 0.3% of the day high; stop 0.6%, target 1.2%"
+ },
+ {
+  "id": "E261119-6",
+  "desk": "EQUITY",
+  "strategy": "news-led",
+  "label": "JUBLINGREA short",
+  "symbol": "JUBLINGREA",
+  "side": "SHORT",
+  "entry": 575.0,
+  "last": 574.9,
+  "exit": 574.9,
+  "qty": 43,
+  "stop": 578.45,
+  "status": "LOSS",
+  "pnl_rs": -28.01,
+  "reason": "News-led: a negative filing today; price -2.0% near the day low. Stop 578.45 (0.60%), target 568.10 (2R), stop moves to entry after a 1R gain, out by 15:10.",
+  "why": "time",
+  "day": "2026-11-19",
+  "opened": "14:49",
+  "closed": "15:10",
+  "risk_class": "Intraday hunter",
+  "margin_rs": 4945,
+  "target_px": 568.1,
+  "leverage": 5.0,
+  "setup": "news"
  }
 ]

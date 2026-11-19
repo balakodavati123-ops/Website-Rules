@@ -1,58 +1,58 @@
 {
  "trades": [
   {
-   "id": "C261119-33",
+   "id": "C261119-45",
    "desk": "CRYPTO",
-   "strategy": "crypto_dip_bounce",
-   "label": "BTC long",
+   "strategy": "crypto_breakout",
+   "label": "DOGE long",
    "side": "LONG",
-   "entry": 62605.1,
-   "last": 63529.4,
+   "entry": 0.0595,
+   "last": 0.0596023,
    "qty": 2500,
    "status": "OPEN",
-   "pnl_rs": 26.91,
+   "pnl_rs": -5.7,
    "exit": "",
    "why": "",
    "day": "2026-11-19",
-   "opened": "05:52:01",
+   "opened": "14:26:23",
    "closed": "",
-   "ts": 1795047721.8293037,
-   "symbol": "BTC",
-   "stop": 61666.0235,
-   "target_px": 64483.253,
+   "ts": 1795078587.5326047,
+   "symbol": "DOGE",
+   "stop": 0.058597,
+   "target_px": 0.061274,
    "horizon": "intraday",
    "risk_class": "Intraday spot",
    "margin_rs": 2500,
    "thesis": {
     "horizon": "intraday",
-    "headline": "BTC long",
+    "headline": "DOGE long",
     "news": [
-     "US markets averaged -0.40% at the last close.",
-     "Asia averaged -0.51%."
+     "US markets averaged -0.31% at the 18/11 close.",
+     "Asia averaged -0.92%."
     ],
     "data": [
-     "BTC at $62,605.10, -0.60% over the last 24 hours; 24-hour range $62,000.00 to $64,874.50.",
+     "DOGE at $0.06, +1.34% over the last 24 hours; 24-hour range $0.06 to $0.06.",
      "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
     ],
-    "strategy": "Buy a coin that has dropped and started to recover.",
+    "strategy": "Buy a coin pushing to a 24-hour high.",
     "why": [
-     "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+     "Used when a coin is up 1% or more and within 0.6% of its high: breakouts tend to attract follow-through buying.",
      "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
     ],
     "numbers": [
      [
       "Entry",
-      "62,605.10",
+      "0.06",
       "Price when the paper trade was opened"
      ],
      [
       "Stop (exit if wrong)",
-      "61,666.02",
+      "0.06",
       "Costs about \u20b938"
      ],
      [
       "Target (exit if right)",
-      "64,483.25",
+      "0.06",
       "Earns about \u20b975"
      ],
      [
@@ -71,64 +71,64 @@
       "2% of the account"
      ]
     ],
-    "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+    "risk": "Out at the stop, the target, or after 8 hours. Fails when: A false breakout. The 1.5% stop caps the loss.",
     "viability": "Needs \u20b92,500 to hold."
    },
-   "reason": "-3.5% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
+   "reason": "+1.3% on the day and within 0.6% of the 24-hour high; stop 1.5%, target 3%, out after 8 hours"
   },
   {
-   "id": "C261119-34",
+   "id": "C261119-46",
    "desk": "CRYPTO",
-   "strategy": "crypto_dip_bounce",
-   "label": "XRP long",
+   "strategy": "crypto_breakout",
+   "label": "ADA long",
    "side": "LONG",
-   "entry": 0.968,
-   "last": 0.97892,
+   "entry": 0.1541,
+   "last": 0.155343,
    "qty": 2500,
    "status": "OPEN",
-   "pnl_rs": 18.2,
+   "pnl_rs": 10.17,
    "exit": "",
    "why": "",
    "day": "2026-11-19",
-   "opened": "06:15:55",
+   "opened": "14:26:43",
    "closed": "",
-   "ts": 1795049156.2050946,
-   "symbol": "XRP",
-   "stop": 0.953529,
-   "target_px": 0.997092,
+   "ts": 1795078609.4475584,
+   "symbol": "ADA",
+   "stop": 0.151797,
+   "target_px": 0.158732,
    "horizon": "intraday",
    "risk_class": "Intraday spot",
    "margin_rs": 2500,
    "thesis": {
     "horizon": "intraday",
-    "headline": "XRP long",
+    "headline": "ADA long",
     "news": [
-     "US markets averaged -0.40% at the last close.",
-     "Asia averaged -0.51%."
+     "US markets averaged -0.31% at the 18/11 close.",
+     "Asia averaged -0.92%."
     ],
     "data": [
-     "XRP at $0.97, +0.17% over the last 24 hours; 24-hour range $0.95 to $1.01.",
+     "ADA at $0.15, +1.89% over the last 24 hours; 24-hour range $0.15 to $0.15.",
      "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
     ],
-    "strategy": "Buy a coin that has dropped and started to recover.",
+    "strategy": "Buy a coin pushing to a 24-hour high.",
     "why": [
-     "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+     "Used when a coin is up 1% or more and within 0.6% of its high: breakouts tend to attract follow-through buying.",
      "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
     ],
     "numbers": [
      [
       "Entry",
-      "0.97",
+      "0.15",
       "Price when the paper trade was opened"
      ],
      [
       "Stop (exit if wrong)",
-      "0.95",
+      "0.15",
       "Costs about \u20b938"
      ],
      [
       "Target (exit if right)",
-      "1.00",
+      "0.16",
       "Earns about \u20b975"
      ],
      [
@@ -147,247 +147,10 @@
       "2% of the account"
      ]
     ],
-    "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+    "risk": "Out at the stop, the target, or after 8 hours. Fails when: A false breakout. The 1.5% stop caps the loss.",
     "viability": "Needs \u20b92,500 to hold."
    },
-   "reason": "-3.8% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
-  },
-  {
-   "id": "F261119-37",
-   "desk": "FNO",
-   "strategy": "long_straddle",
-   "label": "NIFTY long straddle \u00b7 11-23",
-   "side": "LONG",
-   "entry": -291.3,
-   "last": 14.4,
-   "qty": 1,
-   "status": "OPEN",
-   "pnl_rs": 856.0,
-   "exit": "",
-   "why": "",
-   "day": "2026-11-19",
-   "opened": "09:45:06",
-   "closed": "",
-   "ts": 1795061711.1213849,
-   "expiry": "2026-11-23",
-   "lot": 65,
-   "legs": [
-    {
-     "side": "B",
-     "strike": 25250.0,
-     "kind": "CE",
-     "entry": 125.7,
-     "last": 222.85,
-     "key": "NSE_FO|64453"
-    },
-    {
-     "side": "B",
-     "strike": 25250.0,
-     "kind": "PE",
-     "entry": 165.6,
-     "last": 82.85,
-     "key": "NSE_FO|64455"
-    }
-   ],
-   "horizon": "daily",
-   "underlying": "NIFTY",
-   "unit_base": 291.3,
-   "target_u": 145.65,
-   "stop_u": 101.95,
-   "risk_class": "High return \u00b7 high loss",
-   "max_gain_rs": null,
-   "max_loss_rs": 18934,
-   "margin_rs": 18636,
-   "margin_src": "Upstox margin calculator",
-   "thesis": {
-    "horizon": "daily",
-    "headline": "Buy 25,250 CE, Buy 25,250 PE \u00b7 NIFTY 2026-11-23",
-    "news": [
-     "US markets averaged -0.31% at the 18/11 close.",
-     "Asia averaged -0.92%.",
-     "Brent crude 88.96 (-4.49%).",
-     "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com (GoogleNews)",
-     "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh (BusinessStandard)",
-     "Sensex Falls 500 Pts, Nifty Slips As Auto, Metal Stocks Lead Sell-off - TradingView (GoogleNews)",
-     "6 companies filed results or hold board meetings today."
-    ],
-    "data": [
-     "NIFTY 25,229, +0.00% on the previous close. India VIX 15.9.",
-     "Implied volatility at the money 13.3% a year. Over 4 days to 2026-11-23 that prices a one-standard-deviation move of about \u00b1352 points (\u00b11.4%), so the market gives roughly a 68% chance of finishing between 24,877 and 25,581.",
-     "Option positioning: put-to-call ratio 0.87, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,000 (a floor), max pain 25,200.",
-     "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
-     "Our forecast for today: Bearish (score -0.22); likely range 24,957 to 25,465."
-    ],
-    "strategy": "Buy the at-the-money call and put.",
-    "why": [
-     "Used when a big move is plausible but its direction is not: either leg can pay for both. It loses if the index drifts, because time decay eats the premium."
-    ],
-    "numbers": [
-     [
-      "Net debit",
-      "291.3 points = \u20b918,934 per lot",
-      "What you receive (or pay) up front"
-     ],
-     [
-      "Most you can make",
-      "\u20b9474,398",
-      "At expiry, if everything goes right"
-     ],
-     [
-      "Most you can lose",
-      "\u20b918,663",
-      "At expiry, if everything goes wrong (fixed by the bought options)"
-     ],
-     [
-      "Break-even at expiry",
-      "24,959 and 25,541",
-      "Where the structure stops losing money"
-     ],
-     [
-      "Chance of profit at expiry",
-      "41%",
-      "From the options market's own implied volatility; not our edge, the market's odds"
-     ],
-     [
-      "Expected move to expiry",
-      "\u00b1352 points",
-      "4 days at 13.3% implied volatility"
-     ],
-     [
-      "Reward for the risk",
-      "25.42 to 1",
-      "Best case divided by worst case"
-     ],
-     [
-      "Margin the broker asks",
-      "\u20b918,636",
-      "18% of the account (Upstox margin calculator)"
-     ],
-     [
-      "Our exit levels",
-      "Take profit at \u20b99,467, cut at \u20b96,627",
-      "Rupees on one lot, before the exit rule below"
-     ]
-    ],
-    "risk": "Take profit at 50% of the debit, cut at 35%, and be flat by 15:15 whatever happens. Fails when: A quiet day. The cost of both options is the most you can lose.",
-    "viability": "One lot of 65 needs \u20b918,636 of margin, checked with the broker's calculator when the trade was booked."
-   },
-   "reason": "NIFTY 25,229 (+0.00% on the close). Debit 291.3 points; target 50% of it, stop 35% of it; out by 15:15"
-  },
-  {
-   "id": "F261119-38",
-   "desk": "FNO",
-   "strategy": "long_breakout",
-   "label": "NIFTY long breakout \u00b7 11-23",
-   "side": "LONG",
-   "entry": -153.0,
-   "last": 7.85,
-   "qty": 1,
-   "status": "OPEN",
-   "pnl_rs": 470.25,
-   "exit": "",
-   "why": "",
-   "day": "2026-11-19",
-   "opened": "11:54:49",
-   "closed": "",
-   "ts": 1795069495.2157717,
-   "expiry": "2026-11-23",
-   "lot": 65,
-   "legs": [
-    {
-     "side": "B",
-     "strike": 25350.0,
-     "kind": "CE",
-     "entry": 153.0,
-     "last": 160.85,
-     "key": "NSE_FO|64458"
-    }
-   ],
-   "horizon": "daily",
-   "underlying": "NIFTY",
-   "unit_base": 153.0,
-   "target_u": 76.5,
-   "stop_u": 45.9,
-   "risk_class": "High return \u00b7 low loss",
-   "max_gain_rs": null,
-   "max_loss_rs": 9945,
-   "margin_rs": 9926,
-   "margin_src": "Upstox margin calculator",
-   "thesis": {
-    "horizon": "daily",
-    "headline": "Buy 25,350 CE \u00b7 NIFTY 2026-11-23",
-    "news": [
-     "US markets averaged -0.31% at the 18/11 close.",
-     "Asia averaged -0.92%.",
-     "Brent crude 88.96 (-4.49%).",
-     "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com (GoogleNews)",
-     "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh (BusinessStandard)",
-     "Sensex Falls 500 Pts, Nifty Slips As Auto, Metal Stocks Lead Sell-off - TradingView (GoogleNews)",
-     "6 companies filed results or hold board meetings today."
-    ],
-    "data": [
-     "NIFTY 25,356, +0.51% on the previous close. India VIX 16.1.",
-     "Implied volatility at the money 12.9% a year. Over 4 days to 2026-11-23 that prices a one-standard-deviation move of about \u00b1342 points (\u00b11.3%), so the market gives roughly a 68% chance of finishing between 25,013 and 25,698.",
-     "Option positioning: put-to-call ratio 1.19, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,000 (a floor), max pain 25,000.",
-     "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
-     "Our forecast for today: Bearish (score -0.22); likely range 24,957 to 25,465."
-    ],
-    "strategy": "Buy a single at-the-money call (up day) or put (down day).",
-    "why": [
-     "Used when the index has already moved 0.5% or more: a continuing trend pays quickly because the option gains from direction and from rising volatility.",
-     "Direction: today's forecast leans bearish (World tone is weak: US and Asia weighted average -0.55% at the 18/11 close; Brent crude 88.96 (-4.49%).; Nifty 50 closed at 25,228, +4.7% from its 20-day average (24,095) and -0.1% over five sessions: the trend is up.)."
-    ],
-    "numbers": [
-     [
-      "Net debit",
-      "153.0 points = \u20b99,945 per lot",
-      "What you receive (or pay) up front"
-     ],
-     [
-      "Most you can make",
-      "\u20b9484,845",
-      "At expiry, if everything goes right"
-     ],
-     [
-      "Most you can lose",
-      "\u20b99,945",
-      "At expiry, if everything goes wrong (fixed by the bought options)"
-     ],
-     [
-      "Break-even at expiry",
-      "25,503",
-      "Where the structure stops losing money"
-     ],
-     [
-      "Chance of profit at expiry",
-      "33%",
-      "From the options market's own implied volatility; not our edge, the market's odds"
-     ],
-     [
-      "Expected move to expiry",
-      "\u00b1342 points",
-      "4 days at 12.9% implied volatility"
-     ],
-     [
-      "Reward for the risk",
-      "48.75 to 1",
-      "Best case divided by worst case"
-     ],
-     [
-      "Margin the broker asks",
-      "\u20b99,926",
-      "10% of the account (Upstox margin calculator)"
-     ],
-     [
-      "Our exit levels",
-      "Take profit at \u20b94,972, cut at \u20b92,984",
-      "Rupees on one lot, before the exit rule below"
-     ]
-    ],
-    "risk": "Take profit at 50% of the debit, cut at 30%, and be flat by 15:15 whatever happens. Fails when: The move stalls. The premium is the most you can lose.",
-    "viability": "One lot of 65 needs \u20b99,926 of margin, checked with the broker's calculator when the trade was booked."
-   },
-   "reason": "NIFTY 25,356 (+0.51% on the close). Debit 153.0 points; target 50% of it, stop 30% of it; out by 15:15"
+   "reason": "+1.9% on the day and within 0.6% of the 24-hour high; stop 1.5%, target 3%, out after 8 hours"
   }
  ],
  "seen": {
@@ -2180,9 +1943,12 @@
   "scalp|TMPV|12:23": 1,
   "scalp|MUTHOOTFIN|12:23": 1,
   "scalp|JPL|12:23": 1,
-  "scalp|DIVISLAB|12:23": 1
+  "scalp|DIVISLAB|12:23": 1,
+  "2026-11-19|CRUDEOILM FUT 18 DEC 26": "LONG",
+  "2026-11-19|DOGE": "crypto_breakout",
+  "2026-11-19|ADA": "crypto_breakout"
  },
- "seq": 43,
+ "seq": 46,
  "rebased": true,
  "cool": {
   "RELIANCE": 1795070015.846615,

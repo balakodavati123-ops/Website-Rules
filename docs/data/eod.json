@@ -1,90 +1,101 @@
 {
- "day": "2026-11-18",
- "trades": 21,
- "closed": 18,
+ "day": "2026-11-19",
+ "trades": 20,
+ "closed": 17,
  "open": 3,
  "wins": 8,
- "win_rate": 44,
- "pnl": -1546.31,
+ "win_rate": 47,
+ "pnl": 9445.17,
  "by_desk": {
   "EQUITY": {
-   "trades": 4,
-   "pnl": -364.77
+   "trades": 11,
+   "pnl": 97.33
   },
   "FNO": {
-   "trades": 8,
-   "pnl": -1598.5
+   "trades": 2,
+   "pnl": 9818.5
   },
   "COMMODITY": {
-   "trades": 5,
-   "pnl": 374.93
+   "trades": 3,
+   "pnl": -490.98
   },
   "CRYPTO": {
    "trades": 4,
-   "pnl": 42.03
+   "pnl": 20.32
   }
  },
  "by_strategy": [
   {
-   "strategy": "short_strangle",
+   "strategy": "long_breakout",
    "n": 1,
-   "pnl": 703.25
+   "pnl": 5371.25
   },
   {
-   "strategy": "mcx_momentum",
-   "n": 5,
-   "pnl": 374.93
+   "strategy": "long_straddle",
+   "n": 1,
+   "pnl": 4447.25
+  },
+  {
+   "strategy": "headline-led",
+   "n": 1,
+   "pnl": 290.51
+  },
+  {
+   "strategy": "crypto_dip_bounce",
+   "n": 2,
+   "pnl": 52.81
+  },
+  {
+   "strategy": "gap-and-go",
+   "n": 1,
+   "pnl": 48.12
+  },
+  {
+   "strategy": "news-led",
+   "n": 2,
+   "pnl": 45.64
   },
   {
    "strategy": "crypto_breakout",
-   "n": 4,
-   "pnl": 42.03
-  },
-  {
-   "strategy": "iron_condor",
    "n": 2,
-   "pnl": -63.25
-  },
-  {
-   "strategy": "credit_spread",
-   "n": 2,
-   "pnl": -221.75
+   "pnl": -32.49
   },
   {
    "strategy": "price_only",
-   "n": 4,
-   "pnl": -364.77
-  },
-  {
-   "strategy": "debit_spread",
    "n": 2,
-   "pnl": -455.75
+   "pnl": -124.71
   },
   {
-   "strategy": "long_breakout",
-   "n": 1,
-   "pnl": -1561.0
+   "strategy": "scalp_vwap_pullback",
+   "n": 5,
+   "pnl": -162.23
+  },
+  {
+   "strategy": "mcx_momentum",
+   "n": 3,
+   "pnl": -490.98
   }
  ],
- "equity": 102839.03,
+ "equity": 111788.13,
  "best": {
-  "label": "NIFTY short strangle \u00b7 11-23",
-  "pnl": 703.25
+  "label": "NIFTY long breakout \u00b7 11-23",
+  "pnl": 5371.25
  },
  "worst": {
-  "label": "NIFTY long breakout \u00b7 11-23",
-  "pnl": -1561.0
+  "label": "Natural gas mini long",
+  "pnl": -514.5
  },
  "news": {
-  "n": 0,
-  "pnl": 0
+  "n": 2,
+  "pnl": 45.64
  },
  "planned": {
   "n": 0,
   "pnl": 0
  },
  "notes": [
-  "21 trades: 8 won and 10 lost of 18 closed; net -1,546 rupees.",
-  "Best market: COMMODITY (+375). Weakest: FNO (-1,598)."
+  "20 trades: 8 won and 9 lost of 17 closed; net +9,445 rupees.",
+  "Best market: FNO (+9,818). Weakest: COMMODITY (-491).",
+  "News-led trades: 2, net +46."
  ]
 }
