@@ -1,20 +1,72 @@
 [
  {
+  "id": "C261119-34",
+  "desk": "CRYPTO",
+  "strategy": "crypto_dip_bounce",
+  "label": "XRP long",
+  "side": "LONG",
+  "entry": 0.968,
+  "last": 0.96395,
+  "qty": 2500,
+  "status": "OPEN",
+  "pnl_rs": -20.46,
+  "exit": "",
+  "why": "",
+  "day": "2026-11-19",
+  "opened": "06:15:55",
+  "closed": "",
+  "ts": 1795049156.2050946,
+  "symbol": "XRP",
+  "stop": 0.953529,
+  "target_px": 0.997092,
+  "horizon": "intraday",
+  "risk_class": "Intraday spot",
+  "margin_rs": 2500,
+  "reason": "-3.8% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours",
+  "has_thesis": true
+ },
+ {
+  "id": "C261119-33",
+  "desk": "CRYPTO",
+  "strategy": "crypto_dip_bounce",
+  "label": "BTC long",
+  "side": "LONG",
+  "entry": 62605.1,
+  "last": 62872.9,
+  "qty": 2500,
+  "status": "OPEN",
+  "pnl_rs": 0.69,
+  "exit": "",
+  "why": "",
+  "day": "2026-11-19",
+  "opened": "05:52:01",
+  "closed": "",
+  "ts": 1795047721.8293037,
+  "symbol": "BTC",
+  "stop": 61666.0235,
+  "target_px": 64483.253,
+  "horizon": "intraday",
+  "risk_class": "Intraday spot",
+  "margin_rs": 2500,
+  "reason": "-3.5% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours",
+  "has_thesis": true
+ },
+ {
   "id": "C261118-32",
   "desk": "CRYPTO",
   "strategy": "crypto_dip_bounce",
   "label": "ADA long",
   "side": "LONG",
   "entry": 0.1501,
-  "last": 0.152029,
+  "last": 0.1518,
   "qty": 2500,
-  "status": "OPEN",
-  "pnl_rs": 22.13,
-  "exit": "",
-  "why": "",
+  "status": "WIN",
+  "pnl_rs": 17.55,
+  "exit": 0.1518,
+  "why": "time",
   "day": "2026-11-18",
   "opened": "22:15:43",
-  "closed": "",
+  "closed": "06:15:50",
   "ts": 1795020344.460309,
   "symbol": "ADA",
   "stop": 0.147847,
@@ -30,15 +82,15 @@
   "label": "DOGE long",
   "side": "LONG",
   "entry": 0.0581,
-  "last": 0.058869,
+  "last": 0.0586,
   "qty": 2500,
-  "status": "OPEN",
-  "pnl_rs": 23.09,
-  "exit": "",
-  "why": "",
+  "status": "WIN",
+  "pnl_rs": 10.66,
+  "exit": 0.0586,
+  "why": "time",
   "day": "2026-11-18",
   "opened": "21:51:54",
-  "closed": "",
+  "closed": "05:51:56",
   "ts": 1795018915.594842,
   "symbol": "DOGE",
   "stop": 0.057244,
@@ -1433,7 +1485,8 @@
   "closed": "",
   "risk_class": "Swing (daily bars)",
   "margin_rs": 4843,
-  "instrument_key": "NSE_EQ|INE066F01020"
+  "instrument_key": "NSE_EQ|INE066F01020",
+  "has_thesis": true
  },
  {
   "id": "S4",
@@ -1457,7 +1510,8 @@
   "closed": "",
   "risk_class": "Swing (daily bars)",
   "margin_rs": 2761,
-  "instrument_key": "NSE_EQ|INE860A01027"
+  "instrument_key": "NSE_EQ|INE860A01027",
+  "has_thesis": true
  },
  {
   "id": "S5",
@@ -1481,7 +1535,8 @@
   "closed": "2026-11-13",
   "risk_class": "Swing (daily bars)",
   "margin_rs": 7898,
-  "instrument_key": "NSE_EQ|INE303R01014"
+  "instrument_key": "NSE_EQ|INE303R01014",
+  "has_thesis": true
  },
  {
   "id": "S6",
@@ -1505,7 +1560,8 @@
   "closed": "",
   "risk_class": "Swing (daily bars)",
   "margin_rs": 3840,
-  "instrument_key": "NSE_EQ|INE982J01020"
+  "instrument_key": "NSE_EQ|INE982J01020",
+  "has_thesis": true
  },
  {
   "id": "S7",
@@ -1529,7 +1585,8 @@
   "closed": "",
   "risk_class": "Swing (daily bars)",
   "margin_rs": 2400,
-  "instrument_key": "NSE_EQ|INE947Q01028"
+  "instrument_key": "NSE_EQ|INE947Q01028",
+  "has_thesis": true
  },
  {
   "id": "S8",
@@ -1553,7 +1610,8 @@
   "closed": "",
   "risk_class": "Swing (daily bars)",
   "margin_rs": 3700,
-  "instrument_key": "NSE_EQ|INE073K01018"
+  "instrument_key": "NSE_EQ|INE073K01018",
+  "has_thesis": true
  },
  {
   "id": "S9",
@@ -1577,7 +1635,8 @@
   "closed": "",
   "risk_class": "Swing (daily bars)",
   "margin_rs": 3652,
-  "instrument_key": "NSE_EQ|INE347G01014"
+  "instrument_key": "NSE_EQ|INE347G01014",
+  "has_thesis": true
  },
  {
   "id": "S10",
@@ -1601,7 +1660,8 @@
   "closed": "",
   "risk_class": "Swing (daily bars)",
   "margin_rs": 3684,
-  "instrument_key": "NSE_EQ|INE160A01022"
+  "instrument_key": "NSE_EQ|INE160A01022",
+  "has_thesis": true
  },
  {
   "id": "S11",
@@ -1625,7 +1685,8 @@
   "closed": "",
   "risk_class": "Swing (daily bars)",
   "margin_rs": 3652,
-  "instrument_key": "NSE_EQ|INE347G01014"
+  "instrument_key": "NSE_EQ|INE347G01014",
+  "has_thesis": true
  },
  {
   "id": "S12",
@@ -1649,7 +1710,8 @@
   "closed": "",
   "risk_class": "Swing (daily bars)",
   "margin_rs": 2775,
-  "instrument_key": "NSE_EQ|INE073K01018"
+  "instrument_key": "NSE_EQ|INE073K01018",
+  "has_thesis": true
  },
  {
   "id": "S13",
@@ -1673,7 +1735,8 @@
   "closed": "",
   "risk_class": "Swing (daily bars)",
   "margin_rs": 3743,
-  "instrument_key": "NSE_EQ|INE457A01014"
+  "instrument_key": "NSE_EQ|INE457A01014",
+  "has_thesis": true
  },
  {
   "id": "G1",
@@ -1696,7 +1759,8 @@
   "closed": "",
   "risk_class": "Signal desk (chart-gated)",
   "margin_rs": 7943.26,
-  "instrument_key": "NSE_EQ|INE160A01022"
+  "instrument_key": "NSE_EQ|INE160A01022",
+  "has_thesis": true
  },
  {
   "id": "S1",
@@ -1720,7 +1784,8 @@
   "closed": "",
   "risk_class": "Swing (daily bars)",
   "margin_rs": 1803,
-  "instrument_key": "NSE_EQ|INE160A01022"
+  "instrument_key": "NSE_EQ|INE160A01022",
+  "has_thesis": true
  },
  {
   "id": "S2",
@@ -1744,6 +1809,7 @@
   "closed": "",
   "risk_class": "Swing (daily bars)",
   "margin_rs": 1701,
-  "instrument_key": "NSE_EQ|INE129A01019"
+  "instrument_key": "NSE_EQ|INE129A01019",
+  "has_thesis": true
  }
 ]

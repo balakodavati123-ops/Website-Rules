@@ -38,13 +38,13 @@
  {
   "desk": "CRYPTO",
   "strategy": "crypto_dip_bounce",
-  "closed": 3,
-  "wins": 1,
-  "win_rate": 33.3,
-  "pnl_rs": 162.57,
-  "avg_rs": 54.19,
-  "t_stat": 0.52,
-  "confidence": 70.0,
+  "closed": 5,
+  "wins": 3,
+  "win_rate": 60.0,
+  "pnl_rs": 190.78,
+  "avg_rs": 38.16,
+  "t_stat": 0.66,
+  "confidence": 74.7,
   "verdict": "COLLECTING"
  },
  {

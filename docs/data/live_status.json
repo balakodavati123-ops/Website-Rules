@@ -1,12 +1,11 @@
 {
  "desks": {
-  "commodities": "4 MCX futures, real time",
   "crypto": "6 coins from Kraken, real time",
   "execution": "error: could not convert string to float: ''"
  },
- "updated_at": "2026-11-19T01:02:07+05:30",
- "updated_hm": "19 Nov 01:02:07",
- "loops": 2372,
+ "updated_at": "2026-11-19T06:50:05+05:30",
+ "updated_hm": "19 Nov 06:50:05",
+ "loops": 3015,
  "sessions": {
   "equity": false,
   "fno": false,
@@ -16,14 +15,14 @@
  "note": "Real-time Upstox prices for equities, NIFTY options and MCX; Kraken for crypto. Paper trades only.",
  "open": 15,
  "first_iteration": {
-  "equity": 0.4,
-  "fill": 0.4,
-  "mcx": 1.0,
-  "fno": 1.0,
-  "crypto": 1.2,
-  "snapshots": 1.6,
-  "plan": 1.6,
-  "slow_and_intraday": 2.0,
-  "persist": 2.0
+  "equity": 0.0,
+  "fill": 0.0,
+  "mcx": 0.0,
+  "fno": 0.0,
+  "crypto": 0.4,
+  "snapshots": 0.4,
+  "plan": 0.4,
+  "slow_and_intraday": 1.3,
+  "persist": 1.3
  }
 }

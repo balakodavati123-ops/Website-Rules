@@ -1,0 +1,503 @@
+{
+ "C261119-34": {
+  "horizon": "intraday",
+  "headline": "XRP long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%."
+  ],
+  "data": [
+   "XRP at $0.97, +0.17% over the last 24 hours; 24-hour range $0.95 to $1.01.",
+   "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+  ],
+  "strategy": "Buy a coin that has dropped and started to recover.",
+  "why": [
+   "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+   "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "0.97",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "0.95",
+    "Costs about \u20b938"
+   ],
+   [
+    "Target (exit if right)",
+    "1.00",
+    "Earns about \u20b975"
+   ],
+   [
+    "Reward for the risk",
+    "2.0 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "33% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b92,500",
+    "2% of the account"
+   ]
+  ],
+  "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+  "viability": "Needs \u20b92,500 to hold."
+ },
+ "C261119-33": {
+  "horizon": "intraday",
+  "headline": "BTC long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%."
+  ],
+  "data": [
+   "BTC at $62,605.10, -0.60% over the last 24 hours; 24-hour range $62,000.00 to $64,874.50.",
+   "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+  ],
+  "strategy": "Buy a coin that has dropped and started to recover.",
+  "why": [
+   "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+   "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "62,605.10",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "61,666.02",
+    "Costs about \u20b938"
+   ],
+   [
+    "Target (exit if right)",
+    "64,483.25",
+    "Earns about \u20b975"
+   ],
+   [
+    "Reward for the risk",
+    "2.0 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "33% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b92,500",
+    "2% of the account"
+   ]
+  ],
+  "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+  "viability": "Needs \u20b92,500 to hold."
+ },
+ "S3": {
+  "horizon": "swing",
+  "headline": "HAL long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%.",
+   "Brent crude 95.84 (+0.02%)."
+  ],
+  "data": [
+   "Entry 4,843.00, stop 4,600.85; 1 shares worth \u20b94,843.",
+   "Market tone this morning: Weak. US markets averaged -0.40% at the last close. Asia averaged -0.51%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9242",
+    "0.24% of the account"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b94,843."
+ },
+ "S4": {
+  "horizon": "swing",
+  "headline": "HCLTECH long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%.",
+   "Brent crude 95.84 (+0.02%)."
+  ],
+  "data": [
+   "Entry 1,380.70, stop 1,311.66; 2 shares worth \u20b92,761.",
+   "Market tone this morning: Weak. US markets averaged -0.40% at the last close. Asia averaged -0.51%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9138",
+    "0.13% of the account"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b92,761."
+ },
+ "S5": {
+  "horizon": "swing",
+  "headline": "KALYANKJIL long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%.",
+   "Brent crude 95.84 (+0.02%)."
+  ],
+  "data": [
+   "Entry 718.00, stop 689.28, target 861.60; 11 shares worth \u20b97,898.",
+   "Market tone this morning: Weak. US markets averaged -0.40% at the last close. Asia averaged -0.51%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Closed on stop."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9316",
+    "0.31% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b91,580",
+    "5.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b97,898."
+ },
+ "S6": {
+  "horizon": "swing",
+  "headline": "PAYTM long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%.",
+   "Brent crude 95.84 (+0.02%)."
+  ],
+  "data": [
+   "Entry 1,920.00, stop 1,843.20, target 2,304.00; 2 shares worth \u20b93,840.",
+   "Market tone this morning: Weak. US markets averaged -0.40% at the last close. Asia averaged -0.51%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9154",
+    "0.15% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9768",
+    "5.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b93,840."
+ },
+ "S7": {
+  "horizon": "swing",
+  "headline": "LAURUSLABS long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%.",
+   "Brent crude 95.84 (+0.02%)."
+  ],
+  "data": [
+   "Entry 2,400.00, stop 2,304.00, target 2,880.00; 1 shares worth \u20b92,400.",
+   "Market tone this morning: Weak. US markets averaged -0.40% at the last close. Asia averaged -0.51%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b996",
+    "0.09% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9480",
+    "5.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b92,400."
+ },
+ "S8": {
+  "horizon": "swing",
+  "headline": "SONACOMS long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%.",
+   "Brent crude 95.84 (+0.02%)."
+  ],
+  "data": [
+   "Entry 925.00, stop 888.00, target 1,110.00; 4 shares worth \u20b93,700.",
+   "Market tone this morning: Weak. US markets averaged -0.40% at the last close. Asia averaged -0.51%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9148",
+    "0.14% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9740",
+    "5.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b93,700."
+ },
+ "S9": {
+  "horizon": "swing",
+  "headline": "PETRONET long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%.",
+   "Brent crude 95.84 (+0.02%)."
+  ],
+  "data": [
+   "Entry 332.00, stop 315.40, target 398.40; 11 shares worth \u20b93,652.",
+   "Market tone this morning: Weak. US markets averaged -0.40% at the last close. Asia averaged -0.51%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9183",
+    "0.18% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9730",
+    "4.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b93,652."
+ },
+ "S10": {
+  "horizon": "swing",
+  "headline": "PNB long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%.",
+   "Brent crude 95.84 (+0.02%)."
+  ],
+  "data": [
+   "Entry 141.70, stop 134.62; 26 shares worth \u20b93,684.",
+   "Market tone this morning: Weak. US markets averaged -0.40% at the last close. Asia averaged -0.51%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9184",
+    "0.18% of the account"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b93,684."
+ },
+ "S11": {
+  "horizon": "swing",
+  "headline": "PETRONET long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%.",
+   "Brent crude 95.84 (+0.02%)."
+  ],
+  "data": [
+   "Entry 332.00, stop 315.40; 11 shares worth \u20b93,652.",
+   "Market tone this morning: Weak. US markets averaged -0.40% at the last close. Asia averaged -0.51%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9183",
+    "0.18% of the account"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b93,652."
+ },
+ "S12": {
+  "horizon": "swing",
+  "headline": "SONACOMS long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%.",
+   "Brent crude 95.84 (+0.02%)."
+  ],
+  "data": [
+   "Entry 925.00, stop 878.75; 3 shares worth \u20b92,775.",
+   "Market tone this morning: Weak. US markets averaged -0.40% at the last close. Asia averaged -0.51%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9139",
+    "0.14% of the account"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b92,775."
+ },
+ "S13": {
+  "horizon": "swing",
+  "headline": "MAHABANK long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%.",
+   "Brent crude 95.84 (+0.02%)."
+  ],
+  "data": [
+   "Entry 91.30, stop 86.73; 41 shares worth \u20b93,743.",
+   "Market tone this morning: Weak. US markets averaged -0.40% at the last close. Asia averaged -0.51%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Filled at the open of 2026-11-13. Resized to fit the Rs 1,00,000 account."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9187",
+    "0.18% of the account"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b93,743."
+ },
+ "G1": {
+  "horizon": "signal",
+  "headline": "PNB long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%.",
+   "Brent crude 95.84 (+0.02%)."
+  ],
+  "data": [
+   "Entry 141.70, stop 136.08; 56 shares worth \u20b97,935.",
+   "Market tone this morning: Weak. US markets averaged -0.40% at the last close. Asia averaged -0.51%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Conviction 0.8; one tranche; fills at the next open Resized to fit the Rs 1,00,000 account."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9315",
+    "0.31% of the account"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b97,935."
+ },
+ "S1": {
+  "horizon": "swing",
+  "headline": "PNB long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%.",
+   "Brent crude 95.84 (+0.02%)."
+  ],
+  "data": [
+   "Entry 138.70, stop 131.76, target 166.44; 13 shares worth \u20b91,803.",
+   "Market tone this morning: Weak. US markets averaged -0.40% at the last close. Asia averaged -0.51%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Filled at the open of 2026-11-12. Resized to fit the Rs 1,00,000 account."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b990",
+    "0.09% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9361",
+    "4.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b91,803."
+ },
+ "S2": {
+  "horizon": "swing",
+  "headline": "GAIL long",
+  "news": [
+   "US markets averaged -0.40% at the last close.",
+   "Asia averaged -0.51%.",
+   "Brent crude 95.84 (+0.02%)."
+  ],
+  "data": [
+   "Entry 188.99, stop 179.54, target 226.79; 9 shares worth \u20b91,701.",
+   "Market tone this morning: Weak. US markets averaged -0.40% at the last close. Asia averaged -0.51%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Filled at the open of 2026-11-12. Resized to fit the Rs 1,00,000 account."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b985",
+    "0.08% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9340",
+    "4.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b91,701."
+ }
+}

@@ -1,52 +1,156 @@
 {
  "trades": [
   {
-   "id": "C261118-31",
+   "id": "C261119-33",
    "desk": "CRYPTO",
    "strategy": "crypto_dip_bounce",
-   "label": "DOGE long",
+   "label": "BTC long",
    "side": "LONG",
-   "entry": 0.0581,
-   "last": 0.058869,
+   "entry": 62605.1,
+   "last": 62872.9,
    "qty": 2500,
    "status": "OPEN",
-   "pnl_rs": 23.09,
+   "pnl_rs": 0.69,
    "exit": "",
    "why": "",
-   "day": "2026-11-18",
-   "opened": "21:51:54",
+   "day": "2026-11-19",
+   "opened": "05:52:01",
    "closed": "",
-   "ts": 1795018915.594842,
-   "symbol": "DOGE",
-   "stop": 0.057244,
-   "target_px": 0.059859,
+   "ts": 1795047721.8293037,
+   "symbol": "BTC",
+   "stop": 61666.0235,
+   "target_px": 64483.253,
+   "horizon": "intraday",
    "risk_class": "Intraday spot",
    "margin_rs": 2500,
-   "reason": "-3.7% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
+   "thesis": {
+    "horizon": "intraday",
+    "headline": "BTC long",
+    "news": [
+     "US markets averaged -0.40% at the last close.",
+     "Asia averaged -0.51%."
+    ],
+    "data": [
+     "BTC at $62,605.10, -0.60% over the last 24 hours; 24-hour range $62,000.00 to $64,874.50.",
+     "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+    ],
+    "strategy": "Buy a coin that has dropped and started to recover.",
+    "why": [
+     "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+     "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+    ],
+    "numbers": [
+     [
+      "Entry",
+      "62,605.10",
+      "Price when the paper trade was opened"
+     ],
+     [
+      "Stop (exit if wrong)",
+      "61,666.02",
+      "Costs about \u20b938"
+     ],
+     [
+      "Target (exit if right)",
+      "64,483.25",
+      "Earns about \u20b975"
+     ],
+     [
+      "Reward for the risk",
+      "2.0 to 1",
+      "Target gain divided by stop loss"
+     ],
+     [
+      "Needs to be right",
+      "33% of the time",
+      "The win rate this reward-to-risk must beat to break even, before costs"
+     ],
+     [
+      "Capital tied up",
+      "\u20b92,500",
+      "2% of the account"
+     ]
+    ],
+    "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+    "viability": "Needs \u20b92,500 to hold."
+   },
+   "reason": "-3.5% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
   },
   {
-   "id": "C261118-32",
+   "id": "C261119-34",
    "desk": "CRYPTO",
    "strategy": "crypto_dip_bounce",
-   "label": "ADA long",
+   "label": "XRP long",
    "side": "LONG",
-   "entry": 0.1501,
-   "last": 0.152029,
+   "entry": 0.968,
+   "last": 0.96395,
    "qty": 2500,
    "status": "OPEN",
-   "pnl_rs": 22.13,
+   "pnl_rs": -20.46,
    "exit": "",
    "why": "",
-   "day": "2026-11-18",
-   "opened": "22:15:43",
+   "day": "2026-11-19",
+   "opened": "06:15:55",
    "closed": "",
-   "ts": 1795020344.460309,
-   "symbol": "ADA",
-   "stop": 0.147847,
-   "target_px": 0.154601,
+   "ts": 1795049156.2050946,
+   "symbol": "XRP",
+   "stop": 0.953529,
+   "target_px": 0.997092,
+   "horizon": "intraday",
    "risk_class": "Intraday spot",
    "margin_rs": 2500,
-   "reason": "-4.0% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
+   "thesis": {
+    "horizon": "intraday",
+    "headline": "XRP long",
+    "news": [
+     "US markets averaged -0.40% at the last close.",
+     "Asia averaged -0.51%."
+    ],
+    "data": [
+     "XRP at $0.97, +0.17% over the last 24 hours; 24-hour range $0.95 to $1.01.",
+     "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+    ],
+    "strategy": "Buy a coin that has dropped and started to recover.",
+    "why": [
+     "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+     "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+    ],
+    "numbers": [
+     [
+      "Entry",
+      "0.97",
+      "Price when the paper trade was opened"
+     ],
+     [
+      "Stop (exit if wrong)",
+      "0.95",
+      "Costs about \u20b938"
+     ],
+     [
+      "Target (exit if right)",
+      "1.00",
+      "Earns about \u20b975"
+     ],
+     [
+      "Reward for the risk",
+      "2.0 to 1",
+      "Target gain divided by stop loss"
+     ],
+     [
+      "Needs to be right",
+      "33% of the time",
+      "The win rate this reward-to-risk must beat to break even, before costs"
+     ],
+     [
+      "Capital tied up",
+      "\u20b92,500",
+      "2% of the account"
+     ]
+    ],
+    "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+    "viability": "Needs \u20b92,500 to hold."
+   },
+   "reason": "-3.8% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
   }
  ],
  "seen": {
@@ -70,8 +174,10 @@
   "2026-11-18|ETH": "crypto_dip_bounce",
   "2026-11-18|SOL": "crypto_dip_bounce",
   "2026-11-18|DOGE": "crypto_dip_bounce",
-  "2026-11-18|ADA": "crypto_dip_bounce"
+  "2026-11-18|ADA": "crypto_dip_bounce",
+  "2026-11-19|BTC": "crypto_dip_bounce",
+  "2026-11-19|XRP": "crypto_dip_bounce"
  },
- "seq": 32,
+ "seq": 34,
  "rebased": true
 }

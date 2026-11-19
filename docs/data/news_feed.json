@@ -1,21 +1,5 @@
 [
  {
-  "time": "18 Nov 10:13",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Nifty rises 147 points despite Asian sell-off; Banks, FMCG support Sensex - BusinessLine",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 10:23",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Sembcorp Green Infra receives SEBI approval for Rs 37.5 billion IPO - Powerline Magazine",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
   "time": "18 Nov 10:28",
   "source": "BusinessStandard",
   "category": "CRASH/SHOCK",
@@ -476,6 +460,22 @@
   "source": "ET",
   "category": "CRASH/SHOCK",
   "headline": "Nasdaq turns red as Nvidia-led AI relief fails to lift broader market; Dow tumbles 600 pts: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 01:10",
+  "source": "ET",
+  "category": "RBI-POLICY",
+  "headline": "Fed policymakers focused on inflation risks in October, with some seeing need for bigger rate hike",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "19 Nov 06:34",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Global Market Today: Asian shares mixed as commodity prices tumble",
   "event": "yes",
   "hint": "SHORT-lean headline"
  }

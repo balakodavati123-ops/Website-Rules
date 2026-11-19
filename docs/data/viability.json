@@ -1,0 +1,65 @@
+{
+ "updated_at": "2026-11-19T06:50:05+05:30",
+ "skipped": [],
+ "reference": [
+  {
+   "name": "Crude oil (100 barrels)",
+   "contract": "CRUDEOIL FUT 18 DEC 26",
+   "margin": 249175
+  },
+  {
+   "name": "Crude oil mini (10 barrels)",
+   "contract": "CRUDEOILM FUT 18 DEC 26",
+   "margin": 24917
+  },
+  {
+   "name": "Natural gas (1,250 mmBtu)",
+   "contract": "NATURALGAS FUT 24 NOV 26",
+   "margin": 80719
+  },
+  {
+   "name": "Natural gas mini (250 mmBtu)",
+   "contract": "NATGASMINI FUT 24 NOV 26",
+   "margin": 16148
+  },
+  {
+   "name": "Gold (1 kg)",
+   "contract": "GOLD FUT 04 DEC 26",
+   "margin": 1236150
+  },
+  {
+   "name": "Gold mini (100 g)",
+   "contract": "GOLDM FUT 04 DEC 26",
+   "margin": 123684
+  },
+  {
+   "name": "Gold petal (1 g)",
+   "contract": "GOLDPETAL FUT 30 NOV 26",
+   "margin": 1249
+  },
+  {
+   "name": "Silver (30 kg)",
+   "contract": "SILVER FUT 04 DEC 26",
+   "margin": 834423
+  },
+  {
+   "name": "Silver mini (5 kg)",
+   "contract": "SILVERM FUT 30 NOV 26",
+   "margin": 137946
+  },
+  {
+   "name": "Silver micro (1 kg)",
+   "contract": "SILVERMIC FUT 30 NOV 26",
+   "margin": 27596
+  }
+ ],
+ "ref_day": "2026-11-19",
+ "limits": {
+  "swing": 22000,
+  "signal": 5000,
+  "intraday": 6000,
+  "FNO": 50000,
+  "COMMODITY": 25000,
+  "CRYPTO": 5000
+ }
+}
