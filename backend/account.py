@@ -8,13 +8,13 @@ from __future__ import annotations
 START = 100000.0
 # Limits, not reservations: no desk may tie up more than its share, and every desk is also held to the cash actually free.
 # Real broker margins on this account size: one NIFTY spread needs about Rs 38,000, a crude oil mini lot about Rs 25,000, so F&O and commodities get the larger limits.
-BUDGET = {"swing": 0.22, "signal": 0.05, "intraday": 0.06, "FNO": 0.50, "COMMODITY": 0.25, "CRYPTO": 0.05}
-LABEL = {"swing": "Swing (daily bars)", "signal": "Signal desk", "intraday": "Intraday equities", "FNO": "F&O margin", "COMMODITY": "Commodities margin", "CRYPTO": "Crypto"}
+BUDGET = {"swing": 0.22, "signal": 0.05, "intraday": 0.06, "scalp": 0.20, "FNO": 0.50, "COMMODITY": 0.25, "CRYPTO": 0.05}
+LABEL = {"swing": "Swing (daily bars)", "signal": "Signal desk", "intraday": "Intraday equities", "scalp": "Scalping (intraday margin)", "FNO": "F&O margin", "COMMODITY": "Commodities margin", "CRYPTO": "Crypto"}
 
 
 def bucket(t: dict) -> str:
     if t["desk"] == "EQUITY":
-        return "swing" if t.get("opened") == "swing" else "signal" if t.get("opened") == "signal" else "intraday"
+        return "swing" if t.get("opened") == "swing" else "signal" if t.get("opened") == "signal" else "scalp" if str(t.get("strategy", "")).startswith("scalp") else "intraday"
     return t["desk"]
 
 
@@ -22,7 +22,7 @@ def invested(t: dict) -> float:
     """What the position ties up: cost for shares, the notional put in for crypto, margin for futures and options."""
     try:
         if t["desk"] == "EQUITY":
-            return float(t["entry"] or 0) * float(t["qty"] or 0)
+            return float(t["entry"] or 0) * float(t["qty"] or 0) / (float(t.get("leverage") or 1) or 1)       # intraday margin trades tie up a fraction of the stock's value
         if t["desk"] == "CRYPTO":
             return float(t["qty"] or 0)
         return float(t.get("margin_rs") or 0)

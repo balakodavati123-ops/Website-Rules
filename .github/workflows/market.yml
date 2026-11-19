@@ -32,7 +32,7 @@ jobs:
       - name: Resume the live books from the data branch
         run: |
           if git fetch -q --depth=1 origin data 2>/dev/null; then
-            for f in live_book desk_book trade_archive strategy_stats forecast_history participants forecast; do git show FETCH_HEAD:$f.json > docs/data/$f.json 2>/dev/null || true; done
+            for f in live_book desk_book trade_archive strategy_stats forecast_history participants forecast gateway; do git show FETCH_HEAD:$f.json > docs/data/$f.json 2>/dev/null || true; done
           fi
       - name: Run the desks
         env:
@@ -40,6 +40,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           UPSTOX_EXEC_TOKEN: ${{ secrets.UPSTOX_EXEC_TOKEN }}
+          INDSTOCKS_TOKEN: ${{ secrets.INDSTOCKS_TOKEN }}          # optional, read-only use here: funds, margin and charges for the dry-run; orders cannot be sent from GitHub (no static IP)
           EXEC_MODE: ${{ vars.EXEC_MODE }}
           EXEC_MAX_ORDER_RS: ${{ vars.EXEC_MAX_ORDER_RS }}
           EXEC_MAX_DAY_LOSS_RS: ${{ vars.EXEC_MAX_DAY_LOSS_RS }}

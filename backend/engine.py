@@ -31,6 +31,9 @@ import forecast as FC       # noqa: E402
 import smart_money as SM    # noqa: E402
 import horizons as HZ       # noqa: E402
 import thesis as TH         # noqa: E402
+import scalp as SC          # noqa: E402
+import gateway as GW        # noqa: E402
+import indstocks as IND     # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = Path(os.environ.get("DESK_DOCS") or ROOT / "docs" / "data")
@@ -88,7 +91,7 @@ def close_stale(eq: dict, xb: dict, today: str) -> None:
         if t["status"] == "OPEN" and t["day"] != today:
             I.close_trade(t, t["last"], "carried over: closed late at the last price")
     for t in xb["trades"]:
-        if t["status"] == "OPEN" and t["day"] != today and t["desk"] in ("FNO", "COMMODITY") and t.get("horizon", "daily") in ("daily", "intraday"):
+        if t["status"] == "OPEN" and t["day"] != today and (t["desk"] in ("FNO", "COMMODITY") and t.get("horizon", "daily") in ("daily", "intraday") or t.get("strategy") == SC.STRATEGY):
             D.finish(t, t["last"], "carried over: closed late at the last price", now, t["pnl_rs"])
 
 
@@ -209,6 +212,12 @@ def run() -> None:
     intra: dict = load("intraday.json", {"day": "", "s": {}})
     last_intra, key_of = 0.0, {}
     M = MG.Margin(token) if token else None
+    ind_token = os.environ.get("INDSTOCKS_TOKEN", "").strip()
+    ind = IND.Client(ind_token) if ind_token else None                 # INDstocks: reads only unless the gateway is switched to live on a whitelisted host
+    master = IND.Master()
+    scalp_bars: dict = {}
+    bars_at, bars_thread = [0.0], [None]
+    gw = GW.Gateway(DOCS / "gateway.json", ind, master)
     fc_try = [0.0]
     fc, fc_hist = load("forecast.json", {}), load("forecast_history.json", [])
     sm, parts = load("smart_money.json", {}), load("participants.json", {})
@@ -329,6 +338,12 @@ def run() -> None:
         if rows:
             via_ref.update(rows=rows, day=at.strftime("%Y-%m-%d"))
 
+    def load_master() -> None:
+        if ind and not len(master):
+            txt = ind.instruments("equity")
+            if txt:
+                master.by.update(IND.Master(txt).by)
+
     def compose():
         live_open = [t for t in unify_equity(eq) + xb["trades"] if t["status"] == "OPEN"]
         books = L.swing(load("paper_ledger.json", [])) + L.weekly_fno(load("fo_ledger.json", [])) + L.signals(load("signal_ledger.json", []))
@@ -355,10 +370,11 @@ def run() -> None:
         save("all_trades.json", [{k: v for k, v in t.items() if k != "thesis"} | ({"has_thesis": True} if t.get("thesis") else {}) for t in allt[:4000]])
         stats = D.learn(list(archive.values()) + [t for t in books if t["status"] in ("WIN", "LOSS")])
         save("strategy_stats.json", stats)
-        try:                                           # the bridge to the broker: off unless EXEC_MODE is set
-            X.run(allt, stats, DOCS / "executions.json")
+        try:                                           # the gateway to the broker: dry-run unless EXEC_MODE=live and every live condition holds
+            gws = gw.process(allt, stats, datetime.now(IST), {k: v[0] for k, v in qs.items()})
+            status["desks"]["gateway"] = f"{gws.get('mode')} · {sum(1 for x in gws['intents'].values() if x['status'] != 'REJECTED')} intents, {sum(1 for x in gws['intents'].values() if x['status'] == 'REJECTED')} refused"
         except Exception as e:
-            status["desks"]["execution"] = f"error: {str(e)[:100]}"
+            status["desks"]["gateway"] = f"error: {str(e)[:100]}"
         status["open"] = sum(t["status"] == "OPEN" for t in allt)
         save("live_status.json", status)
         nf = (snap.get("indices") or {}).get("Nifty 50", {}).get("last")
@@ -408,6 +424,28 @@ def run() -> None:
         elif ses["equity"]:
             info["equity"] = "no token: Yahoo fallback runs in intraday.py"
         T["equity"] = round(time.time() - it0, 1)
+        if token and ses["equity"] and rows_now:                         # the scalping desk: 1-minute bars for the most liquid names, fetched once a minute off the price loop
+            try:
+                if not (bars_thread[0] and bars_thread[0].is_alive()) and time.time() - bars_at[0] >= 60:
+                    bars_at[0] = time.time()
+
+                    def _bars(syms=SC.universe(rows_now) + [t["symbol"] for t in xb["trades"] if t.get("strategy") == SC.STRATEGY and t["status"] == "OPEN"]):
+                        for sy in dict.fromkeys(syms):
+                            if sy in key_of:
+                                try:
+                                    scalp_bars[sy] = U.intraday(token, key_of[sy], 1)[:-1]       # drop the minute still forming
+                                except Exception:
+                                    pass
+                    bars_thread[0] = threading.Thread(target=_bars, daemon=True)
+                    bars_thread[0].start()
+                rowd = {r["symbol"]: r for r in rows_now}
+                SC.step(xb, now, {"rows": rowd, "bars": {k: v for k, v in scalp_bars.items() if k in rowd}, "room": rm["scalp"], "acct": acct[0], "paused": SC.STRATEGY in paused,
+                                  "tick": lambda s_: (master.get(s_) or {}).get("tick", 0.05), "leverage": lambda s_: (master.get(s_) or {}).get("leverage", 5.0), "news": make_env()["news"]})
+                info["scalp"] = f"{len(scalp_bars)} names scanned, bars refreshed {int(time.time() - bars_at[0])} s ago"
+            except Exception as e:
+                import traceback
+                traceback.print_exc()
+                info["scalp"] = f"error: {str(e)[:100]}"
         if token and ses["equity"] and hhmm >= "09:16" and not filled:
             try:                                   # pending paper orders fill at today's real open, not a day late
                 lf = DOCS / "paper_ledger.json"
@@ -570,7 +608,7 @@ def run() -> None:
             if not (news_thread and news_thread.is_alive()):        # the slow fetches (news, world markets, NSE files) can take a while from a cloud address: never hold up the price loop for them
                 def _slow(at=now):
                     for name_, fn_ in (("news", lambda: (lambda n2: (news.clear(), news.update(n2)) if n2 else None)(I.filings_news())), ("news_feed", lambda: I.update_news_feed(at)),
-                                       ("world", lambda: refresh_world(at)), ("smart_money", lambda: token and refresh_smart(at)), ("margin_reference", lambda: margin_reference(at))):
+                                       ("world", lambda: refresh_world(at)), ("smart_money", lambda: token and refresh_smart(at)), ("margin_reference", lambda: margin_reference(at)), ("indstocks_master", lambda: load_master())):
                         try:
                             fn_()
                         except Exception as e:

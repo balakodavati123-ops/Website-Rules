@@ -29,4 +29,6 @@ def ticket(t: dict) -> tuple[str, str]:
         hold = "Held position: keep it until the target, stop or expiry rule fires; the exit alert tells you when." if hz in ("weekly", "monthly") else "Intraday: flat by 15:15."
         return f"F&O {hz}: {t['label']}", f"{legs}\nLot {t.get('lot')} x {t.get('qty')}. Max loss {t.get('max_loss_rs') or 'see margin'}, margin {t.get('margin_rs')}.\n{hold}\n{t.get('reason', '')}"
     side = "SELL (short, intraday)" if t["side"] == "SHORT" else "BUY"
+    if t.get("horizon") == "scalp":
+        return f"SCALP {side}: {t['label'].rsplit(' ', 1)[0]}", f"Qty {t['qty']} at about {t['entry']}, product INTRADAY. Stop-loss {t.get('stop')}, target {t.get('target_px')}. Out within {t.get('hold_min')} minutes at the latest.\n{t.get('reason', '')}"
     return f"{side}: {t['label'].rsplit(' ', 1)[0]}", f"Qty {t['qty']} at about {t['entry']} (use a limit order a hair through the market). Stop {t.get('stop')}. Exit by 15:10.\n{t.get('reason', '')}"
