@@ -9,12 +9,32 @@
    "symbol": "LTFOODS",
    "side": "LONG",
    "entry": 448.75,
-   "last": 446.05,
+   "last": 443.5,
    "qty": 11,
    "stop": 444.26,
    "basis": "price only",
    "reason": "+7.0% move near the day high, no filing seen",
    "label": "LTFOODS long",
+   "status": "LOSS",
+   "pnl_rs": -62.69,
+   "exit": 443.5,
+   "why": "stop",
+   "closed": "10:54"
+  },
+  {
+   "id": 2,
+   "day": "2026-11-19",
+   "time": "10:54",
+   "kind": "stock",
+   "symbol": "PAYTM",
+   "side": "SHORT",
+   "entry": 1726.5,
+   "last": 1719.7,
+   "qty": 2,
+   "stop": 1743.77,
+   "basis": "price only",
+   "reason": "-8.7% move near the day low, no filing seen",
+   "label": "PAYTM short",
    "status": "OPEN",
    "pnl_rs": 0,
    "exit": "",
@@ -22,7 +42,8 @@
   }
  ],
  "seen": {
-  "LTFOODS": "LONG"
+  "LTFOODS": "LONG",
+  "PAYTM": "SHORT"
  },
- "seq": 1
+ "seq": 2
 }

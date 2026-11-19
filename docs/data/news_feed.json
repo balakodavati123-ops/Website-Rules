@@ -1,117 +1,5 @@
 [
  {
-  "time": "18 Nov 11:26",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Polycab, KEI, RR Kabel & others fall up to 3% as copper plunges for 5th day",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 11:36",
-  "source": "GoogleNews",
-  "category": "DEAL/ORDER",
-  "headline": "Price Action: Ashoka Buildcon up 4% on winning NHAI project; Advait Energy jumps 2% post order win - TradingView",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 11:47",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Hindalco, SAIL, Hindustan Zinc shares in focus as NIFTY Metal tumbles 2% on Nov 18; check details - Upstox",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 11:54",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Stock Market Today Live Updates: BSE Sensex tumbles over 470 points, NSE Nifty50 trades below 25300 - The Times of India",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 11:59",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "SanDisk stock selloff deepens: What's driving the crash?",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 12:25",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Metal meltdown: SAIL, NALCO, Hindalco drag Nifty Metal 2% lower; here's why",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 12:25",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Metal meltdown: SAIL, NALCO, Hindalco drag Nifty Metal 2% lower; here's why - Business Standard",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 13:39",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Stock Market Today: Sensex Falls 620 Points, Nifty 50 Below 25,200; Titan Tanks 5%, Caplin Point 8% - NDTV Profit",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 13:39",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Cooling crude lifts bond prices, but inflation may prompt 50-bps RBI rate hike: PGIM India's Puneet Pal - The Economic Times",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 13:54",
-  "source": "BusinessStandard",
-  "category": "DEAL/ORDER",
-  "headline": "Multibagger ACME Solar jumps 3% on order win, trades 113% up from Jan lows",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 13:59",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "SENSEX tumbles 650 pts, NIFTY50 below 25,200 in noon deals; IIFL Finance, SpiceJet, Biocon among buzzing stocks - Upstox",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 14:04",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex crashes over 700 points, Nifty slips below 25,200; Market cap takes a major hit - Punjab Newsline",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 14:12",
-  "source": "Mint",
-  "category": "EARNINGS",
-  "headline": "Metal stocks to buy! APL Apollo Tubes, Hindalco: Axis Sec lists 2 conviction picks post Q2 results 2026; check targets",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "18 Nov 14:24",
-  "source": "BusinessStandard",
-  "category": "GEOPOLITICS",
-  "headline": "Brent's war premium fades, but lingering risks keep $90 intact: Kotak Neo",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
   "time": "18 Nov 14:24",
   "source": "GoogleNews",
   "category": "RBI-POLICY",
@@ -478,5 +366,117 @@
   "headline": "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com",
   "event": "yes",
   "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 09:47",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Sensex, Nifty open flat amid Fed rate hike concerns; investors remain cautious - ANI News",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "19 Nov 09:52",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Polycab, KEI, RR Kabel & others fall up to 3% as copper plunges for 5th day",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 10:02",
+  "source": "GoogleNews",
+  "category": "DEAL/ORDER",
+  "headline": "LT Foods snaps 4-day losing streak, jumps 8% on plan to acquire MK Foods - Business Standard",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "19 Nov 10:07",
+  "source": "GoogleNews",
+  "category": "DEAL/ORDER",
+  "headline": "Nifty 500: LT Foods surges 9% on US acquisition; Payment aggregators fall on UPI MDR uncertainty - CNBC TV18",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "19 Nov 10:13",
+  "source": "BusinessStandard",
+  "category": "DEAL/ORDER",
+  "headline": "LT Foods snaps 4-day losing streak, jumps 8% on plan to acquire MK Foods",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "19 Nov 10:13",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Sensex, Nifty open flat amid Fed rate hike concerns; investors remain cautious - ChiniMandi",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "19 Nov 10:18",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Metal meltdown: SAIL, NALCO, Hindalco drag Nifty Metal 2% lower; here's why",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 10:23",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Metal meltdown: SAIL, NALCO, Hindalco drag Nifty Metal 2% lower; here's why - Business Standard",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 10:28",
+  "source": "BusinessStandard",
+  "category": "GEOPOLITICS",
+  "headline": "Oil steady as supply surplus softens sentiment though Gulf war supports",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "19 Nov 10:33",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Paytm share price crash: Payment stock slides 7% on UPI MDR rollout delay; Pine Labs, One Mobikwik Systems also tumble",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 10:33",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Stock markets fall in early trade dragged by IT firms, US Fed rate hike jitters - Deccan Herald",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "19 Nov 10:38",
+  "source": "BusinessStandard",
+  "category": "DEAL/ORDER",
+  "headline": "Multibagger ACME Solar jumps 3% on order win, trades 113% up from Jan lows",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "19 Nov 10:58",
+  "source": "GoogleNews",
+  "category": "GEOPOLITICS",
+  "headline": "ICICI-Videocon Loan Case: Why Did Bombay HC Quash Sanction To Prosecute Chanda Kochhar? - LawBeat",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "19 Nov 10:58",
+  "source": "GoogleNews",
+  "category": "GEOPOLITICS",
+  "headline": "Bank's Board Cannot Grant PC Act Prosecution Sanction; Only RBI Is Competent Authority: Bombay High Court - LiveLawBiz",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
  }
 ]

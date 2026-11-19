@@ -1,4 +1,155 @@
 {
+ "E261119-2": {
+  "horizon": "intraday",
+  "headline": "PAYTM short",
+  "news": [
+   "US markets averaged -0.31% at the 18/11 close.",
+   "Asia averaged -0.92%.",
+   "Brent crude 88.96 (-4.49%)."
+  ],
+  "data": [
+   "Entry 1,726.50, stop 1,743.77; 2 shares worth \u20b93,453.",
+   "Market tone this morning: Weak. US markets averaged -0.31% at the 18/11 close. Asia averaged -0.92%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: -8.7% move near the day low, no filing seen"
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b935",
+    "0.03% of the account"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b93,453."
+ },
+ "F261119-37": {
+  "horizon": "daily",
+  "headline": "Buy 25,250 CE, Buy 25,250 PE \u00b7 NIFTY 2026-11-23",
+  "news": [
+   "US markets averaged -0.31% at the 18/11 close.",
+   "Asia averaged -0.92%.",
+   "Brent crude 88.96 (-4.49%).",
+   "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com (GoogleNews)",
+   "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh (BusinessStandard)",
+   "Sensex Falls 500 Pts, Nifty Slips As Auto, Metal Stocks Lead Sell-off - TradingView (GoogleNews)",
+   "6 companies filed results or hold board meetings today."
+  ],
+  "data": [
+   "NIFTY 25,229, +0.00% on the previous close. India VIX 15.9.",
+   "Implied volatility at the money 13.3% a year. Over 4 days to 2026-11-23 that prices a one-standard-deviation move of about \u00b1352 points (\u00b11.4%), so the market gives roughly a 68% chance of finishing between 24,877 and 25,581.",
+   "Option positioning: put-to-call ratio 0.87, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,000 (a floor), max pain 25,200.",
+   "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+   "Our forecast for today: Bearish (score -0.22); likely range 24,957 to 25,465."
+  ],
+  "strategy": "Buy the at-the-money call and put.",
+  "why": [
+   "Used when a big move is plausible but its direction is not: either leg can pay for both. It loses if the index drifts, because time decay eats the premium."
+  ],
+  "numbers": [
+   [
+    "Net debit",
+    "291.3 points = \u20b918,934 per lot",
+    "What you receive (or pay) up front"
+   ],
+   [
+    "Most you can make",
+    "\u20b9474,398",
+    "At expiry, if everything goes right"
+   ],
+   [
+    "Most you can lose",
+    "\u20b918,663",
+    "At expiry, if everything goes wrong (fixed by the bought options)"
+   ],
+   [
+    "Break-even at expiry",
+    "24,959 and 25,541",
+    "Where the structure stops losing money"
+   ],
+   [
+    "Chance of profit at expiry",
+    "41%",
+    "From the options market's own implied volatility; not our edge, the market's odds"
+   ],
+   [
+    "Expected move to expiry",
+    "\u00b1352 points",
+    "4 days at 13.3% implied volatility"
+   ],
+   [
+    "Reward for the risk",
+    "25.42 to 1",
+    "Best case divided by worst case"
+   ],
+   [
+    "Margin the broker asks",
+    "\u20b918,636",
+    "18% of the account (Upstox margin calculator)"
+   ],
+   [
+    "Our exit levels",
+    "Take profit at \u20b99,467, cut at \u20b96,627",
+    "Rupees on one lot, before the exit rule below"
+   ]
+  ],
+  "risk": "Take profit at 50% of the debit, cut at 35%, and be flat by 15:15 whatever happens. Fails when: A quiet day. The cost of both options is the most you can lose.",
+  "viability": "One lot of 65 needs \u20b918,636 of margin, checked with the broker's calculator when the trade was booked."
+ },
+ "M261119-36": {
+  "horizon": "intraday",
+  "headline": "Natural gas mini long",
+  "news": [
+   "US markets averaged -0.31% at the 18/11 close.",
+   "Asia averaged -0.92%.",
+   "Brent crude 88.96 (-4.49%)."
+  ],
+  "data": [
+   "Natural gas mini (NATGASMINI FUT 24 NOV 26) at 316.00, +0.83% on the previous close; day range 314.70 to 316.80, price is 0.25% from the day high.",
+   "Lot: 250 unit(s) \u00d7 1 lot(s); contract value \u20b979,000."
+  ],
+  "strategy": "A futures position in the direction the market is already moving hard.",
+  "why": [
+   "Used when a commodity is up or down 0.8% or more and sitting at its day extreme: strong days tend to extend into the evening session when global markets open.",
+   "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|574320)."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "316.00",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "314.10",
+    "Costs about \u20b9475"
+   ],
+   [
+    "Target (exit if right)",
+    "319.79",
+    "Earns about \u20b9948"
+   ],
+   [
+    "Reward for the risk",
+    "2.0 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "33% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b922,149",
+    "22% of the account"
+   ]
+  ],
+  "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
+  "viability": "Needs \u20b922,149 to hold (Upstox margin calculator)."
+ },
  "E261119-1": {
   "horizon": "intraday",
   "headline": "LTFOODS long",

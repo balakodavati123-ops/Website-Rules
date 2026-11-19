@@ -7,10 +7,10 @@
    "label": "BTC long",
    "side": "LONG",
    "entry": 62605.1,
-   "last": 63444.3,
+   "last": 63350.3,
    "qty": 2500,
    "status": "OPEN",
-   "pnl_rs": 23.51,
+   "pnl_rs": 19.76,
    "exit": "",
    "why": "",
    "day": "2026-11-19",
@@ -83,10 +83,10 @@
    "label": "XRP long",
    "side": "LONG",
    "entry": 0.968,
-   "last": 0.97369,
+   "last": 0.97366,
    "qty": 2500,
    "status": "OPEN",
-   "pnl_rs": 4.7,
+   "pnl_rs": 4.62,
    "exit": "",
    "why": "",
    "day": "2026-11-19",
@@ -153,64 +153,63 @@
    "reason": "-3.8% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
   },
   {
-   "id": "M261119-35",
+   "id": "M261119-36",
    "desk": "COMMODITY",
    "strategy": "mcx_momentum",
-   "label": "Gold 1 g short",
-   "side": "SHORT",
-   "entry": 12952.0,
-   "last": 13017.0,
-   "qty": 4,
+   "label": "Natural gas mini long",
+   "side": "LONG",
+   "entry": 316.0,
+   "last": 315.3,
+   "qty": 1,
    "status": "OPEN",
-   "pnl_rs": -285.9,
+   "pnl_rs": -214.5,
    "exit": "",
    "why": "",
    "day": "2026-11-19",
-   "opened": "09:15:08",
+   "opened": "09:39:32",
    "closed": "",
-   "ts": 1795059912.2178295,
-   "key": "MCX_FO|574841",
-   "mult": 1.0,
-   "symbol": "GOLDPETAL FUT 30 NOV 26",
-   "stop": 13029.71,
-   "target_px": 12796.58,
+   "ts": 1795061376.092414,
+   "key": "MCX_FO|574320",
+   "mult": 250.0,
+   "symbol": "NATGASMINI FUT 24 NOV 26",
+   "stop": 314.1,
+   "target_px": 319.79,
    "horizon": "intraday",
    "risk_class": "Intraday momentum",
-   "margin_rs": 4836,
+   "margin_rs": 22149,
    "margin_src": "Upstox margin calculator",
    "thesis": {
     "horizon": "intraday",
-    "headline": "Gold 1 g short",
+    "headline": "Natural gas mini long",
     "news": [
      "US markets averaged -0.31% at the 18/11 close.",
-     "Asia averaged -0.81%.",
-     "Brent crude 89.04 (-4.40%)."
+     "Asia averaged -0.92%.",
+     "Brent crude 88.96 (-4.49%)."
     ],
     "data": [
-     "Gold 1 g (GOLDPETAL FUT 30 NOV 26) at 12,952.00, -1.05% on the previous close; day range 12,948.00 to 13,046.00, price is 0.03% from the day low.",
-     "Lot: 1 unit(s) \u00d7 4 lot(s); contract value \u20b951,808.",
-     "Global reference: Gold 3702.9 (-4.17% at the 11-18 close)."
+     "Natural gas mini (NATGASMINI FUT 24 NOV 26) at 316.00, +0.83% on the previous close; day range 314.70 to 316.80, price is 0.25% from the day high.",
+     "Lot: 250 unit(s) \u00d7 1 lot(s); contract value \u20b979,000."
     ],
     "strategy": "A futures position in the direction the market is already moving hard.",
     "why": [
      "Used when a commodity is up or down 0.8% or more and sitting at its day extreme: strong days tend to extend into the evening session when global markets open.",
-     "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|574841)."
+     "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|574320)."
     ],
     "numbers": [
      [
       "Entry",
-      "12,952.00",
+      "316.00",
       "Price when the paper trade was opened"
      ],
      [
       "Stop (exit if wrong)",
-      "13,029.71",
-      "Costs about \u20b9311"
+      "314.10",
+      "Costs about \u20b9475"
      ],
      [
       "Target (exit if right)",
-      "12,796.58",
-      "Earns about \u20b9622"
+      "319.79",
+      "Earns about \u20b9948"
      ],
      [
       "Reward for the risk",
@@ -224,14 +223,136 @@
      ],
      [
       "Capital tied up",
-      "\u20b94,836",
-      "5% of the account"
+      "\u20b922,149",
+      "22% of the account"
      ]
     ],
     "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
-    "viability": "Needs \u20b94,836 to hold (Upstox margin calculator)."
+    "viability": "Needs \u20b922,149 to hold (Upstox margin calculator)."
    },
-   "reason": "-1.0% on the previous close and within 0.3% of the day low; stop 0.6%, target 1.2%"
+   "reason": "+0.8% on the previous close and within 0.3% of the day high; stop 0.6%, target 1.2%"
+  },
+  {
+   "id": "F261119-37",
+   "desk": "FNO",
+   "strategy": "long_straddle",
+   "label": "NIFTY long straddle \u00b7 11-23",
+   "side": "LONG",
+   "entry": -291.3,
+   "last": -4.45,
+   "qty": 1,
+   "status": "OPEN",
+   "pnl_rs": -369.25,
+   "exit": "",
+   "why": "",
+   "day": "2026-11-19",
+   "opened": "09:45:06",
+   "closed": "",
+   "ts": 1795061711.1213849,
+   "expiry": "2026-11-23",
+   "lot": 65,
+   "legs": [
+    {
+     "side": "B",
+     "strike": 25250.0,
+     "kind": "CE",
+     "entry": 125.7,
+     "last": 173.5,
+     "key": "NSE_FO|64453"
+    },
+    {
+     "side": "B",
+     "strike": 25250.0,
+     "kind": "PE",
+     "entry": 165.6,
+     "last": 113.35,
+     "key": "NSE_FO|64455"
+    }
+   ],
+   "horizon": "daily",
+   "underlying": "NIFTY",
+   "unit_base": 291.3,
+   "target_u": 145.65,
+   "stop_u": 101.95,
+   "risk_class": "High return \u00b7 high loss",
+   "max_gain_rs": null,
+   "max_loss_rs": 18934,
+   "margin_rs": 18636,
+   "margin_src": "Upstox margin calculator",
+   "thesis": {
+    "horizon": "daily",
+    "headline": "Buy 25,250 CE, Buy 25,250 PE \u00b7 NIFTY 2026-11-23",
+    "news": [
+     "US markets averaged -0.31% at the 18/11 close.",
+     "Asia averaged -0.92%.",
+     "Brent crude 88.96 (-4.49%).",
+     "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com (GoogleNews)",
+     "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh (BusinessStandard)",
+     "Sensex Falls 500 Pts, Nifty Slips As Auto, Metal Stocks Lead Sell-off - TradingView (GoogleNews)",
+     "6 companies filed results or hold board meetings today."
+    ],
+    "data": [
+     "NIFTY 25,229, +0.00% on the previous close. India VIX 15.9.",
+     "Implied volatility at the money 13.3% a year. Over 4 days to 2026-11-23 that prices a one-standard-deviation move of about \u00b1352 points (\u00b11.4%), so the market gives roughly a 68% chance of finishing between 24,877 and 25,581.",
+     "Option positioning: put-to-call ratio 0.87, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,000 (a floor), max pain 25,200.",
+     "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+     "Our forecast for today: Bearish (score -0.22); likely range 24,957 to 25,465."
+    ],
+    "strategy": "Buy the at-the-money call and put.",
+    "why": [
+     "Used when a big move is plausible but its direction is not: either leg can pay for both. It loses if the index drifts, because time decay eats the premium."
+    ],
+    "numbers": [
+     [
+      "Net debit",
+      "291.3 points = \u20b918,934 per lot",
+      "What you receive (or pay) up front"
+     ],
+     [
+      "Most you can make",
+      "\u20b9474,398",
+      "At expiry, if everything goes right"
+     ],
+     [
+      "Most you can lose",
+      "\u20b918,663",
+      "At expiry, if everything goes wrong (fixed by the bought options)"
+     ],
+     [
+      "Break-even at expiry",
+      "24,959 and 25,541",
+      "Where the structure stops losing money"
+     ],
+     [
+      "Chance of profit at expiry",
+      "41%",
+      "From the options market's own implied volatility; not our edge, the market's odds"
+     ],
+     [
+      "Expected move to expiry",
+      "\u00b1352 points",
+      "4 days at 13.3% implied volatility"
+     ],
+     [
+      "Reward for the risk",
+      "25.42 to 1",
+      "Best case divided by worst case"
+     ],
+     [
+      "Margin the broker asks",
+      "\u20b918,636",
+      "18% of the account (Upstox margin calculator)"
+     ],
+     [
+      "Our exit levels",
+      "Take profit at \u20b99,467, cut at \u20b96,627",
+      "Rupees on one lot, before the exit rule below"
+     ]
+    ],
+    "risk": "Take profit at 50% of the debit, cut at 35%, and be flat by 15:15 whatever happens. Fails when: A quiet day. The cost of both options is the most you can lose.",
+    "viability": "One lot of 65 needs \u20b918,636 of margin, checked with the broker's calculator when the trade was booked."
+   },
+   "reason": "NIFTY 25,229 (+0.00% on the close). Debit 291.3 points; target 50% of it, stop 35% of it; out by 15:15"
   }
  ],
  "seen": {
@@ -258,8 +379,10 @@
   "2026-11-18|ADA": "crypto_dip_bounce",
   "2026-11-19|BTC": "crypto_dip_bounce",
   "2026-11-19|XRP": "crypto_dip_bounce",
-  "2026-11-19|GOLDPETAL FUT 30 NOV 26": "SHORT"
+  "2026-11-19|GOLDPETAL FUT 30 NOV 26": "SHORT",
+  "2026-11-19|NATGASMINI FUT 24 NOV 26": "LONG",
+  "2026-11-19|long_straddle": "booked"
  },
- "seq": 35,
+ "seq": 37,
  "rebased": true
 }
