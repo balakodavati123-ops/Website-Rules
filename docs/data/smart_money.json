@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T10:58:40+05:30",
+ "updated_at": "2026-11-19T11:28:31+05:30",
  "day": "2026-11-18",
  "from": "2026-11-11",
  "participants": [
@@ -144,136 +144,136 @@
  ],
  "chains": {
   "NIFTY": {
-   "pcr": 1.13,
-   "call_oi": 184400450,
-   "put_oi": 208360815,
+   "pcr": 1.15,
+   "call_oi": 185220230,
+   "put_oi": 212446260,
    "call_wall": 26000.0,
    "put_wall": 25000.0,
    "max_pain": 25100.0,
    "call_walls": [
     [
      26000.0,
-     14560455
+     14915420
     ],
     [
      25500.0,
-     11859575
+     11853205
     ],
     [
      26500.0,
-     10062520
+     10010975
     ]
    ],
    "put_walls": [
     [
      25000.0,
-     14929720
+     15162420
     ],
     [
      25200.0,
-     12853360
+     13250250
     ],
     [
      24000.0,
-     12606425
+     12623845
     ]
    ],
    "new_calls": [
     [
      25300.0,
-     2159625
-    ],
-    [
-     25700.0,
-     1161875
+     2370745
     ],
     [
      25350.0,
-     760500
+     1152515
+    ],
+    [
+     25700.0,
+     1097135
     ]
    ],
    "new_puts": [
     [
      25200.0,
-     6694350
+     7091240
     ],
     [
      25300.0,
-     5323305
+     6646770
     ],
     [
      25100.0,
-     4694950
+     5089175
     ]
    ],
    "expiry": "2026-11-23",
-   "spot": 25295.2
+   "spot": 25322.65
   },
   "BANKNIFTY": {
-   "pcr": 1.28,
-   "call_oi": 17843520,
-   "put_oi": 22756740,
+   "pcr": 1.27,
+   "call_oi": 17885310,
+   "put_oi": 22755330,
    "call_wall": 62500.0,
    "put_wall": 60000.0,
    "max_pain": 59000.0,
    "call_walls": [
     [
      62500.0,
-     1047930
+     1040190
     ],
     [
      63000.0,
-     767070
+     779280
     ],
     [
      65000.0,
-     732330
+     705360
     ]
    ],
    "put_walls": [
     [
      60000.0,
-     1294260
+     1286610
     ],
     [
      61000.0,
-     1162230
+     1159830
     ],
     [
-     58000.0,
-     1102680
+     62000.0,
+     1098540
     ]
    ],
    "new_calls": [
     [
      62500.0,
-     226500
+     218760
     ],
     [
      62400.0,
-     136530
+     176520
     ],
     [
      62600.0,
-     78060
+     76080
     ]
    ],
    "new_puts": [
     [
      62000.0,
-     291240
+     295980
     ],
     [
      62500.0,
-     263430
+     283320
     ],
     [
      62300.0,
-     206250
+     219450
     ]
    ],
    "expiry": "2026-11-23",
-   "spot": 62365.95
+   "spot": 62452.45
   }
  },
  "explain": [
@@ -309,7 +309,7 @@
   "Domestic institutions hold +114,129 net puts and +22,914 futures: the puts are insurance on the funds' share portfolios, so they are not a forecast of a fall.",
   "Proprietary desks and market makers are close to flat (-11,915 futures, -15,838 puts, +24,273 calls). Their put buying is mostly one leg of a hedged trade.",
   "Retail and other clients are the largest put sellers (-472,490 net puts): the crowd is betting the market will not fall, which is why a sharp fall hurts them most.",
-  "NIFTY 2026-11-23: put-to-call ratio 1.13; most call open interest at 26,000 (a ceiling), most put open interest at 25,000 (a floor); max pain 25,100.",
-  "BANKNIFTY 2026-11-23: put-to-call ratio 1.28; most call open interest at 62,500 (a ceiling), most put open interest at 60,000 (a floor); max pain 59,000."
+  "NIFTY 2026-11-23: put-to-call ratio 1.15; most call open interest at 26,000 (a ceiling), most put open interest at 25,000 (a floor); max pain 25,100.",
+  "BANKNIFTY 2026-11-23: put-to-call ratio 1.27; most call open interest at 62,500 (a ceiling), most put open interest at 60,000 (a floor); max pain 59,000."
  ]
 }

@@ -1,67 +1,58 @@
 {
- "updated_at": "2026-11-19T11:02:11+05:30",
+ "updated_at": "2026-11-19T11:29:17+05:30",
  "skipped": [
   {
    "desk": "COMMODITY",
    "what": "Crude oil mini",
-   "margin": 23904,
+   "margin": 23906,
    "room": 2851,
    "why": "needs more margin than the commodities limit has free",
-   "at": "11:02:11",
+   "at": "11:29:17",
    "day": "2026-11-19"
   },
   {
    "desk": "FNO",
    "what": "weekly NIFTY debit spread",
-   "margin": 38790,
-   "room": 5580,
+   "margin": 38531,
+   "room": 6035,
    "why": "needs more margin than the F&O limit has free",
-   "at": "11:02:11",
+   "at": "11:29:17",
    "day": "2026-11-19"
   },
   {
    "desk": "FNO",
    "what": "monthly BANKNIFTY structure",
    "margin": null,
-   "room": 5580,
+   "room": 6035,
    "why": "options are cheap and the forecast has no direction: no edge worth the margin",
-   "at": "11:02:11",
+   "at": "11:29:17",
    "day": "2026-11-19"
   },
   {
    "desk": "FNO",
    "what": "NIFTY iron condor (daily)",
-   "margin": 73606,
-   "room": 5580,
+   "margin": 73648,
+   "room": 6035,
    "why": "needs more margin than the F&O limit has free",
-   "at": "11:02:11",
+   "at": "11:29:17",
    "day": "2026-11-19"
   },
   {
    "desk": "FNO",
    "what": "NIFTY credit spread (daily)",
-   "margin": 40263,
-   "room": 5580,
+   "margin": 40452,
+   "room": 6035,
    "why": "needs more margin than the F&O limit has free",
-   "at": "11:02:11",
+   "at": "11:29:17",
    "day": "2026-11-19"
   },
   {
    "desk": "FNO",
    "what": "NIFTY debit spread (daily)",
-   "margin": 37427,
-   "room": 5580,
+   "margin": 37418,
+   "room": 6035,
    "why": "needs more margin than the F&O limit has free",
-   "at": "11:02:11",
-   "day": "2026-11-19"
-  },
-  {
-   "desk": "COMMODITY",
-   "what": "Natural gas mini",
-   "margin": 22149,
-   "room": 20164,
-   "why": "needs more margin than the commodities limit has free",
-   "at": "09:39:24",
+   "at": "11:29:17",
    "day": "2026-11-19"
   }
  ],
@@ -122,6 +113,7 @@
   "swing": 22000,
   "signal": 5000,
   "intraday": 6000,
+  "scalp": 20000,
   "FNO": 50000,
   "COMMODITY": 25000,
   "CRYPTO": 5000

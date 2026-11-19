@@ -1,29 +1,5 @@
 [
  {
-  "time": "18 Nov 14:24",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Goldman Sachs sees RBI raising repo rate to 6.25% by mid-2027, India growth slowing to 7.2% - Moneycontrol.com",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 14:29",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex Today | Stock Market Live: Sensex falls over 400 pts, Nifty near 25,250; consumer durables, metals plunge; Titan, Bajaj Finance drag - LinkedIn",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 14:55",
-  "source": "BusinessStandard",
-  "category": "EARNINGS",
-  "headline": "Relaxo Footwears slips 6%, nears 52-week low on disappointing Q2 results",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
   "time": "18 Nov 14:55",
   "source": "GoogleNews",
   "category": "EARNINGS",
@@ -478,5 +454,29 @@
   "headline": "Bank's Board Cannot Grant PC Act Prosecution Sanction; Only RBI Is Competent Authority: Bombay High Court - LiveLawBiz",
   "event": "yes",
   "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "19 Nov 11:02",
+  "source": "BusinessStandard",
+  "category": "GEOPOLITICS",
+  "headline": "Brent's war premium fades, but lingering risks keep $90 intact: Kotak Neo",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "19 Nov 11:23",
+  "source": "Mint",
+  "category": "DEAL/ORDER",
+  "headline": "Dalmia Bharat buyback alert! Board to consider share repurchase proposal next week on Nov 23 - Key details | Buy or sell",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "19 Nov 11:28",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex Today | Stock Market Live: Sensex falls over 400 pts, Nifty near 25,250; consumer durables, metals plunge; Titan, Bajaj Finance drag - LinkedIn",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
  }
 ]

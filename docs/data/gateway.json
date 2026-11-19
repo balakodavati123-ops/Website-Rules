@@ -1,0 +1,34 @@
+{
+ "intents": {},
+ "events": [],
+ "day": {
+  "day": "2026-11-19",
+  "trades": 0,
+  "pnl": 0.0,
+  "stops": 0
+ },
+ "broker": {},
+ "mode": "dry",
+ "wanted": "dry",
+ "blockers": [],
+ "killed": false,
+ "updated_at": "2026-11-19T11:29:23+05:30",
+ "caps": {
+  "max_value": 40000.0,
+  "risk": 250.0,
+  "max_day_loss": 1000.0,
+  "max_open": 3,
+  "max_trades": 12,
+  "sl_min": 0.1,
+  "sl_max": 0.6,
+  "min_rc": 3.0,
+  "first": "09:30",
+  "last": "14:45",
+  "squareoff": "15:10",
+  "gate": "normal",
+  "gate_min": 30,
+  "agents": [
+   "scalp_vwap_pullback"
+  ]
+ }
+}

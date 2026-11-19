@@ -1,13 +1,13 @@
 {
- "updated_at": "2026-11-19T11:02:11+05:30",
+ "updated_at": "2026-11-19T11:29:17+05:30",
  "start": 100000.0,
  "realised": 2098.36,
- "unrealised": -701.76,
- "equity": 101396.6,
+ "unrealised": -350.97,
+ "equity": 101747.39,
  "in_use": 95728.11,
- "cash": 5668.49,
- "pnl": 1396.6,
- "pnl_pct": 1.4,
+ "cash": 6019.28,
+ "pnl": 1747.39,
+ "pnl_pct": 1.75,
  "open": 18,
  "closed": 50,
  "buckets": {
@@ -29,11 +29,17 @@
    "used": 3453,
    "room": 2547
   },
+  "scalp": {
+   "label": "Scalping (intraday margin)",
+   "budget": 20000,
+   "used": 0,
+   "room": 6019
+  },
   "FNO": {
    "label": "F&O margin",
    "budget": 50000,
    "used": 18636,
-   "room": 5668
+   "room": 6019
   },
   "COMMODITY": {
    "label": "Commodities margin",
