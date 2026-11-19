@@ -8,7 +8,7 @@ from __future__ import annotations
 START = 100000.0
 # Limits, not reservations: no desk may tie up more than its share, and every desk is also held to the cash actually free.
 # Real broker margins on this account size: one NIFTY spread needs about Rs 38,000, a crude oil mini lot about Rs 25,000, so F&O and commodities get the larger limits.
-BUDGET = {"swing": 0.22, "signal": 0.05, "intraday": 0.06, "scalp": 0.20, "FNO": 0.50, "COMMODITY": 0.25, "CRYPTO": 0.05}
+BUDGET = {"swing": 0.22, "signal": 0.05, "intraday": 0.12, "scalp": 0.20, "FNO": 0.50, "COMMODITY": 0.25, "CRYPTO": 0.05}
 LABEL = {"swing": "Swing (daily bars)", "signal": "Signal desk", "intraday": "Intraday equities", "scalp": "Scalping (intraday margin)", "FNO": "F&O margin", "COMMODITY": "Commodities margin", "CRYPTO": "Crypto"}
 
 

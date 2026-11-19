@@ -245,8 +245,36 @@ def test_backend_intraday_rules():
                                          R("D", 300, 2.5, 300, 296), R("F", 100, 9.9, 100, 90)], {"D": "negative"})
     got = {t["label"] for t in book["trades"]}
     assert got == {"A long", "B short"} and book["seen"]["D"] == "conflict"   # thin C, circuit-like F and news-conflicted D are skipped
-    I.step(book, "2026-11-16", "10:00", [R("A", 98.9, 1, 100.2, 98), R("B", 190, -5, 205, 190)], {})
     st = {t["label"]: t for t in book["trades"]}
-    assert st["A long"]["status"] == "LOSS" and st["A long"]["why"] == "stop" and st["B short"]["status"] == "OPEN"
-    I.step(book, "2026-11-16", "15:10", [], {})
-    assert st["B short"]["status"] == "WIN" and st["B short"]["why"] == "time"
+    assert st["A long"]["stop"] == 99.0 and st["A long"]["target"] == 102.0 and st["A long"]["qty"] == 150        # 1% stop, 2R target, Rs 150 risk
+    I.step(book, "2026-11-16", "10:00", [R("A", 98.9, 1, 100.2, 98), R("B", 197, -5, 205, 190)], {})
+    assert st["A long"]["status"] == "LOSS" and st["A long"]["why"] == "stop" and st["B short"]["status"] == "OPEN" and st["B short"]["stop"] == 200      # B is 1R up: its stop moved to entry
+    I.step(book, "2026-11-16", "10:05", [R("B", 195.9, -5, 205, 190)], {})
+    assert st["B short"]["status"] == "WIN" and st["B short"]["why"] == "target"
+
+
+def test_hunter_reads_headlines_and_hunts_harder_when_hungry():
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "backend"))
+    from datetime import datetime
+    import intraday as I
+    ins = [{"segment": "NSE_EQ", "instrument_type": "EQ", "trading_symbol": "LTFOODS", "name": "LT FOODS LIMITED"},
+           {"segment": "NSE_EQ", "instrument_type": "EQ", "trading_symbol": "DOLLAR", "name": "DOLLAR INDUSTRIES LIMITED"},
+           {"segment": "NSE_EQ", "instrument_type": "EQ", "trading_symbol": "RELAXO", "name": "RELAXO FOOTWEARS LIMITED"}]
+    idx = I.name_index(ins)
+    now = datetime(2026, 11, 19, 12, 0, tzinfo=I.IST)
+    feed = [{"time": "19 Nov 11:55", "headline": "LT Foods shares rocket 10% on a big US acquisition", "hint": "LONG-lean headline"},
+            {"time": "19 Nov 11:40", "headline": "Gold slips as a stronger dollar weighs", "hint": ""},
+            {"time": "19 Nov 11:30", "headline": "Relaxo Footwears slips 6% on weak Q2 results", "hint": "read the numbers"}]
+    hm = I.headline_names(feed, idx, now)
+    assert hm["LTFOODS"]["tone"] == "positive" and hm["RELAXO"]["tone"] == "negative" and "DOLLAR" not in hm
+    row = dict(symbol="LTFOODS", price=460.0, chg_pct=1.0, day_high=461.0, day_low=430.0, volume=3e6, open=432.0, prev_close=455.4, vwap=450.0, buy_qty=2e5, sell_qty=1e5)
+    book = {}
+    I.step(book, "2026-11-19", "12:00", [row], {}, [100000.0], 1, hm)
+    t = book["trades"][0]
+    assert t["basis"] == "headline-led" and t["side"] == "LONG" and t["stop"] < 460 < t["target"] and "LT Foods" in t["reason"]
+    calm, hungry = {}, {}
+    vw = dict(symbol="X", price=101.0, chg_pct=1.2, day_high=101.2, day_low=99.0, volume=3e6, open=99.9, prev_close=99.8, vwap=100.4, buy_qty=3e5, sell_qty=1e5)
+    I.step(calm, "2026-11-19", "12:00", [vw], {}, None, 0)
+    I.step(hungry, "2026-11-19", "12:00", [vw], {}, None, 2)
+    assert not calm["trades"] and hungry["trades"][0]["setup"] == "vwap"                 # only a hungry desk switches the order-book setup on
+    assert hungry["trades"][0]["qty"] * abs(hungry["trades"][0]["entry"] - hungry["trades"][0]["stop"]) <= 150.01   # the risk does not grow with hunger

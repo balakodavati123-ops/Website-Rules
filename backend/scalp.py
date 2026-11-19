@@ -30,10 +30,10 @@ def ema(v: list[float], n: int) -> list[float]:
     return out
 
 
-def universe(rows: list[dict]) -> list[str]:
+def universe(rows: list[dict], n: int | None = None) -> list[str]:
     """The names worth scanning: the most liquid, not already near a circuit, priced high enough that a tick is small."""
     ok = [r for r in rows if r["price"] >= R["min_price"] and r["price"] * r["volume"] >= R["turnover_cr"] * 1e7 and abs(r["chg_pct"]) <= R["max_day_move"]]
-    return [r["symbol"] for r in sorted(ok, key=lambda r: -r["price"] * r["volume"])[:R["universe"]]]
+    return [r["symbol"] for r in sorted(ok, key=lambda r: -r["price"] * r["volume"])[:n or R["universe"]]]
 
 
 def signal(bars: list[list], tick: float = 0.05, P: dict | None = None) -> dict | None:
@@ -111,7 +111,7 @@ def step(book: dict, now: datetime, ctx: dict) -> None:
     if ctx.get("paused") or not (R["first"] <= hhmm <= R["last"]) or book.get("streak", {}).get(day, 0) >= R["streak_stop"]:
         return
     opened = [t for t in book["trades"] if t["desk"] == "EQUITY" and str(t["strategy"]).startswith("scalp")]
-    if sum(t["status"] == "OPEN" for t in opened) >= R["max_open"] or sum(t["day"] == day for t in opened) >= R["max_day"]:
+    if sum(t["status"] == "OPEN" for t in opened) >= R["max_open"] or sum(t["day"] == day for t in opened) >= R["max_day"] + 2 * int(ctx.get("effort") or 0):
         return
     held = {t["symbol"] for t in opened if t["status"] == "OPEN"}
     for sym, bars in ctx["bars"].items():

@@ -55,7 +55,7 @@ def quotes(keys: list[str], token: str) -> dict[str, dict]:
 
 
 def equity_rows(token: str) -> list[dict]:
-    """Real-time snapshot of every NSE equity: price, change on the previous close, day high and low, volume."""
+    """Real-time snapshot of every NSE equity: price, change on the previous close, day high and low, volume, open, VWAP and the order book's total buy and sell quantity."""
     keys = [x["instrument_key"] for x in instruments("NSE") if x.get("segment") == "NSE_EQ" and x.get("instrument_type") == "EQ"]
     rows = []
     for v in quotes(keys, token).values():
@@ -63,7 +63,8 @@ def equity_rows(token: str) -> list[dict]:
         if not last or net is None or not v.get("volume") or last - net <= 0:
             continue
         rows.append({"symbol": v["symbol"], "price": float(last), "chg_pct": net / (last - net) * 100, "day_high": float(oh.get("high") or last),
-                     "day_low": float(oh.get("low") or last), "volume": float(v["volume"])})
+                     "day_low": float(oh.get("low") or last), "volume": float(v["volume"]), "open": float(oh.get("open") or 0), "prev_close": float(last - net),
+                     "vwap": float(v.get("average_price") or 0), "buy_qty": float(v.get("total_buy_quantity") or 0), "sell_qty": float(v.get("total_sell_quantity") or 0)})
     return rows
 
 

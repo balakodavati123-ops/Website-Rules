@@ -48,7 +48,7 @@ def test_end_of_day_bonuses():
     st = CO.new_state()
     trades = [tr(1, pnl=300.0), tr(2, desk="CRYPTO", strat="crypto_breakout", pnl=-50.0, status="LOSS")]
     v = CO.build(st, EOD, trades, [], {"nifty_chg": -0.4, "equity": 100000})
-    assert st["tokens"]["team:scalp"] == 500 and st["tokens"]["Riya"] + st["tokens"]["Dev"] + st["tokens"]["Kabir"] == 500
+    assert st["tokens"]["team:scalp"] == 500 and st["eco"]["scalp"]["balance"] < st["eco"]["scalp"]["carried"] + 61 and st["eco"]["scalp"]["carried"] >= 500    # the bonus is the team's food
     assert st["tokens"]["Raghav"] == 1000 and any(m["kind"] == "award" for m in v["messages"])
     CO.build(st, EOD, trades, [], {"nifty_chg": -0.4})
     assert st["tokens"]["team:scalp"] == 500                            # once a day
@@ -59,15 +59,16 @@ def test_end_of_day_bonuses():
 
 def test_coo_asks_before_retiring_and_proposes_a_new_team():
     st = CO.new_state()
-    losers = [tr(i, pnl=-60.0, status="LOSS", why="time") for i in range(35)]
+    losers = [tr(i, pnl=-160.0, status="LOSS", why="time") for i in range(35)]
     stats = [{"desk": "EQUITY", "strategy": "scalp_vwap_pullback", "closed": 35, "wins": 0, "win_rate": 0.0, "pnl_rs": -2100.0, "avg_rs": -60.0, "t_stat": -5, "confidence": 0, "verdict": "PAUSED"}]
     now = datetime(2026, 11, 19, 12, 0, tzinfo=IST)
     v = CO.build(st, now, losers, stats, {"scalp_params": {"vol_x": 1.2}})
-    req = v["coo"]["requests"][0]
+    req = next(r for r in v["coo"]["requests"] if r.get("variant"))
+    assert any(r.get("kind") == "team" for r in v["coo"]["requests"])                  # the team is also out of food: the COO asks about the whole team too
     assert req["status"] == "pending" and req["variant"]["params"]["vol_x"] == 1.5 and "time" in req["variant"]["why"]
     assert "scalp_vwap_pullback" not in st["retired"]                                   # nothing is retired without the CEO
     CO.build(st, now, losers, stats, {})
-    assert len(st["requests"]) == 1                                                     # asked once
+    assert len(st["requests"]) == 2                                                     # asked once each
     CO.apply(st, {"kind": "approve", "arg": req["id"]}, now)
     assert "scalp_vwap_pullback" in st["retired"] and st["variants"]["scalp"]["params"]["vol_x"] == 1.5
     assert "scalp_vwap_pullback" in CO.paused_strategies(st, set(), {})
@@ -93,3 +94,22 @@ def test_inbox_obeys_only_the_owner():
               {"number": 3, "title": "Something else", "author_association": "OWNER", "user": {"login": "owner"}}]
     cmds = CI.poll("t", "owner/repo", call=lambda *a, **k: issues)
     assert [(c["issue"], c["owner"]) for c in cmds] == [(1, True), (2, False)]
+
+
+def test_hunger_drives_the_hunt_but_losses_cap_it():
+    st = CO.new_state()
+    open_ses = {"equity": True, "fno": True, "mcx": True, "crypto": True}
+    morning = datetime(2026, 11, 19, 11, 0, tzinfo=IST)
+    v = CO.build(st, morning, [], [], {"sessions": open_ses})
+    eco = {t["id"]: t["eco"] for t in v["teams"]}
+    assert eco["intraday"]["mood"] == "Hungry" and st["effort"]["intraday"] == 3                       # nothing earned and an idle morning: hunts hardest
+    assert eco["intraday"]["balance"] == CO.START_TOKENS - CO.LIVING * 7
+    fed = [tr(i, desk="EQUITY", strat="momentum", pnl=150.0, opened="10:50:00", setup="momentum") for i in range(3)]       # Rs 450 net earns 45 tokens, more than the 35 a day the row eats
+    v = CO.build(st, morning, fed, [], {"sessions": open_ses})
+    assert {t["id"]: t["eco"] for t in v["teams"]}["intraday"]["mood"] in ("Fed", "Thriving") and st["effort"]["intraday"] == 0
+    st2 = CO.new_state()
+    losing = [tr(i, desk="EQUITY", strat="momentum", pnl=-40.0, status="LOSS", why="stop", day="2026-11-18", setup="momentum") for i in range(10)]
+    CO.build(st2, morning, losing, [], {"sessions": open_ses})
+    assert st2["effort"]["intraday"] <= 1                                                               # injured: may not hunt harder
+    seats = next(t for t in v["teams"] if t["id"] == "intraday")["seats"]
+    assert len(seats) == 7 and seats[-1]["officer"] and seats[-1]["name"] == "Vikram"

@@ -70,7 +70,8 @@ def unify_equity(book: dict) -> list[dict]:
         pnl = t["pnl_rs"] if t["status"] != "OPEN" else round(d * (t["last"] - t["entry"]) * t["qty"], 2)
         out.append({"id": f"E{str(t['day']).replace('-', '')[2:]}-{t['id']}", "desk": "EQUITY", "strategy": t.get("basis", "price only").replace(" ", "_"), "label": t["label"], "symbol": t.get("symbol"), "side": t["side"],
                     "entry": t["entry"], "last": t["last"], "exit": t.get("exit", ""), "qty": t["qty"], "stop": t.get("stop"), "status": t["status"], "pnl_rs": pnl, "reason": t.get("reason", ""),
-                    "why": t.get("why", ""), "day": t["day"], "opened": t["time"], "closed": t.get("closed", ""), "risk_class": "Intraday momentum", "margin_rs": round(t["entry"] * t["qty"] * 0.2)})
+                    "why": t.get("why", ""), "day": t["day"], "opened": t["time"], "closed": t.get("closed", ""), "risk_class": "Intraday hunter", "margin_rs": t.get("margin") or round(t["entry"] * t["qty"] * 0.2),
+                    "target_px": t.get("target"), "leverage": t.get("leverage"), "setup": t.get("setup")})
     return out
 
 
@@ -223,6 +224,9 @@ def run() -> None:
     ind = IND.Client(ind_token) if ind_token else None                 # INDstocks: reads only unless the gateway is switched to live on a whitelisted host
     master = IND.Master()
     scalp_bars: dict = {}
+    headlines: dict = {}
+    names_idx: dict = {}
+    hl_at = [0.0]
     bars_at, bars_thread = [0.0], [None]
     gw = GW.Gateway(DOCS / "gateway.json", ind, master)
     fc_try = [0.0]
@@ -358,6 +362,20 @@ def run() -> None:
                 text = CO.apply(cst, cmd, at)
             CI.reply(gt, repo, cmd["issue"], text)
 
+    def sources_status(now) -> dict:
+        """Where the company's data comes from, and whether each pipe is flowing right now."""
+        d, ok = status["desks"], lambda good, detail, bad=False: {"status": "error" if bad else "ok" if good else "idle", "detail": detail}
+        feed = load("news_feed.json", [])
+        b = gw.st.get("broker") or {}
+        age = (time.time() - world_at[0]) / 60 if world_at[0] else None
+        return {"upstox": ok("real time" in str(d.get("equity", "")) or "real time" in str(d.get("commodities", "")), str(d.get("equity") or d.get("commodities") or "market closed: quotes resume at 09:00")[:70], "error" in str(d.get("equity", ""))),
+                "nse": ok(bool(sm.get("day")) or bool(news), f"{len(news)} filings lean one way today; participant positions for {sm.get('day', '—')}"),
+                "indmoney": {"status": "ok" if b.get("ok") else "off", "detail": f"connected: intraday funds Rs {b.get('funds') or 0:,.0f}" if b.get("ok") else "not connected here: the gateway reads it only where INDSTOCKS_TOKEN is set"},
+                "kraken": ok("Kraken" in str(d.get("crypto", "")), str(d.get("crypto", ""))[:70], "error" in str(d.get("crypto", ""))),
+                "yahoo": ok(age is not None and age < 6 * 60, f"world markets refreshed {age:.0f} min ago" if age is not None else "world markets not refreshed yet"),
+                "news": ok(bool(feed), f"{len(feed)} headlines, latest {feed[-1]['time']}; {len(headlines)} name a listed company" if feed else "no headline yet"),
+                "github": {"status": "ok" if os.environ.get("GITHUB_TOKEN") else "off", "detail": "listening for your instructions every 5 minutes" if os.environ.get("GITHUB_TOKEN") else "not available on this machine"}}
+
     def company_view(now, allt, stats) -> None:
         """The god's-eye view of the company: every team's three agents and what they are doing, the COO's notes and requests, the bonus board."""
         qn, rec_ = {}, {}
@@ -377,7 +395,8 @@ def run() -> None:
         with clock:
             view = CO.build(cst, now, allt, stats, {"plan": plan, "fc": fc, "sm": sm, "gw": gw.st, "via": load("viability.json", {}), "desks": status["desks"], "world": make_env()["world"],
                                                    "nifty_chg": nf, "equity": acct[0], "scalp_n": len(scalp_bars), "scalp_params": {**SC.R, **((cst["variants"].get("scalp") or {}).get("params") or {})},
-                                                   "sessions": status.get("sessions"), "quant_notes": qn})
+                                                   "sessions": status.get("sessions"), "quant_notes": qn, "headlines": headlines, "intraday_diag": eq.get("diag"), "mcx": snap.get("mcx"),
+                                                   "crypto": snap.get("crypto"), "fno_snap": snap.get("fno"), "news_n": len(load("news_feed.json", [])), "sources": sources_status(now)})
             for r in view["coo"]["requests"]:
                 if r["status"] == "pending" and r["id"] not in cst["said"].get("pushed", []):
                     cst["said"]["pushed"] = (cst["said"].get("pushed", []) + [r["id"]])[-50:]
@@ -477,7 +496,13 @@ def run() -> None:
                 qs.clear()
                 qs.update({r["symbol"]: [round(r["price"], 2), round(r["chg_pct"], 2), r["day_high"], r["day_low"], int(r["volume"])] for r in rows})
                 if rows:
-                    I.step(eq, today, hhmm, rows, news, rm["intraday"])
+                    if time.time() - hl_at[0] >= 60:                     # headlines that name a listed company, refreshed each minute
+                        hl_at[0] = time.time()
+                        if not names_idx and U._cache.get("NSE"):
+                            names_idx.update(I.name_index(U.instruments("NSE")))
+                        headlines.clear()
+                        headlines.update(I.headline_names(load("news_feed.json", []), names_idx, now) if names_idx else {})
+                    I.step(eq, today, hhmm, rows, news, rm["intraday"], cst["effort"].get("intraday", 1), headlines)
                 info["equity"] = f"{len(rows)} stocks, real time"
             except Exception as e:
                 info["equity"] = f"error: {e}"
@@ -489,7 +514,7 @@ def run() -> None:
                 if not (bars_thread[0] and bars_thread[0].is_alive()) and time.time() - bars_at[0] >= 60:
                     bars_at[0] = time.time()
 
-                    def _bars(syms=SC.universe(rows_now) + [t["symbol"] for t in xb["trades"] if t.get("strategy") == SC.STRATEGY and t["status"] == "OPEN"]):
+                    def _bars(syms=SC.universe(rows_now, 25 + 10 * cst["effort"].get("scalp", 1)) + [t["symbol"] for t in xb["trades"] if t.get("strategy") == SC.STRATEGY and t["status"] == "OPEN"]):
                         for sy in dict.fromkeys(syms):
                             if sy in key_of:
                                 try:
@@ -500,7 +525,7 @@ def run() -> None:
                     bars_thread[0].start()
                 rowd = {r["symbol"]: r for r in rows_now}
                 var_ = cst["variants"].get("scalp") or {}
-                SC.step(xb, now, {"rows": rowd, "bars": {k: v for k, v in scalp_bars.items() if k in rowd}, "room": rm["scalp"], "acct": acct[0], "paused": (var_.get("name") or SC.STRATEGY) in paused,
+                SC.step(xb, now, {"effort": cst["effort"].get("scalp", 1), "rows": rowd, "bars": {k: v for k, v in scalp_bars.items() if k in rowd}, "room": rm["scalp"], "acct": acct[0], "paused": (var_.get("name") or SC.STRATEGY) in paused,
                                   "name": var_.get("name"), "params": var_.get("params"), "sigma": lambda s_: QN.sigma_bars([b[4] for b in scalp_bars.get(s_, [])[-60:]], SC.R["hold_min"]),
                                   "tick": lambda s_: (master.get(s_) or {}).get("tick", 0.05), "leverage": lambda s_: (master.get(s_) or {}).get("leverage", 5.0), "news": make_env()["news"]})
                 info["scalp"] = f"{len(scalp_bars)} names scanned, bars refreshed {int(time.time() - bars_at[0])} s ago"
