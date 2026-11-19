@@ -1,29 +1,5 @@
 [
  {
-  "time": "18 Nov 14:55",
-  "source": "GoogleNews",
-  "category": "EARNINGS",
-  "headline": "Relaxo Footwears slips 6%, nears 52-week low on disappointing Q2 results - Business Standard",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "18 Nov 15:00",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Sensex, Nifty recover US-Iran war losses: 5 reasons behind market rally as Nifty hits 9-month high - CNBC TV18 - LinkedIn",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "18 Nov 15:05",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Nifty is up 11% this month, its biggest monthly gain in 6 years, and all US-Iran war losses are recovered! FIIs have poured in over $9.5 bn, crude has cooled an",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
   "time": "18 Nov 15:26",
   "source": "BusinessStandard",
   "category": "DEAL/ORDER",
@@ -476,6 +452,30 @@
   "source": "GoogleNews",
   "category": "CRASH/SHOCK",
   "headline": "Sensex Today | Stock Market Live: Sensex falls over 400 pts, Nifty near 25,250; consumer durables, metals plunge; Titan, Bajaj Finance drag - LinkedIn",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 11:29",
+  "source": "BusinessStandard",
+  "category": "EARNINGS",
+  "headline": "Relaxo Footwears slips 6%, nears 52-week low on disappointing Q2 results",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "19 Nov 11:55",
+  "source": "Mint",
+  "category": "DEAL/ORDER",
+  "headline": "LT Foods shares rocket 10%, nears peak! Daawat rice-parent makes a big US acquisition, jumps 545% in 5 yrs | Details",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "19 Nov 12:11",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Why gold, silver prices are going down? What experts say about rate fall - More plunge ahead or bounce back expected?",
   "event": "yes",
   "hint": "SHORT-lean headline"
  }

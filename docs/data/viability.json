@@ -1,58 +1,58 @@
 {
- "updated_at": "2026-11-19T11:29:17+05:30",
+ "updated_at": "2026-11-19T12:57:45+05:30",
  "skipped": [
   {
    "desk": "COMMODITY",
    "what": "Crude oil mini",
    "margin": 23906,
-   "room": 2851,
+   "room": 19257,
    "why": "needs more margin than the commodities limit has free",
-   "at": "11:29:17",
+   "at": "12:57:45",
    "day": "2026-11-19"
   },
   {
    "desk": "FNO",
    "what": "weekly NIFTY debit spread",
-   "margin": 38531,
-   "room": 6035,
+   "margin": 38305,
+   "room": 19257,
    "why": "needs more margin than the F&O limit has free",
-   "at": "11:29:17",
+   "at": "12:57:45",
    "day": "2026-11-19"
   },
   {
    "desk": "FNO",
    "what": "monthly BANKNIFTY structure",
    "margin": null,
-   "room": 6035,
+   "room": 19257,
    "why": "options are cheap and the forecast has no direction: no edge worth the margin",
-   "at": "11:29:17",
+   "at": "12:57:45",
    "day": "2026-11-19"
   },
   {
    "desk": "FNO",
    "what": "NIFTY iron condor (daily)",
-   "margin": 73648,
-   "room": 6035,
+   "margin": 73933,
+   "room": 19257,
    "why": "needs more margin than the F&O limit has free",
-   "at": "11:29:17",
+   "at": "12:57:45",
    "day": "2026-11-19"
   },
   {
    "desk": "FNO",
    "what": "NIFTY credit spread (daily)",
-   "margin": 40452,
-   "room": 6035,
+   "margin": 40750,
+   "room": 19257,
    "why": "needs more margin than the F&O limit has free",
-   "at": "11:29:17",
+   "at": "12:57:45",
    "day": "2026-11-19"
   },
   {
    "desk": "FNO",
    "what": "NIFTY debit spread (daily)",
-   "margin": 37418,
-   "room": 6035,
+   "margin": 37818,
+   "room": 19257,
    "why": "needs more margin than the F&O limit has free",
-   "at": "11:29:17",
+   "at": "12:57:45",
    "day": "2026-11-19"
   }
  ],

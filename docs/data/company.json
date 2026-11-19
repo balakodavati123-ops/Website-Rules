@@ -1,0 +1,736 @@
+{
+ "updated_at": "2026-11-19T12:57:49+05:30",
+ "ceo": "Balaji",
+ "coo": {
+  "name": "Raghav",
+  "role": "COO",
+  "tokens": 0,
+  "notes": [
+   {
+    "team": "mcx",
+    "level": "warn",
+    "text": "Commodities desk: targets hit 0 times against 3.7 expected by pure chance (z -2.36): no edge so far."
+   },
+   {
+    "team": "mcx",
+    "level": "warn",
+    "text": "Commodities desk is down \u2212\u20b9852 today. Watching the next trades closely."
+   },
+   {
+    "team": "crypto",
+    "level": "warn",
+    "text": "Crypto desk: targets hit 1 times against 4.0 expected by pure chance (z -1.84): no edge so far."
+   },
+   {
+    "team": "fno",
+    "level": "info",
+    "text": "6 trades were skipped today because the broker's margin did not fit the account: the desks only trade what is viable."
+   }
+  ],
+  "requests": [],
+  "doing": "Supervising 7 teams: 5 traded today, company +\u20b9369. Bonus race leader: F&O desk (+\u20b91,326)."
+ },
+ "teams": [
+  {
+   "id": "scalp",
+   "name": "Scalping desk",
+   "source": "nse",
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Riya",
+     "role": "Research",
+     "doing": "Scanning the 33 most liquid stocks on 1-minute bars for VWAP pullbacks.",
+     "tokens": 0
+    },
+    {
+     "name": "Dev",
+     "role": "Quant",
+     "doing": "RELIANCE long: reward 1.5\u00d7 the risk; a random walk reaches the target first 40% of the time; break-even needs 58% wins after charges; stop is 1.56\u03c3 of noise.",
+     "tokens": 0
+    },
+    {
+     "name": "Kabir",
+     "role": "Trader",
+     "doing": "Closed PNB long (time): \u2212\u20b987.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "today": {
+    "pnl": -162.23,
+    "trades": 5,
+    "open": 0,
+    "closed": 5,
+    "wins": 1
+   },
+   "record": {
+    "n": 5,
+    "win_rate": 20.0,
+    "avg_rs": -32.45,
+    "net_rs": -162.23,
+    "worst_run": 2,
+    "profit_factor": 0.51,
+    "target_hits": 1,
+    "expected_hits": 2.0,
+    "edge_z": -0.93,
+    "hit_rate": 0.2
+   },
+   "verdicts": [
+    {
+     "strategy": "scalp_vwap_pullback",
+     "closed": 5,
+     "win_rate": 20.0,
+     "pnl_rs": -162.23,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "intraday",
+   "name": "Intraday equities",
+   "source": "news",
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Ananya",
+     "role": "Research",
+     "doing": "Watching 1 name(s) in the news and today's filings; 6 results to read.",
+     "tokens": 0
+    },
+    {
+     "name": "Ishaan",
+     "role": "Quant",
+     "doing": "Record: 13 closed, 38.5% won, average \u2212\u20b99.",
+     "tokens": 0
+    },
+    {
+     "name": "Vikram",
+     "role": "Trader",
+     "doing": "Holding 1: PAYTM short at 1,726.50, stop 1,743.77, now +\u20b975.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "today": {
+    "pnl": 12.71,
+    "trades": 2,
+    "open": 1,
+    "closed": 1,
+    "wins": 0
+   },
+   "record": {
+    "n": 13,
+    "win_rate": 38.5,
+    "avg_rs": -9.41,
+    "net_rs": -122.29,
+    "worst_run": 7,
+    "profit_factor": 0.81
+   },
+   "verdicts": [
+    {
+     "strategy": "price_only",
+     "closed": 13,
+     "win_rate": 38.5,
+     "pnl_rs": -122.29,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "swing",
+   "name": "Swing & signals",
+   "source": "nse",
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Meera",
+     "role": "Research",
+     "doing": "Daily chart scan after the close; holding 13 swing positions with stops.",
+     "tokens": 0
+    },
+    {
+     "name": "Rohan",
+     "role": "Quant",
+     "doing": "GAIL long: reward 4.0\u00d7 the risk; a random walk reaches the target first 20% of the time; break-even needs 26% wins after charges.",
+     "tokens": 0
+    },
+    {
+     "name": "Arjun",
+     "role": "Trader",
+     "doing": "Holding 13: GAIL long at 188.99, stop 179.54, now \u2212\u20b913.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "today": {
+    "pnl": 0,
+    "trades": 0,
+    "open": 13,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 1,
+    "win_rate": 0.0,
+    "avg_rs": -335.67,
+    "net_rs": -335.67,
+    "worst_run": 1,
+    "profit_factor": 0.0
+   },
+   "verdicts": [
+    {
+     "strategy": "pullback_in_uptrend",
+     "closed": 1,
+     "win_rate": 0.0,
+     "pnl_rs": -335.67,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "fno",
+   "name": "F&O desk",
+   "source": "chain",
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Neha",
+     "role": "Research",
+     "doing": "NIFTY 2026-11-23: put-to-call 1.3, call wall 26,000, put wall 25,000.",
+     "tokens": 0
+    },
+    {
+     "name": "Siddharth",
+     "role": "Quant",
+     "doing": "Record: 14 closed, 57.1% won, average +\u20b9378.",
+     "tokens": 0
+    },
+    {
+     "name": "Karan",
+     "role": "Trader",
+     "doing": "Holding 2: NIFTY long straddle \u00b7 11-23 at -291.30, now +\u20b9856.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "today": {
+    "pnl": 1326.25,
+    "trades": 2,
+    "open": 2,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 14,
+    "win_rate": 57.1,
+    "avg_rs": 378.11,
+    "net_rs": 5293.5,
+    "worst_run": 2,
+    "profit_factor": 2.24
+   },
+   "verdicts": [
+    {
+     "strategy": "credit_spread",
+     "closed": 2,
+     "win_rate": 50.0,
+     "pnl_rs": -221.75,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "debit_spread",
+     "closed": 3,
+     "win_rate": 33.3,
+     "pnl_rs": 1014.5,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "iron_condor",
+     "closed": 2,
+     "win_rate": 50.0,
+     "pnl_rs": -63.25,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "long_breakout",
+     "closed": 2,
+     "win_rate": 50.0,
+     "pnl_rs": 219.0,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "short_strangle",
+     "closed": 2,
+     "win_rate": 100.0,
+     "pnl_rs": 1091.25,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "weekly_bull_put_spread",
+     "closed": 1,
+     "win_rate": 100.0,
+     "pnl_rs": 2249.75,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "weekly_iron_butterfly",
+     "closed": 1,
+     "win_rate": 0.0,
+     "pnl_rs": -1919.25,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "weekly_iron_condor",
+     "closed": 1,
+     "win_rate": 100.0,
+     "pnl_rs": 2923.25,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "mcx",
+   "name": "Commodities desk",
+   "source": "mcx",
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Pooja",
+     "role": "Research",
+     "doing": "Brent -4.49%, gold -3.97% overnight; tracking 4 MCX contracts the account can carry.",
+     "tokens": 0
+    },
+    {
+     "name": "Aditya",
+     "role": "Quant",
+     "doing": "Gold 1 g short: reward 2.0\u00d7 the risk; a random walk reaches the target first 33% of the time; break-even needs 33% wins after charges.",
+     "tokens": 0
+    },
+    {
+     "name": "Zoya",
+     "role": "Trader",
+     "doing": "Closed Natural gas mini long (stop): \u2212\u20b9514.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "today": {
+    "pnl": -852.4,
+    "trades": 2,
+    "open": 0,
+    "closed": 2,
+    "wins": 0
+   },
+   "record": {
+    "n": 11,
+    "win_rate": 36.4,
+    "avg_rs": -277.63,
+    "net_rs": -3053.9,
+    "worst_run": 3,
+    "profit_factor": 0.24,
+    "target_hits": 0,
+    "expected_hits": 3.7,
+    "edge_z": -2.36,
+    "hit_rate": 0.0
+   },
+   "verdicts": [
+    {
+     "strategy": "mcx_momentum",
+     "closed": 10,
+     "win_rate": 40.0,
+     "pnl_rs": -2641.58,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "mcx_pullback",
+     "closed": 1,
+     "win_rate": 0.0,
+     "pnl_rs": -412.32,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "crypto",
+   "name": "Crypto desk",
+   "source": "crypto",
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Tara",
+     "role": "Research",
+     "doing": "Reading 6 coins on Kraken around the clock; long only (spot).",
+     "tokens": 0
+    },
+    {
+     "name": "Nikhil",
+     "role": "Quant",
+     "doing": "BTC long: reward 2.0\u00d7 the risk; a random walk reaches the target first 33% of the time; break-even needs 33% wins after charges.",
+     "tokens": 0
+    },
+    {
+     "name": "Sam",
+     "role": "Trader",
+     "doing": "Holding 2: BTC long at 62,605.10, stop 61,666.02, now +\u20b927.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "today": {
+    "pnl": 45.11,
+    "trades": 2,
+    "open": 2,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 12,
+    "win_rate": 50.0,
+    "avg_rs": -16.48,
+    "net_rs": -197.78,
+    "worst_run": 3,
+    "profit_factor": 0.69,
+    "target_hits": 1,
+    "expected_hits": 4.0,
+    "edge_z": -1.84,
+    "hit_rate": 0.083
+   },
+   "verdicts": [
+    {
+     "strategy": "crypto_breakout",
+     "closed": 7,
+     "win_rate": 42.9,
+     "pnl_rs": -388.56,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "crypto_dip_bounce",
+     "closed": 5,
+     "win_rate": 60.0,
+     "pnl_rs": 190.78,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "intel",
+   "name": "Market intelligence",
+   "source": "news",
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Priya",
+     "role": "Research",
+     "doing": "Nifty forecast bearish (score -0.22), range 24,957 to 25,465. FIIs net -70,670 index futures.",
+     "tokens": 0
+    },
+    {
+     "name": "Aryan",
+     "role": "Quant",
+     "doing": "Weights the six inputs, sets the one-standard-deviation range from India VIX, scores it every evening.",
+     "tokens": 0
+    },
+    {
+     "name": "Ira",
+     "role": "Forecaster",
+     "doing": "Sends the day's bias and levels to the F&O and equity desks.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "today": {
+    "pnl": 0,
+    "trades": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 0
+   },
+   "verdicts": [],
+   "activity": 0,
+   "variant": null
+  }
+ ],
+ "sources": [
+  {
+   "id": "nse",
+   "name": "NSE stocks"
+  },
+  {
+   "id": "chain",
+   "name": "Option chains"
+  },
+  {
+   "id": "mcx",
+   "name": "MCX futures"
+  },
+  {
+   "id": "crypto",
+   "name": "Crypto (Kraken)"
+  },
+  {
+   "id": "news",
+   "name": "News & world"
+  }
+ ],
+ "board": [],
+ "ledger": [],
+ "messages": [],
+ "company": {
+  "pnl_today": 369.44,
+  "nifty_chg": 0.5454267984517173,
+  "equity": 102712.4,
+  "sessions": {
+   "equity": true,
+   "fno": true,
+   "mcx": true,
+   "crypto": true
+  }
+ },
+ "awards": {
+  "team": 500,
+  "coo": 1000
+ },
+ "execution": {
+  "mode": "dry",
+  "intents": 5,
+  "refused": 0
+ },
+ "quant": {
+  "K261119-43": {
+   "risk_rs": 131.33,
+   "reward_rs": 189.92,
+   "rr": 1.45,
+   "base_p": 0.409,
+   "breakeven_p": 0.526,
+   "used_p": 0.409,
+   "p_source": "random-walk baseline",
+   "ev_rs": -37.7,
+   "kelly": -0.0,
+   "stop_sigma": 1.75,
+   "target_sigma": 2.52,
+   "warnings": [
+    "target is more than 2.5 standard deviations away for the holding time: unlikely to be reached in time"
+   ]
+  },
+  "K261119-42": {
+   "risk_rs": 132.97,
+   "reward_rs": 196.43,
+   "rr": 1.48,
+   "base_p": 0.404,
+   "breakeven_p": 0.518,
+   "used_p": 0.404,
+   "p_source": "random-walk baseline",
+   "ev_rs": -37.62,
+   "kelly": 0.0,
+   "stop_sigma": 1.28,
+   "target_sigma": 1.89,
+   "warnings": []
+  },
+  "K261119-41": {
+   "risk_rs": 129.69,
+   "reward_rs": 192.51,
+   "rr": 1.48,
+   "base_p": 0.403,
+   "breakeven_p": 0.519,
+   "used_p": 0.403,
+   "p_source": "random-walk baseline",
+   "ev_rs": -37.58,
+   "kelly": 0.0,
+   "stop_sigma": 1.04,
+   "target_sigma": 1.55,
+   "warnings": []
+  },
+  "K261119-40": {
+   "risk_rs": 142.72,
+   "reward_rs": 212.53,
+   "rr": 1.49,
+   "base_p": 0.402,
+   "breakeven_p": 0.508,
+   "used_p": 0.402,
+   "p_source": "random-walk baseline",
+   "ev_rs": -37.71,
+   "kelly": 0.0,
+   "stop_sigma": 1.67,
+   "target_sigma": 2.49,
+   "warnings": []
+  },
+  "K261119-39": {
+   "risk_rs": 84.76,
+   "reward_rs": 126.94,
+   "rr": 1.5,
+   "base_p": 0.4,
+   "breakeven_p": 0.578,
+   "used_p": 0.4,
+   "p_source": "random-walk baseline",
+   "ev_rs": -37.58,
+   "kelly": -0.0,
+   "stop_sigma": 1.56,
+   "target_sigma": 2.34,
+   "warnings": []
+  },
+  "E261119-2": {
+   "risk_rs": 34.54
+  },
+  "M261119-36": {
+   "risk_rs": 475.0,
+   "reward_rs": 947.5,
+   "rr": 1.99,
+   "base_p": 0.334,
+   "breakeven_p": 0.334,
+   "used_p": 0.334,
+   "p_source": "random-walk baseline",
+   "ev_rs": 0.0,
+   "kelly": 0.0
+  },
+  "E261119-1": {
+   "risk_rs": 49.39
+  },
+  "M261119-35": {
+   "risk_rs": 310.84,
+   "reward_rs": 621.68,
+   "rr": 2.0,
+   "base_p": 0.333,
+   "breakeven_p": 0.333,
+   "used_p": 0.333,
+   "p_source": "random-walk baseline",
+   "ev_rs": -0.0,
+   "kelly": 0.0
+  },
+  "C261119-34": {
+   "risk_rs": 37.37,
+   "reward_rs": 75.13,
+   "rr": 2.01,
+   "base_p": 0.332,
+   "breakeven_p": 0.332,
+   "used_p": 0.332,
+   "p_source": "random-walk baseline",
+   "ev_rs": 0.0,
+   "kelly": 0.0
+  },
+  "C261119-33": {
+   "risk_rs": 37.5,
+   "reward_rs": 75.0,
+   "rr": 2.0,
+   "base_p": 0.333,
+   "breakeven_p": 0.333,
+   "used_p": 0.333,
+   "p_source": "random-walk baseline",
+   "ev_rs": -0.0,
+   "kelly": 0.0
+  },
+  "S3": {
+   "risk_rs": 242.15
+  },
+  "S4": {
+   "risk_rs": 138.08
+  },
+  "S6": {
+   "risk_rs": 153.6,
+   "reward_rs": 768.0,
+   "rr": 5.0,
+   "base_p": 0.167,
+   "breakeven_p": 0.194,
+   "used_p": 0.167,
+   "p_source": "random-walk baseline",
+   "ev_rs": -25.17,
+   "kelly": -0.0
+  },
+  "S7": {
+   "risk_rs": 96.0,
+   "reward_rs": 480.0,
+   "rr": 5.0,
+   "base_p": 0.167,
+   "breakeven_p": 0.209,
+   "used_p": 0.167,
+   "p_source": "random-walk baseline",
+   "ev_rs": -24.58,
+   "kelly": -0.0
+  },
+  "S8": {
+   "risk_rs": 148.0,
+   "reward_rs": 740.0,
+   "rr": 5.0,
+   "base_p": 0.167,
+   "breakeven_p": 0.195,
+   "used_p": 0.167,
+   "p_source": "random-walk baseline",
+   "ev_rs": -25.12,
+   "kelly": -0.0
+  },
+  "S9": {
+   "risk_rs": 182.6,
+   "reward_rs": 730.4,
+   "rr": 4.0,
+   "base_p": 0.2,
+   "breakeven_p": 0.227,
+   "used_p": 0.2,
+   "p_source": "random-walk baseline",
+   "ev_rs": -25.1,
+   "kelly": 0.0
+  },
+  "S10": {
+   "risk_rs": 184.21
+  },
+  "S11": {
+   "risk_rs": 182.6
+  },
+  "S12": {
+   "risk_rs": 138.75
+  },
+  "S13": {
+   "risk_rs": 187.16
+  },
+  "G1": {
+   "risk_rs": 314.72
+  },
+  "S1": {
+   "risk_rs": 90.16,
+   "reward_rs": 360.62,
+   "rr": 4.0,
+   "base_p": 0.2,
+   "breakeven_p": 0.254,
+   "used_p": 0.2,
+   "p_source": "random-walk baseline",
+   "ev_rs": -24.34,
+   "kelly": 0.0
+  },
+  "S2": {
+   "risk_rs": 85.05,
+   "reward_rs": 340.2,
+   "rr": 4.0,
+   "base_p": 0.2,
+   "breakeven_p": 0.257,
+   "used_p": 0.2,
+   "p_source": "random-walk baseline",
+   "ev_rs": -24.3,
+   "kelly": -0.0
+  }
+ },
+ "state": {
+  "tokens": {},
+  "ledger": [],
+  "requests": [],
+  "messages": [],
+  "retired": [],
+  "resumed": [],
+  "paused_teams": [],
+  "variants": {},
+  "awarded": [],
+  "said": {}
+ }
+}

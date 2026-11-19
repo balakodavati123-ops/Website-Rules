@@ -1,4 +1,383 @@
 {
+ "K261119-43": {
+  "horizon": "scalp",
+  "headline": "PNB long",
+  "news": [
+   "US markets averaged -0.31% at the 18/11 close.",
+   "Asia averaged -0.92%."
+  ],
+  "data": [
+   "PNB at 155.06; 1-minute bars: close 154.84, VWAP 154.29, 9-bar average 154.76, 21-bar average 154.70, volume 1.3 times the 20-bar average.",
+   "Size 257 shares = Rs 39,851 of stock on about Rs 7,970 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+  ],
+  "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+  "why": [
+   "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+   "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "155.06",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "154.55",
+    "Costs about \u20b9131"
+   ],
+   [
+    "Target (exit if right)",
+    "155.80",
+    "Earns about \u20b9190"
+   ],
+   [
+    "Reward for the risk",
+    "1.4 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "41% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b97,970",
+    "8% of the account"
+   ],
+   [
+    "Round-trip charges",
+    "about Rs 38",
+    "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+   ],
+   [
+    "Target against charges",
+    "5.0 times",
+    "The desk needs at least 3 times"
+   ]
+  ],
+  "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+  "viability": "Needs \u20b97,970 to hold."
+ },
+ "K261119-42": {
+  "horizon": "scalp",
+  "headline": "KALYANKJIL long",
+  "news": [
+   "US markets averaged -0.31% at the 18/11 close.",
+   "Asia averaged -0.92%."
+  ],
+  "data": [
+   "KALYANKJIL at 649.58; 1-minute bars: close 651.05, VWAP 648.95, 9-bar average 649.83, 21-bar average 649.71, volume 5.4 times the 20-bar average.",
+   "Size 61 shares = Rs 39,624 of stock on about Rs 7,925 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+  ],
+  "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+  "why": [
+   "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+   "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "649.58",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "647.40",
+    "Costs about \u20b9133"
+   ],
+   [
+    "Target (exit if right)",
+    "652.80",
+    "Earns about \u20b9196"
+   ],
+   [
+    "Reward for the risk",
+    "1.5 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "40% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b97,925",
+    "8% of the account"
+   ],
+   [
+    "Round-trip charges",
+    "about Rs 38",
+    "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+   ],
+   [
+    "Target against charges",
+    "5.2 times",
+    "The desk needs at least 3 times"
+   ]
+  ],
+  "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+  "viability": "Needs \u20b97,925 to hold."
+ },
+ "K261119-41": {
+  "horizon": "scalp",
+  "headline": "GROWW short",
+  "news": [
+   "US markets averaged -0.31% at the 18/11 close.",
+   "Asia averaged -0.92%."
+  ],
+  "data": [
+   "GROWW at 222.43; 1-minute bars: close 222.33, VWAP 222.55, 9-bar average 222.97, 21-bar average 223.43, volume 1.5 times the 20-bar average.",
+   "Size 179 shares = Rs 39,814 of stock on about Rs 7,963 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+  ],
+  "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+  "why": [
+   "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+   "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "222.43",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "223.15",
+    "Costs about \u20b9130"
+   ],
+   [
+    "Target (exit if right)",
+    "221.35",
+    "Earns about \u20b9193"
+   ],
+   [
+    "Reward for the risk",
+    "1.5 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "40% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b97,963",
+    "8% of the account"
+   ],
+   [
+    "Round-trip charges",
+    "about Rs 38",
+    "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+   ],
+   [
+    "Target against charges",
+    "5.1 times",
+    "The desk needs at least 3 times"
+   ]
+  ],
+  "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+  "viability": "Needs \u20b97,963 to hold."
+ },
+ "K261119-40": {
+  "horizon": "scalp",
+  "headline": "HDFCBANK long",
+  "news": [
+   "US markets averaged -0.31% at the 18/11 close.",
+   "Asia averaged -0.92%."
+  ],
+  "data": [
+   "HDFCBANK at 813.56; 1-minute bars: close 813.15, VWAP 808.80, 9-bar average 811.67, 21-bar average 810.93, volume 1.3 times the 20-bar average.",
+   "Size 49 shares = Rs 39,865 of stock on about Rs 7,973 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+  ],
+  "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+  "why": [
+   "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+   "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "813.56",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "810.65",
+    "Costs about \u20b9143"
+   ],
+   [
+    "Target (exit if right)",
+    "817.90",
+    "Earns about \u20b9213"
+   ],
+   [
+    "Reward for the risk",
+    "1.5 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "40% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b97,973",
+    "8% of the account"
+   ],
+   [
+    "Round-trip charges",
+    "about Rs 38",
+    "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+   ],
+   [
+    "Target against charges",
+    "5.6 times",
+    "The desk needs at least 3 times"
+   ]
+  ],
+  "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+  "viability": "Needs \u20b97,973 to hold."
+ },
+ "K261119-39": {
+  "horizon": "scalp",
+  "headline": "RELIANCE long",
+  "news": [
+   "US markets averaged -0.31% at the 18/11 close.",
+   "Asia averaged -0.92%."
+  ],
+  "data": [
+   "RELIANCE at 1,363.77; 1-minute bars: close 1,362.10, VWAP 1,360.07, 9-bar average 1,361.63, 21-bar average 1,361.45, volume 3.2 times the 20-bar average.",
+   "Size 29 shares = Rs 39,549 of stock on about Rs 7,910 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+  ],
+  "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+  "why": [
+   "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+   "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "1,363.77",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "1,360.85",
+    "Costs about \u20b985"
+   ],
+   [
+    "Target (exit if right)",
+    "1,368.15",
+    "Earns about \u20b9127"
+   ],
+   [
+    "Reward for the risk",
+    "1.5 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "40% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b97,910",
+    "8% of the account"
+   ],
+   [
+    "Round-trip charges",
+    "about Rs 38",
+    "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+   ],
+   [
+    "Target against charges",
+    "3.4 times",
+    "The desk needs at least 3 times"
+   ]
+  ],
+  "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+  "viability": "Needs \u20b97,910 to hold."
+ },
+ "F261119-38": {
+  "horizon": "daily",
+  "headline": "Buy 25,350 CE \u00b7 NIFTY 2026-11-23",
+  "news": [
+   "US markets averaged -0.31% at the 18/11 close.",
+   "Asia averaged -0.92%.",
+   "Brent crude 88.96 (-4.49%).",
+   "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com (GoogleNews)",
+   "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh (BusinessStandard)",
+   "Sensex Falls 500 Pts, Nifty Slips As Auto, Metal Stocks Lead Sell-off - TradingView (GoogleNews)",
+   "6 companies filed results or hold board meetings today."
+  ],
+  "data": [
+   "NIFTY 25,356, +0.51% on the previous close. India VIX 16.1.",
+   "Implied volatility at the money 12.9% a year. Over 4 days to 2026-11-23 that prices a one-standard-deviation move of about \u00b1342 points (\u00b11.3%), so the market gives roughly a 68% chance of finishing between 25,013 and 25,698.",
+   "Option positioning: put-to-call ratio 1.19, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,000 (a floor), max pain 25,000.",
+   "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+   "Our forecast for today: Bearish (score -0.22); likely range 24,957 to 25,465."
+  ],
+  "strategy": "Buy a single at-the-money call (up day) or put (down day).",
+  "why": [
+   "Used when the index has already moved 0.5% or more: a continuing trend pays quickly because the option gains from direction and from rising volatility.",
+   "Direction: today's forecast leans bearish (World tone is weak: US and Asia weighted average -0.55% at the 18/11 close; Brent crude 88.96 (-4.49%).; Nifty 50 closed at 25,228, +4.7% from its 20-day average (24,095) and -0.1% over five sessions: the trend is up.)."
+  ],
+  "numbers": [
+   [
+    "Net debit",
+    "153.0 points = \u20b99,945 per lot",
+    "What you receive (or pay) up front"
+   ],
+   [
+    "Most you can make",
+    "\u20b9484,845",
+    "At expiry, if everything goes right"
+   ],
+   [
+    "Most you can lose",
+    "\u20b99,945",
+    "At expiry, if everything goes wrong (fixed by the bought options)"
+   ],
+   [
+    "Break-even at expiry",
+    "25,503",
+    "Where the structure stops losing money"
+   ],
+   [
+    "Chance of profit at expiry",
+    "33%",
+    "From the options market's own implied volatility; not our edge, the market's odds"
+   ],
+   [
+    "Expected move to expiry",
+    "\u00b1342 points",
+    "4 days at 12.9% implied volatility"
+   ],
+   [
+    "Reward for the risk",
+    "48.75 to 1",
+    "Best case divided by worst case"
+   ],
+   [
+    "Margin the broker asks",
+    "\u20b99,926",
+    "10% of the account (Upstox margin calculator)"
+   ],
+   [
+    "Our exit levels",
+    "Take profit at \u20b94,972, cut at \u20b92,984",
+    "Rupees on one lot, before the exit rule below"
+   ]
+  ],
+  "risk": "Take profit at 50% of the debit, cut at 30%, and be flat by 15:15 whatever happens. Fails when: The move stalls. The premium is the most you can lose.",
+  "viability": "One lot of 65 needs \u20b99,926 of margin, checked with the broker's calculator when the trade was booked."
+ },
  "E261119-2": {
   "horizon": "intraday",
   "headline": "PAYTM short",
@@ -377,7 +756,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9138",
-    "0.14% of the account"
+    "0.13% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -496,7 +875,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9148",
-    "0.15% of the account"
+    "0.14% of the account"
    ],
    [
     "Reward at the target",

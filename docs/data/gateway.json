@@ -1,18 +1,260 @@
 {
- "intents": {},
- "events": [],
+ "intents": {
+  "K261119-39": {
+   "id": "K261119-39",
+   "agent": "scalp_vwap_pullback",
+   "symbol": "RELIANCE",
+   "label": "RELIANCE long",
+   "side": "BUY",
+   "qty": 29,
+   "entry": 1363.7727,
+   "stop": 1360.85,
+   "target": 1368.15,
+   "created": "11:55:59",
+   "day": "2026-11-19",
+   "hold_min": 10,
+   "qty_sent": 29,
+   "reasons": [],
+   "margin": null,
+   "est_cost": 37.58,
+   "payload": {
+    "txn_type": "BUY",
+    "exchange": "NSE",
+    "segment": "EQUITY",
+    "product": "INTRADAY",
+    "order_type": "LIMIT",
+    "validity": "DAY",
+    "security_id": "",
+    "qty": 29,
+    "limit_price": 1364.5,
+    "sl_trigger_price": 1360.85,
+    "sl_limit_price": 1358.1,
+    "remarks": "K261119-39",
+    "tgt_trigger_price": 1368.15,
+    "tgt_limit_price": 1368.2
+   },
+   "gate": {
+    "ok": false,
+    "why": "verdict COLLECTING with 0 closed paper trades; needs WORKING and 30+"
+   },
+   "status": "DRY",
+   "note": "would be held back: verdict COLLECTING with 0 closed paper trades; needs WORKING and 30+",
+   "paper_status": "LOSS",
+   "paper_pnl": -140.31,
+   "paper_exit": 1360.2279,
+   "counted": true
+  },
+  "K261119-40": {
+   "id": "K261119-40",
+   "agent": "scalp_vwap_pullback",
+   "symbol": "HDFCBANK",
+   "label": "HDFCBANK long",
+   "side": "BUY",
+   "qty": 49,
+   "entry": 813.5627,
+   "stop": 810.65,
+   "target": 817.9,
+   "created": "12:02:25",
+   "day": "2026-11-19",
+   "hold_min": 10,
+   "qty_sent": 49,
+   "reasons": [],
+   "margin": null,
+   "est_cost": 37.71,
+   "payload": {
+    "txn_type": "BUY",
+    "exchange": "NSE",
+    "segment": "EQUITY",
+    "product": "INTRADAY",
+    "order_type": "LIMIT",
+    "validity": "DAY",
+    "security_id": "",
+    "qty": 49,
+    "limit_price": 814.0,
+    "sl_trigger_price": 810.65,
+    "sl_limit_price": 809.0,
+    "remarks": "K261119-40",
+    "tgt_trigger_price": 817.9,
+    "tgt_limit_price": 817.95
+   },
+   "gate": {
+    "ok": false,
+    "why": "verdict COLLECTING with 0 closed paper trades; needs WORKING and 30+"
+   },
+   "status": "DRY",
+   "note": "would be held back: verdict COLLECTING with 0 closed paper trades; needs WORKING and 30+",
+   "paper_status": "LOSS",
+   "paper_pnl": -68.28,
+   "paper_exit": 812.9374,
+   "counted": true
+  },
+  "K261119-41": {
+   "id": "K261119-41",
+   "agent": "scalp_vwap_pullback",
+   "symbol": "GROWW",
+   "label": "GROWW short",
+   "side": "SELL",
+   "qty": 179,
+   "entry": 222.4255,
+   "stop": 223.15,
+   "target": 221.35,
+   "created": "12:07:39",
+   "day": "2026-11-19",
+   "hold_min": 10,
+   "qty_sent": 179,
+   "reasons": [],
+   "margin": null,
+   "est_cost": 37.62,
+   "payload": {
+    "txn_type": "SELL",
+    "exchange": "NSE",
+    "segment": "EQUITY",
+    "product": "INTRADAY",
+    "order_type": "LIMIT",
+    "validity": "DAY",
+    "security_id": "",
+    "qty": 179,
+    "limit_price": 222.3,
+    "sl_trigger_price": 223.15,
+    "sl_limit_price": 223.6,
+    "remarks": "K261119-41",
+    "tgt_trigger_price": 221.35,
+    "tgt_limit_price": 221.3
+   },
+   "gate": {
+    "ok": false,
+    "why": "verdict COLLECTING with 1 closed paper trades; needs WORKING and 30+"
+   },
+   "status": "DRY",
+   "note": "would be held back: verdict COLLECTING with 1 closed paper trades; needs WORKING and 30+",
+   "paper_status": "WIN",
+   "paper_pnl": 168.45,
+   "paper_exit": 221.2742,
+   "counted": true
+  },
+  "K261119-42": {
+   "id": "K261119-42",
+   "agent": "scalp_vwap_pullback",
+   "symbol": "KALYANKJIL",
+   "label": "KALYANKJIL long",
+   "side": "BUY",
+   "qty": 61,
+   "entry": 649.5799,
+   "stop": 647.4,
+   "target": 652.8,
+   "created": "12:15:14",
+   "day": "2026-11-19",
+   "hold_min": 10,
+   "qty_sent": 61,
+   "reasons": [],
+   "margin": null,
+   "est_cost": 37.62,
+   "payload": {
+    "txn_type": "BUY",
+    "exchange": "NSE",
+    "segment": "EQUITY",
+    "product": "INTRADAY",
+    "order_type": "LIMIT",
+    "validity": "DAY",
+    "security_id": "",
+    "qty": 61,
+    "limit_price": 649.95,
+    "sl_trigger_price": 647.4,
+    "sl_limit_price": 646.1,
+    "remarks": "K261119-42",
+    "tgt_trigger_price": 652.8,
+    "tgt_limit_price": 652.85
+   },
+   "gate": {
+    "ok": false,
+    "why": "verdict COLLECTING with 3 closed paper trades; needs WORKING and 30+"
+   },
+   "status": "DRY",
+   "note": "would be held back: verdict COLLECTING with 3 closed paper trades; needs WORKING and 30+",
+   "paper_status": "LOSS",
+   "paper_pnl": -35.12,
+   "paper_exit": 649.62,
+   "counted": true
+  },
+  "K261119-43": {
+   "id": "K261119-43",
+   "agent": "scalp_vwap_pullback",
+   "symbol": "PNB",
+   "label": "PNB long",
+   "side": "BUY",
+   "qty": 257,
+   "entry": 155.061,
+   "stop": 154.55,
+   "target": 155.8,
+   "created": "12:16:18",
+   "day": "2026-11-19",
+   "hold_min": 10,
+   "qty_sent": 257,
+   "reasons": [],
+   "margin": null,
+   "est_cost": 37.7,
+   "payload": {
+    "txn_type": "BUY",
+    "exchange": "NSE",
+    "segment": "EQUITY",
+    "product": "INTRADAY",
+    "order_type": "LIMIT",
+    "validity": "DAY",
+    "security_id": "",
+    "qty": 257,
+    "limit_price": 155.15,
+    "sl_trigger_price": 154.55,
+    "sl_limit_price": 154.2,
+    "remarks": "K261119-43",
+    "tgt_trigger_price": 155.8,
+    "tgt_limit_price": 155.85
+   },
+   "gate": {
+    "ok": false,
+    "why": "verdict COLLECTING with 3 closed paper trades; needs WORKING and 30+"
+   },
+   "status": "DRY",
+   "note": "would be held back: verdict COLLECTING with 3 closed paper trades; needs WORKING and 30+",
+   "paper_status": "LOSS",
+   "paper_pnl": -86.97,
+   "paper_exit": 154.869,
+   "counted": true
+  }
+ },
+ "events": [
+  {
+   "t": "12:16:18",
+   "text": "DRY BUY 257 PNB stop 154.55 (gate closed)"
+  },
+  {
+   "t": "12:15:14",
+   "text": "DRY BUY 61 KALYANKJIL stop 647.4 (gate closed)"
+  },
+  {
+   "t": "12:07:39",
+   "text": "DRY SELL 179 GROWW stop 223.15 (gate closed)"
+  },
+  {
+   "t": "12:02:25",
+   "text": "DRY BUY 49 HDFCBANK stop 810.65 (gate closed)"
+  },
+  {
+   "t": "11:55:59",
+   "text": "DRY BUY 29 RELIANCE stop 1360.85 (gate closed)"
+  }
+ ],
  "day": {
   "day": "2026-11-19",
-  "trades": 0,
-  "pnl": 0.0,
-  "stops": 0
+  "trades": 5,
+  "pnl": -162.23,
+  "stops": 3
  },
  "broker": {},
  "mode": "dry",
  "wanted": "dry",
  "blockers": [],
  "killed": false,
- "updated_at": "2026-11-19T11:29:23+05:30",
+ "updated_at": "2026-11-19T12:57:49+05:30",
  "caps": {
   "max_value": 40000.0,
   "risk": 250.0,
@@ -30,5 +272,6 @@
   "agents": [
    "scalp_vwap_pullback"
   ]
- }
+ },
+ "halted": "3 losing trades in a row"
 }
