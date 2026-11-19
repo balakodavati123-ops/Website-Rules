@@ -26,13 +26,13 @@
  {
   "desk": "CRYPTO",
   "strategy": "crypto_breakout",
-  "closed": 7,
+  "closed": 9,
   "wins": 3,
-  "win_rate": 42.9,
-  "pnl_rs": -388.56,
-  "avg_rs": -55.51,
-  "t_stat": -1.27,
-  "confidence": 10.2,
+  "win_rate": 33.3,
+  "pnl_rs": -486.48,
+  "avg_rs": -54.05,
+  "t_stat": -1.62,
+  "confidence": 5.3,
   "verdict": "COLLECTING"
  },
  {

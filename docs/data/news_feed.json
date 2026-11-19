@@ -1,53 +1,5 @@
 [
  {
-  "time": "18 Nov 17:53",
-  "source": "BusinessStandard",
-  "category": "APPROVAL",
-  "headline": "Meganet, Rediff.com file IPO papers; Advanced Sys-Tek gets Sebi nod",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 17:53",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Stock markets snap 2-day rally; Sensex drops 500 points amid profit booking, U.S. Fed rate hike fears - The Hindu",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 17:53",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Stock markets snap 2-day rally; Sensex drops 500 pts amid profit booking, US Fed rate hike fears - ThePrint",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 18:08",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Top gainers and losers, Nov 18: Titan tumbles 4%, HDFC Life falls 3%, Cipla shares jump 3%; check list - Upstox",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 18:19",
-  "source": "Mint",
-  "category": "EARNINGS",
-  "headline": "Nvidia shares gain 3% in premarket after Q3 results, upbeat forecast top estimates: Is the AI rally back on track?",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "18 Nov 18:24",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex, Nifty Snap Two-Day Winning Streak as Profit Booking Triggers Sell-Off \u2013 Wednesday Closing Report - Moneylife",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
   "time": "18 Nov 18:44",
   "source": "GoogleNews",
   "category": "CRASH/SHOCK",
@@ -476,6 +428,54 @@
   "source": "Mint",
   "category": "CRASH/SHOCK",
   "headline": "Paytm, Pine Labs, MobiKwik shares tumble up to 9% on MDR delay concerns: Should investors stay away from fintech stocks?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 19:09",
+  "source": "GoogleNews",
+  "category": "GEOPOLITICS",
+  "headline": "Why did market rise today? Sensex crosses 83,000 for first time since Iran war began; Nifty tops 25,500. 5 - The Economic Times",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "19 Nov 19:09",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Sensex drops over 200 points, Nifty slips below 25,150 on IT stock losses, US fed rate hike fears - Telegraph India",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "19 Nov 19:09",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Sensex, Nifty open flat amid Fed rate hike concerns; investors remain cautious - cfo.economictimes.indiatimes.com",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "19 Nov 21:42",
+  "source": "ET",
+  "category": "DEAL/ORDER",
+  "headline": "Signature Global acquires 10-acre land parcels in Gurugram to build realty projects",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "19 Nov 23:10",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Anthropic IPO Live Updates: Dow plunges 1,000 pts, Nasdaq falls over 1% after Anthropic's trillion-dollar debut",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 23:25",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Anthropic IPO Live Updates: Dow plunges 650 pts after Anthropic's trillion-dollar market debut",
   "event": "yes",
   "hint": "SHORT-lean headline"
  }

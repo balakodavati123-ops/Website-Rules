@@ -1,5 +1,57 @@
 [
  {
+  "id": "C261119-48",
+  "desk": "CRYPTO",
+  "strategy": "crypto_dip_bounce",
+  "label": "ETH long",
+  "side": "LONG",
+  "entry": 1761.02,
+  "last": 1779.26,
+  "qty": 2500,
+  "status": "OPEN",
+  "pnl_rs": 15.89,
+  "exit": "",
+  "why": "",
+  "day": "2026-11-19",
+  "opened": "22:32:59",
+  "closed": "",
+  "ts": 1795107780.3530421,
+  "symbol": "ETH",
+  "stop": 1734.6047,
+  "target_px": 1813.8506,
+  "horizon": "intraday",
+  "risk_class": "Intraday spot",
+  "margin_rs": 2500,
+  "reason": "-3.0% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours",
+  "has_thesis": true
+ },
+ {
+  "id": "C261119-47",
+  "desk": "CRYPTO",
+  "strategy": "crypto_dip_bounce",
+  "label": "SOL long",
+  "side": "LONG",
+  "entry": 73.23,
+  "last": 74.24,
+  "qty": 2500,
+  "status": "OPEN",
+  "pnl_rs": 24.48,
+  "exit": "",
+  "why": "",
+  "day": "2026-11-19",
+  "opened": "22:22:06",
+  "closed": "",
+  "ts": 1795107126.9048302,
+  "symbol": "SOL",
+  "stop": 72.13155,
+  "target_px": 75.4269,
+  "horizon": "intraday",
+  "risk_class": "Intraday spot",
+  "margin_rs": 2500,
+  "reason": "-3.1% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours",
+  "has_thesis": true
+ },
+ {
   "id": "E261119-6",
   "desk": "EQUITY",
   "strategy": "news-led",
@@ -23,8 +75,7 @@
   "target_px": 568.1,
   "leverage": 5.0,
   "setup": "news",
-  "instrument_key": "NSE_EQ|INE0BY001018",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE0BY001018"
  },
  {
   "id": "C261119-46",
@@ -33,15 +84,15 @@
   "label": "ADA long",
   "side": "LONG",
   "entry": 0.1541,
-  "last": 0.155343,
+  "last": 0.1518,
   "qty": 2500,
-  "status": "OPEN",
-  "pnl_rs": 10.17,
-  "exit": "",
-  "why": "",
+  "status": "LOSS",
+  "pnl_rs": -47.9,
+  "exit": 0.1518,
+  "why": "stop",
   "day": "2026-11-19",
   "opened": "14:26:43",
-  "closed": "",
+  "closed": "21:09:13",
   "ts": 1795078609.4475584,
   "symbol": "ADA",
   "stop": 0.151797,
@@ -59,15 +110,15 @@
   "label": "DOGE long",
   "side": "LONG",
   "entry": 0.0595,
-  "last": 0.0596023,
+  "last": 0.0585,
   "qty": 2500,
-  "status": "OPEN",
-  "pnl_rs": -5.7,
-  "exit": "",
-  "why": "",
+  "status": "LOSS",
+  "pnl_rs": -50.02,
+  "exit": 0.0585,
+  "why": "stop",
   "day": "2026-11-19",
   "opened": "14:26:23",
-  "closed": "",
+  "closed": "21:06:05",
   "ts": 1795078587.5326047,
   "symbol": "DOGE",
   "stop": 0.058597,
@@ -131,8 +182,7 @@
   "target_px": 80.51,
   "leverage": 5.0,
   "setup": "news",
-  "instrument_key": "NSE_EQ|INE095N01031",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE095N01031"
  },
  {
   "id": "E261119-3",
@@ -158,8 +208,7 @@
   "target_px": 1548.15,
   "leverage": 5.0,
   "setup": "news",
-  "instrument_key": "NSE_EQ|INE00R701025",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE00R701025"
  },
  {
   "id": "E261119-4",
@@ -185,8 +234,7 @@
   "target_px": 45.29,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INE2KCE01013",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE2KCE01013"
  },
  {
   "id": "K261119-43",
@@ -399,8 +447,7 @@
   "target_px": null,
   "leverage": null,
   "setup": null,
-  "instrument_key": "NSE_EQ|INE982J01020",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE982J01020"
  },
  {
   "id": "F261119-37",
@@ -505,8 +552,7 @@
   "target_px": null,
   "leverage": null,
   "setup": null,
-  "instrument_key": "NSE_EQ|INE818H01020",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE818H01020"
  },
  {
   "id": "M261119-35",

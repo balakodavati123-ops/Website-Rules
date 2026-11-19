@@ -1,34 +1,105 @@
 {
- "E261119-6": {
+ "C261119-48": {
   "horizon": "intraday",
-  "headline": "JUBLINGREA short",
+  "headline": "ETH long",
   "news": [
    "US markets averaged -0.31% at the 18/11 close.",
-   "Asia averaged -0.92%.",
-   "Brent crude 88.96 (-4.49%)."
+   "Asia averaged -0.92%."
   ],
   "data": [
-   "Entry 575.00, stop 578.45, target 568.10; 43 shares worth \u20b924,725.",
-   "Market tone this morning: Weak. US markets averaged -0.31% at the 18/11 close. Asia averaged -0.92%."
+   "ETH at $1,761.02, -0.77% over the last 24 hours; 24-hour range $1,745.99 to $1,815.52.",
+   "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
   ],
-  "strategy": "",
+  "strategy": "Buy a coin that has dropped and started to recover.",
   "why": [
-   "Signal: News-led: a negative filing today; price -2.0% near the day low. Stop 578.45 (0.60%), target 568.10 (2R), stop moves to entry after a 1R gain, out by 15:10."
+   "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+   "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
   ],
   "numbers": [
    [
-    "Risk if the stop is hit",
-    "\u20b9148",
-    "0.13% of the account"
+    "Entry",
+    "1,761.02",
+    "Price when the paper trade was opened"
    ],
    [
-    "Reward at the target",
-    "\u20b9297",
-    "2.0 to 1 against the risk"
+    "Stop (exit if wrong)",
+    "1,734.60",
+    "Costs about \u20b938"
+   ],
+   [
+    "Target (exit if right)",
+    "1,813.85",
+    "Earns about \u20b975"
+   ],
+   [
+    "Reward for the risk",
+    "2.0 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "33% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b92,500",
+    "2% of the account"
    ]
   ],
-  "risk": "Exit at the stop, the target or the time stop in the rule.",
-  "viability": "Paid for in cash: \u20b924,725."
+  "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+  "viability": "Needs \u20b92,500 to hold."
+ },
+ "C261119-47": {
+  "horizon": "intraday",
+  "headline": "SOL long",
+  "news": [
+   "US markets averaged -0.31% at the 18/11 close.",
+   "Asia averaged -0.92%."
+  ],
+  "data": [
+   "SOL at $73.23, -0.42% over the last 24 hours; 24-hour range $72.22 to $75.56.",
+   "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+  ],
+  "strategy": "Buy a coin that has dropped and started to recover.",
+  "why": [
+   "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+   "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "73.23",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "72.13",
+    "Costs about \u20b938"
+   ],
+   [
+    "Target (exit if right)",
+    "75.43",
+    "Earns about \u20b975"
+   ],
+   [
+    "Reward for the risk",
+    "2.0 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "33% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b92,500",
+    "2% of the account"
+   ]
+  ],
+  "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+  "viability": "Needs \u20b92,500 to hold."
  },
  "C261119-46": {
   "horizon": "intraday",
@@ -184,99 +255,6 @@
   ],
   "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
   "viability": "Needs \u20b923,906 to hold (Upstox margin calculator)."
- },
- "E261119-5": {
-  "horizon": "intraday",
-  "headline": "NBCC long",
-  "news": [
-   "US markets averaged -0.31% at the 18/11 close.",
-   "Asia averaged -0.92%.",
-   "Brent crude 88.96 (-4.49%)."
-  ],
-  "data": [
-   "Entry 78.75, stop 77.87, target 80.51; 170 shares worth \u20b913,388.",
-   "Market tone this morning: Weak. US markets averaged -0.31% at the 18/11 close. Asia averaged -0.92%."
-  ],
-  "strategy": "",
-  "why": [
-   "Signal: News-led: a positive filing today; price +1.8% near the day high. Stop 77.87 (1.12%), target 80.51 (2R), stop moves to entry after a 1R gain, out by 15:10."
-  ],
-  "numbers": [
-   [
-    "Risk if the stop is hit",
-    "\u20b9150",
-    "0.13% of the account"
-   ],
-   [
-    "Reward at the target",
-    "\u20b9299",
-    "2.0 to 1 against the risk"
-   ]
-  ],
-  "risk": "Exit at the stop, the target or the time stop in the rule.",
-  "viability": "Paid for in cash: \u20b913,388."
- },
- "E261119-3": {
-  "horizon": "intraday",
-  "headline": "DALBHARAT long",
-  "news": [
-   "US markets averaged -0.31% at the 18/11 close.",
-   "Asia averaged -0.92%.",
-   "Brent crude 88.96 (-4.49%)."
-  ],
-  "data": [
-   "Entry 1,522.40, stop 1,522.40, target 1,548.15; 11 shares worth \u20b916,746.",
-   "Market tone this morning: Weak. US markets averaged -0.31% at the 18/11 close. Asia averaged -0.92%."
-  ],
-  "strategy": "",
-  "why": [
-   "Signal: News-led: headline: Dalmia Bharat buyback alert! Board to consider share repurchase proposal next week on Nov ; price +0.8% near the day high. Stop 1,509.53 (0.85%), target 1,548.15 (2R), stop moves to entry after a 1R gain, out by 15:10."
-  ],
-  "numbers": [
-   [
-    "Risk if the stop is hit",
-    "\u20b90",
-    "0.00% of the account"
-   ],
-   [
-    "Reward at the target",
-    "\u20b9283",
-    ""
-   ]
-  ],
-  "risk": "Exit at the stop, the target or the time stop in the rule.",
-  "viability": "Paid for in cash: \u20b916,746."
- },
- "E261119-4": {
-  "horizon": "intraday",
-  "headline": "KWIL long",
-  "news": [
-   "US markets averaged -0.31% at the 18/11 close.",
-   "Asia averaged -0.92%.",
-   "Brent crude 88.96 (-4.49%)."
-  ],
-  "data": [
-   "Entry 44.23, stop 43.70, target 45.29; 282 shares worth \u20b912,473.",
-   "Market tone this morning: Weak. US markets averaged -0.31% at the 18/11 close. Asia averaged -0.92%."
-  ],
-  "strategy": "",
-  "why": [
-   "Signal: Gap and go: opened +3.2% higher and is holding above the open and VWAP, near the day high. Stop 43.70 (1.20%), target 45.29 (2R), stop moves to entry after a 1R gain, out by 15:10."
-  ],
-  "numbers": [
-   [
-    "Risk if the stop is hit",
-    "\u20b9149",
-    "0.13% of the account"
-   ],
-   [
-    "Reward at the target",
-    "\u20b9299",
-    "2.0 to 1 against the risk"
-   ]
-  ],
-  "risk": "Exit at the stop, the target or the time stop in the rule.",
-  "viability": "Paid for in cash: \u20b912,473."
  },
  "K261119-43": {
   "horizon": "scalp",
@@ -657,32 +635,6 @@
   "risk": "Take profit at 50% of the debit, cut at 30%, and be flat by 15:15 whatever happens. Fails when: The move stalls. The premium is the most you can lose.",
   "viability": "One lot of 65 needs \u20b99,926 of margin, checked with the broker's calculator when the trade was booked."
  },
- "E261119-2": {
-  "horizon": "intraday",
-  "headline": "PAYTM short",
-  "news": [
-   "US markets averaged -0.31% at the 18/11 close.",
-   "Asia averaged -0.92%.",
-   "Brent crude 88.96 (-4.49%)."
-  ],
-  "data": [
-   "Entry 1,726.50, stop 1,743.77; 2 shares worth \u20b93,453.",
-   "Market tone this morning: Weak. US markets averaged -0.31% at the 18/11 close. Asia averaged -0.92%."
-  ],
-  "strategy": "",
-  "why": [
-   "Signal: -8.7% move near the day low, no filing seen"
-  ],
-  "numbers": [
-   [
-    "Risk if the stop is hit",
-    "\u20b935",
-    "0.03% of the account"
-   ]
-  ],
-  "risk": "Exit at the stop, the target or the time stop in the rule.",
-  "viability": "Paid for in cash: \u20b93,453."
- },
  "F261119-37": {
   "horizon": "daily",
   "headline": "Buy 25,250 CE, Buy 25,250 PE \u00b7 NIFTY 2026-11-23",
@@ -807,32 +759,6 @@
   ],
   "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
   "viability": "Needs \u20b922,149 to hold (Upstox margin calculator)."
- },
- "E261119-1": {
-  "horizon": "intraday",
-  "headline": "LTFOODS long",
-  "news": [
-   "US markets averaged -0.31% at the 18/11 close.",
-   "Asia averaged -0.92%.",
-   "Brent crude 88.96 (-4.49%)."
-  ],
-  "data": [
-   "Entry 448.75, stop 444.26; 11 shares worth \u20b94,936.",
-   "Market tone this morning: Weak. US markets averaged -0.31% at the 18/11 close. Asia averaged -0.92%."
-  ],
-  "strategy": "",
-  "why": [
-   "Signal: +7.0% move near the day high, no filing seen"
-  ],
-  "numbers": [
-   [
-    "Risk if the stop is hit",
-    "\u20b949",
-    "0.04% of the account"
-   ]
-  ],
-  "risk": "Exit at the stop, the target or the time stop in the rule.",
-  "viability": "Paid for in cash: \u20b94,936."
  },
  "M261119-35": {
   "horizon": "intraday",

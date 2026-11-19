@@ -1,123 +1,59 @@
 {
- "updated_at": "2026-11-19T18:38:20+05:30",
- "skipped": [
-  {
-   "desk": "COMMODITY",
-   "what": "Silver 1 kg",
-   "margin": 29323,
-   "room": 25000,
-   "why": "needs more margin than the commodities limit has free",
-   "at": "18:37:13",
-   "day": "2026-11-19"
-  },
-  {
-   "desk": "COMMODITY",
-   "what": "Crude oil mini",
-   "margin": 23906,
-   "room": 23863,
-   "why": "needs more margin than the commodities limit has free",
-   "at": "14:22:08",
-   "day": "2026-11-19"
-  },
-  {
-   "desk": "FNO",
-   "what": "weekly NIFTY debit spread",
-   "margin": 38254,
-   "room": 10134,
-   "why": "needs more margin than the F&O limit has free",
-   "at": "13:30:50",
-   "day": "2026-11-19"
-  },
-  {
-   "desk": "FNO",
-   "what": "monthly BANKNIFTY structure",
-   "margin": null,
-   "room": 10134,
-   "why": "options are cheap and the forecast has no direction: no edge worth the margin",
-   "at": "13:30:50",
-   "day": "2026-11-19"
-  },
-  {
-   "desk": "FNO",
-   "what": "NIFTY iron condor (daily)",
-   "margin": 74025,
-   "room": 10134,
-   "why": "needs more margin than the F&O limit has free",
-   "at": "13:30:50",
-   "day": "2026-11-19"
-  },
-  {
-   "desk": "FNO",
-   "what": "NIFTY credit spread (daily)",
-   "margin": 40806,
-   "room": 10134,
-   "why": "needs more margin than the F&O limit has free",
-   "at": "13:30:50",
-   "day": "2026-11-19"
-  },
-  {
-   "desk": "FNO",
-   "what": "NIFTY debit spread (daily)",
-   "margin": 37779,
-   "room": 10134,
-   "why": "needs more margin than the F&O limit has free",
-   "at": "13:30:50",
-   "day": "2026-11-19"
-  }
- ],
+ "updated_at": "2026-11-20T00:19:04+05:30",
+ "skipped": [],
  "reference": [
   {
    "name": "Crude oil (100 barrels)",
    "contract": "CRUDEOIL FUT 18 DEC 26",
-   "margin": 249175
+   "margin": 239160
   },
   {
    "name": "Crude oil mini (10 barrels)",
    "contract": "CRUDEOILM FUT 18 DEC 26",
-   "margin": 24917
+   "margin": 23916
   },
   {
    "name": "Natural gas (1,250 mmBtu)",
-   "contract": "NATURALGAS FUT 24 NOV 26",
-   "margin": 80719
+   "contract": "NATURALGAS FUT 28 DEC 26",
+   "margin": 66712
   },
   {
    "name": "Natural gas mini (250 mmBtu)",
-   "contract": "NATGASMINI FUT 24 NOV 26",
-   "margin": 16148
+   "contract": "NATGASMINI FUT 28 DEC 26",
+   "margin": 13092
   },
   {
    "name": "Gold (1 kg)",
    "contract": "GOLD FUT 04 DEC 26",
-   "margin": 1236150
+   "margin": 1197935
   },
   {
    "name": "Gold mini (100 g)",
    "contract": "GOLDM FUT 04 DEC 26",
-   "margin": 123684
+   "margin": 119841
   },
   {
    "name": "Gold petal (1 g)",
    "contract": "GOLDPETAL FUT 30 NOV 26",
-   "margin": 1249
+   "margin": 1208
   },
   {
    "name": "Silver (30 kg)",
    "contract": "SILVER FUT 04 DEC 26",
-   "margin": 834423
+   "margin": 881490
   },
   {
    "name": "Silver mini (5 kg)",
    "contract": "SILVERM FUT 30 NOV 26",
-   "margin": 137946
+   "margin": 146462
   },
   {
    "name": "Silver micro (1 kg)",
    "contract": "SILVERMIC FUT 30 NOV 26",
-   "margin": 27596
+   "margin": 29289
   }
  ],
- "ref_day": "2026-11-19",
+ "ref_day": "2026-11-20",
  "limits": {
   "swing": 22000,
   "signal": 5000,

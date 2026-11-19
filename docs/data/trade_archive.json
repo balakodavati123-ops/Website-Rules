@@ -1535,7 +1535,8 @@
   "margin_rs": 987,
   "target_px": null,
   "leverage": null,
-  "setup": null
+  "setup": null,
+  "instrument_key": "NSE_EQ|INE818H01020"
  },
  {
   "id": "M261119-36",
@@ -1762,7 +1763,8 @@
   "margin_rs": 691,
   "target_px": null,
   "leverage": null,
-  "setup": null
+  "setup": null,
+  "instrument_key": "NSE_EQ|INE982J01020"
  },
  {
   "id": "F261119-38",
@@ -2347,7 +2349,8 @@
   "margin_rs": 3349,
   "target_px": 1548.15,
   "leverage": 5.0,
-  "setup": "news"
+  "setup": "news",
+  "instrument_key": "NSE_EQ|INE00R701025"
  },
  {
   "id": "E261119-4",
@@ -2372,7 +2375,8 @@
   "margin_rs": 2495,
   "target_px": 45.29,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INE2KCE01013"
  },
  {
   "id": "E261119-5",
@@ -2397,7 +2401,8 @@
   "margin_rs": 2678,
   "target_px": 80.51,
   "leverage": 5.0,
-  "setup": "news"
+  "setup": "news",
+  "instrument_key": "NSE_EQ|INE095N01031"
  },
  {
   "id": "M261119-44",
@@ -2481,6 +2486,158 @@
   "reason": "+0.9% on the previous close and within 0.3% of the day high; stop 0.6%, target 1.2%"
  },
  {
+  "id": "C261119-45",
+  "desk": "CRYPTO",
+  "strategy": "crypto_breakout",
+  "label": "DOGE long",
+  "side": "LONG",
+  "entry": 0.0595,
+  "last": 0.0585,
+  "qty": 2500,
+  "status": "LOSS",
+  "pnl_rs": -50.02,
+  "exit": 0.0585,
+  "why": "stop",
+  "day": "2026-11-19",
+  "opened": "14:26:23",
+  "closed": "21:06:05",
+  "ts": 1795078587.5326047,
+  "symbol": "DOGE",
+  "stop": 0.058597,
+  "target_px": 0.061274,
+  "horizon": "intraday",
+  "risk_class": "Intraday spot",
+  "margin_rs": 2500,
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "DOGE long",
+   "news": [
+    "US markets averaged -0.31% at the 18/11 close.",
+    "Asia averaged -0.92%."
+   ],
+   "data": [
+    "DOGE at $0.06, +1.34% over the last 24 hours; 24-hour range $0.06 to $0.06.",
+    "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+   ],
+   "strategy": "Buy a coin pushing to a 24-hour high.",
+   "why": [
+    "Used when a coin is up 1% or more and within 0.6% of its high: breakouts tend to attract follow-through buying.",
+    "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "0.06",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "0.06",
+     "Costs about \u20b938"
+    ],
+    [
+     "Target (exit if right)",
+     "0.06",
+     "Earns about \u20b975"
+    ],
+    [
+     "Reward for the risk",
+     "2.0 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "33% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b92,500",
+     "2% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or after 8 hours. Fails when: A false breakout. The 1.5% stop caps the loss.",
+   "viability": "Needs \u20b92,500 to hold."
+  },
+  "reason": "+1.3% on the day and within 0.6% of the 24-hour high; stop 1.5%, target 3%, out after 8 hours"
+ },
+ {
+  "id": "C261119-46",
+  "desk": "CRYPTO",
+  "strategy": "crypto_breakout",
+  "label": "ADA long",
+  "side": "LONG",
+  "entry": 0.1541,
+  "last": 0.1518,
+  "qty": 2500,
+  "status": "LOSS",
+  "pnl_rs": -47.9,
+  "exit": 0.1518,
+  "why": "stop",
+  "day": "2026-11-19",
+  "opened": "14:26:43",
+  "closed": "21:09:13",
+  "ts": 1795078609.4475584,
+  "symbol": "ADA",
+  "stop": 0.151797,
+  "target_px": 0.158732,
+  "horizon": "intraday",
+  "risk_class": "Intraday spot",
+  "margin_rs": 2500,
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "ADA long",
+   "news": [
+    "US markets averaged -0.31% at the 18/11 close.",
+    "Asia averaged -0.92%."
+   ],
+   "data": [
+    "ADA at $0.15, +1.89% over the last 24 hours; 24-hour range $0.15 to $0.15.",
+    "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+   ],
+   "strategy": "Buy a coin pushing to a 24-hour high.",
+   "why": [
+    "Used when a coin is up 1% or more and within 0.6% of its high: breakouts tend to attract follow-through buying.",
+    "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "0.15",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "0.15",
+     "Costs about \u20b938"
+    ],
+    [
+     "Target (exit if right)",
+     "0.16",
+     "Earns about \u20b975"
+    ],
+    [
+     "Reward for the risk",
+     "2.0 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "33% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b92,500",
+     "2% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or after 8 hours. Fails when: A false breakout. The 1.5% stop caps the loss.",
+   "viability": "Needs \u20b92,500 to hold."
+  },
+  "reason": "+1.9% on the day and within 0.6% of the 24-hour high; stop 1.5%, target 3%, out after 8 hours"
+ },
+ {
   "id": "E261119-6",
   "desk": "EQUITY",
   "strategy": "news-led",
@@ -2503,6 +2660,7 @@
   "margin_rs": 4945,
   "target_px": 568.1,
   "leverage": 5.0,
-  "setup": "news"
+  "setup": "news",
+  "instrument_key": "NSE_EQ|INE0BY001018"
  }
 ]
