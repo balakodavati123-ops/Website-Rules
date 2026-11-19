@@ -1,6 +1,6 @@
 # Keeping the CEO Trading Desk dashboard alive
 
-The dashboard is a Claude Artifact (https://claude.ai/artifact/4zc7CfzQEu6AiXdKt5Qp3N). Its numbers come two ways:
+**The dashboard has one fixed link: https://balakodavati123-ops.github.io/Website-Rules/** (the old Claude Artifact only shows a banner pointing there). The text below describes the earlier artifact version; the live desk now runs from GitHub Actions and the page reads its data from the `data` branch. Its numbers come two ways:
 
 - **Live, in the viewer's own browser:** holdings, net worth, quotes, movers, candles and MCX futures
   (INDmoney connector). Nothing to do: it refreshes when the page opens, and the Live floor's

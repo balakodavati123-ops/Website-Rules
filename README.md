@@ -109,7 +109,7 @@ The sizing reproduces the daily report's BEL numbers exactly (see `tests/test_ti
 
 ## CEO Trading Desk dashboard
 
-`dashboard/` holds the source of a live dashboard (a Claude Artifact). It opens on the **Live floor**:
+**The dashboard has one fixed link: https://balakodavati123-ops.github.io/Website-Rules/** (`docs/index.html`, published by GitHub Pages; the old Claude Artifact only forwards there). `dashboard/` holds the source of the earlier artifact version. It opens on the **Live floor**:
 a desk for each of the ten agents on a ring around the CEO, with data packets moving from the sources
 (INDmoney movers and quotes, NSE filings, CoinDCX crypto, the paper ledger) to Scout and from desk to
 desk as each name is checked. The other tabs hold holdings and profit and loss from INDmoney, the 08:45

@@ -42,6 +42,7 @@ DAILY_FILES = ["world_markets", "world_news", "events_today", "results_filed", "
 NIFTY = IDX["nifty"]
 UNDER = {"NIFTY": NIFTY, "BANKNIFTY": IDX["banknifty"]}              # the two indexes with options we trade
 VIEW_NAME = {"NIFTY": "Nifty 50", "BANKNIFTY": "Bank Nifty"}
+FC_NAMES = {"Nifty 50": IDX["nifty"], "Bank Nifty": IDX["banknifty"], "Sensex": IDX["sensex"]}       # the indexes we forecast
 
 
 def load(name: str, default):
@@ -254,7 +255,7 @@ def run() -> None:
         """Today's view of Nifty and Bank Nifty with the reasons; rebuilt at the open once the gap is known."""
         nonlocal fc
         today_ = now.date()
-        names = {"Nifty 50": IDX["nifty"], "Bank Nifty": IDX["banknifty"]}
+        names = FC_NAMES
         for nm, k in names.items():
             if (nm, today_.isoformat()) not in hist_cache:
                 hist_cache[(nm, today_.isoformat())] = FC.daily(token, k, today_)
@@ -506,7 +507,7 @@ def run() -> None:
                     if told.get("plan") != today:
                         N.push("Day plan", f"Tone {plan['tone']['label']}. {len(plan['watch'])} names to watch. " + " ".join(plan["tone"]["notes"][:2]), 3, "sunrise")
                         told["plan"] = today
-                if plan.get("day") == today and time.time() - fc_try[0] > 120 and (fc.get("day") != today or fc.get("plan_world_at") != plan.get("world_at")):          # today's forecast for the indexes
+                if plan.get("day") == today and time.time() - fc_try[0] > 120 and (fc.get("day") != today or fc.get("plan_world_at") != plan.get("world_at") or any(n not in (fc.get("views") or {}) for n in FC_NAMES)):          # today's forecast for the indexes
                     fc_try[0] = time.time()
                     qi_ = q_idx or U.quotes(list(IDX.values()), token)
                     build_forecast(now, qi_, fc.get("day") == today and fc.get("stage") == 2)
@@ -520,7 +521,7 @@ def run() -> None:
                     save("forecast.json", fc)
                 if fc.get("day") == today and not fc.get("scored") and hhmm >= "15:45" and q_idx.get(NIFTY):   # score the forecast against what the indexes did
                     rows_sc = []
-                    for nm, k in (("Nifty 50", IDX["nifty"]), ("Bank Nifty", IDX["banknifty"])):
+                    for nm, k in FC_NAMES.items():
                         qv, vw = q_idx.get(k) or {}, (fc.get("views") or {}).get(nm)
                         if vw and qv.get("last_price"):
                             oh = qv.get("ohlc") or {}
@@ -529,7 +530,7 @@ def run() -> None:
                         fc_hist[:] = FC.record(fc_hist, rows_sc, today)[-240:]
                         save("forecast_history.json", fc_hist)
                         fc["scored"], fc["result"] = True, rows_sc
-                        fc["record"] = {nm: FC.hit_rate(fc_hist, nm) for nm in ("Nifty 50", "Bank Nifty")}
+                        fc["record"] = {nm: FC.hit_rate(fc_hist, nm) for nm in FC_NAMES}
                         save("forecast.json", fc)
                 if plan.get("day") == today and plan.get("stage", 0) < 2 and hhmm >= "09:12" and rows_now:    # at the open: who is gapping
                     plan = SOD.add_gaps(plan, rows_now, hhmm)
