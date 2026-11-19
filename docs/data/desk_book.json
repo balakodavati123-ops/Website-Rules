@@ -7,10 +7,10 @@
    "label": "BTC long",
    "side": "LONG",
    "entry": 62605.1,
-   "last": 62872.9,
+   "last": 63444.3,
    "qty": 2500,
    "status": "OPEN",
-   "pnl_rs": 0.69,
+   "pnl_rs": 23.51,
    "exit": "",
    "why": "",
    "day": "2026-11-19",
@@ -83,10 +83,10 @@
    "label": "XRP long",
    "side": "LONG",
    "entry": 0.968,
-   "last": 0.96395,
+   "last": 0.97369,
    "qty": 2500,
    "status": "OPEN",
-   "pnl_rs": -20.46,
+   "pnl_rs": 4.7,
    "exit": "",
    "why": "",
    "day": "2026-11-19",
@@ -151,6 +151,87 @@
     "viability": "Needs \u20b92,500 to hold."
    },
    "reason": "-3.8% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
+  },
+  {
+   "id": "M261119-35",
+   "desk": "COMMODITY",
+   "strategy": "mcx_momentum",
+   "label": "Gold 1 g short",
+   "side": "SHORT",
+   "entry": 12952.0,
+   "last": 13017.0,
+   "qty": 4,
+   "status": "OPEN",
+   "pnl_rs": -285.9,
+   "exit": "",
+   "why": "",
+   "day": "2026-11-19",
+   "opened": "09:15:08",
+   "closed": "",
+   "ts": 1795059912.2178295,
+   "key": "MCX_FO|574841",
+   "mult": 1.0,
+   "symbol": "GOLDPETAL FUT 30 NOV 26",
+   "stop": 13029.71,
+   "target_px": 12796.58,
+   "horizon": "intraday",
+   "risk_class": "Intraday momentum",
+   "margin_rs": 4836,
+   "margin_src": "Upstox margin calculator",
+   "thesis": {
+    "horizon": "intraday",
+    "headline": "Gold 1 g short",
+    "news": [
+     "US markets averaged -0.31% at the 18/11 close.",
+     "Asia averaged -0.81%.",
+     "Brent crude 89.04 (-4.40%)."
+    ],
+    "data": [
+     "Gold 1 g (GOLDPETAL FUT 30 NOV 26) at 12,952.00, -1.05% on the previous close; day range 12,948.00 to 13,046.00, price is 0.03% from the day low.",
+     "Lot: 1 unit(s) \u00d7 4 lot(s); contract value \u20b951,808.",
+     "Global reference: Gold 3702.9 (-4.17% at the 11-18 close)."
+    ],
+    "strategy": "A futures position in the direction the market is already moving hard.",
+    "why": [
+     "Used when a commodity is up or down 0.8% or more and sitting at its day extreme: strong days tend to extend into the evening session when global markets open.",
+     "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|574841)."
+    ],
+    "numbers": [
+     [
+      "Entry",
+      "12,952.00",
+      "Price when the paper trade was opened"
+     ],
+     [
+      "Stop (exit if wrong)",
+      "13,029.71",
+      "Costs about \u20b9311"
+     ],
+     [
+      "Target (exit if right)",
+      "12,796.58",
+      "Earns about \u20b9622"
+     ],
+     [
+      "Reward for the risk",
+      "2.0 to 1",
+      "Target gain divided by stop loss"
+     ],
+     [
+      "Needs to be right",
+      "33% of the time",
+      "The win rate this reward-to-risk must beat to break even, before costs"
+     ],
+     [
+      "Capital tied up",
+      "\u20b94,836",
+      "5% of the account"
+     ]
+    ],
+    "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
+    "viability": "Needs \u20b94,836 to hold (Upstox margin calculator)."
+   },
+   "reason": "-1.0% on the previous close and within 0.3% of the day low; stop 0.6%, target 1.2%"
   }
  ],
  "seen": {
@@ -176,8 +257,9 @@
   "2026-11-18|DOGE": "crypto_dip_bounce",
   "2026-11-18|ADA": "crypto_dip_bounce",
   "2026-11-19|BTC": "crypto_dip_bounce",
-  "2026-11-19|XRP": "crypto_dip_bounce"
+  "2026-11-19|XRP": "crypto_dip_bounce",
+  "2026-11-19|GOLDPETAL FUT 30 NOV 26": "SHORT"
  },
- "seq": 34,
+ "seq": 35,
  "rebased": true
 }

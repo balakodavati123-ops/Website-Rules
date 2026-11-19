@@ -1,0 +1,150 @@
+{
+ "day": "2026-11-19",
+ "built_at": "09:18",
+ "stage": 2,
+ "views": {
+  "Nifty 50": {
+   "name": "Nifty 50",
+   "bias": "Sideways",
+   "score": -0.19,
+   "confidence": "Low",
+   "prev_close": 25228,
+   "centre": 25214,
+   "lo": 24967,
+   "hi": 25461,
+   "lo2": 24720,
+   "hi2": 25708,
+   "sigma_pts": 247,
+   "sigma_pct": 0.98,
+   "pivots": {
+    "P": 25254,
+    "R1": 25365,
+    "S1": 25116,
+    "R2": 25503,
+    "S2": 25005
+   },
+   "resistance": [
+    25365,
+    26000
+   ],
+   "support": [
+    24000,
+    25116
+   ],
+   "parts": {
+    "world": -0.69,
+    "trend": 0.48,
+    "range": -0.31,
+    "gap": -0.27,
+    "options": -0.05,
+    "fii": -0.36,
+    "vix": 0.05
+   },
+   "reasons": [
+    "World tone is weak: US and Asia weighted average -0.55% at the 18/11 close; Brent crude 88.96 (-4.49%).",
+    "Nifty 50 closed at 25,228, +4.7% from its 20-day average (24,095) and -0.1% over five sessions: the trend is up.",
+    "It opened at 25,187, -0.16% from the previous close.",
+    "Foreign institutions are net short 70,670 index futures, little changed (-257 over 5 sessions): a persistent bearish tilt.",
+    "Yesterday it closed in the middle third of its 25,142 to 25,391 range, so buyers or sellers did not win the day.",
+    "Options: put-to-call ratio 0.86 (balanced), most call open interest at 26,000 (ceiling), most put open interest at 24,000 (floor), max pain 25,250.",
+    "India VIX 15.5 (-0.3%): steady."
+   ],
+   "playbook": "Above 25,365 the day favours buyers (next stop 25,503); below 25,116 sellers take over (next 25,005). Between them expect a range day: the edges 24,967 and 25,461 are where moves have usually run out of fuel.",
+   "headlines": [
+    "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com",
+    "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh",
+    "Sensex Falls 500 Pts, Nifty Slips As Auto, Metal Stocks Lead Sell-off - TradingView"
+   ],
+   "rv": 15.9,
+   "stage": 2,
+   "day": "2026-11-19"
+  },
+  "Bank Nifty": {
+   "name": "Bank Nifty",
+   "bias": "Sideways",
+   "score": -0.07,
+   "confidence": "Low",
+   "prev_close": 62039,
+   "centre": 62023,
+   "lo": 61250,
+   "hi": 62796,
+   "lo2": 60478,
+   "hi2": 63568,
+   "sigma_pts": 773,
+   "sigma_pct": 1.25,
+   "pivots": {
+    "P": 62056,
+    "R1": 62346,
+    "S1": 61748,
+    "R2": 62654,
+    "S2": 61458
+   },
+   "resistance": [
+    62000,
+    62346
+   ],
+   "support": [
+    60000,
+    61748
+   ],
+   "parts": {
+    "world": -0.69,
+    "trend": 0.84,
+    "range": -0.09,
+    "gap": 0.11,
+    "options": -0.26,
+    "fii": -0.36,
+    "vix": 0.05
+   },
+   "reasons": [
+    "World tone is weak: US and Asia weighted average -0.55% at the 18/11 close; Brent crude 88.96 (-4.49%).",
+    "Bank Nifty closed at 62,039, +7.7% from its 20-day average (57,628) and +2.1% over five sessions: the trend is up.",
+    "Options: put-to-call ratio 1.19 (put writers are confident), most call open interest at 62,000 (ceiling), most put open interest at 60,000 (floor), max pain 59,000.",
+    "Foreign institutions are net short 70,670 index futures, little changed (-257 over 5 sessions): a persistent bearish tilt.",
+    "It opened at 62,081, +0.07% from the previous close.",
+    "Yesterday it closed in the middle third of its 61,765 to 62,364 range, so buyers or sellers did not win the day.",
+    "India VIX 15.5 (-0.3%): steady."
+   ],
+   "playbook": "Above 62,346 the day favours buyers (next stop 62,654); below 61,748 sellers take over (next 61,458). Between them expect a range day: the edges 61,250 and 62,796 are where moves have usually run out of fuel.",
+   "headlines": [
+    "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com",
+    "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh",
+    "Sensex Falls 500 Pts, Nifty Slips As Auto, Metal Stocks Lead Sell-off - TradingView"
+   ],
+   "rv": 20.2,
+   "stage": 2,
+   "day": "2026-11-19"
+  }
+ },
+ "pre": {
+  "Nifty 50": {
+   "bias": "Sideways",
+   "score": -0.18,
+   "lo": 24967,
+   "hi": 25462,
+   "centre": 25215
+  },
+  "Bank Nifty": {
+   "bias": "Sideways",
+   "score": -0.09,
+   "lo": 61242,
+   "hi": 62791,
+   "centre": 62017
+  }
+ },
+ "scored": false,
+ "record": {
+  "Nifty 50": {
+   "days": 0,
+   "direction": null,
+   "range": null
+  },
+  "Bank Nifty": {
+   "days": 0,
+   "direction": null,
+   "range": null
+  }
+ },
+ "world_as_of": "2026-11-18",
+ "plan_world_at": 1795060067.882273
+}

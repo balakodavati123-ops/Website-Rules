@@ -1,29 +1,5 @@
 [
  {
-  "time": "18 Nov 10:28",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 10:53",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 11:14",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Industrial automation enabler Advanced Sys-Tek gets Sebi nod for IPO - Venture Intelligence News",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
   "time": "18 Nov 11:26",
   "source": "BusinessStandard",
   "category": "CRASH/SHOCK",
@@ -476,6 +452,30 @@
   "source": "ET",
   "category": "CRASH/SHOCK",
   "headline": "Global Market Today: Asian shares mixed as commodity prices tumble",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 07:46",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex Falls 500 Pts, Nifty Slips As Auto, Metal Stocks Lead Sell-off - TradingView",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 07:51",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "19 Nov 07:56",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com",
   "event": "yes",
   "hint": "SHORT-lean headline"
  }
