@@ -34,6 +34,9 @@ import thesis as TH         # noqa: E402
 import scalp as SC          # noqa: E402
 import gateway as GW        # noqa: E402
 import indstocks as IND     # noqa: E402
+import company as CO        # noqa: E402
+import quant as QN          # noqa: E402
+import ceo_inbox as CI      # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = Path(os.environ.get("DESK_DOCS") or ROOT / "docs" / "data")
@@ -202,7 +205,11 @@ def run() -> None:
         xb["seen"] = {k: v for k, v in xb["seen"].items() if not k.startswith(todayr)}
         xb["rebased"] = True
     archive = {t["id"]: t for t in load("trade_archive.json", [])}
-    paused = {s["strategy"] for s in load("strategy_stats.json", []) if s["verdict"] == "PAUSED"}
+    cst = load("company.json", {}).get("state") or CO.new_state()            # the company: tokens, the COO's requests, the CEO's decisions
+    for k_, v_ in CO.new_state().items():
+        cst.setdefault(k_, v_)
+    clock = threading.Lock()
+    paused = CO.paused_strategies(cst, {s["strategy"] for s in load("strategy_stats.json", []) if s["verdict"] == "PAUSED"}, {})
     news, status, i = {}, {"desks": {}}, 0
     news_thread = None
     mcx_c: list = []
@@ -338,6 +345,45 @@ def run() -> None:
         if rows:
             via_ref.update(rows=rows, day=at.strftime("%Y-%m-%d"))
 
+    def ceo_inbox(at) -> None:
+        """Instructions from the CEO (GitHub issues titled CEO ..., owner only): apply them and answer."""
+        gt, repo = os.environ.get("GITHUB_TOKEN"), os.environ.get("GITHUB_REPOSITORY")
+        if not (gt and repo):
+            return
+        for cmd in CI.poll(gt, repo):
+            if not cmd["owner"]:
+                CI.reply(gt, repo, cmd["issue"], "Only the CEO (the owner of this repository) can give the company instructions.")
+                continue
+            with clock:
+                text = CO.apply(cst, cmd, at)
+            CI.reply(gt, repo, cmd["issue"], text)
+
+    def company_view(now, allt, stats) -> None:
+        """The god's-eye view of the company: every team's three agents and what they are doing, the COO's notes and requests, the bonus board."""
+        qn, rec_ = {}, {}
+        for t in allt:
+            if t["status"] == "OPEN" or t["day"] == now.strftime("%Y-%m-%d"):
+                if t["desk"] in ("EQUITY", "COMMODITY", "CRYPTO") and t.get("stop") and t.get("entry"):
+                    tm = CO.team_of(t)
+                    if tm not in rec_:
+                        rec_[tm] = QN.team_numbers([x for x in allt if CO.team_of(x) == tm])
+                    hit = rec_[tm].get("hit_rate") if rec_[tm].get("n", 0) >= 20 else None
+                    q_ = float(t.get("qty") or 0) if t["desk"] != "CRYPTO" else 1.0
+                    mult = float(t.get("mult") or 1)
+                    cost = GW.round_trip_cost(float(t["entry"]), float(t.get("target_px") or t["entry"]), int(q_ * mult), "BUY") if t["desk"] == "EQUITY" else 0.0
+                    sig = QN.sigma_bars([b[4] for b in scalp_bars.get(t.get("symbol"), [])[-60:]], SC.R["hold_min"]) if str(t["strategy"]).startswith("scalp") else None
+                    qn[t["id"]] = QN.trade_numbers(float(t["entry"]), float(t["stop"]), float(t.get("target_px") or 0) or None, q_ * mult if t["desk"] != "CRYPTO" else float(t["qty"]) / float(t["entry"]), cost, sig, hit)
+        nf = ((snap.get("indices") or {}).get("Nifty 50") or {}).get("chg_pct")
+        with clock:
+            view = CO.build(cst, now, allt, stats, {"plan": plan, "fc": fc, "sm": sm, "gw": gw.st, "via": load("viability.json", {}), "desks": status["desks"], "world": make_env()["world"],
+                                                   "nifty_chg": nf, "equity": acct[0], "scalp_n": len(scalp_bars), "scalp_params": {**SC.R, **((cst["variants"].get("scalp") or {}).get("params") or {})},
+                                                   "sessions": status.get("sessions"), "quant_notes": qn})
+            for r in view["coo"]["requests"]:
+                if r["status"] == "pending" and r["id"] not in cst["said"].get("pushed", []):
+                    cst["said"]["pushed"] = (cst["said"].get("pushed", []) + [r["id"]])[-50:]
+                    N.push("COO needs your decision", r["text"] + " Open the Company page to approve or reject.", 4, "briefcase")
+            save("company.json", {**view, "quant": qn, "state": cst})
+
     def load_master() -> None:
         if ind and not len(master):
             txt = ind.instruments("equity")
@@ -384,9 +430,19 @@ def run() -> None:
         if qs:
             save("quotes.json", {"updated_at": status.get("updated_at"), "q": qs})
         nonlocal_state["tick"] = allt
+        with clock:                                    # the strategies that may open trades now: the record's pauses, the CEO's decisions
+            fresh = CO.paused_strategies(cst, {s["strategy"] for s in stats if s["verdict"] == "PAUSED"}, {})
+            paused.clear()
+            paused.update(fresh)
         summ = A.summary(allt)
         acct[0] = summ["equity"]
         save("account.json", {"updated_at": status.get("updated_at"), **summ})
+        try:
+            company_view(datetime.now(IST), allt, stats)
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            status["desks"]["company"] = f"error: {str(e)[:100]}"
         if M:
             today_s = datetime.now(IST).strftime("%Y-%m-%d")
             save("viability.json", {"updated_at": status.get("updated_at"), "skipped": sorted((v for v in M.log.values() if v["day"] == today_s), key=lambda v: v["at"], reverse=True)[:30],
@@ -401,6 +457,10 @@ def run() -> None:
         it0, T = time.time(), {}
         close_stale(eq, xb, today)
         rm = A.rooms(nonlocal_state.get("tick") or compose()[0])
+        for tm_ in cst["paused_teams"]:                 # a team the CEO paused gets no money for new trades
+            b_ = next((t["bucket"] for t in CO.TEAMS if t["id"] == tm_), None)
+            if b_ in rm:
+                rm[b_] = [0.0]
         for t in unify_equity(eq) + xb["trades"]:       # keep every closed trade before the day's book resets
             if t["status"] != "OPEN":
                 archive[t["id"]] = t
@@ -439,7 +499,9 @@ def run() -> None:
                     bars_thread[0] = threading.Thread(target=_bars, daemon=True)
                     bars_thread[0].start()
                 rowd = {r["symbol"]: r for r in rows_now}
-                SC.step(xb, now, {"rows": rowd, "bars": {k: v for k, v in scalp_bars.items() if k in rowd}, "room": rm["scalp"], "acct": acct[0], "paused": SC.STRATEGY in paused,
+                var_ = cst["variants"].get("scalp") or {}
+                SC.step(xb, now, {"rows": rowd, "bars": {k: v for k, v in scalp_bars.items() if k in rowd}, "room": rm["scalp"], "acct": acct[0], "paused": (var_.get("name") or SC.STRATEGY) in paused,
+                                  "name": var_.get("name"), "params": var_.get("params"), "sigma": lambda s_: QN.sigma_bars([b[4] for b in scalp_bars.get(s_, [])[-60:]], SC.R["hold_min"]),
                                   "tick": lambda s_: (master.get(s_) or {}).get("tick", 0.05), "leverage": lambda s_: (master.get(s_) or {}).get("leverage", 5.0), "news": make_env()["news"]})
                 info["scalp"] = f"{len(scalp_bars)} names scanned, bars refreshed {int(time.time() - bars_at[0])} s ago"
             except Exception as e:
@@ -608,7 +670,7 @@ def run() -> None:
             if not (news_thread and news_thread.is_alive()):        # the slow fetches (news, world markets, NSE files) can take a while from a cloud address: never hold up the price loop for them
                 def _slow(at=now):
                     for name_, fn_ in (("news", lambda: (lambda n2: (news.clear(), news.update(n2)) if n2 else None)(I.filings_news())), ("news_feed", lambda: I.update_news_feed(at)),
-                                       ("world", lambda: refresh_world(at)), ("smart_money", lambda: token and refresh_smart(at)), ("margin_reference", lambda: margin_reference(at)), ("indstocks_master", lambda: load_master())):
+                                       ("world", lambda: refresh_world(at)), ("smart_money", lambda: token and refresh_smart(at)), ("margin_reference", lambda: margin_reference(at)), ("indstocks_master", lambda: load_master()), ("ceo_inbox", lambda: ceo_inbox(at))):
                         try:
                             fn_()
                         except Exception as e:

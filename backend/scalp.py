@@ -36,8 +36,9 @@ def universe(rows: list[dict]) -> list[str]:
     return [r["symbol"] for r in sorted(ok, key=lambda r: -r["price"] * r["volume"])[:R["universe"]]]
 
 
-def signal(bars: list[list], tick: float = 0.05) -> dict | None:
+def signal(bars: list[list], tick: float = 0.05, P: dict | None = None) -> dict | None:
     """bars: completed 1-minute bars, oldest first, [HH:MM, o, h, l, c, v]. Returns the setup on the last bar, or None."""
+    P = P or R
     n = len(bars)
     if n < 25:
         return None
@@ -49,27 +50,32 @@ def signal(bars: list[list], tick: float = 0.05) -> dict | None:
         vw.append(pv / vv if vv else c[i])
     e9, e21, i = ema(c, 9), ema(c, 21), n - 1
     avg_v = sum(v[i - 20:i]) / 20
-    if avg_v <= 0 or v[i] < R["vol_x"] * avg_v:
+    if avg_v <= 0 or v[i] < P["vol_x"] * avg_v:
         return None
     ext = (c[i] / vw[i] - 1) * 100
-    if c[i] > vw[i] and e9[i] > e21[i] and e21[i] > e21[i - 3] and c[i] > o[i] and c[i] > e9[i] and c[i] > h[i - 1] and min(lo[i - 3:i + 1]) <= e9[i] * 1.0003 and ext <= R["ext_max"]:
+    if c[i] > vw[i] and e9[i] > e21[i] and e21[i] > e21[i - 3] and c[i] > o[i] and c[i] > e9[i] and c[i] > h[i - 1] and min(lo[i - 3:i + 1]) <= e9[i] * 1.0003 and ext <= P["ext_max"]:
         return {"side": "LONG", "swing": min(lo[i - 3:i + 1]), "close": c[i], "vwap": vw[i], "ema9": e9[i], "ema21": e21[i], "vol_x": v[i] / avg_v, "ext": ext, "bar": bars[i][0]}
-    if c[i] < vw[i] and e9[i] < e21[i] and e21[i] < e21[i - 3] and c[i] < o[i] and c[i] < e9[i] and c[i] < lo[i - 1] and max(h[i - 3:i + 1]) >= e9[i] * 0.9997 and -ext <= R["ext_max"]:
+    if c[i] < vw[i] and e9[i] < e21[i] and e21[i] < e21[i - 3] and c[i] < o[i] and c[i] < e9[i] and c[i] < lo[i - 1] and max(h[i - 3:i + 1]) >= e9[i] * 0.9997 and -ext <= P["ext_max"]:
         return {"side": "SHORT", "swing": max(h[i - 3:i + 1]), "close": c[i], "vwap": vw[i], "ema9": e9[i], "ema21": e21[i], "vol_x": v[i] / avg_v, "ext": ext, "bar": bars[i][0]}
     return None
 
 
-def levels(sig: dict, px: float, tick: float) -> tuple[float, float] | None:
-    """Stop beyond the pullback's extreme (kept between 0.15% and 0.40% of price) and a target 1.5 times as far the other way."""
+def levels(sig: dict, px: float, tick: float, sigma_pct: float | None = None, P: dict | None = None) -> tuple[float, float] | None:
+    """Stop beyond the pullback's extreme and at least one standard deviation of the stock's own 10-minute noise away (the quant's floor),
+    kept between 0.15% and 0.40% of price; target 1.5 times as far the other way."""
+    P = P or R
     long_ = sig["side"] == "LONG"
+    floor = max(P["stop_min"], sigma_pct or 0.0)
+    if floor > P["stop_max"]:
+        return None                                                  # too noisy right now for a stop this tight
     stop = G.rnd_dn(sig["swing"] - tick, tick) if long_ else G.rnd_up(sig["swing"] + tick, tick)
     d = abs(px - stop) / px * 100
-    if d < R["stop_min"]:
-        stop = G.rnd_dn(px * (1 - R["stop_min"] / 100), tick) if long_ else G.rnd_up(px * (1 + R["stop_min"] / 100), tick)
-    elif d > R["stop_max"]:
+    if d < floor:
+        stop = G.rnd_dn(px * (1 - floor / 100), tick) if long_ else G.rnd_up(px * (1 + floor / 100), tick)
+    elif d > P["stop_max"]:
         return None                                                  # the pullback was too deep: no tight stop exists
     dist = abs(px - stop)
-    tgt = G.rnd_dn(px + R["rr"] * dist, tick) if long_ else G.rnd_up(px - R["rr"] * dist, tick)
+    tgt = G.rnd_dn(px + P["rr"] * dist, tick) if long_ else G.rnd_up(px - P["rr"] * dist, tick)
     return stop, tgt
 
 
@@ -82,8 +88,9 @@ def _pnl(t: dict, px: float) -> float:
 def step(book: dict, now: datetime, ctx: dict) -> None:
     """ctx: rows {symbol: row}, bars {symbol: completed 1-minute bars}, room (spendable margin, list-like), acct (equity), tick(symbol) -> tick size, leverage(symbol) -> intraday multiple."""
     rows, hhmm, day = ctx["rows"], now.strftime("%H:%M"), now.strftime("%Y-%m-%d")
+    name, P = ctx.get("name") or STRATEGY, {**R, **(ctx.get("params") or {})}          # the COO may have replaced the team with an improved one
     for t in book["trades"]:
-        if t["desk"] != "EQUITY" or t["strategy"] != STRATEGY or t["status"] != "OPEN":
+        if t["desk"] != "EQUITY" or not str(t["strategy"]).startswith("scalp") or t["status"] != "OPEN":
             continue
         r = rows.get(t["symbol"])
         if not r:
@@ -103,7 +110,7 @@ def step(book: dict, now: datetime, ctx: dict) -> None:
             book["streak"][day] = 0 if t["pnl_rs"] > 0 else book["streak"].get(day, 0) + 1
     if ctx.get("paused") or not (R["first"] <= hhmm <= R["last"]) or book.get("streak", {}).get(day, 0) >= R["streak_stop"]:
         return
-    opened = [t for t in book["trades"] if t["desk"] == "EQUITY" and t["strategy"] == STRATEGY]
+    opened = [t for t in book["trades"] if t["desk"] == "EQUITY" and str(t["strategy"]).startswith("scalp")]
     if sum(t["status"] == "OPEN" for t in opened) >= R["max_open"] or sum(t["day"] == day for t in opened) >= R["max_day"]:
         return
     held = {t["symbol"] for t in opened if t["status"] == "OPEN"}
@@ -115,13 +122,14 @@ def step(book: dict, now: datetime, ctx: dict) -> None:
         if book["seen"].get(key):
             continue
         book["seen"][key] = 1
-        sig = signal(bars, ctx["tick"](sym))
+        sig = signal(bars, ctx["tick"](sym), P)
         if not sig:
             continue
         tick = ctx["tick"](sym)
         long_ = sig["side"] == "LONG"
         px = r["price"] * (1 + R["slip"] if long_ else 1 - R["slip"])
-        lv = levels(sig, px, tick)
+        sigma = ctx["sigma"](sym) if ctx.get("sigma") else None
+        lv = levels(sig, px, tick, sigma, P)
         if not lv:
             continue
         stop, tgt = lv
@@ -131,7 +139,7 @@ def step(book: dict, now: datetime, ctx: dict) -> None:
             continue
         cost = G.round_trip_cost(px, tgt, qty, "BUY" if long_ else "SELL")
         gross = abs(tgt - px) * qty
-        if gross < R["min_rc"] * cost:
+        if gross < P["min_rc"] * cost:
             continue                                                  # charges would eat the target: not worth the order
         lev = max(1.0, min(float(ctx["leverage"](sym)), R["leverage"]))
         margin = round(qty * px / lev)
@@ -141,8 +149,9 @@ def step(book: dict, now: datetime, ctx: dict) -> None:
             ctx["room"][0] -= margin
         side = "LONG" if long_ else "SHORT"
         reason = (f"{sig['side'].lower()} pullback to the 9-bar average on the 1-minute chart at {sig['bar']}: price {'above' if long_ else 'below'} VWAP ({sig['vwap']:,.2f}), "
-                  f"averages stacked {'up' if long_ else 'down'}, a strong bar on {sig['vol_x']:.1f} times the usual volume. Stop {stop:,.2f}, target {tgt:,.2f}, out after {R['hold_min']} minutes")
-        t = D.mk(book, "EQUITY", STRATEGY, f"{sym} {side.lower()}", side, px, qty, now, symbol=sym, stop=stop, target_px=tgt, hold_min=R["hold_min"], leverage=lev, margin_rs=margin, horizon="scalp",
+                  f"averages stacked {'up' if long_ else 'down'}, a strong bar on {sig['vol_x']:.1f} times the usual volume. Stop {stop:,.2f}, target {tgt:,.2f}, out after {R['hold_min']} minutes"
+                  + (f"; the quant set the stop at least one standard deviation of 10-minute noise ({sigma:.2f}%) away" if sigma else ""))
+        t = D.mk(book, "EQUITY", name, f"{sym} {side.lower()}", side, px, qty, now, symbol=sym, stop=stop, target_px=tgt, hold_min=R["hold_min"], leverage=lev, margin_rs=margin, horizon="scalp",
                  risk_class="Scalp (1-minute bars)", reason=reason)
         t["id"] = f"K{now:%y%m%d}-{book['seq']}"                      # its own id series, so it never collides with the other equity book
         data = [f"{sym} at {px:,.2f}; 1-minute bars: close {sig['close']:,.2f}, VWAP {sig['vwap']:,.2f}, 9-bar average {sig['ema9']:,.2f}, 21-bar average {sig['ema21']:,.2f}, volume {sig['vol_x']:.1f} times the 20-bar average.",
@@ -153,5 +162,5 @@ def step(book: dict, now: datetime, ctx: dict) -> None:
         th["numbers"] += [["Round-trip charges", f"about Rs {cost:,.0f}", "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"], ["Target against charges", f"{gross / cost:.1f} times", f"The desk needs at least {R['min_rc']:g} times"]]
         t["thesis"] = th
         held.add(sym)
-        if sum(x["status"] == "OPEN" for x in book["trades"] if x["strategy"] == STRATEGY) >= R["max_open"]:
+        if sum(x["status"] == "OPEN" for x in book["trades"] if str(x["strategy"]).startswith("scalp")) >= R["max_open"]:
             break

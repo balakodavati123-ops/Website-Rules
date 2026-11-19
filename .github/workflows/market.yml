@@ -13,6 +13,7 @@ concurrency:
   cancel-in-progress: false
 permissions:
   contents: write
+  issues: write
   pages: write
   id-token: write
   actions: write
@@ -32,7 +33,7 @@ jobs:
       - name: Resume the live books from the data branch
         run: |
           if git fetch -q --depth=1 origin data 2>/dev/null; then
-            for f in live_book desk_book trade_archive strategy_stats forecast_history participants forecast gateway; do git show FETCH_HEAD:$f.json > docs/data/$f.json 2>/dev/null || true; done
+            for f in live_book desk_book trade_archive strategy_stats forecast_history participants forecast gateway company; do git show FETCH_HEAD:$f.json > docs/data/$f.json 2>/dev/null || true; done
           fi
       - name: Run the desks
         env:

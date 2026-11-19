@@ -246,7 +246,7 @@ class Gateway:
             self.log(now, st["halted"])
         # 1. new intents from the paper desks' intraday equity trades
         for t in trades:
-            if t["desk"] == "EQUITY" and t["strategy"] in c["agents"] and t["status"] == "OPEN" and t["day"] == today and t.get("opened") not in NOT_INTRADAY and t.get("symbol") and t["id"] not in st["intents"]:
+            if t["desk"] == "EQUITY" and any(str(t["strategy"]).startswith(a) for a in c["agents"]) and t["status"] == "OPEN" and t["day"] == today and t.get("opened") not in NOT_INTRADAY and t.get("symbol") and t["id"] not in st["intents"]:
                 self.submit(t, stats, now, mode, blockers)
         # 2. follow what is already out there
         book = None
