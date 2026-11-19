@@ -23,5 +23,11 @@ jobs:
       - run: mkdir -p site && cp docs/index.html site/index.html
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
+      - run: sleep 8          # the uploaded artifact can take a few seconds to become visible to the deploy step
       - id: deploy
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - if: steps.deploy.outcome == 'failure'          # one retry: the first attempt sometimes sees "0 artifacts"
+        run: sleep 25
+      - if: steps.deploy.outcome == 'failure'
         uses: actions/deploy-pages@v4
