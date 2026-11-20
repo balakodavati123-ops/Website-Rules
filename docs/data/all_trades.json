@@ -1,5 +1,109 @@
 [
  {
+  "id": "C261121-67",
+  "desk": "CRYPTO",
+  "strategy": "crypto_dip_bounce",
+  "label": "ADA long",
+  "side": "LONG",
+  "entry": 0.1427,
+  "last": 0.143169,
+  "qty": 2500,
+  "status": "OPEN",
+  "pnl_rs": -1.78,
+  "exit": "",
+  "why": "",
+  "day": "2026-11-21",
+  "opened": "03:31:06",
+  "closed": "",
+  "ts": 1795212066.7969575,
+  "symbol": "ADA",
+  "stop": 0.140553,
+  "target_px": 0.146974,
+  "horizon": "intraday",
+  "risk_class": "Intraday spot",
+  "margin_rs": 2500,
+  "reason": "-6.6% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours",
+  "has_thesis": true
+ },
+ {
+  "id": "C261121-66",
+  "desk": "CRYPTO",
+  "strategy": "crypto_dip_bounce",
+  "label": "BTC long",
+  "side": "LONG",
+  "entry": 58207.8,
+  "last": 59082.4,
+  "qty": 2500,
+  "status": "OPEN",
+  "pnl_rs": 27.56,
+  "exit": "",
+  "why": "",
+  "day": "2026-11-21",
+  "opened": "00:58:27",
+  "closed": "",
+  "ts": 1795202908.1184752,
+  "symbol": "BTC",
+  "stop": 57334.683,
+  "target_px": 59954.034,
+  "horizon": "intraday",
+  "risk_class": "Intraday spot",
+  "margin_rs": 2500,
+  "reason": "-7.4% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours",
+  "has_thesis": true
+ },
+ {
+  "id": "C261121-64",
+  "desk": "CRYPTO",
+  "strategy": "crypto_dip_bounce",
+  "label": "SOL long",
+  "side": "LONG",
+  "entry": 69.27,
+  "last": 68.18,
+  "qty": 2500,
+  "status": "LOSS",
+  "pnl_rs": -49.34,
+  "exit": 68.18,
+  "why": "stop",
+  "day": "2026-11-21",
+  "opened": "00:00:10",
+  "closed": "00:42:45",
+  "ts": 1795199410.3740249,
+  "symbol": "SOL",
+  "stop": 68.23095,
+  "target_px": 71.3481,
+  "horizon": "intraday",
+  "risk_class": "Intraday spot",
+  "margin_rs": 2500,
+  "reason": "-7.2% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours",
+  "has_thesis": true
+ },
+ {
+  "id": "C261121-65",
+  "desk": "CRYPTO",
+  "strategy": "crypto_dip_bounce",
+  "label": "XRP long",
+  "side": "LONG",
+  "entry": 0.908,
+  "last": 0.8936,
+  "qty": 2500,
+  "status": "LOSS",
+  "pnl_rs": -49.73,
+  "exit": 0.8936,
+  "why": "stop",
+  "day": "2026-11-21",
+  "opened": "00:00:10",
+  "closed": "00:47:44",
+  "ts": 1795199410.374063,
+  "symbol": "XRP",
+  "stop": 0.89438,
+  "target_px": 0.93524,
+  "horizon": "intraday",
+  "risk_class": "Intraday spot",
+  "margin_rs": 2500,
+  "reason": "-7.3% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours",
+  "has_thesis": true
+ },
+ {
   "id": "C261120-63",
   "desk": "CRYPTO",
   "strategy": "crypto_dip_bounce",
@@ -75,8 +179,7 @@
   "target_px": 465.92,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INE255Z01027",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE255Z01027"
  },
  {
   "id": "E261120-8",
@@ -102,8 +205,7 @@
   "target_px": 1151.85,
   "leverage": 5.0,
   "setup": "news",
-  "instrument_key": "NSE_EQ|INE910C01018",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE910C01018"
  },
  {
   "id": "E261120-7",
@@ -129,8 +231,7 @@
   "target_px": 1095.93,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INE0DRI01029",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE0DRI01029"
  },
  {
   "id": "E261120-6",
@@ -156,8 +257,7 @@
   "target_px": 736.05,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INE229H01012",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE229H01012"
  },
  {
   "id": "F261120-61",
@@ -254,8 +354,7 @@
   "target_px": 5558.58,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INE864I01014",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE864I01014"
  },
  {
   "id": "E261120-4",
@@ -281,8 +380,7 @@
   "target_px": 611.57,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INE419M01035",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE419M01035"
  },
  {
   "id": "E261120-3",
@@ -308,8 +406,7 @@
   "target_px": 823.55,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INE790G01031",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE790G01031"
  },
  {
   "id": "K261120-58",
@@ -582,8 +679,7 @@
   "target_px": 103.66,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INF179KC1981",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INF179KC1981"
  },
  {
   "id": "E261120-1",
@@ -609,8 +705,7 @@
   "target_px": 103.66,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INF109KC1NT3",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INF109KC1NT3"
  },
  {
   "id": "M261120-51",
