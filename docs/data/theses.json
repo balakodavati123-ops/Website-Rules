@@ -1,4 +1,255 @@
 {
+ "E261120-9": {
+  "horizon": "intraday",
+  "headline": "E2E short",
+  "news": [
+   "US markets averaged -2.15% at the 19/11 close.",
+   "Asia averaged -3.26%.",
+   "Brent crude 89.79 (-2.35%)."
+  ],
+  "data": [
+   "Entry 475.25, stop 479.91, target 465.92; 32 shares worth \u20b915,208.",
+   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Gap and go: opened -2.4% lower and is holding below the open and VWAP, near the day low. Stop 479.91 (0.98%), target 465.92 (2R), stop moves to entry after a 1R gain, out by 15:10."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9149",
+    "0.13% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9299",
+    "2.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b915,208."
+ },
+ "E261120-8": {
+  "horizon": "intraday",
+  "headline": "TTKHLTCARE long",
+  "news": [
+   "US markets averaged -2.15% at the 19/11 close.",
+   "Asia averaged -3.26%.",
+   "Brent crude 89.79 (-2.35%)."
+  ],
+  "data": [
+   "Entry 1,124.85, stop 1,111.35, target 1,151.85; 11 shares worth \u20b912,373.",
+   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: News-led: a positive filing today; price +6.9% near the day high. Stop 1,111.35 (1.20%), target 1,151.85 (2R), stop moves to entry after a 1R gain, out by 15:10."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9148",
+    "0.12% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9297",
+    "2.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b912,373."
+ },
+ "E261120-7": {
+  "horizon": "intraday",
+  "headline": "ESDS short",
+  "news": [
+   "US markets averaged -2.15% at the 19/11 close.",
+   "Asia averaged -3.26%.",
+   "Brent crude 89.79 (-2.35%)."
+  ],
+  "data": [
+   "Entry 1,116.10, stop 1,126.18, target 1,095.93; 14 shares worth \u20b915,625.",
+   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Gap and go: opened -3.3% lower and is holding below the open and VWAP, near the day low. Stop 1,126.18 (0.90%), target 1,095.93 (2R), stop moves to entry after a 1R gain, out by 15:10."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9141",
+    "0.12% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9282",
+    "2.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b915,625."
+ },
+ "E261120-6": {
+  "horizon": "intraday",
+  "headline": "NITINSPIN long",
+  "news": [
+   "US markets averaged -2.15% at the 19/11 close.",
+   "Asia averaged -3.26%.",
+   "Brent crude 89.79 (-2.35%)."
+  ],
+  "data": [
+   "Entry 718.80, stop 710.17, target 736.05; 17 shares worth \u20b912,220.",
+   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Gap and go: opened +2.5% higher and is holding above the open and VWAP, near the day high. Stop 710.17 (1.20%), target 736.05 (2R), stop moves to entry after a 1R gain, out by 15:10."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9147",
+    "0.12% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9293",
+    "2.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b912,220."
+ },
+ "F261120-61": {
+  "horizon": "daily",
+  "headline": "Buy 25,650 CE \u00b7 NIFTY 2026-11-23",
+  "news": [
+   "US markets averaged -2.15% at the 19/11 close.",
+   "Asia averaged -3.26%.",
+   "Brent crude 89.79 (-2.35%).",
+   "Stock Market LIVE: GIFT Nifty plunges 200 pts; Asian mkts extend losses on concern over AI trade (BusinessStandard)",
+   "GIFT Nifty plunges over 200 pts, signals sharp fall for Sensex, Nifty as Nasdaq sinks 2.3%, Asian markets... - Moneycontrol.com (GoogleNews)",
+   "Stock Market LIVE: GIFT Nifty plunges 190 pts; Asian mkts extend losses on concern over AI trade (BusinessStandard)",
+   "6 companies filed results or hold board meetings today."
+  ],
+  "data": [
+   "NIFTY 25,642, +0.50% on the previous close. India VIX 17.0.",
+   "Implied volatility at the money 12.8% a year. Over 3 days to 2026-11-23 that prices a one-standard-deviation move of about \u00b1298 points (\u00b11.2%), so the market gives roughly a 68% chance of finishing between 25,344 and 25,940.",
+   "Option positioning: put-to-call ratio 1.42, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,500 (a floor), max pain 25,150.",
+   "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+   "Our forecast for today: Bearish (score -0.22); likely range 25,231 to 25,761."
+  ],
+  "strategy": "Buy a single at-the-money call (up day) or put (down day).",
+  "why": [
+   "Used when the index has already moved 0.5% or more: a continuing trend pays quickly because the option gains from direction and from rising volatility.",
+   "Direction: today's forecast leans bearish (World tone is weak: US and Asia weighted average -2.60% at the 19/11 close; Brent crude 89.79 (-2.35%).; It opened at 25,368, -0.57% from the previous close.)."
+  ],
+  "numbers": [
+   [
+    "Net debit",
+    "113.3 points = \u20b97,364 per lot",
+    "What you receive (or pay) up front"
+   ],
+   [
+    "Most you can make",
+    "\u20b9492,134",
+    "At expiry, if everything goes right"
+   ],
+   [
+    "Most you can lose",
+    "\u20b97,364",
+    "At expiry, if everything goes wrong (fixed by the bought options)"
+   ],
+   [
+    "Break-even at expiry",
+    "25,763",
+    "Where the structure stops losing money"
+   ],
+   [
+    "Chance of profit at expiry",
+    "35%",
+    "From the options market's own implied volatility; not our edge, the market's odds"
+   ],
+   [
+    "Expected move to expiry",
+    "\u00b1298 points",
+    "3 days at 12.8% implied volatility"
+   ],
+   [
+    "Reward for the risk",
+    "66.83 to 1",
+    "Best case divided by worst case"
+   ],
+   [
+    "Margin the broker asks",
+    "\u20b97,358",
+    "7% of the account (Upstox margin calculator)"
+   ],
+   [
+    "Our exit levels",
+    "Take profit at \u20b93,682, cut at \u20b92,209",
+    "Rupees on one lot, before the exit rule below"
+   ]
+  ],
+  "risk": "Take profit at 50% of the debit, cut at 30%, and be flat by 15:15 whatever happens. Fails when: The move stalls. The premium is the most you can lose.",
+  "viability": "One lot of 65 needs \u20b97,358 of margin, checked with the broker's calculator when the trade was booked."
+ },
+ "M261120-60": {
+  "horizon": "intraday",
+  "headline": "Crude oil mini short",
+  "news": [
+   "US markets averaged -2.15% at the 19/11 close.",
+   "Asia averaged -3.26%.",
+   "Brent crude 89.79 (-2.35%)."
+  ],
+  "data": [
+   "Crude oil mini (CRUDEOILM FUT 18 DEC 26) at 7,735.00, -0.92% on the previous close; day range 7,693.00 to 7,788.00, price is 0.55% from the day low.",
+   "Lot: 10 unit(s) \u00d7 1 lot(s); contract value \u20b977,350.",
+   "Global reference: Brent crude 89.79 (-2.35% at the 11-19 close)."
+  ],
+  "strategy": "Buy a dip inside an up day or sell a bounce inside a down day.",
+  "why": [
+   "Used after a trend day pulls back 0.4% to 1.2%: you join the trend at a better price than the chasers.",
+   "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|576265)."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "7,735.00",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "7,773.67",
+    "Costs about \u20b9387"
+   ],
+   [
+    "Target (exit if right)",
+    "7,665.39",
+    "Earns about \u20b9696"
+   ],
+   [
+    "Reward for the risk",
+    "1.8 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "36% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b924,388",
+    "22% of the account"
+   ]
+  ],
+  "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: The pullback becomes a reversal. The 0.5% stop caps the loss.",
+  "viability": "Needs \u20b924,388 to hold (Upstox margin calculator)."
+ },
  "E261120-5": {
   "horizon": "intraday",
   "headline": "MTARTECH short",
@@ -8,7 +259,7 @@
    "Brent crude 89.79 (-2.35%)."
   ],
   "data": [
-   "Entry 5,675.00, stop 5,733.21, target 5,558.58; 2 shares worth \u20b911,350.",
+   "Entry 5,675.00, stop 5,675.00, target 5,558.58; 2 shares worth \u20b911,350.",
    "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
   ],
   "strategy": "",
@@ -18,13 +269,13 @@
   "numbers": [
    [
     "Risk if the stop is hit",
-    "\u20b9116",
-    "0.11% of the account"
+    "\u20b90",
+    "0.00% of the account"
    ],
    [
     "Reward at the target",
     "\u20b9233",
-    "2.0 to 1 against the risk"
+    ""
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -39,7 +290,7 @@
    "Brent crude 89.79 (-2.35%)."
   ],
   "data": [
-   "Entry 619.00, stop 622.71, target 611.57; 40 shares worth \u20b924,760.",
+   "Entry 619.00, stop 619.00, target 611.57; 40 shares worth \u20b924,760.",
    "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
   ],
   "strategy": "",
@@ -49,13 +300,13 @@
   "numbers": [
    [
     "Risk if the stop is hit",
-    "\u20b9148",
-    "0.14% of the account"
+    "\u20b90",
+    "0.00% of the account"
    ],
    [
     "Reward at the target",
     "\u20b9297",
-    "2.0 to 1 against the risk"
+    ""
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -81,7 +332,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9142",
-    "0.13% of the account"
+    "0.12% of the account"
    ],
    [
     "Reward at the target",
@@ -1724,7 +1975,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9242",
-    "0.22% of the account"
+    "0.20% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -1750,7 +2001,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9138",
-    "0.13% of the account"
+    "0.12% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -1776,7 +2027,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9316",
-    "0.29% of the account"
+    "0.26% of the account"
    ],
    [
     "Reward at the target",
@@ -1807,7 +2058,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9154",
-    "0.14% of the account"
+    "0.13% of the account"
    ],
    [
     "Reward at the target",
@@ -1838,7 +2089,7 @@
    [
     "Risk if the stop is hit",
     "\u20b996",
-    "0.09% of the account"
+    "0.08% of the account"
    ],
    [
     "Reward at the target",
@@ -1869,7 +2120,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9148",
-    "0.14% of the account"
+    "0.12% of the account"
    ],
    [
     "Reward at the target",
@@ -1900,7 +2151,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9183",
-    "0.17% of the account"
+    "0.15% of the account"
    ],
    [
     "Reward at the target",
@@ -1931,7 +2182,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9184",
-    "0.17% of the account"
+    "0.15% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -1957,7 +2208,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9183",
-    "0.17% of the account"
+    "0.15% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -1983,7 +2234,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9139",
-    "0.13% of the account"
+    "0.12% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -2009,7 +2260,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9187",
-    "0.17% of the account"
+    "0.16% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -2035,7 +2286,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9315",
-    "0.29% of the account"
+    "0.26% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -2092,7 +2343,7 @@
    [
     "Risk if the stop is hit",
     "\u20b985",
-    "0.08% of the account"
+    "0.07% of the account"
    ],
    [
     "Reward at the target",
