@@ -37,6 +37,10 @@ import indstocks as IND     # noqa: E402
 import company as CO        # noqa: E402
 import quant as QN          # noqa: E402
 import ceo_inbox as CI      # noqa: E402
+import llm as LLM           # noqa: E402
+import lab as LB            # noqa: E402
+import ipo as IPO           # noqa: E402
+import charts_feed as CF    # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = Path(os.environ.get("DESK_DOCS") or ROOT / "docs" / "data")
@@ -236,6 +240,11 @@ def run() -> None:
     chain_cache: dict = {}                                           # (underlying, expiry) -> (time, rows)
     acct = [A.START]                                                 # account equity, for "per cent of the account" in the written thesis
     world_at = [0.0]                                                 # when world markets were last refreshed from the web
+    llm_u = load("llm_usage.json", LLM.new_usage())                  # the Claude analysts and their spending, capped per 5 hours and per day
+    ai, ai_lock = LLM.Desk(llm_u), threading.Lock()
+    digest, review = [load("news_digest.json", {})], [load("day_review.json", {})]
+    ipo_v, ipo_st, lab_v = [load("ipo.json", {})], load("ipo_state.json", {}), [load("lab.json", {})]
+    charts_at, charts_thread, fut_key = [0.0], [None], [None]
 
     def get_chain(under: str, expiry: str, ttl: float = 10.0):
         hit = chain_cache.get((under, expiry))
@@ -362,6 +371,103 @@ def run() -> None:
                 text = CO.apply(cst, cmd, at)
             CI.reply(gt, repo, cmd["issue"], text)
 
+    def ai_ask(kind, system, prompt, tier="read", max_tokens=None):
+        with ai_lock:
+            out = ai.ask(kind, system, prompt, tier, max_tokens)
+            save("llm_usage.json", llm_u)
+        return out
+
+    def news_ai(at) -> None:
+        """Every half hour: Claude Haiku reads the latest Indian and international headlines for the CEO and the desks."""
+        if not ai.on or (digest[0].get("at") and time.time() - digest[0]["at"] < 1800) or (at.weekday() >= 5 and digest[0].get("day") == at.strftime("%Y-%m-%d")):
+            return
+        wire = load("news_wire.json", [])
+        heads = list(reversed(wire))[:60]
+        with ai_lock:
+            d = LLM.news_digest(ai, heads)
+            save("llm_usage.json", llm_u)
+        if d:
+            digest[0] = {**d, "at": time.time(), "day": at.strftime("%Y-%m-%d"), "time": at.strftime("%d %b %H:%M"), "n": len(heads), "model": LLM.MODELS["read"]}
+            save("news_digest.json", digest[0])
+
+    def ipo_desk(at) -> None:
+        """Every half hour: the IPO desk reads NSE's issues, SEBI's draft prospectuses and the news."""
+        if ipo_v[0].get("at") and time.time() - ipo_v[0]["at"] < 1800:
+            return
+        out = IPO.build(at, ipo_st, llm=ai_ask if ai.on else None)
+        ipo_v[0] = {**out, "at": time.time()}
+        save("ipo.json", ipo_v[0])
+        save("ipo_state.json", ipo_st)
+
+    def review_day(at) -> None:
+        """After the close: Claude Opus writes the COO's review of the day from the real numbers."""
+        today = at.strftime("%Y-%m-%d")
+        if not ai.on or at.weekday() >= 5 or at.strftime("%H:%M") < "15:50" or review[0].get("day") == today:
+            return
+        allt = nonlocal_state.get("tick") or []
+        td = [t for t in allt if t["day"] == today]
+        teams_ = {}
+        for t in td:
+            k = CO.team_of(t) or "other"
+            r = teams_.setdefault(k, {"trades": 0, "pnl_rs": 0.0, "wins": 0})
+            r["trades"] += 1
+            r["pnl_rs"] = round(r["pnl_rs"] + float(t.get("pnl_rs") or 0), 2)
+            r["wins"] += t["status"] == "WIN"
+        facts = {"day": today, "nifty_chg_pct": ((snap.get("indices") or {}).get("Nifty 50") or {}).get("chg_pct"), "teams": teams_,
+                 "trades": [{k: t.get(k) for k in ("label", "strategy", "status", "pnl_rs", "why")} for t in td[:60]],
+                 "lab": [{k: r.get(k) for k in ("strategy", "stage", "closed", "net_rs", "win_rate")} | {"failed": [c["name"] for c in r.get("checks", []) if c.get("ok") is False]} for r in (lab_v[0].get("strategies") or [])[:25]],
+                 "forecast": (fc or {}).get("result"), "coo_notes": [n_["text"] for n_ in (load("company.json", {}).get("coo") or {}).get("notes", [])][:8]}
+        with ai_lock:
+            text = LLM.day_review(ai, facts)
+            save("llm_usage.json", llm_u)
+        if text:
+            review[0] = {"day": today, "time": at.strftime("%d %b %H:%M"), "text": text, "model": LLM.MODELS["review"]}
+            save("day_review.json", review[0])
+            with clock:
+                CO.say(cst, at, f"{CO.COO['name']} (COO)", "Today's review is written: see the Strategy lab page.", "review")
+
+    def build_charts(now) -> None:
+        """candles.json: one live chart per desk with the strategies' lines, the trade's marks and the order book."""
+        try:
+            today, allt, out = now.strftime("%Y-%m-%d"), nonlocal_state.get("tick") or [], []
+            if token:
+                if not fut_key[0]:
+                    futs = [x for x in U.instruments("NSE") if x.get("segment") == "NSE_FO" and x.get("instrument_type") == "FUT" and x.get("name") == "NIFTY" and x.get("expiry", 0) / 1000 > time.time()]
+                    fut_key[0] = min(futs, key=lambda x: x["expiry"])["instrument_key"] if futs else None
+                t = CF.focus(allt, "FNO", today, lambda x: x.get("horizon", "daily") == "daily") or CF.focus(allt, "FNO", today)
+                c = CF.upstox_candles(U._get, token, IDX["nifty"], now)
+                q = U.quotes([fut_key[0]], token) if fut_key[0] else {}
+                mk, chosen, lv = CF.fno_marks(t, c, now)
+                out.append(CF.chart("fno", "F&O", "NIFTY", "NIFTY 50" + (f" · {t['label']}" if t else ""), "1m", c, CF.depth_upstox(q.get(fut_key[0])),
+                                    [x for x in CF.strategies(c, None) if x["id"] in ("vwap", "or_high", "or_low")] + chosen, mk, lv))
+                t = CF.focus(allt, "COMMODITY", today)
+                cc = next((x for x in mcx_c if t and x["key"] == t.get("key")), None) or next((x for x in mcx_c if "rude" in x["label"]), mcx_c[0] if mcx_c else None)
+                if cc:
+                    c = CF.upstox_candles(U._get, token, cc["key"], now)
+                    q = U.quotes([cc["key"]], token)
+                    out.append(CF.chart("comm", "Commodities", cc["symbol"], cc["label"] + (f" · {t['label']}" if t else ""), "1m", c, CF.depth_upstox(q.get(cc["key"])), CF.strategies(c, t), CF.trade_marks(t, c, now, None), []))
+                t = CF.focus(allt, "EQUITY", today, lambda x: x.get("opened") not in ("swing", "signal") and (x.get("setup") or str(x.get("strategy")).startswith("scalp")))
+                found = (eq.get("diag") or {}).get("found") or {}
+                sym = t["symbol"] if t else next((v[0] for k_ in ("news", "gap", "momentum", "vwap") for v in [found.get(k_) or []] if v), "RELIANCE")
+                kmap = key_of or {x["trading_symbol"]: x["instrument_key"] for x in U.instruments("NSE") if x.get("segment") == "NSE_EQ" and x.get("instrument_type") == "EQ"}
+                if kmap.get(sym):
+                    c = CF.from_hhmm(scalp_bars[sym], today) if len(scalp_bars.get(sym) or []) > 30 and t and t.get("day") == today else CF.upstox_candles(U._get, token, kmap[sym], now)
+                    q = U.quotes([kmap[sym]], token)
+                    out.append(CF.chart("eq", "Equities", sym, (t["label"] if t else f"{sym} · top candidate now"), "1m", c, CF.depth_upstox(q.get(kmap[sym])), CF.strategies(c, t), CF.trade_marks(t, c, now), []))
+            t = CF.focus(allt, "CRYPTO", today)
+            coin = t["symbol"] if t and t.get("symbol") in D.PAIRS else "BTC"
+            j = D._get_json(f"https://api.kraken.com/0/public/OHLC?pair={D.PAIRS[coin]}USD&interval=5")
+            rows = next(v for k_, v in j["result"].items() if k_ != "last")[-150:]
+            c = [[int(r[0]), float(r[1]), float(r[2]), float(r[3]), float(r[4]), float(r[6])] for r in rows]
+            dj = next(iter(D._get_json(f"https://api.kraken.com/0/public/Depth?pair={D.PAIRS[coin]}USD&count=5")["result"].values()))
+            dep = {"bids": [[float(b[0]), float(b[1])] for b in dj["bids"]], "asks": [[float(a[0]), float(a[1])] for a in dj["asks"]]}
+            dep.update(buy_qty=sum(b[1] for b in dep["bids"]), sell_qty=sum(a[1] for a in dep["asks"]))
+            out.append(CF.chart("crypto", "Crypto", coin, f"{coin} / USD (Kraken)" + (f" · {t['label']}" if t else ""), "5m", c, dep, CF.strategies(c, t), CF.trade_marks(t, c, now, None), []))
+            save("candles.json", {"updated_at": now.isoformat(timespec="seconds"), "charts": out})
+            status["desks"]["charts"] = f"{len(out)} live charts"
+        except Exception as e:
+            status["desks"]["charts"] = f"error: {str(e)[:100]}"
+
     def sources_status(now) -> dict:
         """Where the company's data comes from, and whether each pipe is flowing right now."""
         d, ok = status["desks"], lambda good, detail, bad=False: {"status": "error" if bad else "ok" if good else "idle", "detail": detail}
@@ -374,6 +480,8 @@ def run() -> None:
                 "kraken": ok("Kraken" in str(d.get("crypto", "")), str(d.get("crypto", ""))[:70], "error" in str(d.get("crypto", ""))),
                 "yahoo": ok(age is not None and age < 6 * 60, f"world markets refreshed {age:.0f} min ago" if age is not None else "world markets not refreshed yet"),
                 "news": ok(bool(feed), f"{len(feed)} headlines, latest {feed[-1]['time']}; {len(headlines)} name a listed company" if feed else "no headline yet"),
+                "claude": ({"status": "ok", "detail": f"${ai.status()['usd_5h']:.3f} of the ${ai.status()['cap_5h']:.2f} 5-hour cap used; Haiku reads news, Sonnet writes IPO theses, Opus reviews the day"} if ai.on else
+                           {"status": "off", "detail": "no ANTHROPIC_API_KEY on this machine: the desks run on their written rules" if not ai.key else f"key set but the client failed: {llm_u.get('last_error', '')[:60]}"}),
                 "github": {"status": "ok" if os.environ.get("GITHUB_TOKEN") else "off", "detail": "listening for your instructions every 5 minutes" if os.environ.get("GITHUB_TOKEN") else "not available on this machine"}}
 
     def company_view(now, allt, stats) -> None:
@@ -392,11 +500,16 @@ def run() -> None:
                     sig = QN.sigma_bars([b[4] for b in scalp_bars.get(t.get("symbol"), [])[-60:]], SC.R["hold_min"]) if str(t["strategy"]).startswith("scalp") else None
                     qn[t["id"]] = QN.trade_numbers(float(t["entry"]), float(t["stop"]), float(t.get("target_px") or 0) or None, q_ * mult if t["desk"] != "CRYPTO" else float(t["qty"]) / float(t["entry"]), cost, sig, hit)
         nf = ((snap.get("indices") or {}).get("Nifty 50") or {}).get("chg_pct")
+        lab = LB.build(allt, stats, cst, CO.team_of, gw.st)
+        lab["review"], lab["ai"] = review[0], ai.status()
+        lab_v[0] = lab
+        save("lab.json", lab)
         with clock:
             view = CO.build(cst, now, allt, stats, {"plan": plan, "fc": fc, "sm": sm, "gw": gw.st, "via": load("viability.json", {}), "desks": status["desks"], "world": make_env()["world"],
                                                    "nifty_chg": nf, "equity": acct[0], "scalp_n": len(scalp_bars), "scalp_params": {**SC.R, **((cst["variants"].get("scalp") or {}).get("params") or {})},
                                                    "sessions": status.get("sessions"), "quant_notes": qn, "headlines": headlines, "intraday_diag": eq.get("diag"), "mcx": snap.get("mcx"),
-                                                   "crypto": snap.get("crypto"), "fno_snap": snap.get("fno"), "news_n": len(load("news_feed.json", [])), "sources": sources_status(now)})
+                                                   "crypto": snap.get("crypto"), "fno_snap": snap.get("fno"), "news_n": len(load("news_feed.json", [])), "sources": sources_status(now),
+                                                   "lab": lab, "ipo": ipo_v[0], "news_digest": digest[0]})
             for r in view["coo"]["requests"]:
                 if r["status"] == "pending" and r["id"] not in cst["said"].get("pushed", []):
                     cst["said"]["pushed"] = (cst["said"].get("pushed", []) + [r["id"]])[-50:]
@@ -436,7 +549,9 @@ def run() -> None:
         stats = D.learn(list(archive.values()) + [t for t in books if t["status"] in ("WIN", "LOSS")])
         save("strategy_stats.json", stats)
         try:                                           # the gateway to the broker: dry-run unless EXEC_MODE=live and every live condition holds
-            gws = gw.process(allt, stats, datetime.now(IST), {k: v[0] for k, v in qs.items()})
+            ok_ = set(lab_v[0].get("approved") or [])           # only strategies the lab approved may reach the broker
+            stage_ = {r["strategy"]: r["stage"] for r in lab_v[0].get("strategies") or []}
+            gws = gw.process(allt, [s_ if s_["strategy"] in ok_ else {**s_, "verdict": f"LAB {stage_.get(s_['strategy'], 'BUILT')}"} for s_ in stats], datetime.now(IST), {k: v[0] for k, v in qs.items()})
             status["desks"]["gateway"] = f"{gws.get('mode')} · {sum(1 for x in gws['intents'].values() if x['status'] != 'REJECTED')} intents, {sum(1 for x in gws['intents'].values() if x['status'] == 'REJECTED')} refused"
         except Exception as e:
             status["desks"]["gateway"] = f"error: {str(e)[:100]}"
@@ -694,7 +809,7 @@ def run() -> None:
             migrate()
             if not (news_thread and news_thread.is_alive()):        # the slow fetches (news, world markets, NSE files) can take a while from a cloud address: never hold up the price loop for them
                 def _slow(at=now):
-                    for name_, fn_ in (("news", lambda: (lambda n2: (news.clear(), news.update(n2)) if n2 else None)(I.filings_news())), ("news_feed", lambda: I.update_news_feed(at)),
+                    for name_, fn_ in (("news", lambda: (lambda n2: (news.clear(), news.update(n2)) if n2 else None)(I.filings_news())), ("news_feed", lambda: I.update_news_feed(at)), ("news_ai", lambda: news_ai(at)), ("ipo", lambda: ipo_desk(at)), ("review", lambda: review_day(at)),
                                        ("world", lambda: refresh_world(at)), ("smart_money", lambda: token and refresh_smart(at)), ("margin_reference", lambda: margin_reference(at)), ("indstocks_master", lambda: load_master()), ("ceo_inbox", lambda: ceo_inbox(at))):
                         try:
                             fn_()
@@ -726,6 +841,10 @@ def run() -> None:
                 save("intraday.json", intra)
             except Exception as e:
                 info["intraday"] = f"error: {str(e)[:80]}"
+        if time.time() - charts_at[0] >= 60 and not (charts_thread[0] and charts_thread[0].is_alive()):
+            charts_at[0] = time.time()
+            charts_thread[0] = threading.Thread(target=build_charts, args=(now,), daemon=True)
+            charts_thread[0].start()
         T["slow_and_intraday"] = round(time.time() - it0, 1)
         i += 1
         persist()

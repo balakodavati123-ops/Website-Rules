@@ -109,6 +109,19 @@ The sizing reproduces the daily report's BEL numbers exactly (see `tests/test_ti
 
 ## CEO Trading Desk dashboard
 
+**What the live dashboard has now (Balaji Trading Desk):**
+- **Company floor:** one pixel-art control room (`docs/floor.js`). Each team is a row of analysts with its manager (the trader) at the end of the row, and couriers carry data from the source racks to the analysts and on to the manager, the COO and the CEO desk. The CEO desk is green while you are on the page.
+  - Designations come from `backend/company.py`: Associate, Senior Associate (a profitable record of the agent's own work), Manager, COO.
+  - When the intraday desk finds more setups than its limits allow, the COO hires an Associate for the day.
+  - Hunger and injury are gone.
+- **Live charts:** `docs/candles.js`, fed by `backend/charts_feed.py` (`candles.json`, about once a minute). One chart per desk with EMA 20 and EMA 50, each strategy's levels, the chosen strategy, entry, stop and exit dots, forecast exit lines, and the order book.
+- **IPO desk:** `backend/ipo.py` reads NSE issues, SEBI draft prospectuses (DRHP) and the news. It suggests at most one minimum lot and never applies.
+- **Strategy lab:** `backend/lab.py` moves every strategy through Proposed, Built, Tested and then Approved or Investigate (or Rejected), with seven checks on the paper record. Only Approved strategies may reach the execution gateway.
+- **Claude analysts:** `backend/llm.py`, optional.
+  - Set the `ANTHROPIC_API_KEY` repository secret, which is billed per token, separately from any Claude plan.
+  - Haiku reads the news every half hour, Sonnet writes IPO theses, and Opus writes the end-of-day review.
+  - Spending is capped by the repository variables `LLM_USD_5H` (default $0.25) and `LLM_USD_DAY` (default $0.75). A call that could cross a cap is not sent.
+
 **The dashboard has one fixed link: https://balakodavati123-ops.github.io/Website-Rules/** (`docs/index.html`, published by GitHub Pages; the old Claude Artifact only forwards there). `dashboard/` holds the source of the earlier artifact version. It opens on the **Live floor**:
 a desk for each of the ten agents on a ring around the CEO, with data packets moving from the sources
 (INDmoney movers and quotes, NSE filings, CoinDCX crypto, the paper ledger) to Scout and from desk to

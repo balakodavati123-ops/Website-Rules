@@ -48,7 +48,7 @@ def test_end_of_day_bonuses():
     st = CO.new_state()
     trades = [tr(1, pnl=300.0), tr(2, desk="CRYPTO", strat="crypto_breakout", pnl=-50.0, status="LOSS")]
     v = CO.build(st, EOD, trades, [], {"nifty_chg": -0.4, "equity": 100000})
-    assert st["tokens"]["team:scalp"] == 500 and st["eco"]["scalp"]["balance"] < st["eco"]["scalp"]["carried"] + 61 and st["eco"]["scalp"]["carried"] >= 500    # the bonus is the team's food
+    assert st["tokens"]["team:scalp"] == 500
     assert st["tokens"]["Raghav"] == 1000 and any(m["kind"] == "award" for m in v["messages"])
     CO.build(st, EOD, trades, [], {"nifty_chg": -0.4})
     assert st["tokens"]["team:scalp"] == 500                            # once a day
@@ -96,20 +96,35 @@ def test_inbox_obeys_only_the_owner():
     assert [(c["issue"], c["owner"]) for c in cmds] == [(1, True), (2, False)]
 
 
-def test_hunger_drives_the_hunt_but_losses_cap_it():
+def test_designations_follow_the_record_and_the_floor_has_flows():
     st = CO.new_state()
     open_ses = {"equity": True, "fno": True, "mcx": True, "crypto": True}
     morning = datetime(2026, 11, 19, 11, 0, tzinfo=IST)
     v = CO.build(st, morning, [], [], {"sessions": open_ses})
-    eco = {t["id"]: t["eco"] for t in v["teams"]}
-    assert eco["intraday"]["mood"] == "Hungry" and st["effort"]["intraday"] == 3                       # nothing earned and an idle morning: hunts hardest
-    assert eco["intraday"]["balance"] == CO.START_TOKENS - CO.LIVING * 7
-    fed = [tr(i, desk="EQUITY", strat="momentum", pnl=150.0, opened="10:50:00", setup="momentum") for i in range(3)]       # Rs 450 net earns 45 tokens, more than the 35 a day the row eats
-    v = CO.build(st, morning, fed, [], {"sessions": open_ses})
-    assert {t["id"]: t["eco"] for t in v["teams"]}["intraday"]["mood"] in ("Fed", "Thriving") and st["effort"]["intraday"] == 0
-    st2 = CO.new_state()
-    losing = [tr(i, desk="EQUITY", strat="momentum", pnl=-40.0, status="LOSS", why="stop", day="2026-11-18", setup="momentum") for i in range(10)]
-    CO.build(st2, morning, losing, [], {"sessions": open_ses})
-    assert st2["effort"]["intraday"] <= 1                                                               # injured: may not hunt harder
-    seats = next(t for t in v["teams"] if t["id"] == "intraday")["seats"]
-    assert len(seats) == 7 and seats[-1]["officer"] and seats[-1]["name"] == "Vikram"
+    team = {t["id"]: t for t in v["teams"]}
+    assert "eco" not in team["intraday"] and st["effort"]["intraday"] == CO.BASE_EFFORT                    # no hunger: the hunters always hunt actively
+    staff = team["intraday"]["staff"]
+    assert len(staff) == 7 and staff[-1]["designation"] == "Manager" and staff[-1]["name"] == "Vikram" and {x["designation"] for x in staff[:-1]} == {"Associate"}
+    assert {"lab", "ipo"} <= set(team) and team["lab"]["staff"][0]["role"] == "Research agent"
+    wins = [tr(i, desk="EQUITY", strat="momentum", pnl=120.0, setup="momentum", day="2026-11-18") for i in range(8)] + \
+           [tr(20 + i, desk="EQUITY", strat="momentum", pnl=-60.0, status="LOSS", why="stop", setup="momentum", day="2026-11-18") for i in range(4)]
+    v = CO.build(st, morning, wins + [tr(99, desk="EQUITY", strat="momentum", status="OPEN", pnl=10.0, setup="momentum")], [], {"sessions": open_ses})
+    mom = next(x for x in next(t for t in v["teams"] if t["id"] == "intraday")["staff"] if x["role"] == "Momentum scanner")
+    assert mom["designation"] == "Senior Associate" and mom["record"]["basis"] == "own trades" and any(m["kind"] == "promotion" for m in v["messages"])
+    assert any(f["kind"] == "idea" and f["from"] == mom["id"] and f["to"] == "intraday-m" for f in v["flows"]) and any(f["to"] == "coo" for f in v["flows"])
+    assert v["ceo"]["name"] == "Balaji" and v["pnl"]["open"] == 1
+
+
+def test_coo_hires_when_setups_overflow_and_stands_the_hire_down_on_losses():
+    st = CO.new_state()
+    ses = {"sessions": {"equity": True}, "intraday_diag": {"found": {"gap": ["A", "B", "C", "D"], "momentum": ["E", "F", "G", "H"], "vwap": ["I", "J", "K", "L"]},
+                                                           "skipped": {"A": "the day's trade limit is reached", "B": "4 positions already open", "C": "4 positions already open"}}}
+    now = datetime(2026, 11, 19, 11, 0, tzinfo=IST)
+    v = CO.build(st, now, [], [], ses)
+    assert st["effort"]["intraday"] == CO.MAX_EFFORT and v["coo"]["hires"][0]["role"] == "Overflow scanner"
+    assert next(t for t in v["teams"] if t["id"] == "intraday")["staff"][-2]["name"] == v["coo"]["hires"][0]["name"]
+    CO.build(st, now, [], [], ses)
+    assert len(st["hires"]) == 1                                                                           # one hire a day
+    losers = [tr(i, desk="EQUITY", strat="momentum", pnl=-200.0, status="LOSS", setup="momentum") for i in range(3)]
+    CO.build(st, now, losers, [], ses)
+    assert st["hires"] == [] and st["effort"]["intraday"] == CO.BASE_EFFORT

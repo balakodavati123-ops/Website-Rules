@@ -38,6 +38,21 @@ FEEDS = {
     "BusinessStandard": "https://www.business-standard.com/rss/markets-106.rss",
     "RBI": "https://rbi.org.in/pressreleases_rss.xml",
     "GoogleNews": "https://news.google.com/rss/search?q=Sensex+OR+Nifty+OR+RBI+OR+SEBI&hl=en-IN&gl=IN&ceid=IN:en",
+    "GoogleNews-Business": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=en-IN&gl=IN&ceid=IN:en",
+    "Yahoo-Nifty": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=%5ENSEI&region=IN&lang=en-IN",
+    "BusinessLine": "https://www.thehindubusinessline.com/markets/feeder/default.rss",
+    "NDTVProfit": "https://feeds.feedburner.com/ndtvprofit-latest",
+    "CNBC-TV18": "https://www.cnbctv18.com/commonfeeds/v1/cne/rss/market.xml",
+}
+# International business news: read by the headlines analyst for the global picture, never matched to Indian company names.
+WORLD_FEEDS = {
+    "GoogleNews-World": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=en-US&gl=US&ceid=US:en",
+    "Yahoo-S&P500": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=%5EGSPC&region=US&lang=en-US",
+    "MarketWatch": "https://feeds.content.dowjones.io/public/rss/mw_topstories",
+    "BBC-Business": "https://feeds.bbci.co.uk/news/business/rss.xml",
+    "NYT-Business": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "Investing.com": "https://www.investing.com/rss/news_25.rss",
+    "FT-Markets": "https://www.ft.com/markets?format=rss",
 }
 # (category, regex, tone hint). First match wins; order is by importance.
 RULES = [

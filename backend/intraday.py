@@ -284,14 +284,29 @@ def update_news_feed(now: datetime):
     f = DOCS / "news_feed.json"
     feed = json.loads(f.read_text()) if f.exists() else []
     have = {re.sub(r"\W+", "", x["headline"].lower())[:90] for x in feed}
+    bodies = {}
     for name, url in nw.FEEDS.items():
-        for title in nw.items(nw.fetch(url)):
+        bodies[name] = nw.fetch(url)
+        for title in nw.items(bodies[name]):
             key = re.sub(r"\W+", "", title.lower())[:90]
             c = nw.classify(title)
             if c and key not in have:
                 have.add(key)
                 feed.append({"time": now.strftime("%d %b %H:%M"), "source": name, "category": c[0], "headline": title[:160], "event": "yes" if c[0] in nw.MACRO else "no", "hint": c[1]})
     f.write_text(json.dumps(feed[-60:], indent=1))
+    w = DOCS / "news_wire.json"                                         # every headline, Indian and international, for the headlines analyst (Claude) and the page
+    wire = json.loads(w.read_text()) if w.exists() else []
+    seen = {re.sub(r"\W+", "", x["headline"].lower())[:90] for x in wire}
+    for region, feeds in (("India", nw.FEEDS), ("World", getattr(nw, "WORLD_FEEDS", {}))):
+        for name, url in feeds.items():
+            if name == "RBI":
+                continue
+            for title in list(nw.items(bodies[name] if name in bodies else nw.fetch(url)))[:12]:
+                key = re.sub(r"\W+", "", title.lower())[:90]
+                if key and key not in seen:
+                    seen.add(key)
+                    wire.append({"time": now.strftime("%d %b %H:%M"), "source": name, "region": region, "headline": title[:160]})
+    w.write_text(json.dumps(wire[-200:], indent=0))
 
 
 def upstox_rows(token: str) -> list[dict]:
