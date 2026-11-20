@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T00:19:06+05:30",
+ "updated_at": "2026-11-20T05:59:39+05:30",
  "ceo": "Balaji",
  "coo": {
   "name": "Raghav",
@@ -14,16 +14,16 @@
    {
     "team": "crypto",
     "level": "warn",
-    "text": "Crypto desk: targets hit 1 times against 5.3 expected by pure chance (z -2.3): no edge so far."
+    "text": "Crypto desk: targets hit 1 times against 6.0 expected by pure chance (z -2.5): no edge so far."
    },
    {
     "team": null,
     "level": "warn",
-    "text": "Data problem at the company desk: error: float division by zero. Trades there wait until it clears."
+    "text": "Data problem at the company desk: error: unsupported format string passed to NoneType.__format__. Trades there wait until it clears."
    }
   ],
   "requests": [],
-  "doing": "Supervising 7 teams: 0 traded today, company \u20b90."
+  "doing": "Supervising 7 teams: 1 traded today, company +\u20b928. Bonus race leader: Crypto desk (+\u20b928)."
  },
  "teams": [
   {
@@ -529,7 +529,7 @@
     {
      "name": "Pooja",
      "role": "Lead analyst",
-     "doing": "Brent -2.32%, gold -1.35% overnight; tracking 4 MCX contracts the account can carry.",
+     "doing": "Brent -2.24%, gold -3.16% overnight; tracking 4 MCX contracts the account can carry.",
      "tokens": 0
     },
     {
@@ -561,22 +561,22 @@
     {
      "title": "Gold 1 g",
      "status": "resting",
-     "doing": "-1.67% today, moving: watching for an entry"
+     "doing": "No price yet"
     },
     {
      "title": "Silver 1 kg",
      "status": "resting",
-     "doing": "-2.07% today, moving: watching for an entry"
+     "doing": "No price yet"
     },
     {
      "title": "Crude oil mini",
      "status": "resting",
-     "doing": "+2.18% today, moving: watching for an entry"
+     "doing": "No price yet"
     },
     {
      "title": "Natural gas mini",
      "status": "resting",
-     "doing": "-2.11% today, moving: watching for an entry"
+     "doing": "No price yet"
     },
     {
      "title": "Margin quant",
@@ -647,13 +647,13 @@
     {
      "name": "Nikhil",
      "role": "Quant analyst",
-     "doing": "SOL long: reward 2.0\u00d7 the risk; a random walk reaches the target first 33% of the time; break-even needs 33% wins after charges.",
+     "doing": "ADA long: reward 1.95\u00d7 the risk; a random walk reaches the target first 34% of the time; break-even needs 34% wins after charges.",
      "tokens": 0
     },
     {
      "name": "Sam",
      "role": "Trading officer",
-     "doing": "Holding 2: SOL long at 73.23, stop 72.13, now +\u20b924.",
+     "doing": "Holding 2: ADA long at 0.15, stop 0.15, now +\u20b924.",
      "tokens": 0
     }
    ],
@@ -665,7 +665,7 @@
     "hunger": 1.0,
     "effort": 1,
     "mood": "Injured",
-    "idle_min": 19,
+    "idle_min": 157,
     "injured": true,
     "hunt": null
    },
@@ -673,32 +673,32 @@
     {
      "title": "BTC",
      "status": "idle",
-     "doing": "-0.14% today"
+     "doing": "+0.18% today"
     },
     {
      "title": "ETH",
      "status": "holding",
-     "doing": "+0.25% today, in a trade"
+     "doing": "-0.09% today, in a trade"
     },
     {
      "title": "SOL",
-     "status": "holding",
-     "doing": "+0.95% today, in a trade"
+     "status": "idle",
+     "doing": "-0.15% today"
     },
     {
      "title": "XRP",
      "status": "idle",
-     "doing": "+0.83% today"
+     "doing": "+0.09% today"
     },
     {
      "title": "DOGE",
      "status": "idle",
-     "doing": "+0.32% today"
+     "doing": "-0.02% today"
     },
     {
      "title": "ADA",
-     "status": "active",
-     "doing": "+1.53% today, moving: watching for an entry"
+     "status": "holding",
+     "doing": "+0.13% today, in a trade"
     },
     {
      "title": "Volatility quant",
@@ -709,28 +709,28 @@
      "title": "Trading officer",
      "name": "Sam",
      "officer": true,
-     "doing": "Holding 2: SOL long at 73.23, stop 72.13, now +\u20b924.",
+     "doing": "Holding 2: ADA long at 0.15, stop 0.15, now +\u20b924.",
      "status": "alert"
     }
    ],
    "today": {
-    "pnl": 0,
-    "trades": 0,
+    "pnl": 28.1,
+    "trades": 2,
     "open": 2,
     "closed": 0,
     "wins": 0
    },
    "record": {
-    "n": 16,
-    "win_rate": 50.0,
-    "avg_rs": -15.18,
-    "net_rs": -242.89,
-    "worst_run": 3,
-    "profit_factor": 0.67,
+    "n": 18,
+    "win_rate": 44.4,
+    "avg_rs": -18.86,
+    "net_rs": -339.43,
+    "worst_run": 4,
+    "profit_factor": 0.6,
     "target_hits": 1,
-    "expected_hits": 5.3,
-    "edge_z": -2.3,
-    "hit_rate": 0.062
+    "expected_hits": 6.0,
+    "edge_z": -2.5,
+    "hit_rate": 0.056
    },
    "verdicts": [
     {
@@ -742,9 +742,9 @@
     },
     {
      "strategy": "crypto_dip_bounce",
-     "closed": 7,
-     "win_rate": 71.4,
-     "pnl_rs": 243.59,
+     "closed": 9,
+     "win_rate": 55.6,
+     "pnl_rs": 147.05,
      "verdict": "COLLECTING"
     }
    ],
@@ -848,13 +848,13 @@
    "id": "nse",
    "name": "NSE",
    "status": "ok",
-   "detail": "41 filings lean one way today; participant positions for 2026-11-18"
+   "detail": "0 filings lean one way today; participant positions for 2026-11-18"
   },
   {
    "id": "upstox",
    "name": "Upstox",
-   "status": "ok",
-   "detail": "4 MCX futures, real time"
+   "status": "idle",
+   "detail": "market closed: quotes resume at 09:00"
   },
   {
    "id": "indmoney",
@@ -872,13 +872,13 @@
    "id": "yahoo",
    "name": "Yahoo Finance",
    "status": "ok",
-   "detail": "world markets refreshed 177 min ago"
+   "detail": "world markets refreshed 1 min ago"
   },
   {
    "id": "news",
    "name": "News feeds",
    "status": "ok",
-   "detail": "60 headlines, latest 19 Nov 23:25; 0 name a listed company"
+   "detail": "60 headlines, latest 20 Nov 03:21; 0 name a listed company"
   },
   {
    "id": "github",
@@ -940,9 +940,9 @@
   }
  ],
  "company": {
-  "pnl_today": 0,
-  "nifty_chg": 1.13505060855123,
-  "equity": 110873.07,
+  "pnl_today": 28.1,
+  "nifty_chg": null,
+  "equity": 110764.26,
   "sessions": {
    "equity": false,
    "fno": false,
@@ -960,7 +960,7 @@
   "refused": 0
  },
  "quant": {
-  "C261119-48": {
+  "C261120-50": {
    "risk_rs": 37.5,
    "reward_rs": 75.0,
    "rr": 2.0,
@@ -969,18 +969,18 @@
    "used_p": 0.333,
    "p_source": "random-walk baseline",
    "ev_rs": 0.0,
-   "kelly": -0.0
+   "kelly": 0.0
   },
-  "C261119-47": {
-   "risk_rs": 37.5,
-   "reward_rs": 75.0,
-   "rr": 2.0,
-   "base_p": 0.333,
-   "breakeven_p": 0.333,
-   "used_p": 0.333,
+  "C261120-49": {
+   "risk_rs": 38.09,
+   "reward_rs": 74.38,
+   "rr": 1.95,
+   "base_p": 0.339,
+   "breakeven_p": 0.339,
+   "used_p": 0.339,
    "p_source": "random-walk baseline",
-   "ev_rs": -0.0,
-   "kelly": -0.0
+   "ev_rs": 0.0,
+   "kelly": 0.0
   },
   "S3": {
    "risk_rs": 242.15

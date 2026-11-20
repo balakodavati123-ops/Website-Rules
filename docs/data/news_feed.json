@@ -1,37 +1,5 @@
 [
  {
-  "time": "18 Nov 18:44",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex slips 87 points, Nifty down 47 amid global sell-off - Awaz The Voice",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 19:00",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Upcoming IPO: Real estate firm Assetz gets SEBI nod to float \u20b91,200 crore issue - Upstox",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 19:05",
-  "source": "ET",
-  "category": "APPROVAL",
-  "headline": "Real estate firm Assetz gets Sebi nod to float Rs 1,200-cr IPO",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 20:00",
-  "source": "ET",
-  "category": "EARNINGS",
-  "headline": "PSBs' net profit rises 17% to Rs 1.10 lakh cr in H1 FY27; business crosses Rs 300 lakh crore",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
   "time": "18 Nov 20:05",
   "source": "Mint",
   "category": "EARNINGS",
@@ -477,6 +445,38 @@
   "category": "CRASH/SHOCK",
   "headline": "Anthropic IPO Live Updates: Dow plunges 650 pts after Anthropic's trillion-dollar market debut",
   "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 02:31",
+  "source": "Mint",
+  "category": "GEOPOLITICS",
+  "headline": "US Sour Crude\u2019s War Premium Vanishes as Supply Surges",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "20 Nov 02:56",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Anthropic IPO Live Updates: US stocks tumble 2%, head for longest losing streak since 2024 despite strong Anthropic debut",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 03:11",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Anthropic IPO Highlights: US stocks tumble 2%, head for longest losing streak since 2024 despite strong Anthropic debut",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 03:21",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "Coffee Day: Yet another SAT blow to SEBI\u2019s investigation - www.metroindia.net",
+  "event": "no",
   "hint": "SHORT-lean headline"
  }
 ]

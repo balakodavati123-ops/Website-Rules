@@ -1,37 +1,37 @@
 {
  "trades": [
   {
-   "id": "C261119-47",
+   "id": "C261120-49",
    "desk": "CRYPTO",
    "strategy": "crypto_dip_bounce",
-   "label": "SOL long",
+   "label": "ADA long",
    "side": "LONG",
-   "entry": 73.23,
-   "last": 74.24,
+   "entry": 0.1499,
+   "last": 0.151951,
    "qty": 2500,
    "status": "OPEN",
-   "pnl_rs": 24.48,
+   "pnl_rs": 24.21,
    "exit": "",
    "why": "",
-   "day": "2026-11-19",
-   "opened": "22:22:06",
+   "day": "2026-11-20",
+   "opened": "03:03:16",
    "closed": "",
-   "ts": 1795107126.9048302,
-   "symbol": "SOL",
-   "stop": 72.13155,
-   "target_px": 75.4269,
+   "ts": 1795123996.6678195,
+   "symbol": "ADA",
+   "stop": 0.147616,
+   "target_px": 0.15436,
    "horizon": "intraday",
    "risk_class": "Intraday spot",
    "margin_rs": 2500,
    "thesis": {
     "horizon": "intraday",
-    "headline": "SOL long",
+    "headline": "ADA long",
     "news": [
      "US markets averaged -0.31% at the 18/11 close.",
      "Asia averaged -0.92%."
     ],
     "data": [
-     "SOL at $73.23, -0.42% over the last 24 hours; 24-hour range $72.22 to $75.56.",
+     "ADA at $0.15, -0.92% over the last 24 hours; 24-hour range $0.15 to $0.16.",
      "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
     ],
     "strategy": "Buy a coin that has dropped and started to recover.",
@@ -42,17 +42,17 @@
     "numbers": [
      [
       "Entry",
-      "73.23",
+      "0.15",
       "Price when the paper trade was opened"
      ],
      [
       "Stop (exit if wrong)",
-      "72.13",
+      "0.15",
       "Costs about \u20b938"
      ],
      [
       "Target (exit if right)",
-      "75.43",
+      "0.15",
       "Earns about \u20b975"
      ],
      [
@@ -74,28 +74,28 @@
     "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
     "viability": "Needs \u20b92,500 to hold."
    },
-   "reason": "-3.1% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
+   "reason": "-3.8% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
   },
   {
-   "id": "C261119-48",
+   "id": "C261120-50",
    "desk": "CRYPTO",
    "strategy": "crypto_dip_bounce",
    "label": "ETH long",
    "side": "LONG",
-   "entry": 1761.02,
-   "last": 1779.26,
+   "entry": 1744.09,
+   "last": 1753.78,
    "qty": 2500,
    "status": "OPEN",
-   "pnl_rs": 15.89,
+   "pnl_rs": 3.89,
    "exit": "",
    "why": "",
-   "day": "2026-11-19",
-   "opened": "22:32:59",
+   "day": "2026-11-20",
+   "opened": "03:22:33",
    "closed": "",
-   "ts": 1795107780.3530421,
+   "ts": 1795125153.4556675,
    "symbol": "ETH",
-   "stop": 1734.6047,
-   "target_px": 1813.8506,
+   "stop": 1717.92865,
+   "target_px": 1796.4127,
    "horizon": "intraday",
    "risk_class": "Intraday spot",
    "margin_rs": 2500,
@@ -107,7 +107,7 @@
      "Asia averaged -0.92%."
     ],
     "data": [
-     "ETH at $1,761.02, -0.77% over the last 24 hours; 24-hour range $1,745.99 to $1,815.52.",
+     "ETH at $1,744.09, -1.73% over the last 24 hours; 24-hour range $1,734.23 to $1,815.52.",
      "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
     ],
     "strategy": "Buy a coin that has dropped and started to recover.",
@@ -118,17 +118,17 @@
     "numbers": [
      [
       "Entry",
-      "1,761.02",
+      "1,744.09",
       "Price when the paper trade was opened"
      ],
      [
       "Stop (exit if wrong)",
-      "1,734.60",
+      "1,717.93",
       "Costs about \u20b938"
      ],
      [
       "Target (exit if right)",
-      "1,813.85",
+      "1,796.41",
       "Earns about \u20b975"
      ],
      [
@@ -150,7 +150,7 @@
     "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
     "viability": "Needs \u20b92,500 to hold."
    },
-   "reason": "-3.0% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
+   "reason": "-3.9% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
   }
  ],
  "seen": {
@@ -1948,9 +1948,11 @@
   "2026-11-19|DOGE": "crypto_breakout",
   "2026-11-19|ADA": "crypto_breakout",
   "2026-11-19|SOL": "crypto_dip_bounce",
-  "2026-11-19|ETH": "crypto_dip_bounce"
+  "2026-11-19|ETH": "crypto_dip_bounce",
+  "2026-11-20|ADA": "crypto_dip_bounce",
+  "2026-11-20|ETH": "crypto_dip_bounce"
  },
- "seq": 48,
+ "seq": 50,
  "rebased": true,
  "cool": {
   "RELIANCE": 1795070015.846615,

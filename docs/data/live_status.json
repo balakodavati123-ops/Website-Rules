@@ -1,13 +1,12 @@
 {
  "desks": {
-  "commodities": "4 MCX futures, real time",
   "crypto": "6 coins from Kraken, real time",
   "gateway": "dry \u00b7 0 intents, 0 refused",
-  "company": "error: float division by zero"
+  "company": "error: unsupported format string passed to NoneType.__format__"
  },
- "updated_at": "2026-11-20T00:19:04+05:30",
- "updated_hm": "20 Nov 00:19:04",
- "loops": 2580,
+ "updated_at": "2026-11-20T05:59:39+05:30",
+ "updated_hm": "20 Nov 05:59:39",
+ "loops": 3414,
  "sessions": {
   "equity": false,
   "fno": false,
@@ -17,14 +16,14 @@
  "note": "Real-time Upstox prices for equities, NIFTY options and MCX; Kraken for crypto. Paper trades only.",
  "open": 15,
  "first_iteration": {
-  "equity": 0.3,
-  "fill": 0.3,
-  "mcx": 0.8,
-  "fno": 0.8,
-  "crypto": 1.0,
-  "snapshots": 1.4,
-  "plan": 1.4,
-  "slow_and_intraday": 1.7,
-  "persist": 1.7
+  "equity": 0.0,
+  "fill": 0.0,
+  "mcx": 0.0,
+  "fno": 0.0,
+  "crypto": 0.2,
+  "snapshots": 0.2,
+  "plan": 0.2,
+  "slow_and_intraday": 0.4,
+  "persist": 0.5
  }
 }

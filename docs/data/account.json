@@ -1,15 +1,15 @@
 {
- "updated_at": "2026-11-20T00:19:04+05:30",
+ "updated_at": "2026-11-20T05:59:39+05:30",
  "start": 100000.0,
- "realised": 10988.69,
- "unrealised": -115.62,
- "equity": 110873.07,
+ "realised": 10892.15,
+ "unrealised": -127.89,
+ "equity": 110764.26,
  "in_use": 51490.11,
- "cash": 59382.96,
- "pnl": 10873.07,
- "pnl_pct": 10.87,
+ "cash": 59274.15,
+ "pnl": 10764.26,
+ "pnl_pct": 10.76,
  "open": 15,
- "closed": 68,
+ "closed": 70,
  "buckets": {
   "swing": {
    "label": "Swing (daily bars)",
