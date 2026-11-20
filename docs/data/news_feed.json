@@ -1,133 +1,5 @@
 [
  {
-  "time": "20 Nov 03:11",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Anthropic IPO Highlights: US stocks tumble 2%, head for longest losing streak since 2024 despite strong Anthropic debut",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 03:21",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "Coffee Day: Yet another SAT blow to SEBI\u2019s investigation - www.metroindia.net",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 06:50",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Global Market Today: Asian stocks slide as AI fears trigger selloff",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 07:36",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Industrial and precious metals meltdown: Dollar dominance holds key",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 07:56",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "AI sell-off hits Indian smallcaps; Sterlite, HFCL down up to 29% in a month",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 07:56",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Base, precious metals meltdown; dollar dominance holds key: Julius Baer",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 07:56",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "AI sell-off hits Indian smallcaps; Sterlite, HFCL down up to 29% in a month - Business Standard",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 08:11",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "On shaky ground: These 11 Indian MFs are most exposed to US tech selloff",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 08:11",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Trade Setup for Today: Global Sell-Off Hits Asian Markets; GIFT Nifty Signals Gap-Down Opening as of November 20, 2026 - scanx.trade",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 08:16",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Pre-Market Update: GIFT Nifty Signals Weak Start; Global Sell-off and AI Valuation Concerns Weigh on Market Sentiment - Dalal Street Investment Journal",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 08:26",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Stock Market LIVE: GIFT Nifty plunges 190 pts; Asian mkts extend losses on concern over AI trade",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 08:31",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "GIFT Nifty plunges over 200 pts, signals sharp fall for Sensex, Nifty as Nasdaq sinks 2.3%, Asian markets... - Moneycontrol.com",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 08:52",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Stock Market LIVE: GIFT Nifty plunges 200 pts; Asian mkts extend losses on concern over AI trade",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 09:12",
-  "source": "ET",
-  "category": "RBI-POLICY",
-  "headline": "Gold Rates Live Updates: Yellow metal heads for steepest weekly fall since March as dollar strengthens, Fed rate hike bets rise",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "20 Nov 09:17",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Stock Market Today: Gift Nifty To Nasdaq, Nikkei, Kospi Selloff; Five Key Factors For Sensex, Nifty 50 On Nov 20 - NDTV Profit",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 09:17",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Gift Nifty Falls 217 Points; Sensex, Nifty Likely To Open Lower As Global Markets Reel From AI Sell-Off - News18",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
   "time": "20 Nov 09:27",
   "source": "ET",
   "category": "RBI-POLICY",
@@ -476,6 +348,134 @@
   "source": "GoogleNews",
   "category": "CRASH/SHOCK",
   "headline": "GTA releases have often coincided with market turmoil, from 1997 to 2008. Now, with GTA VI arriving in 2026, markets face a global A.I. sell-off. \ud83c\udfae\ud83d\udcc9 Sudarshan K",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 18:23",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Ujjivan SFB Seeks RBI Nod for Carol Furtado's CEO Tenure Ext. - Rediff MoneyWiz",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "20 Nov 18:28",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "SoftBank shares crash 14.5%, biggest 1-day fall in 2 years: Why Anthropic's strong IPO debut failed to revive AI trade",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 18:44",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Goldman Sachs sees RBI raising repo rate to 6.25% by mid-2027 as inflation crosses 6% - Prop News Time",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "20 Nov 18:54",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex rallies 898 points, Nifty gains 1.12% as foreign inflows lift sentiment despite Asian market sell-off - https://www.indiagazette.com/",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 19:31",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Indian stocks buck global selloff as rupee climbs to seven-month high - PRESS Insider",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 19:36",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "AI sell-off hits Indian smallcaps; Sterlite, HFCL down up to 29% in a month",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 20:28",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq tumbles 1% as Anthropic fails to steady AI trade: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 20:33",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Anthropic shares tumble 10% after blockbuster IPO, erase debut gains; why are investors turning cautious on AI?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 20:33",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Indian IT Stocks Rally 1.96% as TCS, Infosys and Tech Mahindra Gain Despite Global Tech Selloff - Kotak Neo",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 20:38",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "On shaky ground: These 11 Indian MFs are most exposed to US tech selloff",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 21:14",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Anthropic shares tumble after record IPO as AI trade faces reality check - Business Standard",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 21:24",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Anthropic shares tumble after record IPO as AI trade faces reality check",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 21:45",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq tumbles 2% as Anthropic retreat deepens AI trade concerns",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 21:45",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq tumbles 650 pts as Anthropic fails to rekindle AI optimism: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 22:16",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty IT jumps over 1% as TCS, Tech Mahindra, HCL Tech gain; Indian IT stocks buck global AI selloff - TradingView",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 22:41",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq tumbles over 800 pts as Anthropic fails to rekindle AI optimism: Stock Market Live Updates",
   "event": "yes",
   "hint": "SHORT-lean headline"
  }
