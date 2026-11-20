@@ -1,4 +1,208 @@
 {
+ "C261121-67": {
+  "horizon": "intraday",
+  "headline": "ADA long",
+  "news": [
+   "US markets averaged -2.15% at the 19/11 close.",
+   "Asia averaged -3.26%."
+  ],
+  "data": [
+   "ADA at $0.14, -5.97% over the last 24 hours; 24-hour range $0.14 to $0.15.",
+   "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+  ],
+  "strategy": "Buy a coin that has dropped and started to recover.",
+  "why": [
+   "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+   "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "0.14",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "0.14",
+    "Costs about \u20b938"
+   ],
+   [
+    "Target (exit if right)",
+    "0.15",
+    "Earns about \u20b975"
+   ],
+   [
+    "Reward for the risk",
+    "2.0 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "33% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b92,500",
+    "2% of the account"
+   ]
+  ],
+  "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+  "viability": "Needs \u20b92,500 to hold."
+ },
+ "C261121-66": {
+  "horizon": "intraday",
+  "headline": "BTC long",
+  "news": [
+   "US markets averaged -2.15% at the 19/11 close.",
+   "Asia averaged -3.26%."
+  ],
+  "data": [
+   "BTC at $58,207.80, -5.99% over the last 24 hours; 24-hour range $57,661.10 to $62,835.10.",
+   "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+  ],
+  "strategy": "Buy a coin that has dropped and started to recover.",
+  "why": [
+   "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+   "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "58,207.80",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "57,334.68",
+    "Costs about \u20b938"
+   ],
+   [
+    "Target (exit if right)",
+    "59,954.03",
+    "Earns about \u20b975"
+   ],
+   [
+    "Reward for the risk",
+    "2.0 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "33% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b92,500",
+    "2% of the account"
+   ]
+  ],
+  "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+  "viability": "Needs \u20b92,500 to hold."
+ },
+ "C261121-64": {
+  "horizon": "intraday",
+  "headline": "SOL long",
+  "news": [
+   "US markets averaged -2.15% at the 19/11 close.",
+   "Asia averaged -3.26%."
+  ],
+  "data": [
+   "SOL at $69.27, -5.20% over the last 24 hours; 24-hour range $67.74 to $74.61.",
+   "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+  ],
+  "strategy": "Buy a coin that has dropped and started to recover.",
+  "why": [
+   "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+   "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "69.27",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "68.23",
+    "Costs about \u20b938"
+   ],
+   [
+    "Target (exit if right)",
+    "71.35",
+    "Earns about \u20b975"
+   ],
+   [
+    "Reward for the risk",
+    "2.0 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "33% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b92,500",
+    "2% of the account"
+   ]
+  ],
+  "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+  "viability": "Needs \u20b92,500 to hold."
+ },
+ "C261121-65": {
+  "horizon": "intraday",
+  "headline": "XRP long",
+  "news": [
+   "US markets averaged -2.15% at the 19/11 close.",
+   "Asia averaged -3.26%."
+  ],
+  "data": [
+   "XRP at $0.91, -5.34% over the last 24 hours; 24-hour range $0.90 to $0.98.",
+   "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+  ],
+  "strategy": "Buy a coin that has dropped and started to recover.",
+  "why": [
+   "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+   "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "0.91",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "0.89",
+    "Costs about \u20b938"
+   ],
+   [
+    "Target (exit if right)",
+    "0.94",
+    "Earns about \u20b975"
+   ],
+   [
+    "Reward for the risk",
+    "2.0 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "33% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b92,500",
+    "2% of the account"
+   ]
+  ],
+  "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+  "viability": "Needs \u20b92,500 to hold."
+ },
  "C261120-63": {
   "horizon": "intraday",
   "headline": "BTC long",
@@ -100,130 +304,6 @@
   ],
   "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
   "viability": "Needs \u20b92,500 to hold."
- },
- "E261120-9": {
-  "horizon": "intraday",
-  "headline": "E2E short",
-  "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
-  ],
-  "data": [
-   "Entry 475.25, stop 479.91, target 465.92; 32 shares worth \u20b915,208.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
-  ],
-  "strategy": "",
-  "why": [
-   "Signal: Gap and go: opened -2.4% lower and is holding below the open and VWAP, near the day low. Stop 479.91 (0.98%), target 465.92 (2R), stop moves to entry after a 1R gain, out by 15:10."
-  ],
-  "numbers": [
-   [
-    "Risk if the stop is hit",
-    "\u20b9149",
-    "0.13% of the account"
-   ],
-   [
-    "Reward at the target",
-    "\u20b9299",
-    "2.0 to 1 against the risk"
-   ]
-  ],
-  "risk": "Exit at the stop, the target or the time stop in the rule.",
-  "viability": "Paid for in cash: \u20b915,208."
- },
- "E261120-8": {
-  "horizon": "intraday",
-  "headline": "TTKHLTCARE long",
-  "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
-  ],
-  "data": [
-   "Entry 1,124.85, stop 1,111.35, target 1,151.85; 11 shares worth \u20b912,373.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
-  ],
-  "strategy": "",
-  "why": [
-   "Signal: News-led: a positive filing today; price +6.9% near the day high. Stop 1,111.35 (1.20%), target 1,151.85 (2R), stop moves to entry after a 1R gain, out by 15:10."
-  ],
-  "numbers": [
-   [
-    "Risk if the stop is hit",
-    "\u20b9148",
-    "0.12% of the account"
-   ],
-   [
-    "Reward at the target",
-    "\u20b9297",
-    "2.0 to 1 against the risk"
-   ]
-  ],
-  "risk": "Exit at the stop, the target or the time stop in the rule.",
-  "viability": "Paid for in cash: \u20b912,373."
- },
- "E261120-7": {
-  "horizon": "intraday",
-  "headline": "ESDS short",
-  "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
-  ],
-  "data": [
-   "Entry 1,116.10, stop 1,126.18, target 1,095.93; 14 shares worth \u20b915,625.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
-  ],
-  "strategy": "",
-  "why": [
-   "Signal: Gap and go: opened -3.3% lower and is holding below the open and VWAP, near the day low. Stop 1,126.18 (0.90%), target 1,095.93 (2R), stop moves to entry after a 1R gain, out by 15:10."
-  ],
-  "numbers": [
-   [
-    "Risk if the stop is hit",
-    "\u20b9141",
-    "0.12% of the account"
-   ],
-   [
-    "Reward at the target",
-    "\u20b9282",
-    "2.0 to 1 against the risk"
-   ]
-  ],
-  "risk": "Exit at the stop, the target or the time stop in the rule.",
-  "viability": "Paid for in cash: \u20b915,625."
- },
- "E261120-6": {
-  "horizon": "intraday",
-  "headline": "NITINSPIN long",
-  "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
-  ],
-  "data": [
-   "Entry 718.80, stop 710.17, target 736.05; 17 shares worth \u20b912,220.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
-  ],
-  "strategy": "",
-  "why": [
-   "Signal: Gap and go: opened +2.5% higher and is holding above the open and VWAP, near the day high. Stop 710.17 (1.20%), target 736.05 (2R), stop moves to entry after a 1R gain, out by 15:10."
-  ],
-  "numbers": [
-   [
-    "Risk if the stop is hit",
-    "\u20b9147",
-    "0.12% of the account"
-   ],
-   [
-    "Reward at the target",
-    "\u20b9293",
-    "2.0 to 1 against the risk"
-   ]
-  ],
-  "risk": "Exit at the stop, the target or the time stop in the rule.",
-  "viability": "Paid for in cash: \u20b912,220."
  },
  "F261120-61": {
   "horizon": "daily",
@@ -351,99 +431,6 @@
   ],
   "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: The pullback becomes a reversal. The 0.5% stop caps the loss.",
   "viability": "Needs \u20b924,388 to hold (Upstox margin calculator)."
- },
- "E261120-5": {
-  "horizon": "intraday",
-  "headline": "MTARTECH short",
-  "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
-  ],
-  "data": [
-   "Entry 5,675.00, stop 5,675.00, target 5,558.58; 2 shares worth \u20b911,350.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
-  ],
-  "strategy": "",
-  "why": [
-   "Signal: Gap and go: opened -2.6% lower and is holding below the open and VWAP, near the day low. Stop 5,733.21 (1.03%), target 5,558.58 (2R), stop moves to entry after a 1R gain, out by 15:10."
-  ],
-  "numbers": [
-   [
-    "Risk if the stop is hit",
-    "\u20b90",
-    "0.00% of the account"
-   ],
-   [
-    "Reward at the target",
-    "\u20b9233",
-    ""
-   ]
-  ],
-  "risk": "Exit at the stop, the target or the time stop in the rule.",
-  "viability": "Paid for in cash: \u20b911,350."
- },
- "E261120-4": {
-  "horizon": "intraday",
-  "headline": "TDPOWERSYS short",
-  "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
-  ],
-  "data": [
-   "Entry 619.00, stop 619.00, target 611.57; 40 shares worth \u20b924,760.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
-  ],
-  "strategy": "",
-  "why": [
-   "Signal: Gap and go: opened -2.6% lower and is holding below the open and VWAP, near the day low. Stop 622.71 (0.60%), target 611.57 (2R), stop moves to entry after a 1R gain, out by 15:10."
-  ],
-  "numbers": [
-   [
-    "Risk if the stop is hit",
-    "\u20b90",
-    "0.00% of the account"
-   ],
-   [
-    "Reward at the target",
-    "\u20b9297",
-    ""
-   ]
-  ],
-  "risk": "Exit at the stop, the target or the time stop in the rule.",
-  "viability": "Paid for in cash: \u20b924,760."
- },
- "E261120-3": {
-  "horizon": "intraday",
-  "headline": "SHILPAMED short",
-  "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
-  ],
-  "data": [
-   "Entry 843.80, stop 853.93, target 823.55; 14 shares worth \u20b911,813.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
-  ],
-  "strategy": "",
-  "why": [
-   "Signal: Gap and go: opened -5.2% lower and is holding below the open and VWAP, near the day low. Stop 853.93 (1.20%), target 823.55 (2R), stop moves to entry after a 1R gain, out by 15:10."
-  ],
-  "numbers": [
-   [
-    "Risk if the stop is hit",
-    "\u20b9142",
-    "0.12% of the account"
-   ],
-   [
-    "Reward at the target",
-    "\u20b9284",
-    "2.0 to 1 against the risk"
-   ]
-  ],
-  "risk": "Exit at the stop, the target or the time stop in the rule.",
-  "viability": "Paid for in cash: \u20b911,813."
  },
  "K261120-58": {
   "horizon": "scalp",
@@ -924,68 +911,6 @@
   ],
   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
   "viability": "Needs \u20b97,512 to hold."
- },
- "E261120-2": {
-  "horizon": "intraday",
-  "headline": "HDFCGOLD short",
-  "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
-  ],
-  "data": [
-   "Entry 104.92, stop 104.92, target 103.66; 238 shares worth \u20b924,971.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
-  ],
-  "strategy": "",
-  "why": [
-   "Signal: Gap and go: opened -3.6% lower and is holding below the open and VWAP, near the day low. Stop 105.55 (0.60%), target 103.66 (2R), stop moves to entry after a 1R gain, out by 15:10."
-  ],
-  "numbers": [
-   [
-    "Risk if the stop is hit",
-    "\u20b90",
-    "0.00% of the account"
-   ],
-   [
-    "Reward at the target",
-    "\u20b9300",
-    ""
-   ]
-  ],
-  "risk": "Exit at the stop, the target or the time stop in the rule.",
-  "viability": "Paid for in cash: \u20b924,971."
- },
- "E261120-1": {
-  "horizon": "intraday",
-  "headline": "GOLDIETF short",
-  "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
-  ],
-  "data": [
-   "Entry 105.02, stop 105.02, target 103.66; 221 shares worth \u20b923,209.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
-  ],
-  "strategy": "",
-  "why": [
-   "Signal: Gap and go: opened -3.8% lower and is holding below the open and VWAP, near the day low. Stop 105.70 (0.65%), target 103.66 (2R), stop moves to entry after a 1R gain, out by 15:10."
-  ],
-  "numbers": [
-   [
-    "Risk if the stop is hit",
-    "\u20b90",
-    "0.00% of the account"
-   ],
-   [
-    "Reward at the target",
-    "\u20b9301",
-    ""
-   ]
-  ],
-  "risk": "Exit at the stop, the target or the time stop in the rule.",
-  "viability": "Paid for in cash: \u20b923,209."
  },
  "M261120-51": {
   "horizon": "intraday",

@@ -3070,7 +3070,8 @@
   "margin_rs": 4994,
   "target_px": 103.66,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INF179KC1981"
  },
  {
   "id": "E261120-1",
@@ -3095,7 +3096,8 @@
   "margin_rs": 4642,
   "target_px": 103.66,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INF109KC1NT3"
  },
  {
   "id": "K261120-52",
@@ -3839,7 +3841,8 @@
   "margin_rs": 2363,
   "target_px": 823.55,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INE790G01031"
  },
  {
   "id": "E261120-4",
@@ -3864,7 +3867,8 @@
   "margin_rs": 4952,
   "target_px": 611.57,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INE419M01035"
  },
  {
   "id": "E261120-5",
@@ -3889,7 +3893,8 @@
   "margin_rs": 2270,
   "target_px": 5558.58,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INE864I01014"
  },
  {
   "id": "M261120-60",
@@ -4110,7 +4115,8 @@
   "margin_rs": 2444,
   "target_px": 736.05,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INE229H01012"
  },
  {
   "id": "E261120-7",
@@ -4135,7 +4141,8 @@
   "margin_rs": 3125,
   "target_px": 1095.93,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INE0DRI01029"
  },
  {
   "id": "E261120-8",
@@ -4160,7 +4167,8 @@
   "margin_rs": 2475,
   "target_px": 1151.85,
   "leverage": 5.0,
-  "setup": "news"
+  "setup": "news",
+  "instrument_key": "NSE_EQ|INE910C01018"
  },
  {
   "id": "E261120-9",
@@ -4185,7 +4193,8 @@
   "margin_rs": 3042,
   "target_px": 465.92,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INE255Z01027"
  },
  {
   "id": "C261120-62",
@@ -4338,5 +4347,157 @@
    "viability": "Needs \u20b92,500 to hold."
   },
   "reason": "-3.8% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
+ },
+ {
+  "id": "C261121-64",
+  "desk": "CRYPTO",
+  "strategy": "crypto_dip_bounce",
+  "label": "SOL long",
+  "side": "LONG",
+  "entry": 69.27,
+  "last": 68.18,
+  "qty": 2500,
+  "status": "LOSS",
+  "pnl_rs": -49.34,
+  "exit": 68.18,
+  "why": "stop",
+  "day": "2026-11-21",
+  "opened": "00:00:10",
+  "closed": "00:42:45",
+  "ts": 1795199410.3740249,
+  "symbol": "SOL",
+  "stop": 68.23095,
+  "target_px": 71.3481,
+  "horizon": "intraday",
+  "risk_class": "Intraday spot",
+  "margin_rs": 2500,
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "SOL long",
+   "news": [
+    "US markets averaged -2.15% at the 19/11 close.",
+    "Asia averaged -3.26%."
+   ],
+   "data": [
+    "SOL at $69.27, -5.20% over the last 24 hours; 24-hour range $67.74 to $74.61.",
+    "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+   ],
+   "strategy": "Buy a coin that has dropped and started to recover.",
+   "why": [
+    "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+    "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "69.27",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "68.23",
+     "Costs about \u20b938"
+    ],
+    [
+     "Target (exit if right)",
+     "71.35",
+     "Earns about \u20b975"
+    ],
+    [
+     "Reward for the risk",
+     "2.0 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "33% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b92,500",
+     "2% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+   "viability": "Needs \u20b92,500 to hold."
+  },
+  "reason": "-7.2% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
+ },
+ {
+  "id": "C261121-65",
+  "desk": "CRYPTO",
+  "strategy": "crypto_dip_bounce",
+  "label": "XRP long",
+  "side": "LONG",
+  "entry": 0.908,
+  "last": 0.8936,
+  "qty": 2500,
+  "status": "LOSS",
+  "pnl_rs": -49.73,
+  "exit": 0.8936,
+  "why": "stop",
+  "day": "2026-11-21",
+  "opened": "00:00:10",
+  "closed": "00:47:44",
+  "ts": 1795199410.374063,
+  "symbol": "XRP",
+  "stop": 0.89438,
+  "target_px": 0.93524,
+  "horizon": "intraday",
+  "risk_class": "Intraday spot",
+  "margin_rs": 2500,
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "XRP long",
+   "news": [
+    "US markets averaged -2.15% at the 19/11 close.",
+    "Asia averaged -3.26%."
+   ],
+   "data": [
+    "XRP at $0.91, -5.34% over the last 24 hours; 24-hour range $0.90 to $0.98.",
+    "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+   ],
+   "strategy": "Buy a coin that has dropped and started to recover.",
+   "why": [
+    "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+    "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "0.91",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "0.89",
+     "Costs about \u20b938"
+    ],
+    [
+     "Target (exit if right)",
+     "0.94",
+     "Earns about \u20b975"
+    ],
+    [
+     "Reward for the risk",
+     "2.0 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "33% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b92,500",
+     "2% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+   "viability": "Needs \u20b92,500 to hold."
+  },
+  "reason": "-7.3% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
  }
 ]

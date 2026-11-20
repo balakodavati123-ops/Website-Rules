@@ -1,109 +1,5 @@
 [
  {
-  "time": "20 Nov 09:27",
-  "source": "ET",
-  "category": "RBI-POLICY",
-  "headline": "Gold Rates Live Updates: Gold slides 4%, silver tumbles 6% on MCX as dollar strengthens, Fed rate hike bets rise",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "20 Nov 09:37",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "SENSEX declines over 600 pts; NIFTY50 opens lower at 25,368 amid global selloff; JSW Steel, Tata Steel among top losers - Upstox",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 09:43",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Nifty, Sensex open lower as sell-off in AI weighs on sentiment, Gold down to lowest level of 2026 - ANI News",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 09:48",
-  "source": "ET",
-  "category": "RBI-POLICY",
-  "headline": "Gold Rates Live Updates: Gold slides 4%, silver tumbles 5% on MCX as dollar strengthens, Fed rate hike bets rise",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "20 Nov 09:48",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex, Nifty fall as Wall Street selloff rattles global markets; Titan, metals slide - BusinessLine",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 09:48",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex, Nifty Set for Sharp Fall Amid Global Selloff - HDFC Sky",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 09:53",
-  "source": "ET",
-  "category": "RBI-POLICY",
-  "headline": "Gold Rate Today Live: Gold slides 4%, silver tumbles 5% on MCX as dollar strengthens, Fed rate hike bets rise",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "20 Nov 09:53",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold ETFs down 5%; Silver ETFs plunge over 6%, trade at 52-week lows",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 09:53",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Ashoka Buildcon shares tank 6% as \u20b9846-cr Saudi Arabia project cancelled",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 09:58",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Nifty IT jumps over 1% as TCS, Tech Mahindra, HCL Tech gain; Indian IT stocks buck global AI selloff - Moneycontrol.com",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 09:58",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Sensex, Nifty open flat amid Fed rate hike concerns; investors remain cautious - ChiniMandi",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "20 Nov 10:03",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Nifty, Sensex open lower as sell-off in AI weighs on sentiment, Gold down to lowest level of 2026 - ChiniMandi",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "20 Nov 10:03",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Metal meltdown: SAIL, NALCO, Hindalco drag Nifty Metal 2% lower; here's why - Business Standard",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
   "time": "20 Nov 10:08",
   "source": "GoogleNews",
   "category": "CRASH/SHOCK",
@@ -476,6 +372,110 @@
   "source": "ET",
   "category": "CRASH/SHOCK",
   "headline": "Nasdaq tumbles over 800 pts as Anthropic fails to rekindle AI optimism: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 23:17",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq tumbles over 850 pts as Anthropic fails to rekindle AI optimism: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 23:48",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq tumbles over 850 pts as AI trade concerns spur safe-haven bid: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 00:24",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq tumbles over 3% as AI trade concerns spur safe-haven bid: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 01:14",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq tumbles 4% as AI trade concerns spur safe-haven bid: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 01:25",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq plunges over 1,000 pts as AI bubble fears batter tech stocks: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 01:40",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq plunges 1,000 pts as AI bubble fears batter tech stocks: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 02:05",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq plunges 1,100 pts as AI bubble fears batter tech stocks: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 02:36",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq plunges 1,200 pts as AI bubble fears batter tech stocks: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 02:41",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Gold ETFs down 5%; Silver ETFs plunge over 6%, trade at 52-week lows",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 02:46",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq crashes 5% at close, erasing 2026 gains; S&P 500, Dow in correction: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 02:46",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Ashoka Buildcon shares tank 6% as \u20b9846-cr Saudi Arabia project cancelled",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 03:11",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq crashes 5% at close, erasing 2026 gains; S&P 500, Dow in correction: Stock Market Highlights",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 03:11",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "BSE SENSEX Jumps to 83,919.71 Defying the Global Tech Sell-Off Amid the Historic Meeting of Trump, Xi and Putin - BBN Times",
   "event": "yes",
   "hint": "SHORT-lean headline"
  }
