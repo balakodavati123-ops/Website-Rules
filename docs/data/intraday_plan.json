@@ -1,73 +1,73 @@
 {
- "day": "2026-11-19",
- "built_at": "09:17",
+ "day": "2026-11-20",
+ "built_at": "09:02",
  "stage": 2,
  "tone": {
   "label": "Weak",
-  "score": -0.55,
+  "score": -2.6,
   "notes": [
-   "US markets averaged -0.31% at the 18/11 close.",
-   "Asia averaged -0.92%.",
-   "Brent crude 88.96 (-4.49%).",
-   "Dollar-rupee 93.47 (-0.00%).",
-   "India VIX 15.58: normal."
+   "US markets averaged -2.15% at the 19/11 close.",
+   "Asia averaged -3.26%.",
+   "Brent crude 89.79 (-2.35%).",
+   "Dollar-rupee 93.17 (-0.31%).",
+   "India VIX 16.11: normal."
   ],
-  "as_of": "2026-11-18"
+  "as_of": "2026-11-19"
  },
  "nifty": {
-  "last": 25231.9,
-  "chg_pct": 0.02
+  "last": 25484.8,
+  "chg_pct": -0.12
  },
  "world": [
   {
    "name": "S&P 500",
-   "last": 7323.63,
-   "chg_pct": -0.23
+   "last": 7175.83,
+   "chg_pct": -2.02
   },
   {
    "name": "Nasdaq",
-   "last": 24429.88,
-   "chg_pct": 0.42
+   "last": 23879.2,
+   "chg_pct": -2.25
   },
   {
    "name": "Dow Jones",
-   "last": 50198.17,
-   "chg_pct": -1.11
+   "last": 49097.06,
+   "chg_pct": -2.19
   },
   {
    "name": "US fear index (VIX)",
-   "last": 24.56,
-   "chg_pct": -3.53
+   "last": 28.44,
+   "chg_pct": 15.8
   },
   {
    "name": "Nikkei 225",
-   "last": 59069.19,
-   "chg_pct": 0.08
+   "last": 56775.04,
+   "chg_pct": -4.49
   },
   {
    "name": "Hang Seng",
-   "last": 22846.62,
-   "chg_pct": -1.92
+   "last": 22378.18,
+   "chg_pct": -2.03
   },
   {
    "name": "Shanghai",
-   "last": 3571.99,
-   "chg_pct": -0.44
+   "last": 3512.22,
+   "chg_pct": -1.83
   },
   {
    "name": "FTSE 100",
-   "last": 10551.2,
-   "chg_pct": -1.3
+   "last": 10452.7,
+   "chg_pct": -0.93
   },
   {
    "name": "DAX",
-   "last": 25736.24,
-   "chg_pct": -1.19
+   "last": 25463.81,
+   "chg_pct": -1.06
   },
   {
    "name": "Nifty 50",
-   "last": 25230.3,
-   "chg_pct": 0.01
+   "last": 25514.3,
+   "chg_pct": 1.14
   }
  ],
  "events": [],
@@ -105,63 +105,74 @@
  ],
  "headlines": [
   {
-   "headline": "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com",
-   "category": "CRASH/SHOCK",
-   "source": "GoogleNews",
-   "time": "19 Nov 07:56"
-  },
-  {
-   "headline": "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh",
+   "headline": "Stock Market LIVE: GIFT Nifty plunges 200 pts; Asian mkts extend losses on concern over AI trade",
    "category": "CRASH/SHOCK",
    "source": "BusinessStandard",
-   "time": "19 Nov 07:51"
+   "time": "20 Nov 08:52"
   },
   {
-   "headline": "Sensex Falls 500 Pts, Nifty Slips As Auto, Metal Stocks Lead Sell-off - TradingView",
+   "headline": "GIFT Nifty plunges over 200 pts, signals sharp fall for Sensex, Nifty as Nasdaq sinks 2.3%, Asian markets... - Moneycontrol.com",
    "category": "CRASH/SHOCK",
    "source": "GoogleNews",
-   "time": "19 Nov 07:46"
+   "time": "20 Nov 08:31"
   },
   {
-   "headline": "Global Market Today: Asian shares mixed as commodity prices tumble",
+   "headline": "Stock Market LIVE: GIFT Nifty plunges 190 pts; Asian mkts extend losses on concern over AI trade",
    "category": "CRASH/SHOCK",
-   "source": "ET",
-   "time": "19 Nov 06:34"
-  },
-  {
-   "headline": "Fed policymakers focused on inflation risks in October, with some seeing need for bigger rate hike",
-   "category": "RBI-POLICY",
-   "source": "ET",
-   "time": "19 Nov 01:10"
-  },
-  {
-   "headline": "Nasdaq turns red as Nvidia-led AI relief fails to lift broader market; Dow tumbles 600 pts: Stock Market Live Updates",
-   "category": "CRASH/SHOCK",
-   "source": "ET",
-   "time": "18 Nov 22:53"
-  },
-  {
-   "headline": "Oil prices fall as US stockpile gains ease supply concerns amid Iran war",
-   "category": "GEOPOLITICS",
    "source": "BusinessStandard",
-   "time": "18 Nov 22:43"
+   "time": "20 Nov 08:26"
   },
   {
-   "headline": "Markets snap two-day rally; Sensex drops 500 points amid profit booking, US Fed rate hike speculations - Telegraph India",
-   "category": "RBI-POLICY",
+   "headline": "Pre-Market Update: GIFT Nifty Signals Weak Start; Global Sell-off and AI Valuation Concerns Weigh on Market Sentiment - Dalal Street Investment Journal",
+   "category": "CRASH/SHOCK",
    "source": "GoogleNews",
-   "time": "18 Nov 22:38"
+   "time": "20 Nov 08:16"
+  },
+  {
+   "headline": "Trade Setup for Today: Global Sell-Off Hits Asian Markets; GIFT Nifty Signals Gap-Down Opening as of November 20, 2026 - scanx.trade",
+   "category": "CRASH/SHOCK",
+   "source": "GoogleNews",
+   "time": "20 Nov 08:11"
+  },
+  {
+   "headline": "On shaky ground: These 11 Indian MFs are most exposed to US tech selloff",
+   "category": "CRASH/SHOCK",
+   "source": "BusinessStandard",
+   "time": "20 Nov 08:11"
+  },
+  {
+   "headline": "AI sell-off hits Indian smallcaps; Sterlite, HFCL down up to 29% in a month - Business Standard",
+   "category": "CRASH/SHOCK",
+   "source": "GoogleNews",
+   "time": "20 Nov 07:56"
+  },
+  {
+   "headline": "Base, precious metals meltdown; dollar dominance holds key: Julius Baer",
+   "category": "CRASH/SHOCK",
+   "source": "BusinessStandard",
+   "time": "20 Nov 07:56"
   }
  ],
  "watch": [
+  {
+   "symbol": "JWL",
+   "why": [
+    "positive filing"
+   ],
+   "prev_close": 195.48,
+   "long_above": 196.65,
+   "short_below": 191.57,
+   "stop_pct": 1.0,
+   "bias": "long"
+  },
   {
    "symbol": "SETCO",
    "why": [
     "results filed"
    ],
-   "prev_close": 16.96,
-   "long_above": 17.3,
-   "short_below": 16.62,
+   "prev_close": 17.04,
+   "long_above": 17.38,
+   "short_below": 16.7,
    "stop_pct": 1.0,
    "bias": "either"
   }
@@ -180,113 +191,113 @@
    "note": "Pays only on a big move; the desk skips it when its cost does not fit the F&O limit"
   }
  ],
- "outlook": "Tone weak. 1 names in the news to watch; the desks act only when price confirms: a 2% move near the day's extreme (0.6% when a filing agrees) on real turnover.",
- "world_at": 1795060067.882273,
+ "outlook": "Tone weak. 2 names in the news to watch; the desks act only when price confirms: a 2% move near the day's extreme (0.6% when a filing agrees) on real turnover.",
+ "world_at": 1795145554.9967322,
  "gaps": {
   "up": [
    {
-    "symbol": "LTFOODS",
-    "price": 450.1,
-    "chg_pct": 7.36
+    "symbol": "AUTOIETF",
+    "price": 29.67,
+    "chg_pct": 4.62
    },
    {
-    "symbol": "BLSPOLY",
-    "price": 298.17,
-    "chg_pct": 6.5
+    "symbol": "AUTOBEES",
+    "price": 296.15,
+    "chg_pct": 4.42
    },
    {
-    "symbol": "HORIZONIND",
-    "price": 49.0,
-    "chg_pct": 4.57
+    "symbol": "PSUBNKBEES",
+    "price": 109.03,
+    "chg_pct": 2.44
    },
    {
-    "symbol": "BBOX",
-    "price": 914.0,
-    "chg_pct": 3.86
+    "symbol": "MAXHEALTH",
+    "price": 1065.0,
+    "chg_pct": 2.34
    },
    {
-    "symbol": "VOLTAS",
-    "price": 1177.0,
-    "chg_pct": 3.74
+    "symbol": "GROWWRAIL",
+    "price": 26.74,
+    "chg_pct": 2.33
    },
    {
-    "symbol": "BLUESTARCO",
-    "price": 1676.6,
-    "chg_pct": 3.38
+    "symbol": "CONSUMBEES",
+    "price": 136.21,
+    "chg_pct": 2.31
    },
    {
-    "symbol": "NETWEB",
-    "price": 4242.0,
-    "chg_pct": 3.01
+    "symbol": "MON100",
+    "price": 303.51,
+    "chg_pct": 2.27
    },
    {
-    "symbol": "EXIDEIND",
-    "price": 400.45,
-    "chg_pct": 2.93
+    "symbol": "PSUBANK",
+    "price": 97.3,
+    "chg_pct": 2.23
    },
    {
-    "symbol": "TONBO",
-    "price": 1515.6,
-    "chg_pct": 2.77
+    "symbol": "PWL",
+    "price": 139.2,
+    "chg_pct": 2.2
    },
    {
-    "symbol": "MARSONS",
-    "price": 169.29,
-    "chg_pct": 2.74
+    "symbol": "PVTBANIETF",
+    "price": 31.22,
+    "chg_pct": 2.13
    }
   ],
   "down": [
    {
-    "symbol": "MOBIKWIK",
-    "price": 212.33,
-    "chg_pct": -6.35
+    "symbol": "SILVERIETF",
+    "price": 149.62,
+    "chg_pct": -6.0
    },
    {
-    "symbol": "PAYTM",
-    "price": 1774.0,
-    "chg_pct": -6.14
+    "symbol": "SILVERBEES",
+    "price": 143.65,
+    "chg_pct": -5.99
    },
    {
-    "symbol": "SHRINGARMS",
-    "price": 256.45,
-    "chg_pct": -4.82
+    "symbol": "SHILPAMED",
+    "price": 854.3,
+    "chg_pct": -5.15
    },
    {
-    "symbol": "PINELABS",
-    "price": 161.94,
-    "chg_pct": -4.38
+    "symbol": "HINDZINC",
+    "price": 507.6,
+    "chg_pct": -4.05
    },
    {
-    "symbol": "SUBROS",
-    "price": 666.0,
-    "chg_pct": -3.93
-   },
-   {
-    "symbol": "TANLA",
-    "price": 671.3,
-    "chg_pct": -3.83
-   },
-   {
-    "symbol": "SKYWAYS",
-    "price": 124.26,
-    "chg_pct": -3.63
-   },
-   {
-    "symbol": "CREDITACC",
-    "price": 1011.2,
-    "chg_pct": -3.35
-   },
-   {
-    "symbol": "RADICO",
-    "price": 4515.8,
-    "chg_pct": -3.2
+    "symbol": "GOLDIETF",
+    "price": 105.95,
+    "chg_pct": -3.8
    },
    {
     "symbol": "MUTHOOTFIN",
-    "price": 2557.2,
-    "chg_pct": -3.14
+    "price": 2519.0,
+    "chg_pct": -3.78
+   },
+   {
+    "symbol": "MANAPPURAM",
+    "price": 273.0,
+    "chg_pct": -3.48
+   },
+   {
+    "symbol": "GOLDBEES",
+    "price": 102.8,
+    "chg_pct": -3.29
+   },
+   {
+    "symbol": "VAML",
+    "price": 360.0,
+    "chg_pct": -2.96
+   },
+   {
+    "symbol": "VEDL",
+    "price": 236.8,
+    "chg_pct": -2.83
    }
   ],
-  "at": "09:17"
+  "at": "09:12"
  }
 }

@@ -1,53 +1,282 @@
 {
- "updated_at": "2026-11-20T05:59:39+05:30",
+ "updated_at": "2026-11-20T11:40:08+05:30",
  "crypto": [
   {
    "name": "BTC",
-   "last": 62025.2,
-   "chg_pct": 0.1804129955502498,
+   "last": 61874.4,
+   "chg_pct": -0.06315262422573742,
    "high": 64014.3,
-   "low": 61353.2,
+   "low": 61213.1,
    "unit": "$"
   },
   {
    "name": "ETH",
-   "last": 1753.78,
-   "chg_pct": -0.09001002643331812,
+   "last": 1741.01,
+   "chg_pct": -0.8174961261507518,
    "high": 1815.52,
-   "low": 1734.23,
+   "low": 1716.09,
    "unit": "$"
   },
   {
    "name": "SOL",
-   "last": 72.96,
-   "chg_pct": -0.1505405775284019,
+   "last": 72.55,
+   "chg_pct": -0.7116463664978756,
    "high": 75.56,
-   "low": 72.02,
+   "low": 71.52,
    "unit": "$"
   },
   {
    "name": "XRP",
-   "last": 0.96014,
-   "chg_pct": 0.09278081834767082,
+   "last": 0.96787,
+   "chg_pct": 0.8986187125358258,
    "high": 0.9968,
-   "low": 0.952,
+   "low": 0.94679,
    "unit": "$"
   },
   {
    "name": "DOGE",
-   "last": 0.0581128,
-   "chg_pct": -0.02012920541252239,
+   "last": 0.0575144,
+   "chg_pct": -1.049643437793013,
    "high": 0.0598018,
-   "low": 0.0573999,
+   "low": 0.0566042,
    "unit": "$"
   },
   {
    "name": "ADA",
-   "last": 0.151951,
-   "chg_pct": 0.12585661570900797,
+   "last": 0.149675,
+   "chg_pct": -1.3738798102266747,
    "high": 0.155753,
-   "low": 0.149682,
+   "low": 0.147199,
    "unit": "$"
   }
- ]
+ ],
+ "indices": {
+  "Bank Nifty": {
+   "name": "Bank Nifty",
+   "last": 63456.8,
+   "chg_pct": 0.6244549101691959,
+   "high": 63464.3,
+   "low": 62598.55
+  },
+  "Nifty 50": {
+   "name": "Nifty 50",
+   "last": 25554.35,
+   "chg_pct": 0.1569707967688708,
+   "high": 25572.35,
+   "low": 25345.2
+  },
+  "India VIX": {
+   "name": "India VIX",
+   "last": 17.0,
+   "chg_pct": 5.524518932340162,
+   "high": 17.54,
+   "low": 15.03
+  },
+  "Sensex": {
+   "name": "Sensex",
+   "last": 83161.87,
+   "chg_pct": 0.16877504991161954,
+   "high": 83259.38,
+   "low": 82403.27
+  }
+ },
+ "mcx": [
+  {
+   "key": "MCX_FO|574841",
+   "name": "Gold 1 g",
+   "last": 12392.0,
+   "chg_pct": -3.6841287113321934,
+   "high": 12481.0,
+   "low": 12095.0,
+   "unit": "\u20b9"
+  },
+  {
+   "key": "MCX_FO|578250",
+   "name": "Natural gas mini",
+   "last": 340.5,
+   "chg_pct": -2.7420736932305054,
+   "high": 345.8,
+   "low": 340.2,
+   "unit": "\u20b9"
+  },
+  {
+   "key": "MCX_FO|576265",
+   "name": "Crude oil mini",
+   "last": 7700.0,
+   "chg_pct": -1.3705648776738824,
+   "high": 7788.0,
+   "low": 7693.0,
+   "unit": "\u20b9"
+  },
+  {
+   "key": "MCX_FO|562058",
+   "name": "Silver 1 kg",
+   "last": 150719.0,
+   "chg_pct": -4.940934577081481,
+   "high": 156307.0,
+   "low": 147907.0,
+   "unit": "\u20b9"
+  }
+ ],
+ "movers": {
+  "gainers": [
+   {
+    "symbol": "OAL",
+    "price": 496.2,
+    "chg_pct": 15.23,
+    "turnover_cr": 113.0
+   },
+   {
+    "symbol": "UGROCAP",
+    "price": 82.12,
+    "chg_pct": 11.5,
+    "turnover_cr": 337.3
+   },
+   {
+    "symbol": "TIPSFILMS",
+    "price": 414.85,
+    "chg_pct": 9.66,
+    "turnover_cr": 11.8
+   },
+   {
+    "symbol": "GERMAN",
+    "price": 116.03,
+    "chg_pct": 7.58,
+    "turnover_cr": 135.1
+   },
+   {
+    "symbol": "INDUSINDBK",
+    "price": 983.25,
+    "chg_pct": 6.45,
+    "turnover_cr": 647.5
+   },
+   {
+    "symbol": "ALICON",
+    "price": 1084.05,
+    "chg_pct": 6.44,
+    "turnover_cr": 69.0
+   },
+   {
+    "symbol": "SGMART",
+    "price": 1071.65,
+    "chg_pct": 6.05,
+    "turnover_cr": 100.6
+   },
+   {
+    "symbol": "WELSPUNLIV",
+    "price": 267.7,
+    "chg_pct": 5.75,
+    "turnover_cr": 220.8
+   }
+  ],
+  "losers": [
+   {
+    "symbol": "SMLMAH",
+    "price": 4977.0,
+    "chg_pct": -12.34,
+    "turnover_cr": 58.8
+   },
+   {
+    "symbol": "VISHNU",
+    "price": 513.6,
+    "chg_pct": -7.19,
+    "turnover_cr": 33.7
+   },
+   {
+    "symbol": "SHANTIGOLD",
+    "price": 227.4,
+    "chg_pct": -6.92,
+    "turnover_cr": 24.8
+   },
+   {
+    "symbol": "KALYANKJIL",
+    "price": 618.4,
+    "chg_pct": -6.44,
+    "turnover_cr": 565.7
+   },
+   {
+    "symbol": "SHILPAMED",
+    "price": 842.9,
+    "chg_pct": -6.42,
+    "turnover_cr": 61.2
+   },
+   {
+    "symbol": "BETA",
+    "price": 1653.4,
+    "chg_pct": -6.28,
+    "turnover_cr": 13.4
+   },
+   {
+    "symbol": "SILVERBETA",
+    "price": 144.61,
+    "chg_pct": -6.26,
+    "turnover_cr": 22.9
+   },
+   {
+    "symbol": "HDFCSILVER",
+    "price": 143.19,
+    "chg_pct": -6.23,
+    "turnover_cr": 151.7
+   }
+  ],
+  "active": [
+   {
+    "symbol": "HDFCBANK",
+    "price": 832.55,
+    "chg_pct": 1.31,
+    "turnover_cr": 2604.7
+   },
+   {
+    "symbol": "SILVERBEES",
+    "price": 143.29,
+    "chg_pct": -6.23,
+    "turnover_cr": 1233.2
+   },
+   {
+    "symbol": "COFORGE",
+    "price": 2133.3,
+    "chg_pct": 4.52,
+    "turnover_cr": 1176.7
+   },
+   {
+    "symbol": "V2RETAIL",
+    "price": 163.52,
+    "chg_pct": 3.91,
+    "turnover_cr": 1127.7
+   },
+   {
+    "symbol": "GOLDBEES",
+    "price": 101.51,
+    "chg_pct": -4.51,
+    "turnover_cr": 1114.7
+   },
+   {
+    "symbol": "MARUTI",
+    "price": 13895.0,
+    "chg_pct": 2.25,
+    "turnover_cr": 1050.9
+   },
+   {
+    "symbol": "ICICIBANK",
+    "price": 1615.0,
+    "chg_pct": 0.38,
+    "turnover_cr": 981.4
+   },
+   {
+    "symbol": "AXISBANK",
+    "price": 1402.8,
+    "chg_pct": 1.59,
+    "turnover_cr": 753.9
+   }
+  ],
+  "count": 2742
+ },
+ "fno": {
+  "spot": 25554.35,
+  "expiry": "2026-11-23",
+  "lot": 65,
+  "atm": 25550.0,
+  "straddle": 242.9,
+  "vix": 17.0
+ }
 }

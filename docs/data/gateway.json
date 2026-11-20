@@ -1,6 +1,247 @@
 {
- "intents": {},
+ "intents": {
+  "K261120-52": {
+   "id": "K261120-52",
+   "agent": "scalp_vwap_pullback",
+   "symbol": "LT",
+   "label": "LT long",
+   "side": "BUY",
+   "qty": 9,
+   "entry": 4173.4345,
+   "stop": 4160.15,
+   "target": 4193.35,
+   "created": "09:44:04",
+   "day": "2026-11-20",
+   "hold_min": 10,
+   "qty_sent": 9,
+   "reasons": [],
+   "margin": null,
+   "est_cost": 36.89,
+   "payload": {
+    "txn_type": "BUY",
+    "exchange": "NSE",
+    "segment": "EQUITY",
+    "product": "INTRADAY",
+    "order_type": "LIMIT",
+    "validity": "DAY",
+    "security_id": "",
+    "qty": 9,
+    "limit_price": 4175.55,
+    "sl_trigger_price": 4160.15,
+    "sl_limit_price": 4151.8,
+    "remarks": "K261120-52",
+    "tgt_trigger_price": 4193.35,
+    "tgt_limit_price": 4193.4
+   },
+   "gate": {
+    "ok": false,
+    "why": "verdict COLLECTING with 5 closed paper trades; needs WORKING and 30+"
+   },
+   "status": "DRY",
+   "note": "would be held back: verdict COLLECTING with 5 closed paper trades; needs WORKING and 30+",
+   "paper_status": "WIN",
+   "paper_pnl": 68.68,
+   "paper_exit": 4185.1628,
+   "counted": true
+  },
+  "K261120-54": {
+   "id": "K261120-54",
+   "agent": "scalp_vwap_pullback",
+   "symbol": "SBIN",
+   "label": "SBIN long",
+   "side": "BUY",
+   "qty": 34,
+   "entry": 1152.2304,
+   "stop": 1147.65,
+   "target": 1159.1,
+   "created": "09:46:12",
+   "day": "2026-11-20",
+   "hold_min": 10,
+   "qty_sent": 34,
+   "reasons": [],
+   "margin": null,
+   "est_cost": 37.47,
+   "payload": {
+    "txn_type": "BUY",
+    "exchange": "NSE",
+    "segment": "EQUITY",
+    "product": "INTRADAY",
+    "order_type": "LIMIT",
+    "validity": "DAY",
+    "security_id": "",
+    "qty": 34,
+    "limit_price": 1152.85,
+    "sl_trigger_price": 1147.65,
+    "sl_limit_price": 1145.35,
+    "remarks": "K261120-54",
+    "tgt_trigger_price": 1159.1,
+    "tgt_limit_price": 1159.15
+   },
+   "gate": {
+    "ok": false,
+    "why": "verdict COLLECTING with 5 closed paper trades; needs WORKING and 30+"
+   },
+   "status": "DRY",
+   "note": "would be held back: verdict COLLECTING with 5 closed paper trades; needs WORKING and 30+",
+   "paper_status": "LOSS",
+   "paper_pnl": -182.21,
+   "paper_exit": 1147.9704,
+   "counted": true
+  },
+  "K261120-55": {
+   "id": "K261120-55",
+   "agent": "scalp_vwap_pullback",
+   "symbol": "M&M",
+   "label": "M&M long",
+   "side": "BUY",
+   "qty": 11,
+   "entry": 3525.605,
+   "stop": 3511.65,
+   "target": 3546.5,
+   "created": "10:02:17",
+   "day": "2026-11-20",
+   "hold_min": 10,
+   "qty_sent": 11,
+   "reasons": [],
+   "margin": null,
+   "est_cost": 37.33,
+   "payload": {
+    "txn_type": "BUY",
+    "exchange": "NSE",
+    "segment": "EQUITY",
+    "product": "INTRADAY",
+    "order_type": "LIMIT",
+    "validity": "DAY",
+    "security_id": "",
+    "qty": 11,
+    "limit_price": 3527.4,
+    "sl_trigger_price": 3511.65,
+    "sl_limit_price": 3504.6,
+    "remarks": "K261120-55",
+    "tgt_trigger_price": 3546.5,
+    "tgt_limit_price": 3546.55
+   },
+   "gate": {
+    "ok": false,
+    "why": "verdict COLLECTING with 7 closed paper trades; needs WORKING and 30+"
+   },
+   "status": "DRY",
+   "note": "would be held back: verdict COLLECTING with 7 closed paper trades; needs WORKING and 30+",
+   "paper_status": "LOSS",
+   "paper_pnl": -192.4,
+   "paper_exit": 3511.4976,
+   "counted": true
+  },
+  "K261120-58": {
+   "id": "K261120-58",
+   "agent": "scalp_vwap_pullback",
+   "symbol": "ICICIBANK",
+   "label": "ICICIBANK short",
+   "side": "SELL",
+   "qty": 24,
+   "entry": 1609.3781,
+   "stop": 1613.25,
+   "target": 1603.6,
+   "created": "10:18:31",
+   "day": "2026-11-20",
+   "hold_min": 10,
+   "qty_sent": 24,
+   "reasons": [],
+   "margin": null,
+   "est_cost": 37.2,
+   "payload": {
+    "txn_type": "SELL",
+    "exchange": "NSE",
+    "segment": "EQUITY",
+    "product": "INTRADAY",
+    "order_type": "LIMIT",
+    "validity": "DAY",
+    "security_id": "",
+    "qty": 24,
+    "limit_price": 1608.55,
+    "sl_trigger_price": 1613.25,
+    "sl_limit_price": 1616.5,
+    "remarks": "K261120-58",
+    "tgt_trigger_price": 1603.6,
+    "tgt_limit_price": 1603.55
+   },
+   "gate": {
+    "ok": false,
+    "why": "verdict COLLECTING with 8 closed paper trades; needs WORKING and 30+"
+   },
+   "status": "DRY",
+   "note": "would be held back: verdict COLLECTING with 8 closed paper trades; needs WORKING and 30+",
+   "paper_status": "LOSS",
+   "paper_pnl": -98.28,
+   "paper_exit": 1611.9223,
+   "counted": true
+  },
+  "K261120-59": {
+   "id": "K261120-59",
+   "agent": "scalp_vwap_pullback",
+   "symbol": "BHARTIARTL",
+   "label": "BHARTIARTL short",
+   "side": "SELL",
+   "qty": 18,
+   "entry": 2141.3716,
+   "stop": 2146.25,
+   "target": 2134.1,
+   "created": "10:18:31",
+   "day": "2026-11-20",
+   "hold_min": 10,
+   "qty_sent": 18,
+   "reasons": [],
+   "margin": null,
+   "est_cost": 37.18,
+   "payload": {
+    "txn_type": "SELL",
+    "exchange": "NSE",
+    "segment": "EQUITY",
+    "product": "INTRADAY",
+    "order_type": "LIMIT",
+    "validity": "DAY",
+    "security_id": "",
+    "qty": 18,
+    "limit_price": 2140.3,
+    "sl_trigger_price": 2146.25,
+    "sl_limit_price": 2150.55,
+    "remarks": "K261120-59",
+    "tgt_trigger_price": 2134.1,
+    "tgt_limit_price": 2134.05
+   },
+   "gate": {
+    "ok": false,
+    "why": "verdict COLLECTING with 8 closed paper trades; needs WORKING and 30+"
+   },
+   "status": "DRY",
+   "note": "would be held back: verdict COLLECTING with 8 closed paper trades; needs WORKING and 30+",
+   "paper_status": "LOSS",
+   "paper_pnl": -110.22,
+   "paper_exit": 2145.429,
+   "counted": true
+  }
+ },
  "events": [
+  {
+   "t": "10:18:31",
+   "text": "DRY SELL 18 BHARTIARTL stop 2146.25 (gate closed)"
+  },
+  {
+   "t": "10:18:31",
+   "text": "DRY SELL 24 ICICIBANK stop 1613.25 (gate closed)"
+  },
+  {
+   "t": "10:02:17",
+   "text": "DRY BUY 11 M&M stop 3511.65 (gate closed)"
+  },
+  {
+   "t": "09:46:12",
+   "text": "DRY BUY 34 SBIN stop 1147.65 (gate closed)"
+  },
+  {
+   "t": "09:44:04",
+   "text": "DRY BUY 9 LT stop 4160.15 (gate closed)"
+  },
   {
    "t": "12:16:18",
    "text": "DRY BUY 257 PNB stop 154.55 (gate closed)"
@@ -24,16 +265,16 @@
  ],
  "day": {
   "day": "2026-11-20",
-  "trades": 0,
-  "pnl": 0.0,
-  "stops": 0
+  "trades": 5,
+  "pnl": -514.43,
+  "stops": 4
  },
  "broker": {},
  "mode": "dry",
  "wanted": "dry",
  "blockers": [],
  "killed": false,
- "updated_at": "2026-11-20T05:59:39+05:30",
+ "updated_at": "2026-11-20T11:40:12+05:30",
  "caps": {
   "max_value": 40000.0,
   "risk": 250.0,
@@ -51,5 +292,6 @@
   "agents": [
    "scalp_vwap_pullback"
   ]
- }
+ },
+ "halted": "3 losing trades in a row"
 }

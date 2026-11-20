@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T05:59:39+05:30",
+ "updated_at": "2026-11-20T09:53:45+05:30",
  "ceo": "Balaji",
  "coo": {
   "name": "Raghav",
@@ -17,13 +17,13 @@
     "text": "Crypto desk: targets hit 1 times against 6.0 expected by pure chance (z -2.5): no edge so far."
    },
    {
-    "team": null,
-    "level": "warn",
-    "text": "Data problem at the company desk: error: unsupported format string passed to NoneType.__format__. Trades there wait until it clears."
+    "team": "fno",
+    "level": "info",
+    "text": "6 trades were skipped today because the broker's margin did not fit the account: the desks only trade what is viable."
    }
   ],
   "requests": [],
-  "doing": "Supervising 7 teams: 1 traded today, company +\u20b928. Bonus race leader: Crypto desk (+\u20b928)."
+  "doing": "Supervising 7 teams: 5 traded today, company \u2212\u20b982. Bonus race leader: Intraday hunters (+\u20b9272)."
  },
  "teams": [
   {
@@ -39,19 +39,19 @@
     {
      "name": "Riya",
      "role": "Lead analyst",
-     "doing": "Market closed: the scan restarts at 09:30.",
+     "doing": "Scanning the 52 most liquid stocks on 1-minute bars for VWAP pullbacks.",
      "tokens": 0
     },
     {
      "name": "Dev",
      "role": "Quant analyst",
-     "doing": "Record: 5 closed, 20.0% won, average \u2212\u20b932, target hits 1 vs 2.0 by chance (z -0.93).",
+     "doing": "LT long: reward 1.5\u00d7 the risk; a random walk reaches the target first 40% of the time; break-even needs 52% wins after charges; stop is 1.18\u03c3 of noise.",
      "tokens": 0
     },
     {
      "name": "Kabir",
      "role": "Trading officer",
-     "doing": "Waiting: no setup has met the rules yet today.",
+     "doing": "Holding 2: LT long at 4,173.43, stop 4,160.15, now +\u20b974.",
      "tokens": 0
     }
    ],
@@ -60,46 +60,46 @@
     "balance": 434,
     "earned": 0,
     "need": 25,
-    "hunger": 0.0,
-    "effort": 0,
-    "mood": "Resting",
-    "idle_min": null,
+    "hunger": 1.0,
+    "effort": 2,
+    "mood": "Hungry",
+    "idle_min": 7,
     "injured": false,
-    "hunt": "25 names, 10 trades a day"
+    "hunt": "45 names, 14 trades a day"
    },
    "seats": [
     {
      "title": "Universe scanner",
-     "status": "resting",
-     "doing": "Waiting for the session"
+     "status": "active",
+     "doing": "52 liquid names on 1-minute bars"
     },
     {
      "title": "VWAP pullback hunter",
-     "status": "resting",
-     "doing": "No pullback has met the rule yet today"
+     "status": "holding",
+     "doing": "2 setup(s) traded today"
     },
     {
      "title": "Volatility quant",
-     "status": "resting",
+     "status": "active",
      "doing": "Keeps every stop at least one standard deviation of 10-minute noise away"
     },
     {
      "title": "Charges quant",
-     "status": "resting",
+     "status": "idle",
      "doing": "Skips any setup whose charges would eat more than a third of the target"
     },
     {
      "title": "Trading officer",
      "name": "Kabir",
      "officer": true,
-     "doing": "Waiting: no setup has met the rules yet today.",
-     "status": "resting"
+     "doing": "Holding 2: LT long at 4,173.43, stop 4,160.15, now +\u20b974.",
+     "status": "holding"
     }
    ],
    "today": {
-    "pnl": 0,
-    "trades": 0,
-    "open": 0,
+    "pnl": -46.95,
+    "trades": 2,
+    "open": 2,
     "closed": 0,
     "wins": 0
    },
@@ -124,7 +124,7 @@
      "verdict": "COLLECTING"
     }
    ],
-   "activity": 0,
+   "activity": 2,
    "variant": null
   },
   {
@@ -141,19 +141,19 @@
     {
      "name": "Ananya",
      "role": "Lead analyst",
-     "doing": "Preparing the morning plan at 08:45.",
+     "doing": "Watching 2 name(s) in the news and today's filings; 6 results to read.",
      "tokens": 0
     },
     {
      "name": "Ishaan",
      "role": "Quant analyst",
-     "doing": "Record: 18 closed, 44.4% won, average +\u20b911.",
+     "doing": "HDFCGOLD short: reward 2.0\u00d7 the risk; a random walk reaches the target first 33% of the time; break-even needs 40% wins after charges.",
      "tokens": 0
     },
     {
      "name": "Vikram",
      "role": "Trading officer",
-     "doing": "Waiting: no setup has met the rules yet today.",
+     "doing": "Holding 2: HDFCGOLD short at 104.92, stop 105.55, now +\u20b9126.",
      "tokens": 0
     }
    ],
@@ -162,56 +162,56 @@
     "balance": 418,
     "earned": 0,
     "need": 35,
-    "hunger": 0.0,
-    "effort": 0,
-    "mood": "Resting",
-    "idle_min": null,
+    "hunger": 1.0,
+    "effort": 2,
+    "mood": "Hungry",
+    "idle_min": 33,
     "injured": false,
-    "hunt": "news and momentum only"
+    "hunt": "news, gap, momentum and VWAP pressure"
    },
    "seats": [
     {
      "title": "Filings hunter",
-     "status": "resting",
-     "doing": "13 companies filed news today that leans one way"
+     "status": "active",
+     "doing": "2 companies filed news today that leans one way"
     },
     {
      "title": "Headlines hunter",
-     "status": "resting",
-     "doing": "No headline in the last 3 hours names a listed company"
+     "status": "active",
+     "doing": "3 recent headlines name a listed company: INVPRECQ, NDTV, ASHOKA"
     },
     {
      "title": "Gap scanner",
-     "status": "resting",
-     "doing": "Scanning 0 liquid stocks: nothing meets the rule right now"
+     "status": "active",
+     "doing": "8 candidate(s) now: GOLDAXIS, SILVERBEES, GOLD1, MAXHEALTH"
     },
     {
      "title": "Momentum scanner",
-     "status": "resting",
-     "doing": "Scanning 0 liquid stocks: nothing meets the rule right now"
+     "status": "active",
+     "doing": "8 candidate(s) now: GOLDAXIS, SILVERBEES, TANLA, BAJAJHLDNG"
     },
     {
      "title": "VWAP pressure scanner",
-     "status": "resting",
-     "doing": "Scanning 0 liquid stocks: nothing meets the rule right now"
+     "status": "active",
+     "doing": "8 candidate(s) now: RAYMOND, SHREECEM, NH, BONFIG"
     },
     {
      "title": "Risk quant",
-     "status": "resting",
+     "status": "holding",
      "doing": "Sizes each trade to Rs 150 of risk: stop just beyond VWAP, target 2R, stop moved to entry after a 1R gain"
     },
     {
      "title": "Trading officer",
      "name": "Vikram",
      "officer": true,
-     "doing": "Waiting: no setup has met the rules yet today.",
-     "status": "resting"
+     "doing": "Holding 2: HDFCGOLD short at 104.92, stop 105.55, now +\u20b9126.",
+     "status": "holding"
     }
    ],
    "today": {
-    "pnl": 0,
-    "trades": 0,
-    "open": 0,
+    "pnl": 272.0,
+    "trades": 2,
+    "open": 2,
     "closed": 0,
     "wins": 0
    },
@@ -290,10 +290,10 @@
     "balance": 440,
     "earned": 0,
     "need": 30,
-    "hunger": 0.0,
-    "effort": 0,
-    "mood": "Resting",
-    "idle_min": null,
+    "hunger": 1.0,
+    "effort": 2,
+    "mood": "Hungry",
+    "idle_min": 0,
     "injured": false,
     "hunt": null
    },
@@ -320,7 +320,7 @@
     },
     {
      "title": "Backtest quant",
-     "status": "resting",
+     "status": "idle",
      "doing": "Five-year tests decide which daily rules may trade"
     },
     {
@@ -371,7 +371,7 @@
     {
      "name": "Neha",
      "role": "Lead analyst",
-     "doing": "NIFTY 2026-11-23: put-to-call 1.48, call wall 26,000, put wall 25,000.",
+     "doing": "NIFTY 2026-11-23: put-to-call 1.28, call wall 25,500, put wall 25,400.",
      "tokens": 0
     },
     {
@@ -383,7 +383,7 @@
     {
      "name": "Karan",
      "role": "Trading officer",
-     "doing": "Waiting: no setup has met the rules yet today.",
+     "doing": "Holding 1: NIFTY long straddle \u00b7 11-23 at -271.75, now \u2212\u20b9431.",
      "tokens": 0
     }
    ],
@@ -392,51 +392,51 @@
     "balance": 977,
     "earned": 0,
     "need": 30,
-    "hunger": 0.0,
-    "effort": 0,
-    "mood": "Resting",
-    "idle_min": null,
+    "hunger": 1.0,
+    "effort": 2,
+    "mood": "Hungry",
+    "idle_min": 8,
     "injured": false,
     "hunt": null
    },
    "seats": [
     {
      "title": "NIFTY chain reader",
-     "status": "resting",
-     "doing": "2026-11-23: put-to-call 1.48, call wall 26,000, put wall 25,000"
+     "status": "active",
+     "doing": "2026-11-23: put-to-call 1.28, call wall 25,500, put wall 25,400"
     },
     {
      "title": "Bank Nifty chain reader",
-     "status": "resting",
-     "doing": "2026-11-23: put-to-call 1.36, call wall 64,000, put wall 61,000"
+     "status": "active",
+     "doing": "2026-11-23: put-to-call 1.25, call wall 64,000, put wall 61,000"
     },
     {
      "title": "OI & participants",
-     "status": "resting",
+     "status": "active",
      "doing": "FIIs net -70,670 index futures, +374,199 puts"
     },
     {
      "title": "IV vs realised quant",
-     "status": "resting",
-     "doing": "Compares implied with realised volatility to pick buying or selling"
+     "status": "active",
+     "doing": "ATM straddle 267.0 points: the market prices about \u00b11.05% to 2026-11-23"
     },
     {
      "title": "Margin checker",
-     "status": "resting",
-     "doing": "Every structure is checked with the broker's margin calculator"
+     "status": "alert",
+     "doing": "4 structure(s) skipped today: the broker's margin did not fit"
     },
     {
      "title": "Trading officer",
      "name": "Karan",
      "officer": true,
-     "doing": "Waiting: no setup has met the rules yet today.",
-     "status": "resting"
+     "doing": "Holding 1: NIFTY long straddle \u00b7 11-23 at -271.75, now \u2212\u20b9431.",
+     "status": "holding"
     }
    ],
    "today": {
-    "pnl": 0,
-    "trades": 0,
-    "open": 0,
+    "pnl": -431.0,
+    "trades": 1,
+    "open": 1,
     "closed": 0,
     "wins": 0
    },
@@ -513,7 +513,7 @@
      "verdict": "COLLECTING"
     }
    ],
-   "activity": 0,
+   "activity": 1,
    "variant": null
   },
   {
@@ -529,19 +529,19 @@
     {
      "name": "Pooja",
      "role": "Lead analyst",
-     "doing": "Brent -2.24%, gold -3.16% overnight; tracking 4 MCX contracts the account can carry.",
+     "doing": "Brent -2.35%, gold -5.81% overnight; tracking 4 MCX contracts the account can carry.",
      "tokens": 0
     },
     {
      "name": "Aditya",
      "role": "Quant analyst",
-     "doing": "Record: 12 closed, 33.3% won, average \u2212\u20b9299, target hits 0 vs 4.0 by chance (z -2.46).",
+     "doing": "Natural gas mini short: reward 2.0\u00d7 the risk; a random walk reaches the target first 33% of the time; break-even needs 33% wins after charges.",
      "tokens": 0
     },
     {
      "name": "Zoya",
      "role": "Trading officer",
-     "doing": "Waiting: no setup has met the rules yet today.",
+     "doing": "Holding 1: Natural gas mini short at 343.60, stop 345.66, now +\u20b9182.",
      "tokens": 0
     }
    ],
@@ -550,51 +550,51 @@
     "balance": 355,
     "earned": 0,
     "need": 30,
-    "hunger": 0.0,
-    "effort": 0,
+    "hunger": 1.0,
+    "effort": 1,
     "mood": "Injured",
-    "idle_min": null,
+    "idle_min": 38,
     "injured": true,
     "hunt": null
    },
    "seats": [
     {
      "title": "Gold 1 g",
-     "status": "resting",
-     "doing": "No price yet"
+     "status": "active",
+     "doing": "-4.16% today, moving: watching for an entry"
     },
     {
      "title": "Silver 1 kg",
-     "status": "resting",
-     "doing": "No price yet"
+     "status": "active",
+     "doing": "-5.60% today, moving: watching for an entry"
     },
     {
      "title": "Crude oil mini",
-     "status": "resting",
-     "doing": "No price yet"
+     "status": "idle",
+     "doing": "-0.73% today"
     },
     {
      "title": "Natural gas mini",
-     "status": "resting",
-     "doing": "No price yet"
+     "status": "holding",
+     "doing": "-2.11% today, in a trade"
     },
     {
      "title": "Margin quant",
-     "status": "resting",
+     "status": "idle",
      "doing": "Checks margin and noise before every trade"
     },
     {
      "title": "Trading officer",
      "name": "Zoya",
      "officer": true,
-     "doing": "Waiting: no setup has met the rules yet today.",
+     "doing": "Holding 1: Natural gas mini short at 343.60, stop 345.66, now +\u20b9182.",
      "status": "alert"
     }
    ],
    "today": {
-    "pnl": 0,
-    "trades": 0,
-    "open": 0,
+    "pnl": 182.05,
+    "trades": 1,
+    "open": 1,
     "closed": 0,
     "wins": 0
    },
@@ -653,7 +653,7 @@
     {
      "name": "Sam",
      "role": "Trading officer",
-     "doing": "Holding 2: ADA long at 0.15, stop 0.15, now +\u20b924.",
+     "doing": "Holding 2: ADA long at 0.15, stop 0.15, now \u2212\u20b930.",
      "tokens": 0
     }
    ],
@@ -665,7 +665,7 @@
     "hunger": 1.0,
     "effort": 1,
     "mood": "Injured",
-    "idle_min": 157,
+    "idle_min": 391,
     "injured": true,
     "hunt": null
    },
@@ -673,32 +673,32 @@
     {
      "title": "BTC",
      "status": "idle",
-     "doing": "+0.18% today"
+     "doing": "-0.48% today"
     },
     {
      "title": "ETH",
      "status": "holding",
-     "doing": "-0.09% today, in a trade"
+     "doing": "-1.36% today, in a trade"
     },
     {
      "title": "SOL",
      "status": "idle",
-     "doing": "-0.15% today"
+     "doing": "-0.89% today"
     },
     {
      "title": "XRP",
      "status": "idle",
-     "doing": "+0.09% today"
+     "doing": "+0.14% today"
     },
     {
      "title": "DOGE",
-     "status": "idle",
-     "doing": "-0.02% today"
+     "status": "active",
+     "doing": "-1.76% today, moving: watching for an entry"
     },
     {
      "title": "ADA",
      "status": "holding",
-     "doing": "+0.13% today, in a trade"
+     "doing": "-2.03% today, in a trade"
     },
     {
      "title": "Volatility quant",
@@ -709,12 +709,12 @@
      "title": "Trading officer",
      "name": "Sam",
      "officer": true,
-     "doing": "Holding 2: ADA long at 0.15, stop 0.15, now +\u20b924.",
+     "doing": "Holding 2: ADA long at 0.15, stop 0.15, now \u2212\u20b930.",
      "status": "alert"
     }
    ],
    "today": {
-    "pnl": 28.1,
+    "pnl": -58.27,
     "trades": 2,
     "open": 2,
     "closed": 0,
@@ -766,7 +766,7 @@
     {
      "name": "Priya",
      "role": "Lead analyst",
-     "doing": "Nifty forecast bearish (score -0.22), range 24,957 to 25,465. FIIs net -70,670 index futures.",
+     "doing": "Nifty forecast bearish (score -0.22), range 25,231 to 25,761. FIIs net -70,670 index futures.",
      "tokens": 0
     },
     {
@@ -797,35 +797,35 @@
    "seats": [
     {
      "title": "World markets",
-     "status": "resting",
+     "status": "active",
      "doing": "Overnight US, Asia, dollar, crude and gold, refreshed every half hour before the open"
     },
     {
      "title": "Smart money",
-     "status": "resting",
+     "status": "active",
      "doing": "NSE participant positions for 2026-11-18"
     },
     {
      "title": "Option walls",
-     "status": "resting",
+     "status": "active",
      "doing": "Largest call and put open interest on NIFTY and Bank Nifty"
     },
     {
      "title": "Headlines desk",
-     "status": "resting",
+     "status": "active",
      "doing": "60 high-impact headlines in the feed"
     },
     {
      "title": "Forecast quant",
-     "status": "resting",
-     "doing": "Nifty bearish, range 24,957 to 25,465"
+     "status": "active",
+     "doing": "Nifty bearish, range 25,231 to 25,761"
     },
     {
      "title": "Chief forecaster",
      "name": "Ira",
      "officer": true,
      "doing": "Sends the day's bias and levels to the F&O and equity desks.",
-     "status": "resting"
+     "status": "idle"
     }
    ],
    "today": {
@@ -848,13 +848,13 @@
    "id": "nse",
    "name": "NSE",
    "status": "ok",
-   "detail": "0 filings lean one way today; participant positions for 2026-11-18"
+   "detail": "2 filings lean one way today; participant positions for 2026-11-18"
   },
   {
    "id": "upstox",
    "name": "Upstox",
-   "status": "idle",
-   "detail": "market closed: quotes resume at 09:00"
+   "status": "ok",
+   "detail": "2665 stocks, real time"
   },
   {
    "id": "indmoney",
@@ -872,13 +872,13 @@
    "id": "yahoo",
    "name": "Yahoo Finance",
    "status": "ok",
-   "detail": "world markets refreshed 1 min ago"
+   "detail": "world markets refreshed 51 min ago"
   },
   {
    "id": "news",
    "name": "News feeds",
    "status": "ok",
-   "detail": "60 headlines, latest 20 Nov 03:21; 0 name a listed company"
+   "detail": "60 headlines, latest 20 Nov 09:53; 3 name a listed company"
   },
   {
    "id": "github",
@@ -890,6 +890,12 @@
  "board": [],
  "ledger": [],
  "messages": [
+  {
+   "t": "20 Nov 09:15",
+   "from": "Karan (F&O desk)",
+   "text": "We have earned 0 of today's 30 tokens: hunting harder now (every setup on).",
+   "kind": "mood"
+  },
   {
    "t": "19 Nov 14:26",
    "from": "Karan (F&O desk)",
@@ -940,13 +946,13 @@
   }
  ],
  "company": {
-  "pnl_today": 28.1,
-  "nifty_chg": null,
-  "equity": 110764.26,
+  "pnl_today": -82.17,
+  "nifty_chg": 0.03821386438193484,
+  "equity": 110653.99,
   "sessions": {
-   "equity": false,
-   "fno": false,
-   "mcx": false,
+   "equity": true,
+   "fno": true,
+   "mcx": true,
    "crypto": true
   }
  },
@@ -956,10 +962,71 @@
  },
  "execution": {
   "mode": "dry",
-  "intents": 0,
+  "intents": 2,
   "refused": 0
  },
  "quant": {
+  "K261120-54": {
+   "risk_rs": 155.73,
+   "reward_rs": 233.57,
+   "rr": 1.5,
+   "base_p": 0.4,
+   "breakeven_p": 0.496,
+   "used_p": 0.4,
+   "p_source": "random-walk baseline",
+   "ev_rs": -37.47,
+   "kelly": 0.0,
+   "stop_sigma": 1.25,
+   "target_sigma": 1.87,
+   "warnings": []
+  },
+  "K261120-52": {
+   "risk_rs": 119.56,
+   "reward_rs": 179.24,
+   "rr": 1.5,
+   "base_p": 0.4,
+   "breakeven_p": 0.524,
+   "used_p": 0.4,
+   "p_source": "random-walk baseline",
+   "ev_rs": -36.89,
+   "kelly": -0.0,
+   "stop_sigma": 1.18,
+   "target_sigma": 1.76,
+   "warnings": []
+  },
+  "E261120-1": {
+   "risk_rs": 150.28,
+   "reward_rs": 300.56,
+   "rr": 2.0,
+   "base_p": 0.333,
+   "breakeven_p": 0.404,
+   "used_p": 0.333,
+   "p_source": "random-walk baseline",
+   "ev_rs": -31.69,
+   "kelly": 0.0
+  },
+  "E261120-2": {
+   "risk_rs": 149.94,
+   "reward_rs": 299.88,
+   "rr": 2.0,
+   "base_p": 0.333,
+   "breakeven_p": 0.405,
+   "used_p": 0.333,
+   "p_source": "random-walk baseline",
+   "ev_rs": -32.32,
+   "kelly": 0.0
+  },
+  "M261120-51": {
+   "risk_rs": 515.0,
+   "reward_rs": 1030.0,
+   "rr": 2.0,
+   "base_p": 0.333,
+   "breakeven_p": 0.333,
+   "used_p": 0.333,
+   "p_source": "random-walk baseline",
+   "ev_rs": -0.0,
+   "kelly": -0.0
+  },
   "C261120-50": {
    "risk_rs": 37.5,
    "reward_rs": 75.0,
@@ -1076,6 +1143,12 @@
   "requests": [],
   "messages": [
    {
+    "t": "20 Nov 09:15",
+    "from": "Karan (F&O desk)",
+    "text": "We have earned 0 of today's 30 tokens: hunting harder now (every setup on).",
+    "kind": "mood"
+   },
+   {
     "t": "19 Nov 14:26",
     "from": "Karan (F&O desk)",
     "text": "Wallet at 1007 tokens: the team is thriving.",
@@ -1137,7 +1210,8 @@
    "mcx|2026-11-19|Injured": 1,
    "crypto|2026-11-19|Injured": 1,
    "intel|2026-11-19|Forecasting": 1,
-   "fno|2026-11-19|Thriving": 1
+   "fno|2026-11-19|Thriving": 1,
+   "fno|2026-11-20|Hungry": 1
   },
   "eco": {
    "scalp": {
@@ -1191,10 +1265,10 @@
    }
   },
   "effort": {
-   "scalp": 1,
-   "intraday": 1,
-   "swing": 1,
-   "fno": 1,
+   "scalp": 2,
+   "intraday": 2,
+   "swing": 2,
+   "fno": 2,
    "mcx": 1,
    "crypto": 1,
    "intel": 1
@@ -1203,7 +1277,7 @@
    "scalp": "Hungry",
    "intraday": "Hungry",
    "swing": "Hungry",
-   "fno": "Thriving",
+   "fno": "Hungry",
    "mcx": "Injured",
    "crypto": "Injured",
    "intel": "Forecasting"
