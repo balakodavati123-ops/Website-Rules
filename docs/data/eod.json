@@ -1,90 +1,92 @@
 {
- "day": "2026-11-18",
- "trades": 21,
- "closed": 18,
- "open": 3,
- "wins": 8,
- "win_rate": 44,
- "pnl": -1546.31,
+ "day": "2026-11-20",
+ "trades": 22,
+ "closed": 20,
+ "open": 2,
+ "wins": 5,
+ "win_rate": 25,
+ "pnl": 8585.93,
  "by_desk": {
   "EQUITY": {
-   "trades": 4,
-   "pnl": -364.77
+   "trades": 14,
+   "pnl": -1447.49
   },
   "FNO": {
-   "trades": 8,
-   "pnl": -1598.5
+   "trades": 2,
+   "pnl": 8437.25
   },
   "COMMODITY": {
-   "trades": 5,
-   "pnl": 374.93
+   "trades": 2,
+   "pnl": 1698.38
   },
   "CRYPTO": {
    "trades": 4,
-   "pnl": 42.03
+   "pnl": -102.21
   }
  },
  "by_strategy": [
   {
-   "strategy": "short_strangle",
+   "strategy": "long_straddle",
    "n": 1,
-   "pnl": 703.25
-  },
-  {
-   "strategy": "mcx_momentum",
-   "n": 5,
-   "pnl": 374.93
-  },
-  {
-   "strategy": "crypto_breakout",
-   "n": 4,
-   "pnl": 42.03
-  },
-  {
-   "strategy": "iron_condor",
-   "n": 2,
-   "pnl": -63.25
-  },
-  {
-   "strategy": "credit_spread",
-   "n": 2,
-   "pnl": -221.75
-  },
-  {
-   "strategy": "price_only",
-   "n": 4,
-   "pnl": -364.77
-  },
-  {
-   "strategy": "debit_spread",
-   "n": 2,
-   "pnl": -455.75
+   "pnl": 4522.0
   },
   {
    "strategy": "long_breakout",
    "n": 1,
-   "pnl": -1561.0
+   "pnl": 3915.25
+  },
+  {
+   "strategy": "mcx_momentum",
+   "n": 1,
+   "pnl": 1007.05
+  },
+  {
+   "strategy": "mcx_pullback",
+   "n": 1,
+   "pnl": 691.33
+  },
+  {
+   "strategy": "crypto_dip_bounce",
+   "n": 4,
+   "pnl": -102.21
+  },
+  {
+   "strategy": "news-led",
+   "n": 1,
+   "pnl": -179.17
+  },
+  {
+   "strategy": "scalp_vwap_pullback",
+   "n": 5,
+   "pnl": -514.43
+  },
+  {
+   "strategy": "gap-and-go",
+   "n": 8,
+   "pnl": -753.89
   }
  ],
- "equity": 102839.03,
+ "equity": 119322.09,
  "best": {
-  "label": "NIFTY short strangle \u00b7 11-23",
-  "pnl": 703.25
+  "label": "NIFTY long straddle \u00b7 11-23",
+  "pnl": 4522.0
  },
  "worst": {
-  "label": "NIFTY long breakout \u00b7 11-23",
-  "pnl": -1561.0
+  "label": "ESDS short",
+  "pnl": -223.72
  },
  "news": {
-  "n": 0,
-  "pnl": 0
+  "n": 1,
+  "pnl": -179.17
  },
  "planned": {
   "n": 0,
   "pnl": 0
  },
  "notes": [
-  "21 trades: 8 won and 10 lost of 18 closed; net -1,546 rupees.",
-  "Best market: COMMODITY (+375). Weakest: FNO (-1,598)."
+  "22 trades: 5 won and 15 lost of 20 closed; net +8,586 rupees.",
+  "Best market: FNO (+8,437). Weakest: EQUITY (-1,447).",
+  "News-led trades: 1, net -179.",
+  "Win rate under 40% today: the strategies below the line on the scoreboard are the ones to watch for a pause."
  ]
 }

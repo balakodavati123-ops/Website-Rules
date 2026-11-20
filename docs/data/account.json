@@ -1,15 +1,15 @@
 {
- "updated_at": "2026-11-19T11:29:17+05:30",
+ "updated_at": "2026-11-20T23:01:30+05:30",
  "start": 100000.0,
- "realised": 2098.36,
- "unrealised": -350.97,
- "equity": 101747.39,
- "in_use": 95728.11,
- "cash": 6019.28,
- "pnl": 1747.39,
- "pnl_pct": 1.75,
- "open": 18,
- "closed": 50,
+ "realised": 19306.25,
+ "unrealised": -155.99,
+ "equity": 119150.26,
+ "in_use": 46490.11,
+ "cash": 72660.15,
+ "pnl": 19150.26,
+ "pnl_pct": 19.15,
+ "open": 13,
+ "closed": 94,
  "buckets": {
   "swing": {
    "label": "Swing (daily bars)",
@@ -25,33 +25,33 @@
   },
   "intraday": {
    "label": "Intraday equities",
-   "budget": 6000,
-   "used": 3453,
-   "room": 2547
+   "budget": 12000,
+   "used": 0,
+   "room": 12000
   },
   "scalp": {
    "label": "Scalping (intraday margin)",
    "budget": 20000,
    "used": 0,
-   "room": 6019
+   "room": 20000
   },
   "FNO": {
    "label": "F&O margin",
    "budget": 50000,
-   "used": 18636,
-   "room": 6019
+   "used": 0,
+   "room": 50000
   },
   "COMMODITY": {
    "label": "Commodities margin",
    "budget": 25000,
-   "used": 22149,
-   "room": 2851
+   "used": 0,
+   "room": 25000
   },
   "CRYPTO": {
    "label": "Crypto",
    "budget": 5000,
-   "used": 5000,
-   "room": 0
+   "used": 0,
+   "room": 5000
   }
  }
 }

@@ -1,390 +1,86 @@
 [
  {
-  "time": "18 Nov 14:55",
-  "source": "GoogleNews",
-  "category": "EARNINGS",
-  "headline": "Relaxo Footwears slips 6%, nears 52-week low on disappointing Q2 results - Business Standard",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "18 Nov 15:00",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Sensex, Nifty recover US-Iran war losses: 5 reasons behind market rally as Nifty hits 9-month high - CNBC TV18 - LinkedIn",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "18 Nov 15:05",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Nifty is up 11% this month, its biggest monthly gain in 6 years, and all US-Iran war losses are recovered! FIIs have poured in over $9.5 bn, crude has cooled an",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "18 Nov 15:26",
-  "source": "BusinessStandard",
-  "category": "DEAL/ORDER",
-  "headline": "Glass Wall Systems shares jump 4% on new order win, up 55% from IPO price",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 16:01",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex plunges 500 points, Nifty dips amid profit booking - Awaz The Voice",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 16:01",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Nifty reclaims pre-war levels intraday as Indian stocks lead Asia with 10% monthly gain - TradingView",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "18 Nov 16:01",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex Today Tanks 502 Points | Nifty Below 25,250 | Nifty IT Index Down 1.2% - Equitymaster",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 16:06",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex falls 87 points, Nifty sheds 47 as dollar index hits 19-month high, global sell-off weighs - ChiniMandi",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 16:32",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Dalal Street crash: How Nifty, Sensex slipped from nine-month highs - The Week",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 16:37",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Markets snap 2-day rally; Sensex drops amid profit booking, US Fed rate hike speculations - DD India",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 16:42",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Markets snap 2-day rally; Sensex drops amid profit booking, US Fed rate hike speculations - DD News",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 17:12",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Sensex Falls 500 Points on Profit Booking, US Fed Rate Hike Speculations - Rediff",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 17:22",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "RBI The Competent Authority, Not ICICI Bank's Board: Bombay High Court While Quashing Sanction To... - Live Law",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "18 Nov 17:28",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Markets snap 2-day rally; Sensex drops 500 pts amid profit booking, US Fed rate hike speculations - Deccan Herald",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 17:43",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Bengaluru-based realty firm Assetz gets SEBI nod to proceed with IPO plans - Moneycontrol.com",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 17:48",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex falls 87 points, Nifty sheds 47 as dollar index hits 19-month high, global sell-off weighs - Public TV English",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 17:53",
-  "source": "BusinessStandard",
-  "category": "APPROVAL",
-  "headline": "Meganet, Rediff.com file IPO papers; Advanced Sys-Tek gets Sebi nod",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 17:53",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Stock markets snap 2-day rally; Sensex drops 500 points amid profit booking, U.S. Fed rate hike fears - The Hindu",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 17:53",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Stock markets snap 2-day rally; Sensex drops 500 pts amid profit booking, US Fed rate hike fears - ThePrint",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 18:08",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Top gainers and losers, Nov 18: Titan tumbles 4%, HDFC Life falls 3%, Cipla shares jump 3%; check list - Upstox",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 18:19",
-  "source": "Mint",
-  "category": "EARNINGS",
-  "headline": "Nvidia shares gain 3% in premarket after Q3 results, upbeat forecast top estimates: Is the AI rally back on track?",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "18 Nov 18:24",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex, Nifty Snap Two-Day Winning Streak as Profit Booking Triggers Sell-Off \u2013 Wednesday Closing Report - Moneylife",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 18:44",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex slips 87 points, Nifty down 47 amid global sell-off - Awaz The Voice",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 19:00",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Upcoming IPO: Real estate firm Assetz gets SEBI nod to float \u20b91,200 crore issue - Upstox",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 19:05",
-  "source": "ET",
-  "category": "APPROVAL",
-  "headline": "Real estate firm Assetz gets Sebi nod to float Rs 1,200-cr IPO",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 20:00",
-  "source": "ET",
-  "category": "EARNINGS",
-  "headline": "PSBs' net profit rises 17% to Rs 1.10 lakh cr in H1 FY27; business crosses Rs 300 lakh crore",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "18 Nov 20:05",
-  "source": "Mint",
-  "category": "EARNINGS",
-  "headline": "US yields ease as equities drop before Nvidia results",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "18 Nov 20:15",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Assetz gets Sebi nod to float \u20b91,200-crore IPO - ET Realty",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 20:15",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Goldman Sachs sees RBI repo rate rising by 75 bps to 6.25% by mid-2027 - Business Standard",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 20:35",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Stock Markets Drop: Sensex Falls 500 Pts Amid Rate Hike Fears - Rediff MoneyWiz",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 20:40",
-  "source": "Mint",
-  "category": "APPROVAL",
-  "headline": "Assetz IPO gets SEBI nod; Bengaluru realty developer reportedly plans to raise  \u20b91,200 crore",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 21:21",
-  "source": "ET",
-  "category": "DEAL/ORDER",
-  "headline": "Dalmia Bharat to consider share buyback at Nov 23 board meeting",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 21:21",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Dow tumbles over 500 pts as Nvidia-led AI relief fails to lift broader market: Stock Market Live Updates",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 21:41",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "Assetz IPO gets SEBI nod; Bengaluru realty developer reportedly plans to raise \u20b91,200 crore - Livemint",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "18 Nov 21:46",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex, Nifty open flat as Nvidia earnings beat offsets Wall Street sell-off; Bank Nifty near record high - BusinessLine",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "18 Nov 22:38",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Markets snap two-day rally; Sensex drops 500 points amid profit booking, US Fed rate hike speculations - Telegraph India",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "18 Nov 22:43",
-  "source": "BusinessStandard",
-  "category": "GEOPOLITICS",
-  "headline": "Oil prices fall as US stockpile gains ease supply concerns amid Iran war",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "18 Nov 22:53",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Nasdaq turns red as Nvidia-led AI relief fails to lift broader market; Dow tumbles 600 pts: Stock Market Live Updates",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "19 Nov 01:10",
+  "time": "20 Nov 09:27",
   "source": "ET",
   "category": "RBI-POLICY",
-  "headline": "Fed policymakers focused on inflation risks in October, with some seeing need for bigger rate hike",
+  "headline": "Gold Rates Live Updates: Gold slides 4%, silver tumbles 6% on MCX as dollar strengthens, Fed rate hike bets rise",
   "event": "yes",
   "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
  },
  {
-  "time": "19 Nov 06:34",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Global Market Today: Asian shares mixed as commodity prices tumble",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "19 Nov 07:46",
+  "time": "20 Nov 09:37",
   "source": "GoogleNews",
   "category": "CRASH/SHOCK",
-  "headline": "Sensex Falls 500 Pts, Nifty Slips As Auto, Metal Stocks Lead Sell-off - TradingView",
+  "headline": "SENSEX declines over 600 pts; NIFTY50 opens lower at 25,368 amid global selloff; JSW Steel, Tata Steel among top losers - Upstox",
   "event": "yes",
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "19 Nov 07:51",
+  "time": "20 Nov 09:43",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty, Sensex open lower as sell-off in AI weighs on sentiment, Gold down to lowest level of 2026 - ANI News",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 09:48",
+  "source": "ET",
+  "category": "RBI-POLICY",
+  "headline": "Gold Rates Live Updates: Gold slides 4%, silver tumbles 5% on MCX as dollar strengthens, Fed rate hike bets rise",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "20 Nov 09:48",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex, Nifty fall as Wall Street selloff rattles global markets; Titan, metals slide - BusinessLine",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 09:48",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex, Nifty Set for Sharp Fall Amid Global Selloff - HDFC Sky",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 09:53",
+  "source": "ET",
+  "category": "RBI-POLICY",
+  "headline": "Gold Rate Today Live: Gold slides 4%, silver tumbles 5% on MCX as dollar strengthens, Fed rate hike bets rise",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "20 Nov 09:53",
   "source": "BusinessStandard",
   "category": "CRASH/SHOCK",
-  "headline": "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh",
+  "headline": "Gold ETFs down 5%; Silver ETFs plunge over 6%, trade at 52-week lows",
   "event": "yes",
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "19 Nov 07:56",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "19 Nov 09:47",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Sensex, Nifty open flat amid Fed rate hike concerns; investors remain cautious - ANI News",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "19 Nov 09:52",
+  "time": "20 Nov 09:53",
   "source": "BusinessStandard",
   "category": "CRASH/SHOCK",
-  "headline": "Polycab, KEI, RR Kabel & others fall up to 3% as copper plunges for 5th day",
+  "headline": "Ashoka Buildcon shares tank 6% as \u20b9846-cr Saudi Arabia project cancelled",
   "event": "yes",
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "19 Nov 10:02",
+  "time": "20 Nov 09:58",
   "source": "GoogleNews",
-  "category": "DEAL/ORDER",
-  "headline": "LT Foods snaps 4-day losing streak, jumps 8% on plan to acquire MK Foods - Business Standard",
-  "event": "no",
-  "hint": "LONG-lean headline"
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty IT jumps over 1% as TCS, Tech Mahindra, HCL Tech gain; Indian IT stocks buck global AI selloff - Moneycontrol.com",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
  },
  {
-  "time": "19 Nov 10:07",
-  "source": "GoogleNews",
-  "category": "DEAL/ORDER",
-  "headline": "Nifty 500: LT Foods surges 9% on US acquisition; Payment aggregators fall on UPI MDR uncertainty - CNBC TV18",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "19 Nov 10:13",
-  "source": "BusinessStandard",
-  "category": "DEAL/ORDER",
-  "headline": "LT Foods snaps 4-day losing streak, jumps 8% on plan to acquire MK Foods",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "19 Nov 10:13",
+  "time": "20 Nov 09:58",
   "source": "GoogleNews",
   "category": "RBI-POLICY",
   "headline": "Sensex, Nifty open flat amid Fed rate hike concerns; investors remain cautious - ChiniMandi",
@@ -392,15 +88,15 @@
   "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
  },
  {
-  "time": "19 Nov 10:18",
-  "source": "BusinessStandard",
+  "time": "20 Nov 10:03",
+  "source": "GoogleNews",
   "category": "CRASH/SHOCK",
-  "headline": "Metal meltdown: SAIL, NALCO, Hindalco drag Nifty Metal 2% lower; here's why",
+  "headline": "Nifty, Sensex open lower as sell-off in AI weighs on sentiment, Gold down to lowest level of 2026 - ChiniMandi",
   "event": "yes",
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "19 Nov 10:23",
+  "time": "20 Nov 10:03",
   "source": "GoogleNews",
   "category": "CRASH/SHOCK",
   "headline": "Metal meltdown: SAIL, NALCO, Hindalco drag Nifty Metal 2% lower; here's why - Business Standard",
@@ -408,74 +104,378 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "19 Nov 10:28",
-  "source": "BusinessStandard",
-  "category": "GEOPOLITICS",
-  "headline": "Oil steady as supply surplus softens sentiment though Gulf war supports",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "19 Nov 10:33",
-  "source": "Mint",
+  "time": "20 Nov 10:08",
+  "source": "GoogleNews",
   "category": "CRASH/SHOCK",
-  "headline": "Paytm share price crash: Payment stock slides 7% on UPI MDR rollout delay; Pine Labs, One Mobikwik Systems also tumble",
+  "headline": "Sensex plunges 615 points, Nifty slips as global sell-off rattles markets - Telangana Today",
   "event": "yes",
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "19 Nov 10:33",
+  "time": "20 Nov 10:13",
+  "source": "BusinessStandard",
+  "category": "DEAL/ORDER",
+  "headline": "Dilip Buildcon share price surges 7% on \u20b9419-crore Gurugram Metro order win",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "20 Nov 10:13",
   "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex, Nifty do a seesaw on Friday morning: BSE benchmark index crashes 600+ points at open but regains all it - The Week",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 10:13",
+  "source": "GoogleNews",
+  "category": "DEAL/ORDER",
+  "headline": "Dilip Buildcon share price surges 7% on \u20b9419-crore Gurugram Metro order win - Business Standard",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "20 Nov 10:18",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty, Sensex open lower as sell-off in AI weighs on sentiment, Gold down to lowest level of 2026 - https://www.indiagazette.com/",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 10:39",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Stock Market Open Report November 20, 2026: Sensex, Nifty Edge Lower, Managing To Buck Global Selloff - HDFC Sky",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 10:49",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "SELLAS Life Sciences shares plunge 19%: What triggered the sharp sell-off?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 10:54",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex, Nifty open lower amid AI-led global sell-off - Awaz The Voice",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 10:54",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex drops 211 points in early trade, Nifty falls to 25,439 amid global market sell-off - Telegraph India",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 11:04",
+  "source": "ET",
   "category": "RBI-POLICY",
-  "headline": "Stock markets fall in early trade dragged by IT firms, US Fed rate hike jitters - Deccan Herald",
+  "headline": "Gold Rate Today Live: Gold plunges Rs 6,000/10g, silver sheds Rs 9,900/kg amid Fed rate hike bets; should you sell?",
   "event": "yes",
   "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
  },
  {
-  "time": "19 Nov 10:38",
+  "time": "20 Nov 11:46",
+  "source": "ET",
+  "category": "RBI-POLICY",
+  "headline": "Gold Rate Today Live: Gold plunges Rs 6,000/10g, silver sheds Rs 9,900/kg amid Fed rate hike bets; Buy the dip or wait?",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "20 Nov 11:51",
   "source": "BusinessStandard",
-  "category": "DEAL/ORDER",
-  "headline": "Multibagger ACME Solar jumps 3% on order win, trades 113% up from Jan lows",
+  "category": "LEADER-EXIT",
+  "headline": "PB Fintech shares slide over 6% after co-founder Alok Bansal steps down",
   "event": "no",
-  "hint": "LONG-lean headline"
+  "hint": "SHORT-lean headline"
  },
  {
-  "time": "19 Nov 10:58",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "ICICI-Videocon Loan Case: Why Did Bombay HC Quash Sanction To Prosecute Chanda Kochhar? - LawBeat",
+  "time": "20 Nov 12:16",
+  "source": "ET",
+  "category": "RBI-POLICY",
+  "headline": "Gold Rate Live Updates: Gold plunges Rs 6,000/10g, silver sheds Rs 9,900/kg amid Fed rate hike bets; Buy the dip or wait?",
   "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
  },
  {
-  "time": "19 Nov 10:58",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Bank's Board Cannot Grant PC Act Prosecution Sanction; Only RBI Is Competent Authority: Bombay High Court - LiveLawBiz",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "19 Nov 11:02",
+  "time": "20 Nov 12:21",
   "source": "BusinessStandard",
-  "category": "GEOPOLITICS",
-  "headline": "Brent's war premium fades, but lingering risks keep $90 intact: Kotak Neo",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty IT tanks for 3rd day, down 6.5% in Nov so far: What's behind fall?",
   "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
+  "hint": "SHORT-lean headline"
  },
  {
-  "time": "19 Nov 11:23",
-  "source": "Mint",
-  "category": "DEAL/ORDER",
-  "headline": "Dalmia Bharat buyback alert! Board to consider share repurchase proposal next week on Nov 23 - Key details | Buy or sell",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "19 Nov 11:28",
+  "time": "20 Nov 12:26",
   "source": "GoogleNews",
   "category": "CRASH/SHOCK",
-  "headline": "Sensex Today | Stock Market Live: Sensex falls over 400 pts, Nifty near 25,250; consumer durables, metals plunge; Titan, Bajaj Finance drag - LinkedIn",
+  "headline": "Nifty IT tanks for 3rd day, down 6.5% in Nov so far: What's behind fall? - Business Standard",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 12:31",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Shrinkflation: Why the RBI Rate Hike May Fail in 2026 - Frontline Magazine",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "20 Nov 12:56",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Pristine Logistics & Infraprojects Secures Sebi Nod for IPO - Rediff MoneyWiz",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "20 Nov 13:17",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Gold price crash: Yellow metal slips below  \u20b91.25 lakh/10 gm on MCX | 3 reasons why?  \u20b91 lk or  \u20b91.5 lk - What's next",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 13:22",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "SENSEX, NIFTY50 recover after weak open amid global selloff; JSW Steel, Tata Steel among top losers - Upstox",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 13:27",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Gold price crash today: Rates below  \u20b91.25 lakh/10 gm on MCX | 3 reasons why?  \u20b91 lakh or  \u20b91.5 lakh - What's next?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 13:43",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Gold price crash: Muthoot Finance, Manappuram shares lose sheen, down up to 5% | Is gold heading for deeper correction?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 14:09",
+  "source": "RBI",
+  "category": "EARNINGS",
+  "headline": "Government Stock - Auction Results: Cut-off",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "20 Nov 14:55",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Gold, silver ETF price crash today: Rates at 52-week low \u2014 Opportunity for investors or more pain ahead? Experts speak",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 15:31",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Pristine Logistics Gets Sebi Nod for IPO Under Secret Route - HDFC Sky",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "20 Nov 15:36",
+  "source": "RBI",
+  "category": "EARNINGS",
+  "headline": "Government Stock - Full Auction Results",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "20 Nov 16:02",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex rallies 898 points, Nifty gains 1.12% as foreign inflows lift sentiment despite Asian market sell-off - ANI News",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 16:43",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "Power stocks to buy: Why Axis Sec is betting on NTPC and JSW Energy shares post Q2 results? Check targets, rationale",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "20 Nov 16:48",
+  "source": "ET",
+  "category": "DEAL/ORDER",
+  "headline": "Signature Global acquires 10-acre land parcels in Gurugram to build realty projects",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "20 Nov 16:48",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex rallies 898 points, Nifty gains 1.12% as foreign inflows lift sentiment despite Asian market sell-off - Public TV English",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 16:58",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex rallies 898 points, Nifty gains 1.12% as foreign inflows lift sentiment despite Asian market sell-off - The Indian EYE",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 17:18",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "GTA releases have often coincided with market turmoil, from 1997 to 2008. Now, with GTA VI arriving in 2026, markets face a global A.I. sell-off. \ud83c\udfae\ud83d\udcc9 Sudarshan K",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 18:23",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Ujjivan SFB Seeks RBI Nod for Carol Furtado's CEO Tenure Ext. - Rediff MoneyWiz",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "20 Nov 18:28",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "SoftBank shares crash 14.5%, biggest 1-day fall in 2 years: Why Anthropic's strong IPO debut failed to revive AI trade",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 18:44",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "Goldman Sachs sees RBI raising repo rate to 6.25% by mid-2027 as inflation crosses 6% - Prop News Time",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "20 Nov 18:54",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex rallies 898 points, Nifty gains 1.12% as foreign inflows lift sentiment despite Asian market sell-off - https://www.indiagazette.com/",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 19:31",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Indian stocks buck global selloff as rupee climbs to seven-month high - PRESS Insider",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 19:36",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "AI sell-off hits Indian smallcaps; Sterlite, HFCL down up to 29% in a month",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 20:28",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq tumbles 1% as Anthropic fails to steady AI trade: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 20:33",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Anthropic shares tumble 10% after blockbuster IPO, erase debut gains; why are investors turning cautious on AI?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 20:33",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Indian IT Stocks Rally 1.96% as TCS, Infosys and Tech Mahindra Gain Despite Global Tech Selloff - Kotak Neo",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 20:38",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "On shaky ground: These 11 Indian MFs are most exposed to US tech selloff",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 21:14",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Anthropic shares tumble after record IPO as AI trade faces reality check - Business Standard",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 21:24",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Anthropic shares tumble after record IPO as AI trade faces reality check",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 21:45",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq tumbles 2% as Anthropic retreat deepens AI trade concerns",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 21:45",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq tumbles 650 pts as Anthropic fails to rekindle AI optimism: Stock Market Live Updates",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 22:16",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty IT jumps over 1% as TCS, Tech Mahindra, HCL Tech gain; Indian IT stocks buck global AI selloff - TradingView",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "20 Nov 22:41",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq tumbles over 800 pts as Anthropic fails to rekindle AI optimism: Stock Market Live Updates",
   "event": "yes",
   "hint": "SHORT-lean headline"
  }

@@ -1,6 +1,6 @@
 {
- "day": "2026-11-19",
- "built_at": "09:37",
+ "day": "2026-11-20",
+ "built_at": "09:16",
  "stage": 2,
  "views": {
   "Nifty 50": {
@@ -8,200 +8,263 @@
    "bias": "Bearish",
    "score": -0.22,
    "confidence": "Moderate",
-   "prev_close": 25228,
-   "centre": 25211,
-   "lo": 24957,
-   "hi": 25465,
-   "lo2": 24703,
-   "hi2": 25719,
-   "sigma_pts": 254,
-   "sigma_pct": 1.01,
+   "prev_close": 25514,
+   "centre": 25496,
+   "lo": 25231,
+   "hi": 25761,
+   "lo2": 24966,
+   "hi2": 26027,
+   "sigma_pts": 265,
+   "sigma_pct": 1.04,
    "pivots": {
-    "P": 25254,
-    "R1": 25365,
-    "S1": 25116,
-    "R2": 25503,
-    "S2": 25005
+    "P": 25378,
+    "R1": 25651,
+    "S1": 25241,
+    "R2": 25787,
+    "S2": 24968
    },
    "resistance": [
-    25365,
+    25651,
     26000
    ],
    "support": [
     24000,
-    25116
+    25241
    ],
    "parts": {
-    "world": -0.69,
-    "trend": 0.48,
-    "range": -0.31,
-    "gap": -0.27,
-    "options": -0.09,
+    "world": -1.0,
+    "trend": 0.64,
+    "range": 1.0,
+    "gap": -0.96,
+    "options": 0.0,
     "fii": -0.36,
-    "vix": -0.51
+    "vix": -0.47
    },
    "reasons": [
-    "World tone is weak: US and Asia weighted average -0.55% at the 18/11 close; Brent crude 88.96 (-4.49%).",
-    "Nifty 50 closed at 25,228, +4.7% from its 20-day average (24,095) and -0.1% over five sessions: the trend is up.",
-    "It opened at 25,187, -0.16% from the previous close.",
+    "World tone is weak: US and Asia weighted average -2.60% at the 19/11 close; Brent crude 89.79 (-2.35%).",
+    "It opened at 25,368, -0.57% from the previous close.",
+    "Nifty 50 closed at 25,514, +5.3% from its 20-day average (24,236) and +0.8% over five sessions: the trend is up.",
+    "Yesterday it closed in the upper third of its 25,105 to 25,514 range, so buyers or sellers held the close.",
     "Foreign institutions are net short 70,670 index futures, little changed (-257 over 5 sessions): a persistent bearish tilt.",
-    "Yesterday it closed in the middle third of its 25,142 to 25,391 range, so buyers or sellers did not win the day.",
-    "India VIX 16.0 (+2.6%): fear is rising.",
-    "Options: put-to-call ratio 0.83 (balanced), most call open interest at 26,000 (ceiling), most put open interest at 24,000 (floor), max pain 25,250."
+    "India VIX 16.5 (+2.4%): fear is rising.",
+    "Options: put-to-call ratio 1.44 (put writers are confident), most call open interest at 26,000 (ceiling), most put open interest at 24,000 (floor), max pain 24,800."
    ],
-   "playbook": "Above 25,365 the day favours buyers (next stop 25,503); below 25,116 sellers take over (next 25,005). Between them expect a range day: the edges 24,957 and 25,465 are where moves have usually run out of fuel.",
+   "playbook": "Above 25,651 the day favours buyers (next stop 25,787); below 25,241 sellers take over (next 24,968). Between them expect a range day: the edges 25,231 and 25,761 are where moves have usually run out of fuel.",
    "headlines": [
-    "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com",
-    "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh",
-    "Sensex Falls 500 Pts, Nifty Slips As Auto, Metal Stocks Lead Sell-off - TradingView"
+    "Stock Market LIVE: GIFT Nifty plunges 200 pts; Asian mkts extend losses on concern over AI trade",
+    "GIFT Nifty plunges over 200 pts, signals sharp fall for Sensex, Nifty as Nasdaq sinks 2.3%, Asian markets... - Moneycontrol.com",
+    "Stock Market LIVE: GIFT Nifty plunges 190 pts; Asian mkts extend losses on concern over AI trade"
    ],
-   "rv": 15.9,
+   "rv": 12.7,
    "stage": 2,
-   "day": "2026-11-19"
+   "day": "2026-11-20"
   },
   "Bank Nifty": {
    "name": "Bank Nifty",
    "bias": "Sideways",
-   "score": -0.1,
+   "score": -0.19,
    "confidence": "Low",
-   "prev_close": 62039,
-   "centre": 62016,
-   "lo": 61221,
-   "hi": 62810,
-   "lo2": 60427,
-   "hi2": 63605,
-   "sigma_pts": 794,
-   "sigma_pct": 1.28,
+   "prev_close": 63063,
+   "centre": 63016,
+   "lo": 62166,
+   "hi": 63865,
+   "lo2": 61317,
+   "hi2": 64715,
+   "sigma_pts": 849,
+   "sigma_pct": 1.35,
    "pivots": {
-    "P": 62056,
-    "R1": 62346,
-    "S1": 61748,
-    "R2": 62654,
-    "S2": 61458
+    "P": 62692,
+    "R1": 63434,
+    "S1": 62322,
+    "R2": 63804,
+    "S2": 61580
    },
    "resistance": [
-    62000,
-    62346
+    63434,
+    64000
    ],
    "support": [
-    60000,
-    61748
+    61000,
+    62322
    ],
    "parts": {
-    "world": -0.69,
-    "trend": 0.84,
-    "range": -0.09,
-    "gap": 0.11,
-    "options": -0.26,
+    "world": -1.0,
+    "trend": 0.92,
+    "range": 1.0,
+    "gap": -1.0,
+    "options": -0.06,
     "fii": -0.36,
-    "vix": -0.51
+    "vix": -0.47
    },
    "reasons": [
-    "World tone is weak: US and Asia weighted average -0.55% at the 18/11 close; Brent crude 88.96 (-4.49%).",
-    "Bank Nifty closed at 62,039, +7.7% from its 20-day average (57,628) and +2.1% over five sessions: the trend is up.",
-    "Options: put-to-call ratio 1.19 (put writers are confident), most call open interest at 62,000 (ceiling), most put open interest at 60,000 (floor), max pain 59,100.",
+    "World tone is weak: US and Asia weighted average -2.60% at the 19/11 close; Brent crude 89.79 (-2.35%).",
+    "Bank Nifty closed at 63,063, +8.7% from its 20-day average (58,035) and +2.5% over five sessions: the trend is up.",
+    "It opened at 62,657, -0.64% from the previous close.",
+    "Yesterday it closed in the upper third of its 61,951 to 63,063 range, so buyers or sellers held the close.",
     "Foreign institutions are net short 70,670 index futures, little changed (-257 over 5 sessions): a persistent bearish tilt.",
-    "India VIX 16.0 (+2.6%): fear is rising.",
-    "It opened at 62,081, +0.07% from the previous close.",
-    "Yesterday it closed in the middle third of its 61,765 to 62,364 range, so buyers or sellers did not win the day."
+    "India VIX 16.5 (+2.4%): fear is rising.",
+    "Options: put-to-call ratio 1.35 (put writers are confident), most call open interest at 64,000 (ceiling), most put open interest at 61,000 (floor), max pain 59,000."
    ],
-   "playbook": "Above 62,346 the day favours buyers (next stop 62,654); below 61,748 sellers take over (next 61,458). Between them expect a range day: the edges 61,221 and 62,810 are where moves have usually run out of fuel.",
+   "playbook": "Above 63,434 the day favours buyers (next stop 63,804); below 62,322 sellers take over (next 61,580). Between them expect a range day: the edges 62,166 and 63,865 are where moves have usually run out of fuel.",
    "headlines": [
-    "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com",
-    "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh",
-    "Sensex Falls 500 Pts, Nifty Slips As Auto, Metal Stocks Lead Sell-off - TradingView"
-   ],
-   "rv": 20.2,
-   "stage": 2,
-   "day": "2026-11-19"
-  },
-  "Sensex": {
-   "name": "Sensex",
-   "bias": "Sideways",
-   "score": -0.18,
-   "confidence": "Low",
-   "prev_close": 82032,
-   "centre": 81986,
-   "lo": 81129,
-   "hi": 82843,
-   "lo2": 80271,
-   "hi2": 83701,
-   "sigma_pts": 857,
-   "sigma_pct": 1.05,
-   "pivots": {
-    "P": 82130,
-    "R1": 82480,
-    "S1": 81682,
-    "R2": 82929,
-    "S2": 81332
-   },
-   "resistance": [
-    82480
-   ],
-   "support": [
-    81682
-   ],
-   "parts": {
-    "world": -0.69,
-    "trend": 0.53,
-    "range": -0.37,
-    "gap": 0.09,
-    "fii": -0.36,
-    "vix": -0.51
-   },
-   "reasons": [
-    "World tone is weak: US and Asia weighted average -0.55% at the 18/11 close; Brent crude 88.96 (-4.49%).",
-    "Sensex closed at 82,032, +5.2% from its 20-day average (77,992) and +0.2% over five sessions: the trend is up.",
-    "Yesterday it closed in the lower third of its 81,780 to 82,579 range, so buyers or sellers held the close.",
-    "Foreign institutions are net short 70,670 index futures, little changed (-257 over 5 sessions): a persistent bearish tilt.",
-    "India VIX 16.0 (+2.6%): fear is rising.",
-    "It opened at 82,074, +0.05% from the previous close."
-   ],
-   "playbook": "Above 82,480 the day favours buyers (next stop 82,929); below 81,682 sellers take over (next 81,332). Between them expect a range day: the edges 81,129 and 82,843 are where moves have usually run out of fuel.",
-   "headlines": [
-    "Nifty Metal falls nearly 2%, Hindustan Zinc, SAIL, NALCO among top losers; what triggered the selloff? - Moneycontrol.com",
-    "Gold, silver prices tumble as stronger dollar, rate-hike fears weigh",
-    "Sensex Falls 500 Pts, Nifty Slips As Auto, Metal Stocks Lead Sell-off - TradingView"
+    "Stock Market LIVE: GIFT Nifty plunges 200 pts; Asian mkts extend losses on concern over AI trade",
+    "GIFT Nifty plunges over 200 pts, signals sharp fall for Sensex, Nifty as Nasdaq sinks 2.3%, Asian markets... - Moneycontrol.com",
+    "Stock Market LIVE: GIFT Nifty plunges 190 pts; Asian mkts extend losses on concern over AI trade"
    ],
    "rv": 16.5,
    "stage": 2,
-   "day": "2026-11-19"
+   "day": "2026-11-20"
+  },
+  "Sensex": {
+   "name": "Sensex",
+   "bias": "Bearish",
+   "score": -0.24,
+   "confidence": "Moderate",
+   "prev_close": 83022,
+   "centre": 82957,
+   "lo": 82076,
+   "hi": 83838,
+   "lo2": 81195,
+   "hi2": 84719,
+   "sigma_pts": 881,
+   "sigma_pct": 1.06,
+   "pivots": {
+    "P": 82588,
+    "R1": 83478,
+    "S1": 82132,
+    "R2": 83933,
+    "S2": 81243
+   },
+   "resistance": [
+    83478
+   ],
+   "support": [
+    82132
+   ],
+   "parts": {
+    "world": -1.0,
+    "trend": 0.73,
+    "range": 0.97,
+    "gap": -0.93,
+    "fii": -0.36,
+    "vix": -0.47
+   },
+   "reasons": [
+    "World tone is weak: US and Asia weighted average -2.60% at the 19/11 close; Brent crude 89.79 (-2.35%).",
+    "Sensex closed at 83,022, +5.8% from its 20-day average (78,481) and +1.4% over five sessions: the trend is up.",
+    "It opened at 82,558, -0.56% from the previous close.",
+    "Yesterday it closed in the upper third of its 81,699 to 83,044 range, so buyers or sellers held the close.",
+    "Foreign institutions are net short 70,670 index futures, little changed (-257 over 5 sessions): a persistent bearish tilt.",
+    "India VIX 16.5 (+2.4%): fear is rising."
+   ],
+   "playbook": "Above 83,478 the day favours buyers (next stop 83,933); below 82,132 sellers take over (next 81,243). Between them expect a range day: the edges 82,076 and 83,838 are where moves have usually run out of fuel.",
+   "headlines": [
+    "Stock Market LIVE: GIFT Nifty plunges 200 pts; Asian mkts extend losses on concern over AI trade",
+    "GIFT Nifty plunges over 200 pts, signals sharp fall for Sensex, Nifty as Nasdaq sinks 2.3%, Asian markets... - Moneycontrol.com",
+    "Stock Market LIVE: GIFT Nifty plunges 190 pts; Asian mkts extend losses on concern over AI trade"
+   ],
+   "rv": 13.0,
+   "stage": 2,
+   "day": "2026-11-20"
   }
  },
  "pre": {
   "Nifty 50": {
    "bias": "Sideways",
-   "score": -0.18,
-   "lo": 24967,
-   "hi": 25462,
-   "centre": 25215
+   "score": -0.07,
+   "lo": 25250,
+   "hi": 25768,
+   "centre": 25509
   },
   "Bank Nifty": {
    "bias": "Sideways",
-   "score": -0.09,
-   "lo": 61242,
-   "hi": 62791,
-   "centre": 62017
-  }
- },
- "scored": false,
- "record": {
-  "Nifty 50": {
-   "days": 0,
-   "direction": null,
-   "range": null
-  },
-  "Bank Nifty": {
-   "days": 0,
-   "direction": null,
-   "range": null
+   "score": -0.01,
+   "lo": 62230,
+   "hi": 63890,
+   "centre": 63060
   },
   "Sensex": {
-   "days": 0,
-   "direction": null,
-   "range": null
+   "bias": "Sideways",
+   "score": -0.06,
+   "lo": 82145,
+   "hi": 83866,
+   "centre": 83006
   }
  },
- "world_as_of": "2026-11-18",
- "plan_world_at": 1795060067.882273
+ "scored": true,
+ "record": {
+  "Nifty 50": {
+   "days": 2,
+   "direction": 0,
+   "range": 0
+  },
+  "Bank Nifty": {
+   "days": 2,
+   "direction": 0,
+   "range": 0
+  },
+  "Sensex": {
+   "days": 2,
+   "direction": 0,
+   "range": 0
+  }
+ },
+ "world_as_of": "2026-11-19",
+ "plan_world_at": 1795145554.9967322,
+ "result": [
+  {
+   "name": "Nifty 50",
+   "day": "2026-11-20",
+   "bias": "Bearish",
+   "score": -0.22,
+   "prev_close": 25514,
+   "lo": 25231,
+   "hi": 25761,
+   "open": 25368.0,
+   "high": 25808.8,
+   "low": 25345.2,
+   "close": 25800.6,
+   "chg_pct": 1.12,
+   "direction_right": false,
+   "close_in_range": false,
+   "high_in_range": true,
+   "low_in_range": true
+  },
+  {
+   "name": "Bank Nifty",
+   "day": "2026-11-20",
+   "bias": "Sideways",
+   "score": -0.19,
+   "prev_close": 63063,
+   "lo": 62166,
+   "hi": 63865,
+   "open": 62656.65,
+   "high": 64680.8,
+   "low": 62598.55,
+   "close": 64635.2,
+   "chg_pct": 2.49,
+   "direction_right": false,
+   "close_in_range": false,
+   "high_in_range": true,
+   "low_in_range": true
+  },
+  {
+   "name": "Sensex",
+   "day": "2026-11-20",
+   "bias": "Bearish",
+   "score": -0.24,
+   "prev_close": 83022,
+   "lo": 82076,
+   "hi": 83838,
+   "open": 82558.25,
+   "high": 84037.96,
+   "low": 82403.27,
+   "close": 83919.71,
+   "chg_pct": 1.08,
+   "direction_right": false,
+   "close_in_range": false,
+   "high_in_range": true,
+   "low_in_range": true
+  }
+ ]
 }
