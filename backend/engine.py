@@ -379,7 +379,9 @@ def run() -> None:
 
     def news_ai(at) -> None:
         """Every half hour: Claude Haiku reads the latest Indian and international headlines for the CEO and the desks."""
-        if not ai.on or (digest[0].get("at") and time.time() - digest[0]["at"] < 1800) or (at.weekday() >= 5 and digest[0].get("day") == at.strftime("%Y-%m-%d")):
+        gap = 9000 if ai.mode == "plan" else 1800                       # on the Claude plan: about every 2.5 hours, market days only
+        if not ai.on or (digest[0].get("at") and time.time() - digest[0]["at"] < gap) or (at.weekday() >= 5 and (ai.mode == "plan" or digest[0].get("day") == at.strftime("%Y-%m-%d"))) \
+                or (ai.mode == "plan" and not ("09:00" <= at.strftime("%H:%M") <= "15:30")):
             return
         wire = load("news_wire.json", [])
         heads = list(reversed(wire))[:60]
@@ -394,10 +396,32 @@ def run() -> None:
         """Every half hour: the IPO desk reads NSE's issues, SEBI's draft prospectuses and the news."""
         if ipo_v[0].get("at") and time.time() - ipo_v[0]["at"] < 1800:
             return
-        out = IPO.build(at, ipo_st, llm=ai_ask if ai.on else None)
+        out = IPO.build(at, ipo_st, llm=None)
+        notes = ipo_st.setdefault("notes", {})
+        day = at.strftime("%Y-%m-%d")
+        if notes.get("day") != day:
+            notes.clear()
+            notes.update(day=day, n={}, tried=False)
+        want = [x for x in out.get("ipos") or [] if x.get("status") in ("open", "upcoming") and x.get("name") not in notes["n"]][:6]
+        if want and ai.on and not notes["tried"] and at.weekday() < 5 and at.strftime("%H:%M") >= "10:00":
+            notes["tried"] = True                                       # one call a day writes the notes for every open or upcoming issue
+            facts = [{k: x.get(k) for k in ("name", "board", "status", "open_date", "close_date", "price_band", "lot_size", "min_invest_rs", "issue_size_cr", "fresh_cr", "ofs_cr", "subscription")}
+                     | {"verdict": (x.get("analysis") or {}).get("verdict"), "reasons": (x.get("analysis") or {}).get("reasons"), "risks": (x.get("analysis") or {}).get("risks"),
+                        "headlines": [n_.get("title") for n_ in x.get("news") or []][:3]} for x in want]
+            res = LLM.parse_json(ai_ask("ipo", IPO_SYSTEM, json.dumps(facts, default=str), "write"))
+            if isinstance(res, dict):
+                notes["n"].update({k: str(v)[:900] for k, v in (res.get("notes") or res).items() if isinstance(v, str)})
+        for x in out.get("ipos") or []:
+            if x.get("name") in notes["n"]:
+                x["thesis"] = notes["n"][x["name"]]
+                (x.get("analysis") or {})["method"] = "rules+claude"
         ipo_v[0] = {**out, "at": time.time()}
         save("ipo.json", ipo_v[0])
         save("ipo_state.json", ipo_st)
+
+    IPO_SYSTEM = ("You are the IPO analyst of an Indian paper-trading desk. For each issue given, write a plain-English note of at most 110 words from the facts given only: "
+                  "what the company raises money for if stated, what the demand so far says, the main risk, and whether one minimum lot is worth a small bet. Never invent numbers or promise returns. "
+                  "Reply with one JSON object: {\"notes\": {\"<exact issue name>\": \"note\"}}.")
 
     def review_day(at) -> None:
         """After the close: Claude Opus writes the COO's review of the day from the real numbers."""
@@ -480,8 +504,10 @@ def run() -> None:
                 "kraken": ok("Kraken" in str(d.get("crypto", "")), str(d.get("crypto", ""))[:70], "error" in str(d.get("crypto", ""))),
                 "yahoo": ok(age is not None and age < 6 * 60, f"world markets refreshed {age:.0f} min ago" if age is not None else "world markets not refreshed yet"),
                 "news": ok(bool(feed), f"{len(feed)} headlines, latest {feed[-1]['time']}; {len(headlines)} name a listed company" if feed else "no headline yet"),
-                "claude": ({"status": "ok", "detail": f"${ai.status()['usd_5h']:.3f} of the ${ai.status()['cap_5h']:.2f} 5-hour cap used; Haiku reads news, Sonnet writes IPO theses, Opus reviews the day"} if ai.on else
-                           {"status": "off", "detail": "no ANTHROPIC_API_KEY on this machine: the desks run on their written rules" if not ai.key else f"key set but the client failed: {llm_u.get('last_error', '')[:60]}"}),
+                "claude": (({"status": "warn" if ai.status().get("resting_until") else "ok", "detail": f"your Claude plan: {ai.status()['calls_5h']} of {ai.status()['cap_calls_5h']} calls in the last 5 hours, {ai.status()['calls_day']} of {ai.status()['cap_calls_day']} today"
+                             + ("; resting after the plan's limit" if ai.status().get("resting_until") else "")} if ai.mode == "plan" else
+                            {"status": "ok", "detail": f"API: ${ai.status()['usd_5h']:.3f} of ${ai.status()['cap_5h']:.2f} in 5 hours"}) if ai.on else
+                           {"status": "off", "detail": "not connected: add the CLAUDE_CODE_OAUTH_TOKEN secret (from your Claude plan); until then the desks run on their written rules"}),
                 "github": {"status": "ok" if os.environ.get("GITHUB_TOKEN") else "off", "detail": "listening for your instructions every 5 minutes" if os.environ.get("GITHUB_TOKEN") else "not available on this machine"}}
 
     def company_view(now, allt, stats) -> None:

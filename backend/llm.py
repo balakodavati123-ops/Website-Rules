@@ -1,17 +1,19 @@
-"""The desk's AI analysts: Claude models reading news, writing IPO theses and reviewing the day, under a hard spending cap.
+"""The desk's AI analysts: Claude reading news, writing IPO notes and reviewing the day, within a hard usage cap.
 
-Three tiers, each used only where it pays for itself:
-  read   -> Claude Haiku 5.5   news digests every half hour (cheapest)
-  write  -> Claude Sonnet 5.5  IPO theses, once per IPO per day
-  review -> Claude Opus 5.5    the COO's end-of-day review, once a day
-The API key (ANTHROPIC_API_KEY, a GitHub secret) is billed per token, separately from any Claude subscription. Spending is capped in
-dollars per rolling 5-hour window and per day (LLM_USD_5H, LLM_USD_DAY); a call that could cross either cap is not sent, and the desk
-falls back to its written rules. Every call's real usage is recorded in llm_usage.json. Nothing here trades.
+Default route (no extra cost): Claude Code running on the GitHub runner, signed in with CLAUDE_CODE_OAUTH_TOKEN, a token made with
+`claude setup-token` from the CEO's own Claude plan, the same way Anthropic's official Claude GitHub Action uses a plan. Usage counts
+against that plan's limits, so the desk spends only a small, fixed number of calls: LLM_CALLS_5H per rolling 5 hours (default 4) and
+LLM_CALLS_DAY per day (default 8). Haiku reads the news; Sonnet writes IPO notes and the day's review. When the plan's limit is reached
+the desk backs off for an hour and runs on its written rules.
+An API-key route (ANTHROPIC_API_KEY, billed per token) also exists but is not wired into the workflow. Nothing here trades.
 """
 from __future__ import annotations
 
 import json
 import os
+import shutil
+import subprocess
+import tempfile
 import time
 
 MODELS = {"read": "claude-haiku-5-5", "write": "claude-sonnet-5-5", "review": "claude-opus-5-5"}
@@ -20,6 +22,24 @@ EFFORT = {"read": "low", "write": "medium", "review": "medium"}
 MAXTOK = {"read": 1500, "write": 2500, "review": 3500}
 FALLBACK_BETA = "server-side-fallback-2026-07-01"
 WINDOW = 5 * 3600
+PLAN_MODELS = {"read": "haiku", "write": "sonnet", "review": "sonnet"}       # no Opus on the plan route: it uses the plan's limits fastest
+
+
+def plan_caps(env=os.environ) -> tuple[int, int]:
+    return int(env.get("LLM_CALLS_5H") or 4), int(env.get("LLM_CALLS_DAY") or 8)
+
+
+def claude_code(system: str, prompt: str, model: str, env=os.environ, timeout: int = 240) -> dict:
+    """One headless Claude Code call with no tools, its own short system prompt and no session saved; returns Claude Code's JSON result."""
+    e = {k: v for k, v in env.items() if k != "ANTHROPIC_API_KEY"}      # never fall back to a paid key on this route
+    e.update(DISABLE_AUTOUPDATER="1", CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC="1")
+    with tempfile.TemporaryDirectory() as d:                             # an empty folder: no CLAUDE.md or project settings to read
+        r = subprocess.run(["claude", "-p", "--model", model, "--system-prompt", system, "--tools", "", "--output-format", "json", "--no-session-persistence", "--strict-mcp-config"],
+                           input=prompt, capture_output=True, text=True, timeout=timeout, cwd=d, env=e)
+    try:
+        return json.loads(r.stdout.strip().splitlines()[-1]) if r.stdout.strip() else {"is_error": True, "result": (r.stderr or "no output")[:300]}
+    except ValueError:
+        return {"is_error": True, "result": (r.stdout or r.stderr)[:300]}
 
 
 def caps(env=os.environ) -> tuple[float, float]:
@@ -48,10 +68,13 @@ def worst_case(model: str, prompt_chars: int, max_tokens: int) -> float:
 class Desk:
     """ask(kind, system, prompt, tier, max_tokens) -> text or None. None means: no key, over budget, refused or failed (the rules carry on)."""
 
-    def __init__(self, usage: dict, env=os.environ, client=None):
+    def __init__(self, usage: dict, env=os.environ, client=None, runner=None):
         self.u, self.env = usage, env
         self.key = bool(env.get("ANTHROPIC_API_KEY"))
-        self.client = client
+        self.client, self.runner, self.mode = client, runner, "off"
+        if runner is not None or (env.get("CLAUDE_CODE_OAUTH_TOKEN") and shutil.which("claude")):
+            self.mode, self.runner = "plan", runner or (lambda system, prompt, model: claude_code(system, prompt, model, env))
+            return
         if self.client is None and self.key:
             try:
                 import anthropic
@@ -62,18 +85,52 @@ class Desk:
 
     @property
     def on(self) -> bool:
-        return self.client is not None
+        return self.mode == "plan" or self.client is not None
+
+    def _plan_ask(self, kind: str, system: str, prompt: str, tier: str) -> str | None:
+        now = time.time()
+        c5, cd = plan_caps(self.env)
+        mine = [c for c in self.u["calls"] if c.get("plan")]
+        if now < self.u.get("backoff_until", 0) or sum(now - c["ts"] < WINDOW for c in mine) >= c5 or sum(now - c["ts"] < 86400 for c in mine) >= cd:
+            self.u["refused"] = self.u.get("refused", 0) + 1
+            return None
+        model = PLAN_MODELS[tier]
+        try:
+            r = self.runner(system, prompt, model)
+        except Exception as e:
+            r = {"is_error": True, "result": f"{type(e).__name__}: {e}"}
+        u = r.get("usage") or {}
+        self.u["calls"] = [c for c in self.u["calls"] if now - c["ts"] < 86400 * 2] + [{"ts": now, "kind": kind, "model": model, "plan": True, "usd": 0.0, "ok": not r.get("is_error"),
+                                                                                       "in": int(u.get("input_tokens") or 0), "out": int(u.get("output_tokens") or 0)}]
+        k = self.u["by_kind"].setdefault(kind, {"calls": 0, "usd": 0.0})
+        k["calls"] += 1
+        if r.get("is_error"):
+            msg = str(r.get("result") or "")
+            self.u["errors"] = self.u.get("errors", 0) + 1
+            self.u["last_error"] = msg[:200]
+            if any(w in msg.lower() for w in ("limit", "rate", "quota", "429", "usage")):
+                self.u["backoff_until"] = now + 3600                     # the plan's own limit: rest for an hour
+            return None
+        return str(r.get("result") or "").strip() or None
 
     def status(self, now: float | None = None) -> dict:
         now = now or time.time()
+        if self.mode == "plan":
+            n5, nd = plan_caps(self.env)
+            mine = [c for c in self.u["calls"] if c.get("plan")]
+            return {"on": True, "mode": "plan", "calls_5h": sum(now - c["ts"] < WINDOW for c in mine), "cap_calls_5h": n5, "calls_day": sum(now - c["ts"] < 86400 for c in mine),
+                    "cap_calls_day": nd, "models": PLAN_MODELS, "by_kind": self.u["by_kind"], "resting_until": self.u.get("backoff_until") if now < self.u.get("backoff_until", 0) else None,
+                    "last_error": self.u.get("last_error", "")}
         c5, cd = caps(self.env)
         s5, sd = spent(self.u, now, WINDOW), spent(self.u, now, 86400)
-        return {"on": self.on, "usd_5h": round(s5, 4), "cap_5h": c5, "usd_day": round(sd, 4), "cap_day": cd, "pct_5h": round(s5 / c5 * 100, 1) if c5 else 0,
+        return {"on": self.on, "mode": "api" if self.on else "off", "usd_5h": round(s5, 4), "cap_5h": c5, "usd_day": round(sd, 4), "cap_day": cd, "pct_5h": round(s5 / c5 * 100, 1) if c5 else 0,
                 "calls_day": sum(1 for c in self.u["calls"] if now - c["ts"] < 86400), "by_kind": self.u["by_kind"], "models": MODELS, "last_error": self.u.get("last_error", "")}
 
     def ask(self, kind: str, system: str, prompt: str, tier: str = "read", max_tokens: int | None = None) -> str | None:
         if not self.on:
             return None
+        if self.mode == "plan":
+            return self._plan_ask(kind, system, prompt, tier)
         model, mt, now = MODELS[tier], max_tokens or MAXTOK[tier], time.time()
         c5, cd = caps(self.env)
         need = worst_case(model, len(system) + len(prompt), mt)

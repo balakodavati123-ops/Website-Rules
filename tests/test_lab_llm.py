@@ -49,3 +49,22 @@ def test_llm_budget_caps_spending():
     assert c.calls == 1
     off = LL.Desk(LL.new_usage(), env={})
     assert not off.on and off.ask("news", "s", "p") is None
+
+
+def test_plan_route_caps_calls_and_rests_after_the_plans_limit():
+    seen = []
+
+    def runner(system, prompt, model):
+        seen.append(model)
+        return {"is_error": False, "result": '{"mood": "bullish", "brief": "Up.", "themes": [], "companies": []}', "usage": {"input_tokens": 900, "output_tokens": 80}}
+    u = LL.new_usage()
+    d = LL.Desk(u, env={"LLM_CALLS_5H": "2", "LLM_CALLS_DAY": "3"}, runner=runner)
+    heads = [{"headline": f"Company {i} wins an order", "source": "ET"} for i in range(10)]
+    assert d.mode == "plan" and LL.news_digest(d, heads)["mood"] == "bullish" and seen == ["haiku"]
+    assert d.ask("review", "s", "p", "review") == '{"mood": "bullish", "brief": "Up.", "themes": [], "companies": []}' and seen[-1] == "sonnet"
+    assert d.ask("news", "s", "p") is None and len(seen) == 2                   # 2 calls per 5 hours: the third is not sent
+    st = d.status()
+    assert st["calls_5h"] == 2 and st["cap_calls_5h"] == 2 and all(c["usd"] == 0.0 for c in u["calls"])
+    u2 = LL.new_usage()
+    busy = LL.Desk(u2, env={}, runner=lambda s, p, m: {"is_error": True, "result": "Claude usage limit reached"})
+    assert busy.ask("news", "s", "p") is None and u2["backoff_until"] > 0 and busy.status()["resting_until"]
