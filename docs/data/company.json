@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T08:56:20+05:30",
+ "updated_at": "2026-11-21T09:06:21+05:30",
  "ceo": {
   "name": "Balaji",
   "title": "CEO"
@@ -22,12 +22,7 @@
    {
     "team": "crypto",
     "level": "warn",
-    "text": "Crypto desk: targets hit 1 times against 9.0 expected by pure chance (z -3.27): no edge so far."
-   },
-   {
-    "team": null,
-    "level": "warn",
-    "text": "Data problem at the news_feed desk: error: Expecting value: line 1 column 1 (char 0). Trades there wait until it clears."
+    "text": "Crypto desk: targets hit 1 times against 9.3 expected by pure chance (z -3.34): no edge so far."
    }
   ],
   "requests": [
@@ -42,124 +37,19 @@
     "decided": "21 Nov 08:15"
    }
   ],
-  "doing": "Supervising 9 teams: 1 traded today, company \u2212\u20b9155.",
+  "doing": "Supervising 9 teams: 1 traded today, company \u2212\u20b9159.",
   "hires": [],
   "designation": "COO"
  },
  "pnl": {
-  "today_rs": -154.8,
-  "open_rs": -162.04,
-  "closed_rs": -148.75,
+  "today_rs": -158.89,
+  "open_rs": -155.99,
+  "closed_rs": -158.89,
   "trades": 4,
-  "open": 14,
-  "equity_rs": 118995.46
+  "open": 13,
+  "equity_rs": 118991.37
  },
  "flows": [
-  {
-   "t": "08:16:14",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "08:16:48",
-   "from": "coo",
-   "to": "ceo",
-   "kind": "report",
-   "text": "Company today \u2212\u20b9110"
-  },
-  {
-   "t": "08:17:00",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "08:17:48",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "08:18:34",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "08:19:27",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "08:20:13",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "08:20:59",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "08:21:46",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "08:21:51",
-   "from": "coo",
-   "to": "ceo",
-   "kind": "report",
-   "text": "Company today \u2212\u20b9112"
-  },
-  {
-   "t": "08:22:36",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "08:23:21",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "08:24:07",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "08:24:55",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "08:25:41",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
   {
    "t": "08:26:27",
    "from": "src:github",
@@ -474,6 +364,111 @@
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:56:54",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:57:24",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u2212\u20b9156"
+  },
+  {
+   "t": "08:57:41",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "08:58:26",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "08:58:33",
+   "from": "crypto-m",
+   "to": "coo",
+   "kind": "report",
+   "text": "Closed BTC long: \u2212\u20b910"
+  },
+  {
+   "t": "08:59:14",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "09:00:00",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "09:00:47",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "09:01:35",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "09:02:26",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "09:02:26",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u2212\u20b9159"
+  },
+  {
+   "t": "09:03:12",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "09:04:02",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "09:04:48",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "09:05:41",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
   }
  ],
  "teams": [
@@ -1358,13 +1353,13 @@
     {
      "name": "Nikhil",
      "role": "Quant analyst",
-     "doing": "BTC long: reward 2.0\u00d7 the risk; a random walk reaches the target first 33% of the time; break-even needs 33% wins after charges.",
+     "doing": "XRP long: reward 2.0\u00d7 the risk; a random walk reaches the target first 33% of the time; break-even needs 33% wins after charges.",
      "tokens": 0
     },
     {
      "name": "Sam",
      "role": "Trading manager",
-     "doing": "Holding 1: BTC long at 58,207.80, stop 57,334.68, now \u2212\u20b96.",
+     "doing": "Closed BTC long (time): \u2212\u20b910.",
      "tokens": 0
     }
    ],
@@ -1378,11 +1373,11 @@
      "role": "BTC",
      "kind": "research",
      "status": "vacant",
-     "doing": "-0.86% today, in a trade",
+     "doing": "-2.73% today, moving: watching for an entry",
      "record": {
-      "trades": 2,
+      "trades": 3,
       "wins": 1,
-      "pnl_rs": -14.93,
+      "pnl_rs": -25.07,
       "basis": "own trades"
      }
     },
@@ -1393,7 +1388,7 @@
      "role": "ETH",
      "kind": "research",
      "status": "vacant",
-     "doing": "-0.54% today",
+     "doing": "-3.04% today, moving: watching for an entry",
      "record": {
       "trades": 4,
       "wins": 1,
@@ -1408,7 +1403,7 @@
      "role": "SOL",
      "kind": "research",
      "status": "vacant",
-     "doing": "-1.15% today, moving: watching for an entry",
+     "doing": "-3.43% today, moving: watching for an entry",
      "record": {
       "trades": 6,
       "wins": 2,
@@ -1423,7 +1418,7 @@
      "role": "XRP",
      "kind": "research",
      "status": "vacant",
-     "doing": "-1.47% today, moving: watching for an entry",
+     "doing": "-3.15% today, moving: watching for an entry",
      "record": {
       "trades": 6,
       "wins": 2,
@@ -1438,7 +1433,7 @@
      "role": "DOGE",
      "kind": "research",
      "status": "vacant",
-     "doing": "-1.17% today, moving: watching for an entry",
+     "doing": "-3.83% today, moving: watching for an entry",
      "record": {
       "trades": 4,
       "wins": 1,
@@ -1453,7 +1448,7 @@
      "role": "ADA",
      "kind": "research",
      "status": "vacant",
-     "doing": "-1.91% today, moving: watching for an entry",
+     "doing": "-4.51% today, moving: watching for an entry",
      "record": {
       "trades": 5,
       "wins": 1,
@@ -1470,9 +1465,9 @@
      "status": "vacant",
      "doing": "Sets stop and target from each coin's own volatility",
      "record": {
-      "trades": 27,
+      "trades": 28,
       "wins": 8,
-      "pnl_rs": -762.22,
+      "pnl_rs": -772.36,
       "basis": "team record"
      }
     },
@@ -1483,35 +1478,35 @@
      "role": "Trading manager",
      "kind": "trader",
      "status": "vacant",
-     "doing": "Holding 1: BTC long at 58,207.80, stop 57,334.68, now \u2212\u20b96.",
+     "doing": "Closed BTC long (time): \u2212\u20b910.",
      "record": {
-      "trades": 27,
+      "trades": 28,
       "wins": 8,
-      "pnl_rs": -762.22,
+      "pnl_rs": -772.36,
       "basis": "team record"
      }
     }
    ],
    "manager": "crypto-m",
    "today": {
-    "pnl": -154.8,
-    "pnl_rs": -154.8,
+    "pnl": -158.89,
+    "pnl_rs": -158.89,
     "trades": 4,
-    "open": 1,
-    "closed": 3,
+    "open": 0,
+    "closed": 4,
     "wins": 0
    },
    "record": {
-    "n": 27,
-    "win_rate": 29.6,
-    "avg_rs": -28.23,
-    "net_rs": -762.22,
-    "worst_run": 13,
-    "profit_factor": 0.4,
+    "n": 28,
+    "win_rate": 28.6,
+    "avg_rs": -27.58,
+    "net_rs": -772.36,
+    "worst_run": 14,
+    "profit_factor": 0.39,
     "target_hits": 1,
-    "expected_hits": 9.0,
-    "edge_z": -3.27,
-    "hit_rate": 0.037
+    "expected_hits": 9.3,
+    "edge_z": -3.34,
+    "hit_rate": 0.036
    },
    "verdicts": [
     {
@@ -1523,9 +1518,9 @@
     },
     {
      "strategy": "crypto_dip_bounce",
-     "closed": 18,
-     "win_rate": 27.8,
-     "pnl_rs": -275.74,
+     "closed": 19,
+     "win_rate": 26.3,
+     "pnl_rs": -285.88,
      "verdict": "COLLECTING"
     }
    ],
@@ -1620,7 +1615,7 @@
      "role": "Headlines desk",
      "kind": "research",
      "status": "idle",
-     "doing": "Market closed: 60 high-impact headlines in the feed",
+     "doing": "Market closed: claude read the headlines: bearish. A global AI-led sell-off hit Nasdaq, Asian markets and gold, and GIFT Nifty signals a sharply lower open. Indian benchmarks ",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1775,7 +1770,7 @@
      "role": "Data engineer",
      "kind": "data",
      "status": "alert",
-     "doing": "Data gaps: indmoney, claude",
+     "doing": "Data gaps: indmoney",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1971,19 +1966,19 @@
    "id": "yahoo",
    "name": "Yahoo Finance",
    "status": "idle",
-   "detail": "world markets refreshed 706 min ago"
+   "detail": "world markets refreshed 716 min ago"
   },
   {
    "id": "news",
    "name": "News feeds",
    "status": "ok",
-   "detail": "60 headlines, latest 21 Nov 08:51; 0 name a listed company"
+   "detail": "60 headlines, latest 21 Nov 09:01; 0 name a listed company"
   },
   {
    "id": "claude",
    "name": "Claude AI",
-   "status": "off",
-   "detail": "not connected: add the CLAUDE_CODE_OAUTH_TOKEN secret (from your Claude plan); until then the desks run on their written rules"
+   "status": "ok",
+   "detail": "scheduled Claude analyst (your plan): last round 21 Nov 08:55, next at 09:20 and 16:20 IST on weekdays"
   },
   {
    "id": "github",
@@ -2009,9 +2004,9 @@
   }
  ],
  "company": {
-  "pnl_today": -154.8,
+  "pnl_today": -158.89,
   "nifty_chg": null,
-  "equity": 118995.46,
+  "equity": 118991.37,
   "sessions": {
    "equity": false,
    "fno": false,
@@ -2035,10 +2030,10 @@
    "rr": 1.99,
    "base_p": 0.334,
    "breakeven_p": 0.334,
-   "used_p": 0.037,
+   "used_p": 0.036,
    "p_source": "team record",
-   "ev_rs": -33.45,
-   "kelly": -0.447
+   "ev_rs": -33.56,
+   "kelly": -0.448
   },
   "C261121-66": {
    "risk_rs": 37.5,
@@ -2046,10 +2041,10 @@
    "rr": 2.0,
    "base_p": 0.333,
    "breakeven_p": 0.333,
-   "used_p": 0.037,
+   "used_p": 0.036,
    "p_source": "team record",
-   "ev_rs": -33.34,
-   "kelly": -0.445
+   "ev_rs": -33.45,
+   "kelly": -0.446
   },
   "C261121-64": {
    "risk_rs": 37.5,
@@ -2057,10 +2052,10 @@
    "rr": 2.0,
    "base_p": 0.333,
    "breakeven_p": 0.333,
-   "used_p": 0.037,
+   "used_p": 0.036,
    "p_source": "team record",
-   "ev_rs": -33.34,
-   "kelly": -0.444
+   "ev_rs": -33.45,
+   "kelly": -0.446
   },
   "C261121-65": {
    "risk_rs": 37.5,
@@ -2068,10 +2063,10 @@
    "rr": 2.0,
    "base_p": 0.333,
    "breakeven_p": 0.333,
-   "used_p": 0.037,
+   "used_p": 0.036,
    "p_source": "team record",
-   "ev_rs": -33.34,
-   "kelly": -0.445
+   "ev_rs": -33.45,
+   "kelly": -0.446
   },
   "S3": {
    "risk_rs": 242.15
@@ -2279,111 +2274,6 @@
    "ipo-m": "Manager"
   },
   "flows": [
-   {
-    "t": "08:08:07",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:08:55",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "-0.33% today, in a trade"
-   },
-   {
-    "t": "08:08:55",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:09:45",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "-0.21% today, in a trade"
-   },
-   {
-    "t": "08:09:45",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:10:46",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "-0.35% today, in a trade"
-   },
-   {
-    "t": "08:10:46",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:11:33",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "-0.37% today, in a trade"
-   },
-   {
-    "t": "08:11:33",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:11:44",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u2212\u20b9107; 1 request(s) for you"
-   },
-   {
-    "t": "08:12:18",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "-0.47% today, in a trade"
-   },
-   {
-    "t": "08:12:18",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:13:05",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "-0.48% today, in a trade"
-   },
-   {
-    "t": "08:13:05",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:13:50",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "-0.40% today, in a trade"
-   },
    {
     "t": "08:13:50",
     "from": "src:github",
@@ -2838,6 +2728,111 @@
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:56:54",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:57:24",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9156"
+   },
+   {
+    "t": "08:57:41",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "08:58:26",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "08:58:33",
+    "from": "crypto-m",
+    "to": "coo",
+    "kind": "report",
+    "text": "Closed BTC long: \u2212\u20b910"
+   },
+   {
+    "t": "08:59:14",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "09:00:00",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "09:00:47",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "09:01:35",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "09:02:26",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "09:02:26",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9159"
+   },
+   {
+    "t": "09:03:12",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "09:04:02",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "09:04:48",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "09:05:41",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
    }
   ],
   "flow_seen": {
@@ -2845,12 +2840,13 @@
    "C261121-66:OPEN": "2026-11-21",
    "C261121-64:LOSS": "2026-11-21",
    "C261121-65:LOSS": "2026-11-21",
-   "C261121-67:LOSS": "2026-11-21"
+   "C261121-67:LOSS": "2026-11-21",
+   "C261121-66:LOSS": "2026-11-21"
   },
   "flow_at": {
    "crypto": 1795229124.147547,
-   "lab": 1795231563.697836,
-   "ceo": 1795231340.164772
+   "lab": 1795232141.186436,
+   "ceo": 1795231946.572332
   }
  }
 }

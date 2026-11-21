@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T08:25:52+05:30",
+ "updated_at": "2026-11-21T08:56:53+05:30",
  "ipos": [
   {
    "name": "Mahanadi Coalfields Limited",
@@ -58,7 +58,7 @@
      "time": "2026-11-20T05:32:59Z"
     }
    ],
-   "thesis": null,
+   "thesis": "Bidding is open until 23 Nov and was 0.48x subscribed on day 2; QIBs are at 1.37x while retail is 0.24x. Institutions usually bid late, so early numbers say little. The issue is entirely offer-for-sale, so no money goes to the company. One lot costs about Rs 14,960; only a small bet is sensible, ideally after checking final-day demand.",
    "analysis": {
     "score": 15,
     "verdict": "Watch",
@@ -77,7 +77,7 @@
     },
     "listing_px": null,
     "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 136.00. No target range yet: it needs subscription numbers. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot.",
-    "method": "rules"
+    "method": "rules+claude"
    }
   },
   {
@@ -137,7 +137,7 @@
      "time": "2026-11-20T02:15:55Z"
     }
    ],
-   "thesis": null,
+   "thesis": "This SME issue was subscribed 11.1x overall, showing strong demand, though no category split is available. SME stocks have large lots, thin trading and big price swings. One lot costs about Rs 1.47 lakh, which is heavy for a small bet. Our score of 53 is below the bar to apply, so treat it as watch only.",
    "analysis": {
     "score": 53,
     "verdict": "Watch",
@@ -160,7 +160,7 @@
      343.0
     ],
     "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 245.00. Target for the first half: inside the Rs 245.00 to Rs 343.00 range, ideally near the top. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot. SME shares are thinly traded, so a sell order may not fill at the price you want.",
-    "method": "rules"
+    "method": "rules+claude"
    }
   },
   {
@@ -214,7 +214,7 @@
      "time": "2026-11-19T06:49:00Z"
     }
    ],
-   "thesis": null,
+   "thesis": "Opens 25 Nov with no subscription data yet, so demand is unknown. It is an SME issue, entirely fresh capital, with thin trading and large swings. One lot costs about Rs 1.42 lakh, which is too large for a small bet. Wait for demand data before deciding.",
    "analysis": {
     "score": null,
     "verdict": "Watch",
@@ -233,7 +233,7 @@
     },
     "listing_px": null,
     "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 142.00. No target range yet: it needs subscription numbers. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot. SME shares are thinly traded, so a sell order may not fill at the price you want.",
-    "method": "rules"
+    "method": "rules+claude"
    }
   },
   {
@@ -313,16 +313,16 @@
    }
   },
   {
-   "name": "Bonfiglioli Transmissions Limited",
-   "symbol": "BONFIG",
+   "name": "Tonbo Imaging India Limited",
+   "symbol": "TONBO",
    "board": "Mainboard",
    "status": "listed",
    "open_date": "2026-10-15",
    "close_date": "2026-10-19",
    "listing_date": "2026-10-23",
    "price_band": [
-    586.0,
-    586.0
+    700.0,
+    700.0
    ],
    "lot_size": null,
    "min_invest_rs": null,
@@ -427,16 +427,16 @@
    }
   },
   {
-   "name": "Tonbo Imaging India Limited",
-   "symbol": "TONBO",
+   "name": "Bonfiglioli Transmissions Limited",
+   "symbol": "BONFIG",
    "board": "Mainboard",
    "status": "listed",
    "open_date": "2026-10-15",
    "close_date": "2026-10-19",
    "listing_date": "2026-10-23",
    "price_band": [
-    700.0,
-    700.0
+    586.0,
+    586.0
    ],
    "lot_size": null,
    "min_invest_rs": null,
@@ -731,16 +731,16 @@
    }
   },
   {
-   "name": "HGS (India) Limited",
-   "symbol": "HGSINDIALT",
+   "name": "Maxwell Engineering Solutions Limited",
+   "symbol": "MAXENGS",
    "board": "SME",
    "status": "listed",
    "open_date": "2026-10-30",
    "close_date": "2026-11-03",
    "listing_date": "2026-11-06",
    "price_band": [
-    120.0,
-    120.0
+    158.0,
+    158.0
    ],
    "lot_size": null,
    "min_invest_rs": null,
@@ -769,16 +769,16 @@
    }
   },
   {
-   "name": "Maxwell Engineering Solutions Limited",
-   "symbol": "MAXENGS",
+   "name": "HGS (India) Limited",
+   "symbol": "HGSINDIALT",
    "board": "SME",
    "status": "listed",
    "open_date": "2026-10-30",
    "close_date": "2026-11-03",
    "listing_date": "2026-11-06",
    "price_band": [
-    158.0,
-    158.0
+    120.0,
+    120.0
    ],
    "lot_size": null,
    "min_invest_rs": null,
@@ -927,5 +927,5 @@
   "sebi": "ok",
   "news": "ok"
  },
- "at": 1795229761.3778765
+ "at": 1795231625.6274939
 }
