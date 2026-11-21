@@ -1,213 +1,5 @@
 [
  {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Muthoot Finance heads for worst week since April 2025 as gold rout triggers sell-off",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold price crash: Yellow metal and silver slump over 4% each on MCX",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "RBI-POLICY",
-  "headline": "Japan core inflation picks up, makes case for BoJ rate hike stronger",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Nikkei, Kospi fall over 4% each; Asian markets crash as AI sell-off deepens despite record Anthropic IPO",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "RBI-POLICY",
-  "headline": "Gold falls further, set for worst week since March as Fed rate hike worries rise",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "'More To Come' - IMF Managing Director warns the AI sell-off may not be over yet",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "US Market Crash: Dow Jones tanks 1,100 points, nears technical correction - What is plaguing Wall Street?",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "DEAL/ORDER",
-  "headline": "Voltas signs JV agreement with Atomberg for room AC compressors, to acquire 50% stake",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "DEAL/ORDER",
-  "headline": "Paytm to invest up to \u20b9200 crore in Funding Societies' subsidiaries, acquires 19% in CardUp",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "LEGAL/REGULATORY",
-  "headline": "Atul's US subsidiary faces probe over alleged evasion of anti-dumping duties on 2,4-D imports",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "APPROVAL",
-  "headline": "Go Digit gets IFSCA approval to set up insurance office in GIFT City",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "APPROVAL",
-  "headline": "Alkem Laboratories gets USFDA warning letter with OAI classification for Daman facility",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "LEADER-EXIT",
-  "headline": "PB Fintech shares fall up to 6% after co-founder Alok Bansal to step down from executive role next year",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Global commodity prices plunge: These are the metals impacted and Emkay's preferred plays",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "RBI-POLICY",
-  "headline": "Asian markets mixed as investors weigh Anthropic's record IPO against Fed rate hike risks",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "DEAL/ORDER",
-  "headline": "Dalmia Bharat to consider share buyback at November 23 board meeting",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "DEAL/ORDER",
-  "headline": "LT Foods to acquire 100% stake in US-based Maya Kaimal parent for $5.8 million",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Metal Stocks Under Pressure: Why Domestic Steel Outshines Aluminium Amid Global Sell-Off",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "EARNINGS",
-  "headline": "Dow Jones falls 1,600 points in two sessions, but futures rebound after Nvidia results",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "21 Nov 03:42",
-  "source": "CNBC-TV18",
-  "category": "EARNINGS",
-  "headline": "Nvidia shares jump nearly 6% after strong Q3 results, guidance increase, management commentary",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "21 Nov 03:47",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "SELLAS Life Sciences shares plunge 19%: What triggered the sharp sell-off?",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "21 Nov 03:47",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "SoftBank shares crash 14.5%, biggest 1-day fall in 2 years: Why Anthropic's strong IPO debut failed to revive AI trade",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "21 Nov 03:47",
-  "source": "Mint",
-  "category": "EARNINGS",
-  "headline": "Power stocks to buy: Why Axis Sec is betting on NTPC and JSW Energy shares post Q2 results? Check targets, rationale",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "21 Nov 03:47",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold, silver ETF price crash today: Rates at 52-week low \u2014 Opportunity for investors or more pain ahead? Experts speak",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "21 Nov 03:47",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold price crash: Muthoot Finance, Manappuram shares lose sheen, down up to 5% | Is gold heading for deeper correction?",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "21 Nov 03:47",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold price crash today: Rates below  \u20b91.25 lakh/10 gm on MCX | 3 reasons why?  \u20b91 lakh or  \u20b91.5 lakh - What's next?",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
   "time": "21 Nov 03:47",
   "source": "BusinessStandard",
   "category": "DEAL/ORDER",
@@ -478,5 +270,213 @@
   "headline": "US stocks tumble 2% as Anthropic IPO fails to revive AI trade optimism",
   "event": "yes",
   "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 08:10",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "US Market Crash: Nasdaq enters 'bear market' - 10 things for investors to know",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 08:10",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Anthropic tumbles more than 10% in premarket trade as AI slump engulfs markets",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 08:15",
+  "source": "GoogleNews-Business",
+  "category": "CRASH/SHOCK",
+  "headline": "GIFT Nifty plunges over 200 pts, signals sharp fall for Sensex, Nifty as Nasdaq sinks 2.3%, Asian markets... - Moneycontrol.com",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 08:15",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Muthoot Finance heads for worst week since April 2025 as gold rout triggers sell-off",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 08:15",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Gold price crash: Yellow metal and silver slump over 4% each on MCX",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 08:20",
+  "source": "CNBC-TV18",
+  "category": "RBI-POLICY",
+  "headline": "Japan core inflation picks up, makes case for BoJ rate hike stronger",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "21 Nov 08:20",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Nikkei, Kospi fall over 4% each; Asian markets crash as AI sell-off deepens despite record Anthropic IPO",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 08:20",
+  "source": "CNBC-TV18",
+  "category": "RBI-POLICY",
+  "headline": "Gold falls further, set for worst week since March as Fed rate hike worries rise",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "21 Nov 08:25",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "'More To Come' - IMF Managing Director warns the AI sell-off may not be over yet",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 08:25",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "US Market Crash: Dow Jones tanks 1,100 points, nears technical correction - What is plaguing Wall Street?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 08:25",
+  "source": "CNBC-TV18",
+  "category": "DEAL/ORDER",
+  "headline": "Voltas signs JV agreement with Atomberg for room AC compressors, to acquire 50% stake",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "21 Nov 08:30",
+  "source": "CNBC-TV18",
+  "category": "DEAL/ORDER",
+  "headline": "Paytm to invest up to \u20b9200 crore in Funding Societies' subsidiaries, acquires 19% in CardUp",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "21 Nov 08:30",
+  "source": "CNBC-TV18",
+  "category": "LEGAL/REGULATORY",
+  "headline": "Atul's US subsidiary faces probe over alleged evasion of anti-dumping duties on 2,4-D imports",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 08:30",
+  "source": "CNBC-TV18",
+  "category": "APPROVAL",
+  "headline": "Go Digit gets IFSCA approval to set up insurance office in GIFT City",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "21 Nov 08:36",
+  "source": "CNBC-TV18",
+  "category": "APPROVAL",
+  "headline": "Alkem Laboratories gets USFDA warning letter with OAI classification for Daman facility",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "21 Nov 08:36",
+  "source": "CNBC-TV18",
+  "category": "LEADER-EXIT",
+  "headline": "PB Fintech shares fall up to 6% after co-founder Alok Bansal to step down from executive role next year",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 08:36",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Global commodity prices plunge: These are the metals impacted and Emkay's preferred plays",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 08:41",
+  "source": "CNBC-TV18",
+  "category": "RBI-POLICY",
+  "headline": "Asian markets mixed as investors weigh Anthropic's record IPO against Fed rate hike risks",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "21 Nov 08:41",
+  "source": "CNBC-TV18",
+  "category": "DEAL/ORDER",
+  "headline": "Dalmia Bharat to consider share buyback at November 23 board meeting",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "21 Nov 08:41",
+  "source": "CNBC-TV18",
+  "category": "DEAL/ORDER",
+  "headline": "LT Foods to acquire 100% stake in US-based Maya Kaimal parent for $5.8 million",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "21 Nov 08:46",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Metal Stocks Under Pressure: Why Domestic Steel Outshines Aluminium Amid Global Sell-Off",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 08:46",
+  "source": "CNBC-TV18",
+  "category": "EARNINGS",
+  "headline": "Dow Jones falls 1,600 points in two sessions, but futures rebound after Nvidia results",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "21 Nov 08:46",
+  "source": "CNBC-TV18",
+  "category": "EARNINGS",
+  "headline": "Nvidia shares jump nearly 6% after strong Q3 results, guidance increase, management commentary",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "21 Nov 08:51",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "SELLAS Life Sciences shares plunge 19%: What triggered the sharp sell-off?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 08:51",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "SoftBank shares crash 14.5%, biggest 1-day fall in 2 years: Why Anthropic's strong IPO debut failed to revive AI trade",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "21 Nov 08:51",
+  "source": "Mint",
+  "category": "EARNINGS",
+  "headline": "Power stocks to buy: Why Axis Sec is betting on NTPC and JSW Energy shares post Q2 results? Check targets, rationale",
+  "event": "no",
+  "hint": "read the numbers: tone only"
  }
 ]
