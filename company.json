@@ -1,0 +1,2877 @@
+{
+ "updated_at": "2026-11-21T18:15:36+05:30",
+ "ceo": {
+  "name": "Balaji",
+  "title": "CEO"
+ },
+ "coo": {
+  "name": "Raghav",
+  "role": "COO",
+  "tokens": 0,
+  "notes": [
+   {
+    "team": "scalp",
+    "level": "warn",
+    "text": "Scalping desk: targets hit 1 times against 4.0 expected by pure chance (z -1.95): no edge so far."
+   },
+   {
+    "team": "mcx",
+    "level": "warn",
+    "text": "Commodities desk: targets hit 2 times against 4.7 expected by pure chance (z -1.54): no edge so far."
+   },
+   {
+    "team": "crypto",
+    "level": "warn",
+    "text": "Crypto desk: targets hit 1 times against 9.3 expected by pure chance (z -3.34): no edge so far."
+   }
+  ],
+  "requests": [
+   {
+    "id": "R261121-crypto-1",
+    "team": "crypto",
+    "strategy": null,
+    "kind": "team",
+    "status": "approved",
+    "created": "21 Nov 03:42",
+    "text": "Crypto desk keeps losing: 26 closed trades, net \u2212\u20b9713, 30.8% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close.",
+    "decided": "21 Nov 08:15"
+   }
+  ],
+  "doing": "Supervising 9 teams: 1 traded today, company \u2212\u20b9159.",
+  "hires": [],
+  "designation": "COO"
+ },
+ "pnl": {
+  "today_rs": -158.89,
+  "open_rs": -155.99,
+  "closed_rs": -158.89,
+  "trades": 4,
+  "open": 13,
+  "equity_rs": 118991.37
+ },
+ "flows": [
+  {
+   "t": "17:34:39",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:35:25",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:36:14",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:37:01",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:37:52",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:38:48",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:39:06",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u2212\u20b9159"
+  },
+  {
+   "t": "17:39:35",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:40:24",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:41:09",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:42:01",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:42:58",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:43:44",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:44:06",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u2212\u20b9159"
+  },
+  {
+   "t": "17:44:29",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:45:15",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:46:05",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:46:51",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:47:37",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:48:27",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:48:34",
+   "from": "src:news",
+   "to": "intraday-1",
+   "kind": "data",
+   "text": "Fear \u00b7 BANSWRAS: Banswara Syntex fined \u20b950,740 each by BSE and NSE for compliance delay - "
+  },
+  {
+   "t": "17:49:14",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:49:14",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u2212\u20b9159"
+  },
+  {
+   "t": "17:50:01",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:50:51",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:51:37",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:52:28",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:53:26",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:54:12",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:54:17",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u2212\u20b9159"
+  },
+  {
+   "t": "17:54:57",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:55:44",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:56:35",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:57:21",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:58:07",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:58:57",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "17:59:21",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u2212\u20b9159"
+  },
+  {
+   "t": "17:59:43",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:00:29",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:01:18",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:02:03",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:02:54",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:03:50",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:04:24",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u2212\u20b9159"
+  },
+  {
+   "t": "18:04:36",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:05:22",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:06:08",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:06:58",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:07:44",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:08:35",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:09:26",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:09:26",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u2212\u20b9159"
+  },
+  {
+   "t": "18:10:12",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:10:58",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:11:49",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:12:40",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:13:30",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:14:16",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "18:14:28",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u2212\u20b9159"
+  },
+  {
+   "t": "18:15:03",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  }
+ ],
+ "teams": [
+  {
+   "id": "scalp",
+   "name": "Scalping desk",
+   "color": "#22d3ee",
+   "source": "upstox",
+   "sources": [
+    "upstox",
+    "indmoney"
+   ],
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Riya",
+     "role": "Lead analyst",
+     "doing": "Market closed: the scan restarts at 09:30.",
+     "tokens": 0
+    },
+    {
+     "name": "Dev",
+     "role": "Quant analyst",
+     "doing": "Record: 10 closed, 20.0% won, average \u2212\u20b968, target hits 1 vs 4.0 by chance (z -1.95).",
+     "tokens": 0
+    },
+    {
+     "name": "Kabir",
+     "role": "Trading manager",
+     "doing": "Waiting: no setup has met the rules yet today.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "effort": 2,
+   "staff": [
+    {
+     "id": "scalp-0",
+     "name": "Asha",
+     "designation": "Associate",
+     "role": "Universe scanner",
+     "kind": "data",
+     "status": "idle",
+     "doing": "Market closed: waiting for the session",
+     "record": {
+      "trades": 10,
+      "wins": 2,
+      "pnl_rs": -676.66,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "scalp-1",
+     "name": "Riya",
+     "designation": "Associate",
+     "role": "VWAP pullback hunter",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: no pullback has met the rule yet today",
+     "record": {
+      "trades": 10,
+      "wins": 2,
+      "pnl_rs": -676.66,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "scalp-2",
+     "name": "Dev",
+     "designation": "Associate",
+     "role": "Volatility quant",
+     "kind": "quant",
+     "status": "idle",
+     "doing": "Market closed: keeps every stop at least one standard deviation of 10-minute noise away",
+     "record": {
+      "trades": 10,
+      "wins": 2,
+      "pnl_rs": -676.66,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "scalp-3",
+     "name": "Mihir",
+     "designation": "Associate",
+     "role": "Charges quant",
+     "kind": "quant",
+     "status": "idle",
+     "doing": "Market closed: skips any setup whose charges would eat more than a third of the target",
+     "record": {
+      "trades": 10,
+      "wins": 2,
+      "pnl_rs": -676.66,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "scalp-m",
+     "name": "Kabir",
+     "designation": "Manager",
+     "role": "Trading manager",
+     "kind": "trader",
+     "status": "idle",
+     "doing": "Market closed: waiting: no setup has met the rules yet today.",
+     "record": {
+      "trades": 10,
+      "wins": 2,
+      "pnl_rs": -676.66,
+      "basis": "team record"
+     }
+    }
+   ],
+   "manager": "scalp-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 10,
+    "win_rate": 20.0,
+    "avg_rs": -67.67,
+    "net_rs": -676.66,
+    "worst_run": 4,
+    "profit_factor": 0.26,
+    "target_hits": 1,
+    "expected_hits": 4.0,
+    "edge_z": -1.95,
+    "hit_rate": 0.1
+   },
+   "verdicts": [
+    {
+     "strategy": "scalp_vwap_pullback",
+     "closed": 10,
+     "win_rate": 20.0,
+     "pnl_rs": -676.66,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "intraday",
+   "name": "Intraday hunters",
+   "color": "#f97316",
+   "source": "news",
+   "sources": [
+    "upstox",
+    "nse",
+    "news"
+   ],
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Ananya",
+     "role": "Lead analyst",
+     "doing": "Preparing the morning plan at 08:45.",
+     "tokens": 0
+    },
+    {
+     "name": "Ishaan",
+     "role": "Quant analyst",
+     "doing": "Record: 27 closed, 29.6% won, average \u2212\u20b927, target hits 1 vs 2.7 by chance (z -1.25).",
+     "tokens": 0
+    },
+    {
+     "name": "Vikram",
+     "role": "Trading manager",
+     "doing": "Waiting: no setup has met the rules yet today.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "effort": 2,
+   "staff": [
+    {
+     "id": "intraday-0",
+     "name": "Ananya",
+     "designation": "Associate",
+     "role": "Filings hunter",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: 17 companies filed news today that leans one way",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "intraday-1",
+     "name": "Farah",
+     "designation": "Associate",
+     "role": "Headlines hunter",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: reading every market feed once a minute: no headline in the last 3 hours names one company and leans one way",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "intraday-2",
+     "name": "Kunal",
+     "designation": "Associate",
+     "role": "Gap scanner",
+     "kind": "data",
+     "status": "idle",
+     "doing": "Market closed: scanning 0 liquid stocks: nothing meets the rule right now",
+     "record": {
+      "trades": 9,
+      "wins": 1,
+      "pnl_rs": -705.77,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "intraday-3",
+     "name": "Divya",
+     "designation": "Associate",
+     "role": "Momentum scanner",
+     "kind": "data",
+     "status": "idle",
+     "doing": "Market closed: scanning 0 liquid stocks: nothing meets the rule right now",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "intraday-4",
+     "name": "Manav",
+     "designation": "Associate",
+     "role": "VWAP pressure scanner",
+     "kind": "data",
+     "status": "idle",
+     "doing": "Market closed: scanning 0 liquid stocks: nothing meets the rule right now",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "intraday-5",
+     "name": "Ishaan",
+     "designation": "Associate",
+     "role": "Risk quant",
+     "kind": "quant",
+     "status": "idle",
+     "doing": "Market closed: sizes each trade to Rs 150 of risk: stop just beyond VWAP, target 2R, stop moved to entry after a 1R gain",
+     "record": {
+      "trades": 27,
+      "wins": 8,
+      "pnl_rs": -733.1,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "intraday-m",
+     "name": "Vikram",
+     "designation": "Manager",
+     "role": "Trading manager",
+     "kind": "trader",
+     "status": "idle",
+     "doing": "Market closed: waiting: no setup has met the rules yet today.",
+     "record": {
+      "trades": 27,
+      "wins": 8,
+      "pnl_rs": -733.1,
+      "basis": "team record"
+     }
+    }
+   ],
+   "manager": "intraday-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 27,
+    "win_rate": 29.6,
+    "avg_rs": -27.15,
+    "net_rs": -733.1,
+    "worst_run": 10,
+    "profit_factor": 0.56,
+    "target_hits": 1,
+    "expected_hits": 2.7,
+    "edge_z": -1.25,
+    "hit_rate": 0.077
+   },
+   "verdicts": [
+    {
+     "strategy": "gap-and-go",
+     "closed": 9,
+     "win_rate": 11.1,
+     "pnl_rs": -705.77,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "headline-led",
+     "closed": 1,
+     "win_rate": 100.0,
+     "pnl_rs": 290.51,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "news-led",
+     "closed": 3,
+     "win_rate": 33.3,
+     "pnl_rs": -133.53,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "price_only",
+     "closed": 14,
+     "win_rate": 35.7,
+     "pnl_rs": -184.31,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "swing",
+   "name": "Swing & signals",
+   "color": "#84cc16",
+   "source": "upstox",
+   "sources": [
+    "upstox",
+    "nse"
+   ],
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Meera",
+     "role": "Lead analyst",
+     "doing": "Daily chart scan after the close; holding 13 swing positions with stops.",
+     "tokens": 0
+    },
+    {
+     "name": "Rohan",
+     "role": "Quant analyst",
+     "doing": "GAIL long: reward 4.0\u00d7 the risk; a random walk reaches the target first 20% of the time; break-even needs 26% wins after charges.",
+     "tokens": 0
+    },
+    {
+     "name": "Arjun",
+     "role": "Trading manager",
+     "doing": "Holding 13: GAIL long at 188.99, stop 179.54, now \u2212\u20b913.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "effort": 1,
+   "staff": [
+    {
+     "id": "swing-0",
+     "name": "Meera",
+     "designation": "Associate",
+     "role": "Breakout analyst",
+     "kind": "research",
+     "status": "holding",
+     "doing": "5 open position(s): GAIL, PETRONET, PNB",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "swing-1",
+     "name": "Gautam",
+     "designation": "Associate",
+     "role": "Trend analyst",
+     "kind": "research",
+     "status": "holding",
+     "doing": "5 open position(s): LAURUSLABS, MAHABANK, PAYTM, SONACOMS",
+     "record": {
+      "trades": 1,
+      "wins": 0,
+      "pnl_rs": -335.67,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "swing-2",
+     "name": "Leela",
+     "designation": "Associate",
+     "role": "Dip analyst",
+     "kind": "research",
+     "status": "holding",
+     "doing": "3 open position(s): HAL, HCLTECH, PAYTM",
+     "record": {
+      "trades": 1,
+      "wins": 0,
+      "pnl_rs": -335.67,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "swing-3",
+     "name": "Sana",
+     "designation": "Associate",
+     "role": "Signal desk",
+     "kind": "research",
+     "status": "holding",
+     "doing": "1 open position(s): PNB",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "swing-4",
+     "name": "Rohan",
+     "designation": "Associate",
+     "role": "Backtest quant",
+     "kind": "backtest",
+     "status": "idle",
+     "doing": "Market closed: five-year tests decide which daily rules may trade",
+     "record": {
+      "trades": 1,
+      "wins": 0,
+      "pnl_rs": -335.67,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "swing-m",
+     "name": "Arjun",
+     "designation": "Manager",
+     "role": "Trading manager",
+     "kind": "trader",
+     "status": "holding",
+     "doing": "Holding 13: GAIL long at 188.99, stop 179.54, now \u2212\u20b913.",
+     "record": {
+      "trades": 1,
+      "wins": 0,
+      "pnl_rs": -335.67,
+      "basis": "team record"
+     }
+    }
+   ],
+   "manager": "swing-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 13,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 1,
+    "win_rate": 0.0,
+    "avg_rs": -335.67,
+    "net_rs": -335.67,
+    "worst_run": 1,
+    "profit_factor": 0.0
+   },
+   "verdicts": [
+    {
+     "strategy": "pullback_in_uptrend",
+     "closed": 1,
+     "win_rate": 0.0,
+     "pnl_rs": -335.67,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "fno",
+   "name": "F&O desk",
+   "color": "#a78bfa",
+   "source": "upstox",
+   "sources": [
+    "upstox",
+    "nse"
+   ],
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Neha",
+     "role": "Lead analyst",
+     "doing": "NIFTY 2026-11-23: put-to-call 1.69, call wall 26,000, put wall 24,500.",
+     "tokens": 0
+    },
+    {
+     "name": "Siddharth",
+     "role": "Quant analyst",
+     "doing": "Record: 18 closed, 66.7% won, average +\u20b91,308.",
+     "tokens": 0
+    },
+    {
+     "name": "Karan",
+     "role": "Trading manager",
+     "doing": "Waiting: no setup has met the rules yet today.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "effort": 1,
+   "staff": [
+    {
+     "id": "fno-0",
+     "name": "Neha",
+     "designation": "Senior Associate",
+     "role": "NIFTY chain reader",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: 2026-11-23: put-to-call 1.69, call wall 26,000, put wall 24,500",
+     "record": {
+      "trades": 18,
+      "wins": 12,
+      "pnl_rs": 23549.25,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "fno-1",
+     "name": "Varun",
+     "designation": "Associate",
+     "role": "Bank Nifty chain reader",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: 2026-11-23: put-to-call 1.39, call wall 66,000, put wall 63,000",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "fno-2",
+     "name": "Anjali",
+     "designation": "Associate",
+     "role": "OI & participants",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: fIIs net -70,670 index futures, +374,199 puts",
+     "record": {
+      "trades": 18,
+      "wins": 12,
+      "pnl_rs": 23549.25,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "fno-3",
+     "name": "Siddharth",
+     "designation": "Associate",
+     "role": "IV vs realised quant",
+     "kind": "quant",
+     "status": "idle",
+     "doing": "Market closed: compares implied with realised volatility to pick buying or selling",
+     "record": {
+      "trades": 18,
+      "wins": 12,
+      "pnl_rs": 23549.25,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "fno-4",
+     "name": "Tanvi",
+     "designation": "Associate",
+     "role": "Margin checker",
+     "kind": "quant",
+     "status": "idle",
+     "doing": "Market closed: every structure is checked with the broker's margin calculator",
+     "record": {
+      "trades": 18,
+      "wins": 12,
+      "pnl_rs": 23549.25,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "fno-m",
+     "name": "Karan",
+     "designation": "Manager",
+     "role": "Trading manager",
+     "kind": "trader",
+     "status": "idle",
+     "doing": "Market closed: waiting: no setup has met the rules yet today.",
+     "record": {
+      "trades": 18,
+      "wins": 12,
+      "pnl_rs": 23549.25,
+      "basis": "team record"
+     }
+    }
+   ],
+   "manager": "fno-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 18,
+    "win_rate": 66.7,
+    "avg_rs": 1308.29,
+    "net_rs": 23549.25,
+    "worst_run": 2,
+    "profit_factor": 6.51
+   },
+   "verdicts": [
+    {
+     "strategy": "credit_spread",
+     "closed": 2,
+     "win_rate": 50.0,
+     "pnl_rs": -221.75,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "debit_spread",
+     "closed": 3,
+     "win_rate": 33.3,
+     "pnl_rs": 1014.5,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "iron_condor",
+     "closed": 2,
+     "win_rate": 50.0,
+     "pnl_rs": -63.25,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "long_breakout",
+     "closed": 4,
+     "win_rate": 75.0,
+     "pnl_rs": 9505.5,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "long_straddle",
+     "closed": 2,
+     "win_rate": 100.0,
+     "pnl_rs": 8969.25,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "short_strangle",
+     "closed": 2,
+     "win_rate": 100.0,
+     "pnl_rs": 1091.25,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "weekly_bull_put_spread",
+     "closed": 1,
+     "win_rate": 100.0,
+     "pnl_rs": 2249.75,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "weekly_iron_butterfly",
+     "closed": 1,
+     "win_rate": 0.0,
+     "pnl_rs": -1919.25,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "weekly_iron_condor",
+     "closed": 1,
+     "win_rate": 100.0,
+     "pnl_rs": 2923.25,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "mcx",
+   "name": "Commodities desk",
+   "color": "#f59e0b",
+   "source": "upstox",
+   "sources": [
+    "upstox",
+    "yahoo"
+   ],
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Pooja",
+     "role": "Lead analyst",
+     "doing": "Brent -4.10%, gold -4.09% overnight; tracking 4 MCX contracts the account can carry.",
+     "tokens": 0
+    },
+    {
+     "name": "Aditya",
+     "role": "Quant analyst",
+     "doing": "Record: 14 closed, 42.9% won, average \u2212\u20b9135, target hits 2 vs 4.7 by chance (z -1.54).",
+     "tokens": 0
+    },
+    {
+     "name": "Zoya",
+     "role": "Trading manager",
+     "doing": "Waiting: no setup has met the rules yet today.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "effort": 1,
+   "staff": [
+    {
+     "id": "mcx-0",
+     "name": "Pooja",
+     "designation": "Associate",
+     "role": "Gold 1 g",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: no price yet",
+     "record": {
+      "trades": 3,
+      "wins": 2,
+      "pnl_rs": 221.01,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "mcx-1",
+     "name": "Irfan",
+     "designation": "Associate",
+     "role": "Silver 1 kg",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: no price yet",
+     "record": {
+      "trades": 2,
+      "wins": 1,
+      "pnl_rs": -1067.95,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "mcx-2",
+     "name": "Rekha",
+     "designation": "Associate",
+     "role": "Crude oil mini",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: no price yet",
+     "record": {
+      "trades": 5,
+      "wins": 2,
+      "pnl_rs": -606.19,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "mcx-3",
+     "name": "Vivek",
+     "designation": "Associate",
+     "role": "Natural gas mini",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: no price yet",
+     "record": {
+      "trades": 4,
+      "wins": 1,
+      "pnl_rs": -430.97,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "mcx-4",
+     "name": "Aditya",
+     "designation": "Associate",
+     "role": "Margin quant",
+     "kind": "quant",
+     "status": "idle",
+     "doing": "Market closed: checks margin and noise before every trade",
+     "record": {
+      "trades": 14,
+      "wins": 6,
+      "pnl_rs": -1884.1,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "mcx-m",
+     "name": "Zoya",
+     "designation": "Manager",
+     "role": "Trading manager",
+     "kind": "trader",
+     "status": "idle",
+     "doing": "Market closed: waiting: no setup has met the rules yet today.",
+     "record": {
+      "trades": 14,
+      "wins": 6,
+      "pnl_rs": -1884.1,
+      "basis": "team record"
+     }
+    }
+   ],
+   "manager": "mcx-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 14,
+    "win_rate": 42.9,
+    "avg_rs": -134.58,
+    "net_rs": -1884.1,
+    "worst_run": 4,
+    "profit_factor": 0.58,
+    "target_hits": 2,
+    "expected_hits": 4.7,
+    "edge_z": -1.54,
+    "hit_rate": 0.143
+   },
+   "verdicts": [
+    {
+     "strategy": "mcx_momentum",
+     "closed": 12,
+     "win_rate": 41.7,
+     "pnl_rs": -2163.11,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "mcx_pullback",
+     "closed": 2,
+     "win_rate": 50.0,
+     "pnl_rs": 279.01,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "crypto",
+   "name": "Crypto desk",
+   "color": "#ec4899",
+   "source": "kraken",
+   "sources": [
+    "kraken"
+   ],
+   "status": "Paused by you",
+   "agents": [
+    {
+     "name": "Tara",
+     "role": "Lead analyst",
+     "doing": "Reading 6 coins on Kraken around the clock; long only (spot).",
+     "tokens": 0
+    },
+    {
+     "name": "Nikhil",
+     "role": "Quant analyst",
+     "doing": "XRP long: reward 2.0\u00d7 the risk; a random walk reaches the target first 33% of the time; break-even needs 33% wins after charges.",
+     "tokens": 0
+    },
+    {
+     "name": "Sam",
+     "role": "Trading manager",
+     "doing": "Closed BTC long (time): \u2212\u20b910.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "effort": 1,
+   "staff": [
+    {
+     "id": "crypto-0",
+     "name": "Tara",
+     "designation": "Associate",
+     "role": "BTC",
+     "kind": "research",
+     "status": "vacant",
+     "doing": "+0.09% today",
+     "record": {
+      "trades": 3,
+      "wins": 1,
+      "pnl_rs": -25.07,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "crypto-1",
+     "name": "Kiran",
+     "designation": "Associate",
+     "role": "ETH",
+     "kind": "research",
+     "status": "vacant",
+     "doing": "+2.81% today, moving: watching for an entry",
+     "record": {
+      "trades": 4,
+      "wins": 1,
+      "pnl_rs": 116.68,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "crypto-2",
+     "name": "Ayaan",
+     "designation": "Associate",
+     "role": "SOL",
+     "kind": "research",
+     "status": "vacant",
+     "doing": "+0.80% today",
+     "record": {
+      "trades": 6,
+      "wins": 2,
+      "pnl_rs": -86.88,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "crypto-3",
+     "name": "Mira",
+     "designation": "Associate",
+     "role": "XRP",
+     "kind": "research",
+     "status": "vacant",
+     "doing": "-0.33% today",
+     "record": {
+      "trades": 6,
+      "wins": 2,
+      "pnl_rs": -255.62,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "crypto-4",
+     "name": "Zubin",
+     "designation": "Associate",
+     "role": "DOGE",
+     "kind": "research",
+     "status": "vacant",
+     "doing": "-0.16% today",
+     "record": {
+      "trades": 4,
+      "wins": 1,
+      "pnl_rs": -181.79,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "crypto-5",
+     "name": "Esha",
+     "designation": "Associate",
+     "role": "ADA",
+     "kind": "research",
+     "status": "vacant",
+     "doing": "-1.05% today, moving: watching for an entry",
+     "record": {
+      "trades": 5,
+      "wins": 1,
+      "pnl_rs": -339.68,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "crypto-6",
+     "name": "Nikhil",
+     "designation": "Associate",
+     "role": "Volatility quant",
+     "kind": "quant",
+     "status": "vacant",
+     "doing": "Sets stop and target from each coin's own volatility",
+     "record": {
+      "trades": 28,
+      "wins": 8,
+      "pnl_rs": -772.36,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "crypto-m",
+     "name": "Sam",
+     "designation": "Manager",
+     "role": "Trading manager",
+     "kind": "trader",
+     "status": "vacant",
+     "doing": "Closed BTC long (time): \u2212\u20b910.",
+     "record": {
+      "trades": 28,
+      "wins": 8,
+      "pnl_rs": -772.36,
+      "basis": "team record"
+     }
+    }
+   ],
+   "manager": "crypto-m",
+   "today": {
+    "pnl": -158.89,
+    "pnl_rs": -158.89,
+    "trades": 4,
+    "open": 0,
+    "closed": 4,
+    "wins": 0
+   },
+   "record": {
+    "n": 28,
+    "win_rate": 28.6,
+    "avg_rs": -27.58,
+    "net_rs": -772.36,
+    "worst_run": 14,
+    "profit_factor": 0.39,
+    "target_hits": 1,
+    "expected_hits": 9.3,
+    "edge_z": -3.34,
+    "hit_rate": 0.036
+   },
+   "verdicts": [
+    {
+     "strategy": "crypto_breakout",
+     "closed": 9,
+     "win_rate": 33.3,
+     "pnl_rs": -486.48,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "crypto_dip_bounce",
+     "closed": 19,
+     "win_rate": 26.3,
+     "pnl_rs": -285.88,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "intel",
+   "name": "Market intelligence",
+   "color": "#38bdf8",
+   "source": "news",
+   "sources": [
+    "nse",
+    "yahoo",
+    "news",
+    "upstox",
+    "claude"
+   ],
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Priya",
+     "role": "Lead analyst",
+     "doing": "Nifty forecast bearish (score -0.22), range 25,231 to 25,761. FIIs net -70,670 index futures.",
+     "tokens": 0
+    },
+    {
+     "name": "Aryan",
+     "role": "Quant analyst",
+     "doing": "Scoring the forecast against the close every evening: 0% right on direction over 2 days.",
+     "tokens": 0
+    },
+    {
+     "name": "Ira",
+     "role": "Chief forecaster",
+     "doing": "Sends the day's bias and levels to the F&O and equity desks.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "effort": 1,
+   "staff": [
+    {
+     "id": "intel-0",
+     "name": "Priya",
+     "designation": "Associate",
+     "role": "World markets",
+     "kind": "data",
+     "status": "idle",
+     "doing": "Market closed: overnight US, Asia, dollar, crude and gold, refreshed every half hour before the open",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "forecast record"
+     }
+    },
+    {
+     "id": "intel-1",
+     "name": "Rahul",
+     "designation": "Associate",
+     "role": "Smart money",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: nSE participant positions for 2026-11-18",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "forecast record"
+     }
+    },
+    {
+     "id": "intel-2",
+     "name": "Shreya",
+     "designation": "Associate",
+     "role": "Option walls",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: largest call and put open interest on NIFTY and Bank Nifty",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "forecast record"
+     }
+    },
+    {
+     "id": "intel-3",
+     "name": "Aman",
+     "designation": "Associate",
+     "role": "Headlines desk",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: claude read the headlines: bearish. A global AI-led sell-off hit Nasdaq, Asian markets and gold, and GIFT Nifty signals a sharply lower open. Indian benchmarks ",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "forecast record"
+     }
+    },
+    {
+     "id": "intel-4",
+     "name": "Aryan",
+     "designation": "Associate",
+     "role": "Forecast quant",
+     "kind": "quant",
+     "status": "idle",
+     "doing": "Market closed: nifty bearish, range 25,231 to 25,761",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "forecast record"
+     }
+    },
+    {
+     "id": "intel-m",
+     "name": "Ira",
+     "designation": "Manager",
+     "role": "Chief forecaster",
+     "kind": "trader",
+     "status": "idle",
+     "doing": "Market closed: sends the day's bias and levels to the F&O and equity desks.",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "forecast record"
+     }
+    }
+   ],
+   "manager": "intel-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 0
+   },
+   "verdicts": [],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "lab",
+   "name": "Strategy lab",
+   "color": "#10b981",
+   "source": "github",
+   "sources": [
+    "github",
+    "claude"
+   ],
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Priyanka",
+     "role": "Research agent",
+     "doing": "25 strategies in the pipeline; 0 passed every check.",
+     "tokens": 0
+    },
+    {
+     "name": "Lakshmi",
+     "role": "Evaluation agent",
+     "doing": "Seven checks on the paper record: enough trades, profit after charges, double costs, out of sample, beats chance, most days, losing streak.",
+     "tokens": 0
+    },
+    {
+     "name": "Vikas",
+     "role": "Lab manager",
+     "doing": "Writes the day's review after the close.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "effort": null,
+   "staff": [
+    {
+     "id": "lab-0",
+     "name": "Priyanka",
+     "designation": "Associate",
+     "role": "Research agent",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: reads every losing streak for an idea worth testing",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "strategies approved"
+     }
+    },
+    {
+     "id": "lab-1",
+     "name": "Omar",
+     "designation": "Associate",
+     "role": "Implementation agent",
+     "kind": "implement",
+     "status": "idle",
+     "doing": "Market closed: builds approved versions as new paper strategies",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "strategies approved"
+     }
+    },
+    {
+     "id": "lab-2",
+     "name": "Lakshmi",
+     "designation": "Associate",
+     "role": "Evaluation agent",
+     "kind": "backtest",
+     "status": "idle",
+     "doing": "Market closed: testing 25 strategies: 21 built, 4 tested, 0 approved, 0 to investigate",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "strategies approved"
+     }
+    },
+    {
+     "id": "lab-3",
+     "name": "Joseph",
+     "designation": "Associate",
+     "role": "Review agent",
+     "kind": "audit",
+     "status": "idle",
+     "doing": "Market closed: audits every check before a strategy is approved",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "strategies approved"
+     }
+    },
+    {
+     "id": "lab-4",
+     "name": "Rhea",
+     "designation": "Associate",
+     "role": "Data engineer",
+     "kind": "data",
+     "status": "alert",
+     "doing": "Data gaps: indmoney",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "strategies approved"
+     }
+    },
+    {
+     "id": "lab-m",
+     "name": "Vikas",
+     "designation": "Manager",
+     "role": "Lab manager",
+     "kind": "trader",
+     "status": "idle",
+     "doing": "Market closed: writes the day's review after the close.",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "strategies approved"
+     }
+    }
+   ],
+   "manager": "lab-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 0
+   },
+   "verdicts": [],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "ipo",
+   "name": "IPO desk",
+   "color": "#ef4444",
+   "source": "nse",
+   "sources": [
+    "nse",
+    "news",
+    "claude"
+   ],
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Kavya",
+     "role": "Lead analyst",
+     "doing": "19 issues tracked; 15 recent draft prospectuses.",
+     "tokens": 0
+    },
+    {
+     "name": "Harsh",
+     "role": "Valuation quant",
+     "doing": "Minimum lot at the top of the price band; listing range from subscription demand.",
+     "tokens": 0
+    },
+    {
+     "name": "Hari",
+     "role": "IPO manager",
+     "doing": "Suggests at most one lot; never applies on its own.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "effort": null,
+   "staff": [
+    {
+     "id": "ipo-0",
+     "name": "Kavya",
+     "designation": "Associate",
+     "role": "DRHP reader",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: 15 recent draft prospectuses filed with SEBI",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "listings called"
+     }
+    },
+    {
+     "id": "ipo-1",
+     "name": "Yash",
+     "designation": "Associate",
+     "role": "Subscription tracker",
+     "kind": "data",
+     "status": "idle",
+     "doing": "Market closed: 2 IPO(s) open: Mahanadi Coalfield, Watrana Rentals Li",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "listings called"
+     }
+    },
+    {
+     "id": "ipo-2",
+     "name": "Nisha",
+     "designation": "Associate",
+     "role": "IPO news reader",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: headlines for 3 issue(s)",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "listings called"
+     }
+    },
+    {
+     "id": "ipo-3",
+     "name": "Harsh",
+     "designation": "Associate",
+     "role": "Valuation quant",
+     "kind": "quant",
+     "status": "idle",
+     "doing": "Market closed: scores each issue on subscription, size and offer-for-sale share",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "listings called"
+     }
+    },
+    {
+     "id": "ipo-m",
+     "name": "Hari",
+     "designation": "Manager",
+     "role": "IPO manager",
+     "kind": "trader",
+     "status": "idle",
+     "doing": "Market closed: suggests at most one lot; never applies on its own.",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "listings called"
+     }
+    }
+   ],
+   "manager": "ipo-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 0
+   },
+   "verdicts": [],
+   "activity": 0,
+   "variant": null
+  }
+ ],
+ "sources": [
+  {
+   "id": "nse",
+   "name": "NSE",
+   "status": "ok",
+   "detail": "18 filings lean one way today; participant positions for 2026-11-18"
+  },
+  {
+   "id": "upstox",
+   "name": "Upstox",
+   "status": "idle",
+   "detail": "market closed: quotes resume at 09:00"
+  },
+  {
+   "id": "indmoney",
+   "name": "INDmoney",
+   "status": "off",
+   "detail": "not connected here: the gateway reads it only where INDSTOCKS_TOKEN is set"
+  },
+  {
+   "id": "kraken",
+   "name": "Kraken",
+   "status": "ok",
+   "detail": "6 coins from Kraken, real time"
+  },
+  {
+   "id": "yahoo",
+   "name": "Yahoo Finance",
+   "status": "idle",
+   "detail": "world markets refreshed 1266 min ago"
+  },
+  {
+   "id": "news",
+   "name": "News feeds",
+   "status": "ok",
+   "detail": "news pulse: 9 feeds read every minute in market hours, 25 signals today; 0 with the hunters now"
+  },
+  {
+   "id": "claude",
+   "name": "Claude AI",
+   "status": "ok",
+   "detail": "scheduled Claude analyst (your plan): last round 21 Nov 08:55, next on the hour's :20 from 09:20 to 16:20 IST on weekdays"
+  },
+  {
+   "id": "github",
+   "name": "CEO inbox (GitHub)",
+   "status": "ok",
+   "detail": "listening for your instructions every 5 minutes"
+  }
+ ],
+ "board": [],
+ "ledger": [],
+ "messages": [
+  {
+   "t": "21 Nov 08:15",
+   "from": "Raghav (COO)",
+   "text": "Done. crypto is paused: no new trades. Its open trades run to their exits. Resume it when you want it back.",
+   "kind": "decision"
+  },
+  {
+   "t": "21 Nov 03:42",
+   "from": "Raghav (COO)",
+   "text": "Crypto desk keeps losing: 26 closed trades, net \u2212\u20b9713, 30.8% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close. (request R261121-crypto-1)",
+   "kind": "request"
+  }
+ ],
+ "company": {
+  "pnl_today": -158.89,
+  "nifty_chg": null,
+  "equity": 118991.37,
+  "sessions": {
+   "equity": false,
+   "fno": false,
+   "mcx": false,
+   "crypto": true
+  }
+ },
+ "awards": {
+  "team": 500,
+  "coo": 1000
+ },
+ "execution": {
+  "mode": "dry",
+  "intents": 0,
+  "refused": 0
+ },
+ "quant": {
+  "C261121-67": {
+   "risk_rs": 37.61,
+   "reward_rs": 74.88,
+   "rr": 1.99,
+   "base_p": 0.334,
+   "breakeven_p": 0.334,
+   "used_p": 0.036,
+   "p_source": "team record",
+   "ev_rs": -33.56,
+   "kelly": -0.448
+  },
+  "C261121-66": {
+   "risk_rs": 37.5,
+   "reward_rs": 75.0,
+   "rr": 2.0,
+   "base_p": 0.333,
+   "breakeven_p": 0.333,
+   "used_p": 0.036,
+   "p_source": "team record",
+   "ev_rs": -33.45,
+   "kelly": -0.446
+  },
+  "C261121-64": {
+   "risk_rs": 37.5,
+   "reward_rs": 75.0,
+   "rr": 2.0,
+   "base_p": 0.333,
+   "breakeven_p": 0.333,
+   "used_p": 0.036,
+   "p_source": "team record",
+   "ev_rs": -33.45,
+   "kelly": -0.446
+  },
+  "C261121-65": {
+   "risk_rs": 37.5,
+   "reward_rs": 75.0,
+   "rr": 2.0,
+   "base_p": 0.333,
+   "breakeven_p": 0.333,
+   "used_p": 0.036,
+   "p_source": "team record",
+   "ev_rs": -33.45,
+   "kelly": -0.446
+  },
+  "S3": {
+   "risk_rs": 242.15
+  },
+  "S4": {
+   "risk_rs": 138.08
+  },
+  "S6": {
+   "risk_rs": 153.6,
+   "reward_rs": 768.0,
+   "rr": 5.0,
+   "base_p": 0.167,
+   "breakeven_p": 0.194,
+   "used_p": 0.167,
+   "p_source": "random-walk baseline",
+   "ev_rs": -25.17,
+   "kelly": -0.0
+  },
+  "S7": {
+   "risk_rs": 96.0,
+   "reward_rs": 480.0,
+   "rr": 5.0,
+   "base_p": 0.167,
+   "breakeven_p": 0.209,
+   "used_p": 0.167,
+   "p_source": "random-walk baseline",
+   "ev_rs": -24.58,
+   "kelly": -0.0
+  },
+  "S8": {
+   "risk_rs": 148.0,
+   "reward_rs": 740.0,
+   "rr": 5.0,
+   "base_p": 0.167,
+   "breakeven_p": 0.195,
+   "used_p": 0.167,
+   "p_source": "random-walk baseline",
+   "ev_rs": -25.12,
+   "kelly": -0.0
+  },
+  "S9": {
+   "risk_rs": 182.6,
+   "reward_rs": 730.4,
+   "rr": 4.0,
+   "base_p": 0.2,
+   "breakeven_p": 0.227,
+   "used_p": 0.2,
+   "p_source": "random-walk baseline",
+   "ev_rs": -25.1,
+   "kelly": 0.0
+  },
+  "S10": {
+   "risk_rs": 184.21
+  },
+  "S11": {
+   "risk_rs": 182.6
+  },
+  "S12": {
+   "risk_rs": 138.75
+  },
+  "S13": {
+   "risk_rs": 187.16
+  },
+  "G1": {
+   "risk_rs": 314.72
+  },
+  "S1": {
+   "risk_rs": 90.16,
+   "reward_rs": 360.62,
+   "rr": 4.0,
+   "base_p": 0.2,
+   "breakeven_p": 0.254,
+   "used_p": 0.2,
+   "p_source": "random-walk baseline",
+   "ev_rs": -24.34,
+   "kelly": 0.0
+  },
+  "S2": {
+   "risk_rs": 85.05,
+   "reward_rs": 340.2,
+   "rr": 4.0,
+   "base_p": 0.2,
+   "breakeven_p": 0.257,
+   "used_p": 0.2,
+   "p_source": "random-walk baseline",
+   "ev_rs": -24.3,
+   "kelly": -0.0
+  }
+ },
+ "state": {
+  "tokens": {},
+  "ledger": [],
+  "requests": [
+   {
+    "id": "R261121-crypto-1",
+    "team": "crypto",
+    "strategy": null,
+    "kind": "team",
+    "status": "approved",
+    "created": "21 Nov 03:42",
+    "text": "Crypto desk keeps losing: 26 closed trades, net \u2212\u20b9713, 30.8% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close.",
+    "decided": "21 Nov 08:15"
+   }
+  ],
+  "messages": [
+   {
+    "t": "21 Nov 08:15",
+    "from": "Raghav (COO)",
+    "text": "Done. crypto is paused: no new trades. Its open trades run to their exits. Resume it when you want it back.",
+    "kind": "decision"
+   },
+   {
+    "t": "21 Nov 03:42",
+    "from": "Raghav (COO)",
+    "text": "Crypto desk keeps losing: 26 closed trades, net \u2212\u20b9713, 30.8% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close. (request R261121-crypto-1)",
+    "kind": "request"
+   }
+  ],
+  "retired": [],
+  "resumed": [],
+  "paused_teams": [
+   "crypto"
+  ],
+  "variants": {},
+  "awarded": [],
+  "said": {
+   "scalp|2026-11-19|Hungry": 1,
+   "intraday|2026-11-19|Hungry": 1,
+   "swing|2026-11-19|Hungry": 1,
+   "fno|2026-11-19|Hungry": 1,
+   "mcx|2026-11-19|Injured": 1,
+   "crypto|2026-11-19|Injured": 1,
+   "intel|2026-11-19|Forecasting": 1,
+   "fno|2026-11-19|Thriving": 1,
+   "fno|2026-11-20|Hungry": 1,
+   "pushed": [
+    "R261121-crypto-1"
+   ]
+  },
+  "effort": {
+   "scalp": 2,
+   "intraday": 2,
+   "swing": 1,
+   "fno": 1,
+   "mcx": 1,
+   "crypto": 1,
+   "intel": 1
+  },
+  "hires": [],
+  "designations": {
+   "scalp-0": "Associate",
+   "scalp-1": "Associate",
+   "scalp-2": "Associate",
+   "scalp-3": "Associate",
+   "scalp-m": "Manager",
+   "intraday-0": "Associate",
+   "intraday-1": "Associate",
+   "intraday-2": "Associate",
+   "intraday-3": "Associate",
+   "intraday-4": "Associate",
+   "intraday-5": "Associate",
+   "intraday-m": "Manager",
+   "swing-0": "Associate",
+   "swing-1": "Associate",
+   "swing-2": "Associate",
+   "swing-3": "Associate",
+   "swing-4": "Associate",
+   "swing-m": "Manager",
+   "fno-0": "Senior Associate",
+   "fno-1": "Associate",
+   "fno-2": "Associate",
+   "fno-3": "Associate",
+   "fno-4": "Associate",
+   "fno-m": "Manager",
+   "mcx-0": "Associate",
+   "mcx-1": "Associate",
+   "mcx-2": "Associate",
+   "mcx-3": "Associate",
+   "mcx-4": "Associate",
+   "mcx-m": "Manager",
+   "crypto-0": "Associate",
+   "crypto-1": "Associate",
+   "crypto-2": "Associate",
+   "crypto-3": "Associate",
+   "crypto-4": "Associate",
+   "crypto-5": "Associate",
+   "crypto-6": "Associate",
+   "crypto-m": "Manager",
+   "intel-0": "Associate",
+   "intel-1": "Associate",
+   "intel-2": "Associate",
+   "intel-3": "Associate",
+   "intel-4": "Associate",
+   "intel-m": "Manager",
+   "lab-0": "Associate",
+   "lab-1": "Associate",
+   "lab-2": "Associate",
+   "lab-3": "Associate",
+   "lab-4": "Associate",
+   "lab-m": "Manager",
+   "ipo-0": "Associate",
+   "ipo-1": "Associate",
+   "ipo-2": "Associate",
+   "ipo-3": "Associate",
+   "ipo-m": "Manager"
+  },
+  "flows": [
+   {
+    "t": "17:20:50",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:21:39",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:22:25",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:23:15",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:24:00",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9159"
+   },
+   {
+    "t": "17:24:14",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:25:00",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:25:45",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:26:31",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:27:21",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:28:07",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:28:54",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:29:04",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9159"
+   },
+   {
+    "t": "17:29:43",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:30:30",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:31:17",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:32:06",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:32:51",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:33:42",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:34:04",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9159"
+   },
+   {
+    "t": "17:34:39",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:35:25",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:36:14",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:37:01",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:37:52",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:38:48",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:39:06",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9159"
+   },
+   {
+    "t": "17:39:35",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:40:24",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:41:09",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:42:01",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:42:58",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:43:44",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:44:06",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9159"
+   },
+   {
+    "t": "17:44:29",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:45:15",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:46:05",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:46:51",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:47:37",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:48:27",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:48:34",
+    "from": "src:news",
+    "to": "intraday-1",
+    "kind": "data",
+    "text": "Fear \u00b7 BANSWRAS: Banswara Syntex fined \u20b950,740 each by BSE and NSE for compliance delay - "
+   },
+   {
+    "t": "17:49:14",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:49:14",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9159"
+   },
+   {
+    "t": "17:50:01",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:50:51",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:51:37",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:52:28",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:53:26",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:54:12",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:54:17",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9159"
+   },
+   {
+    "t": "17:54:57",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:55:44",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:56:35",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:57:21",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:58:07",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:58:57",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "17:59:21",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9159"
+   },
+   {
+    "t": "17:59:43",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:00:29",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:01:18",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:02:03",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:02:54",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:03:50",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:04:24",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9159"
+   },
+   {
+    "t": "18:04:36",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:05:22",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:06:08",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:06:58",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:07:44",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:08:35",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:09:26",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:09:26",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9159"
+   },
+   {
+    "t": "18:10:12",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:10:58",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:11:49",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:12:40",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:13:30",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:14:16",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "18:14:28",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9159"
+   },
+   {
+    "t": "18:15:03",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   }
+  ],
+  "flow_seen": {
+   "C261121-67:OPEN": "2026-11-21",
+   "C261121-66:OPEN": "2026-11-21",
+   "C261121-64:LOSS": "2026-11-21",
+   "C261121-65:LOSS": "2026-11-21",
+   "C261121-67:LOSS": "2026-11-21",
+   "C261121-66:LOSS": "2026-11-21",
+   "sig:N113734-1": "2026-11-21",
+   "sig:N114735-2": "2026-11-21",
+   "sig:N120739-3": "2026-11-21",
+   "sig:N121741-4": "2026-11-21",
+   "sig:N123747-5": "2026-11-21",
+   "sig:N130751-6": "2026-11-21",
+   "sig:N130751-7": "2026-11-21",
+   "sig:N133754-8": "2026-11-21",
+   "sig:N134803-9": "2026-11-21",
+   "sig:N135758-10": "2026-11-21",
+   "sig:N140809-11": "2026-11-21",
+   "sig:N142812-12": "2026-11-21",
+   "sig:N143813-13": "2026-11-21",
+   "sig:N144727-14": "2026-11-21",
+   "sig:N145732-15": "2026-11-21",
+   "sig:N150728-16": "2026-11-21",
+   "sig:N152739-17": "2026-11-21",
+   "sig:N152739-18": "2026-11-21",
+   "sig:N154746-19": "2026-11-21",
+   "sig:N155749-20": "2026-11-21",
+   "sig:N162746-21": "2026-11-21",
+   "sig:N162746-22": "2026-11-21",
+   "sig:N163757-23": "2026-11-21",
+   "sig:N165803-24": "2026-11-21",
+   "sig:N174827-25": "2026-11-21"
+  },
+  "flow_at": {
+   "crypto": 1795229124.147547,
+   "lab": 1795265103.199201,
+   "ceo": 1795265068.280668
+  }
+ }
+}

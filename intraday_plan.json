@@ -1,0 +1,303 @@
+{
+ "day": "2026-11-20",
+ "built_at": "09:02",
+ "stage": 2,
+ "tone": {
+  "label": "Weak",
+  "score": -2.6,
+  "notes": [
+   "US markets averaged -2.15% at the 19/11 close.",
+   "Asia averaged -3.26%.",
+   "Brent crude 89.79 (-2.35%).",
+   "Dollar-rupee 93.17 (-0.31%).",
+   "India VIX 16.11: normal."
+  ],
+  "as_of": "2026-11-19"
+ },
+ "nifty": {
+  "last": 25484.8,
+  "chg_pct": -0.12
+ },
+ "world": [
+  {
+   "name": "S&P 500",
+   "last": 7175.83,
+   "chg_pct": -2.02
+  },
+  {
+   "name": "Nasdaq",
+   "last": 23879.2,
+   "chg_pct": -2.25
+  },
+  {
+   "name": "Dow Jones",
+   "last": 49097.06,
+   "chg_pct": -2.19
+  },
+  {
+   "name": "US fear index (VIX)",
+   "last": 28.44,
+   "chg_pct": 15.8
+  },
+  {
+   "name": "Nikkei 225",
+   "last": 56775.04,
+   "chg_pct": -4.49
+  },
+  {
+   "name": "Hang Seng",
+   "last": 22378.18,
+   "chg_pct": -2.03
+  },
+  {
+   "name": "Shanghai",
+   "last": 3512.22,
+   "chg_pct": -1.83
+  },
+  {
+   "name": "FTSE 100",
+   "last": 10452.7,
+   "chg_pct": -0.93
+  },
+  {
+   "name": "DAX",
+   "last": 25463.81,
+   "chg_pct": -1.06
+  },
+  {
+   "name": "Nifty 50",
+   "last": 25514.3,
+   "chg_pct": 1.14
+  }
+ ],
+ "events": [],
+ "results": [
+  {
+   "symbol": "ARSHIYA",
+   "company": "Arshiya Limited",
+   "time": "13 Nov 20:35"
+  },
+  {
+   "symbol": "DPSCLTD",
+   "company": "DPSC Limited",
+   "time": "13 Nov 19:22"
+  },
+  {
+   "symbol": "GBGLOBAL",
+   "company": "GB Global Limited",
+   "time": "13 Nov 19:12"
+  },
+  {
+   "symbol": "NAGAFERT",
+   "company": "Nagarjuna Fertilizers and Chemicals Limited",
+   "time": "13 Nov 18:34"
+  },
+  {
+   "symbol": "SETCO",
+   "company": "Setco Automotive Limited",
+   "time": "13 Nov 16:02"
+  },
+  {
+   "symbol": "SKIL",
+   "company": "SKIL Infrastructure Limited",
+   "time": "13 Nov 19:12"
+  }
+ ],
+ "headlines": [
+  {
+   "headline": "Stock Market LIVE: GIFT Nifty plunges 200 pts; Asian mkts extend losses on concern over AI trade",
+   "category": "CRASH/SHOCK",
+   "source": "BusinessStandard",
+   "time": "20 Nov 08:52"
+  },
+  {
+   "headline": "GIFT Nifty plunges over 200 pts, signals sharp fall for Sensex, Nifty as Nasdaq sinks 2.3%, Asian markets... - Moneycontrol.com",
+   "category": "CRASH/SHOCK",
+   "source": "GoogleNews",
+   "time": "20 Nov 08:31"
+  },
+  {
+   "headline": "Stock Market LIVE: GIFT Nifty plunges 190 pts; Asian mkts extend losses on concern over AI trade",
+   "category": "CRASH/SHOCK",
+   "source": "BusinessStandard",
+   "time": "20 Nov 08:26"
+  },
+  {
+   "headline": "Pre-Market Update: GIFT Nifty Signals Weak Start; Global Sell-off and AI Valuation Concerns Weigh on Market Sentiment - Dalal Street Investment Journal",
+   "category": "CRASH/SHOCK",
+   "source": "GoogleNews",
+   "time": "20 Nov 08:16"
+  },
+  {
+   "headline": "Trade Setup for Today: Global Sell-Off Hits Asian Markets; GIFT Nifty Signals Gap-Down Opening as of November 20, 2026 - scanx.trade",
+   "category": "CRASH/SHOCK",
+   "source": "GoogleNews",
+   "time": "20 Nov 08:11"
+  },
+  {
+   "headline": "On shaky ground: These 11 Indian MFs are most exposed to US tech selloff",
+   "category": "CRASH/SHOCK",
+   "source": "BusinessStandard",
+   "time": "20 Nov 08:11"
+  },
+  {
+   "headline": "AI sell-off hits Indian smallcaps; Sterlite, HFCL down up to 29% in a month - Business Standard",
+   "category": "CRASH/SHOCK",
+   "source": "GoogleNews",
+   "time": "20 Nov 07:56"
+  },
+  {
+   "headline": "Base, precious metals meltdown; dollar dominance holds key: Julius Baer",
+   "category": "CRASH/SHOCK",
+   "source": "BusinessStandard",
+   "time": "20 Nov 07:56"
+  }
+ ],
+ "watch": [
+  {
+   "symbol": "JWL",
+   "why": [
+    "positive filing"
+   ],
+   "prev_close": 195.48,
+   "long_above": 196.65,
+   "short_below": 191.57,
+   "stop_pct": 1.0,
+   "bias": "long"
+  },
+  {
+   "symbol": "SETCO",
+   "why": [
+    "results filed"
+   ],
+   "prev_close": 17.04,
+   "long_above": 17.38,
+   "short_below": 16.7,
+   "stop_pct": 1.0,
+   "bias": "either"
+  }
+ ],
+ "fno": [
+  {
+   "strategy": "Iron condor, credit spread (fixed return)",
+   "note": "Favoured on a quiet day"
+  },
+  {
+   "strategy": "Debit spread, long breakout (high return, low loss)",
+   "note": "Needs a 0.25% to 0.5% move from the previous close first; waits for the trend"
+  },
+  {
+   "strategy": "Long straddle (high return, high loss)",
+   "note": "Pays only on a big move; the desk skips it when its cost does not fit the F&O limit"
+  }
+ ],
+ "outlook": "Tone weak. 2 names in the news to watch; the desks act only when price confirms: a 2% move near the day's extreme (0.6% when a filing agrees) on real turnover.",
+ "world_at": 1795145554.9967322,
+ "gaps": {
+  "up": [
+   {
+    "symbol": "AUTOIETF",
+    "price": 29.67,
+    "chg_pct": 4.62
+   },
+   {
+    "symbol": "AUTOBEES",
+    "price": 296.15,
+    "chg_pct": 4.42
+   },
+   {
+    "symbol": "PSUBNKBEES",
+    "price": 109.03,
+    "chg_pct": 2.44
+   },
+   {
+    "symbol": "MAXHEALTH",
+    "price": 1065.0,
+    "chg_pct": 2.34
+   },
+   {
+    "symbol": "GROWWRAIL",
+    "price": 26.74,
+    "chg_pct": 2.33
+   },
+   {
+    "symbol": "CONSUMBEES",
+    "price": 136.21,
+    "chg_pct": 2.31
+   },
+   {
+    "symbol": "MON100",
+    "price": 303.51,
+    "chg_pct": 2.27
+   },
+   {
+    "symbol": "PSUBANK",
+    "price": 97.3,
+    "chg_pct": 2.23
+   },
+   {
+    "symbol": "PWL",
+    "price": 139.2,
+    "chg_pct": 2.2
+   },
+   {
+    "symbol": "PVTBANIETF",
+    "price": 31.22,
+    "chg_pct": 2.13
+   }
+  ],
+  "down": [
+   {
+    "symbol": "SILVERIETF",
+    "price": 149.62,
+    "chg_pct": -6.0
+   },
+   {
+    "symbol": "SILVERBEES",
+    "price": 143.65,
+    "chg_pct": -5.99
+   },
+   {
+    "symbol": "SHILPAMED",
+    "price": 854.3,
+    "chg_pct": -5.15
+   },
+   {
+    "symbol": "HINDZINC",
+    "price": 507.6,
+    "chg_pct": -4.05
+   },
+   {
+    "symbol": "GOLDIETF",
+    "price": 105.95,
+    "chg_pct": -3.8
+   },
+   {
+    "symbol": "MUTHOOTFIN",
+    "price": 2519.0,
+    "chg_pct": -3.78
+   },
+   {
+    "symbol": "MANAPPURAM",
+    "price": 273.0,
+    "chg_pct": -3.48
+   },
+   {
+    "symbol": "GOLDBEES",
+    "price": 102.8,
+    "chg_pct": -3.29
+   },
+   {
+    "symbol": "VAML",
+    "price": 360.0,
+    "chg_pct": -2.96
+   },
+   {
+    "symbol": "VEDL",
+    "price": 236.8,
+    "chg_pct": -2.83
+   }
+  ],
+  "at": "09:12"
+ }
+}

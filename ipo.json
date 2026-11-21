@@ -1,0 +1,931 @@
+{
+ "updated_at": "2026-11-21T18:04:41+05:30",
+ "ipos": [
+  {
+   "name": "Mahanadi Coalfields Limited",
+   "symbol": "MAHACOAL",
+   "board": "Mainboard",
+   "status": "open",
+   "open_date": "2026-11-19",
+   "close_date": "2026-11-23",
+   "listing_date": null,
+   "price_band": [
+    129.0,
+    136.0
+   ],
+   "lot_size": 110,
+   "min_invest_rs": 14960.0,
+   "issue_size_cr": 9000.97,
+   "fresh_cr": null,
+   "ofs_cr": 9000.97,
+   "subscription": {
+    "qib": 1.37,
+    "nii": 0.18,
+    "retail": 0.24,
+    "total": 0.48,
+    "as_of": "20-Nov-2026 17:03:00"
+   },
+   "drhp_url": null,
+   "news": [
+    {
+     "title": "Mahanadi Coalfields IPO Subscription Status Day 2: Issue Subscribed 0.49 Times",
+     "source": "HDFC Sky",
+     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBlSnlxcnBzV1dxQUoxTGJIQTNkNGRGaERxSWY3ekNjLWhNbDU4eEVabUdCNEpwemM3bE1hNDhMMU9tTjZSLVNLSEJXeWtLekZLeGRJTUVWd2QtWTNQdHp2VlZGdlBjdmlqVFlDQTB6cHJmSExOclV5WGxfcnlVQ1U?oc=5",
+     "time": "2026-11-20T11:53:36Z"
+    },
+    {
+     "title": "IPO watch: Two mainboard IPOs to open next week; Mahanadi Coalfields, Crystal Crop listing ahead",
+     "source": "Upstox",
+     "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNUi13RmZoeFRpVTFQd19PMklTdkNjcjhneUlIVjhSV0RDakl3ZEVsTXlVTjRBUlc0V0x3eWhPU0lDXzVkeGRQY3FRZk9nczJZWWVKVGNiT1cwc0l6X1RRN0Z3VGRQZXI3NzEyTU8zY0QtX0ZDY2hCeVVBVTVwTUtubW5lT0FqcFFHZHludzNITVFGNXFrZGlLdl8wR2ppUEJCVWlKNy1rdDA3Ty1HTGtKSEtSX0RqbVFkdHVvRGk4RkE5N3o3MURWRzUxN0UwdDQ0eXdpTS1iMmVnWkRFck5Nb1l2ZWU?oc=5",
+     "time": "2026-11-20T09:44:39Z"
+    },
+    {
+     "title": "Mahanadi Coalfields IPO Day 1: Subscribed 0.41x; QIBs lead at 1.26x",
+     "source": "scanx.trade",
+     "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNOTI2cjMwa3dvQ2FsTFNqTVBGa25iSGdfWktpeVh4TDFDZDJhdjBlNGhCcm9VZmRxem1zSXQtSnUyQ3RQUy1vek1jMkFMTjh6Z0I1SVJzdU5UVTBYRWFLRzNhemhTZy1vMnVuY013TkpsenB3blFZb2R3ZXVpS2t6QW9FQy16RVlaNnZ6VVdoTnlUVktvUEZIUFJFb3JKajFrSVhpUEtUT0N4WmMzc01vUjVzSWE1M0ZZbTFsSUcwZmR1LVJlM1JQNGZpYmRTNnpxYjVHcGdLMEEwQQ?oc=5",
+     "time": "2026-11-20T09:23:02Z"
+    },
+    {
+     "title": "Mahanadi Coalfields IPO Latest Update: Subscription Status, GMP, Price Band & Key Details (Nov 21)",
+     "source": "PSU Connect",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPX0dnck9OMGhPaXVmXzA0TThMeHUyeGlJVjdRV2Nnc1BtYXJMVk5lXzg2c1VsMXdKUU5KQlFQMEhGSVEwczJyYlpwZTlmVE1RTVZKLS1LQVpqQngydy1LbGUtT2NLUE1QRVZDVEZiejNPdDNVSmNQQXRqUThPc1J4dGZOOHlmc18wdmhMQlBFRzNkbGJEUjQtdURGQlBQam9YcHcxVEtHR01EWW5xLUo0bVowQXk?oc=5",
+     "time": "2026-11-20T06:21:00Z"
+    },
+    {
+     "title": "Mahanadi Coalfields IPO Day 2: Issue booked 48% as QIBs lead; check key dates, price band, other details",
+     "source": "Upstox",
+     "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPcU5NRndfVVlxbnRFRHk0aENRVjBWb3E4eXAza0xHcFY3dUh2M0ZlMk82cUlER2w5RW9NUVhsRUhpTVk2eXhaZTJ5S3Qzcno3cHVJVnBiTVdZTU5IVHc5bjY2TTFzM3pIdjBsZ0xmYzFmc2xlQmRvWFN2VnVpUk5uc3RRNlAwNTA3cVNCUXdPbDk4YTdnajh4cGNtbDZodFJpZURWa0UxWmZleDgzTE8yQXdMX2sybkpWMlViR3FkZUtVY0s0VkhOMFEwQjBWU2xlZnI5RUNuQzRWOEg1bU5KTUNaLV9zUVZBam4ydW9fRHkyV2JWQWc?oc=5",
+     "time": "2026-11-20T05:32:59Z"
+    }
+   ],
+   "thesis": "Bidding is open until 23 Nov and was 0.48x subscribed on day 2; QIBs are at 1.37x while retail is 0.24x. Institutions usually bid late, so early numbers say little. The issue is entirely offer-for-sale, so no money goes to the company. One lot costs about Rs 14,960; only a small bet is sensible, ideally after checking final-day demand.",
+   "analysis": {
+    "score": 15,
+    "verdict": "Watch",
+    "reasons": [
+     "Subscription: QIB 1.37x*0.5, NII 0.18x*0.3, RETAIL 0.24x*0.2 -> weighted 0.79x.",
+     "Bidding is still open; institutions usually bid on the last day, so an early low multiple says little. Re-check on the final day."
+    ],
+    "risks": [
+     "Offer-for-sale heavy: 100% of the issue (Rs 9,001 cr of Rs 9,001 cr) pays existing holders, not the company.",
+     "No matching DRHP found in SEBI's recent listing (older filings are not searched)."
+    ],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "too early to read: QIB 1.37x*0.5, NII 0.18x*0.3, RETAIL 0.24x*0.2 -> weighted 0.79x; the final-day demand is not visible yet"
+    },
+    "listing_px": null,
+    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 136.00. No target range yet: it needs subscription numbers. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot.",
+    "method": "rules+claude"
+   }
+  },
+  {
+   "name": "Watrana Rentals Limited",
+   "symbol": "WATRANA",
+   "board": "SME",
+   "status": "open",
+   "open_date": "2026-11-19",
+   "close_date": "2026-11-23",
+   "listing_date": null,
+   "price_band": [
+    232.0,
+    245.0
+   ],
+   "lot_size": 600,
+   "min_invest_rs": 147000.0,
+   "issue_size_cr": 120.1,
+   "fresh_cr": 120.1,
+   "ofs_cr": null,
+   "subscription": {
+    "qib": null,
+    "nii": null,
+    "retail": null,
+    "total": 11.1,
+    "as_of": null
+   },
+   "drhp_url": null,
+   "news": [
+    {
+     "title": "Watrana Rentals IPO Subscription Status Day 2: Issue Subscribed 11.89 Times",
+     "source": "HDFC Sky",
+     "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE94Slg0ak9EUFZfTjJvM2FWZ0NpMzlYU1poeVA0LXFTMERtN0dvMHFfdnVJb3pTOGYxVDJuQVZKSDJkREtMSXdUUURkeEV1U2xNdTBTZ0ZyZkFXWW81cWUzWEpEaG9OQW9GazFKR2lSRHJJTnVxeG8zSEdR?oc=5",
+     "time": "2026-11-20T11:55:34Z"
+    },
+    {
+     "title": "Mahanadi Coalfields Ltd IPO And Watrana Rentals IPO: Subscription Status, GMP, Allotment",
+     "source": "ETV Bharat",
+     "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNakxSeVhfdnNhRHFYdGlKNmRiNVN1YXNOeTFiZkNMMXhfYm5GU2c2TWRtamc2QWNIOERhMUdDLUN5dXFOeEdXaUJnR1ZTeGU4cmx4aTJvYXBEaENsd1NCSXg5QkZoQXczNkhsdXpidWFia3FYcm9FLUdWbUxqbUFwN0loclZyQ2RBMnBpbVhvU0JHSGItd1Iza21tYVVjN2hxWXVjdVF4d2ZVUHZ2dlBzUndCbzdWb2VIRlF1YnFvTzV3UVVYdmFqSG84Y3pXeUXSAdQBQVVfeXFMUHlYLXRnZHRZOFNkMFpWWjdlZWNzcVQ1bl9BbWZwcV9ZNDM2QzNqVkRZdTJPd3lfU0k1SjlkTWNNZTdYcHZGNl94aTVCd0NkZDdvcndxVkM3OEY3QjVFNGVyME1HN19ORnc0b3dnRDhiU2pHSDE1X1BQSjAyWkVwSUZoZGhhQ0IyS0VlNnRWY3VQa1AxOEdxX2tic2dxOUVXcXhnRTNTNEc4ejQ2bzNzdWlhcElPbmltT0FMMFluZloxQnBOWTZqOXFadXAtYWJkU3hCR1U?oc=5",
+     "time": "2026-11-20T08:43:15Z"
+    },
+    {
+     "title": "IPO GMP race: Mahanadi Coalfields vs Crystal Crop Protection vs Watrana Rentals - Check grey market winner | Key dates",
+     "source": "Livemint",
+     "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxQSFR5OWNVOWVIdFcxV1FNSlJCemtFX1dxbldWZm80MGtwWi1wQTFuOEdzUTFXcW04bDFUTVBUaVNxWThqTFBZTm5jdzVMQkVmREVwS0V2M2U3Ny1ZUzktZWpGaXIyUVB4ZXh0eENyWEV0NHB1U3Z6MEQ5WDFmV2pHcFp4ZEp0alFSeUlMZHNRVHh6MXFCRnM3SXNQby1rWEVoQXE1X1Z0YXJweXA4aUI5M1p2S1Q4M0NwUTFnUThSdVVfV2pnMXIxMk1WSEY5M0NsaE5jTS1ScHJXMjlKT2wyTW51TlFwZGM5RFhlVTZrTG9ld3VMdE51UlBWQ01hODdpWDZOczRmVmZ6dkNFa0E2RdIBlgJBVV95cUxQRXExeVViNTlOTVlvaWVva0ZfQlJoYzMzbnZ1LXNEbmVVaHRldDdFX1dPbXlNalRhN3loaU1xR0hNX3cybjVaTGNzb0NKRFozN041YUtYTXByZWVPXzRjbFZsMEE3VUE5c3Btc0lGT1pEampSeEVxYm03MHZrMjlqQ1JMTlJyZWRTMmljNHl1YWlaT2tpTFpGNlFneFVBMnFRM3U5czV3MXhENkNiSXpncUF1VlFlbFVwVWl5czc4T0Zjd2VEeDNhTmNZeVVqX1RIWTktdzdyS2Z0SThJLXRQdlFKN05fMkhHV2JuM2VyQVZUZTI0YTczanJ2ZE5KQXJxa1lSSzh1U2N4d0c3VDhZNnY5NWJpdw?oc=5",
+     "time": "2026-11-20T07:32:07Z"
+    },
+    {
+     "title": "Watrana Rentals vs Mahanadi Coalfields IPO GMP",
+     "source": "newskarnataka.com",
+     "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTEJuVThCeXpVdV9vNHpwV3E3RGE4SnRIYnZVSnM2SGRvalZnaHk4aGo4M2s4NldfOWNrNmUxYmZMSFRyX1Q4VE1Ca051dlRHd1BlemM5R2t5OUJXXzJUY283SXdOczRXci1Tdi1aNnVqc0JGVHBISWRtaUpsNVF4NWgyUmJSb3hDYW1yOURoNVNySUdEVFE?oc=5",
+     "time": "2026-11-20T05:20:02Z"
+    },
+    {
+     "title": "IPO GMP Today: Watrana Rentals Vs Mahanadi Coalfields | Which IPO Has Higher Listing Gain Potential?",
+     "source": "NDTV Profit",
+     "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNSnBnUGRwejhqZWo1VnBLQ19qdFg4RHNyT3RjWHA2bjlRQUVYYUxabEFfSnU2b25hN2xNM2QzNmUwODl5QnFPOHdsYS1GSWh1ajhSN3p3VjV3YXgzR1hjeFVURVl2WjVSOGlUZFoxRjZ2emU1SjlPQ1hMTmNhNDFrU2lvMnNFNk94OVFEbVRkVkJDU2R2bEo0ZkhNYWtyeW1kU1JMU2toWk1sTTBCcFotMnZFcmkyeVhpRU01aEVESlg2bkt3X1NiaGJ0WllJWC1tdDVCdGVtY9IB3wFBVV95cUxOWlRrOFBPcXlNTVhyU2ZQcW5sMjItN0xiZWVrSkFBWlRyaVNFeEtWU2ZzWmYzRGFDQnVqSFpRRmhObGs3bWRxRHN4RVpDWlVOU1dHb1BnMXlvWHRYalFlQWhQN1lOWk1LVHRmUEVuZ3VVRkVNa1dIRDVlV2VlUlJmQ0VGdXA4eDZIV1lXaDEyaHVQUHB4QjJwcWVTR3dPSU50NmQ4cGJXMUllVFE2a2psMkxfemRPa0VVTVRHQWZIOXQ4LUtJX01wWmJqWmJ6U25GbUo1TGx5Si1XWHozTUdn?oc=5",
+     "time": "2026-11-20T02:15:55Z"
+    }
+   ],
+   "thesis": "This SME issue was subscribed 11.1x overall, showing strong demand, though no category split is available. SME stocks have large lots, thin trading and big price swings. One lot costs about Rs 1.47 lakh, which is heavy for a small bet. Our score of 53 is below the bar to apply, so treat it as watch only.",
+   "analysis": {
+    "score": 53,
+    "verdict": "Watch",
+    "reasons": [
+     "Fresh issue is Rs 120 cr of Rs 120 cr, money that goes to the company.",
+     "Subscription: overall 11.10x (NSE gave no category split).",
+     "Score 53 is below the 70 bar to apply."
+    ],
+    "risks": [
+     "SME board: lots are large, trading is thin and prices swing far more than on the mainboard. Higher risk.",
+     "No matching DRHP found in SEBI's recent listing (older filings are not searched)."
+    ],
+    "listing_view": {
+     "low_pct": 0,
+     "high_pct": 40,
+     "basis": "overall 11.10x (NSE gave no category split). Rule of thumb for this multiple on a SME issue, not a forecast"
+    },
+    "listing_px": [
+     245.0,
+     343.0
+    ],
+    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 245.00. Target for the first half: inside the Rs 245.00 to Rs 343.00 range, ideally near the top. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot. SME shares are thinly traded, so a sell order may not fill at the price you want.",
+    "method": "rules+claude"
+   }
+  },
+  {
+   "name": "Shree Siddhivinayak Greentech Industries Limited",
+   "symbol": "SHREESIDHI",
+   "board": "SME",
+   "status": "upcoming",
+   "open_date": "2026-11-25",
+   "close_date": "2026-11-27",
+   "listing_date": null,
+   "price_band": [
+    130.0,
+    142.0
+   ],
+   "lot_size": 1000,
+   "min_invest_rs": 142000.0,
+   "issue_size_cr": 93.66,
+   "fresh_cr": 93.66,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [
+    {
+     "title": "Shree Siddhivinayak Greentech Industries IPO Date, Price Band, Issue Size",
+     "source": "IPO Watch",
+     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9Ea1BDZTI1cDdwWTlVYVREdFRXWklIUVRVRENTSHF3b3FMUWN4a2FZdWxMcThqeUZoRVhqNGlDQWl2emQyeU1HbndBMXV2Nl9JcEh0OC1FSXpWQlJVNmJrNUV5YnhLVlBOVVlsNHREbVktbTVQM0h5T1NyVlFWQQ?oc=5",
+     "time": "2026-11-20T14:18:48Z"
+    },
+    {
+     "title": "Shree Siddhivinayak Greentech Industries Ltd. IPO",
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMFRic3gwNzJQVDRadVVCbGhQb0tyMGxjYmhWejdQVFlET3dLNXdjU29GVXI0dUNibGhWNTR5Y3lkaFBaMGZTd3pSc1hZWTZsQVZSN3BGTVRYdjZkcFdXZTV3ajMzOVRwS2tZWHpZTFF2SmE2WHJzYm5YcEJ2N1ZNTndKRmtveEIwNnpOdGRGZklYbTZ4YWpiY3dHTW44SVAz?oc=5",
+     "time": "2026-11-20T06:37:50Z"
+    },
+    {
+     "title": "Shree Siddhivinayak Greentech Industries IPO GMP Today, Expected Listing Gain & Price Band",
+     "source": "IndiaIPO",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOTmZMckVxdjlFRjRMQ1RGdTBOMkNfLWcyRnJJSFE5UllPZ1BtWllJUFpYUllwN3ZCZnV4eE1YQTN5NnplLUk5LU96UzBmaG5UOFUtUDVza014SFMzSnVJOERxWkFWTl9xVU5uRWFWMVFNVUk3bnFMVk13MzlXa1ZtUFN2dGFUQXc2RFFhSjdYTWs?oc=5",
+     "time": "2026-11-20T04:14:00Z"
+    },
+    {
+     "title": "Shree Siddhivinayak Greentech Industries Ltd IPO Status, GMP, Price & Dates Today",
+     "source": "Alice Blue",
+     "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPS3RJd2pVMFhNanB0bzJBR1F5a3VCSVBySGhNTElfeVhBMWJHTnNvaXp6N25jajdRTWhHdTJGTUt0aG55cV9PcGUzZC1mMXJOT1E0THlOY2VNZ1FIRVh3bDVjRE9ReGJteGExT2pWQk4xcmtDdUU1a2dvQnhsMUhPcUxrY3FFM2I1SXl0bjF5VWRWTEtYbERpWA?oc=5",
+     "time": "2026-11-19T08:35:19Z"
+    },
+    {
+     "title": "Shree Siddhivinayak Greentech retains 65% promoter control",
+     "source": "Multibagg AI",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZzZQOWVkQVhVaUJKWkZMM1lwemVVMEVoNHNXbExUOUpGSVV0dElVbmtzMnd2R3pONUNjeWZQdW02YXFEY3lDaVN3LVViWHA0LVdESklBOC12RVRGTXMzNGdWcFlrYjRlZ3dKaXI2SWhFNXNOUjVHYVBTNlh3NnhnaG5ZOG9KVU00blNsM3BuV1Vsc1FabFE1QXJKMHByYXZpaDNZQXFYZkdZQzBNVmw1Z1lHbzNsMWV4Zkt3clBzOTZaazdBeGc?oc=5",
+     "time": "2026-11-19T06:49:00Z"
+    }
+   ],
+   "thesis": "Opens 25 Nov with no subscription data yet, so demand is unknown. It is an SME issue, entirely fresh capital, with thin trading and large swings. One lot costs about Rs 1.42 lakh, which is too large for a small bet. Wait for demand data before deciding.",
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Fresh issue is Rs 94 cr of Rs 94 cr, money that goes to the company.",
+     "No subscription data yet: demand is the main signal and it appears only once bidding opens."
+    ],
+    "risks": [
+     "SME board: lots are large, trading is thin and prices swing far more than on the mainboard. Higher risk.",
+     "No matching DRHP found in SEBI's recent listing (older filings are not searched)."
+    ],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "unknown until bidding opens"
+    },
+    "listing_px": null,
+    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 142.00. No target range yet: it needs subscription numbers. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot. SME shares are thinly traded, so a sell order may not fill at the price you want.",
+    "method": "rules+claude"
+   }
+  },
+  {
+   "name": "Fusion CX Limited",
+   "symbol": "FUSIONCX",
+   "board": "Mainboard",
+   "status": "listed",
+   "open_date": "2026-10-14",
+   "close_date": "2026-10-16",
+   "listing_date": "2026-10-22",
+   "price_band": [
+    289.0,
+    289.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "Ravita Engineering Services Limited",
+   "symbol": "RAVITA",
+   "board": "SME",
+   "status": "listed",
+   "open_date": "2026-10-14",
+   "close_date": "2026-10-16",
+   "listing_date": "2026-10-22",
+   "price_band": [
+    112.0,
+    112.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "Bonfiglioli Transmissions Limited",
+   "symbol": "BONFIG",
+   "board": "Mainboard",
+   "status": "listed",
+   "open_date": "2026-10-15",
+   "close_date": "2026-10-19",
+   "listing_date": "2026-10-23",
+   "price_band": [
+    586.0,
+    586.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "Zetwerk Manufacturing Businesses Limited",
+   "symbol": "ZETWERK",
+   "board": "Mainboard",
+   "status": "listed",
+   "open_date": "2026-10-15",
+   "close_date": "2026-10-19",
+   "listing_date": "2026-10-23",
+   "price_band": [
+    151.0,
+    151.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "Sahajanand Medical Technologies Limited",
+   "symbol": "SMT",
+   "board": "Mainboard",
+   "status": "listed",
+   "open_date": "2026-10-15",
+   "close_date": "2026-10-19",
+   "listing_date": "2026-10-23",
+   "price_band": [
+    344.0,
+    344.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "Tonbo Imaging India Limited",
+   "symbol": "TONBO",
+   "board": "Mainboard",
+   "status": "listed",
+   "open_date": "2026-10-15",
+   "close_date": "2026-10-19",
+   "listing_date": "2026-10-23",
+   "price_band": [
+    700.0,
+    700.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "Paras Healthcare Limited",
+   "symbol": "PARASHLTH",
+   "board": "Mainboard",
+   "status": "listed",
+   "open_date": "2026-10-21",
+   "close_date": "2026-10-23",
+   "listing_date": "2026-10-28",
+   "price_band": [
+    693.0,
+    693.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "Jio Platforms Limited",
+   "symbol": "JPL",
+   "board": "Mainboard",
+   "status": "listed",
+   "open_date": "2026-10-21",
+   "close_date": "2026-10-23",
+   "listing_date": "2026-10-28",
+   "price_band": [
+    1119.0,
+    1119.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "EAAA India Alternatives Limited",
+   "symbol": "EDELALTS",
+   "board": "Mainboard",
+   "status": "listed",
+   "open_date": "2026-10-26",
+   "close_date": "2026-10-28",
+   "listing_date": "2026-11-02",
+   "price_band": [
+    1665.0,
+    1665.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "SFC Environmental Technologies Limited",
+   "symbol": "SFCTECH",
+   "board": "Mainboard",
+   "status": "listed",
+   "open_date": "2026-10-27",
+   "close_date": "2026-10-29",
+   "listing_date": "2026-11-03",
+   "price_band": [
+    330.0,
+    330.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "BLS Polymers Limited",
+   "symbol": "BLSPOLY",
+   "board": "Mainboard",
+   "status": "listed",
+   "open_date": "2026-10-27",
+   "close_date": "2026-10-29",
+   "listing_date": "2026-11-03",
+   "price_band": [
+    150.0,
+    150.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "M. K. Sons Fine Jewels Limited",
+   "symbol": "MKJEWELS",
+   "board": "Mainboard",
+   "status": "listed",
+   "open_date": "2026-10-28",
+   "close_date": "2026-10-30",
+   "listing_date": "2026-11-04",
+   "price_band": [
+    162.0,
+    162.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "Bombay Coated and Special Steels Limited",
+   "symbol": "BCSSL",
+   "board": "Mainboard",
+   "status": "listed",
+   "open_date": "2026-10-29",
+   "close_date": "2026-11-02",
+   "listing_date": "2026-11-05",
+   "price_band": [
+    82.0,
+    82.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "HGS (India) Limited",
+   "symbol": "HGSINDIALT",
+   "board": "SME",
+   "status": "listed",
+   "open_date": "2026-10-30",
+   "close_date": "2026-11-03",
+   "listing_date": "2026-11-06",
+   "price_band": [
+    120.0,
+    120.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "Maxwell Engineering Solutions Limited",
+   "symbol": "MAXENGS",
+   "board": "SME",
+   "status": "listed",
+   "open_date": "2026-10-30",
+   "close_date": "2026-11-03",
+   "listing_date": "2026-11-06",
+   "price_band": [
+    158.0,
+    158.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "Vedant Poly Fabs Limited",
+   "symbol": "VPFL",
+   "board": "SME",
+   "status": "listed",
+   "open_date": "2026-11-02",
+   "close_date": "2026-11-04",
+   "listing_date": "2026-11-09",
+   "price_band": [
+    94.0,
+    94.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  }
+ ],
+ "drhp_recent": [
+  {
+   "date": "2026-11-19",
+   "company": "Chartered Speed Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/chartered-speed-limited-addendum-to-the-drhp_105815.html"
+  },
+  {
+   "date": "2026-11-19",
+   "company": "Eldorado Agritech Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/eldorado-agritech-limited-addendum-to-the-drhp_105811.html"
+  },
+  {
+   "date": "2026-11-19",
+   "company": "Sagar Defence Engineering Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/sagar-defence-engineering-limited-udrhp-i_105801.html"
+  },
+  {
+   "date": "2026-11-17",
+   "company": "IL JIN ELECTRONICS (INDIA) LIMITED",
+   "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/il-jin-electronics-india-limited-drhp_105795.html"
+  },
+  {
+   "date": "2026-11-14",
+   "company": "Rediff com India Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/rediff-com-india-limited-udrhp-i_105794.html"
+  },
+  {
+   "date": "2026-11-13",
+   "company": "Sitaram Denims India Ltd",
+   "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/sitaram-denims-india-ltd-drhp_105736.html"
+  },
+  {
+   "date": "2026-11-12",
+   "company": "Learnfluence Education Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/learnfluence-education-limited-addendum-to-drhp_105776.html"
+  },
+  {
+   "date": "2026-11-12",
+   "company": "Hindustan Coca-Cola Holdings Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/hindustan-coca-cola-holdings-limited-drhp_105729.html"
+  },
+  {
+   "date": "2026-11-09",
+   "company": "SNVA Traveltech Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/snva-traveltech-limited-udrhp_105682.html"
+  },
+  {
+   "date": "2026-11-07",
+   "company": "Sillverton Industries Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/sillverton-industries-limited-addendum-to-drhp_105681.html"
+  },
+  {
+   "date": "2026-11-04",
+   "company": "South Eastern Coalfields Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/south-eastern-coalfields-limited-drhp_105620.html"
+  },
+  {
+   "date": "2026-10-29",
+   "company": "Carlsberg India Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/oct-2026/carlsberg-india-limited-udrhp-1_105485.html"
+  },
+  {
+   "date": "2026-10-26",
+   "company": "Oravel Stays Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/oct-2026/oravel-stays-limited-addendum-to-drhp_105418.html"
+  },
+  {
+   "date": "2026-10-26",
+   "company": "Integris Medtech Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/oct-2026/integris-medtech-limited-addendum-to-drhp_105416.html"
+  },
+  {
+   "date": "2026-10-21",
+   "company": "GAMP Services Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/oct-2026/gamp-services-limited-drhp_105424.html"
+  }
+ ],
+ "sources": {
+  "nse": "ok",
+  "sebi": "ok",
+  "news": "ok"
+ },
+ "at": 1795264493.5282965
+}

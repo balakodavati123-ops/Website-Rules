@@ -1,0 +1,73 @@
+{
+ "mood": "bearish",
+ "brief": "A global AI-led sell-off hit Nasdaq, Asian markets and gold, and GIFT Nifty signals a sharply lower open. Indian benchmarks have held up better than peers, but the RBI rate hike and falling bullion add pressure.",
+ "themes": [
+  "Global AI sell-off",
+  "Gold and metals rout",
+  "RBI rate hike",
+  "Nvidia results cushion"
+ ],
+ "companies": [
+  {
+   "name": "Muthoot Finance",
+   "tone": "negative",
+   "why": "Gold rout triggers worst week since April 2025"
+  },
+  {
+   "name": "Titan",
+   "tone": "negative",
+   "why": "Jewellers fall up to 5% on bullion slump"
+  },
+  {
+   "name": "Kalyan Jewellers",
+   "tone": "negative",
+   "why": "Falls up to 5% as gold crashes"
+  },
+  {
+   "name": "PB Fintech",
+   "tone": "negative",
+   "why": "Shares fall as co-founder steps down from executive role"
+  },
+  {
+   "name": "Alkem Laboratories",
+   "tone": "negative",
+   "why": "USFDA warning letter for Daman facility"
+  },
+  {
+   "name": "Voltas",
+   "tone": "positive",
+   "why": "JV with Atomberg for AC compressors"
+  },
+  {
+   "name": "Dalmia Bharat",
+   "tone": "neutral",
+   "why": "Board to consider share buyback November 23"
+  },
+  {
+   "name": "Paytm",
+   "tone": "neutral",
+   "why": "Investing up to Rs 200 crore in Funding Societies units"
+  },
+  {
+   "name": "LT Foods",
+   "tone": "neutral",
+   "why": "Acquiring US-based Maya Kaimal parent"
+  },
+  {
+   "name": "Go Digit",
+   "tone": "positive",
+   "why": "IFSCA approval for GIFT City insurance office"
+  }
+ ],
+ "global": "Nasdaq entered a bear market and Asian indices fell sharply despite Anthropic's IPO, though Nvidia's strong results lifted US futures.",
+ "risks": [
+  "AI sell-off may not be over, per IMF",
+  "Fed and RBI rate hike worries",
+  "Further falls in gold and metals"
+ ],
+ "time": "21 Nov 08:55",
+ "at": 1795231506.465674,
+ "day": "2026-11-21",
+ "model": "Claude (your plan, scheduled)",
+ "n": 40
+}

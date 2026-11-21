@@ -1,0 +1,1480 @@
+{
+ "stages": [
+  {
+   "stage": "PROPOSED",
+   "n": 0
+  },
+  {
+   "stage": "BUILT",
+   "n": 21
+  },
+  {
+   "stage": "TESTED",
+   "n": 4
+  },
+  {
+   "stage": "APPROVED",
+   "n": 0
+  },
+  {
+   "stage": "INVESTIGATE",
+   "n": 0
+  },
+  {
+   "stage": "REJECTED",
+   "n": 0
+  }
+ ],
+ "strategies": [
+  {
+   "strategy": "crypto_breakout",
+   "team": "crypto",
+   "desk": "CRYPTO",
+   "stage": "BUILT",
+   "closed": 9,
+   "open": 0,
+   "net_rs": -486.48,
+   "win_rate": 33.3,
+   "since": "2026-11-17",
+   "passed": 1,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "9 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": false,
+     "value": "\u20b9-486",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": false,
+     "value": "\u20b9-666",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": false,
+     "value": "targets 0 vs 3.0 by chance (z -2.13)",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "0 of 3 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 3",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "gap-and-go",
+   "team": "intraday",
+   "desk": "EQUITY",
+   "stage": "BUILT",
+   "closed": 9,
+   "open": 0,
+   "net_rs": -705.77,
+   "win_rate": 11.1,
+   "since": "2026-11-19",
+   "passed": 1,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "9 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": false,
+     "value": "\u20b9-706",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": false,
+     "value": "\u20b9-886",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": false,
+     "value": "targets 0 vs 1.7 by chance (z -1.58)",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "1 of 2 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 8",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "long_breakout",
+   "team": "fno",
+   "desk": "FNO",
+   "stage": "BUILT",
+   "closed": 4,
+   "open": 0,
+   "net_rs": 9505.5,
+   "win_rate": 75.0,
+   "since": "2026-11-17",
+   "passed": 3,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "4 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": true,
+     "value": "\u20b99,506",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": true,
+     "value": "\u20b99,186",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "3 of 4 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 1",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "debit_spread",
+   "team": "fno",
+   "desk": "FNO",
+   "stage": "BUILT",
+   "closed": 3,
+   "open": 0,
+   "net_rs": 1014.5,
+   "win_rate": 33.3,
+   "since": "2026-11-17",
+   "passed": 3,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "3 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": true,
+     "value": "\u20b91,014",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": true,
+     "value": "\u20b9774",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "1 of 2 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 2",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "news-led",
+   "team": "intraday",
+   "desk": "EQUITY",
+   "stage": "BUILT",
+   "closed": 3,
+   "open": 0,
+   "net_rs": -133.53,
+   "win_rate": 33.3,
+   "since": "2026-11-19",
+   "passed": 1,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "3 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": false,
+     "value": "\u20b9-134",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": false,
+     "value": "\u20b9-194",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "1 of 2 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 1",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "credit_spread",
+   "team": "fno",
+   "desk": "FNO",
+   "stage": "BUILT",
+   "closed": 2,
+   "open": 0,
+   "net_rs": -221.75,
+   "win_rate": 50.0,
+   "since": "2026-11-18",
+   "passed": 1,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "2 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": false,
+     "value": "\u20b9-222",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": false,
+     "value": "\u20b9-382",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "0 of 1 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 1",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "iron_condor",
+   "team": "fno",
+   "desk": "FNO",
+   "stage": "BUILT",
+   "closed": 2,
+   "open": 0,
+   "net_rs": -63.25,
+   "win_rate": 50.0,
+   "since": "2026-11-18",
+   "passed": 1,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "2 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": false,
+     "value": "\u20b9-63",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": false,
+     "value": "\u20b9-223",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "0 of 1 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 1",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "long_straddle",
+   "team": "fno",
+   "desk": "FNO",
+   "stage": "BUILT",
+   "closed": 2,
+   "open": 0,
+   "net_rs": 8969.25,
+   "win_rate": 100.0,
+   "since": "2026-11-19",
+   "passed": 3,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "2 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": true,
+     "value": "\u20b98,969",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": true,
+     "value": "\u20b98,809",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "2 of 2 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 0",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "mcx_pullback",
+   "team": "mcx",
+   "desk": "COMMODITY",
+   "stage": "BUILT",
+   "closed": 2,
+   "open": 0,
+   "net_rs": 279.01,
+   "win_rate": 50.0,
+   "since": "2026-11-18",
+   "passed": 3,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "2 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": true,
+     "value": "\u20b9279",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": true,
+     "value": "\u20b9199",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "1 of 2 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 1",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "short_strangle",
+   "team": "fno",
+   "desk": "FNO",
+   "stage": "BUILT",
+   "closed": 2,
+   "open": 0,
+   "net_rs": 1091.25,
+   "win_rate": 100.0,
+   "since": "2026-11-17",
+   "passed": 3,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "2 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": true,
+     "value": "\u20b91,091",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": true,
+     "value": "\u20b9931",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "2 of 2 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 0",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "headline-led",
+   "team": "intraday",
+   "desk": "EQUITY",
+   "stage": "BUILT",
+   "closed": 1,
+   "open": 0,
+   "net_rs": 290.51,
+   "win_rate": 100.0,
+   "since": "2026-11-19",
+   "passed": 3,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "1 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": true,
+     "value": "\u20b9291",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": true,
+     "value": "\u20b9271",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "1 of 1 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 0",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "pullback_in_uptrend",
+   "team": "swing",
+   "desk": "EQUITY",
+   "stage": "BUILT",
+   "closed": 1,
+   "open": 1,
+   "net_rs": -335.67,
+   "win_rate": 0.0,
+   "since": "2026-11-13",
+   "passed": 1,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "1 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": false,
+     "value": "\u20b9-336",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": false,
+     "value": "\u20b9-356",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "0 of 1 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 1",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "weekly_bull_put_spread",
+   "team": "fno",
+   "desk": "FNO",
+   "stage": "BUILT",
+   "closed": 1,
+   "open": 0,
+   "net_rs": 2249.75,
+   "win_rate": 100.0,
+   "since": "2026-11-13",
+   "passed": 3,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "1 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": true,
+     "value": "\u20b92,250",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": true,
+     "value": "\u20b92,170",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "1 of 1 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 0",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "weekly_iron_butterfly",
+   "team": "fno",
+   "desk": "FNO",
+   "stage": "BUILT",
+   "closed": 1,
+   "open": 0,
+   "net_rs": -1919.25,
+   "win_rate": 0.0,
+   "since": "2026-11-13",
+   "passed": 1,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "1 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": false,
+     "value": "\u20b9-1,919",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": false,
+     "value": "\u20b9-1,999",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "0 of 1 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 1",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "weekly_iron_condor",
+   "team": "fno",
+   "desk": "FNO",
+   "stage": "BUILT",
+   "closed": 1,
+   "open": 0,
+   "net_rs": 2923.25,
+   "win_rate": 100.0,
+   "since": "2026-11-13",
+   "passed": 3,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "1 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": true,
+     "value": "\u20b92,923",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": true,
+     "value": "\u20b92,843",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "1 of 1 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 0",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "breakout_52w",
+   "team": "swing",
+   "desk": "EQUITY",
+   "stage": "BUILT",
+   "closed": 0,
+   "open": 3,
+   "net_rs": 0,
+   "win_rate": null,
+   "since": "2026-11-12",
+   "passed": 0,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "0 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": null,
+     "value": "\u20b90",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": null,
+     "value": "\u20b90",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "0 of 0 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": null,
+     "value": "worst run 0",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "breakout_52w_trail",
+   "team": "swing",
+   "desk": "EQUITY",
+   "stage": "BUILT",
+   "closed": 0,
+   "open": 2,
+   "net_rs": 0,
+   "win_rate": null,
+   "since": "2026-11-13",
+   "passed": 0,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "0 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": null,
+     "value": "\u20b90",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": null,
+     "value": "\u20b90",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "0 of 0 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": null,
+     "value": "worst run 0",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "momentum_screen",
+   "team": "swing",
+   "desk": "EQUITY",
+   "stage": "BUILT",
+   "closed": 0,
+   "open": 2,
+   "net_rs": 0,
+   "win_rate": null,
+   "since": "2026-11-13",
+   "passed": 0,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "0 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": null,
+     "value": "\u20b90",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": null,
+     "value": "\u20b90",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "0 of 0 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": null,
+     "value": "worst run 0",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "rsi2_dip",
+   "team": "swing",
+   "desk": "EQUITY",
+   "stage": "BUILT",
+   "closed": 0,
+   "open": 2,
+   "net_rs": 0,
+   "win_rate": null,
+   "since": "2026-11-13",
+   "passed": 0,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "0 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": null,
+     "value": "\u20b90",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": null,
+     "value": "\u20b90",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "0 of 0 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": null,
+     "value": "worst run 0",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "signal_desk",
+   "team": "swing",
+   "desk": "EQUITY",
+   "stage": "BUILT",
+   "closed": 0,
+   "open": 1,
+   "net_rs": 0,
+   "win_rate": null,
+   "since": "2026-11-13",
+   "passed": 0,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "0 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": null,
+     "value": "\u20b90",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": null,
+     "value": "\u20b90",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "0 of 0 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": null,
+     "value": "worst run 0",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "trend_ride",
+   "team": "swing",
+   "desk": "EQUITY",
+   "stage": "BUILT",
+   "closed": 0,
+   "open": 2,
+   "net_rs": 0,
+   "win_rate": null,
+   "since": "2026-11-13",
+   "passed": 0,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "0 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": null,
+     "value": "\u20b90",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": null,
+     "value": "\u20b90",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "0 of 0 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": null,
+     "value": "worst run 0",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "crypto_dip_bounce",
+   "team": "crypto",
+   "desk": "CRYPTO",
+   "stage": "TESTED",
+   "closed": 19,
+   "open": 0,
+   "net_rs": -285.88,
+   "win_rate": 26.3,
+   "since": "2026-11-17",
+   "passed": 0,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "19 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": false,
+     "value": "\u20b9-286",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": false,
+     "value": "\u20b9-666",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": false,
+     "value": "\u20b9-256 on the latest 6",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": false,
+     "value": "targets 1 vs 6.3 by chance (z -2.59)",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": false,
+     "value": "1 of 5 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": false,
+     "value": "worst run 10",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": [
+    "12 of 19 trades ended at the stop.",
+    "Average win \u20b968 against average loss \u20b945."
+   ]
+  },
+  {
+   "strategy": "price_only",
+   "team": "intraday",
+   "desk": "EQUITY",
+   "stage": "TESTED",
+   "closed": 14,
+   "open": 0,
+   "net_rs": -184.31,
+   "win_rate": 35.7,
+   "since": "2026-11-16",
+   "passed": 1,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "14 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": false,
+     "value": "\u20b9-184",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": false,
+     "value": "\u20b9-464",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": false,
+     "value": "\u20b9-395 on the latest 5",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "2 of 4 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 6",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": [
+    "8 of 14 trades ended at the stop.",
+    "Average win \u20b9103 against average loss \u20b978."
+   ]
+  },
+  {
+   "strategy": "mcx_momentum",
+   "team": "mcx",
+   "desk": "COMMODITY",
+   "stage": "TESTED",
+   "closed": 12,
+   "open": 0,
+   "net_rs": -2163.11,
+   "win_rate": 41.7,
+   "since": "2026-11-17",
+   "passed": 1,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "12 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": false,
+     "value": "\u20b9-2,163",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": false,
+     "value": "\u20b9-2,643",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": false,
+     "value": "\u20b9-374 on the latest 4",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": false,
+     "value": "targets 1 vs 4.0 by chance (z -1.84)",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "2 of 4 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 3",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": [
+    "7 of 12 trades ended at the stop.",
+    "Average win \u20b9390 against average loss \u20b9588."
+   ]
+  },
+  {
+   "strategy": "scalp_vwap_pullback",
+   "team": "scalp",
+   "desk": "EQUITY",
+   "stage": "TESTED",
+   "closed": 10,
+   "open": 0,
+   "net_rs": -676.66,
+   "win_rate": 20.0,
+   "since": "2026-11-19",
+   "passed": 1,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "10 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": false,
+     "value": "\u20b9-677",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": false,
+     "value": "\u20b9-877",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": false,
+     "value": "\u20b9-401 on the latest 3",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": false,
+     "value": "targets 1 vs 4.0 by chance (z -1.95)",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "0 of 2 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 4",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": [
+    "8 of 10 trades ended at the time.",
+    "Average win \u20b9119 against average loss \u20b9114."
+   ]
+  }
+ ],
+ "approved": [],
+ "experiments": [],
+ "rule": "Only APPROVED strategies may reach the execution gateway; passing is a prerequisite, not proof of future profit.",
+ "review": {},
+ "ai": {
+  "on": true,
+  "mode": "scheduled",
+  "last": "21 Nov 08:55",
+  "next": "every hour from 09:20 to 16:20 IST on weekdays",
+  "models": {
+   "analyst": "Claude (your plan, scheduled)"
+  }
+ }
+}

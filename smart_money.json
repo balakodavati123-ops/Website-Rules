@@ -1,0 +1,315 @@
+{
+ "updated_at": "2026-11-21T18:14:45+05:30",
+ "day": "2026-11-18",
+ "from": "2026-11-11",
+ "participants": [
+  {
+   "who": "FII",
+   "name": "Foreign institutions (FPIs)",
+   "fut": -70670,
+   "calls": -196496,
+   "puts": 374199,
+   "put_long": 1039485,
+   "put_short": 665286,
+   "call_long": 713253,
+   "call_short": 909749,
+   "window": 5,
+   "d_fut": -257,
+   "d_puts": -73133,
+   "d_calls": 39105,
+   "series_fut": [
+    -70413,
+    -49719,
+    -55920,
+    -56687,
+    -65123,
+    -70670
+   ],
+   "series_puts": [
+    447332,
+    378895,
+    387065,
+    303214,
+    369613,
+    374199
+   ],
+   "reading": [
+    "Net index futures -70,670: net short, little changed over the window (-257).",
+    "Net long puts (+374,199) and net short calls (-196,496) together behave like a short index position: a bearish or a hedged stance, not just insurance."
+   ]
+  },
+  {
+   "who": "DII",
+   "name": "Domestic institutions (mutual funds, insurers)",
+   "fut": 22914,
+   "calls": 4534,
+   "puts": 114129,
+   "put_long": 115329,
+   "put_short": 1200,
+   "call_long": 5984,
+   "call_short": 1450,
+   "window": 5,
+   "d_fut": -4238,
+   "d_puts": 8287,
+   "d_calls": 3474,
+   "series_fut": [
+    27152,
+    27148,
+    26281,
+    22464,
+    22739,
+    22914
+   ],
+   "series_puts": [
+    105842,
+    106106,
+    103306,
+    103785,
+    113154,
+    114129
+   ],
+   "reading": [
+    "Net long puts +114,129 with futures +22,914: domestic funds buy index puts to insure their large share portfolios. This is cost-of-doing-business hedging, not a forecast of a fall."
+   ]
+  },
+  {
+   "who": "Pro",
+   "name": "Proprietary traders and market makers",
+   "fut": -11915,
+   "calls": 24273,
+   "puts": -15838,
+   "put_long": 951076,
+   "put_short": 966914,
+   "call_long": 1067955,
+   "call_short": 1043682,
+   "window": 5,
+   "d_fut": 11832,
+   "d_puts": 118686,
+   "d_calls": 128874,
+   "series_fut": [
+    -23747,
+    -35374,
+    -32937,
+    -24161,
+    -12910,
+    -11915
+   ],
+   "series_puts": [
+    -134524,
+    -95866,
+    -45949,
+    149,
+    -137652,
+    -15838
+   ],
+   "reading": [
+    "Net index futures -11,915: net short, reducing the position over the window (+11,832).",
+    "Net short puts (-15,838) and net long calls (+24,273) together behave like a long index position: a bullish stance."
+   ]
+  },
+  {
+   "who": "Client",
+   "name": "Everyone else (retail, HNIs)",
+   "fut": 59671,
+   "calls": 167689,
+   "puts": -472490,
+   "put_long": 2748136,
+   "put_short": 3220626,
+   "call_long": 3194114,
+   "call_short": 3026425,
+   "window": 5,
+   "d_fut": -7337,
+   "d_puts": -53840,
+   "d_calls": -171452,
+   "series_fut": [
+    67008,
+    57945,
+    62576,
+    58384,
+    55294,
+    59671
+   ],
+   "series_puts": [
+    -418650,
+    -389135,
+    -444422,
+    -407149,
+    -345115,
+    -472490
+   ],
+   "reading": [
+    "Net short puts -472,490 and net calls +167,689: this group is the main seller of puts, collecting premium. When it is crowded one way, a sharp move against it forces losses."
+   ]
+  }
+ ],
+ "chains": {
+  "NIFTY": {
+   "pcr": 1.69,
+   "call_oi": 155661220,
+   "put_oi": 262482740,
+   "call_wall": 26000.0,
+   "put_wall": 24500.0,
+   "max_pain": 25000.0,
+   "call_walls": [
+    [
+     26000.0,
+     14314430
+    ],
+    [
+     26500.0,
+     9866935
+    ],
+    [
+     26200.0,
+     7771465
+    ]
+   ],
+   "put_walls": [
+    [
+     24500.0,
+     17753320
+    ],
+    [
+     25000.0,
+     17249700
+    ],
+    [
+     25500.0,
+     14694680
+    ]
+   ],
+   "new_calls": [
+    [
+     26200.0,
+     3204045
+    ],
+    [
+     26100.0,
+     2628600
+    ],
+    [
+     25800.0,
+     2152215
+    ]
+   ],
+   "new_puts": [
+    [
+     25500.0,
+     7480070
+    ],
+    [
+     25700.0,
+     6404320
+    ],
+    [
+     25650.0,
+     6273930
+    ]
+   ],
+   "expiry": "2026-11-23",
+   "spot": 25800.6
+  },
+  "BANKNIFTY": {
+   "pcr": 1.39,
+   "call_oi": 19819020,
+   "put_oi": 27506880,
+   "call_wall": 66000.0,
+   "put_wall": 63000.0,
+   "max_pain": 61000.0,
+   "call_walls": [
+    [
+     66000.0,
+     1073370
+    ],
+    [
+     65000.0,
+     1067760
+    ],
+    [
+     64500.0,
+     957870
+    ]
+   ],
+   "put_walls": [
+    [
+     63000.0,
+     1539540
+    ],
+    [
+     62000.0,
+     1167630
+    ],
+    [
+     61000.0,
+     1126260
+    ]
+   ],
+   "new_calls": [
+    [
+     66000.0,
+     635490
+    ],
+    [
+     64500.0,
+     554520
+    ],
+    [
+     67000.0,
+     402480
+    ]
+   ],
+   "new_puts": [
+    [
+     63000.0,
+     902040
+    ],
+    [
+     64000.0,
+     735090
+    ],
+    [
+     64500.0,
+     570090
+    ]
+   ],
+   "expiry": "2026-11-23",
+   "spot": 64635.2
+  }
+ },
+ "explain": [
+  [
+   "Hedging (insurance)",
+   "A fund with a large share portfolio buys index puts so a market fall is offset by the put's gain. It accepts a small certain cost (the premium) for protection. Domestic mutual funds and insurers are the main example. A put held this way says nothing about where the fund thinks the market goes."
+  ],
+  [
+   "Directional bet",
+   "A trader buys puts, or sells futures, because they expect a fall. Foreign institutions that hold large net short index futures together with net long puts are doing this or hedging a long cash book; their futures and options positions together tell which."
+  ],
+  [
+   "Premium collection",
+   "Proprietary desks and the retail crowd often sell puts and calls to collect time decay. Most of the time it works; a fast move against the seller is what costs. Put selling is the opposite view to put buying and is common, not rare."
+  ],
+  [
+   "Market making and arbitrage",
+   "Large trading firms quote options both ways and hedge each trade with futures or shares. Their put buying is usually one leg of a hedged position (a spread against futures, a volatility trade, a basket against the index), so it is not a one-way market view."
+  ],
+  [
+   "Event and expiry trading",
+   "Positions around expiry days and big events (budget, results, rate decisions) can be large and short-lived: puts are bought for a jump in volatility, then sold. SEBI has been tightening the rules for expiry-day trading because the size of some of these positions can move the index itself."
+  ]
+ ],
+ "who": {
+  "FII": "Foreign institutions (FPIs)",
+  "DII": "Domestic institutions (mutual funds, insurers)",
+  "Pro": "Proprietary traders and market makers",
+  "Client": "Everyone else (retail, HNIs)"
+ },
+ "summary": [
+  "Foreign institutions are net short 70,670 index futures with net long puts and net short calls, which together behave like a short index position. That is a bearish or hedged stance, and futures were net short in every one of the last 6 sessions.",
+  "Domestic institutions hold +114,129 net puts and +22,914 futures: the puts are insurance on the funds' share portfolios, so they are not a forecast of a fall.",
+  "Proprietary desks and market makers are close to flat (-11,915 futures, -15,838 puts, +24,273 calls). Their put buying is mostly one leg of a hedged trade.",
+  "Retail and other clients are the largest put sellers (-472,490 net puts): the crowd is betting the market will not fall, which is why a sharp fall hurts them most.",
+  "NIFTY 2026-11-23: put-to-call ratio 1.69; most call open interest at 26,000 (a ceiling), most put open interest at 24,500 (a floor); max pain 25,000.",
+  "BANKNIFTY 2026-11-23: put-to-call ratio 1.39; most call open interest at 66,000 (a ceiling), most put open interest at 63,000 (a floor); max pain 61,000."
+ ]
+}

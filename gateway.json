@@ -1,0 +1,75 @@
+{
+ "intents": {},
+ "events": [
+  {
+   "t": "10:18:31",
+   "text": "DRY SELL 18 BHARTIARTL stop 2146.25 (gate closed)"
+  },
+  {
+   "t": "10:18:31",
+   "text": "DRY SELL 24 ICICIBANK stop 1613.25 (gate closed)"
+  },
+  {
+   "t": "10:02:17",
+   "text": "DRY BUY 11 M&M stop 3511.65 (gate closed)"
+  },
+  {
+   "t": "09:46:12",
+   "text": "DRY BUY 34 SBIN stop 1147.65 (gate closed)"
+  },
+  {
+   "t": "09:44:04",
+   "text": "DRY BUY 9 LT stop 4160.15 (gate closed)"
+  },
+  {
+   "t": "12:16:18",
+   "text": "DRY BUY 257 PNB stop 154.55 (gate closed)"
+  },
+  {
+   "t": "12:15:14",
+   "text": "DRY BUY 61 KALYANKJIL stop 647.4 (gate closed)"
+  },
+  {
+   "t": "12:07:39",
+   "text": "DRY SELL 179 GROWW stop 223.15 (gate closed)"
+  },
+  {
+   "t": "12:02:25",
+   "text": "DRY BUY 49 HDFCBANK stop 810.65 (gate closed)"
+  },
+  {
+   "t": "11:55:59",
+   "text": "DRY BUY 29 RELIANCE stop 1360.85 (gate closed)"
+  }
+ ],
+ "day": {
+  "day": "2026-11-21",
+  "trades": 0,
+  "pnl": 0.0,
+  "stops": 0
+ },
+ "broker": {},
+ "mode": "dry",
+ "wanted": "dry",
+ "blockers": [],
+ "killed": false,
+ "updated_at": "2026-11-21T18:15:36+05:30",
+ "caps": {
+  "max_value": 40000.0,
+  "risk": 250.0,
+  "max_day_loss": 1000.0,
+  "max_open": 3,
+  "max_trades": 12,
+  "sl_min": 0.1,
+  "sl_max": 0.6,
+  "min_rc": 3.0,
+  "first": "09:30",
+  "last": "14:45",
+  "squareoff": "15:10",
+  "gate": "normal",
+  "gate_min": 30,
+  "agents": [
+   "scalp_vwap_pullback"
+  ]
+ }
+}
