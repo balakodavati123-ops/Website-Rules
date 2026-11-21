@@ -411,6 +411,7 @@ def run() -> None:
             res = LLM.parse_json(ai_ask("ipo", IPO_SYSTEM, json.dumps(facts, default=str), "write"))
             if isinstance(res, dict):
                 notes["n"].update({k: str(v)[:900] for k, v in (res.get("notes") or res).items() if isinstance(v, str)})
+        notes["n"].update({k: v for k, v in ((ai_files[0].get("ipo_notes") or {}).get("notes") or {}).items() if k not in notes["n"]})
         for x in out.get("ipos") or []:
             if x.get("name") in notes["n"]:
                 x["thesis"] = notes["n"][x["name"]]
@@ -418,6 +419,46 @@ def run() -> None:
         ipo_v[0] = {**out, "at": time.time()}
         save("ipo.json", ipo_v[0])
         save("ipo_state.json", ipo_st)
+
+    ai_files = [{}]                                                  # the scheduled Claude analyst's latest round (docs/ai on the branch)
+
+    def ai_sync(at) -> None:
+        """Pick up what the scheduled Claude analyst (running in the CEO's own Claude account) saved on the branch: brief, IPO notes, review."""
+        br = os.environ.get("GITHUB_REF_NAME") or _git("rev-parse", "--abbrev-ref", "HEAD", check=False).stdout.strip()
+        if not br or _git("fetch", "-q", "--depth=1", "origin", br, check=False).returncode != 0:
+            return
+        got = {}
+        for f in ("brief", "ipo_notes", "review"):
+            r = _git("show", f"FETCH_HEAD:docs/ai/{f}.json", check=False)
+            if r.returncode == 0 and r.stdout.strip():
+                try:
+                    got[f] = json.loads(r.stdout)
+                except ValueError:
+                    pass
+        ai_files[0] = got
+        b = got.get("brief") or {}
+        if b.get("brief") and b.get("at", 0) > digest[0].get("at", 0):
+            digest[0] = b
+            save("news_digest.json", b)
+        rv = got.get("review") or {}
+        if rv.get("text") and rv.get("day") != review[0].get("day"):
+            review[0] = {"day": rv["day"], "time": rv.get("time"), "text": rv["text"], "model": rv.get("model")}
+            save("day_review.json", review[0])
+        notes = (got.get("ipo_notes") or {})
+        if notes.get("notes") and ipo_v[0].get("ipos"):
+            for x in ipo_v[0]["ipos"]:
+                if x.get("name") in notes["notes"] and not x.get("thesis"):
+                    x["thesis"] = notes["notes"][x["name"]]
+                    (x.get("analysis") or {})["method"] = "rules+claude"
+            save("ipo.json", ipo_v[0])
+
+    def ai_state() -> dict:
+        b = (ai_files[0].get("brief") or {})
+        if ai.on:
+            return ai.status()
+        if b.get("at"):
+            return {"on": True, "mode": "scheduled", "last": b.get("time"), "next": "09:20 and 16:20 IST on weekdays", "models": {"analyst": "Claude (your plan, scheduled)"}}
+        return ai.status()
 
     IPO_SYSTEM = ("You are the IPO analyst of an Indian paper-trading desk. For each issue given, write a plain-English note of at most 110 words from the facts given only: "
                   "what the company raises money for if stated, what the demand so far says, the main risk, and whether one minimum lot is worth a small bet. Never invent numbers or promise returns. "
@@ -507,7 +548,8 @@ def run() -> None:
                 "claude": (({"status": "warn" if ai.status().get("resting_until") else "ok", "detail": f"your Claude plan: {ai.status()['calls_5h']} of {ai.status()['cap_calls_5h']} calls in the last 5 hours, {ai.status()['calls_day']} of {ai.status()['cap_calls_day']} today"
                              + ("; resting after the plan's limit" if ai.status().get("resting_until") else "")} if ai.mode == "plan" else
                             {"status": "ok", "detail": f"API: ${ai.status()['usd_5h']:.3f} of ${ai.status()['cap_5h']:.2f} in 5 hours"}) if ai.on else
-                           {"status": "off", "detail": "not connected: add the CLAUDE_CODE_OAUTH_TOKEN secret (from your Claude plan); until then the desks run on their written rules"}),
+                           {"status": "ok", "detail": f"scheduled Claude analyst (your plan): last round {ai_state().get('last')}, next at 09:20 and 16:20 IST on weekdays"} if ai_state().get("mode") == "scheduled" else
+                           {"status": "off", "detail": "not connected yet: the desks run on their written rules"}),
                 "github": {"status": "ok" if os.environ.get("GITHUB_TOKEN") else "off", "detail": "listening for your instructions every 5 minutes" if os.environ.get("GITHUB_TOKEN") else "not available on this machine"}}
 
     def company_view(now, allt, stats) -> None:
@@ -527,7 +569,7 @@ def run() -> None:
                     qn[t["id"]] = QN.trade_numbers(float(t["entry"]), float(t["stop"]), float(t.get("target_px") or 0) or None, q_ * mult if t["desk"] != "CRYPTO" else float(t["qty"]) / float(t["entry"]), cost, sig, hit)
         nf = ((snap.get("indices") or {}).get("Nifty 50") or {}).get("chg_pct")
         lab = LB.build(allt, stats, cst, CO.team_of, gw.st)
-        lab["review"], lab["ai"] = review[0], ai.status()
+        lab["review"], lab["ai"] = review[0], ai_state()
         lab_v[0] = lab
         save("lab.json", lab)
         with clock:
@@ -835,7 +877,7 @@ def run() -> None:
             migrate()
             if not (news_thread and news_thread.is_alive()):        # the slow fetches (news, world markets, NSE files) can take a while from a cloud address: never hold up the price loop for them
                 def _slow(at=now):
-                    for name_, fn_ in (("news", lambda: (lambda n2: (news.clear(), news.update(n2)) if n2 else None)(I.filings_news())), ("news_feed", lambda: I.update_news_feed(at)), ("news_ai", lambda: news_ai(at)), ("ipo", lambda: ipo_desk(at)), ("review", lambda: review_day(at)),
+                    for name_, fn_ in (("news", lambda: (lambda n2: (news.clear(), news.update(n2)) if n2 else None)(I.filings_news())), ("news_feed", lambda: I.update_news_feed(at)), ("ai_sync", lambda: ai_sync(at)), ("news_ai", lambda: news_ai(at)), ("ipo", lambda: ipo_desk(at)), ("review", lambda: review_day(at)),
                                        ("world", lambda: refresh_world(at)), ("smart_money", lambda: token and refresh_smart(at)), ("margin_reference", lambda: margin_reference(at)), ("indstocks_master", lambda: load_master()), ("ceo_inbox", lambda: ceo_inbox(at))):
                         try:
                             fn_()

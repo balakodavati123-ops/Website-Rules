@@ -295,7 +295,10 @@ def update_news_feed(now: datetime):
                 feed.append({"time": now.strftime("%d %b %H:%M"), "source": name, "category": c[0], "headline": title[:160], "event": "yes" if c[0] in nw.MACRO else "no", "hint": c[1]})
     f.write_text(json.dumps(feed[-60:], indent=1))
     w = DOCS / "news_wire.json"                                         # every headline, Indian and international, for the headlines analyst (Claude) and the page
-    wire = json.loads(w.read_text()) if w.exists() else []
+    try:
+        wire = json.loads(w.read_text()) if w.exists() else []
+    except ValueError:
+        wire = []
     seen = {re.sub(r"\W+", "", x["headline"].lower())[:90] for x in wire}
     for region, feeds in (("India", nw.FEEDS), ("World", getattr(nw, "WORLD_FEEDS", {}))):
         for name, url in feeds.items():
