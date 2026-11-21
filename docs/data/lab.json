@@ -1472,7 +1472,7 @@
   "on": true,
   "mode": "scheduled",
   "last": "21 Nov 08:55",
-  "next": "09:20 and 16:20 IST on weekdays",
+  "next": "every hour from 09:20 to 16:20 IST on weekdays",
   "models": {
    "analyst": "Claude (your plan, scheduled)"
   }
