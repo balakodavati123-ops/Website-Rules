@@ -5,9 +5,9 @@
   "charts": "3 live charts",
   "news_feed": "error: Expecting value: line 1 column 1 (char 0)"
  },
- "updated_at": "2026-11-21T08:10:18+05:30",
- "updated_hm": "21 Nov 08:10:18",
- "loops": 2597,
+ "updated_at": "2026-11-21T08:56:20+05:30",
+ "updated_hm": "21 Nov 08:56:20",
+ "loops": 437,
  "sessions": {
   "equity": false,
   "fno": false,
@@ -15,7 +15,7 @@
   "crypto": true
  },
  "note": "Real-time Upstox prices for equities, NIFTY options and MCX; Kraken for crypto. Paper trades only.",
- "open": 15,
+ "open": 14,
  "first_iteration": {
   "equity": 0.0,
   "fill": 0.0,

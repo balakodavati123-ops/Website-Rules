@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T08:10:19+05:30",
+ "updated_at": "2026-11-21T08:56:20+05:30",
  "ceo": {
   "name": "Balaji",
   "title": "CEO"
@@ -22,7 +22,7 @@
    {
     "team": "crypto",
     "level": "warn",
-    "text": "Crypto desk: targets hit 1 times against 8.7 expected by pure chance (z -3.19): no edge so far."
+    "text": "Crypto desk: targets hit 1 times against 9.0 expected by pure chance (z -3.27): no edge so far."
    },
    {
     "team": null,
@@ -36,439 +36,440 @@
     "team": "crypto",
     "strategy": null,
     "kind": "team",
-    "status": "pending",
+    "status": "approved",
     "created": "21 Nov 03:42",
-    "text": "Crypto desk keeps losing: 26 closed trades, net \u2212\u20b9713, 30.8% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close."
+    "text": "Crypto desk keeps losing: 26 closed trades, net \u2212\u20b9713, 30.8% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close.",
+    "decided": "21 Nov 08:15"
    }
   ],
-  "doing": "Supervising 9 teams: 1 traded today, company \u2212\u20b9106. 1 request waiting for you.",
+  "doing": "Supervising 9 teams: 1 traded today, company \u2212\u20b9155.",
   "hires": [],
   "designation": "COO"
  },
  "pnl": {
-  "today_rs": -105.76,
-  "open_rs": -162.68,
-  "closed_rs": -99.07,
+  "today_rs": -154.8,
+  "open_rs": -162.04,
+  "closed_rs": -148.75,
   "trades": 4,
-  "open": 15,
-  "equity_rs": 119044.5
+  "open": 14,
+  "equity_rs": 118995.46
  },
  "flows": [
   {
-   "t": "07:47:55",
-   "from": "src:kraken",
-   "to": "crypto-5",
-   "kind": "data",
-   "text": "+0.27% today, in a trade"
-  },
-  {
-   "t": "07:47:55",
+   "t": "08:16:14",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "07:48:41",
-   "from": "src:kraken",
-   "to": "crypto-0",
-   "kind": "data",
-   "text": "+0.13% today, in a trade"
-  },
-  {
-   "t": "07:48:41",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "07:49:27",
-   "from": "src:kraken",
-   "to": "crypto-0",
-   "kind": "data",
-   "text": "+0.12% today, in a trade"
-  },
-  {
-   "t": "07:49:27",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "07:50:16",
-   "from": "src:kraken",
-   "to": "crypto-0",
-   "kind": "data",
-   "text": "+0.07% today, in a trade"
-  },
-  {
-   "t": "07:50:16",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "07:51:01",
-   "from": "src:kraken",
-   "to": "crypto-5",
-   "kind": "data",
-   "text": "+0.29% today, in a trade"
-  },
-  {
-   "t": "07:51:01",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "07:51:19",
+   "t": "08:16:48",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
-   "text": "Company today \u2212\u20b983; 1 request(s) for you"
+   "text": "Company today \u2212\u20b9110"
   },
   {
-   "t": "07:51:48",
-   "from": "src:kraken",
-   "to": "crypto-5",
-   "kind": "data",
-   "text": "+0.23% today, in a trade"
-  },
-  {
-   "t": "07:51:48",
+   "t": "08:17:00",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "07:52:36",
-   "from": "src:kraken",
-   "to": "crypto-5",
-   "kind": "data",
-   "text": "+0.34% today, in a trade"
-  },
-  {
-   "t": "07:52:36",
+   "t": "08:17:48",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "07:53:22",
-   "from": "src:kraken",
-   "to": "crypto-0",
-   "kind": "data",
-   "text": "+0.03% today, in a trade"
-  },
-  {
-   "t": "07:53:22",
+   "t": "08:18:34",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "07:54:07",
-   "from": "src:kraken",
-   "to": "crypto-0",
-   "kind": "data",
-   "text": "+0.04% today, in a trade"
-  },
-  {
-   "t": "07:54:07",
+   "t": "08:19:27",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "07:54:56",
-   "from": "src:kraken",
-   "to": "crypto-0",
-   "kind": "data",
-   "text": "+0.07% today, in a trade"
-  },
-  {
-   "t": "07:54:56",
+   "t": "08:20:13",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "07:55:42",
-   "from": "src:kraken",
-   "to": "crypto-5",
-   "kind": "data",
-   "text": "+0.38% today, in a trade"
-  },
-  {
-   "t": "07:55:42",
+   "t": "08:20:59",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "07:56:26",
+   "t": "08:21:46",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:21:51",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
-   "text": "Company today \u2212\u20b980; 1 request(s) for you"
+   "text": "Company today \u2212\u20b9112"
   },
   {
-   "t": "07:56:33",
-   "from": "src:kraken",
-   "to": "crypto-5",
-   "kind": "data",
-   "text": "+0.35% today, in a trade"
-  },
-  {
-   "t": "07:56:33",
+   "t": "08:22:36",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "07:57:28",
-   "from": "src:kraken",
-   "to": "crypto-0",
-   "kind": "data",
-   "text": "+0.04% today, in a trade"
-  },
-  {
-   "t": "07:57:28",
+   "t": "08:23:21",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "07:58:14",
-   "from": "src:kraken",
-   "to": "crypto-0",
-   "kind": "data",
-   "text": "+0.01% today, in a trade"
-  },
-  {
-   "t": "07:58:14",
+   "t": "08:24:07",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "07:59:02",
-   "from": "src:kraken",
-   "to": "crypto-5",
-   "kind": "data",
-   "text": "+0.49% today, in a trade"
-  },
-  {
-   "t": "07:59:02",
+   "t": "08:24:55",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "07:59:49",
-   "from": "src:kraken",
-   "to": "crypto-5",
-   "kind": "data",
-   "text": "+0.49% today, in a trade"
-  },
-  {
-   "t": "07:59:49",
+   "t": "08:25:41",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "08:00:40",
-   "from": "src:kraken",
-   "to": "crypto-0",
-   "kind": "data",
-   "text": "-0.01% today, in a trade"
-  },
-  {
-   "t": "08:00:40",
+   "t": "08:26:27",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "08:01:36",
-   "from": "src:kraken",
-   "to": "crypto-0",
-   "kind": "data",
-   "text": "-0.03% today, in a trade"
-  },
-  {
-   "t": "08:01:36",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney, claude"
-  },
-  {
-   "t": "08:01:36",
+   "t": "08:26:55",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
-   "text": "Company today \u2212\u20b984; 1 request(s) for you"
+   "text": "Company today \u2212\u20b9120"
   },
   {
-   "t": "08:02:21",
-   "from": "src:kraken",
-   "to": "crypto-5",
-   "kind": "data",
-   "text": "+0.30% today, in a trade"
-  },
-  {
-   "t": "08:02:21",
+   "t": "08:27:17",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "08:03:11",
-   "from": "src:kraken",
-   "to": "crypto-5",
-   "kind": "data",
-   "text": "+0.18% today, in a trade"
-  },
-  {
-   "t": "08:03:11",
+   "t": "08:28:03",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "08:03:56",
-   "from": "src:kraken",
-   "to": "crypto-5",
-   "kind": "data",
-   "text": "+0.09% today, in a trade"
-  },
-  {
-   "t": "08:03:56",
+   "t": "08:28:54",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "08:04:48",
-   "from": "src:kraken",
-   "to": "crypto-0",
-   "kind": "data",
-   "text": "-0.32% today, in a trade"
-  },
-  {
-   "t": "08:04:48",
+   "t": "08:29:50",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "08:05:43",
-   "from": "src:kraken",
-   "to": "crypto-5",
-   "kind": "data",
-   "text": "-0.06% today, in a trade"
-  },
-  {
-   "t": "08:05:43",
+   "t": "08:30:36",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "08:06:28",
-   "from": "src:kraken",
-   "to": "crypto-5",
-   "kind": "data",
-   "text": "-0.09% today, in a trade"
-  },
-  {
-   "t": "08:06:28",
+   "t": "08:31:22",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "08:06:43",
+   "t": "08:31:56",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
-   "text": "Company today \u2212\u20b9100; 1 request(s) for you"
+   "text": "Company today \u2212\u20b9128"
   },
   {
-   "t": "08:07:17",
-   "from": "src:kraken",
-   "to": "crypto-5",
-   "kind": "data",
-   "text": "-0.09% today, in a trade"
-  },
-  {
-   "t": "08:07:17",
+   "t": "08:32:08",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "08:08:07",
-   "from": "src:kraken",
-   "to": "crypto-0",
-   "kind": "data",
-   "text": "-0.28% today, in a trade"
-  },
-  {
-   "t": "08:08:07",
+   "t": "08:32:57",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "08:08:55",
-   "from": "src:kraken",
-   "to": "crypto-0",
-   "kind": "data",
-   "text": "-0.33% today, in a trade"
-  },
-  {
-   "t": "08:08:55",
+   "t": "08:33:43",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "08:09:45",
-   "from": "src:kraken",
-   "to": "crypto-5",
+   "t": "08:34:29",
+   "from": "src:github",
+   "to": "lab-4",
    "kind": "data",
-   "text": "-0.21% today, in a trade"
+   "text": "Data gaps: indmoney, claude"
   },
   {
-   "t": "08:09:45",
+   "t": "08:35:18",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:35:30",
+   "from": "crypto-m",
+   "to": "coo",
+   "kind": "report",
+   "text": "Closed ADA long: \u2212\u20b950"
+  },
+  {
+   "t": "08:36:04",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:36:49",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:37:05",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u2212\u20b9159"
+  },
+  {
+   "t": "08:37:39",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:38:25",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:39:16",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:40:12",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:40:58",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:41:47",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:42:15",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u2212\u20b9157"
+  },
+  {
+   "t": "08:42:37",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:43:25",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:44:15",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:45:05",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:45:56",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:46:46",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:47:19",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u2212\u20b9159"
+  },
+  {
+   "t": "08:47:31",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:48:17",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:49:02",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:49:47",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:50:38",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:51:24",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:52:09",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:52:20",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u2212\u20b9156"
+  },
+  {
+   "t": "08:52:58",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:53:43",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:54:29",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:55:18",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "08:56:03",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
@@ -1346,7 +1347,7 @@
    "sources": [
     "kraken"
    ],
-   "status": "Active",
+   "status": "Paused by you",
    "agents": [
     {
      "name": "Tara",
@@ -1363,7 +1364,7 @@
     {
      "name": "Sam",
      "role": "Trading manager",
-     "doing": "Holding 2: BTC long at 58,207.80, stop 57,334.68, now +\u20b96.",
+     "doing": "Holding 1: BTC long at 58,207.80, stop 57,334.68, now \u2212\u20b96.",
      "tokens": 0
     }
    ],
@@ -1376,8 +1377,8 @@
      "designation": "Associate",
      "role": "BTC",
      "kind": "research",
-     "status": "holding",
-     "doing": "-0.37% today, in a trade",
+     "status": "vacant",
+     "doing": "-0.86% today, in a trade",
      "record": {
       "trades": 2,
       "wins": 1,
@@ -1391,8 +1392,8 @@
      "designation": "Associate",
      "role": "ETH",
      "kind": "research",
-     "status": "idle",
-     "doing": "-0.20% today",
+     "status": "vacant",
+     "doing": "-0.54% today",
      "record": {
       "trades": 4,
       "wins": 1,
@@ -1406,8 +1407,8 @@
      "designation": "Associate",
      "role": "SOL",
      "kind": "research",
-     "status": "idle",
-     "doing": "-0.47% today",
+     "status": "vacant",
+     "doing": "-1.15% today, moving: watching for an entry",
      "record": {
       "trades": 6,
       "wins": 2,
@@ -1421,8 +1422,8 @@
      "designation": "Associate",
      "role": "XRP",
      "kind": "research",
-     "status": "idle",
-     "doing": "-0.74% today",
+     "status": "vacant",
+     "doing": "-1.47% today, moving: watching for an entry",
      "record": {
       "trades": 6,
       "wins": 2,
@@ -1436,8 +1437,8 @@
      "designation": "Associate",
      "role": "DOGE",
      "kind": "research",
-     "status": "idle",
-     "doing": "-0.29% today",
+     "status": "vacant",
+     "doing": "-1.17% today, moving: watching for an entry",
      "record": {
       "trades": 4,
       "wins": 1,
@@ -1451,12 +1452,12 @@
      "designation": "Associate",
      "role": "ADA",
      "kind": "research",
-     "status": "holding",
-     "doing": "-0.23% today, in a trade",
+     "status": "vacant",
+     "doing": "-1.91% today, moving: watching for an entry",
      "record": {
-      "trades": 4,
+      "trades": 5,
       "wins": 1,
-      "pnl_rs": -290.0,
+      "pnl_rs": -339.68,
       "basis": "own trades"
      }
     },
@@ -1466,12 +1467,12 @@
      "designation": "Associate",
      "role": "Volatility quant",
      "kind": "quant",
-     "status": "idle",
+     "status": "vacant",
      "doing": "Sets stop and target from each coin's own volatility",
      "record": {
-      "trades": 26,
+      "trades": 27,
       "wins": 8,
-      "pnl_rs": -712.54,
+      "pnl_rs": -762.22,
       "basis": "team record"
      }
     },
@@ -1481,36 +1482,36 @@
      "designation": "Manager",
      "role": "Trading manager",
      "kind": "trader",
-     "status": "holding",
-     "doing": "Holding 2: BTC long at 58,207.80, stop 57,334.68, now +\u20b96.",
+     "status": "vacant",
+     "doing": "Holding 1: BTC long at 58,207.80, stop 57,334.68, now \u2212\u20b96.",
      "record": {
-      "trades": 26,
+      "trades": 27,
       "wins": 8,
-      "pnl_rs": -712.54,
+      "pnl_rs": -762.22,
       "basis": "team record"
      }
     }
    ],
    "manager": "crypto-m",
    "today": {
-    "pnl": -105.76,
-    "pnl_rs": -105.76,
+    "pnl": -154.8,
+    "pnl_rs": -154.8,
     "trades": 4,
-    "open": 2,
-    "closed": 2,
+    "open": 1,
+    "closed": 3,
     "wins": 0
    },
    "record": {
-    "n": 26,
-    "win_rate": 30.8,
-    "avg_rs": -27.41,
-    "net_rs": -712.54,
-    "worst_run": 12,
-    "profit_factor": 0.41,
+    "n": 27,
+    "win_rate": 29.6,
+    "avg_rs": -28.23,
+    "net_rs": -762.22,
+    "worst_run": 13,
+    "profit_factor": 0.4,
     "target_hits": 1,
-    "expected_hits": 8.7,
-    "edge_z": -3.19,
-    "hit_rate": 0.038
+    "expected_hits": 9.0,
+    "edge_z": -3.27,
+    "hit_rate": 0.037
    },
    "verdicts": [
     {
@@ -1522,13 +1523,13 @@
     },
     {
      "strategy": "crypto_dip_bounce",
-     "closed": 17,
-     "win_rate": 29.4,
-     "pnl_rs": -226.06,
+     "closed": 18,
+     "win_rate": 27.8,
+     "pnl_rs": -275.74,
      "verdict": "COLLECTING"
     }
    ],
-   "activity": 0,
+   "activity": 1,
    "variant": null
   },
   {
@@ -1970,19 +1971,19 @@
    "id": "yahoo",
    "name": "Yahoo Finance",
    "status": "idle",
-   "detail": "world markets refreshed 660 min ago"
+   "detail": "world markets refreshed 706 min ago"
   },
   {
    "id": "news",
    "name": "News feeds",
    "status": "ok",
-   "detail": "60 headlines, latest 21 Nov 08:06; 0 name a listed company"
+   "detail": "60 headlines, latest 21 Nov 08:51; 0 name a listed company"
   },
   {
    "id": "claude",
    "name": "Claude AI",
    "status": "off",
-   "detail": "no ANTHROPIC_API_KEY on this machine: the desks run on their written rules"
+   "detail": "not connected: add the CLAUDE_CODE_OAUTH_TOKEN secret (from your Claude plan); until then the desks run on their written rules"
   },
   {
    "id": "github",
@@ -1995,6 +1996,12 @@
  "ledger": [],
  "messages": [
   {
+   "t": "21 Nov 08:15",
+   "from": "Raghav (COO)",
+   "text": "Done. crypto is paused: no new trades. Its open trades run to their exits. Resume it when you want it back.",
+   "kind": "decision"
+  },
+  {
    "t": "21 Nov 03:42",
    "from": "Raghav (COO)",
    "text": "Crypto desk keeps losing: 26 closed trades, net \u2212\u20b9713, 30.8% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close. (request R261121-crypto-1)",
@@ -2002,9 +2009,9 @@
   }
  ],
  "company": {
-  "pnl_today": -105.76,
+  "pnl_today": -154.8,
   "nifty_chg": null,
-  "equity": 119044.5,
+  "equity": 118995.46,
   "sessions": {
    "equity": false,
    "fno": false,
@@ -2028,10 +2035,10 @@
    "rr": 1.99,
    "base_p": 0.334,
    "breakeven_p": 0.334,
-   "used_p": 0.038,
+   "used_p": 0.037,
    "p_source": "team record",
-   "ev_rs": -33.34,
-   "kelly": -0.445
+   "ev_rs": -33.45,
+   "kelly": -0.447
   },
   "C261121-66": {
    "risk_rs": 37.5,
@@ -2039,10 +2046,10 @@
    "rr": 2.0,
    "base_p": 0.333,
    "breakeven_p": 0.333,
-   "used_p": 0.038,
+   "used_p": 0.037,
    "p_source": "team record",
-   "ev_rs": -33.23,
-   "kelly": -0.443
+   "ev_rs": -33.34,
+   "kelly": -0.445
   },
   "C261121-64": {
    "risk_rs": 37.5,
@@ -2050,10 +2057,10 @@
    "rr": 2.0,
    "base_p": 0.333,
    "breakeven_p": 0.333,
-   "used_p": 0.038,
+   "used_p": 0.037,
    "p_source": "team record",
-   "ev_rs": -33.22,
-   "kelly": -0.443
+   "ev_rs": -33.34,
+   "kelly": -0.444
   },
   "C261121-65": {
    "risk_rs": 37.5,
@@ -2061,10 +2068,10 @@
    "rr": 2.0,
    "base_p": 0.333,
    "breakeven_p": 0.333,
-   "used_p": 0.038,
+   "used_p": 0.037,
    "p_source": "team record",
-   "ev_rs": -33.23,
-   "kelly": -0.443
+   "ev_rs": -33.34,
+   "kelly": -0.445
   },
   "S3": {
    "risk_rs": 242.15
@@ -2163,12 +2170,19 @@
     "team": "crypto",
     "strategy": null,
     "kind": "team",
-    "status": "pending",
+    "status": "approved",
     "created": "21 Nov 03:42",
-    "text": "Crypto desk keeps losing: 26 closed trades, net \u2212\u20b9713, 30.8% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close."
+    "text": "Crypto desk keeps losing: 26 closed trades, net \u2212\u20b9713, 30.8% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close.",
+    "decided": "21 Nov 08:15"
    }
   ],
   "messages": [
+   {
+    "t": "21 Nov 08:15",
+    "from": "Raghav (COO)",
+    "text": "Done. crypto is paused: no new trades. Its open trades run to their exits. Resume it when you want it back.",
+    "kind": "decision"
+   },
    {
     "t": "21 Nov 03:42",
     "from": "Raghav (COO)",
@@ -2178,7 +2192,9 @@
   ],
   "retired": [],
   "resumed": [],
-  "paused_teams": [],
+  "paused_teams": [
+   "crypto"
+  ],
   "variants": {},
   "awarded": [],
   "said": {
@@ -2264,531 +2280,6 @@
   },
   "flows": [
    {
-    "t": "07:40:37",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.25% today, in a trade"
-   },
-   {
-    "t": "07:40:37",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:41:01",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u2212\u20b979; 1 request(s) for you"
-   },
-   {
-    "t": "07:41:23",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "+0.27% today, in a trade"
-   },
-   {
-    "t": "07:41:23",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:42:09",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "+0.27% today, in a trade"
-   },
-   {
-    "t": "07:42:09",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:43:05",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.36% today, in a trade"
-   },
-   {
-    "t": "07:43:05",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:43:50",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.36% today, in a trade"
-   },
-   {
-    "t": "07:43:50",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:44:39",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.36% today, in a trade"
-   },
-   {
-    "t": "07:44:39",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:45:24",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "+0.17% today, in a trade"
-   },
-   {
-    "t": "07:45:24",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:46:08",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u2212\u20b979; 1 request(s) for you"
-   },
-   {
-    "t": "07:46:15",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "+0.13% today, in a trade"
-   },
-   {
-    "t": "07:46:15",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:47:10",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.27% today, in a trade"
-   },
-   {
-    "t": "07:47:10",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:47:55",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.27% today, in a trade"
-   },
-   {
-    "t": "07:47:55",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:48:41",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "+0.13% today, in a trade"
-   },
-   {
-    "t": "07:48:41",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:49:27",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "+0.12% today, in a trade"
-   },
-   {
-    "t": "07:49:27",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:50:16",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "+0.07% today, in a trade"
-   },
-   {
-    "t": "07:50:16",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:51:01",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.29% today, in a trade"
-   },
-   {
-    "t": "07:51:01",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:51:19",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u2212\u20b983; 1 request(s) for you"
-   },
-   {
-    "t": "07:51:48",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.23% today, in a trade"
-   },
-   {
-    "t": "07:51:48",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:52:36",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.34% today, in a trade"
-   },
-   {
-    "t": "07:52:36",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:53:22",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "+0.03% today, in a trade"
-   },
-   {
-    "t": "07:53:22",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:54:07",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "+0.04% today, in a trade"
-   },
-   {
-    "t": "07:54:07",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:54:56",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "+0.07% today, in a trade"
-   },
-   {
-    "t": "07:54:56",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:55:42",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.38% today, in a trade"
-   },
-   {
-    "t": "07:55:42",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:56:26",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u2212\u20b980; 1 request(s) for you"
-   },
-   {
-    "t": "07:56:33",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.35% today, in a trade"
-   },
-   {
-    "t": "07:56:33",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:57:28",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "+0.04% today, in a trade"
-   },
-   {
-    "t": "07:57:28",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:58:14",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "+0.01% today, in a trade"
-   },
-   {
-    "t": "07:58:14",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:59:02",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.49% today, in a trade"
-   },
-   {
-    "t": "07:59:02",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "07:59:49",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.49% today, in a trade"
-   },
-   {
-    "t": "07:59:49",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:00:40",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "-0.01% today, in a trade"
-   },
-   {
-    "t": "08:00:40",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:01:36",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "-0.03% today, in a trade"
-   },
-   {
-    "t": "08:01:36",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:01:36",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u2212\u20b984; 1 request(s) for you"
-   },
-   {
-    "t": "08:02:21",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.30% today, in a trade"
-   },
-   {
-    "t": "08:02:21",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:03:11",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.18% today, in a trade"
-   },
-   {
-    "t": "08:03:11",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:03:56",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "+0.09% today, in a trade"
-   },
-   {
-    "t": "08:03:56",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:04:48",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "-0.32% today, in a trade"
-   },
-   {
-    "t": "08:04:48",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:05:43",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "-0.06% today, in a trade"
-   },
-   {
-    "t": "08:05:43",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:06:28",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "-0.09% today, in a trade"
-   },
-   {
-    "t": "08:06:28",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:06:43",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u2212\u20b9100; 1 request(s) for you"
-   },
-   {
-    "t": "08:07:17",
-    "from": "src:kraken",
-    "to": "crypto-5",
-    "kind": "data",
-    "text": "-0.09% today, in a trade"
-   },
-   {
-    "t": "08:07:17",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney, claude"
-   },
-   {
-    "t": "08:08:07",
-    "from": "src:kraken",
-    "to": "crypto-0",
-    "kind": "data",
-    "text": "-0.28% today, in a trade"
-   },
-   {
     "t": "08:08:07",
     "from": "src:github",
     "to": "lab-4",
@@ -2822,18 +2313,544 @@
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:10:46",
+    "from": "src:kraken",
+    "to": "crypto-0",
+    "kind": "data",
+    "text": "-0.35% today, in a trade"
+   },
+   {
+    "t": "08:10:46",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:11:33",
+    "from": "src:kraken",
+    "to": "crypto-0",
+    "kind": "data",
+    "text": "-0.37% today, in a trade"
+   },
+   {
+    "t": "08:11:33",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:11:44",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9107; 1 request(s) for you"
+   },
+   {
+    "t": "08:12:18",
+    "from": "src:kraken",
+    "to": "crypto-0",
+    "kind": "data",
+    "text": "-0.47% today, in a trade"
+   },
+   {
+    "t": "08:12:18",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:13:05",
+    "from": "src:kraken",
+    "to": "crypto-5",
+    "kind": "data",
+    "text": "-0.48% today, in a trade"
+   },
+   {
+    "t": "08:13:05",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:13:50",
+    "from": "src:kraken",
+    "to": "crypto-5",
+    "kind": "data",
+    "text": "-0.40% today, in a trade"
+   },
+   {
+    "t": "08:13:50",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:14:36",
+    "from": "src:kraken",
+    "to": "crypto-5",
+    "kind": "data",
+    "text": "-0.42% today, in a trade"
+   },
+   {
+    "t": "08:14:36",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:15:24",
+    "from": "src:kraken",
+    "to": "crypto-0",
+    "kind": "data",
+    "text": "-0.49% today, in a trade"
+   },
+   {
+    "t": "08:15:24",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:16:14",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:16:48",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9110"
+   },
+   {
+    "t": "08:17:00",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:17:48",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:18:34",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:19:27",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:20:13",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:20:59",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:21:46",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:21:51",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9112"
+   },
+   {
+    "t": "08:22:36",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:23:21",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:24:07",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:24:55",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:25:41",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:26:27",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:26:55",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9120"
+   },
+   {
+    "t": "08:27:17",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:28:03",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:28:54",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:29:50",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:30:36",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:31:22",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:31:56",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9128"
+   },
+   {
+    "t": "08:32:08",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:32:57",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:33:43",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:34:29",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:35:18",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:35:30",
+    "from": "crypto-m",
+    "to": "coo",
+    "kind": "report",
+    "text": "Closed ADA long: \u2212\u20b950"
+   },
+   {
+    "t": "08:36:04",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:36:49",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:37:05",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9159"
+   },
+   {
+    "t": "08:37:39",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:38:25",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:39:16",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:40:12",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:40:58",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:41:47",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:42:15",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9157"
+   },
+   {
+    "t": "08:42:37",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:43:25",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:44:15",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:45:05",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:45:56",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:46:46",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:47:19",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9159"
+   },
+   {
+    "t": "08:47:31",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:48:17",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:49:02",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:49:47",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:50:38",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:51:24",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:52:09",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:52:20",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u2212\u20b9156"
+   },
+   {
+    "t": "08:52:58",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:53:43",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:54:29",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:55:18",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "08:56:03",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
    }
   ],
   "flow_seen": {
    "C261121-67:OPEN": "2026-11-21",
    "C261121-66:OPEN": "2026-11-21",
    "C261121-64:LOSS": "2026-11-21",
-   "C261121-65:LOSS": "2026-11-21"
+   "C261121-65:LOSS": "2026-11-21",
+   "C261121-67:LOSS": "2026-11-21"
   },
   "flow_at": {
-   "crypto": 1795228785.326895,
-   "lab": 1795228785.326895,
-   "ceo": 1795228603.269943
+   "crypto": 1795229124.147547,
+   "lab": 1795231563.697836,
+   "ceo": 1795231340.164772
   }
  }
 }

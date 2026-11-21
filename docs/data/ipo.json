@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T07:51:25+05:30",
+ "updated_at": "2026-11-21T08:25:52+05:30",
  "ipos": [
   {
    "name": "Mahanadi Coalfields Limited",
@@ -313,16 +313,16 @@
    }
   },
   {
-   "name": "Tonbo Imaging India Limited",
-   "symbol": "TONBO",
+   "name": "Bonfiglioli Transmissions Limited",
+   "symbol": "BONFIG",
    "board": "Mainboard",
    "status": "listed",
    "open_date": "2026-10-15",
    "close_date": "2026-10-19",
    "listing_date": "2026-10-23",
    "price_band": [
-    700.0,
-    700.0
+    586.0,
+    586.0
    ],
    "lot_size": null,
    "min_invest_rs": null,
@@ -427,16 +427,16 @@
    }
   },
   {
-   "name": "Bonfiglioli Transmissions Limited",
-   "symbol": "BONFIG",
+   "name": "Tonbo Imaging India Limited",
+   "symbol": "TONBO",
    "board": "Mainboard",
    "status": "listed",
    "open_date": "2026-10-15",
    "close_date": "2026-10-19",
    "listing_date": "2026-10-23",
    "price_band": [
-    586.0,
-    586.0
+    700.0,
+    700.0
    ],
    "lot_size": null,
    "min_invest_rs": null,
@@ -731,16 +731,16 @@
    }
   },
   {
-   "name": "Maxwell Engineering Solutions Limited",
-   "symbol": "MAXENGS",
+   "name": "HGS (India) Limited",
+   "symbol": "HGSINDIALT",
    "board": "SME",
    "status": "listed",
    "open_date": "2026-10-30",
    "close_date": "2026-11-03",
    "listing_date": "2026-11-06",
    "price_band": [
-    158.0,
-    158.0
+    120.0,
+    120.0
    ],
    "lot_size": null,
    "min_invest_rs": null,
@@ -769,16 +769,16 @@
    }
   },
   {
-   "name": "HGS (India) Limited",
-   "symbol": "HGSINDIALT",
+   "name": "Maxwell Engineering Solutions Limited",
+   "symbol": "MAXENGS",
    "board": "SME",
    "status": "listed",
    "open_date": "2026-10-30",
    "close_date": "2026-11-03",
    "listing_date": "2026-11-06",
    "price_band": [
-    120.0,
-    120.0
+    158.0,
+    158.0
    ],
    "lot_size": null,
    "min_invest_rs": null,
@@ -927,5 +927,5 @@
   "sebi": "ok",
   "news": "ok"
  },
- "at": 1795227693.7167053
+ "at": 1795229761.3778765
 }

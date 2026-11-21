@@ -4499,5 +4499,81 @@
    "viability": "Needs \u20b92,500 to hold."
   },
   "reason": "-7.3% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
+ },
+ {
+  "id": "C261121-67",
+  "desk": "CRYPTO",
+  "strategy": "crypto_dip_bounce",
+  "label": "ADA long",
+  "side": "LONG",
+  "entry": 0.1427,
+  "last": 0.1404,
+  "qty": 2500,
+  "status": "LOSS",
+  "pnl_rs": -49.68,
+  "exit": 0.1404,
+  "why": "stop",
+  "day": "2026-11-21",
+  "opened": "03:31:06",
+  "closed": "08:35:30",
+  "ts": 1795212066.7969575,
+  "symbol": "ADA",
+  "stop": 0.140553,
+  "target_px": 0.146974,
+  "horizon": "intraday",
+  "risk_class": "Intraday spot",
+  "margin_rs": 2500,
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "ADA long",
+   "news": [
+    "US markets averaged -2.15% at the 19/11 close.",
+    "Asia averaged -3.26%."
+   ],
+   "data": [
+    "ADA at $0.14, -5.97% over the last 24 hours; 24-hour range $0.14 to $0.15.",
+    "Spot only: \u20b92,500 of coin, no leverage. Round-trip cost assumed 0.4% (exchange fee and spread)."
+   ],
+   "strategy": "Buy a coin that has dropped and started to recover.",
+   "why": [
+    "Used when a coin is 3% or more under its 24-hour high yet 0.5% off its low: sellers look exhausted.",
+    "Crypto here is spot only (shorting spot is not possible for Indian retail), trades around the clock on Kraken prices, and is not available through Upstox: a real trade would be on an Indian crypto exchange."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "0.14",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "0.14",
+     "Costs about \u20b938"
+    ],
+    [
+     "Target (exit if right)",
+     "0.15",
+     "Earns about \u20b975"
+    ],
+    [
+     "Reward for the risk",
+     "2.0 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "33% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b92,500",
+     "2% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or after 8 hours. Fails when: The bounce fails and the fall resumes. The stop caps the loss.",
+   "viability": "Needs \u20b92,500 to hold."
+  },
+  "reason": "-6.6% below the 24-hour high and already 0.5% off its low; stop 1.5%, target 3%, out after 8 hours"
  }
 ]
