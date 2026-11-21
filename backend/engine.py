@@ -41,6 +41,7 @@ import llm as LLM           # noqa: E402
 import lab as LB            # noqa: E402
 import ipo as IPO           # noqa: E402
 import charts_feed as CF    # noqa: E402
+import news_pulse as NP     # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = Path(os.environ.get("DESK_DOCS") or ROOT / "docs" / "data")
@@ -245,6 +246,10 @@ def run() -> None:
     digest, review = [load("news_digest.json", {})], [load("day_review.json", {})]
     ipo_v, ipo_st, lab_v = [load("ipo.json", {})], load("ipo_state.json", {}), [load("lab.json", {})]
     charts_at, charts_thread, fut_key = [0.0], [None], [None]
+    pulse = load("news_pulse_state.json", NP.new_state())               # the first look at every headline and filing, about once a minute
+    for k_, v_ in NP.new_state().items():
+        pulse.setdefault(k_, v_)
+    pulse_at, pulse_thread, px_now = [0.0], [None], {}
 
     def get_chain(under: str, expiry: str, ttl: float = 10.0):
         hit = chain_cache.get((under, expiry))
@@ -428,7 +433,7 @@ def run() -> None:
         if not br or _git("fetch", "-q", "--depth=1", "origin", br, check=False).returncode != 0:
             return
         got = {}
-        for f in ("brief", "ipo_notes", "review"):
+        for f in ("brief", "ipo_notes", "review", "signal_checks"):
             r = _git("show", f"FETCH_HEAD:docs/ai/{f}.json", check=False)
             if r.returncode == 0 and r.stdout.strip():
                 try:
@@ -457,7 +462,7 @@ def run() -> None:
         if ai.on:
             return ai.status()
         if b.get("at"):
-            return {"on": True, "mode": "scheduled", "last": b.get("time"), "next": "09:20 and 16:20 IST on weekdays", "models": {"analyst": "Claude (your plan, scheduled)"}}
+            return {"on": True, "mode": "scheduled", "last": b.get("time"), "next": "every hour from 09:20 to 16:20 IST on weekdays", "models": {"analyst": "Claude (your plan, scheduled)"}}
         return ai.status()
 
     IPO_SYSTEM = ("You are the IPO analyst of an Indian paper-trading desk. For each issue given, write a plain-English note of at most 110 words from the facts given only: "
@@ -490,6 +495,41 @@ def run() -> None:
             save("day_review.json", review[0])
             with clock:
                 CO.say(cst, at, f"{CO.COO['name']} (COO)", "Today's review is written: see the Strategy lab page.", "review")
+
+    def ai_checks(today: str) -> dict:
+        c = ai_files[0].get("signal_checks") or {}
+        return c.get("checks") or {} if c.get("day") == today else {}
+
+    def pulse_scan(now) -> None:
+        """Every headline and NSE filing, scored for emotion and matched to one company; handed to the intraday hunters."""
+        try:
+            today = now.strftime("%Y-%m-%d")
+            if not names_idx and U._cache.get("NSE"):
+                names_idx.update(I.name_index(U.instruments("NSE")))
+            fil = []
+            try:
+                sys.path.insert(0, str(ROOT))
+                from trading_team.spike_watch import fetch_feed, trigger_of
+                for a in fetch_feed():
+                    lab = trigger_of({"desc": a["desc"], "text": a["text"]})
+                    tn = "negative" if lab in I.NEG else "positive" if lab in I.POS else None
+                    if tn:
+                        fil.append({"symbol": a["symbol"], "desc": a["desc"][:140], "ts": a["time"].timestamp(), "tone": tn, "link": a.get("file", "")})
+            except Exception:
+                pass
+            new = NP.scan(pulse, names_idx, now, filings=fil)                # network reads: never inside the clock lock
+            tr_ = {t["symbol"] for t in list(eq.get("trades") or []) if t.get("setup") == "news"}
+            NP.track(pulse, dict(px_now), tr_, dict((eq.get("diag") or {}).get("skipped") or {}), ai_checks(today))
+            sig = list(reversed(pulse["signals"]))
+            hour = [x for x in sig if now.timestamp() - x["ts"] <= 3600]
+            lags = sorted(x["lag_s"] for x in sig[:40] if x.get("lag_s") is not None and x["lag_s"] >= 0)
+            save("news_pulse.json", {"updated_at": now.isoformat(timespec="seconds"), "scans": pulse["scans"], "feeds": pulse["feeds"], "signals": sig[:80],
+                                     "stats": {"last_hour": len(hour), "positive": sum(x["tone"] == "positive" for x in hour), "negative": sum(x["tone"] == "negative" for x in hour),
+                                               "today": len(sig), "median_lag_min": round(lags[len(lags) // 2] / 60, 1) if lags else None, "new_this_scan": len(new)}})
+            save("news_pulse_state.json", {**pulse, "seen": dict(list(pulse["seen"].items())[-4000:])})
+            status["desks"]["news_pulse"] = f"{len(new)} new signal(s); {len(hour)} in the last hour from {sum(1 for f_ in pulse['feeds'].values() if f_.get('ok'))} feeds"
+        except Exception as e:
+            status["desks"]["news_pulse"] = f"error: {str(e)[:100]}"
 
     def build_charts(now) -> None:
         """candles.json: one live chart per desk with the strategies' lines, the trade's marks and the order book."""
@@ -544,11 +584,11 @@ def run() -> None:
                 "indmoney": {"status": "ok" if b.get("ok") else "off", "detail": f"connected: intraday funds Rs {b.get('funds') or 0:,.0f}" if b.get("ok") else "not connected here: the gateway reads it only where INDSTOCKS_TOKEN is set"},
                 "kraken": ok("Kraken" in str(d.get("crypto", "")), str(d.get("crypto", ""))[:70], "error" in str(d.get("crypto", ""))),
                 "yahoo": ok(age is not None and age < 6 * 60, f"world markets refreshed {age:.0f} min ago" if age is not None else "world markets not refreshed yet"),
-                "news": ok(bool(feed), f"{len(feed)} headlines, latest {feed[-1]['time']}; {len(headlines)} name a listed company" if feed else "no headline yet"),
+                "news": ok(bool(feed) or bool(pulse.get("signals")), f"news pulse: {sum(1 for f_ in pulse['feeds'].values() if f_.get('ok'))} feeds read every minute in market hours, {len(pulse.get('signals') or [])} signals today; {len(headlines)} with the hunters now"),
                 "claude": (({"status": "warn" if ai.status().get("resting_until") else "ok", "detail": f"your Claude plan: {ai.status()['calls_5h']} of {ai.status()['cap_calls_5h']} calls in the last 5 hours, {ai.status()['calls_day']} of {ai.status()['cap_calls_day']} today"
                              + ("; resting after the plan's limit" if ai.status().get("resting_until") else "")} if ai.mode == "plan" else
                             {"status": "ok", "detail": f"API: ${ai.status()['usd_5h']:.3f} of ${ai.status()['cap_5h']:.2f} in 5 hours"}) if ai.on else
-                           {"status": "ok", "detail": f"scheduled Claude analyst (your plan): last round {ai_state().get('last')}, next at 09:20 and 16:20 IST on weekdays"} if ai_state().get("mode") == "scheduled" else
+                           {"status": "ok", "detail": f"scheduled Claude analyst (your plan): last round {ai_state().get('last')}, next on the hour's :20 from 09:20 to 16:20 IST on weekdays"} if ai_state().get("mode") == "scheduled" else
                            {"status": "off", "detail": "not connected yet: the desks run on their written rules"}),
                 "github": {"status": "ok" if os.environ.get("GITHUB_TOKEN") else "off", "detail": "listening for your instructions every 5 minutes" if os.environ.get("GITHUB_TOKEN") else "not available on this machine"}}
 
@@ -577,7 +617,7 @@ def run() -> None:
                                                    "nifty_chg": nf, "equity": acct[0], "scalp_n": len(scalp_bars), "scalp_params": {**SC.R, **((cst["variants"].get("scalp") or {}).get("params") or {})},
                                                    "sessions": status.get("sessions"), "quant_notes": qn, "headlines": headlines, "intraday_diag": eq.get("diag"), "mcx": snap.get("mcx"),
                                                    "crypto": snap.get("crypto"), "fno_snap": snap.get("fno"), "news_n": len(load("news_feed.json", [])), "sources": sources_status(now),
-                                                   "lab": lab, "ipo": ipo_v[0], "news_digest": digest[0]})
+                                                   "lab": lab, "ipo": ipo_v[0], "news_digest": digest[0], "pulse": pulse.get("signals") or []})
             for r in view["coo"]["requests"]:
                 if r["status"] == "pending" and r["id"] not in cst["said"].get("pushed", []):
                     cst["said"]["pushed"] = (cst["said"].get("pushed", []) + [r["id"]])[-50:]
@@ -685,6 +725,11 @@ def run() -> None:
                             names_idx.update(I.name_index(U.instruments("NSE")))
                         headlines.clear()
                         headlines.update(I.headline_names(load("news_feed.json", []), names_idx, now) if names_idx else {})
+                        doubted_ = {k_ for k_, v_ in ai_checks(today).items() if v_.get("verdict") == "doubt"}
+                        for k_ in doubted_:
+                            headlines.pop(k_, None)
+                        headlines.update(NP.for_hunters(pulse, now, doubted_))
+                    px_now.update({r_["symbol"]: r_["price"] for r_ in rows})
                     I.step(eq, today, hhmm, rows, news, rm["intraday"], cst["effort"].get("intraday", 1), headlines)
                 info["equity"] = f"{len(rows)} stocks, real time"
             except Exception as e:
@@ -909,6 +954,12 @@ def run() -> None:
                 save("intraday.json", intra)
             except Exception as e:
                 info["intraday"] = f"error: {str(e)[:80]}"
+        hm_ = now.strftime("%H:%M")
+        every_ = 60 if now.weekday() < 5 and "08:30" <= hm_ <= "15:35" else 600     # once a minute in market hours, every 10 minutes otherwise
+        if time.time() - pulse_at[0] >= every_ and not (pulse_thread[0] and pulse_thread[0].is_alive()):
+            pulse_at[0] = time.time()
+            pulse_thread[0] = threading.Thread(target=pulse_scan, args=(now,), daemon=True)
+            pulse_thread[0].start()
         if time.time() - charts_at[0] >= 60 and not (charts_thread[0] and charts_thread[0].is_alive()):
             charts_at[0] = time.time()
             charts_thread[0] = threading.Thread(target=build_charts, args=(now,), daemon=True)

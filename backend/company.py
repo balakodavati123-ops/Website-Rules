@@ -250,6 +250,13 @@ def build(st: dict, now: datetime, trades: list[dict], stats: list[dict], ctx: d
            "doing": f"Supervising {len(teams)} teams: {active} traded today, company {_fmt(comp_today)}." + (f" {len(pending)} request{'s' if len(pending) > 1 else ''} waiting for you." if pending else "") +
                     (f" Bonus race leader: {leader['name']} ({_fmt(leader['today']['pnl'])})." if leader and leader["today"]["pnl"] > 0 else "")}
     board = sorted([{"who": k, "tokens": v} for k, v in st["tokens"].items()], key=lambda x: -x["tokens"])
+    for sg in (ctx.get("pulse") or [])[-20:]:                         # every news signal walks from the news rack to the Headlines (or Filings) hunter
+        k = "sig:" + str(sg.get("id"))
+        if k in st["flow_seen"]:
+            continue
+        st["flow_seen"][k] = today
+        filing = sg.get("kind") == "filing"
+        _flow(st, now, "src:nse" if filing else "src:news", "intraday-0" if filing else "intraday-1", "data", f"{sg.get('emotion')} · {sg.get('symbol')}: {sg.get('headline', '')}")
     if now.timestamp() - st["flow_at"].get("ceo", 0) >= 300:
         st["flow_at"]["ceo"] = now.timestamp()
         _flow(st, now, "coo", "ceo", "report", f"Company today {_fmt(comp_today)}" + (f"; {len(pending)} request(s) for you" if pending else ""))
@@ -271,7 +278,9 @@ def _seats(spec: dict, tid: str, td: list[dict], opn: list[dict], ctx: dict, ses
         d, heads = ctx.get("intraday_diag") or {}, ctx.get("headlines") or {}
         found, on = d.get("found") or {}, d.get("setups_on") or []
         seat("Filings hunter", "active" if d.get("news_names") else "idle", f"{d.get('news_names', 0)} companies filed news today that leans one way")
-        seat("Headlines hunter", "active" if heads else "idle", (f"{len(heads)} recent headlines name a listed company: " + ", ".join(list(heads)[:4])) if heads else "No headline in the last 3 hours names a listed company")
+        last = (ctx.get("pulse") or [])[-1:]
+        seat("Headlines hunter", "active" if heads else "idle", (f"{len(heads)} news signal(s) with the desk: " + ", ".join(f"{k} ({v.get('emotion') or v.get('tone')})" for k, v in list(heads.items())[-4:]) +
+             (f". Latest {last[0]['t'][:5]}: {last[0]['headline'][:70]}" if last else "")) if heads else "Reading every market feed once a minute: no headline in the last 3 hours names one company and leans one way")
         for k, title in (("gap", "Gap scanner"), ("momentum", "Momentum scanner"), ("vwap", "VWAP pressure scanner")):
             f = found.get(k) or []
             if k not in on:
