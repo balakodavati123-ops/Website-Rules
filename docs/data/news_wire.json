@@ -1,1202 +1,1202 @@
 [
 {
-"time": "22 Nov 00:36",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "SEBI proposes easing disclosure norms for foreign portfolio investors, seeks public comments"
-},
-{
-"time": "22 Nov 00:36",
-"source": "FT-Markets",
-"region": "World",
-"headline": "Markets sell-off as it happened: Nasdaq 100 enters bear market, Anthropic shares drop 8.5% a day after blockbuster market debut"
-},
-{
-"time": "22 Nov 00:41",
-"source": "Mint",
-"region": "India",
-"headline": "GREED & fear Report: Jefferies Chris Wood hikes India exposure for 2nd time in 3 weeks, cuts Taiwan| New Allocations"
-},
-{
-"time": "22 Nov 00:41",
-"source": "GoogleNews",
-"region": "India",
-"headline": "SEBI Chairman Unveils Reform Push to Make India\u2019s Capital Markets More Investor-Friendly - The Indian Awaaz"
-},
-{
-"time": "22 Nov 00:41",
-"source": "BusinessLine",
-"region": "India",
-"headline": "Tech Query: ICICI Bank, Gujarat Energy, Kaynes Technology Limited, Cochin Shipyard \u2014 What is the outlook? Where are these stocks headed?"
-},
-{
-"time": "22 Nov 00:41",
-"source": "BusinessLine",
-"region": "India",
-"headline": "US Market Outlook: Indices plunge deeply"
-},
-{
-"time": "22 Nov 00:41",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "US Market Crash: Nasdaq enters 'bear market' - 10 things for investors to know"
-},
-{
-"time": "22 Nov 00:41",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Court approves $7.25 billion Bayer settlement over claims Roundup weed killer caused cancer - PBS"
-},
-{
-"time": "22 Nov 00:41",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Nvidia Said to Face S.E.C. Probe Into Its Accounting Practices - The New York Times"
-},
-{
-"time": "22 Nov 00:41",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "The Danger of Jensen Huang\u2019s Handshake Deals at Nvidia - WSJ"
-},
-{
-"time": "22 Nov 00:41",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "The S&P 500 Heads Into Thanksgiving Below Its Peak. Here's How the Holiday Week Has Usually Gone Since 1950."
-},
-{
-"time": "22 Nov 00:41",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "The Nasdaq Just Triggered a Correction. 1 Move I'm Making Right Now -- and 1 I'm Avoiding"
-},
-{
-"time": "22 Nov 00:41",
-"source": "MarketWatch",
-"region": "World",
-"headline": "\u2018Nvidia\u2019s turmoil has me spooked\u2019: Is it time to sell my stocks?"
-},
-{
-"time": "22 Nov 00:41",
-"source": "MarketWatch",
-"region": "World",
-"headline": "I\u2019m terrified of a market crash. Should I put $400,000 of my $1 million retirement savings into an annuity?"
-},
-{
-"time": "22 Nov 00:46",
-"source": "BusinessLine",
-"region": "India",
-"headline": "Movers & Shakers: Stocks that will see action this week"
-},
-{
-"time": "22 Nov 00:46",
-"source": "BusinessLine",
-"region": "India",
-"headline": "Index Outlook: Momentum holds firm"
-},
-{
-"time": "22 Nov 00:46",
-"source": "BusinessLine",
-"region": "India",
-"headline": "Crude Check:\u00a0Forms a base"
-},
-{
-"time": "22 Nov 00:46",
-"source": "BusinessLine",
-"region": "India",
-"headline": "Bullion Cues: Bears wreak havoc"
-},
-{
-"time": "22 Nov 00:46",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Everyone\u2019s Asking If AI Will Take Their Job. PM Modi Says It Comes Down To One Thing"
-},
-{
-"time": "22 Nov 00:46",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Singur Gets A Second Shot: Ashok Leyland To Set Up Truck Plant, 18 Years After Tata Nano Exit"
-},
-{
-"time": "22 Nov 00:46",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "Cohance Lifesciences: USFDA inspects and classifies Telangana facility as \u2018voluntary action indicated\u2019"
-},
-{
-"time": "22 Nov 00:46",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "The Outages Are Just Getting Started - WIRED"
-},
-{
-"time": "22 Nov 00:46",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "International first class is over for U.S. airlines. Enter the mega business-class cabin - CNBC"
-},
-{
-"time": "22 Nov 00:46",
-"source": "BBC-Business",
-"region": "World",
-"headline": "Tech stock sell-off drags markets down as Anthropic shares slide"
-},
-{
-"time": "22 Nov 00:46",
-"source": "Investing.com",
-"region": "World",
-"headline": "How to invest in transformational innovation"
-},
-{
-"time": "22 Nov 00:46",
-"source": "FT-Markets",
-"region": "World",
-"headline": "Oil shipped through Hormuz falls as Iranian strikes increase"
-},
-{
-"time": "22 Nov 00:46",
-"source": "FT-Markets",
-"region": "World",
-"headline": "US watchdogs pick a bad time to cut disclosure on executive pay"
-},
-{
-"time": "22 Nov 00:51",
-"source": "ET",
-"region": "India",
-"headline": "Concurrent Gainers: These 13 stocks gained for 5 days in a row, all rose over 27%"
-},
-{
-"time": "22 Nov 00:51",
-"source": "ET",
-"region": "India",
-"headline": "US Treasury yields drop for day and week; AI trade concern spurs safe-haven bid"
-},
-{
-"time": "22 Nov 00:51",
-"source": "ET",
-"region": "India",
-"headline": "Crude prices may normalise to USD 70 by end-2027 as global oil market moves into surplus: Report"
-},
-{
-"time": "22 Nov 00:51",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Bitcoin nears USD 60,000: What traders should watch, according to WazirX"
-},
-{
-"time": "22 Nov 00:51",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Oil prices set for 3rd straight week of decline on West Asia export flows"
-},
-{
-"time": "22 Nov 00:51",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Indian investors show strong appetite for Anthropic's blockbuster IPO"
-},
-{
-"time": "22 Nov 00:51",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Tax AI Token Use, Reward Training: Raghuram Rajan\u2019s Plan To Protect Jobs From AI"
-},
-{
-"time": "22 Nov 00:51",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Avengers: Doomsday Advance Bookings: Marvel Fans Turn Up The Heat Ahead Of Release"
-},
-{
-"time": "22 Nov 00:51",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "Hero MotoCorp gets ITAT relief on \u20b927 crore tax demand for six assessment years"
-},
-{
-"time": "22 Nov 00:51",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Judge Approves $7 Billion Settlement Over Claims That Roundup Caused Cancer - The New York Times"
-},
-{
-"time": "22 Nov 00:51",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Nvidia stock extends $2.7 trillion rout as SEC probe reportedly investigates its accounting - Yahoo Finance"
-},
-{
-"time": "22 Nov 00:51",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "Dow Jones Futures: After Nvidia, Anthropic Fuel Worst Week Since Covid, Look For These 'Absolute Losers'"
-},
-{
-"time": "22 Nov 00:51",
-"source": "FT-Markets",
-"region": "World",
-"headline": "CVC claims accounting manipulation in \u20ac3bn Advent pastry ingredients deal"
-},
-{
-"time": "22 Nov 00:56",
-"source": "ET",
-"region": "India",
-"headline": "Nifty eyes 26,200 as rally strengthens; 6 sectors signal outperformance"
-},
-{
-"time": "22 Nov 00:56",
-"source": "ET",
-"region": "India",
-"headline": "Stocks to buy: HSBC lists 19 Indian stocks that saw FY27 earnings upgrades, check target prices"
-},
-{
-"time": "22 Nov 00:56",
-"source": "ET",
-"region": "India",
-"headline": "Gold's slide deepens as AI rout, rate-hike bets hurt bullion"
-},
-{
-"time": "22 Nov 00:56",
-"source": "ET",
-"region": "India",
-"headline": "UK stocks sink as global selloff weighs on banks and miners"
-},
-{
-"time": "22 Nov 00:56",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Anthropic shares tumble after record IPO as AI trade faces reality check"
-},
-{
-"time": "22 Nov 00:56",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Trump Calls Jensen Huang \"Good Man\", Urges Nvidia To Give Him \"Second Chance\" - NDTV"
-},
-{
-"time": "22 Nov 00:56",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Stock Market News From Nov. 20, 2026: S&P 500 Ends Week in Correction Territory - Barron's"
-},
-{
-"time": "22 Nov 00:56",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "A 10% drop for the stock market is unnerving, but it\u2019s not that unusual - AP News"
-},
-{
-"time": "22 Nov 00:56",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "What just happened to tech stocks?"
-},
-{
-"time": "22 Nov 00:56",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "We May Be Witnessing Wall Street's Biggest Bubble Burst in Real Time (and I'm Not Talking About Artificial Intelligence)"
-},
-{
-"time": "22 Nov 00:56",
-"source": "MarketWatch",
-"region": "World",
-"headline": "My husband is happily retired at 64 and thinks I should keep working. Is he being fair?"
-},
-{
-"time": "22 Nov 00:56",
-"source": "BBC-Business",
-"region": "World",
-"headline": "UK to explore even closer ties with EU after agreeing deal, says Burnham"
-},
-{
-"time": "22 Nov 00:56",
-"source": "BBC-Business",
-"region": "World",
-"headline": "Faisal Islam: This cost-cutting UK-EU deal doesn't mean lower prices will follow"
-},
-{
-"time": "22 Nov 00:56",
-"source": "BBC-Business",
-"region": "World",
-"headline": "Trump threatens ban on US firms building AI data centres overseas"
-},
-{
-"time": "22 Nov 00:56",
-"source": "BBC-Business",
-"region": "World",
-"headline": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history"
-},
-{
-"time": "22 Nov 00:56",
-"source": "BBC-Business",
-"region": "World",
-"headline": "Should AI be judging our credit worthiness?"
-},
-{
-"time": "22 Nov 00:56",
-"source": "FT-Markets",
-"region": "World",
-"headline": "How can investors succeed in markets today?"
-},
-{
-"time": "22 Nov 01:01",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Sebi plans tighter tenure caps for exchange MDs, public interest directors"
-},
-{
-"time": "22 Nov 01:01",
-"source": "GoogleNews",
-"region": "India",
-"headline": "Stock markets defy global rout; Sensex jumps 898 points, Nifty climbs to 25,800 - The Hindu"
-},
-{
-"time": "22 Nov 01:01",
-"source": "GoogleNews",
-"region": "India",
-"headline": "Sensex, Nifty Open Lower as Global AI Selloff Weighs - HDFC Sky"
-},
-{
-"time": "22 Nov 01:01",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Bitcoin rises after falling to two-year low - Reuters"
-},
-{
-"time": "22 Nov 01:01",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "RBI Governor Sanjay Malhotra urges banks to step up lending to small, micro enterprises for greater... - Moneycontrol.com"
-},
-{
-"time": "22 Nov 01:01",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Indian shares rise for fourth straight week as AI rout deepens - Reuters"
-},
-{
-"time": "22 Nov 01:01",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "What Jensen Huang\u2019s allies say they've told him since his resignation: 'Let's fight' - Business Insider"
-},
-{
-"time": "22 Nov 01:01",
-"source": "BBC-Business",
-"region": "World",
-"headline": "Tinned food and long-life milk boost retail sales after 'Be Ready' campaign launch"
-},
-{
-"time": "22 Nov 01:01",
-"source": "BBC-Business",
-"region": "World",
-"headline": "Fish and eggs al desko? The dos and don'ts of lunch at work"
-},
-{
-"time": "22 Nov 01:01",
-"source": "BBC-Business",
-"region": "World",
-"headline": "Airbnb's divisive new house rules come into force"
-},
-{
-"time": "22 Nov 01:01",
-"source": "BBC-Business",
-"region": "World",
-"headline": "Mouldy, infested housing for vulnerable people sold as ethical investments abroad"
-},
-{
-"time": "22 Nov 01:01",
-"source": "NYT-Business",
-"region": "World",
-"headline": "How to Plan for an A.I. Emergency, or Any Calamity"
-},
-{
-"time": "22 Nov 01:01",
-"source": "NYT-Business",
-"region": "World",
-"headline": "The Faces of the 2026 DealBook Summit"
-},
-{
-"time": "22 Nov 01:01",
-"source": "NYT-Business",
-"region": "World",
-"headline": "Maldon Salt\u2019s Authenticity Is Questioned, Leaving Foodies Shaken"
-},
-{
-"time": "22 Nov 01:01",
-"source": "NYT-Business",
-"region": "World",
-"headline": "The Used Car Industry Is Booming. This N.J. Campus Is Setting the Price."
-},
-{
-"time": "22 Nov 01:01",
-"source": "NYT-Business",
-"region": "World",
-"headline": "Why Nostalgia for Tamagotchis, the Virtual Pets, Won\u2019t Die"
-},
-{
-"time": "22 Nov 01:01",
-"source": "Investing.com",
-"region": "World",
-"headline": "Spain to extend banking tax through 2027 to fund housing policies"
-},
-{
-"time": "22 Nov 01:01",
-"source": "Investing.com",
-"region": "World",
-"headline": "UBS assesses impact of nationwide ground stop on US airlines\u2019 4Q outlook"
-},
-{
-"time": "22 Nov 01:06",
-"source": "Mint",
-"region": "India",
-"headline": "Bitcoin price crash: \u200bFalls to lowest level in two years - What\u2019s behind plunge of world\u2019s largest cryptocurrency"
-},
-{
-"time": "22 Nov 01:06",
-"source": "Mint",
-"region": "India",
-"headline": "PSU vs Private banks: Who is powering Nifty Bank's record-high rally after 5% surge? SBI, HDFC, AU, Canara target price"
-},
-{
-"time": "22 Nov 01:06",
-"source": "Mint",
-"region": "India",
-"headline": "Gold, silver price crash: DSP Mutual Fund turns bullish on bullion, reveals new buying strategy; check price levels"
-},
-{
-"time": "22 Nov 01:06",
-"source": "Mint",
-"region": "India",
-"headline": "Mahanadi CoalFields IPO GMP Check: Down 92% from  \u20b99.25 to  \u20b90.7, issue struggles to attract bids- Subscribe or avoid?"
-},
-{
-"time": "22 Nov 01:06",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Markets gain 2.6% on FPI inflows, rupee rally and cooling crude oil prices"
-},
-{
-"time": "22 Nov 01:06",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Rupee looks set for best monthly gains in 8 years; bond yields soften"
-},
-{
-"time": "22 Nov 01:06",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "Aurobindo Pharma's Apitoria unit gets 'voluntary action indicated' classification from USFDA"
-},
-{
-"time": "22 Nov 01:06",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Anthropic\u2019s record IPO collides with tech\u2019s worst week on Wall Street since 2020 - CNBC"
-},
-{
-"time": "22 Nov 01:06",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Judge approves $7.25bn settlement for Roundup weedkiller cancer claims - BBC"
-},
-{
-"time": "22 Nov 01:06",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Bessent says no further restrictions are needed for Nvidia chip exports to China - PBS"
-},
-{
-"time": "22 Nov 01:06",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "This Stock Market Selloff Could Block the Fed\u2019s Rate Hikes"
-},
-{
-"time": "22 Nov 01:06",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "Goldman Sachs admits the \u2018AI unwind\u2019 has spiraled into something more dangerous \u2014\u00a0and it\u2019s watching for 3 signs of bottom"
-},
-{
-"time": "22 Nov 01:06",
-"source": "BBC-Business",
-"region": "World",
-"headline": "Tens of thousands of UK fridges secured from hackers in secret nationwide operation"
-},
-{
-"time": "22 Nov 01:06",
-"source": "BBC-Business",
-"region": "World",
-"headline": "Anthropic becomes one of world's most valuable public companies in stock market debut"
-},
-{
-"time": "22 Nov 01:06",
-"source": "NYT-Business",
-"region": "World",
-"headline": "Anthropic\u2019s Debut Shows the Disconnect Between Wall Street and Silicon Valley"
-},
-{
-"time": "22 Nov 01:06",
-"source": "Investing.com",
-"region": "World",
-"headline": "South Korea\u2019s Lee urges faster AI investment during $5.2bn data center visit"
-},
-{
-"time": "22 Nov 01:06",
-"source": "FT-Markets",
-"region": "World",
-"headline": "Going public, but only a little"
-},
-{
-"time": "22 Nov 01:11",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Industry body GJC alerts BIS over gold adulteration using Rhenium, Iridium"
-},
-{
-"time": "22 Nov 01:11",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "What does EPFO\u2019s Systematic Withdrawal Plan entail for retirees | Explained - The Hindu"
-},
-{
-"time": "22 Nov 01:11",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Trump says he'd work with Dems to cap credit card interest, fees - Axios"
-},
-{
-"time": "22 Nov 01:11",
-"source": "MarketWatch",
-"region": "World",
-"headline": "America is definitely rich enough to fix Social Security and Medicare. Here\u2019s how."
-},
-{
-"time": "22 Nov 01:11",
-"source": "MarketWatch",
-"region": "World",
-"headline": "Micron and Sandisk stocks might look like bargains, but analysts say that\u2019s actually a red flag"
-},
-{
-"time": "22 Nov 01:11",
-"source": "NYT-Business",
-"region": "World",
-"headline": "Judge Approves $7 Billion Settlement Over Claims That Roundup Caused Cancer"
-},
-{
-"time": "22 Nov 01:11",
-"source": "NYT-Business",
-"region": "World",
-"headline": "Nvidia Said to Face S.E.C. Probe Into Its Accounting Practices"
-},
-{
-"time": "22 Nov 01:11",
-"source": "NYT-Business",
-"region": "World",
-"headline": "Grand Theft Auto VI Made $3.79 Billion in a Single Day"
-},
-{
-"time": "22 Nov 01:11",
-"source": "NYT-Business",
-"region": "World",
-"headline": "Many Etsy Sellers Close Up Shop Over Site\u2019s New A.I. Policy"
-},
-{
-"time": "22 Nov 01:11",
-"source": "NYT-Business",
-"region": "World",
-"headline": "Nissan Shuts Down System Used for Repairs After Hack Attempt"
-},
-{
-"time": "22 Nov 01:11",
-"source": "Investing.com",
-"region": "World",
-"headline": "Intesa Sanpaolo launches \u20ac34.5bn cash-and-share offer for Monte dei Paschi"
-},
-{
-"time": "22 Nov 01:11",
-"source": "Investing.com",
-"region": "World",
-"headline": "How are AI chip flows reshaping dollar dominance? Deutsche Bank explains"
-},
-{
-"time": "22 Nov 01:16",
-"source": "ET",
-"region": "India",
-"headline": "AI to lead investment strategy in 2027; Energy and borrowing costs shape macro outlook: Barclays"
-},
-{
-"time": "22 Nov 01:16",
-"source": "ET",
-"region": "India",
-"headline": "Market winners: Max Healthcare, Deepak Fertilisers among 10 stocks that surged up to 14% in last week"
-},
-{
-"time": "22 Nov 01:16",
-"source": "Mint",
-"region": "India",
-"headline": "Hindalco vs NALCO vs Vedanta Aluminium vs Hindustan Zinc: Which metal stocks to buy for good returns? Target, SL"
-},
-{
-"time": "22 Nov 01:16",
-"source": "Mint",
-"region": "India",
-"headline": "Upcoming dividend, split, rights issue record dates next week, Nov 23-27: Pashupati Cotspin, Zee Ent, Varvee, and more"
-},
-{
-"time": "22 Nov 01:16",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "IndusInd Bank shares jump 8% on volume surge, near 52-week high"
-},
-{
-"time": "22 Nov 01:16",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Textiles shares hit new high; Indo Count, Welspun Living rally up to 8%"
-},
-{
-"time": "22 Nov 01:16",
-"source": "GoogleNews",
-"region": "India",
-"headline": "Nifty Hits Nine-Month High of 25,800 as Record FII Buying Lifts Sensex 2,327 Points - HDFC Sky"
-},
-{
-"time": "22 Nov 01:16",
-"source": "Investing.com",
-"region": "World",
-"headline": "Analysis-Wall Street banks set for banner year as Anthropic, SpaceX IPOs generate $1 billion in fees"
-},
-{
-"time": "22 Nov 01:16",
-"source": "Investing.com",
-"region": "World",
-"headline": "Singaporean extradited to face US charges over global insider trading scheme"
-},
-{
-"time": "22 Nov 01:16",
-"source": "Investing.com",
-"region": "World",
-"headline": "US was warned of telecom security risks years before Salt Typhoon"
-},
-{
-"time": "22 Nov 01:16",
-"source": "FT-Markets",
-"region": "World",
-"headline": "Traders start to move US copper to China as Trump tariff fears ease"
-},
-{
-"time": "22 Nov 01:22",
-"source": "ET",
-"region": "India",
-"headline": "Dollar weaker as Fed-fueled rally stalls; lower US yields help yen"
-},
-{
-"time": "22 Nov 01:22",
-"source": "GoogleNews",
-"region": "India",
-"headline": "India's RBI expected to raise rates in December, deliver final hike in February - Reuters"
-},
-{
-"time": "22 Nov 01:22",
-"source": "GoogleNews",
-"region": "India",
-"headline": "Indian Stock Market Extends 4-Week Rally as Sensex and Nifty Hit 9-Month Highs on Record FII Buying - Kotak Neo"
-},
-{
-"time": "22 Nov 01:22",
-"source": "GoogleNews",
-"region": "India",
-"headline": "Small businesses can deliver 100 times more impact from loans: RBI chief - Business Standard"
-},
-{
-"time": "22 Nov 01:22",
-"source": "GoogleNews",
-"region": "India",
-"headline": "Indias Foreign Exchange Reserves Fall by More than $14 Billion, RBI Data Reveals - TheWire.in"
-},
-{
-"time": "22 Nov 01:22",
-"source": "GoogleNews",
-"region": "India",
-"headline": "Market weekly wrap: NIFTY50, SENSEX extend winning streak to 4 weeks with 3% gains; NIFTY Smallcap 100 underperforms - Upstox"
-},
-{
-"time": "22 Nov 01:22",
-"source": "GoogleNews",
-"region": "India",
-"headline": "RBI Clarifies Forex Reporting Rules For Services Exports, Imports - Sarkaritel.com"
-},
-{
-"time": "22 Nov 01:22",
-"source": "GoogleNews",
-"region": "India",
-"headline": "Shriram Finance To Replace Trent In BSE Sensex From 21 December - TradingView"
-},
-{
-"time": "22 Nov 01:22",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Anthropic shares crash 13% a day after record IPO as retail investors face losses - The Times of India"
-},
-{
-"time": "22 Nov 01:22",
-"source": "MarketWatch",
-"region": "World",
-"headline": "\u2018I\u2019ve been a stay-at-home mom\u2019: I\u2019m 50 and have a chronic illness. My husband lost his job. Should he raid his 401(k)?"
-},
-{
-"time": "22 Nov 01:22",
-"source": "MarketWatch",
-"region": "World",
-"headline": "\u2018Buyers are out for blood\u2019: With home sales at a record low, buyers are calling the shots"
-},
-{
-"time": "22 Nov 01:27",
-"source": "Mint",
-"region": "India",
-"headline": "Max Healthcare, Fortis, Apollo, Aster: Hospital stocks steal show on D-Street with up to 14% rally - Buy now or wait?"
-},
-{
-"time": "22 Nov 01:27",
-"source": "Mint",
-"region": "India",
-"headline": "Stock split reset: SanDisk stock crashes 87.5% overnight? Here's what investors need to know about its 8-for-1 split"
-},
-{
-"time": "22 Nov 01:27",
-"source": "GoogleNews",
-"region": "India",
-"headline": "India's forex reserves fall to over three month low of $705 billion - Reuters"
-},
-{
-"time": "22 Nov 01:27",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Four weeks of gains! Sensex, Nifty scale 9-month highs on record FII buying - Moneycontrol.com"
-},
-{
-"time": "22 Nov 01:27",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "The Test for India\u2019s $8.9 Billion Foreign Rally Arrives in December"
-},
-{
-"time": "22 Nov 01:27",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "India's 50 leading companies arrive on SGX: UTI India Nifty 50 Index ETF begins trading"
-},
-{
-"time": "22 Nov 01:27",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "India stocks dip after RBI hikes rates for first time in nearly 4 yrs"
-},
-{
-"time": "22 Nov 01:27",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "Premier Explosives gets \u20b9311-crore export order for defence explosives"
-},
-{
-"time": "22 Nov 01:27",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "What smart people are saying about the market sell-off ripping through tech and AI - Business Insider"
-},
-{
-"time": "22 Nov 01:27",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "Wall Street\u2019s Fear Index Just Hit 9.7. History Says the S&P 500 Could Rally 10.5% in 3 Weeks"
-},
-{
-"time": "22 Nov 01:27",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "Stock Market Week Ahead: A Matter Of Pressure And Time"
-},
-{
-"time": "22 Nov 01:32",
-"source": "Mint",
-"region": "India",
-"headline": "Taiwan Widens Short Sale Curbs After Shares Plunge on AI Concern"
-},
-{
-"time": "22 Nov 01:32",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Noel Tata's salvo sets stage for stormy Tata Sons board meet next week - Business Standard"
-},
-{
-"time": "22 Nov 01:32",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "\"I'll P** On Your Brain\": Inside Jensen Huang's Alleged Reign Of Terror At Nvidia - NDTV Profit"
-},
-{
-"time": "22 Nov 01:32",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Gold falls toward $3,500, silver slides as stock markets enter correction territory - Kitco PM Report - Kitco"
-},
-{
-"time": "22 Nov 01:32",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "Indian shares set to open higher; Fed chair speech, closing auction volatility in focus"
-},
-{
-"time": "22 Nov 01:32",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "Indian shares open lower as Middle East tensions persist, Nifty expiry looms"
-},
-{
-"time": "22 Nov 01:32",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "India Prices $10 Billion of Equity Deals in August, a Record Month"
-},
-{
-"time": "22 Nov 01:32",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "Indian shares likely to open higher; caution ahead of new Iran sanctions"
-},
-{
-"time": "22 Nov 01:32",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "Asia\u2019s non-AI market beneficiaries: Watch these markets as tech valuations sink"
-},
-{
-"time": "22 Nov 01:32",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "Nifty 50 Is Still Down 4.91% in 2026, So Why Does Citi See 13% Upside?"
-},
-{
-"time": "22 Nov 01:37",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Expired food, fungus found at Amazon, BigBasket Pune dark stores - Rediff"
-},
-{
-"time": "22 Nov 01:37",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Nasdaq 100 sinks 5.6% in worst week since Covid, S&P 500 corrects to 3.7% as investors sell off AI, tech stocks - Livemint"
-},
-{
-"time": "22 Nov 01:37",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "India's HDFC Bank slips to 2-1/2-year low as legal, leadership woes linger"
-},
-{
-"time": "22 Nov 01:37",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "India Overtakes Taiwan to Become World\u2019s 5th Largest Stock Market Again"
-},
-{
-"time": "22 Nov 01:37",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "AI stock selloff drives investors to China, India, and overlooked Asian sectors"
-},
-{
-"time": "22 Nov 01:37",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Anthropic mathematician claims he used Claude to prove 19th-century Riemann hypothesis - The Guardian"
-},
-{
-"time": "22 Nov 01:37",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "The S&P 500 Is Having the Longest Losing Streak Since February 2020"
-},
-{
-"time": "22 Nov 01:37",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "Investors Put $45.7 Billion Into U.S. Stock Funds Right Before the Stock Market Tanked"
-},
-{
-"time": "22 Nov 01:42",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Taiwan bans short sales of stocks in new move to calm markets - Moneycontrol.com"
-},
-{
-"time": "22 Nov 01:42",
-"source": "BusinessLine",
-"region": "India",
-"headline": "Indian markets nearing end of consolidation phase, financials and consumption look attractive: HSBC"
-},
-{
-"time": "22 Nov 01:42",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Anirudh Ravichander-Kavya Maran Wedding Reception: Newlyweds Steal The Spotlight In Chennai"
-},
-{
-"time": "22 Nov 01:42",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "Dell Up 447% In 5 Years, HPE 220%: What Did Michael Dell Do Differently?"
-},
-{
-"time": "22 Nov 01:42",
-"source": "MarketWatch",
-"region": "World",
-"headline": "\u2018Never too late to start\u2019: Practical investing advice from some of the top women in finance"
-},
-{
-"time": "22 Nov 01:42",
-"source": "MarketWatch",
-"region": "World",
-"headline": "Is Social Security a Ponzi scheme? No. Don\u2019t get carried away with 1930s-era prophecies of doom."
-},
-{
-"time": "22 Nov 01:47",
-"source": "Mint",
-"region": "India",
-"headline": "Patanjali Foods dividend 2026 announcement news: Board to consider 2nd interim dividend on Nov 26 - Check history, yield"
-},
-{
-"time": "22 Nov 01:47",
-"source": "GoogleNews",
-"region": "India",
-"headline": "SEBI proposes eliminating additional disclosure requirements for offshore funds - News On AIR"
-},
-{
-"time": "22 Nov 01:47",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "\"Pee On Your Brain\": Report Claims Jensen Huang's 'Culture Of Fear' At Nvidia - NDTV"
-},
-{
-"time": "22 Nov 01:47",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Microsoft CEO Satya Nadella praises Jensen Huang but makes it clear that tech founders are not gods: \u2018I u - The Times of India"
-},
-{
-"time": "22 Nov 01:47",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Anthropic worker claims to have solved a Holy Grail of math problems with the help of AI - NPR"
-},
-{
-"time": "22 Nov 01:47",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "A Single Malicious Webpage Let Researchers Hijack Meta Muse and Access Private Chats - The Hacker News"
-},
-{
-"time": "22 Nov 01:47",
-"source": "MarketWatch",
-"region": "World",
-"headline": "\u2018I\u2019m sick of flying\u2019: I paid for priority boarding, but the overhead bins were full. Was I duped?"
-},
-{
-"time": "22 Nov 01:47",
-"source": "NYT-Business",
-"region": "World",
-"headline": "Elon Musk on His Politics, a Potential Merger and Ukraine"
-},
-{
-"time": "22 Nov 01:47",
-"source": "FT-Markets",
-"region": "World",
-"headline": "US tech stocks plunge into bear market in worst week since Covid-19 crisis"
-},
-{
-"time": "22 Nov 01:52",
-"source": "GoogleNews",
-"region": "India",
-"headline": "SEBI issues revised insider trading FAQ guidance for market participants - Elets BFSI"
-},
-{
-"time": "22 Nov 01:52",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "IndusInd Bank terminates former CEO Sumant Kathpalia, moves to recover entire tenure's salary - BusinessLine"
-},
-{
-"time": "22 Nov 01:52",
-"source": "BusinessLine",
-"region": "India",
-"headline": "Global crude oil prices may fall to $70 by end-2027 as supply surplus looms"
-},
-{
-"time": "22 Nov 01:52",
-"source": "BusinessLine",
-"region": "India",
-"headline": "Gold price continues to fall as AI selloff, rate-hike bets weigh. What\u2019s ahead?"
-},
-{
-"time": "22 Nov 01:52",
-"source": "BusinessLine",
-"region": "India",
-"headline": "Wall Street selloff deepens as Dow, S&P 500 enter correction; Nasdaq plunges 5.28%"
-},
-{
-"time": "22 Nov 01:52",
-"source": "BusinessLine",
-"region": "India",
-"headline": "After mega listing, Anthropic emerges among the most traded stocks by Indian retail investors"
-},
-{
-"time": "22 Nov 01:52",
-"source": "BusinessLine",
-"region": "India",
-"headline": "SEBI proposes 12-year tenure cap for heads of stock exchanges and other market institutions"
-},
-{
-"time": "22 Nov 01:52",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "Markets Espresso: Aag lage basti me, Indian markets apni masti me - or are they?"
-},
-{
-"time": "22 Nov 01:52",
-"source": "MarketWatch",
-"region": "World",
-"headline": "\u2018It\u2019s downright dirty\u2019: My brother moved in with our ailing mother and closed her bank account. What can I do?"
-},
-{
-"time": "22 Nov 01:57",
-"source": "Mint",
-"region": "India",
-"headline": "Dividend jackpot in chemicals: Indo Borax, GOCL and Bayer CropScience offer yields of up to 10% | Check details"
-},
-{
-"time": "22 Nov 01:57",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Sebi proposes removing additional disclosure framework for FPIs"
-},
-{
-"time": "22 Nov 01:57",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Margins to remain under pressure for Siemens in near term amid volatility"
-},
-{
-"time": "22 Nov 01:57",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "Texmaco Rail gets \u20b9230 crore orders from JSW entities for 553 wagons"
-},
-{
-"time": "22 Nov 01:57",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "The S&P 500 Just Entered Correction Territory. Here's What It Means for Investors Right Now. - Yahoo Finance"
-},
-{
-"time": "22 Nov 01:57",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "CrowdStrike in talks to acquire Zscaler, sources say - Reuters"
-},
-{
-"time": "22 Nov 01:57",
-"source": "Investing.com",
-"region": "World",
-"headline": "Who really wins from AI?"
-},
-{
-"time": "22 Nov 01:57",
-"source": "FT-Markets",
-"region": "World",
-"headline": "Inside Anthropic\u2019s historic IPO"
-},
-{
-"time": "22 Nov 02:02",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "Adani Energy Solutions gets order for 1,750 MW renewable power supply to West Bengal"
-},
-{
-"time": "22 Nov 02:02",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "Natco Pharma gets seven observations after USFDA inspection at Hyderabad plant"
-},
-{
-"time": "22 Nov 02:02",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Nvidia Stock Is Down 35% From Its High. History Suggests a $5,000 Investment Now Will Be Worth This Much by 2028. - The Motley Fool"
-},
-{
-"time": "22 Nov 02:02",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "If the S&P 500 Drops by 20%, I'm Buying These 3 ETFs Without Hesitation"
-},
-{
-"time": "22 Nov 02:02",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "Why Applied Aerospace & Defense Stock Tanked This Week"
-},
-{
-"time": "22 Nov 02:02",
-"source": "FT-Markets",
-"region": "World",
-"headline": "It\u2019s tough out there"
-},
-{
-"time": "22 Nov 02:02",
-"source": "FT-Markets",
-"region": "World",
-"headline": "Anthropic shares slide as tech stocks tumble"
-},
-{
-"time": "22 Nov 02:07",
-"source": "ET",
-"region": "India",
-"headline": "European shares post worst week in over a year as AI trade unravels"
-},
-{
-"time": "22 Nov 02:07",
-"source": "ET",
-"region": "India",
-"headline": "Tech leads global stocks rout, Treasury yields fall"
-},
-{
-"time": "22 Nov 02:07",
+"time": "22 Nov 06:57",
 "source": "NDTVProfit",
 "region": "India",
 "headline": "CJP's Abhijeet Dipke Backs Goa Villagers Against Mega Township, Alleges Attack On Petitioner"
 },
 {
-"time": "22 Nov 02:07",
+"time": "22 Nov 06:57",
 "source": "NDTVProfit",
 "region": "India",
 "headline": "Jhimma 3 Teaser Releases: Hemant Dhome Returns; New Gang Heads To Sri Lanka \u2014 Check Release Date"
 },
 {
-"time": "22 Nov 02:07",
+"time": "22 Nov 06:57",
 "source": "NDTVProfit",
 "region": "India",
 "headline": "Hackers Breach FBI's Crime Database, Second Cyberattack In Months"
 },
 {
-"time": "22 Nov 02:07",
+"time": "22 Nov 06:57",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "Adani Energy Solutions gets order for 1,750 MW renewable power supply to West Bengal"
+},
+{
+"time": "22 Nov 06:57",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "Natco Pharma gets seven observations after USFDA inspection at Hyderabad plant"
+},
+{
+"time": "22 Nov 06:57",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Jensen Huang's Reported Humiliation Tactics At Nvidia Draw Praise From Chamath Palihapitiya: 'This Makes - Benzinga"
+},
+{
+"time": "22 Nov 06:57",
+"source": "Investing.com",
+"region": "World",
+"headline": "Who really wins from AI?"
+},
+{
+"time": "22 Nov 06:57",
+"source": "FT-Markets",
+"region": "World",
+"headline": "Inside Anthropic\u2019s historic IPO"
+},
+{
+"time": "22 Nov 06:57",
+"source": "FT-Markets",
+"region": "World",
+"headline": "It\u2019s tough out there"
+},
+{
+"time": "22 Nov 07:02",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Buy HDFC Bank; target of Rs 1,850: ICICI Securities"
+},
+{
+"time": "22 Nov 07:02",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Buy Tejas Networks; target of Rs 1100: Emkay Global Financial"
+},
+{
+"time": "22 Nov 07:02",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Buy Bajaj Finance; target of Rs 9000: Emkay Global Financial"
+},
+{
+"time": "22 Nov 07:02",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Reduce Persistent Systems; target of Rs 3700: Emkay Global Financial"
+},
+{
+"time": "22 Nov 07:02",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Reduce Aditya Birla Fashion and Retail; target of Rs 230: Emkay Global Financial"
+},
+{
+"time": "22 Nov 07:02",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Reduce Wipro; target of Rs 410: ICICI Securities"
+},
+{
+"time": "22 Nov 07:02",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Buy HDFC Life Insurance Company; target of Rs 739: ICICI Securities"
+},
+{
+"time": "22 Nov 07:02",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Buy Patel Engineering; target of Rs 80: ICICI Direct"
+},
+{
+"time": "22 Nov 07:02",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Accumulate Infosys; target of Rs 1531: KR Choksey"
+},
+{
+"time": "22 Nov 07:02",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Buy Jindal Drilling and Industries; target of Rs 960: Anand Rathi"
+},
+{
+"time": "22 Nov 07:02",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Buy Navneet Education; target of Rs 182: Prabhudas Lilladher"
+},
+{
+"time": "22 Nov 07:02",
+"source": "GoogleNews",
+"region": "India",
+"headline": "SEBI Chairman Unveils Reform Push to Make India\u2019s Capital Markets More Investor-Friendly - The Indian Awaaz"
+},
+{
+"time": "22 Nov 07:02",
+"source": "GoogleNews",
+"region": "India",
+"headline": "Bandhan Mutual Fund launches Nifty Commodities Index Fund - Cafemutual"
+},
+{
+"time": "22 Nov 07:02",
+"source": "NDTVProfit",
+"region": "India",
+"headline": "Yuzvendra Chahal's New Innings: Cricketer Joins BJP, Gets OBC Morcha Role"
+},
+{
+"time": "22 Nov 07:02",
+"source": "NDTVProfit",
+"region": "India",
+"headline": "Scene Box Office Collection Day 16: Suriya Starrer Inches Closer To Rs 150-Crore Net In India"
+},
+{
+"time": "22 Nov 07:02",
+"source": "NDTVProfit",
+"region": "India",
+"headline": "RBI Guv Sanjay Malhotra Urges Banks To Step Up Small-business Lending For Greater Economic Gains"
+},
+{
+"time": "22 Nov 07:02",
+"source": "NDTVProfit",
+"region": "India",
+"headline": "He Left With 120 Flipkart Parcels And Never Came Back: Ahmedabad Police Hunt Delivery Agent"
+},
+{
+"time": "22 Nov 07:02",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Anthropic worker claims to have solved a Holy Grail of math problems with the help of AI - CNN"
+},
+{
+"time": "22 Nov 07:02",
+"source": "FT-Markets",
+"region": "World",
+"headline": "Anthropic shares slide as tech stocks tumble"
+},
+{
+"time": "22 Nov 07:02",
 "source": "FT-Markets",
 "region": "World",
 "headline": "The AI fever in markets is breaking"
+},
+{
+"time": "22 Nov 07:07",
+"source": "ET",
+"region": "India",
+"headline": "Concurrent Gainers: These 13 stocks gained for 5 days in a row, all rose over 27%"
+},
+{
+"time": "22 Nov 07:07",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Bitcoin falls to more than 2-year low as global markets sink - Moneycontrol.com"
+},
+{
+"time": "22 Nov 07:07",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Gold price continues to fall as AI selloff, rate-hike bets weigh. What\u2019s ahead? - BusinessLine"
+},
+{
+"time": "22 Nov 07:07",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "'I spend Rs 20,000 on shared 2BHK': 28-year-old woman breaks down cost of living in Bengaluru - Moneycontrol.com"
+},
+{
+"time": "22 Nov 07:07",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Honda to launch new hybrid Avancier SUV in Japan in spring 2027 - Japan Today"
+},
+{
+"time": "22 Nov 07:07",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "\u2018Look at India, they have low interest rates\u2019: Trump says U.S. could achieve 14\u201315% economic growth - The Hindu"
+},
+{
+"time": "22 Nov 07:07",
+"source": "BusinessLine",
+"region": "India",
+"headline": "Tech Query: ICICI Bank, Gujarat Energy, Kaynes Technology Limited, Cochin Shipyard \u2014 What is the outlook? Where are these stocks headed?"
+},
+{
+"time": "22 Nov 07:07",
+"source": "BusinessLine",
+"region": "India",
+"headline": "US Market Outlook: Indices plunge deeply"
+},
+{
+"time": "22 Nov 07:07",
+"source": "BusinessLine",
+"region": "India",
+"headline": "Movers & Shakers: Stocks that will see action this week"
+},
+{
+"time": "22 Nov 07:07",
+"source": "BusinessLine",
+"region": "India",
+"headline": "Index Outlook: Momentum holds firm"
+},
+{
+"time": "22 Nov 07:07",
+"source": "BusinessLine",
+"region": "India",
+"headline": "Crude Check:\u00a0Forms a base"
+},
+{
+"time": "22 Nov 07:07",
+"source": "BusinessLine",
+"region": "India",
+"headline": "Bullion Cues: Bears wreak havoc"
+},
+{
+"time": "22 Nov 07:07",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "IndusInd Bank ends ex-CEO Kathpalia's employment, seeks to recover pay"
+},
+{
+"time": "22 Nov 07:07",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "Noel Tata writes to Tata Sons again, seeks recording of Chandrasekaran reappointment meeting"
+},
+{
+"time": "22 Nov 07:07",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "SEBI proposes easing disclosure norms for foreign portfolio investors, seeks public comments"
+},
+{
+"time": "22 Nov 07:07",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "US Market Crash: Nasdaq enters 'bear market' - 10 things for investors to know"
+},
+{
+"time": "22 Nov 07:07",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Bayer reaches Roundup settlement that could cost the company billions - NPR"
+},
+{
+"time": "22 Nov 07:07",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Nvidia Said to Face S.E.C. Probe Into Its Accounting Practices - The New York Times"
+},
+{
+"time": "22 Nov 07:07",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Microsoft\u2019s final Outlook outage report details testing gaps and safeguards that backfired - GeekWire"
+},
+{
+"time": "22 Nov 07:07",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "3 Penny Stocks With Value Gaps Up To 81%"
+},
+{
+"time": "22 Nov 07:12",
+"source": "ET",
+"region": "India",
+"headline": "Nifty eyes 26,200 as rally strengthens; 6 sectors signal outperformance"
+},
+{
+"time": "22 Nov 07:12",
+"source": "ET",
+"region": "India",
+"headline": "US Treasury yields drop for day and week; AI trade concern spurs safe-haven bid"
+},
+{
+"time": "22 Nov 07:12",
+"source": "ET",
+"region": "India",
+"headline": "Crude prices may normalise to USD 70 by end-2027 as global oil market moves into surplus: Report"
+},
+{
+"time": "22 Nov 07:12",
+"source": "BusinessStandard",
+"region": "India",
+"headline": "Bitcoin nears USD 60,000: What traders should watch, according to WazirX"
+},
+{
+"time": "22 Nov 07:12",
+"source": "BusinessStandard",
+"region": "India",
+"headline": "Oil prices set for 3rd straight week of decline on West Asia export flows"
+},
+{
+"time": "22 Nov 07:12",
+"source": "BusinessStandard",
+"region": "India",
+"headline": "Indian investors show strong appetite for Anthropic's blockbuster IPO"
+},
+{
+"time": "22 Nov 07:12",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Nifty eyes 26,200 as rally strengthens; 6 sectors signal outperformance - The Economic Times"
+},
+{
+"time": "22 Nov 07:12",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "CrowdStrike in talks to acquire Zscaler, sources say - Reuters"
+},
+{
+"time": "22 Nov 07:12",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Gold falls toward $3,500, silver slides as stock markets enter correction territory - Kitco PM Report - Kitco"
+},
+{
+"time": "22 Nov 07:12",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Trump calls for Nvidia's Huang to be given 'second chance' - The New Indian Express"
+},
+{
+"time": "22 Nov 07:12",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Nvidia HR Flagged Jensen Huang's Sexual Comments In 2005. He Was Fired - NDTV"
+},
+{
+"time": "22 Nov 07:12",
+"source": "NDTVProfit",
+"region": "India",
+"headline": "Syed Mushtaq Ali Trophy 2026: When And Where To Watch 5th Round Matches Live"
+},
+{
+"time": "22 Nov 07:12",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "Hero MotoCorp gets ITAT relief on \u20b927 crore tax demand for six assessment years"
+},
+{
+"time": "22 Nov 07:12",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "Cohance Lifesciences: USFDA inspects and classifies Telangana facility as \u2018voluntary action indicated\u2019"
+},
+{
+"time": "22 Nov 07:12",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "The AI race to fix security flaws could be making tech outages more common - NBC News"
+},
+{
+"time": "22 Nov 07:12",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "The S&P 500 Heads Into Thanksgiving Below Its Peak. Here's How the Holiday Week Has Usually Gone Since 1950."
+},
+{
+"time": "22 Nov 07:12",
+"source": "MarketWatch",
+"region": "World",
+"headline": "My wife is bankrolling her family\u2019s trips to New York and it\u2019s draining our savings. Should I ask her to stop?"
+},
+{
+"time": "22 Nov 07:12",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Tech stock sell-off drags markets down as Anthropic shares slide"
+},
+{
+"time": "22 Nov 07:12",
+"source": "FT-Markets",
+"region": "World",
+"headline": "Oil shipped through Hormuz falls as Iranian strikes increase"
+},
+{
+"time": "22 Nov 07:12",
+"source": "FT-Markets",
+"region": "World",
+"headline": "Markets sell-off as it happened: Nasdaq 100 enters bear market, Anthropic shares drop 8.5% a day after blockbuster market debut"
+},
+{
+"time": "22 Nov 07:17",
+"source": "ET",
+"region": "India",
+"headline": "Stocks to buy: HSBC lists 19 Indian stocks that saw FY27 earnings upgrades, check target prices"
+},
+{
+"time": "22 Nov 07:17",
+"source": "ET",
+"region": "India",
+"headline": "Gold's slide deepens as AI rout, rate-hike bets hurt bullion"
+},
+{
+"time": "22 Nov 07:17",
+"source": "ET",
+"region": "India",
+"headline": "UK stocks sink as global selloff weighs on banks and miners"
+},
+{
+"time": "22 Nov 07:17",
+"source": "Mint",
+"region": "India",
+"headline": "Bitcoin price crash: \u200bFalls to lowest level in two years - What\u2019s behind plunge of world\u2019s largest cryptocurrency"
+},
+{
+"time": "22 Nov 07:17",
+"source": "BusinessStandard",
+"region": "India",
+"headline": "Anthropic shares tumble after record IPO as AI trade faces reality check"
+},
+{
+"time": "22 Nov 07:17",
+"source": "BusinessStandard",
+"region": "India",
+"headline": "Sebi plans tighter tenure caps for exchange MDs, public interest directors"
+},
+{
+"time": "22 Nov 07:17",
+"source": "GoogleNews",
+"region": "India",
+"headline": "Stock markets defy global rout; Sensex jumps 898 points, Nifty climbs to 25,800 - The Hindu"
+},
+{
+"time": "22 Nov 07:17",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "RBI Governor Sanjay Malhotra urges banks to step up lending to small, micro enterprises for greater... - Moneycontrol.com"
+},
+{
+"time": "22 Nov 07:17",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Trump Calls Jensen Huang \"Good Man\", Urges Nvidia To Give Him \"Second Chance\" - NDTV"
+},
+{
+"time": "22 Nov 07:17",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Anthropic IPO signals \u2018beginning of a gold rush\u2019 for small businesses, says biz tech CEO - Fox Business"
+},
+{
+"time": "22 Nov 07:17",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "The S&P 500 Is Now Below Every Wall Street Year-End Target for 2026"
+},
+{
+"time": "22 Nov 07:17",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "3 Founder Led Stocks To Own In November 2026"
+},
+{
+"time": "22 Nov 07:17",
+"source": "MarketWatch",
+"region": "World",
+"headline": "My husband is happily retired at 64 and thinks I should keep working. Is he being fair?"
+},
+{
+"time": "22 Nov 07:17",
+"source": "BBC-Business",
+"region": "World",
+"headline": "UK to explore even closer ties with EU after agreeing deal, says Burnham"
+},
+{
+"time": "22 Nov 07:17",
+"source": "Investing.com",
+"region": "World",
+"headline": "Here is what to expect from Spain\u2019s snap election"
+},
+{
+"time": "22 Nov 07:17",
+"source": "FT-Markets",
+"region": "World",
+"headline": "US watchdogs pick a bad time to cut disclosure on executive pay"
+},
+{
+"time": "22 Nov 07:17",
+"source": "FT-Markets",
+"region": "World",
+"headline": "CVC claims accounting manipulation in \u20ac3bn Advent pastry ingredients deal"
+},
+{
+"time": "22 Nov 07:22",
+"source": "Mint",
+"region": "India",
+"headline": "PSU vs Private banks: Who is powering Nifty Bank's record-high rally after 5% surge? SBI, HDFC, AU, Canara target price"
+},
+{
+"time": "22 Nov 07:22",
+"source": "Mint",
+"region": "India",
+"headline": "Gold, silver price crash: DSP Mutual Fund turns bullish on bullion, reveals new buying strategy; check price levels"
+},
+{
+"time": "22 Nov 07:22",
+"source": "Mint",
+"region": "India",
+"headline": "Mahanadi CoalFields IPO GMP Check: Down 92% from  \u20b99.25 to  \u20b90.7, issue struggles to attract bids- Subscribe or avoid?"
+},
+{
+"time": "22 Nov 07:22",
+"source": "GoogleNews",
+"region": "India",
+"headline": "SEBI proposes scrapping additional disclosure rules for foreign portfolio investors - Elets BFSI"
+},
+{
+"time": "22 Nov 07:22",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Column | Before you use AI to hunt Black Friday deals, keep 5 things in mind - The Washington Post"
+},
+{
+"time": "22 Nov 07:22",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "2 Financial Stocks to Buy Near Their 52-Week Lows"
+},
+{
+"time": "22 Nov 07:22",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Faisal Islam: This cost-cutting UK-EU deal doesn't mean lower prices will follow"
+},
+{
+"time": "22 Nov 07:22",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Trump threatens ban on US firms building AI data centres overseas"
+},
+{
+"time": "22 Nov 07:22",
+"source": "BBC-Business",
+"region": "World",
+"headline": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history"
+},
+{
+"time": "22 Nov 07:22",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Should AI be judging our credit worthiness?"
+},
+{
+"time": "22 Nov 07:22",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Tinned food and long-life milk boost retail sales after 'Be Ready' campaign launch"
+},
+{
+"time": "22 Nov 07:22",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Fish and eggs al desko? The dos and don'ts of lunch at work"
+},
+{
+"time": "22 Nov 07:22",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Airbnb's divisive new house rules come into force"
+},
+{
+"time": "22 Nov 07:22",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Mouldy, infested housing for vulnerable people sold as ethical investments abroad"
+},
+{
+"time": "22 Nov 07:22",
+"source": "FT-Markets",
+"region": "World",
+"headline": "How can investors succeed in markets today?"
+},
+{
+"time": "22 Nov 07:27",
+"source": "ET",
+"region": "India",
+"headline": "AI to lead investment strategy in 2027; Energy and borrowing costs shape macro outlook: Barclays"
+},
+{
+"time": "22 Nov 07:27",
+"source": "ET",
+"region": "India",
+"headline": "Market winners: Max Healthcare, Deepak Fertilisers among 10 stocks that surged up to 14% in last week"
+},
+{
+"time": "22 Nov 07:27",
+"source": "Mint",
+"region": "India",
+"headline": "Hindalco vs NALCO vs Vedanta Aluminium vs Hindustan Zinc: Which metal stocks to buy for good returns? Target, SL"
+},
+{
+"time": "22 Nov 07:27",
+"source": "BusinessStandard",
+"region": "India",
+"headline": "Markets gain 2.6% on FPI inflows, rupee rally and cooling crude oil prices"
+},
+{
+"time": "22 Nov 07:27",
+"source": "BusinessStandard",
+"region": "India",
+"headline": "Rupee looks set for best monthly gains in 8 years; bond yields soften"
+},
+{
+"time": "22 Nov 07:27",
+"source": "BusinessStandard",
+"region": "India",
+"headline": "Industry body GJC alerts BIS over gold adulteration using Rhenium, Iridium"
+},
+{
+"time": "22 Nov 07:27",
+"source": "GoogleNews",
+"region": "India",
+"headline": "Nifty Bank at new high, tops 64,000; HDFC, ICICI Bank soar up to 21% in Nov - Business Standard"
+},
+{
+"time": "22 Nov 07:27",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Jensen Huang\u2019s insults at Nvidia included an abortion remark and a threat to \u2018pee on your brain\u2019: Report - Telegraph India"
+},
+{
+"time": "22 Nov 07:27",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Oil Prices Caught Between a Looming Glut and Middle East Turmoil - Crude Oil Prices Today | OilPrice.com"
+},
+{
+"time": "22 Nov 07:27",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "Aurobindo Pharma's Apitoria unit gets 'voluntary action indicated' classification from USFDA"
+},
+{
+"time": "22 Nov 07:27",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Nvidia faces US accounting probe amid deepening turmoil: media - Yahoo Finance"
+},
+{
+"time": "22 Nov 07:27",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "New Report Claims Jensen Huang Regularly Threatened Nvidia Staff With Over-The-Top Violence - Kotaku"
+},
+{
+"time": "22 Nov 07:27",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Stock Market News From Nov. 20, 2026: S&P 500 Ends Week in Correction Territory - Barron's"
+},
+{
+"time": "22 Nov 07:27",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Honda and Toyota recall 1.6 million vehicles over Takata airbag rupture risk - NBC News"
+},
+{
+"time": "22 Nov 07:27",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "The Outages Are Just Getting Started - WIRED"
+},
+{
+"time": "22 Nov 07:27",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Bessent says no further restrictions are needed for Nvidia chip exports to China - PBS"
+},
+{
+"time": "22 Nov 07:27",
+"source": "NYT-Business",
+"region": "World",
+"headline": "How to Plan for an A.I. Emergency, or Any Calamity"
+},
+{
+"time": "22 Nov 07:27",
+"source": "NYT-Business",
+"region": "World",
+"headline": "The Faces of the 2026 DealBook Summit"
+},
+{
+"time": "22 Nov 07:27",
+"source": "NYT-Business",
+"region": "World",
+"headline": "Maldon Salt\u2019s Authenticity Is Questioned, Leaving Foodies Shaken"
+},
+{
+"time": "22 Nov 07:27",
+"source": "NYT-Business",
+"region": "World",
+"headline": "The Used Car Industry Is Booming. This N.J. Campus Is Setting the Price."
+},
+{
+"time": "22 Nov 07:27",
+"source": "NYT-Business",
+"region": "World",
+"headline": "Why Nostalgia for Tamagotchis, the Virtual Pets, Won\u2019t Die"
+},
+{
+"time": "22 Nov 07:27",
+"source": "Investing.com",
+"region": "World",
+"headline": "German industrial strikes widen as IG Metall calls 23,000 workers to walk out"
+},
+{
+"time": "22 Nov 07:32",
+"source": "ET",
+"region": "India",
+"headline": "Dollar weaker as Fed-fueled rally stalls; lower US yields help yen"
+},
+{
+"time": "22 Nov 07:32",
+"source": "BusinessStandard",
+"region": "India",
+"headline": "IndusInd Bank shares jump 8% on volume surge, near 52-week high"
+},
+{
+"time": "22 Nov 07:32",
+"source": "BusinessStandard",
+"region": "India",
+"headline": "Textiles shares hit new high; Indo Count, Welspun Living rally up to 8%"
+},
+{
+"time": "22 Nov 07:32",
+"source": "NDTVProfit",
+"region": "India",
+"headline": "India vs New Zealand Hockey Live Streaming: When And Where To Watch IND vs NZ 3rd Match?"
+},
+{
+"time": "22 Nov 07:32",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "The S&P 500 Just Entered Correction Territory. Here's What It Means for Investors Right Now. - Yahoo Finance"
+},
+{
+"time": "22 Nov 07:32",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "3 Stocks I'm Ready to Buy if the Market Crashes"
+},
+{
+"time": "22 Nov 07:32",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "In the Last Tech Bust, the S&P 500 Lost Money for a Decade. History Says Stocks With the Highest Yields Gained 5.4% a Year."
+},
+{
+"time": "22 Nov 07:32",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "His Indexed Annuity Tracks the S&P 500. The Fine Print Says \u201cPrice Return,\u201d Which Means It Leaves Out Every Dividend the 500 Companies Pay"
+},
+{
+"time": "22 Nov 07:32",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "Williams Companies Slashed Its Dividend in 2016. Here\u2019s What $1,000 Invested Then Is Worth Today"
+},
+{
+"time": "22 Nov 07:32",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "Nvidia's new China threat could reach your 401(k)"
+},
+{
+"time": "22 Nov 07:32",
+"source": "MarketWatch",
+"region": "World",
+"headline": "America is definitely rich enough to fix Social Security and Medicare. Here\u2019s how."
+},
+{
+"time": "22 Nov 07:32",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Tens of thousands of UK fridges secured from hackers in secret nationwide operation"
+},
+{
+"time": "22 Nov 07:32",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Anthropic becomes one of world's most valuable public companies in stock market debut"
+},
+{
+"time": "22 Nov 07:32",
+"source": "NYT-Business",
+"region": "World",
+"headline": "Anthropic\u2019s Debut Shows the Disconnect Between Wall Street and Silicon Valley"
+},
+{
+"time": "22 Nov 07:32",
+"source": "NYT-Business",
+"region": "World",
+"headline": "Judge Approves $7 Billion Settlement Over Claims That Roundup Caused Cancer"
+},
+{
+"time": "22 Nov 07:32",
+"source": "NYT-Business",
+"region": "World",
+"headline": "Nvidia Said to Face S.E.C. Probe Into Its Accounting Practices"
+},
+{
+"time": "22 Nov 07:32",
+"source": "NYT-Business",
+"region": "World",
+"headline": "Grand Theft Auto VI Made $3.79 Billion in a Single Day"
+},
+{
+"time": "22 Nov 07:32",
+"source": "Investing.com",
+"region": "World",
+"headline": "Spain to extend banking tax through 2027 to fund housing policies"
+},
+{
+"time": "22 Nov 07:32",
+"source": "Investing.com",
+"region": "World",
+"headline": "UBS assesses impact of nationwide ground stop on US airlines\u2019 4Q outlook"
+},
+{
+"time": "22 Nov 07:32",
+"source": "Investing.com",
+"region": "World",
+"headline": "South Korea\u2019s Lee urges faster AI investment during $5.2bn data center visit"
+},
+{
+"time": "22 Nov 07:32",
+"source": "FT-Markets",
+"region": "World",
+"headline": "Going public, but only a little"
+},
+{
+"time": "22 Nov 07:37",
+"source": "Mint",
+"region": "India",
+"headline": "Max Healthcare, Fortis, Apollo, Aster: Hospital stocks steal show on D-Street with up to 14% rally - Buy now or wait?"
+},
+{
+"time": "22 Nov 07:37",
+"source": "Mint",
+"region": "India",
+"headline": "Stock split reset: SanDisk stock crashes 87.5% overnight? Here's what investors need to know about its 8-for-1 split"
+},
+{
+"time": "22 Nov 07:37",
+"source": "Mint",
+"region": "India",
+"headline": "Taiwan Widens Short Sale Curbs After Shares Plunge on AI Concern"
+},
+{
+"time": "22 Nov 07:37",
+"source": "GoogleNews",
+"region": "India",
+"headline": "India's RBI expected to raise rates in December, deliver final hike in February - Reuters"
+},
+{
+"time": "22 Nov 07:37",
+"source": "GoogleNews",
+"region": "India",
+"headline": "Nifty Hits Nine-Month High of 25,800 as Record FII Buying Lifts Sensex 2,327 Points - HDFC Sky"
+},
+{
+"time": "22 Nov 07:37",
+"source": "GoogleNews",
+"region": "India",
+"headline": "Indian Stock Market Extends 4-Week Rally as Sensex and Nifty Hit 9-Month Highs on Record FII Buying - Kotak Neo"
+},
+{
+"time": "22 Nov 07:37",
+"source": "GoogleNews",
+"region": "India",
+"headline": "Market Midday, 20 November 2026: Sensex and Nifty 50 Gain as Banking and IT Stocks Support Recovery - Kotak Neo"
+},
+{
+"time": "22 Nov 07:37",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Bitcoin falls below $60,000 level - Reuters"
+},
+{
+"time": "22 Nov 07:37",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Expired food, fungus found at Amazon, BigBasket Pune dark stores - Rediff"
+},
+{
+"time": "22 Nov 07:37",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Anthropic shares crash 13% a day after record IPO as retail investors face losses - The Times of India"
+},
+{
+"time": "22 Nov 07:37",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Nvidia's $2.6 trillion rout: Shares tumble 46% in 7 weeks; market cap falls to 4th place - The Economic Times"
+},
+{
+"time": "22 Nov 07:37",
+"source": "NDTVProfit",
+"region": "India",
+"headline": "Ramayana Box Office Collection Gets Boost On Day 17, Net Earnings Cross Rs 900 Crore Mark"
+},
+{
+"time": "22 Nov 07:37",
+"source": "NDTVProfit",
+"region": "India",
+"headline": "Dividend Stocks To Watch This Week: Fusion CX, Vraj Iron And Steel, Pashupati Cotspin"
+},
+{
+"time": "22 Nov 07:37",
+"source": "NDTVProfit",
+"region": "India",
+"headline": "Las Vegas Grand Prix Final Race Live Streaming: When And Where To Watch In India?"
+},
+{
+"time": "22 Nov 07:37",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Trump vows to work with Democrats to cap credit card interest rates - CBS News"
+},
+{
+"time": "22 Nov 07:37",
+"source": "MarketWatch",
+"region": "World",
+"headline": "I\u2019m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary?"
+},
+{
+"time": "22 Nov 07:37",
+"source": "NYT-Business",
+"region": "World",
+"headline": "Many Etsy Sellers Close Up Shop Over Site\u2019s New A.I. Policy"
+},
+{
+"time": "22 Nov 07:37",
+"source": "Investing.com",
+"region": "World",
+"headline": "Intesa Sanpaolo launches \u20ac34.5bn cash-and-share offer for Monte dei Paschi"
+},
+{
+"time": "22 Nov 07:37",
+"source": "FT-Markets",
+"region": "World",
+"headline": "Traders start to move US copper to China as Trump tariff fears ease"
+},
+{
+"time": "22 Nov 07:42",
+"source": "Mint",
+"region": "India",
+"headline": "Best 3 stocks to buy under  \u20b9100: IDFC First Bank, Jayaswal Neco Industries, Sagility by Sumeet Bagadia | Targets, SL"
+},
+{
+"time": "22 Nov 07:42",
+"source": "Mint",
+"region": "India",
+"headline": "Patanjali Foods dividend 2026 announcement news: Board to consider 2nd interim dividend on Nov 26 - Check history, yield"
+},
+{
+"time": "22 Nov 07:42",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Four weeks of gains! Sensex, Nifty scale 9-month highs on record FII buying - Moneycontrol.com"
+},
+{
+"time": "22 Nov 07:42",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Nasdaq 100 sinks 5.6% in worst week since Covid, S&P 500 corrects to 3.7% as investors sell off AI, tech stocks - Livemint"
+},
+{
+"time": "22 Nov 07:42",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Nvidia stock crash: Record wipeout in market cap deepens global tech sell-off | Hindustan Times - Hindustan Times"
+},
+{
+"time": "22 Nov 07:42",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "The Test for India\u2019s $8.9 Billion Foreign Rally Arrives in December"
+},
+{
+"time": "22 Nov 07:42",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "India's 50 leading companies arrive on SGX: UTI India Nifty 50 Index ETF begins trading"
+},
+{
+"time": "22 Nov 07:42",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "India stocks dip after RBI hikes rates for first time in nearly 4 yrs"
+},
+{
+"time": "22 Nov 07:42",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "Indian shares set to open higher; Fed chair speech, closing auction volatility in focus"
+},
+{
+"time": "22 Nov 07:42",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "Indian shares open lower as Middle East tensions persist, Nifty expiry looms"
+},
+{
+"time": "22 Nov 07:42",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "India Prices $10 Billion of Equity Deals in August, a Record Month"
+},
+{
+"time": "22 Nov 07:42",
+"source": "NDTVProfit",
+"region": "India",
+"headline": "Corporate Actions This Week: Zee Entertainment, JTL Defence, Fusion CX, Bonlon Industries And More"
+},
+{
+"time": "22 Nov 07:42",
+"source": "NDTVProfit",
+"region": "India",
+"headline": "Crude Oil Has Fallen, But Why Is $91 Still Bad News For India? UBS' Gautam Chhaocharia On The Risks | Profit Exclusive"
+},
+{
+"time": "22 Nov 07:42",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "Premier Explosives gets \u20b9311-crore export order for defence explosives"
+},
+{
+"time": "22 Nov 07:42",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "What smart people are saying about the market sell-off ripping through tech and AI - Business Insider"
+},
+{
+"time": "22 Nov 07:42",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "If a Stock Market Crash Is Coming, Warren Buffett Says This Is the No. 1 Move All Investors Should Make"
+},
+{
+"time": "22 Nov 07:42",
+"source": "MarketWatch",
+"region": "World",
+"headline": "\u2018I\u2019ve been a stay-at-home mom\u2019: I\u2019m 50 and have a chronic illness. My husband lost his job. Should he raid his 401(k)?"
+},
+{
+"time": "22 Nov 07:42",
+"source": "MarketWatch",
+"region": "World",
+"headline": "\u2018Buyers are out for blood\u2019: With home sales at a record low, buyers are calling the shots"
+},
+{
+"time": "22 Nov 07:42",
+"source": "NYT-Business",
+"region": "World",
+"headline": "The Penny Is Dead. Now It\u2019s Official."
+},
+{
+"time": "22 Nov 07:47",
+"source": "GoogleNews",
+"region": "India",
+"headline": "SEBI proposes eliminating additional disclosure requirements for offshore funds - News On AIR"
+},
+{
+"time": "22 Nov 07:47",
+"source": "GoogleNews",
+"region": "India",
+"headline": "SEBI issues revised insider trading FAQ guidance for market participants - Elets BFSI"
+},
+{
+"time": "22 Nov 07:47",
+"source": "GoogleNews",
+"region": "India",
+"headline": "Small businesses can deliver 100 times more impact from loans: RBI chief - Business Standard"
+},
+{
+"time": "22 Nov 07:47",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "Indian shares likely to open higher; caution ahead of new Iran sanctions"
+},
+{
+"time": "22 Nov 07:47",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "Asia\u2019s non-AI market beneficiaries: Watch these markets as tech valuations sink"
+},
+{
+"time": "22 Nov 07:47",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "Nifty 50 Is Still Down 4.91% in 2026, So Why Does Citi See 13% Upside?"
+},
+{
+"time": "22 Nov 07:47",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "India's HDFC Bank slips to 2-1/2-year low as legal, leadership woes linger"
+},
+{
+"time": "22 Nov 07:47",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "India Overtakes Taiwan to Become World\u2019s 5th Largest Stock Market Again"
+},
+{
+"time": "22 Nov 07:47",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "AI stock selloff drives investors to China, India, and overlooked Asian sectors"
+},
+{
+"time": "22 Nov 07:47",
+"source": "BusinessLine",
+"region": "India",
+"headline": "Indian markets nearing end of consolidation phase, financials and consumption look attractive: HSBC"
+},
+{
+"time": "22 Nov 07:47",
+"source": "BusinessLine",
+"region": "India",
+"headline": "Global crude oil prices may fall to $70 by end-2027 as supply surplus looms"
+},
+{
+"time": "22 Nov 07:47",
+"source": "BusinessLine",
+"region": "India",
+"headline": "Gold price continues to fall as AI selloff, rate-hike bets weigh. What\u2019s ahead?"
+},
+{
+"time": "22 Nov 07:47",
+"source": "BusinessLine",
+"region": "India",
+"headline": "Wall Street selloff deepens as Dow, S&P 500 enter correction; Nasdaq plunges 5.28%"
+},
+{
+"time": "22 Nov 07:47",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "The S&P 500 Is Having the Longest Losing Streak Since February 2020"
+},
+{
+"time": "22 Nov 07:47",
+"source": "MarketWatch",
+"region": "World",
+"headline": "\u2018Never too late to start\u2019: Practical investing advice from some of the top women in finance"
+},
+{
+"time": "22 Nov 07:47",
+"source": "MarketWatch",
+"region": "World",
+"headline": "Is Social Security a Ponzi scheme? No. Don\u2019t get carried away with 1930s-era prophecies of doom."
+},
+{
+"time": "22 Nov 07:47",
+"source": "MarketWatch",
+"region": "World",
+"headline": "\u2018I\u2019m sick of flying\u2019: I paid for priority boarding, but the overhead bins were full. Was I duped?"
+},
+{
+"time": "22 Nov 07:47",
+"source": "Investing.com",
+"region": "World",
+"headline": "German car and shipyard workers set to strike as IG Metall union extends walkout"
 }
 ]
