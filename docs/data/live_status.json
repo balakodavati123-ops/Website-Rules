@@ -2,12 +2,12 @@
  "desks": {
   "crypto": "6 coins from Kraken, real time",
   "gateway": "dry \u00b7 0 intents, 0 refused",
-  "charts": "3 live charts",
-  "news_pulse": "1 new signal(s); 2 in the last hour from 9 feeds"
+  "news_pulse": "0 new signal(s); 0 in the last hour from 9 feeds",
+  "charts": "3 live charts"
  },
- "updated_at": "2026-11-22T13:29:35+05:30",
- "updated_hm": "22 Nov 13:29:35",
- "loops": 3413,
+ "updated_at": "2026-11-22T19:10:07+05:30",
+ "updated_hm": "22 Nov 19:10:07",
+ "loops": 3236,
  "sessions": {
   "equity": false,
   "fno": false,
@@ -21,10 +21,10 @@
   "fill": 0.0,
   "mcx": 0.0,
   "fno": 0.0,
-  "crypto": 0.1,
-  "snapshots": 0.1,
-  "plan": 0.1,
-  "slow_and_intraday": 0.5,
-  "persist": 0.5
+  "crypto": 0.2,
+  "snapshots": 0.2,
+  "plan": 0.2,
+  "slow_and_intraday": 0.7,
+  "persist": 0.8
  }
 }
