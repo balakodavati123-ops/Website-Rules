@@ -1,60 +1,137 @@
 {
- "updated_at": "2026-11-22T07:41:01+05:30",
- "scans": 136,
+ "updated_at": "2026-11-22T13:21:26+05:30",
+ "scans": 170,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "07:41:01"
+   "at": "13:21:26"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "07:41:01"
+   "at": "13:21:26"
   },
   "Moneycontrol": {
    "ok": true,
    "items": 15,
-   "at": "07:41:01"
+   "at": "13:21:26"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "07:41:01"
+   "at": "13:21:26"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "07:41:01"
+   "at": "13:21:26"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "07:41:01"
+   "at": "13:21:26"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "07:41:01"
+   "at": "13:21:26"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "07:41:01"
+   "at": "13:21:26"
   },
   "Google News": {
    "ok": true,
-   "items": 4,
-   "at": "07:41:01"
+   "items": 2,
+   "at": "13:21:26"
   }
  },
- "signals": [],
+ "signals": [
+  {
+   "id": "N132126-4",
+   "t": "13:21:26",
+   "ts": 1795333886.449249,
+   "pub": "13:14",
+   "lag_s": 402,
+   "symbol": "RAILTEL",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "RAILTEL: Bagging/Receiving of orders/contracts",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/RAILTEL_22112026131419_Railtel_Order_Book_Company_Rep_221126.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N123109-3",
+   "t": "12:31:09",
+   "ts": 1795330869.483823,
+   "pub": "12:24",
+   "lag_s": 374,
+   "symbol": "FMNL",
+   "tone": "negative",
+   "score": -3,
+   "emotion": "Fear",
+   "why": [
+    "crash"
+   ],
+   "headline": "What is future of gold rates? Price crash continues as AI selloff, Fed rate-hike concerns weigh on investors' sentiment",
+   "source": "Mint",
+   "link": "https://www.livemint.com/market/commodities/what-is-future-of-gold-rates-price-crash-continues-as-ai-selloff-fed-rate-hike-concerns-weigh-on-investors-sentiment-11795325490076.html",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N120100-2",
+   "t": "12:01:00",
+   "ts": 1795329060.953261,
+   "pub": "11:59",
+   "lag_s": 76,
+   "symbol": "ACMESOLAR",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "ACMESOLAR: Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/ACMECS_22112026115602_IntimationBidWin21112026.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N092005-1",
+   "t": "09:20:05",
+   "ts": 1795319405.814943,
+   "pub": "08:49",
+   "lag_s": 1845,
+   "symbol": "FACT",
+   "tone": "negative",
+   "score": -1.5,
+   "emotion": "Fear",
+   "why": [
+    "strike"
+   ],
+   "headline": "Iran Claims Missile Strike On US F-16 Over Gulf: What CENTCOM Fact-Check Shows",
+   "source": "NDTV Profit",
+   "link": "https://www.ndtvprofit.com/world/iran-claims-missile-strike-on-us-f-16-over-gulf-what-centcom-fact-check-shows-12360683#publisher=newsstand",
+   "kind": "headline",
+   "status": "new"
+  }
+ ],
  "stats": {
-  "last_hour": 0,
-  "positive": 0,
-  "negative": 0,
-  "today": 0,
-  "median_lag_min": null,
-  "new_this_scan": 0
+  "last_hour": 2,
+  "positive": 1,
+  "negative": 1,
+  "today": 4,
+  "median_lag_min": 6.7,
+  "new_this_scan": 1
  }
 }

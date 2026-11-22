@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T07:47:46+05:30",
+ "updated_at": "2026-11-22T13:23:19+05:30",
  "ipos": [
   {
    "name": "Mahanadi Coalfields Limited",
@@ -34,6 +34,12 @@
      "time": "2026-11-21T13:00:20Z"
     },
     {
+     "title": "Mahanadi CoalFields IPO GMP Check: Down 92% from \u20b99.25 to \u20b90.7, issue struggles to attract bids- Subscribe or avoid?",
+     "source": "Livemint",
+     "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPUFFld01QazFsSFo0eG5QTUpwUU5jVVNYYndIVkUzZm5jcGhycFEza25tZS1aTFppSkluWUxFdzd2NEFDYjZZOGJmX1p5SUhmLWpYbzdZdjdkS3U1Y0VjbVhUSTkwMXhqcUFuellGNXlFc3owLXhheDhlZ2VaVHdzSGh4RnVSOG1FYTlxRmhnbnNjWGFDWGZpWVRpbWpHU0Q5eWFFb0NyeXdWeXBhb0ZVQ0lkQnJtYnBianpFU3J6RG5PLTY5ZEpKbWdLbC1GeDZJS2VCTXNXckc1RGtqSkd6TmdnYjY2MG8tZ2ZZYVpzbHlfTWdMRWVOYkRRak9GdmxG0gGGAkFVX3lxTE9ZTEJKUURqUUFvTlJpZFp2Smp3dy1JTHFvWTk1RUNKaTdVbFRldVZVYVFFTlV5a0J2clFKc3Z2bmpMWV9GTXBTQUVISUtjbG5qMjhjSEZRd1c0ZjR0ejVqTEtuX0xuRk1OcjdsSDhlWkl4TWw1cXoyVWFyVDM0Y3N2em1IbVVEU2tSOW4weDFoRGdVNGlsRUwtdlh4ai1uUkJLWGYteThRTHJ1dFh5QXpkSUdZakdlSjVkNmllR09TbTN3MEszUVNsNjIzdnNDQVZDSEJ5V1BjN1liZFhnRlloUVN0WmZyYUczLUFaWFBzcGE1QXNPdmlYQXl0X1JZa2R2bWF6X0E?oc=5",
+     "time": "2026-11-21T10:26:10Z"
+    },
+    {
      "title": "IPOs Next Week: 2 mainboard issues to open; Crystal Crop, Mahanadi Coalfields IPOs in focus",
      "source": "Zee Business",
      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxONTYweVloZlVLeFpLLVRxWFZhekpxSjZaLXE3NjgzVENvTmdzaHMtOVVMel9WMmNZMVhTVjlnS3oxekZOa3pkZkh3Sl9qRGxmWVVWeFN1YlBYSlloTkdrWHkxNWFNN09OcGpkMDhNZllaeGxoV1plTmdIdnZaVVFVVk9HanFkSGhoUURRQ1NzNGxoaVNuSTd1WEpaVDZUenZGaXdFc2Zwc2c5dER3VlJPWi1Gakl0SHFtT0ZidTRJSF9JYng0Z2xGRklSLTlSTDZWWnppTW1xX0hOZW5SMEV6bkR3?oc=5",
@@ -50,12 +56,6 @@
      "source": "HDFC Sky",
      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBlSnlxcnBzV1dxQUoxTGJIQTNkNGRGaERxSWY3ekNjLWhNbDU4eEVabUdCNEpwemM3bE1hNDhMMU9tTjZSLVNLSEJXeWtLekZLeGRJTUVWd2QtWTNQdHp2VlZGdlBjdmlqVFlDQTB6cHJmSExOclV5WGxfcnlVQ1U?oc=5",
      "time": "2026-11-20T11:53:36Z"
-    },
-    {
-     "title": "IPO watch: Two mainboard IPOs to open next week; Mahanadi Coalfields, Crystal Crop listing ahead",
-     "source": "Upstox",
-     "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNUi13RmZoeFRpVTFQd19PMklTdkNjcjhneUlIVjhSV0RDakl3ZEVsTXlVTjRBUlc0V0x3eWhPU0lDXzVkeGRQY3FRZk9nczJZWWVKVGNiT1cwc0l6X1RRN0Z3VGRQZXI3NzEyTU8zY0QtX0ZDY2hCeVVBVTVwTUtubW5lT0FqcFFHZHludzNITVFGNXFrZGlLdl8wR2ppUEJCVWlKNy1rdDA3Ty1HTGtKSEtSX0RqbVFkdHVvRGk4RkE5N3o3MURWRzUxN0UwdDQ0eXdpTS1iMmVnWkRFck5Nb1l2ZWU?oc=5",
-     "time": "2026-11-20T09:44:39Z"
     }
    ],
    "thesis": "Bidding is open until 23 Nov and was 0.48x subscribed on day 2; QIBs are at 1.37x while retail is 0.24x. Institutions usually bid late, so early numbers say little. The issue is entirely offer-for-sale, so no money goes to the company. One lot costs about Rs 14,960; only a small bet is sensible, ideally after checking final-day demand.",
@@ -237,16 +237,16 @@
    }
   },
   {
-   "name": "Tonbo Imaging India Limited",
-   "symbol": "TONBO",
+   "name": "Bonfiglioli Transmissions Limited",
+   "symbol": "BONFIG",
    "board": "Mainboard",
    "status": "listed",
    "open_date": "2026-10-15",
    "close_date": "2026-10-19",
    "listing_date": "2026-10-23",
    "price_band": [
-    700.0,
-    700.0
+    586.0,
+    586.0
    ],
    "lot_size": null,
    "min_invest_rs": null,
@@ -351,16 +351,16 @@
    }
   },
   {
-   "name": "Bonfiglioli Transmissions Limited",
-   "symbol": "BONFIG",
+   "name": "Tonbo Imaging India Limited",
+   "symbol": "TONBO",
    "board": "Mainboard",
    "status": "listed",
    "open_date": "2026-10-15",
    "close_date": "2026-10-19",
    "listing_date": "2026-10-23",
    "price_band": [
-    586.0,
-    586.0
+    700.0,
+    700.0
    ],
    "lot_size": null,
    "min_invest_rs": null,
@@ -655,16 +655,16 @@
    }
   },
   {
-   "name": "Maxwell Engineering Solutions Limited",
-   "symbol": "MAXENGS",
+   "name": "HGS (India) Limited",
+   "symbol": "HGSINDIALT",
    "board": "SME",
    "status": "listed",
    "open_date": "2026-10-30",
    "close_date": "2026-11-03",
    "listing_date": "2026-11-06",
    "price_band": [
-    158.0,
-    158.0
+    120.0,
+    120.0
    ],
    "lot_size": null,
    "min_invest_rs": null,
@@ -693,16 +693,16 @@
    }
   },
   {
-   "name": "HGS (India) Limited",
-   "symbol": "HGSINDIALT",
+   "name": "Maxwell Engineering Solutions Limited",
+   "symbol": "MAXENGS",
    "board": "SME",
    "status": "listed",
    "open_date": "2026-10-30",
    "close_date": "2026-11-03",
    "listing_date": "2026-11-06",
    "price_band": [
-    120.0,
-    120.0
+    158.0,
+    158.0
    ],
    "lot_size": null,
    "min_invest_rs": null,
@@ -851,5 +851,5 @@
   "sebi": "ok",
   "news": "ok"
  },
- "at": 1795313876.4628444
+ "at": 1795334010.5631742
 }

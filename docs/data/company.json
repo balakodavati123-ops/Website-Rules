@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T07:48:57+05:30",
+ "updated_at": "2026-11-22T13:29:36+05:30",
  "ceo": {
   "name": "Balaji",
   "title": "CEO"
@@ -51,420 +51,420 @@
  },
  "flows": [
   {
-   "t": "07:07:21",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "07:08:10",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "07:08:40",
+   "t": "12:47:51",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
    "text": "Company today \u20b90"
   },
   {
-   "t": "07:08:57",
+   "t": "12:48:29",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:09:49",
+   "t": "12:49:23",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:10:46",
+   "t": "12:50:13",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:11:33",
+   "t": "12:51:01",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:12:19",
+   "t": "12:51:50",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:13:10",
+   "t": "12:52:39",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:13:45",
+   "t": "12:52:56",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
    "text": "Company today \u20b90"
   },
   {
-   "t": "07:14:02",
+   "t": "12:53:34",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:14:47",
+   "t": "12:54:24",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:15:34",
+   "t": "12:55:12",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:16:25",
+   "t": "12:56:01",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:17:11",
+   "t": "12:56:50",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:17:58",
+   "t": "12:57:44",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:18:43",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "07:18:50",
+   "t": "12:58:01",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
    "text": "Company today \u20b90"
   },
   {
-   "t": "07:19:30",
+   "t": "12:58:35",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:20:21",
+   "t": "12:59:23",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:21:07",
+   "t": "13:00:13",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:21:54",
+   "t": "13:01:02",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:22:46",
+   "t": "13:01:56",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:23:35",
+   "t": "13:02:46",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:23:53",
+   "t": "13:03:08",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
    "text": "Company today \u20b90"
   },
   {
-   "t": "07:24:27",
+   "t": "13:03:34",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:25:14",
+   "t": "13:04:24",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:26:01",
+   "t": "13:05:13",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:26:51",
+   "t": "13:06:07",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:27:38",
+   "t": "13:06:57",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:28:25",
+   "t": "13:07:46",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:28:53",
+   "t": "13:08:14",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
    "text": "Company today \u20b90"
   },
   {
-   "t": "07:29:10",
+   "t": "13:08:36",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:29:57",
+   "t": "13:09:25",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:30:48",
+   "t": "13:10:19",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:31:35",
+   "t": "13:11:09",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:32:22",
+   "t": "13:11:57",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:33:07",
+   "t": "13:12:46",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:33:58",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "07:33:58",
+   "t": "13:13:14",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
    "text": "Company today \u20b90"
   },
   {
-   "t": "07:34:44",
+   "t": "13:13:34",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:35:31",
+   "t": "13:14:29",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:36:17",
+   "t": "13:15:19",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:37:07",
+   "t": "13:16:07",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:37:55",
+   "t": "13:16:56",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:38:41",
+   "t": "13:17:46",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:39:03",
+   "t": "13:18:20",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
    "text": "Company today \u20b90"
   },
   {
-   "t": "07:39:31",
+   "t": "13:18:40",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:40:17",
+   "t": "13:19:31",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:41:09",
+   "t": "13:20:20",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:42:00",
+   "t": "13:21:09",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:42:52",
+   "t": "13:21:31",
+   "from": "src:nse",
+   "to": "intraday-0",
+   "kind": "data",
+   "text": "Optimism \u00b7 RAILTEL: RAILTEL: Bagging/Receiving of orders/contracts"
+  },
+  {
+   "t": "13:21:58",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:43:37",
+   "t": "13:22:52",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:44:06",
+   "t": "13:23:20",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
    "text": "Company today \u20b90"
   },
   {
-   "t": "07:44:30",
+   "t": "13:23:43",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:45:17",
+   "t": "13:24:31",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:46:07",
+   "t": "13:25:19",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:46:55",
+   "t": "13:26:08",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:47:47",
+   "t": "13:27:03",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "07:48:32",
+   "t": "13:27:53",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "13:28:24",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u20b90"
+  },
+  {
+   "t": "13:28:41",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "13:29:30",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
@@ -1373,7 +1373,7 @@
      "role": "BTC",
      "kind": "research",
      "status": "vacant",
-     "doing": "-0.56% today",
+     "doing": "-1.71% today, moving: watching for an entry",
      "record": {
       "trades": 3,
       "wins": 1,
@@ -1388,7 +1388,7 @@
      "role": "ETH",
      "kind": "research",
      "status": "vacant",
-     "doing": "-0.35% today",
+     "doing": "-1.11% today, moving: watching for an entry",
      "record": {
       "trades": 4,
       "wins": 1,
@@ -1403,7 +1403,7 @@
      "role": "SOL",
      "kind": "research",
      "status": "vacant",
-     "doing": "-0.21% today",
+     "doing": "-1.57% today, moving: watching for an entry",
      "record": {
       "trades": 6,
       "wins": 2,
@@ -1418,7 +1418,7 @@
      "role": "XRP",
      "kind": "research",
      "status": "vacant",
-     "doing": "-0.29% today",
+     "doing": "-1.75% today, moving: watching for an entry",
      "record": {
       "trades": 6,
       "wins": 2,
@@ -1433,7 +1433,7 @@
      "role": "DOGE",
      "kind": "research",
      "status": "vacant",
-     "doing": "-0.60% today",
+     "doing": "-1.80% today, moving: watching for an entry",
      "record": {
       "trades": 4,
       "wins": 1,
@@ -1448,7 +1448,7 @@
      "role": "ADA",
      "kind": "research",
      "status": "vacant",
-     "doing": "-0.63% today",
+     "doing": "-1.59% today, moving: watching for an entry",
      "record": {
       "trades": 5,
       "wins": 1,
@@ -1942,7 +1942,7 @@
    "id": "nse",
    "name": "NSE",
    "status": "ok",
-   "detail": "0 filings lean one way today; participant positions for 2026-11-18"
+   "detail": "2 filings lean one way today; participant positions for 2026-11-18"
   },
   {
    "id": "upstox",
@@ -1966,13 +1966,13 @@
    "id": "yahoo",
    "name": "Yahoo Finance",
    "status": "idle",
-   "detail": "world markets refreshed 2079 min ago"
+   "detail": "world markets refreshed 2420 min ago"
   },
   {
    "id": "news",
    "name": "News feeds",
    "status": "ok",
-   "detail": "news pulse: 9 feeds read every minute in market hours, 0 signals today; 0 with the hunters now"
+   "detail": "news pulse: 9 feeds read every minute in market hours, 4 signals today; 0 with the hunters now"
   },
   {
    "id": "claude",
@@ -2231,560 +2231,560 @@
   },
   "flows": [
    {
-    "t": "06:53:32",
+    "t": "12:33:30",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "12:34:19",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "12:35:08",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "12:35:56",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "12:36:51",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "12:37:41",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "12:37:41",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
     "text": "Company today \u20b90"
    },
    {
-    "t": "06:53:49",
+    "t": "12:38:29",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "06:54:36",
+    "t": "12:39:18",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "06:55:22",
+    "t": "12:40:07",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "06:56:09",
+    "t": "12:41:02",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "06:56:59",
+    "t": "12:41:52",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "06:57:46",
+    "t": "12:42:39",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "06:58:35",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "06:58:35",
+    "t": "12:42:46",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
     "text": "Company today \u20b90"
    },
    {
-    "t": "06:59:21",
+    "t": "12:43:29",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:00:14",
+    "t": "12:44:18",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:01:01",
+    "t": "12:45:12",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:01:51",
+    "t": "12:46:03",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:02:38",
+    "t": "12:46:50",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:03:23",
+    "t": "12:47:40",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:03:35",
+    "t": "12:47:51",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
     "text": "Company today \u20b90"
    },
    {
-    "t": "07:04:10",
+    "t": "12:48:29",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:04:56",
+    "t": "12:49:23",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:05:42",
+    "t": "12:50:13",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:06:34",
+    "t": "12:51:01",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:07:21",
+    "t": "12:51:50",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:08:10",
+    "t": "12:52:39",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:08:40",
+    "t": "12:52:56",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
     "text": "Company today \u20b90"
    },
    {
-    "t": "07:08:57",
+    "t": "12:53:34",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:09:49",
+    "t": "12:54:24",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:10:46",
+    "t": "12:55:12",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:11:33",
+    "t": "12:56:01",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:12:19",
+    "t": "12:56:50",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:13:10",
+    "t": "12:57:44",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:13:45",
+    "t": "12:58:01",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
     "text": "Company today \u20b90"
    },
    {
-    "t": "07:14:02",
+    "t": "12:58:35",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:14:47",
+    "t": "12:59:23",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:15:34",
+    "t": "13:00:13",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:16:25",
+    "t": "13:01:02",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:17:11",
+    "t": "13:01:56",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:17:58",
+    "t": "13:02:46",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:18:43",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "07:18:50",
+    "t": "13:03:08",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
     "text": "Company today \u20b90"
    },
    {
-    "t": "07:19:30",
+    "t": "13:03:34",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:20:21",
+    "t": "13:04:24",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:21:07",
+    "t": "13:05:13",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:21:54",
+    "t": "13:06:07",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:22:46",
+    "t": "13:06:57",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:23:35",
+    "t": "13:07:46",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:23:53",
+    "t": "13:08:14",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
     "text": "Company today \u20b90"
    },
    {
-    "t": "07:24:27",
+    "t": "13:08:36",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:25:14",
+    "t": "13:09:25",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:26:01",
+    "t": "13:10:19",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:26:51",
+    "t": "13:11:09",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:27:38",
+    "t": "13:11:57",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:28:25",
+    "t": "13:12:46",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:28:53",
+    "t": "13:13:14",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
     "text": "Company today \u20b90"
    },
    {
-    "t": "07:29:10",
+    "t": "13:13:34",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:29:57",
+    "t": "13:14:29",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:30:48",
+    "t": "13:15:19",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:31:35",
+    "t": "13:16:07",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:32:22",
+    "t": "13:16:56",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:33:07",
+    "t": "13:17:46",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:33:58",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "07:33:58",
+    "t": "13:18:20",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
     "text": "Company today \u20b90"
    },
    {
-    "t": "07:34:44",
+    "t": "13:18:40",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:35:31",
+    "t": "13:19:31",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:36:17",
+    "t": "13:20:20",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:37:07",
+    "t": "13:21:09",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:37:55",
+    "t": "13:21:31",
+    "from": "src:nse",
+    "to": "intraday-0",
+    "kind": "data",
+    "text": "Optimism \u00b7 RAILTEL: RAILTEL: Bagging/Receiving of orders/contracts"
+   },
+   {
+    "t": "13:21:58",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:38:41",
+    "t": "13:22:52",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:39:03",
+    "t": "13:23:20",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
     "text": "Company today \u20b90"
    },
    {
-    "t": "07:39:31",
+    "t": "13:23:43",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:40:17",
+    "t": "13:24:31",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:41:09",
+    "t": "13:25:19",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:42:00",
+    "t": "13:26:08",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:42:52",
+    "t": "13:27:03",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:43:37",
+    "t": "13:27:53",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:44:06",
+    "t": "13:28:24",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
     "text": "Company today \u20b90"
    },
    {
-    "t": "07:44:30",
+    "t": "13:28:41",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "07:45:17",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "07:46:07",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "07:46:55",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "07:47:47",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "07:48:32",
+    "t": "13:29:30",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
@@ -2811,12 +2811,16 @@
    "sig:N185857-30": "2026-11-22",
    "sig:N191905-31": "2026-11-22",
    "sig:N201931-32": "2026-11-22",
-   "sig:N205822-33": "2026-11-22"
+   "sig:N205822-33": "2026-11-22",
+   "sig:N092005-1": "2026-11-22",
+   "sig:N120100-2": "2026-11-22",
+   "sig:N123109-3": "2026-11-22",
+   "sig:N132126-4": "2026-11-22"
   },
   "flow_at": {
    "crypto": 1795229124.147547,
-   "lab": 1795313912.577352,
-   "ceo": 1795313646.951356
+   "lab": 1795334370.333611,
+   "ceo": 1795334304.987839
   }
  }
 }
