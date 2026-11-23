@@ -1,683 +1,5 @@
 [
 {
-"time": "23 Nov 17:08",
-"source": "MarketWatch",
-"region": "World",
-"headline": "Google co-founder Sergey Brin and ex-wife Nicole Shanahan list Malibu home for $33.5 million"
-},
-{
-"time": "23 Nov 17:08",
-"source": "BBC-Business",
-"region": "World",
-"headline": "Poundland is facing collapse - what's gone wrong?"
-},
-{
-"time": "23 Nov 17:08",
-"source": "BBC-Business",
-"region": "World",
-"headline": "Italian jeweller and businessman Paolo Bulgari dies aged 89"
-},
-{
-"time": "23 Nov 17:08",
-"source": "Investing.com",
-"region": "World",
-"headline": "CrowdStrike bets on network security with $43.9 billion Zscaler deal"
-},
-{
-"time": "23 Nov 17:08",
-"source": "Investing.com",
-"region": "World",
-"headline": "Why is Nemetschek stock sliding today?"
-},
-{
-"time": "23 Nov 17:08",
-"source": "Investing.com",
-"region": "World",
-"headline": "Why is thyssenkrupp nucera stock sliding today?"
-},
-{
-"time": "23 Nov 17:13",
-"source": "ET",
-"region": "India",
-"headline": "India bonds give up marginal opening gains as profit booking takes over"
-},
-{
-"time": "23 Nov 17:13",
-"source": "GoogleNews",
-"region": "India",
-"headline": "Sensex settles 2,200 pts lower from day's high, Nifty closes below 25,350: Three key reasons behind... - Moneycontrol.com"
-},
-{
-"time": "23 Nov 17:13",
-"source": "GoogleNews",
-"region": "India",
-"headline": "Black Monday crash fears grip markets: Will Sensex, Nifty open lower today? - India Today"
-},
-{
-"time": "23 Nov 17:13",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Investors gives a thumbs down to Tata Steel-APL Apollo $1.67 billion deal, plunging shares - CNBC"
-},
-{
-"time": "23 Nov 17:13",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "RBI MPC Poll | Economists unanimously expect 25 bps December rate hike as inflation tops 6% - Moneycontrol.com"
-},
-{
-"time": "23 Nov 17:13",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Gold and Silver Price Forecast: Strong Dollar Caps Rebound Before PCE - FXEmpire"
-},
-{
-"time": "23 Nov 17:13",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "Suzlon Energy discloses a cybersecurity incident; here's what it said about the impact"
-},
-{
-"time": "23 Nov 17:13",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "Tech Mahindra fixes record date for 1:1 bonus issue: What 7 lakh retail shareholders need to know"
-},
-{
-"time": "23 Nov 17:13",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "San Francisco is enjoying an AI boom, but worries about a crash are growing - BBC"
-},
-{
-"time": "23 Nov 17:13",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "US intelligence chief warns of more tech outages as Delta suffers fresh Atlanta failure - Euronews.com"
-},
-{
-"time": "23 Nov 17:13",
-"source": "MarketWatch",
-"region": "World",
-"headline": "The U.S. may enter a recession if the Fed raises rates, hedge-fund manager Bill Ackman says"
-},
-{
-"time": "23 Nov 17:13",
-"source": "MarketWatch",
-"region": "World",
-"headline": "Nvidia stock bounces as Trump administration pushes for rehiring of Jensen Huang"
-},
-{
-"time": "23 Nov 17:13",
-"source": "BBC-Business",
-"region": "World",
-"headline": "Catering giant to switch main share listing to US in further blow to UK"
-},
-{
-"time": "23 Nov 17:13",
-"source": "NYT-Business",
-"region": "World",
-"headline": "Grocers Take Losses on Thanksgiving Meal Bundles to Draw Shoppers"
-},
-{
-"time": "23 Nov 17:13",
-"source": "NYT-Business",
-"region": "World",
-"headline": "CVS Health\u2019s Planned Breakup Hasn\u2019t Quieted Antitrust Critics"
-},
-{
-"time": "23 Nov 17:13",
-"source": "NYT-Business",
-"region": "World",
-"headline": "5 New Mountain Hotels for Your Next Winter Escape"
-},
-{
-"time": "23 Nov 17:13",
-"source": "Investing.com",
-"region": "World",
-"headline": "Why is CrowdStrike stock tumbling today?"
-},
-{
-"time": "23 Nov 17:13",
-"source": "Investing.com",
-"region": "World",
-"headline": "Anthropic shares rise premarket after Friday selloff nearly erased IPO gains"
-},
-{
-"time": "23 Nov 17:13",
-"source": "Investing.com",
-"region": "World",
-"headline": "UK shares rise from 5-month low as banks, miners gain"
-},
-{
-"time": "23 Nov 17:13",
-"source": "Investing.com",
-"region": "World",
-"headline": "UBS cuts Tele2 as cost savings fade and Swedish price competition intensifies"
-},
-{
-"time": "23 Nov 17:13",
-"source": "FT-Markets",
-"region": "World",
-"headline": "FirstFT: Wall Street set to rebound after AI stock sell-off"
-},
-{
-"time": "23 Nov 17:13",
-"source": "FT-Markets",
-"region": "World",
-"headline": "What happens when bubbles burst"
-},
-{
-"time": "23 Nov 17:13",
-"source": "FT-Markets",
-"region": "World",
-"headline": "Pension fund managers complain they were fired for shunning tech stocks"
-},
-{
-"time": "23 Nov 17:13",
-"source": "FT-Markets",
-"region": "World",
-"headline": "Boost for \u00a31bn Acorn carbon capture scheme as new developer buys stake"
-},
-{
-"time": "23 Nov 17:13",
-"source": "FT-Markets",
-"region": "World",
-"headline": "Why private capital is betting big on mix-and-match deals"
-},
-{
-"time": "23 Nov 17:19",
-"source": "ET",
-"region": "India",
-"headline": "Global Markets: 5 key triggers to watch this week"
-},
-{
-"time": "23 Nov 17:19",
-"source": "Moneycontrol",
-"region": "India",
-"headline": "Buy Bajaj Finance; target of Rs 9000: Emkay Global Financial"
-},
-{
-"time": "23 Nov 17:19",
-"source": "Moneycontrol",
-"region": "India",
-"headline": "Reduce Persistent Systems; target of Rs 3700: Emkay Global Financial"
-},
-{
-"time": "23 Nov 17:19",
-"source": "Moneycontrol",
-"region": "India",
-"headline": "Reduce Aditya Birla Fashion and Retail; target of Rs 230: Emkay Global Financial"
-},
-{
-"time": "23 Nov 17:19",
-"source": "Moneycontrol",
-"region": "India",
-"headline": "Reduce Wipro; target of Rs 410: ICICI Securities"
-},
-{
-"time": "23 Nov 17:19",
-"source": "Moneycontrol",
-"region": "India",
-"headline": "Buy HDFC Life Insurance Company; target of Rs 739: ICICI Securities"
-},
-{
-"time": "23 Nov 17:19",
-"source": "GoogleNews",
-"region": "India",
-"headline": "India stocks lower at close of trade; Nifty 50 down 1.75% - Investing.com"
-},
-{
-"time": "23 Nov 17:19",
-"source": "GoogleNews",
-"region": "India",
-"headline": "Gift Nifty Signals 239-Point Gap-Up Opening for Nifty - HDFC Sky"
-},
-{
-"time": "23 Nov 17:19",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Gold (XAUUSD) & Silver Price Forecast: Gold Rebounds From 14-Month Low as Hike Bets Cool, Can $3,595 Hold? - FXEmpire"
-},
-{
-"time": "23 Nov 17:19",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Festive Vehicle Retail 2026 Hits Record 55.25 Lakh - EVs Cross 5 Lakh - RushLane"
-},
-{
-"time": "23 Nov 17:19",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Mahanadi Coalfields IPO subscribed 50% so far on last day of bidding; check latest GMP - Moneycontrol.com"
-},
-{
-"time": "23 Nov 17:19",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "The Test for India\u2019s $8.9 Billion Foreign Rally Arrives in December"
-},
-{
-"time": "23 Nov 17:19",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "India's 50 leading companies arrive on SGX: UTI India Nifty 50 Index ETF begins trading"
-},
-{
-"time": "23 Nov 17:19",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "India stocks dip after RBI hikes rates for first time in nearly 4 yrs"
-},
-{
-"time": "23 Nov 17:19",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "Indian shares set to open higher; Fed chair speech, closing auction volatility in focus"
-},
-{
-"time": "23 Nov 17:19",
-"source": "BusinessLine",
-"region": "India",
-"headline": "Rupee snaps 5-day rally; tumbles 30 paise to settle at 92.92 against US dollar"
-},
-{
-"time": "23 Nov 17:19",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "Nvidia soars 10% pre-market on Wall Street as Trump backs Jensen Huang's return"
-},
-{
-"time": "23 Nov 17:19",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "Adani Airports raises \u20b92,790 crore from 360 ONE Asset, total fundraise hits $1.35 billion"
-},
-{
-"time": "23 Nov 17:19",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "US Stock Futures Bounce After AI-Driven Correction: Markets Wrap - Bloomberg.com"
-},
-{
-"time": "23 Nov 17:19",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Trump Urges Nvidia Board To Bring Back Jensen Huang Amid New Chinese Spy Agency Revelations - Forbes"
-},
-{
-"time": "23 Nov 17:19",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Artificial superintelligence \u2018arriving\u2019, warns top Meta executive - Al Jazeera"
-},
-{
-"time": "23 Nov 17:19",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "The Fed isn't riding to the rescue \u2014 Wall Street still sees a December rate hike after tech's worst week since 2020: Chart of the Day"
-},
-{
-"time": "23 Nov 17:19",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "The S&P 500 Fell 7 Days in a Row for the First Time Since 2020. Here's What Happened After Every Losing Streak of 6 Days or More Since 1950."
-},
-{
-"time": "23 Nov 17:19",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "Five Charts Unpack One of the Worst Weeks for Stocks in Decades"
-},
-{
-"time": "23 Nov 17:19",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "Stocks are tumbling. Has the AI bubble finally burst?"
-},
-{
-"time": "23 Nov 17:19",
-"source": "FT-Markets",
-"region": "World",
-"headline": "Investors flip the switch on the AI trade"
-},
-{
-"time": "23 Nov 17:19",
-"source": "FT-Markets",
-"region": "World",
-"headline": "US ports face cyber attack onslaught as hackers target vital trade routes"
-},
-{
-"time": "23 Nov 17:24",
-"source": "ET",
-"region": "India",
-"headline": "Why is SanDisk stock falling? 5 factors weighing on shares"
-},
-{
-"time": "23 Nov 17:24",
-"source": "Moneycontrol",
-"region": "India",
-"headline": "Buy Patel Engineering; target of Rs 80: ICICI Direct"
-},
-{
-"time": "23 Nov 17:24",
-"source": "Mint",
-"region": "India",
-"headline": "Multibagger defence stock to buy: Experts see 35% gain on MSCI index rebalancing despite 55% YTD return | Target, SL"
-},
-{
-"time": "23 Nov 17:24",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Dalmia Bharat pares losses to trade flat after \u20b9700-cr buyback announcement"
-},
-{
-"time": "23 Nov 17:24",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Sterling and Wilson shares gain 7% on winning orders worth \u20b92,050 crore"
-},
-{
-"time": "23 Nov 17:24",
-"source": "GoogleNews",
-"region": "India",
-"headline": "Sensex sheds 1,484 points, Nifty drops below 25,400 amid heavy selling in banking, metal stocks - DD News"
-},
-{
-"time": "23 Nov 17:24",
-"source": "GoogleNews",
-"region": "India",
-"headline": "Stock market crash today: Investors lose over Rs 6 lakh crore as Sensex ends over 1,400 points down; top - The Times of India"
-},
-{
-"time": "23 Nov 17:24",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Stock Market Today Highlights November 23: Markets take heavy drubbing dragged by banks; Sensex plunges 1,484 pts, Nifty dives to 25,349.65 - BusinessLine"
-},
-{
-"time": "23 Nov 17:24",
-"source": "BusinessLine",
-"region": "India",
-"headline": "RBI plans to tap broker apps to boost retail trading in government bonds, sources say"
-},
-{
-"time": "23 Nov 17:24",
-"source": "BusinessLine",
-"region": "India",
-"headline": "Nifty hits 9-month high as IT, Auto lead gains; metal stocks drag"
-},
-{
-"time": "23 Nov 17:24",
-"source": "BusinessLine",
-"region": "India",
-"headline": "Tata Steel dips 7% as APL Apollo plunge on \u20b928,000 cr deal; Hindalco under pressure"
-},
-{
-"time": "23 Nov 17:24",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Understanding ULIPs: Why Buying Insurance As Investment Can Be Expensive"
-},
-{
-"time": "23 Nov 17:24",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Market Highlights: Sensex Crashes 1,484 Points, Nifty 50 Ends Below 25,350 As Banks, Metals Bleed; Tata Steel Top Loser"
-},
-{
-"time": "23 Nov 17:24",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Namit Malhotra Compares Sunny Deol\u2019s Lord Hanuman To Iron Man, Reveals Why He Was Cast In Ramayana"
-},
-{
-"time": "23 Nov 17:24",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "Stock Market Crash: Over \u20b95 lakh crore investor wealth wiped out as Nifty falls 435 points; Here\u2019s why"
-},
-{
-"time": "23 Nov 17:24",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "CrowdStrike to Buy Zscaler in $43.9 Billion Stock Swap - WSJ"
-},
-{
-"time": "23 Nov 17:24",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "Warren Buffett Said \u201cA Pin Lies in Wait for Every Bubble.\u201d What He Did After the Last One Burst Is a Warning to Anyone Buying AI Stocks Now"
-},
-{
-"time": "23 Nov 17:24",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "Why Did Robinhood Markets Stock Fall Again?"
-},
-{
-"time": "23 Nov 17:24",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "What Is Driving Lam Research Stock?"
-},
-{
-"time": "23 Nov 17:24",
-"source": "MarketWatch",
-"region": "World",
-"headline": "A 66-year-old nurse faces retirement with just $500 saved. Who\u2019s to blame?"
-},
-{
-"time": "23 Nov 17:24",
-"source": "BBC-Business",
-"region": "World",
-"headline": "Energy bills will soar - here's how you can ease the pain"
-},
-{
-"time": "23 Nov 17:24",
-"source": "BBC-Business",
-"region": "World",
-"headline": "San Francisco is enjoying an AI boom, but worries about a crash are growing"
-},
-{
-"time": "23 Nov 17:24",
-"source": "BBC-Business",
-"region": "World",
-"headline": "Hundreds of applications, no replies: Inside the job ghosting problem\u200c"
-},
-{
-"time": "23 Nov 17:24",
-"source": "NYT-Business",
-"region": "World",
-"headline": "Scott Bessent Calls on Nvidia to Provide Answers on Chip Sales to China"
-},
-{
-"time": "23 Nov 17:24",
-"source": "NYT-Business",
-"region": "World",
-"headline": "\u2018Hunger Games\u2019 Rebounds With $120 Million Opening for \u2018Sunrise on the Reaping\u2019 at Box Office"
-},
-{
-"time": "23 Nov 17:24",
-"source": "NYT-Business",
-"region": "World",
-"headline": "Procter & Gamble to Increase Factory Shifts Without Humans to Cut Costs"
-},
-{
-"time": "23 Nov 17:24",
-"source": "Investing.com",
-"region": "World",
-"headline": "Wall Street futures rebound as battered AI stocks gain ground"
-},
-{
-"time": "23 Nov 17:24",
-"source": "FT-Markets",
-"region": "World",
-"headline": "From rotation to contagion"
-},
-{
-"time": "23 Nov 17:29",
-"source": "ET",
-"region": "India",
-"headline": "Tech Mahindra Share Price Live Updates: Tech Mahindra Bonus Updates"
-},
-{
-"time": "23 Nov 17:29",
-"source": "ET",
-"region": "India",
-"headline": "L&T Share Price Live Updates: L&T Bonus Updates"
-},
-{
-"time": "23 Nov 17:29",
-"source": "Moneycontrol",
-"region": "India",
-"headline": "Accumulate Infosys; target of Rs 1531: KR Choksey"
-},
-{
-"time": "23 Nov 17:29",
-"source": "Moneycontrol",
-"region": "India",
-"headline": "Buy Jindal Drilling and Industries; target of Rs 960: Anand Rathi"
-},
-{
-"time": "23 Nov 17:29",
-"source": "Moneycontrol",
-"region": "India",
-"headline": "Buy Navneet Education; target of Rs 182: Prabhudas Lilladher"
-},
-{
-"time": "23 Nov 17:29",
-"source": "Mint",
-"region": "India",
-"headline": "PSU bank stocks tumble up to 5% after five-day rally, Nifty PSU Bank index crashes 3.2%; what's behind the sell-off?"
-},
-{
-"time": "23 Nov 17:29",
-"source": "Mint",
-"region": "India",
-"headline": "Up 32% in one month! Small-cap stock under  \u20b950 hits 5% upper circuit despite weak trends on Dalal Street; do you have?"
-},
-{
-"time": "23 Nov 17:29",
-"source": "Mint",
-"region": "India",
-"headline": "TCS vs Infosys vs Wipro shares: Despite global AI bloodbath, why are Indian IT stocks rising? Experts decode"
-},
-{
-"time": "23 Nov 17:29",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Milky Mist gains 5% on JM Financial's bullish call, up 140% from IPO price"
-},
-{
-"time": "23 Nov 17:29",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Premium demand, solid pipeline to spur residential realty growth: Brokerage"
-},
-{
-"time": "23 Nov 17:29",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Sterlite Tech, HFCL extend fall; slip up to 41% from October highs"
-},
-{
-"time": "23 Nov 17:29",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Bulls take a breather! Sensex dives 1,500 pts intraday; a short-term blip?"
-},
-{
-"time": "23 Nov 17:29",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Chalet Hotels gains 3% on \u20b93,500-cr expansion plan; analysts stay bullish"
-},
-{
-"time": "23 Nov 17:29",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "RBI expected to raise rates in December, deliver final hike in February - Moneycontrol.com"
-},
-{
-"time": "23 Nov 17:29",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Tata Sons Board Meeting Rescheduled To Nov. 30 After Noel Tata's Letter"
-},
-{
-"time": "23 Nov 17:29",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Nvidia Shares Spike 9% Pre-Market After Its Worst Day In Years. Is The Bottom Finally In?"
-},
-{
-"time": "23 Nov 17:29",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "The AI Trade is Done. The Real Opportunity for Investors Starts in 2027 | Unhedged Position"
-},
-{
-"time": "23 Nov 17:29",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Only BS-VI Vehicles In Delhi? Supreme Court's Big Remark Amid Pollution Crisis"
-},
-{
-"time": "23 Nov 17:29",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Sharjah Warriorz vs Desert Vipers Live Streaming: When And Where To Watch ILT20 Match?"
-},
-{
-"time": "23 Nov 17:29",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Gulf Giants vs MI Emirates Live Streaming: When And Where To Watch ILT20 Match?"
-},
-{
-"time": "23 Nov 17:29",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Dubai Capitals vs Desert Vipers Live Streaming: When And Where To Watch ILT20 Match?"
-},
-{
-"time": "23 Nov 17:29",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Zscaler Jumps 13% In Premarket Trade As CrowdStrike Pays 34% Premium For $43.9 Billion Mega-Deal"
-},
-{
-"time": "23 Nov 17:29",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Indian Singer Sonu Nigam Purchases Commercial Property In Mumbai For Rs. 31.47 Crore: Square Yard"
-},
-{
-"time": "23 Nov 17:29",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Is This Ranveer Singh's Zombie Apocalypse World? Leaked 'Pralay' Video Goes Viral"
-},
-{
-"time": "23 Nov 17:29",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "'Stop Behaving Like Bahubali': SC Rebukes Bihar Judge, Questions His Legal Understanding"
-},
-{
-"time": "23 Nov 17:29",
-"source": "NDTVProfit",
-"region": "India",
-"headline": "Sanjay Leela Bhansali\u2019s Love & War To Feature Sunidhi Chauhan\u2019s Bold Song 'Love Me Like A Dog\u2019"
-},
-{
-"time": "23 Nov 17:29",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "L&T Technology Services says systems secure, operations normal amid reports of cybersecurity incident"
-},
-{
 "time": "23 Nov 17:29",
 "source": "Yahoo-S&P500",
 "region": "World",
@@ -1198,5 +520,683 @@
 "source": "Investing.com",
 "region": "World",
 "headline": "How Nvidia\u2019s billion-dollar turnaround in China is threatened by Huang\u2019s exit"
+},
+{
+"time": "23 Nov 17:46",
+"source": "ET",
+"region": "India",
+"headline": "Rupee retreats with stocks as rally takes a breather, positive bias lingers"
+},
+{
+"time": "23 Nov 17:46",
+"source": "ET",
+"region": "India",
+"headline": "The great Indian stock market comeback. Can the rally sustain and what should investors do?"
+},
+{
+"time": "23 Nov 17:46",
+"source": "ET",
+"region": "India",
+"headline": "Adani Enterprises Share Price Live Updates: Intimation Regarding Entering Into Deed Of Adherence To The Shareholders' Agreement By AAHL."
+},
+{
+"time": "23 Nov 17:46",
+"source": "ET",
+"region": "India",
+"headline": "Titan Company Share Price Live Updates: Announcement under Regulation 30 (LODR)-Credit Rating"
+},
+{
+"time": "23 Nov 17:46",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Buy Tejas Networks; target of Rs 1100: Emkay Global Financial"
+},
+{
+"time": "23 Nov 17:46",
+"source": "Mint",
+"region": "India",
+"headline": "Crypto investment amid fall: As Bitcoin hovers near $60K levels, experts answer if investors can expect recovery"
+},
+{
+"time": "23 Nov 17:46",
+"source": "Mint",
+"region": "India",
+"headline": "Who is killing Nifty 50 rally? SBI, RIL, HDFC Bank, Axis Bank, Hindalco, JSW among stocks dragging index into red"
+},
+{
+"time": "23 Nov 17:46",
+"source": "GoogleNews",
+"region": "India",
+"headline": "Sensex, Nifty Open Higher Despite Weak Global Market Cues - HDFC Sky"
+},
+{
+"time": "23 Nov 17:46",
+"source": "GoogleNews",
+"region": "India",
+"headline": "India Inc rushes to raise $2.7 billion debt ahead of expected RBI rate hike - Reuters"
+},
+{
+"time": "23 Nov 17:46",
+"source": "GoogleNews",
+"region": "India",
+"headline": "Why did stock market fall today? Sensex crashes 1,484 points, Nifty posts biggest drop in 5 months - CNBC TV18 - LinkedIn"
+},
+{
+"time": "23 Nov 17:46",
+"source": "GoogleNews",
+"region": "India",
+"headline": "Investors Lose Over Rs 5 Lakh Crore. Here's Why Stock Markets Crashed Today - NDTV"
+},
+{
+"time": "23 Nov 17:46",
+"source": "GoogleNews",
+"region": "India",
+"headline": "Sensex, Nifty open higher on foreign inflows despite weak Asian cues, turn negative later - DD News"
+},
+{
+"time": "23 Nov 17:46",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "How Notable Capital, GIC, and Baillie Gifford bet big on Anthropic before its IPO - TechCrunch"
+},
+{
+"time": "23 Nov 17:46",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "AI stock selloff drives investors to China, India, and overlooked Asian sectors"
+},
+{
+"time": "23 Nov 17:46",
+"source": "BusinessLine",
+"region": "India",
+"headline": "Gold imports into India decline 40% in April-October: CTI"
+},
+{
+"time": "23 Nov 17:46",
+"source": "BusinessLine",
+"region": "India",
+"headline": "IT holds firm as banks, metals drag Nifty below 25,600"
+},
+{
+"time": "23 Nov 17:46",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Catering giant Compass Group to shift stock market listing to US in further blow to UK - BBC"
+},
+{
+"time": "23 Nov 17:46",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Seniors embrace Tesla automated driving technology despite questions about safety - NPR"
+},
+{
+"time": "23 Nov 17:46",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "Traders Pare Fed Rate-Hike Bets as Bessent Cautions on Policy \u2018Mistake\u2019"
+},
+{
+"time": "23 Nov 17:46",
+"source": "NYT-Business",
+"region": "World",
+"headline": "Built to Whisper, E.V.s Look to Mimic the Growl of Gas Engines"
+},
+{
+"time": "23 Nov 17:46",
+"source": "NYT-Business",
+"region": "World",
+"headline": "Wall Street Set to Bounce Back After Tough Week"
+},
+{
+"time": "23 Nov 17:46",
+"source": "NYT-Business",
+"region": "World",
+"headline": "Zohran Mamdani on Trump, Wall Street and Wealth Taxes"
+},
+{
+"time": "23 Nov 17:46",
+"source": "FT-Markets",
+"region": "World",
+"headline": "Wall Street set to rebound after AI stock sell-off"
+},
+{
+"time": "23 Nov 17:46",
+"source": "FT-Markets",
+"region": "World",
+"headline": "Asian regulators rush to support sagging markets as AI trade falters"
+},
+{
+"time": "23 Nov 17:46",
+"source": "FT-Markets",
+"region": "World",
+"headline": "The Federal Reserve\u2019s balance sheet yo-yo"
+},
+{
+"time": "23 Nov 17:51",
+"source": "ET",
+"region": "India",
+"headline": "India bonds give up marginal opening gains as profit booking takes over"
+},
+{
+"time": "23 Nov 17:51",
+"source": "GoogleNews",
+"region": "India",
+"headline": "Sensex settles 2,200 pts lower from day's high, Nifty closes below 25,350: Three key reasons behind... - Moneycontrol.com"
+},
+{
+"time": "23 Nov 17:51",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Investors gives a thumbs down to Tata Steel-APL Apollo $1.67 billion deal, plunging shares - CNBC"
+},
+{
+"time": "23 Nov 17:51",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Gold and Silver Price Forecast: Strong Dollar Caps Rebound Before PCE - FXEmpire"
+},
+{
+"time": "23 Nov 17:51",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "Suzlon Energy discloses a cybersecurity incident; here's what it said about the impact"
+},
+{
+"time": "23 Nov 17:51",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Stock market today: Dow, S&P 500, Nasdaq futures surge amid relief rally - Yahoo Finance"
+},
+{
+"time": "23 Nov 17:51",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Trump hosts private dinner for largest owners of his meme coin - Al Jazeera"
+},
+{
+"time": "23 Nov 17:51",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Meta is building its largest data center in a small Louisiana town. Residents told me it's changing everything. - Business Insider"
+},
+{
+"time": "23 Nov 17:51",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "US intelligence chief warns of more tech outages as Delta suffers fresh Atlanta failure - Euronews.com"
+},
+{
+"time": "23 Nov 17:51",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "The biggest investors in AI are doing this"
+},
+{
+"time": "23 Nov 17:51",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "11 S&P 500 Stocks Thrive As Tech And AI Dive In Massive Sell-Off"
+},
+{
+"time": "23 Nov 17:51",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "Anthropic shares rise premarket after Friday selloff nearly erased IPO gains"
+},
+{
+"time": "23 Nov 17:51",
+"source": "MarketWatch",
+"region": "World",
+"headline": "Cybersecurity stocks have been hot \u2014 and now CrowdStrike inks deal to buy Zscaler"
+},
+{
+"time": "23 Nov 17:51",
+"source": "MarketWatch",
+"region": "World",
+"headline": "The U.S. may enter a recession if the Fed raises rates, hedge-fund manager Bill Ackman says"
+},
+{
+"time": "23 Nov 17:51",
+"source": "MarketWatch",
+"region": "World",
+"headline": "Nvidia stock bounces as Trump administration pushes for rehiring of Jensen Huang"
+},
+{
+"time": "23 Nov 17:51",
+"source": "MarketWatch",
+"region": "World",
+"headline": "Google co-founder Sergey Brin and ex-wife Nicole Shanahan list Malibu home for $33.5 million"
+},
+{
+"time": "23 Nov 17:51",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Catering giant to switch main share listing to US in further blow to UK"
+},
+{
+"time": "23 Nov 17:51",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Poundland is facing collapse - what's gone wrong?"
+},
+{
+"time": "23 Nov 17:51",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Italian jeweller and businessman Paolo Bulgari dies aged 89"
+},
+{
+"time": "23 Nov 17:51",
+"source": "NYT-Business",
+"region": "World",
+"headline": "Grocers Take Losses on Thanksgiving Meal Bundles to Draw Shoppers"
+},
+{
+"time": "23 Nov 17:51",
+"source": "NYT-Business",
+"region": "World",
+"headline": "CVS Health\u2019s Planned Breakup Hasn\u2019t Quieted Antitrust Critics"
+},
+{
+"time": "23 Nov 17:51",
+"source": "NYT-Business",
+"region": "World",
+"headline": "5 New Mountain Hotels for Your Next Winter Escape"
+},
+{
+"time": "23 Nov 17:51",
+"source": "Investing.com",
+"region": "World",
+"headline": "CrowdStrike bets on network security with $43.9 billion Zscaler deal"
+},
+{
+"time": "23 Nov 17:51",
+"source": "Investing.com",
+"region": "World",
+"headline": "Why is CrowdStrike stock tumbling today?"
+},
+{
+"time": "23 Nov 17:56",
+"source": "ET",
+"region": "India",
+"headline": "Global Markets: 5 key triggers to watch this week"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Buy Bajaj Finance; target of Rs 9000: Emkay Global Financial"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Reduce Persistent Systems; target of Rs 3700: Emkay Global Financial"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Reduce Aditya Birla Fashion and Retail; target of Rs 230: Emkay Global Financial"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Reduce Wipro; target of Rs 410: ICICI Securities"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Buy HDFC Life Insurance Company; target of Rs 739: ICICI Securities"
+},
+{
+"time": "23 Nov 17:56",
+"source": "GoogleNews",
+"region": "India",
+"headline": "Gift Nifty Signals 239-Point Gap-Up Opening for Nifty - HDFC Sky"
+},
+{
+"time": "23 Nov 17:56",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Festive Vehicle Retail 2026 Hits Record 55.25 Lakh - EVs Cross 5 Lakh - RushLane"
+},
+{
+"time": "23 Nov 17:56",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Mahanadi Coalfields IPO subscribed 50% so far on last day of bidding; check latest GMP - Moneycontrol.com"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "The Test for India\u2019s $8.9 Billion Foreign Rally Arrives in December"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "India's 50 leading companies arrive on SGX: UTI India Nifty 50 Index ETF begins trading"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "India stocks dip after RBI hikes rates for first time in nearly 4 yrs"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Yahoo-Nifty",
+"region": "India",
+"headline": "Indian shares set to open higher; Fed chair speech, closing auction volatility in focus"
+},
+{
+"time": "23 Nov 17:56",
+"source": "BusinessLine",
+"region": "India",
+"headline": "Rupee snaps 5-day rally; tumbles 30 paise to settle at 92.92 against US dollar"
+},
+{
+"time": "23 Nov 17:56",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "Tata Steel-APL Apollo deal triggers \u20b931,000 crore market cap erosion"
+},
+{
+"time": "23 Nov 17:56",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "Nvidia soars 10% pre-market on Wall Street as Trump backs Jensen Huang's return"
+},
+{
+"time": "23 Nov 17:56",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "Adani Airports raises \u20b92,790 crore from 360 ONE Asset, total fundraise hits $1.35 billion"
+},
+{
+"time": "23 Nov 17:56",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Trump doubles down on call for Nvidia to rehire Jensen Huang amid alleged Chinese spy scandal - Fox Business"
+},
+{
+"time": "23 Nov 17:56",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "San Francisco is enjoying an AI boom, but worries about a crash are growing - BBC"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "Gold prices today, Monday, November 23, 2026: Gold prices opened at lowest point since 9/2/25"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "SPY And Gold Fell Together. Did Bonds Save 60/40?"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "Why Is Micron Technology Stock Falling?"
+},
+{
+"time": "23 Nov 17:56",
+"source": "NYT-Business",
+"region": "World",
+"headline": "Wall Street Set to Bounce Back After Tech Sell-Off"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Investing.com",
+"region": "World",
+"headline": "DoorDash stock surges on expanded credit facility"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Investing.com",
+"region": "World",
+"headline": "Why is Nebius stock rallying today?"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Investing.com",
+"region": "World",
+"headline": "Why is Intel stock surging today?"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Investing.com",
+"region": "World",
+"headline": "Morgan Stanley\u2019s Wilson calls market capitulation a rare opportunity to buy stocks"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Investing.com",
+"region": "World",
+"headline": "Virginia, Oregon sue Musk\u2019s SpaceX over Grok AI\u2019s creation of child sexual abuse images and videos"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Investing.com",
+"region": "World",
+"headline": "Why is Marvell Technology stock surging today?"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Investing.com",
+"region": "World",
+"headline": "Why is Advanced Micro Devices stock rallying today?"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Investing.com",
+"region": "World",
+"headline": "Why is DoorDash stock rallying today?"
+},
+{
+"time": "23 Nov 17:56",
+"source": "Investing.com",
+"region": "World",
+"headline": "Lego to invest over \u20ac1 billion in new Portugal factory to meet growing demand"
+},
+{
+"time": "23 Nov 17:56",
+"source": "FT-Markets",
+"region": "World",
+"headline": "Traders start to move US copper to China as Trump tariff fears ease"
+},
+{
+"time": "23 Nov 17:56",
+"source": "FT-Markets",
+"region": "World",
+"headline": "FirstFT: Wall Street set to rebound after AI stock sell-off"
+},
+{
+"time": "23 Nov 17:56",
+"source": "FT-Markets",
+"region": "World",
+"headline": "What happens when bubbles burst"
+},
+{
+"time": "23 Nov 17:56",
+"source": "FT-Markets",
+"region": "World",
+"headline": "Pension fund managers complain they were fired for shunning tech stocks"
+},
+{
+"time": "23 Nov 17:56",
+"source": "FT-Markets",
+"region": "World",
+"headline": "Boost for \u00a31bn Acorn carbon capture scheme as new developer buys stake"
+},
+{
+"time": "23 Nov 17:56",
+"source": "FT-Markets",
+"region": "World",
+"headline": "Why private capital is betting big on mix-and-match deals"
+},
+{
+"time": "23 Nov 18:01",
+"source": "ET",
+"region": "India",
+"headline": "Why is SanDisk stock falling? 5 factors weighing on shares"
+},
+{
+"time": "23 Nov 18:01",
+"source": "ET",
+"region": "India",
+"headline": "Tech Mahindra Share Price Live Updates: Tech Mahindra Bonus Updates"
+},
+{
+"time": "23 Nov 18:01",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Buy Patel Engineering; target of Rs 80: ICICI Direct"
+},
+{
+"time": "23 Nov 18:01",
+"source": "Mint",
+"region": "India",
+"headline": "Dalmia Bharat approves  \u20b9700 crore share buyback: From price per share to record date - what investors need to know"
+},
+{
+"time": "23 Nov 18:01",
+"source": "Mint",
+"region": "India",
+"headline": "Multibagger defence stock to buy: Experts see 35% gain on MSCI index rebalancing despite 55% YTD return | Target, SL"
+},
+{
+"time": "23 Nov 18:01",
+"source": "BusinessStandard",
+"region": "India",
+"headline": "Dalmia Bharat pares losses to trade flat after \u20b9700-cr buyback announcement"
+},
+{
+"time": "23 Nov 18:01",
+"source": "BusinessStandard",
+"region": "India",
+"headline": "Sterling and Wilson shares gain 7% on winning orders worth \u20b92,050 crore"
+},
+{
+"time": "23 Nov 18:01",
+"source": "GoogleNews",
+"region": "India",
+"headline": "Sensex sheds 1,484 points, Nifty drops below 25,400 amid heavy selling in banking, metal stocks - DD News"
+},
+{
+"time": "23 Nov 18:01",
+"source": "GoogleNews",
+"region": "India",
+"headline": "Stock market crash today: Investors lose over Rs 6 lakh crore as Sensex ends over 1,400 points down; top - The Times of India"
+},
+{
+"time": "23 Nov 18:01",
+"source": "BusinessLine",
+"region": "India",
+"headline": "RBI plans to tap broker apps to boost retail trading in government bonds, sources say"
+},
+{
+"time": "23 Nov 18:01",
+"source": "BusinessLine",
+"region": "India",
+"headline": "Nifty hits 9-month high as IT, Auto lead gains; metal stocks drag"
+},
+{
+"time": "23 Nov 18:01",
+"source": "BusinessLine",
+"region": "India",
+"headline": "Tata Steel dips 7% as APL Apollo plunge on \u20b928,000 cr deal; Hindalco under pressure"
+},
+{
+"time": "23 Nov 18:01",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "Stock Market Crash: Over \u20b95 lakh crore investor wealth wiped out as Nifty falls 435 points; Here\u2019s why"
+},
+{
+"time": "23 Nov 18:01",
+"source": "GoogleNews-World",
+"region": "World",
+"headline": "Trump Urges Nvidia Board To Bring Back Jensen Huang Amid New Chinese Spy Agency Revelations - Forbes"
+},
+{
+"time": "23 Nov 18:01",
+"source": "Yahoo-S&P500",
+"region": "World",
+"headline": "Gold\u2019s $3,500 test: Who\u2019s behind the selling spree?"
+},
+{
+"time": "23 Nov 18:01",
+"source": "MarketWatch",
+"region": "World",
+"headline": "Trump wants Jensen Huang back at Nvidia. What will it take to stop the tech selloff?"
+},
+{
+"time": "23 Nov 18:01",
+"source": "MarketWatch",
+"region": "World",
+"headline": "A 66-year-old nurse faces retirement with just $500 saved. Who\u2019s to blame?"
+},
+{
+"time": "23 Nov 18:01",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Energy bills will soar - here's how you can ease the pain"
+},
+{
+"time": "23 Nov 18:01",
+"source": "BBC-Business",
+"region": "World",
+"headline": "San Francisco is enjoying an AI boom, but worries about a crash are growing"
+},
+{
+"time": "23 Nov 18:01",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Hundreds of applications, no replies: Inside the job ghosting problem\u200c"
+},
+{
+"time": "23 Nov 18:01",
+"source": "NYT-Business",
+"region": "World",
+"headline": "Scott Bessent Calls on Nvidia to Provide Answers on Chip Sales to China"
+},
+{
+"time": "23 Nov 18:01",
+"source": "NYT-Business",
+"region": "World",
+"headline": "\u2018Hunger Games\u2019 Rebounds With $120 Million Opening for \u2018Sunrise on the Reaping\u2019 at Box Office"
+},
+{
+"time": "23 Nov 18:01",
+"source": "NYT-Business",
+"region": "World",
+"headline": "Procter & Gamble to Increase Factory Shifts Without Humans to Cut Costs"
+},
+{
+"time": "23 Nov 18:01",
+"source": "FT-Markets",
+"region": "World",
+"headline": "From rotation to contagion"
+},
+{
+"time": "23 Nov 18:01",
+"source": "FT-Markets",
+"region": "World",
+"headline": "Investors flip the switch on the AI trade"
+},
+{
+"time": "23 Nov 18:01",
+"source": "FT-Markets",
+"region": "World",
+"headline": "US ports face cyber attack onslaught as hackers target vital trade routes"
 }
 ]

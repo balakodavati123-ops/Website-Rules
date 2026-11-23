@@ -1,54 +1,92 @@
 {
- "updated_at": "2026-11-23T17:45:54+05:30",
- "scans": 685,
+ "updated_at": "2026-11-23T17:56:46+05:30",
+ "scans": 687,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "Moneycontrol": {
    "ok": true,
    "items": 15,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "Google News": {
    "ok": true,
-   "items": 8,
-   "at": "17:45:54"
+   "items": 11,
+   "at": "17:56:46"
   }
  },
  "signals": [
+  {
+   "id": "N175646-71",
+   "t": "17:56:46",
+   "ts": 1795436806.280269,
+   "pub": "17:54",
+   "lag_s": 107,
+   "symbol": "ZENITHEXPO",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "ZENITHEXPO: Disclosure under SEBI Takeover Regulations",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/team_sandeshc_23112026174633_Dis1.PDF",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N174638-70",
+   "t": "17:46:38",
+   "ts": 1795436198.377493,
+   "pub": "17:45",
+   "lag_s": 50,
+   "symbol": "MEDIASSIST",
+   "tone": "positive",
+   "score": 3,
+   "emotion": "Optimism",
+   "why": [
+    "buyback"
+   ],
+   "headline": "MEDIASSIST: Buyback",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/MEDIASSIST_23112026174239_MAHSSEIntimationLetterOfOffersd.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
   {
    "id": "N174554-69",
    "t": "17:45:54",
@@ -1788,10 +1826,10 @@
  ],
  "stats": {
   "last_hour": 6,
-  "positive": 4,
-  "negative": 2,
-  "today": 69,
-  "median_lag_min": 4.5,
+  "positive": 5,
+  "negative": 1,
+  "today": 71,
+  "median_lag_min": 3.9,
   "new_this_scan": 1
  }
 }

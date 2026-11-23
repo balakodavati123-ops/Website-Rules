@@ -1,8 +1,8 @@
 {
- "updated_at": "2026-11-23T15:31:50+05:30",
+ "updated_at": "2026-11-23T17:46:37+05:30",
  "today": {},
  "playbook": {
-  "trained_at": "2026-11-23 15:30",
+  "trained_at": "2026-11-23 17:44",
   "data": {
    "daily_from": "2015-06-01",
    "daily_to": "2026-11-20",
@@ -206,6 +206,97 @@
   "rules_tried": 2592,
   "rules_passing_train": 0,
   "runners_up": [],
+  "ceo_rule": {
+   "every_day": {
+    "n": 1205,
+    "avg_rs": -1424.6,
+    "total_rs": -1716702,
+    "win_rate": 16.4,
+    "pf": 0.24,
+    "lcb_rs": -1496.5,
+    "max_dd_rs": -1719996
+   },
+   "near_expiry_0_4_days": {
+    "n": 907,
+    "avg_rs": -1443.3,
+    "total_rs": -1309087,
+    "win_rate": 16.3,
+    "pf": 0.26,
+    "lcb_rs": -1531.2,
+    "max_dd_rs": -1312321
+   },
+   "train": {
+    "n": 590,
+    "avg_rs": -1339.6,
+    "total_rs": -790385,
+    "win_rate": 16.3,
+    "pf": 0.28,
+    "lcb_rs": -1449.7,
+    "max_dd_rs": -790385
+   },
+   "test": {
+    "n": 317,
+    "avg_rs": -1636.3,
+    "total_rs": -518701,
+    "win_rate": 16.4,
+    "pf": 0.22,
+    "lcb_rs": -1781.7,
+    "max_dd_rs": -536091
+   },
+   "by_year": {
+    "2022": {
+     "n": 197,
+     "avg_rs": -1703.1,
+     "total_rs": -335503,
+     "win_rate": 12.2,
+     "pf": 0.19,
+     "lcb_rs": -1879.3,
+     "max_dd_rs": -338878
+    },
+    "2023": {
+     "n": 195,
+     "avg_rs": -1033.6,
+     "total_rs": -201552,
+     "win_rate": 16.4,
+     "pf": 0.28,
+     "lcb_rs": -1186.5,
+     "max_dd_rs": -212218
+    },
+    "2024": {
+     "n": 198,
+     "avg_rs": -1279.4,
+     "total_rs": -253330,
+     "win_rate": 20.2,
+     "pf": 0.37,
+     "lcb_rs": -1509.6,
+     "max_dd_rs": -253330
+    },
+    "2025": {
+     "n": 184,
+     "avg_rs": -1639.8,
+     "total_rs": -301719,
+     "win_rate": 14.7,
+     "pf": 0.18,
+     "lcb_rs": -1823.2,
+     "max_dd_rs": -315874
+    },
+    "2026": {
+     "n": 133,
+     "avg_rs": -1631.5,
+     "total_rs": -216983,
+     "win_rate": 18.8,
+     "pf": 0.27,
+     "lcb_rs": -1867.5,
+     "max_dd_rs": -220463
+    }
+   },
+   "exits": {
+    "stop": 281,
+    "trailing stop": 62,
+    "time": 564
+   },
+   "note": "replayed on 907 near-expiry days since 2022 with model prices from India VIX, this exact rule won 16.3% of days and averaged Rs -1443.3 a day (total Rs -1309087); the desk's live record decides from here."
+  },
   "iv_mult": {
    "0": 0.85,
    "1": 0.85,
