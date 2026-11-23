@@ -1,6 +1,79 @@
 {
- "updated_at": "2026-11-23T06:31:31+05:30",
- "skipped": [],
+ "updated_at": "2026-11-23T11:23:17+05:30",
+ "skipped": [
+  {
+   "desk": "COMMODITY",
+   "what": "Silver 1 kg",
+   "margin": 30352,
+   "room": 18691,
+   "why": "needs more margin than the commodities limit has free",
+   "at": "11:23:17",
+   "day": "2026-11-23"
+  },
+  {
+   "desk": "FNO",
+   "what": "monthly BANKNIFTY credit spread",
+   "margin": 46607,
+   "room": 5154,
+   "why": "needs more margin than the F&O limit has free",
+   "at": "11:23:17",
+   "day": "2026-11-23"
+  },
+  {
+   "desk": "FNO",
+   "what": "NIFTY iron condor (daily)",
+   "margin": 144925,
+   "room": 5154,
+   "why": "needs more margin than the F&O limit has free",
+   "at": "11:23:17",
+   "day": "2026-11-23"
+  },
+  {
+   "desk": "FNO",
+   "what": "NIFTY long straddle (daily)",
+   "margin": 9799,
+   "room": 5154,
+   "why": "needs more margin than the F&O limit has free",
+   "at": "11:23:17",
+   "day": "2026-11-23"
+  },
+  {
+   "desk": "FNO",
+   "what": "NIFTY debit spread (daily)",
+   "margin": 69571,
+   "room": 5154,
+   "why": "needs more margin than the F&O limit has free",
+   "at": "11:23:17",
+   "day": "2026-11-23"
+  },
+  {
+   "desk": "COMMODITY",
+   "what": "Crude oil mini",
+   "margin": 24057,
+   "room": 18627,
+   "why": "needs more margin than the commodities limit has free",
+   "at": "11:22:31",
+   "day": "2026-11-23"
+  },
+  {
+   "desk": "FNO",
+   "what": "NIFTY credit spread (daily)",
+   "margin": 74676,
+   "room": 5154,
+   "why": "needs more margin than the F&O limit has free",
+   "at": "11:18:54",
+   "day": "2026-11-23"
+  },
+  {
+   "desk": "FNO",
+   "what": "NIFTY long breakout (daily)",
+   "margin": 6864,
+   "room": 5154,
+   "why": "needs more margin than the F&O limit has free",
+   "at": "10:31:00",
+   "day": "2026-11-23"
+  }
+ ],
  "reference": [
   {
    "name": "Crude oil (100 barrels)",

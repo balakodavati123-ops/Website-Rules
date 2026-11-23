@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T06:30:08+05:30",
+ "updated_at": "2026-11-23T11:22:11+05:30",
  "day": "2026-11-18",
  "from": "2026-11-11",
  "participants": [
@@ -144,136 +144,136 @@
  ],
  "chains": {
   "NIFTY": {
-   "pcr": 1.69,
-   "call_oi": 155661220,
-   "put_oi": 262482740,
+   "pcr": 0.77,
+   "call_oi": 347142445,
+   "put_oi": 268420360,
    "call_wall": 26000.0,
-   "put_wall": 24500.0,
-   "max_pain": 25000.0,
+   "put_wall": 25500.0,
+   "max_pain": 25750.0,
    "call_walls": [
     [
      26000.0,
-     14314430
-    ],
-    [
-     26500.0,
-     9866935
-    ],
-    [
-     26200.0,
-     7771465
-    ]
-   ],
-   "put_walls": [
-    [
-     24500.0,
-     17753320
-    ],
-    [
-     25000.0,
-     17249700
-    ],
-    [
-     25500.0,
-     14694680
-    ]
-   ],
-   "new_calls": [
-    [
-     26200.0,
-     3204045
-    ],
-    [
-     26100.0,
-     2628600
+     35883770
     ],
     [
      25800.0,
-     2152215
+     20166250
+    ],
+    [
+     25700.0,
+     19159075
+    ]
+   ],
+   "put_walls": [
+    [
+     25500.0,
+     21762260
+    ],
+    [
+     25000.0,
+     18447260
+    ],
+    [
+     25400.0,
+     15988310
+    ]
+   ],
+   "new_calls": [
+    [
+     26000.0,
+     22162855
+    ],
+    [
+     25700.0,
+     14553890
+    ],
+    [
+     25800.0,
+     13894270
     ]
    ],
    "new_puts": [
     [
+     25600.0,
+     7947745
+    ],
+    [
      25500.0,
-     7480070
+     7901140
     ],
     [
-     25700.0,
-     6404320
-    ],
-    [
-     25650.0,
-     6273930
+     25550.0,
+     7322640
     ]
    ],
    "expiry": "2026-11-23",
-   "spot": 25800.6
+   "spot": 25604.85
   },
   "BANKNIFTY": {
-   "pcr": 1.39,
-   "call_oi": 19819020,
-   "put_oi": 27506880,
-   "call_wall": 66000.0,
+   "pcr": 0.86,
+   "call_oi": 35413380,
+   "put_oi": 30445200,
+   "call_wall": 65000.0,
    "put_wall": 63000.0,
-   "max_pain": 61000.0,
+   "max_pain": 63300.0,
    "call_walls": [
     [
-     66000.0,
-     1073370
-    ],
-    [
      65000.0,
-     1067760
+     2448600
     ],
     [
-     64500.0,
-     957870
+     66000.0,
+     1986600
+    ],
+    [
+     64000.0,
+     1747170
     ]
    ],
    "put_walls": [
     [
      63000.0,
-     1539540
+     1978860
     ],
     [
      62000.0,
-     1167630
+     1641810
     ],
     [
-     61000.0,
-     1126260
+     62500.0,
+     1233540
     ]
    ],
    "new_calls": [
     [
+     65000.0,
+     1428180
+    ],
+    [
+     64000.0,
+     1229460
+    ],
+    [
      66000.0,
-     635490
-    ],
-    [
-     64500.0,
-     554520
-    ],
-    [
-     67000.0,
-     402480
+     946890
     ]
    ],
    "new_puts": [
     [
+     62000.0,
+     544920
+    ],
+    [
+     63400.0,
+     499800
+    ],
+    [
      63000.0,
-     902040
-    ],
-    [
-     64000.0,
-     735090
-    ],
-    [
-     64500.0,
-     570090
+     485130
     ]
    ],
    "expiry": "2026-11-23",
-   "spot": 64635.2
+   "spot": 63486.35
   }
  },
  "explain": [
@@ -309,7 +309,7 @@
   "Domestic institutions hold +114,129 net puts and +22,914 futures: the puts are insurance on the funds' share portfolios, so they are not a forecast of a fall.",
   "Proprietary desks and market makers are close to flat (-11,915 futures, -15,838 puts, +24,273 calls). Their put buying is mostly one leg of a hedged trade.",
   "Retail and other clients are the largest put sellers (-472,490 net puts): the crowd is betting the market will not fall, which is why a sharp fall hurts them most.",
-  "NIFTY 2026-11-23: put-to-call ratio 1.69; most call open interest at 26,000 (a ceiling), most put open interest at 24,500 (a floor); max pain 25,000.",
-  "BANKNIFTY 2026-11-23: put-to-call ratio 1.39; most call open interest at 66,000 (a ceiling), most put open interest at 63,000 (a floor); max pain 61,000."
+  "NIFTY 2026-11-23: put-to-call ratio 0.77; most call open interest at 26,000 (a ceiling), most put open interest at 25,500 (a floor); max pain 25,750.",
+  "BANKNIFTY 2026-11-23: put-to-call ratio 0.86; most call open interest at 65,000 (a ceiling), most put open interest at 63,000 (a floor); max pain 63,300."
  ]
 }

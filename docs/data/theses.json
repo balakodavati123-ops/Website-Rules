@@ -1,4 +1,723 @@
 {
+ "E261123-9": {
+  "horizon": "intraday",
+  "headline": "OAL short",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
+  ],
+  "data": [
+   "Entry 488.70, stop 488.70, target 476.97; 25 shares worth \u20b912,218.",
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Gap and go: opened -4.2% lower and is holding below the open and VWAP, near the day low. Stop 494.56 (1.20%), target 476.97 (2R), stop moves to entry after a 1R gain, out by 15:10."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b90",
+    "0.00% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9293",
+    ""
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b912,218."
+ },
+ "E261123-7": {
+  "horizon": "intraday",
+  "headline": "GMMPFAUDLR long",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
+  ],
+  "data": [
+   "Entry 1,214.30, stop 1,199.73, target 1,243.44; 10 shares worth \u20b912,143.",
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Gap and go: opened +2.6% higher and is holding above the open and VWAP, near the day high. Stop 1,199.73 (1.20%), target 1,243.44 (2R), stop moves to entry after a 1R gain, out by 15:10."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9146",
+    "0.12% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9291",
+    "2.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b912,143."
+ },
+ "E261123-8": {
+  "horizon": "intraday",
+  "headline": "TCS long",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
+  ],
+  "data": [
+   "Entry 2,484.90, stop 2,459.11, target 2,536.47; 5 shares worth \u20b912,424.",
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Gap and go: opened +1.8% higher and is holding above the open and VWAP, near the day high. Stop 2,459.11 (1.04%), target 2,536.47 (2R), stop moves to entry after a 1R gain, out by 15:10."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9129",
+    "0.11% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9258",
+    "2.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b912,424."
+ },
+ "F261123-74": {
+  "horizon": "daily",
+  "headline": "Buy 25,600 PE \u00b7 NIFTY 2026-11-23",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%).",
+   "Go Digit gets IFSCA approval to set up insurance office in GIFT City (CNBC-TV18)",
+   "Atul's US subsidiary faces probe over alleged evasion of anti-dumping duties on 2,4-D imports (CNBC-TV18)",
+   "Paytm to invest up to \u20b9200 crore in Funding Societies' subsidiaries, acquires 19% in CardUp (CNBC-TV18)",
+   "6 companies filed results or hold board meetings today."
+  ],
+  "data": [
+   "NIFTY 25,621, -0.69% on the previous close. India VIX 18.2.",
+   "Implied volatility at the money 35.5% a year. Over 0 days to 2026-11-23 that prices a one-standard-deviation move of about \u00b1238 points (\u00b10.9%), so the market gives roughly a 68% chance of finishing between 25,384 and 25,859.",
+   "Option positioning: put-to-call ratio 0.84, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,500 (a floor), max pain 25,700.",
+   "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+   "Our forecast for today: Sideways (score +0.10); likely range 25,520 to 26,098."
+  ],
+  "strategy": "Buy a single at-the-money call (up day) or put (down day).",
+  "why": [
+   "Used when the index has already moved 0.5% or more: a continuing trend pays quickly because the option gains from direction and from rising volatility.",
+   "Direction: today's forecast leans sideways (World tone is weak: US and Asia weighted average -3.29% at the 20/11 close; Brent crude 89.78 (-3.01%).; Nifty 50 closed at 25,801, +5.8% from its 20-day average (24,396) and +2.6% over five sessions: the trend is up.)."
+  ],
+  "numbers": [
+   [
+    "Net debit",
+    "74.5 points = \u20b94,846 per lot",
+    "What you receive (or pay) up front"
+   ],
+   [
+    "Most you can make",
+    "\u20b9493,378",
+    "At expiry, if everything goes right"
+   ],
+   [
+    "Most you can lose",
+    "\u20b94,846",
+    "At expiry, if everything goes wrong (fixed by the bought options)"
+   ],
+   [
+    "Break-even at expiry",
+    "25,525",
+    "Where the structure stops losing money"
+   ],
+   [
+    "Chance of profit at expiry",
+    "35%",
+    "From the options market's own implied volatility; not our edge, the market's odds"
+   ],
+   [
+    "Expected move to expiry",
+    "\u00b1238 points",
+    "0 days at 35.5% implied volatility"
+   ],
+   [
+    "Reward for the risk",
+    "101.82 to 1",
+    "Best case divided by worst case"
+   ],
+   [
+    "Margin the broker asks",
+    "\u20b94,830",
+    "4% of the account (Upstox margin calculator)"
+   ],
+   [
+    "Our exit levels",
+    "Take profit at \u20b92,423, cut at \u20b91,454",
+    "Rupees on one lot, before the exit rule below"
+   ]
+  ],
+  "risk": "Take profit at 50% of the debit, cut at 30%, and be flat by 15:15 whatever happens. Fails when: The move stalls. The premium is the most you can lose.",
+  "viability": "One lot of 65 needs \u20b94,830 of margin, checked with the broker's calculator when the trade was booked."
+ },
+ "K261123-73": {
+  "horizon": "scalp",
+  "headline": "DIVISLAB short",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%."
+  ],
+  "data": [
+   "DIVISLAB at 11,283.74; 1-minute bars: close 11,295.00, VWAP 11,312.96, 9-bar average 11,307.38, 21-bar average 11,322.92, volume 1.3 times the 20-bar average.",
+   "Size 3 shares = Rs 33,851 of stock on about Rs 6,770 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+  ],
+  "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+  "why": [
+   "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+   "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "11,283.74",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "11,319.45",
+    "Costs about \u20b9107"
+   ],
+   [
+    "Target (exit if right)",
+    "11,230.20",
+    "Earns about \u20b9161"
+   ],
+   [
+    "Reward for the risk",
+    "1.5 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "40% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b96,770",
+    "6% of the account"
+   ],
+   [
+    "Round-trip charges",
+    "about Rs 36",
+    "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+   ],
+   [
+    "Target against charges",
+    "4.5 times",
+    "The desk needs at least 3 times"
+   ]
+  ],
+  "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+  "viability": "Needs \u20b96,770 to hold."
+ },
+ "K261123-72": {
+  "horizon": "scalp",
+  "headline": "ITC short",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%."
+  ],
+  "data": [
+   "ITC at 299.14; 1-minute bars: close 299.25, VWAP 300.45, 9-bar average 299.39, 21-bar average 299.56, volume 1.2 times the 20-bar average.",
+   "Size 133 shares = Rs 39,786 of stock on about Rs 7,957 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+  ],
+  "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+  "why": [
+   "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+   "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "299.14",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "300.25",
+    "Costs about \u20b9148"
+   ],
+   [
+    "Target (exit if right)",
+    "297.50",
+    "Earns about \u20b9218"
+   ],
+   [
+    "Reward for the risk",
+    "1.5 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "40% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b97,957",
+    "7% of the account"
+   ],
+   [
+    "Round-trip charges",
+    "about Rs 38",
+    "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+   ],
+   [
+    "Target against charges",
+    "5.8 times",
+    "The desk needs at least 3 times"
+   ]
+  ],
+  "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+  "viability": "Needs \u20b97,957 to hold."
+ },
+ "E261123-6": {
+  "horizon": "intraday",
+  "headline": "TECHNOCRAF long",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
+  ],
+  "data": [
+   "Entry 513.55, stop 513.55, target 519.71; 48 shares worth \u20b924,650.",
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Gap and go: opened +2.1% higher and is holding above the open and VWAP, near the day high. Stop 510.47 (0.60%), target 519.71 (2R), stop moves to entry after a 1R gain, out by 15:10."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b90",
+    "0.00% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9296",
+    ""
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b924,650."
+ },
+ "E261123-5": {
+  "horizon": "intraday",
+  "headline": "SUDEEPPHRM long",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
+  ],
+  "data": [
+   "Entry 1,247.70, stop 1,234.35, target 1,274.40; 11 shares worth \u20b913,725.",
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Gap and go: opened +2.4% higher and is holding above the open and VWAP, near the day high. Stop 1,234.35 (1.07%), target 1,274.40 (2R), stop moves to entry after a 1R gain, out by 15:10."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9147",
+    "0.12% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9294",
+    "2.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b913,725."
+ },
+ "K261123-71": {
+  "horizon": "scalp",
+  "headline": "GOLDBEES long",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%."
+  ],
+  "data": [
+   "GOLDBEES at 103.00; 1-minute bars: close 103.02, VWAP 102.79, 9-bar average 102.94, 21-bar average 102.89, volume 2.0 times the 20-bar average.",
+   "Size 388 shares = Rs 39,964 of stock on about Rs 7,993 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+  ],
+  "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+  "why": [
+   "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+   "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "103.00",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "102.80",
+    "Costs about \u20b978"
+   ],
+   [
+    "Target (exit if right)",
+    "103.30",
+    "Earns about \u20b9116"
+   ],
+   [
+    "Reward for the risk",
+    "1.5 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "40% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b97,993",
+    "7% of the account"
+   ],
+   [
+    "Round-trip charges",
+    "about Rs 38",
+    "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+   ],
+   [
+    "Target against charges",
+    "3.1 times",
+    "The desk needs at least 3 times"
+   ]
+  ],
+  "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+  "viability": "Needs \u20b97,993 to hold."
+ },
+ "F261123-70": {
+  "horizon": "weekly",
+  "headline": "Sell 25,000 PE, Buy 24,800 PE \u00b7 NIFTY 2026-12-01",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%).",
+   "Go Digit gets IFSCA approval to set up insurance office in GIFT City (CNBC-TV18)",
+   "Atul's US subsidiary faces probe over alleged evasion of anti-dumping duties on 2,4-D imports (CNBC-TV18)",
+   "Paytm to invest up to \u20b9200 crore in Funding Societies' subsidiaries, acquires 19% in CardUp (CNBC-TV18)",
+   "6 companies filed results or hold board meetings today."
+  ],
+  "data": [
+   "NIFTY 25,686, -0.45% on the previous close. India VIX 18.2.",
+   "Implied volatility at the money 18.2% a year. Over 8 days to 2026-12-01 that prices a one-standard-deviation move of about \u00b1692 points (\u00b12.7%), so the market gives roughly a 68% chance of finishing between 24,994 and 26,377.",
+   "Realised volatility over the last 10 sessions is 10.1% against 18.2% implied: options are richer than the index has actually moved.",
+   "Option positioning: put-to-call ratio 0.92, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,000 (a floor), max pain 25,700.",
+   "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+   "Our forecast for today: Sideways (score +0.10); likely range 25,520 to 26,098."
+  ],
+  "strategy": "Sell an out-of-the-money option about one standard deviation away and buy a farther one, held toward the weekly expiry.",
+  "why": [
+   "Regime: options are rich (implied 18.2% against 10.1% realised).",
+   "Used when options are priced richer than the index has actually been moving (implied volatility above realised): the seller is paid for that gap, and each day that passes without a big move is profit.",
+   "The short strike 25,000 is 686 points (2.7%) from the index, 1.0 times the expected move to expiry, inside the expected move, which is why the credit is larger and the risk higher.",
+   "It sits at or beyond the heaviest open-interest strike (25,000), where option writers have the most at stake.",
+   "Direction: today's forecast leans sideways (World tone is weak: US and Asia weighted average -3.29% at the 20/11 close; Brent crude 89.78 (-3.01%).; Nifty 50 closed at 25,801, +5.8% from its 20-day average (24,396) and +2.6% over five sessions: the trend is up.)."
+  ],
+  "numbers": [
+   [
+    "Net credit",
+    "23.3 points = \u20b91,514 per lot",
+    "What you receive (or pay) up front"
+   ],
+   [
+    "Most you can make",
+    "\u20b91,514",
+    "At expiry, if everything goes right"
+   ],
+   [
+    "Most you can lose",
+    "\u20b911,486",
+    "At expiry, if everything goes wrong (fixed by the bought options)"
+   ],
+   [
+    "Break-even at expiry",
+    "24,977",
+    "Where the structure stops losing money"
+   ],
+   [
+    "Chance of profit at expiry",
+    "85%",
+    "From the options market's own implied volatility; not our edge, the market's odds"
+   ],
+   [
+    "Expected move to expiry",
+    "\u00b1692 points",
+    "8 days at 18.2% implied volatility"
+   ],
+   [
+    "Reward for the risk",
+    "0.13 to 1",
+    "Best case divided by worst case"
+   ],
+   [
+    "Margin the broker asks",
+    "\u20b944,846",
+    "38% of the account (Upstox margin calculator)"
+   ],
+   [
+    "Our exit levels",
+    "Take profit at \u20b91,060, cut at \u20b91,514",
+    "Rupees on one lot, before the exit rule below"
+   ]
+  ],
+  "risk": "Take profit at 70% of the credit, cut at 100% of it, otherwise hold: it settles at the index close on expiry day. Fails when: A move through the short strike before expiry. Loss is capped by the bought option.",
+  "viability": "One lot of 65 needs \u20b944,846 of margin, checked with the broker's calculator when the trade was booked."
+ },
+ "E261123-4": {
+  "horizon": "intraday",
+  "headline": "VOLTAS long",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
+  ],
+  "data": [
+   "Entry 1,244.70, stop 1,232.25, target 1,269.59; 12 shares worth \u20b914,936.",
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: News-led: headline: Voltas signs JV agreement with Atomberg for room AC compressors, to acquire 50% stake; price +0.8% near the day high. Stop 1,232.25 (1.00%), target 1,269.59 (2R), stop moves to entry after a 1R gain, out by 15:10."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9149",
+    "0.12% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9299",
+    "2.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b914,936."
+ },
+ "E261123-1": {
+  "horizon": "intraday",
+  "headline": "SGMART long",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
+  ],
+  "data": [
+   "Entry 1,183.00, stop 1,183.00, target 1,202.05; 15 shares worth \u20b917,745.",
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Gap and go: opened +4.8% higher and is holding above the open and VWAP, near the day high. Stop 1,173.48 (0.81%), target 1,202.05 (2R), stop moves to entry after a 1R gain, out by 15:10."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b90",
+    "0.00% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9286",
+    ""
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b917,745."
+ },
+ "E261123-3": {
+  "horizon": "intraday",
+  "headline": "JLHL short",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
+  ],
+  "data": [
+   "Entry 303.80, stop 303.80, target 298.03; 51 shares worth \u20b915,494.",
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Gap and go: opened -1.5% lower and is holding below the open and VWAP, near the day low. Stop 306.69 (0.95%), target 298.03 (2R), stop moves to entry after a 1R gain, out by 15:10."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b90",
+    "0.00% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9294",
+    ""
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b915,494."
+ },
+ "E261123-2": {
+  "horizon": "intraday",
+  "headline": "E2E short",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
+  ],
+  "data": [
+   "Entry 454.30, stop 457.92, target 447.06; 41 shares worth \u20b918,626.",
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
+  ],
+  "strategy": "",
+  "why": [
+   "Signal: Gap and go: opened -3.3% lower and is holding below the open and VWAP, near the day low. Stop 457.92 (0.80%), target 447.06 (2R), stop moves to entry after a 1R gain, out by 15:10."
+  ],
+  "numbers": [
+   [
+    "Risk if the stop is hit",
+    "\u20b9148",
+    "0.12% of the account"
+   ],
+   [
+    "Reward at the target",
+    "\u20b9297",
+    "2.0 to 1 against the risk"
+   ]
+  ],
+  "risk": "Exit at the stop, the target or the time stop in the rule.",
+  "viability": "Paid for in cash: \u20b918,626."
+ },
+ "M261123-69": {
+  "horizon": "intraday",
+  "headline": "Natural gas mini short",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
+  ],
+  "data": [
+   "Natural gas mini (NATGASMINI FUT 28 DEC 26) at 335.90, -1.18% on the previous close; day range 334.10 to 340.00, price is 0.54% from the day low.",
+   "Lot: 250 unit(s) \u00d7 1 lot(s); contract value \u20b983,975."
+  ],
+  "strategy": "Buy a dip inside an up day or sell a bounce inside a down day.",
+  "why": [
+   "Used after a trend day pulls back 0.4% to 1.2%: you join the trend at a better price than the chasers.",
+   "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|578250)."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "335.90",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "337.58",
+    "Costs about \u20b9420"
+   ],
+   [
+    "Target (exit if right)",
+    "332.88",
+    "Earns about \u20b9755"
+   ],
+   [
+    "Reward for the risk",
+    "1.8 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "36% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b912,550",
+    "11% of the account"
+   ]
+  ],
+  "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: The pullback becomes a reversal. The 0.5% stop caps the loss.",
+  "viability": "Needs \u20b912,550 to hold (Upstox margin calculator)."
+ },
+ "M261123-68": {
+  "horizon": "intraday",
+  "headline": "Gold 1 g long",
+  "news": [
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
+  ],
+  "data": [
+   "Gold 1 g (GOLDPETAL FUT 30 NOV 26) at 12,499.00, +1.79% on the previous close; day range 12,375.00 to 12,562.00, price is 0.50% from the day high.",
+   "Lot: 1 unit(s) \u00d7 4 lot(s); contract value \u20b949,996.",
+   "Global reference: Gold 3604.1 (+2.52% at the 11-22 close)."
+  ],
+  "strategy": "Buy a dip inside an up day or sell a bounce inside a down day.",
+  "why": [
+   "Used after a trend day pulls back 0.4% to 1.2%: you join the trend at a better price than the chasers.",
+   "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|574841)."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "12,499.00",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "12,436.50",
+    "Costs about \u20b9250"
+   ],
+   [
+    "Target (exit if right)",
+    "12,611.49",
+    "Earns about \u20b9450"
+   ],
+   [
+    "Reward for the risk",
+    "1.8 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "36% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b95,277",
+    "4% of the account"
+   ]
+  ],
+  "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: The pullback becomes a reversal. The 0.5% stop caps the loss.",
+  "viability": "Needs \u20b95,277 to hold (Upstox margin calculator)."
+ },
  "C261121-67": {
   "horizon": "intraday",
   "headline": "ADA long",
@@ -1986,13 +2705,13 @@
   "horizon": "swing",
   "headline": "HAL long",
   "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
   ],
   "data": [
    "Entry 4,843.00, stop 4,600.85; 1 shares worth \u20b94,843.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
   ],
   "strategy": "",
   "why": [
@@ -2012,13 +2731,13 @@
   "horizon": "swing",
   "headline": "HCLTECH long",
   "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
   ],
   "data": [
    "Entry 1,380.70, stop 1,311.66; 2 shares worth \u20b92,761.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
   ],
   "strategy": "",
   "why": [
@@ -2028,7 +2747,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9138",
-    "0.12% of the account"
+    "0.11% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -2038,13 +2757,13 @@
   "horizon": "swing",
   "headline": "KALYANKJIL long",
   "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
   ],
   "data": [
    "Entry 718.00, stop 689.28, target 861.60; 11 shares worth \u20b97,898.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
   ],
   "strategy": "",
   "why": [
@@ -2054,7 +2773,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9316",
-    "0.27% of the account"
+    "0.26% of the account"
    ],
    [
     "Reward at the target",
@@ -2069,13 +2788,13 @@
   "horizon": "swing",
   "headline": "PAYTM long",
   "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
   ],
   "data": [
    "Entry 1,920.00, stop 1,843.20, target 2,304.00; 2 shares worth \u20b93,840.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
   ],
   "strategy": "",
   "why": [
@@ -2100,13 +2819,13 @@
   "horizon": "swing",
   "headline": "LAURUSLABS long",
   "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
   ],
   "data": [
    "Entry 2,400.00, stop 2,304.00, target 2,880.00; 1 shares worth \u20b92,400.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
   ],
   "strategy": "",
   "why": [
@@ -2131,13 +2850,13 @@
   "horizon": "swing",
   "headline": "SONACOMS long",
   "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
   ],
   "data": [
    "Entry 925.00, stop 888.00, target 1,110.00; 4 shares worth \u20b93,700.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
   ],
   "strategy": "",
   "why": [
@@ -2162,13 +2881,13 @@
   "horizon": "swing",
   "headline": "PETRONET long",
   "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
   ],
   "data": [
    "Entry 332.00, stop 315.40, target 398.40; 11 shares worth \u20b93,652.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
   ],
   "strategy": "",
   "why": [
@@ -2193,13 +2912,13 @@
   "horizon": "swing",
   "headline": "PNB long",
   "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
   ],
   "data": [
    "Entry 141.70, stop 134.62; 26 shares worth \u20b93,684.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
   ],
   "strategy": "",
   "why": [
@@ -2219,13 +2938,13 @@
   "horizon": "swing",
   "headline": "PETRONET long",
   "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
   ],
   "data": [
    "Entry 332.00, stop 315.40; 11 shares worth \u20b93,652.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
   ],
   "strategy": "",
   "why": [
@@ -2245,13 +2964,13 @@
   "horizon": "swing",
   "headline": "SONACOMS long",
   "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
   ],
   "data": [
    "Entry 925.00, stop 878.75; 3 shares worth \u20b92,775.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
   ],
   "strategy": "",
   "why": [
@@ -2261,7 +2980,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9139",
-    "0.12% of the account"
+    "0.11% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -2271,13 +2990,13 @@
   "horizon": "swing",
   "headline": "MAHABANK long",
   "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
   ],
   "data": [
    "Entry 91.30, stop 86.73; 41 shares worth \u20b93,743.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
   ],
   "strategy": "",
   "why": [
@@ -2287,7 +3006,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9187",
-    "0.16% of the account"
+    "0.15% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -2297,13 +3016,13 @@
   "horizon": "signal",
   "headline": "PNB long",
   "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
   ],
   "data": [
    "Entry 141.70, stop 136.08; 56 shares worth \u20b97,935.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
   ],
   "strategy": "",
   "why": [
@@ -2323,13 +3042,13 @@
   "horizon": "swing",
   "headline": "PNB long",
   "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
   ],
   "data": [
    "Entry 138.70, stop 131.76, target 166.44; 13 shares worth \u20b91,803.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
   ],
   "strategy": "",
   "why": [
@@ -2339,7 +3058,7 @@
    [
     "Risk if the stop is hit",
     "\u20b990",
-    "0.08% of the account"
+    "0.07% of the account"
    ],
    [
     "Reward at the target",
@@ -2354,13 +3073,13 @@
   "horizon": "swing",
   "headline": "GAIL long",
   "news": [
-   "US markets averaged -2.15% at the 19/11 close.",
-   "Asia averaged -3.26%.",
-   "Brent crude 89.79 (-2.35%)."
+   "US markets averaged -3.64% at the 20/11 close.",
+   "Asia averaged -2.77%.",
+   "Brent crude 89.78 (-3.01%)."
   ],
   "data": [
    "Entry 188.99, stop 179.54, target 226.79; 9 shares worth \u20b91,701.",
-   "Market tone this morning: Weak. US markets averaged -2.15% at the 19/11 close. Asia averaged -3.26%."
+   "Market tone this morning: Weak. US markets averaged -3.64% at the 20/11 close. Asia averaged -2.77%."
   ],
   "strategy": "",
   "why": [

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T06:09:51+05:30",
+ "updated_at": "2026-11-23T11:17:11+05:30",
  "ipos": [
   {
    "name": "Mahanadi Coalfields Limited",
@@ -20,13 +20,19 @@
    "ofs_cr": 9000.97,
    "subscription": {
     "qib": 1.37,
-    "nii": 0.18,
-    "retail": 0.24,
-    "total": 0.48,
-    "as_of": "20-Nov-2026 17:03:00"
+    "nii": 0.28,
+    "retail": 0.32,
+    "total": 0.55,
+    "as_of": "23-Nov-2026 11:15:00"
    },
    "drhp_url": null,
    "news": [
+    {
+     "title": "Mahanadi Coalfields IPO GMP today, subscription status so far, allotment date and other details",
+     "source": "India TV News",
+     "link": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPc183c01aZWNvTjZDLXJzX2JYcmRhVUxzbjVEWmFhYVFDdkVJbmI1UEpSTDVKaGRmeEdwN1dmTUZYSkc4UjNwci1xVXpKRUVqNVBrOGItQWRYWFNkeDc1NGU1QTRRNV9uZ2RoVkpKZV9idjdQVTFoYmkyUnVJSmoxQkM1dThYcHZ3YnNMblp6WjdtdG9NU2lkRHlUM1Etem9hdGFUVUN0elFoZnFMU3F4ZzNkaXp2OExaLWYyQUs4LW5ReTZwYUJFZ3BFYTE1eGt5OVA2eWN1ODhJaGxkN1A2N2RtT1otSktwNlVZMF9PUXRVbUZ1SzVJcGJ3djJZaEdnYlczLUI1V2RrRUNQV0HSAZMCQVVfeXFMTWFZcXpOelVqRXdmX1NWd0JVOWM3TFhReF9YYkVibG41Mk9DWk9YQ1U3U3UwbGtIRzBiTVN0SGlEN3hRLUQtQWFLUnRHaDJXSmhwY2JLN2w5dmk5ZTkzOUVYcVFVMC1sUGhZaDk0UzhsQ0phUzhNMmJnc2lpTnh3WGVCVmZSU3hVZGFIVnNyVU1XUV85YUF4OTJ4MTdYQnVUN2ZoMFNxcVo3SjN6U3NucXZRWnR6V1daamRSUHphV29ubXVTUXJfbjI2ZzNQQmc4cnR2ZWNwRVVpUmlmMXFWMWZXa1JGcnI4YWUxZ1lyRzBCVjdLLWtHZzRkR2dfRkN5YUFwUzZuWTFpMko5UHJJRzlnTHc?oc=5",
+     "time": "2026-11-23T03:25:16Z"
+    },
     {
      "title": "Mahanadi Coalfields IPO: How much is the GMP, subscription status and price band as of November 22?",
      "source": "ET Now",
@@ -50,12 +56,6 @@
      "source": "Livemint",
      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOOGVoY1E5Ym93Q25KallxWHpBMG5fempkZ2IyNjBTVlNESUs2Y3NNQ3ZTNmN1bzRMLUpPam1lYlBxMzhHQW5pWGNsRWFzRDdHRE1SM2psZjlncEx3QW1YR3VVZjFsVWFmcXJ4eU9fZWNtSHFaMy1UN1Nqd3RqXzM2Ym9sLUU2bHM2VkJsQ3JxaW9tdFZZMkhHVy1CV3ZfUThwNkU5RUh3LW3SAa4BQVVfeXFMTzlQUUtDVC1wSEhVWmpHMUVqYjFlNlEyUno1VXVwRncxMXRzVnFDb0lSN2QyRjEtaFlIV2c4Vk5uSUgyeGxJUERrdkRESXRBLVNmMDVUZTVWQmp5SWJDYnJ6WFFON1NNNTQ3WXdRcDIwSHlSMFVidVdwUzVkMDZtRl9tc2JEU1JIcHFFcFpraFZxb2E2V0J2d0tvSlZBRUF0QUs5OGVMdXlyWnU5VHRR?oc=5",
      "time": "2026-11-22T07:11:12Z"
-    },
-    {
-     "title": "Mahanadi Coalfields IPO: A Dividend Play",
-     "source": "BusinessLine",
-     "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPbldVaHJFT2tLOHMybHFxUXpvTnUxV2p4VnZadl9FTXp1MHYwVWNQV05tWVJQMEVhUkRBNDh6QUZSN0JEWjdOSXM2TnJyenVINmZybS03dERXV3NrQm9vWi1MV0JIdkxiLTBnWWZfVHhweE5RX1JCSnFRU21Bemh5ZmZmajAzOEZlaXl1TXFMSVA3VlpLTXM1anJiNURqSzQwbEhsOHNYLVUzQ21iVXBkbmpvamJPNjROUERTYnJaQ3RmSWR0WU56el9MUEhPdXlKdXJCMlh30gHcAUFVX3lxTFBuQS1fbzhHNWRKYzlDV25qdVExSXg5UDQ0amI0UHkxQjRNRUpud0pWaXdxLTVINm5KUXo5c1E0N3c3ZkVjTmdqcE9laUZBNEVILU8xeG1ocmc5ZDdNenFhSmtVSERzYmwyU0c4SkdtOFRtOWE3NnJ3RWRoRlNBOTJnQVlqenMtWDlEdUlhVmJoNXNYTVFsdkxvSW9FT2d6X0wwT3FjYUg4YW1yUm9YOXN6ODFpR05mRXRSMjFnbGtqMGMteExneTViaU9UZUp0dTNXMnFSTFNBa2FyYlA?oc=5",
-     "time": "2026-11-21T16:42:31Z"
     }
    ],
    "thesis": "Bidding is open until 23 Nov and was 0.48x subscribed on day 2; QIBs are at 1.37x while retail is 0.24x. Institutions usually bid late, so early numbers say little. The issue is entirely offer-for-sale, so no money goes to the company. One lot costs about Rs 14,960; only a small bet is sensible, ideally after checking final-day demand.",
@@ -63,7 +63,7 @@
     "score": 15,
     "verdict": "Avoid",
     "reasons": [
-     "Subscription: QIB 1.37x*0.5, NII 0.18x*0.3, RETAIL 0.24x*0.2 -> weighted 0.79x.",
+     "Subscription: QIB 1.37x*0.5, NII 0.28x*0.3, RETAIL 0.32x*0.2 -> weighted 0.83x.",
      "Score 15 is below 40: demand is weak for the size."
     ],
     "risks": [
@@ -73,7 +73,7 @@
     "listing_view": {
      "low_pct": -15,
      "high_pct": 0,
-     "basis": "QIB 1.37x*0.5, NII 0.18x*0.3, RETAIL 0.24x*0.2 -> weighted 0.79x. Rule of thumb for this multiple on a Mainboard issue, not a forecast"
+     "basis": "QIB 1.37x*0.5, NII 0.28x*0.3, RETAIL 0.32x*0.2 -> weighted 0.83x. Rule of thumb for this multiple on a Mainboard issue, not a forecast"
     },
     "listing_px": [
      115.6,
@@ -104,7 +104,7 @@
     "qib": null,
     "nii": null,
     "retail": null,
-    "total": 11.1,
+    "total": 30.45,
     "as_of": null
    },
    "drhp_url": null,
@@ -142,27 +142,27 @@
    ],
    "thesis": "This SME issue was subscribed 11.1x overall, showing strong demand, though no category split is available. SME stocks have large lots, thin trading and big price swings. One lot costs about Rs 1.47 lakh, which is heavy for a small bet. Our score of 53 is below the bar to apply, so treat it as watch only.",
    "analysis": {
-    "score": 53,
+    "score": 63,
     "verdict": "Watch",
     "reasons": [
      "Fresh issue is Rs 120 cr of Rs 120 cr, money that goes to the company.",
-     "Subscription: overall 11.10x (NSE gave no category split).",
-     "Score 53 is below the 70 bar to apply."
+     "Subscription: overall 30.45x (NSE gave no category split).",
+     "Score 63 is below the 70 bar to apply."
     ],
     "risks": [
      "SME board: lots are large, trading is thin and prices swing far more than on the mainboard. Higher risk.",
      "No matching DRHP found in SEBI's recent listing (older filings are not searched)."
     ],
     "listing_view": {
-     "low_pct": 0,
-     "high_pct": 40,
-     "basis": "overall 11.10x (NSE gave no category split). Rule of thumb for this multiple on a SME issue, not a forecast"
+     "low_pct": 7,
+     "high_pct": 55,
+     "basis": "overall 30.45x (NSE gave no category split). Rule of thumb for this multiple on a SME issue, not a forecast"
     },
     "listing_px": [
-     245.0,
-     343.0
+     262.15,
+     379.75
     ],
-    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 245.00. Target for the first half: inside the Rs 245.00 to Rs 343.00 range, ideally near the top. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot. SME shares are thinly traded, so a sell order may not fill at the price you want.",
+    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 245.00. Target for the first half: inside the Rs 262.15 to Rs 379.75 range, ideally near the top. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot. SME shares are thinly traded, so a sell order may not fill at the price you want.",
     "method": "rules+claude"
    }
   },
@@ -258,7 +258,14 @@
    "ofs_cr": null,
    "subscription": null,
    "drhp_url": null,
-   "news": [],
+   "news": [
+    {
+     "title": "Jio Platforms IPO to Open on October 21, 2026: Check Price Band, Issue Size and Key Details",
+     "source": "Groww",
+     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4zVXlqbkpwT0kwV1U0R2I4Ymp1T0hFVnVJaEhQZWZUTlVKaU1wcFpHVF9mRzJIelg4UmY4M21JSi1LTHgxYllrdXg4c1J4VGlZZHJRZHhGUDhpVWh2WEQ0UzVhdThIeTE1V3JOTk9DVnpCVU5l?oc=5",
+     "time": "2026-10-21T07:00:00Z"
+    }
+   ],
    "thesis": null,
    "analysis": {
     "score": null,
@@ -562,7 +569,14 @@
    "ofs_cr": null,
    "subscription": null,
    "drhp_url": null,
-   "news": [],
+   "news": [
+    {
+     "title": "HGS India IPO: Check Issue Date, Price Band, Review, Details",
+     "source": "Kotak Neo",
+     "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBaRzhHVlptT0RIeWJjVGhKMlVWMDUzNV9oSnJEQjdRdHdQVlRISDlfTmdKZHhXS3lXc3BZUUUwbHFjR0puRWFaUGZuVktYdThvUm5WWWRR?oc=5",
+     "time": "2026-11-03T08:00:00Z"
+    }
+   ],
    "thesis": null,
    "analysis": {
     "score": null,
@@ -702,5 +716,5 @@
   "sebi": "ok",
   "news": "ok"
  },
- "at": 1795394401.5797844
+ "at": 1795412844.665465
 }
