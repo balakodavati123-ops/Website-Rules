@@ -1,8 +1,8 @@
 {
- "updated_at": "2026-11-23T17:46:37+05:30",
+ "updated_at": "2026-11-23T18:03:17+05:30",
  "today": {},
  "playbook": {
-  "trained_at": "2026-11-23 17:44",
+  "trained_at": "2026-11-23 18:02",
   "data": {
    "daily_from": "2015-06-01",
    "daily_to": "2026-11-20",
@@ -294,6 +294,80 @@
     "stop": 281,
     "trailing stop": 62,
     "time": 564
+   },
+   "conditions": {
+    "every day": {
+     "n": 1205,
+     "avg_rs": -1424.6,
+     "total_rs": -1716702,
+     "win_rate": 16.4,
+     "pf": 0.24,
+     "lcb_rs": -1496.5,
+     "max_dd_rs": -1719996
+    },
+    "VIX up 3%+ by 10:00": {
+     "n": 281,
+     "avg_rs": -1063.9,
+     "total_rs": -298969,
+     "win_rate": 24.6,
+     "pf": 0.38,
+     "lcb_rs": -1231.1,
+     "max_dd_rs": -306342
+    },
+    "gap 1%+ either way": {
+     "n": 74,
+     "avg_rs": -1184.0,
+     "total_rs": -87617,
+     "win_rate": 27.0,
+     "pf": 0.42,
+     "lcb_rs": -1585.7,
+     "max_dd_rs": -89017
+    },
+    "calm day (gap under 0.25%, VIX not rising)": {
+     "n": 317,
+     "avg_rs": -1483.3,
+     "total_rs": -470216,
+     "win_rate": 14.5,
+     "pf": 0.22,
+     "lcb_rs": -1619.9,
+     "max_dd_rs": -470216
+    },
+    "VIX falling 5%+ by 10:00": {
+     "n": 60,
+     "avg_rs": -1373.8,
+     "total_rs": -82426,
+     "win_rate": 18.3,
+     "pf": 0.37,
+     "lcb_rs": -1845.2,
+     "max_dd_rs": -82426
+    },
+    "movement day (VIX up 3%+ or gap 1%+)": {
+     "n": 319,
+     "avg_rs": -1123.9,
+     "total_rs": -358535,
+     "win_rate": 24.1,
+     "pf": 0.37,
+     "lcb_rs": -1280.9,
+     "max_dd_rs": -364530
+    },
+    "big gap, strike leaning with it": {
+     "n": 214,
+     "avg_rs": -1373.6,
+     "total_rs": -293959,
+     "win_rate": 19.2,
+     "pf": 0.31,
+     "lcb_rs": -1569.4,
+     "max_dd_rs": -293997
+    },
+    "big gap, strike leaning against it": {
+     "n": 214,
+     "avg_rs": -1415.3,
+     "total_rs": -302884,
+     "win_rate": 15.0,
+     "pf": 0.33,
+     "lcb_rs": -1639.8,
+     "max_dd_rs": -306193
+    }
    },
    "note": "replayed on 907 near-expiry days since 2022 with model prices from India VIX, this exact rule won 16.3% of days and averaged Rs -1443.3 a day (total Rs -1309087); the desk's live record decides from here."
   },
