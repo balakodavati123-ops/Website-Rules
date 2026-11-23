@@ -222,3 +222,23 @@ def test_straddle_only_no_trade_when_training_found_no_edge():
     pb = {"rule": {"filter": "all"}, "rules_tried": 2592, "rules_passing_train": 0, "table": [["2026-01-0%d" % i, 15 + i, 50, 1.0, 0.1, 0.0, 3, -1000.0] for i in range(1, 9)]}
     v = SL.today_view(pb, {"vix": 16, "vix_pct": 50, "rv_iv": 1.0, "gap": 0.1, "vix_chg": 0.0, "dte": 3})
     assert v["ok"] is False and "no straddle rule beat time decay" in v["why"] and v["knn"]["avg_rs"] == -1000.0
+
+
+def test_straddle_only_quant_picks_a_balanced_liquid_strike_and_trails_the_stop():
+    rows = chain(25130)
+    for r in rows:                                                                   # give the chain deltas, as Upstox does
+        k = r["strike_price"]
+        r["call_options"]["option_greeks"] = {"delta": round(0.5 - (k - 25130) / 400, 2)}
+        r["put_options"]["option_greeks"] = {"delta": round(-0.5 - (k - 25130) / 400, 2)}
+    k, sheet = D.pick_straddle_strike(rows, 25130.0, 3)
+    assert abs(k - 25130) <= 50 and len(sheet) >= 3 and sum(x["chosen"] for x in sheet) == 1
+    best = next(x for x in sheet if x["chosen"])
+    assert best["be_up"] > 25130 > best["be_dn"] and best["cost_vs_move"] > 0
+    now = datetime(2026, 11, 17, 9, 50, tzinfo=IST)
+    base = {"spot": 25130.0, "prev": 25000.0, "chains": {"2026-11-19": rows}, "expiry": "2026-11-19", "lot": 65}
+    sd = {"ok": True, "mode": "ceo", "quant": True, "trail": True, "expiry": "2026-11-19", "entry": "09:45", "stop": 0.25, "target": None, "backtest_note": "model says it loses"}
+    book = D.new_book()
+    D.fno_step(book, now, {**base, "straddle": sd}, set())
+    t = book["trades"][0]
+    assert t["strategy"] == "long_straddle" and t["legs"][0]["strike"] == k and t["trail"] == {"stop": 0.25} and book["straddle_sheet"]["sheet"]
+    assert any("The quant chose strike" in x for x in t["thesis"]["data"])

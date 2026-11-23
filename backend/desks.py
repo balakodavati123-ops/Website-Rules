@@ -246,6 +246,49 @@ def _buy(m): return float(m.get("ask_price") or 0)
 def _sell(m): return float(m.get("bid_price") or 0)
 
 
+def _greeks(rows: list[dict], strike: float, kind: str) -> dict:
+    r = next((x for x in rows if x["strike_price"] == strike), {})
+    return ((r.get("call_options") if kind == "CE" else r.get("put_options")) or {}).get("option_greeks") or {}
+
+
+def pick_straddle_strike(rows: list[dict], spot: float, days_left: float, steps: int = 2) -> tuple[float | None, list[dict]]:
+    """The quant's strike for a bought straddle (buy the call and the put of one strike). For the strikes around the index it compares:
+    the cost against the move the options market expects before expiry (cheaper is better), how evenly the profit zone sits on both sides
+    (the same move up or down should pay, so the result does not depend on direction), the two deltas (together close to zero), the bid-ask
+    spreads and open interest. It returns the best strike and the whole sheet. No strike can make a straddle pay when the index stands still."""
+    if not rows or not spot:
+        return None, []
+    ks = sorted({r["strike_price"] for r in rows})
+    atm = min(ks, key=lambda k: abs(k - spot))
+    i = ks.index(atm)
+    iv = atm_iv(rows, spot) or 15.0
+    em = spot * iv / 100 * math.sqrt(max(days_left, 0.2) / 252)                # one standard deviation of the move to expiry
+    sheet = []
+    for k in ks[max(0, i - steps): i + steps + 1]:
+        c, p = _px(rows, k, "CE"), _px(rows, k, "PE")
+        ca, pa, cb, pb = _buy(c), _buy(p), _sell(c), _sell(p)
+        if min(ca, pa, cb, pb) <= 0:
+            continue
+        cost = ca + pa
+        up, dn = (k + cost - spot) / spot * 100, (spot - (k - cost)) / spot * 100
+        spread = max((ca - cb) / ((ca + cb) / 2), (pa - pb) / ((pa + pb) / 2))
+        oi = min(float(c.get("oi") or 0), float(p.get("oi") or 0))
+        dc, dp = _greeks(rows, k, "CE").get("delta"), _greeks(rows, k, "PE").get("delta")
+        nd = round(float(dc) + float(dp), 2) if dc is not None and dp is not None else None
+        z = lambda x: 0.5 * (1 + math.erf(x / math.sqrt(2)))
+        pop = (1 - (z((k + cost - spot) / em) - z((k - cost - spot) / em))) * 100 if em > 0 else None
+        score = cost / em + 0.6 * abs(up - dn) / max((up + dn) / 2, 1e-6) + 3 * spread + (0.5 if oi < 100000 else 0) + (0.3 * abs(nd) if nd is not None else 0)
+        sheet.append({"strike": k, "cost": round(cost, 2), "call": round(ca, 2), "put": round(pa, 2), "be_up": round(k + cost), "be_dn": round(k - cost), "need_up_pct": round(up, 2),
+                      "need_dn_pct": round(dn, 2), "net_delta": nd, "spread_pct": round(spread * 100, 1), "oi": int(oi), "pop_expiry": round(pop, 1) if pop is not None else None,
+                      "cost_vs_move": round(cost / em, 2), "score": round(score, 3)})
+    if not sheet:
+        return None, []
+    best = min(sheet, key=lambda x: x["score"])
+    for x in sheet:
+        x["chosen"] = x is best
+    return best["strike"], sheet
+
+
 def _build(name: str, spot: float, prev: float, rows: list[dict], sd: dict | None = None):
     """Return (legs, risk class, params) or None. legs: (side 'S'/'B', strike, kind)."""
     ks = sorted({r["strike_price"] for r in rows})
@@ -311,8 +354,16 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
         pnl = u * tr["lot"] * tr["qty"] - R["leg_cost"] * len(tr["legs"])
         tr["pnl_rs"], tr["last"] = round(pnl, 2), round(u, 2)
         tgt, stp, late = u >= tr["target_u"], u <= -tr["stop_u"], t >= mins(R["close"])
+        if tr.get("trail"):                   # cut the loss early, let a winner run: the stop follows the straddle up once it is 20% up
+            base = tr["unit_base"]
+            tr["peak_u"] = max(float(tr.get("peak_u", u)), u)
+            stop_v = base * (1 - tr["trail"]["stop"])
+            if base + tr["peak_u"] >= base * 1.2:
+                stop_v = max(stop_v, base * 1.05, (base + tr["peak_u"]) * 0.85)
+            tr["stop_u_dyn"] = round(stop_v - base, 2)
+            tgt, stp = False, u <= tr["stop_u_dyn"]
         if tgt or stp or late:
-            finish(tr, u, "target" if tgt else "stop" if stp else "time", now, pnl)
+            finish(tr, u, "target" if tgt else ("trailing stop" if tr.get("trail") and tr.get("stop_u_dyn", -1) > -tr["stop_u"] else "stop") if stp else "time", now, pnl)
     spot, prev, rows, day = ctx.get("spot"), ctx.get("prev"), ctx["chains"].get(ctx["expiry"]), now.strftime("%Y-%m-%d")
     if not (spot and prev and rows) or not (mins(R["first"]) <= t <= mins(R["last"])):
         return
@@ -324,8 +375,15 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
             rows = ctx["chains"].get(sd.get("expiry") or ctx["expiry"])
             if not sd.get("ok") or not rows or not (mins(sd.get("entry", "09:45")) <= t <= mins(sd.get("entry", "09:45")) + 60):
                 continue                      # trade only when the trained rule and the days like today agree, within an hour of the trained entry time
-        b = _build(name, spot, prev, rows, sd)
         exp_ = sd.get("expiry") if name == "long_straddle" and sd.get("expiry") else ctx["expiry"]
+        if name == "long_straddle" and sd.get("quant"):
+            k_, sheet_ = pick_straddle_strike(rows, spot, days_to(exp_, now) * 5 / 7)
+            book["straddle_sheet"] = {"day": day, "at": now.strftime("%H:%M"), "expiry": exp_, "spot": spot, "sheet": sheet_}
+            best_ = next((x for x in sheet_ if x.get("chosen")), None)
+            if not best_ or best_["cost_vs_move"] > 1.1:
+                continue                      # no liquid strike, or the straddle costs more than the move the market expects: skip today
+            sd = {**sd, "strike": k_}
+        b = _build(name, spot, prev, rows, sd)
         if not b:
             continue
         legs_def, risk, p = b
@@ -370,6 +428,13 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
             f"cut at {p['stop']:.0%}, and be flat by 15:15 whatever happens."
         th = T.fno(name, "daily", legs, net, spot, prev, ctx.get("iv"), ctx.get("vix"), days, lot, margin, ctx.get("acct") or 100000.0, exp_, ctx.get("env") or {},
                    exit_rule=rule_txt, unit_target=base * p["target"], unit_stop=base * p["stop"])
+        if name == "long_straddle" and sd.get("quant"):
+            sh_ = next((x for x in (book.get("straddle_sheet") or {}).get("sheet") or [] if x.get("chosen")), {})
+            th["data"] += [f"The quant chose strike {sh_.get('strike'):,.0f} from {len((book.get('straddle_sheet') or {}).get('sheet') or [])} strikes: cost {sh_.get('cost')} points, "
+                           f"{sh_.get('cost_vs_move')}x the move the market expects; it pays beyond {sh_.get('be_up'):,} up ({sh_.get('need_up_pct')}%) or {sh_.get('be_dn'):,} down "
+                           f"({sh_.get('need_dn_pct')}%); calls and puts together delta {sh_.get('net_delta')}; spreads up to {sh_.get('spread_pct')}%.",
+                           "Exits: stop at 25% below the cost; once the straddle is 20% up the stop moves to 5% above cost and then trails 15% below the best value; out by 15:15.",
+                           f"The historical backtest disagrees with trading this every day: {sd.get('backtest_note', '')}"]
         if name == "long_straddle" and sd.get("rule"):
             tr_, te_, kn_ = sd.get("train") or {}, sd.get("test") or {}, sd.get("knn") or {}
             th["data"] += [f"Trained rule: buy at {sd['rule'].get('entry')} on {sd['rule'].get('expiry')}'s expiry, strike {sd['rule'].get('strike')}, when {sd['rule'].get('filter')}.",
@@ -379,7 +444,7 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
         mk(book, "FNO", name, f"NIFTY {name.replace('_', ' ')} · {exp_[5:]}", "SHORT" if net > 0 else "LONG", net, 1, now, expiry=exp_, lot=lot, legs=legs, horizon="daily", underlying="NIFTY",
            unit_base=base, target_u=round(base * p["target"], 2), stop_u=round(base * p["stop"], 2), risk_class=RISK[risk],
            max_gain_rs=round(gain * lot) if gain else None, max_loss_rs=round(loss * lot) if loss else None,
-           margin_rs=margin, margin_src=src, thesis=th,
+           margin_rs=margin, margin_src=src, thesis=th, **({"trail": {"stop": p["stop"]}} if name == "long_straddle" and sd.get("trail") else {}),
            reason=f"NIFTY {spot:,.0f} ({(spot / prev - 1) * 100:+.2f}% on the close). {'Credit' if net > 0 else 'Debit'} {base:.1f} points; " + (f"target {p['target']:.0%} of it, " if p["target"] < 5 else "no target, ") + f"stop {p['stop']:.0%} of it; out by 15:15")
 
 

@@ -879,6 +879,17 @@ def run() -> None:
                                        "train": {k: (playbook.get("train") or {}).get(k) for k in ("n", "avg_rs", "win_rate", "pf")},
                                        "test": {k: (playbook.get("test") or {}).get(k) for k in ("n", "avg_rs", "win_rate", "pf")}, "at": now.strftime("%H:%M")}
                         ctx["straddle"] = sdl["view"]
+                    if os.environ.get("STRADDLE_MODE", "ceo") == "ceo":     # the CEO's rule: a near-expiry straddle every trading day, quant strike, trailing stop
+                        cr_ = playbook.get("ceo_rule") or {}
+                        ctx["straddle"] = {"ok": True, "mode": "ceo", "quant": True, "trail": True, "expiry": exps[0], "entry": "09:45", "stop": 0.25, "target": None,
+                                           "rule": {"entry": "09:45", "expiry": "this week", "strike": "chosen by the quant", "filter": "every trading day (the CEO's rule)"},
+                                           "trained": sdl.get("view"), "backtest_note": cr_.get("note", "")}
+                        sh_ = xb.get("straddle_sheet") or {}
+                        mine_ = [t for t in xb["trades"] + list(archive.values()) if t.get("desk") == "FNO" and t.get("strategy") == "long_straddle" and t.get("status") in ("WIN", "LOSS")]
+                        save("straddle.json", {"updated_at": now.isoformat(timespec="seconds"), "today": {**(sdl.get("view") or {}), "mode": "ceo"}, "sheet": sh_ if sh_.get("day") == today else {},
+                                               "live": {"n": len(mine_), "wins": sum(t["status"] == "WIN" for t in mine_), "total_rs": round(sum(float(t.get("pnl_rs") or 0) for t in mine_)),
+                                                        "trades": [{k: t.get(k) for k in ("id", "day", "label", "status", "pnl_rs", "why")} for t in sorted(mine_, key=lambda t: t["day"])[-12:]]},
+                                               "playbook": {k: v for k, v in playbook.items() if k not in ("table", "closes")}})
                         save("straddle.json", {"updated_at": now.isoformat(timespec="seconds"), "today": sdl["view"],
                                                "playbook": {k: v for k, v in playbook.items() if k not in ("table", "closes")}})
                 # weekly and monthly structures claim margin first: they are held for days, the daily ones are flat by 15:15 and take what is left

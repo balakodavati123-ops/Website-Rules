@@ -204,6 +204,22 @@ FILTERS = {
 }
 
 
+def trail_rs(vals: list[float], stop: float = 0.25) -> tuple[float, str]:
+    """The CEO's exits: stop 25% below cost; once 20% up the stop moves to 5% above cost, then trails 15% below the best value; out by 15:15."""
+    e = vals[0] * (1 + SLIP)
+    stop_v, peak, out, why = e * (1 - stop), e, None, "time"
+    for v in vals[1:]:
+        x = v * (1 - SLIP)
+        peak = max(peak, x)
+        if peak >= e * 1.2:
+            stop_v = max(stop_v, e * 1.05, peak * 0.85)
+        if x <= stop_v:
+            out, why = x, ("trailing stop" if stop_v > e * (1 - stop) else "stop")
+            break
+    x = out if out is not None else vals[-1] * (1 - SLIP)
+    return round((x - e) * LOT - charges(e * LOT, x * LOT), 2), why
+
+
 def stats(xs: list[float]) -> dict:
     n = len(xs)
     if not n:
@@ -251,6 +267,20 @@ def train(data: dict, today: date) -> dict:
                 key = (entry, xsel, srule, tgt, stp)
                 r, why = pnl_rs(p["vals"], tgt, stp)
                 results.setdefault(key, []).append((d, r, why, f))
+    ceo = {}
+    for d, entry, xsel, srule, p in rows:                                       # the CEO's rule: 09:30-10:00 entry, this week's expiry, at the money, trailing exits, every day
+        if entry == "10:00" and xsel == "this week" and srule == "atm":
+            r, why = trail_rs(p["vals"])
+            ceo.setdefault("all", []).append((d, r, why, p["dte"]))
+    cl = ceo.get("all", [])
+    near = [x for x in cl if x[3] <= 4]
+    ceo_rule = {"every_day": stats([x[1] for x in cl]), "near_expiry_0_4_days": stats([x[1] for x in near]),
+                "train": stats([x[1] for x in near if x[0] <= TRAIN_TO]), "test": stats([x[1] for x in near if x[0] >= TEST_FROM]),
+                "by_year": {str(y): stats([x[1] for x in near if x[0].year == y]) for y in sorted({x[0].year for x in near})},
+                "exits": {w: sum(1 for x in near if x[2] == w) for w in ("stop", "trailing stop", "time")}}
+    s_ = ceo_rule["near_expiry_0_4_days"]
+    ceo_rule["note"] = (f"replayed on {s_.get('n', 0)} near-expiry days since 2022 with model prices from India VIX, this exact rule won {s_.get('win_rate')}% of days and averaged "
+                        f"Rs {s_.get('avg_rs')} a day (total Rs {s_.get('total_rs')}); the desk's live record decides from here.")
     cands = []
     for key, lst in results.items():
         for fname, fn in FILTERS.items():
@@ -312,7 +342,7 @@ def train(data: dict, today: date) -> dict:
             "ten_year_open_to_close": {y: stats(v) for y, v in sorted(ten.items())}, "rules_tried": tried, "rules_passing_train": len(cands),
             "runners_up": [{"lcb_rs": c[0], "entry": c[1][0], "expiry": c[1][1], "strike": c[1][2], "target": c[1][3], "stop": c[1][4], "filter": c[2], "train_avg_rs": c[3]["avg_rs"],
                             "test_avg_rs": stats([x[1] for x in results[c[1]] if x[0] >= TEST_FROM and FILTERS[c[2]](x[3])]).get("avg_rs")} for c in cands[1:6]],
-            "iv_mult": {"0": iv_mult(0), "1": iv_mult(1), "2-4": iv_mult(3), "5-7": iv_mult(6), "8+": iv_mult(9)}, "lot": LOT, "slippage": SLIP,
+            "ceo_rule": ceo_rule, "iv_mult": {"0": iv_mult(0), "1": iv_mult(1), "2-4": iv_mult(3), "5-7": iv_mult(6), "8+": iv_mult(9)}, "lot": LOT, "slippage": SLIP,
             "table": table, "closes": closes,
             "honesty": "Model backtest: option prices rebuilt from India VIX with Black-Scholes, scaled to the desk's live readings; real bid and ask, skew and expiry-day pricing differ. "
                        "Chosen on 2022-2024 only; 2025-2026 is out of sample. Paper results decide anything further."}
