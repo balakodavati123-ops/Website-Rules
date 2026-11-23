@@ -1,42 +1,27 @@
 {
- "mood": "mixed",
- "brief": "Indian shares opened higher on foreign inflows as the global AI-trade reversal continues, with IT stocks like TCS and Tech Mahindra rallying and US futures rebounding. Metals remain volatile after a week of mayhem, and Tata Steel fell nearly 5% on its APL Apollo Tubes deal.",
+ "mood": "bearish",
+ "brief": "Indian shares are lower at midday, with Sensex down about 1,000 points and Nifty below 25,500 as the global sell-off weighs, even though US futures are rebounding. Tata Steel fell sharply on its APL Apollo Tubes deal and metals stay under pressure.",
  "themes": [
-  "Anti-AI trade lifts Indian IT",
-  "Metals and copper volatility",
+  "Global sell-off weighs on Sensex",
   "Tata Steel and APL Apollo deal",
-  "Strong festive auto retail"
+  "Metals and gold volatility",
+  "Broker rating changes"
  ],
  "companies": [
   {
    "name": "Tata Steel",
    "tone": "negative",
-   "why": "Shares plunge nearly 5% on APL Apollo Tubes stake buy"
+   "why": "Dips 7% on APL Apollo deal; margin and debt worries"
   },
   {
-   "name": "APL Apollo Tubes",
-   "tone": "neutral",
-   "why": "Tata Steel to acquire 26.38% stake"
-  },
-  {
-   "name": "TCS",
-   "tone": "positive",
-   "why": "Surges up to 5% as anti-AI trade lifts IT"
-  },
-  {
-   "name": "Tech Mahindra",
-   "tone": "positive",
-   "why": "Surges up to 5% as anti-AI trade lifts IT"
-  },
-  {
-   "name": "Westlife Foodworld",
+   "name": "Hindalco",
    "tone": "negative",
-   "why": "Goldman Sachs downgraded it to Sell"
+   "why": "Under pressure alongside metals"
   },
   {
-   "name": "SG Mart",
+   "name": "Dalmia Bharat",
    "tone": "positive",
-   "why": "Hits 52-week high as board considers fundraiser"
+   "why": "Board approves Rs 700 crore buyback"
   },
   {
    "name": "Ashoka Buildcon",
@@ -44,24 +29,39 @@
    "why": "Jumps 8% on Rs 4,223 crore project wins"
   },
   {
-   "name": "Hindalco",
+   "name": "Polycab",
    "tone": "negative",
-   "why": "Falls 2% as copper slides below $12,000"
+   "why": "ICICI Securities cuts target 11%"
   },
   {
-   "name": "Infosys",
+   "name": "Bajaj Finance",
+   "tone": "positive",
+   "why": "Emkay rates Buy with Rs 9000 target"
+  },
+  {
+   "name": "Persistent Systems",
    "tone": "negative",
-   "why": "Nirmal Bang stays bearish on large-cap IT"
+   "why": "Emkay rates Reduce with Rs 3700 target"
+  },
+  {
+   "name": "Aditya Birla Fashion and Retail",
+   "tone": "negative",
+   "why": "Emkay rates Reduce with Rs 230 target"
+  },
+  {
+   "name": "Tejas Networks",
+   "tone": "positive",
+   "why": "Emkay rates Buy with Rs 1100 target"
   }
  ],
- "global": "US stock futures are rebounding after last week's bloodbath, though a week of mayhem rocked metals markets and Asian authorities are stepping in to support stocks.",
+ "global": "Asia stocks slid as the AI rout deepened despite a US futures rebound, with Nvidia futures up about 6%.",
  "risks": [
-  "AI-trade reversal may be volatile",
-  "Copper and metals sell-off",
-  "Large-cap IT bearish brokerage views"
+  "Further global AI-led sell-off",
+  "Tata Steel deal margin and debt concerns",
+  "Metals price volatility"
  ],
- "time": "23 Nov 11:20",
- "at": 1795413057.070344,
+ "time": "23 Nov 12:21",
+ "at": 1795416692.698341,
  "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "n": 40
