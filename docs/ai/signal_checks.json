@@ -1,6 +1,6 @@
 {
- "time": "23 Nov 10:21",
- "at": 1795409463.238465,
+ "time": "23 Nov 11:20",
+ "at": 1795413057.070344,
  "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "checks": {
@@ -18,7 +18,7 @@
   },
   "POLYCAB": {
    "verdict": "doubt",
-   "why": "Broker target cut is opinion, and the price has barely moved"
+   "why": "Broker target cut is opinion tied to the copper move; price barely moved"
   },
   "WEALTH": {
    "verdict": "doubt",
@@ -35,6 +35,26 @@
   "APOLLO": {
    "verdict": "confirm",
    "why": "Specific, fresh acquisition announcement; price has not moved against it"
+  },
+  "WESTLIFE": {
+   "verdict": "confirm",
+   "why": "Fresh, specific Goldman downgrade to Sell; price has not moved yet"
+  },
+  "SGMART": {
+   "verdict": "doubt",
+   "why": "Euphoric spike already happened and the price has since turned down"
+  },
+  "TECHM": {
+   "verdict": "doubt",
+   "why": "Market-wide IT rally, not company-specific, and price barely moved"
+  },
+  "ASHOKA": {
+   "verdict": "doubt",
+   "why": "Order wins already priced in after 8% jump; price now flat"
+  },
+  "HINDALCO": {
+   "verdict": "doubt",
+   "why": "Over an hour old and already priced in; price flat since"
   }
  }
 }

@@ -1,67 +1,67 @@
 {
  "mood": "mixed",
- "brief": "Indian shares are volatile: Sensex crashed over 1,300 points from the day's high and metal and bank stocks fell, even as Nifty has held up better than global peers. US futures rebounded nearly 2% after last week's tech rout, but Kospi and other Asian markets stayed weak.",
+ "brief": "Indian shares opened higher on foreign inflows as the global AI-trade reversal continues, with IT stocks like TCS and Tech Mahindra rallying and US futures rebounding. Metals remain volatile after a week of mayhem, and Tata Steel fell nearly 5% on its APL Apollo Tubes deal.",
  "themes": [
-  "Intraday sell-off in metals and banks",
-  "Nifty resilience vs global stocks",
-  "Order-win rally in rail and infra",
-  "Hormuz and Iran oil risk"
+  "Anti-AI trade lifts Indian IT",
+  "Metals and copper volatility",
+  "Tata Steel and APL Apollo deal",
+  "Strong festive auto retail"
  ],
  "companies": [
   {
    "name": "Tata Steel",
    "tone": "negative",
-   "why": "Shares fall 4% after APL Apollo Tubes deal"
+   "why": "Shares plunge nearly 5% on APL Apollo Tubes stake buy"
   },
   {
    "name": "APL Apollo Tubes",
    "tone": "neutral",
-   "why": "Target of Tata Steel's stake acquisition deal"
+   "why": "Tata Steel to acquire 26.38% stake"
   },
   {
-   "name": "HDFC Bank",
+   "name": "TCS",
    "tone": "positive",
-   "why": "Shows White Marubozu candle pattern"
+   "why": "Surges up to 5% as anti-AI trade lifts IT"
   },
   {
-   "name": "RVNL",
+   "name": "Tech Mahindra",
    "tone": "positive",
-   "why": "Gains up to 7% on major order wins"
+   "why": "Surges up to 5% as anti-AI trade lifts IT"
   },
   {
-   "name": "Texmaco Rail",
+   "name": "Westlife Foodworld",
+   "tone": "negative",
+   "why": "Goldman Sachs downgraded it to Sell"
+  },
+  {
+   "name": "SG Mart",
    "tone": "positive",
-   "why": "Gains up to 7% on major order wins"
+   "why": "Hits 52-week high as board considers fundraiser"
   },
   {
    "name": "Ashoka Buildcon",
    "tone": "positive",
-   "why": "Gains up to 7% on major order wins"
+   "why": "Jumps 8% on Rs 4,223 crore project wins"
   },
   {
-   "name": "Premier Explosives",
-   "tone": "positive",
-   "why": "Gains up to 7% on major order wins"
-  },
-  {
-   "name": "ESDS Software",
+   "name": "Hindalco",
    "tone": "negative",
-   "why": "Stock extends losses despite Sydney AI factory clarification"
+   "why": "Falls 2% as copper slides below $12,000"
   },
   {
-   "name": "Maruti Suzuki",
-   "tone": "neutral",
-   "why": "Listed among stocks to watch today"
+   "name": "Infosys",
+   "tone": "negative",
+   "why": "Nirmal Bang stays bearish on large-cap IT"
   }
  ],
- "global": "US stock futures jumped nearly 2% after a brutal tech sell-off while Kospi slumped nearly 4% and Iranian strikes cut oil shipped via Hormuz.",
+ "global": "US stock futures are rebounding after last week's bloodbath, though a week of mayhem rocked metals markets and Asian authorities are stepping in to support stocks.",
  "risks": [
-  "Further AI-led global sell-off",
-  "Iran conflict disrupting Hormuz oil flows",
-  "RBI rate hike expectations"
+  "AI-trade reversal may be volatile",
+  "Copper and metals sell-off",
+  "Large-cap IT bearish brokerage views"
  ],
- "time": "23 Nov 10:21",
- "at": 1795409463.238465,
+ "time": "23 Nov 11:20",
+ "at": 1795413057.070344,
  "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "n": 40
