@@ -1,57 +1,67 @@
 {
  "mood": "mixed",
- "brief": "Wall Street futures are steadier after last week's tech sell-off, and Indian shares closed higher on Friday as banks rallied on foreign inflows. Caution remains because of Middle East tensions, Iran sanctions worries and the AI-led global slump.",
+ "brief": "Indian shares are volatile: Sensex crashed over 1,300 points from the day's high and metal and bank stocks fell, even as Nifty has held up better than global peers. US futures rebounded nearly 2% after last week's tech rout, but Kospi and other Asian markets stayed weak.",
  "themes": [
-  "AI sell-off aftermath",
-  "Foreign inflows into banks",
-  "Middle East tensions",
-  "Metals and copper volatility"
+  "Intraday sell-off in metals and banks",
+  "Nifty resilience vs global stocks",
+  "Order-win rally in rail and infra",
+  "Hormuz and Iran oil risk"
  ],
  "companies": [
   {
    "name": "Tata Steel",
-   "tone": "positive",
-   "why": "Announced acquiring 26.38% stake in APL Apollo Tubes"
+   "tone": "negative",
+   "why": "Shares fall 4% after APL Apollo Tubes deal"
   },
   {
    "name": "APL Apollo Tubes",
-   "tone": "positive",
-   "why": "Tata Steel to buy 26.38% stake"
+   "tone": "neutral",
+   "why": "Target of Tata Steel's stake acquisition deal"
   },
   {
    "name": "HDFC Bank",
-   "tone": "negative",
-   "why": "Slips to 2-1/2-year low on legal, leadership woes"
+   "tone": "positive",
+   "why": "Shows White Marubozu candle pattern"
   },
   {
-   "name": "SG Mart",
-   "tone": "neutral",
-   "why": "Board meets this week on fund raising proposal"
+   "name": "RVNL",
+   "tone": "positive",
+   "why": "Gains up to 7% on major order wins"
+  },
+  {
+   "name": "Texmaco Rail",
+   "tone": "positive",
+   "why": "Gains up to 7% on major order wins"
+  },
+  {
+   "name": "Ashoka Buildcon",
+   "tone": "positive",
+   "why": "Gains up to 7% on major order wins"
+  },
+  {
+   "name": "Premier Explosives",
+   "tone": "positive",
+   "why": "Gains up to 7% on major order wins"
+  },
+  {
+   "name": "ESDS Software",
+   "tone": "negative",
+   "why": "Stock extends losses despite Sydney AI factory clarification"
   },
   {
    "name": "Maruti Suzuki",
    "tone": "neutral",
-   "why": "Listed among stocks in focus today"
-  },
-  {
-   "name": "Waaree Energies",
-   "tone": "neutral",
-   "why": "Listed among stocks in focus today"
-  },
-  {
-   "name": "RVNL",
-   "tone": "neutral",
-   "why": "Listed among stocks in focus today"
+   "why": "Listed among stocks to watch today"
   }
  ],
- "global": "US futures rose after the tech sell-off while Asian authorities prepare stabilisation steps after KOSPI hit a 10-month low.",
+ "global": "US stock futures jumped nearly 2% after a brutal tech sell-off while Kospi slumped nearly 4% and Iranian strikes cut oil shipped via Hormuz.",
  "risks": [
   "Further AI-led global sell-off",
-  "Middle East conflict and oil swings",
-  "New Iran sanctions caution"
+  "Iran conflict disrupting Hormuz oil flows",
+  "RBI rate hike expectations"
  ],
- "time": "23 Nov 09:20",
- "at": 1795405859.520942,
+ "time": "23 Nov 10:21",
+ "at": 1795409463.238465,
  "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "n": 40

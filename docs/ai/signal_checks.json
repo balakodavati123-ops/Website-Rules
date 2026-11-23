@@ -1,20 +1,40 @@
 {
- "time": "23 Nov 09:20",
- "at": 1795405859.520942,
+ "time": "23 Nov 10:21",
+ "at": 1795409463.238465,
  "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "checks": {
   "MARKSANS": {
-   "verdict": "doubt",
-   "why": "Form 483 is fear, filing is mild optimism; signals conflict and price barely moved"
+   "verdict": "confirm",
+   "why": "Specific USFDA Form 483 news and the price fell over 3%"
   },
   "ONEPOINT": {
    "verdict": "doubt",
-   "why": "Generic press release with no detail, and price is falling"
+   "why": "Vague press release and the price fell over 4%"
   },
   "SURYAROSNI": {
    "verdict": "doubt",
    "why": "Box office story about a film, not company news; price moved down"
+  },
+  "POLYCAB": {
+   "verdict": "doubt",
+   "why": "Broker target cut is opinion, and the price has barely moved"
+  },
+  "WEALTH": {
+   "verdict": "doubt",
+   "why": "Commentary on gold and bitcoin, not specific company news; price rose"
+  },
+  "LT": {
+   "verdict": "doubt",
+   "why": "Order filing gives no size or value and the price is slightly down"
+  },
+  "DBL": {
+   "verdict": "doubt",
+   "why": "Order filing gives no size or value and the price is down"
+  },
+  "APOLLO": {
+   "verdict": "confirm",
+   "why": "Specific, fresh acquisition announcement; price has not moved against it"
   }
  }
 }
