@@ -105,6 +105,41 @@
       "time": "2026-11-20T04:14:00Z"
      }
     ]
+   },
+   "FOODLINK": {
+    "d": "2026-11-23",
+    "items": [
+     {
+      "title": "Foodlink F&B Holdings to Launch Rs 192 Crore IPO Next Week",
+      "source": "EventFAQs",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTDJQcEh4ak9YRm1UWXVLc08yQy1PR0pxSVF4b3BqS3dNZlJsUkRmV00yTzNJeXlfd3p1UW1mNWo2OUtBaFRYclE3dXRnRkdyMmVoSnU0X0w5cjR3eF95WjdCc09FS3ZybUFzcXV4THZnY3VHMHBJSXpoaHRPMzdWalNHVmJsMUtRQno5Vm5SVGNpLXN2RGFIT0d3?oc=5",
+      "time": "2026-11-23T10:17:25Z"
+     },
+     {
+      "title": "Foodlink F&B Holdings Sets IPO Price Band At Rs 181-191, To Raise Rs 361 Cr",
+      "source": "TradingView",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNamZEV0t3TVpvQkhjSkdhcmVnYnBYS3V5TFBHNlZQNkVLTzNQdWFvaUNsSGFoaW1GSk8tLWpuUDVIdlBmcWh3V3FhVUdmSnJ2bGFFQVZEaDBYNFJ3QnVFQnQ0MEZLS3JwWDBIT0x4ajN2OHU1Snk5cVBxcWlka3htdWJHdEdBcFFhLXdGRUo3dTFGNnpxdHB5RTVnZlZwdEtwcTQtS0xnNG9vc0YzLWltM1RIMF9jZV9yQTZwNTBRRHo1SERmcFJnLWxOYw?oc=5",
+      "time": "2026-11-23T10:07:48Z"
+     },
+     {
+      "title": "Foodlink F&B Holdings IPO GMP, Date, Price Band & Review",
+      "source": "IndiaIPO",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5GMERPd0VpZndKbDJNa0xhZFA4VDdtTzNDMlJvSlYzalJaN1BVc3I2R0praE01N0hZdEVGNTNtZTNjaDF3TTlsU0E1ZF9JelhUcU4xUzlPRjh3MWNRRGw2Yy02ZzV0UVBhYXFR?oc=5",
+      "time": "2026-11-23T09:18:12Z"
+     },
+     {
+      "title": "Foodlink F&B Holdings IPO GMP, Date, Price Band & Review",
+      "source": "IndiaIPO",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQVW9RUjJIeThzZDQxTm5YOThYbW9nc0lOLVVoaWVmMEE1UVRSMlV4OGlYa2ZUR0h4SkNWRm9OMVducURuVS1GM1ZiTkpDLXVSVXg4MTk3enFsZTFibTVQbV9wTXIxT0d3OW1VMEVvWll6OGR0X29kemFYUDNmQTg4aEZzZw?oc=5",
+      "time": "2026-11-23T09:18:11Z"
+     },
+     {
+      "title": "Luxury Caterer Foodlink F&B Holdings IPO Opens 26 November",
+      "source": "Prop News Time",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOZUxUZnZ2eUc4eFliUnYxcWNqN295MUZpSmpfVlVrQmxwNnd6eTlUWlNKLUU1MFotS2RCZkE5c2ttaUwtaVR5WHRaY0IydjJ2QjVZbC1DUFFTdEU3VUVfQjdnTEN4UUpuRDl1cHVHRnUtR2ZOaWlIcEVka3dlMl9NTmt1UzNCWVBFSE5mMkRTbWlpVWhjVzdyNEwzejNTMkYydFFIazU4RHdLVEN0YlNR?oc=5",
+      "time": "2026-11-23T08:45:41Z"
+     }
+    ]
    }
   },
   "thesis": {},
@@ -129,6 +164,13 @@
     "fresh_cr": 93.66,
     "ofs_cr": null,
     "issue_size_cr": 93.66
+   },
+   "FOODLINK|191.0": {
+    "lot_size": 78.0,
+    "issue_text": "Initial Public offer comprising of Fresh issue aggregating up to Rs. 1920 million and Offer for Sale of up to 8,835,382 Equity Shares",
+    "fresh_cr": 192.0,
+    "ofs_cr": 168.76,
+    "issue_size_cr": 360.76
    }
   }
  },

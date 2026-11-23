@@ -1,0 +1,220 @@
+{
+ "updated_at": "2026-11-23T15:31:50+05:30",
+ "today": {},
+ "playbook": {
+  "trained_at": "2026-11-23 15:30",
+  "data": {
+   "daily_from": "2015-06-01",
+   "daily_to": "2026-11-20",
+   "intraday_from": "2022-01-03",
+   "intraday_days": 1212
+  },
+  "rule": {
+   "entry": "10:00",
+   "expiry": "this week",
+   "strike": "at the money",
+   "strike_code": "atm",
+   "target": 0.4,
+   "stop": 0.3,
+   "exit_by": "15:15",
+   "filter": "all"
+  },
+  "train": {
+   "n": 738,
+   "avg_rs": -1364.5,
+   "total_rs": -1006978,
+   "win_rate": 17.2,
+   "pf": 0.26,
+   "lcb_rs": -1451.2,
+   "max_dd_rs": -1006978,
+   "from": "2022-01-01",
+   "to": "2024-12-31"
+  },
+  "test": {
+   "n": 467,
+   "avg_rs": -1669.0,
+   "total_rs": -779413,
+   "win_rate": 15.6,
+   "pf": 0.21,
+   "lcb_rs": -1780.3,
+   "max_dd_rs": -791314,
+   "from": "2025-01-01",
+   "to": "2026-11-20"
+  },
+  "by_year": {
+   "2022": {
+    "n": 247,
+    "avg_rs": -1686.0,
+    "total_rs": -416453,
+    "win_rate": 14.2,
+    "pf": 0.18,
+    "lcb_rs": -1828.4,
+    "max_dd_rs": -423131
+   },
+   "2023": {
+    "n": 245,
+    "avg_rs": -1127.7,
+    "total_rs": -276290,
+    "win_rate": 15.9,
+    "pf": 0.22,
+    "lcb_rs": -1232.9,
+    "max_dd_rs": -276290
+   },
+   "2024": {
+    "n": 246,
+    "avg_rs": -1277.4,
+    "total_rs": -314235,
+    "win_rate": 21.5,
+    "pf": 0.37,
+    "lcb_rs": -1466.2,
+    "max_dd_rs": -314235
+   },
+   "2025": {
+    "n": 248,
+    "avg_rs": -1705.4,
+    "total_rs": -422946,
+    "win_rate": 14.5,
+    "pf": 0.16,
+    "lcb_rs": -1835.2,
+    "max_dd_rs": -431820
+   },
+   "2026": {
+    "n": 219,
+    "avg_rs": -1627.7,
+    "total_rs": -356468,
+    "win_rate": 16.9,
+    "pf": 0.27,
+    "lcb_rs": -1814.2,
+    "max_dd_rs": -360163
+   }
+  },
+  "exits": {
+   "time": 937,
+   "stop": 197,
+   "target": 71
+  },
+  "ten_year_open_to_close": {
+   "2015": {
+    "n": 141,
+    "avg_rs": -615.7,
+    "total_rs": -86819,
+    "win_rate": 22.0,
+    "pf": 0.3,
+    "lcb_rs": -734.9,
+    "max_dd_rs": -86950
+   },
+   "2016": {
+    "n": 247,
+    "avg_rs": -417.7,
+    "total_rs": -103184,
+    "win_rate": 23.1,
+    "pf": 0.44,
+    "lcb_rs": -515.3,
+    "max_dd_rs": -106746
+   },
+   "2017": {
+    "n": 248,
+    "avg_rs": -619.4,
+    "total_rs": -153607,
+    "win_rate": 12.9,
+    "pf": 0.18,
+    "lcb_rs": -677.2,
+    "max_dd_rs": -153794
+   },
+   "2018": {
+    "n": 246,
+    "avg_rs": -668.1,
+    "total_rs": -164352,
+    "win_rate": 18.3,
+    "pf": 0.25,
+    "lcb_rs": -747.5,
+    "max_dd_rs": -164760
+   },
+   "2019": {
+    "n": 244,
+    "avg_rs": -725.0,
+    "total_rs": -176900,
+    "win_rate": 21.3,
+    "pf": 0.42,
+    "lcb_rs": -887.1,
+    "max_dd_rs": -177188
+   },
+   "2020": {
+    "n": 252,
+    "avg_rs": -933.4,
+    "total_rs": -235205,
+    "win_rate": 19.8,
+    "pf": 0.53,
+    "lcb_rs": -1207.7,
+    "max_dd_rs": -312234
+   },
+   "2021": {
+    "n": 248,
+    "avg_rs": -1197.0,
+    "total_rs": -296850,
+    "win_rate": 22.2,
+    "pf": 0.38,
+    "lcb_rs": -1399.7,
+    "max_dd_rs": -296850
+   },
+   "2022": {
+    "n": 248,
+    "avg_rs": -1437.8,
+    "total_rs": -356566,
+    "win_rate": 23.8,
+    "pf": 0.34,
+    "lcb_rs": -1660.2,
+    "max_dd_rs": -366295
+   },
+   "2023": {
+    "n": 246,
+    "avg_rs": -1048.9,
+    "total_rs": -258036,
+    "win_rate": 20.7,
+    "pf": 0.32,
+    "lcb_rs": -1197.6,
+    "max_dd_rs": -265832
+   },
+   "2024": {
+    "n": 249,
+    "avg_rs": -975.5,
+    "total_rs": -242905,
+    "win_rate": 23.3,
+    "pf": 0.58,
+    "lcb_rs": -1338.2,
+    "max_dd_rs": -242905
+   },
+   "2025": {
+    "n": 249,
+    "avg_rs": -1367.3,
+    "total_rs": -340458,
+    "win_rate": 25.7,
+    "pf": 0.38,
+    "lcb_rs": -1605.3,
+    "max_dd_rs": -364576
+   },
+   "2026": {
+    "n": 220,
+    "avg_rs": -1038.7,
+    "total_rs": -228509,
+    "win_rate": 28.2,
+    "pf": 0.57,
+    "lcb_rs": -1375.7,
+    "max_dd_rs": -301083
+   }
+  },
+  "rules_tried": 2592,
+  "rules_passing_train": 0,
+  "runners_up": [],
+  "iv_mult": {
+   "0": 0.85,
+   "1": 0.85,
+   "2-4": 0.85,
+   "5-7": 0.92,
+   "8+": 1.0
+  },
+  "lot": 65,
+  "slippage": 0.004,
+  "honesty": "Model backtest: option prices rebuilt from India VIX with Black-Scholes, scaled to the desk's live readings; real bid and ask, skew and expiry-day pricing differ. Chosen on 2022-2024 only; 2025-2026 is out of sample. Paper results decide anything further."
+ }
+}
