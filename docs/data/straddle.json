@@ -1,8 +1,8 @@
 {
- "updated_at": "2026-11-23T18:03:17+05:30",
+ "updated_at": "2026-11-23T18:09:44+05:30",
  "today": {},
  "playbook": {
-  "trained_at": "2026-11-23 18:02",
+  "trained_at": "2026-11-23 18:08",
   "data": {
    "daily_from": "2015-06-01",
    "daily_to": "2026-11-20",
@@ -341,14 +341,41 @@
      "lcb_rs": -1845.2,
      "max_dd_rs": -82426
     },
-    "movement day (VIX up 3%+ or gap 1%+)": {
-     "n": 319,
-     "avg_rs": -1123.9,
-     "total_rs": -358535,
-     "win_rate": 24.1,
-     "pf": 0.37,
-     "lcb_rs": -1280.9,
-     "max_dd_rs": -364530
+    "first 45 minutes 0.5%+ high to low": {
+     "n": 236,
+     "avg_rs": -1234.0,
+     "total_rs": -291213,
+     "win_rate": 21.2,
+     "pf": 0.35,
+     "lcb_rs": -1426.4,
+     "max_dd_rs": -294507
+    },
+    "0.4%+ from the open by 10:00": {
+     "n": 262,
+     "avg_rs": -1171.4,
+     "total_rs": -306903,
+     "win_rate": 19.8,
+     "pf": 0.38,
+     "lcb_rs": -1365.1,
+     "max_dd_rs": -311705
+    },
+    "calm morning (under 0.3% high to low)": {
+     "n": 628,
+     "avg_rs": -1499.9,
+     "total_rs": -941919,
+     "win_rate": 14.3,
+     "pf": 0.18,
+     "lcb_rs": -1583.7,
+     "max_dd_rs": -941919
+    },
+    "movement day (VIX up 3%+, gap 1%+, morning 0.5%+ or 0.4%+ from open)": {
+     "n": 487,
+     "avg_rs": -1297.6,
+     "total_rs": -631924,
+     "win_rate": 19.7,
+     "pf": 0.31,
+     "lcb_rs": -1421.2,
+     "max_dd_rs": -635218
     },
     "big gap, strike leaning with it": {
      "n": 214,

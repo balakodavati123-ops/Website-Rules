@@ -1,45 +1,45 @@
 {
- "at": 1795434246.7683518,
+ "at": 1795448940.6124456,
  "rows": [
   {
    "group": "United States",
    "name": "S&P 500",
    "symbol": "^GSPC",
-   "last": 6910.39,
-   "chg_pct": -3.7,
-   "as_of": "2026-11-20",
+   "last": 7253.8,
+   "chg_pct": 4.97,
+   "as_of": "2026-11-23",
    "why": "Sets the tone for Asia's open",
-   "spark": "[7619.38, 7592.4, 7561.67, 7416.59, 7340.53, 7323.63, 7175.83, 6910.39]"
+   "spark": "[7592.4, 7561.67, 7416.59, 7340.53, 7323.63, 7175.83, 6910.39, 7253.8]"
   },
   {
    "group": "United States",
    "name": "Nasdaq",
    "symbol": "^IXIC",
-   "last": 22617.73,
-   "chg_pct": -5.28,
-   "as_of": "2026-11-20",
+   "last": 24176.19,
+   "chg_pct": 6.89,
+   "as_of": "2026-11-23",
    "why": "Leads Indian IT stocks",
-   "spark": "[25466.19, 25366.09, 25136.27, 24509.76, 24328.38, 24429.88, 23879.2, 22617.73]"
+   "spark": "[25366.09, 25136.27, 24509.76, 24328.38, 24429.88, 23879.2, 22617.73, 24176.19]"
   },
   {
    "group": "United States",
    "name": "Dow Jones",
    "symbol": "^DJI",
-   "last": 48147.33,
-   "chg_pct": -1.93,
-   "as_of": "2026-11-20",
+   "last": 49608.86,
+   "chg_pct": 3.04,
+   "as_of": "2026-11-23",
    "why": "Broad US risk mood",
-   "spark": "[52486.49, 52297.09, 52347.55, 51608.17, 50759.42, 50198.17, 49097.06, 48147.33]"
+   "spark": "[52297.09, 52347.55, 51608.17, 50759.42, 50198.17, 49097.06, 48147.33, 49608.86]"
   },
   {
    "group": "United States",
    "name": "US fear index (VIX)",
    "symbol": "^VIX",
-   "last": 30.15,
-   "chg_pct": -15.99,
-   "as_of": "2026-11-23",
-   "why": "Rising means global risk-off",
-   "spark": "[18.7, 19.3, 22.91, 25.46, 24.56, 28.44, 35.89, 30.15]"
+   "last": null,
+   "chg_pct": null,
+   "as_of": "",
+   "why": "Data Unverified",
+   "spark": "[]"
   },
   {
    "group": "Asia",
@@ -75,21 +75,21 @@
    "group": "Europe",
    "name": "FTSE 100",
    "symbol": "^FTSE",
-   "last": 10400.44,
-   "chg_pct": 0.52,
+   "last": 10479.14,
+   "chg_pct": 1.28,
    "as_of": "2026-11-23",
    "why": "Europe's close, yesterday",
-   "spark": "[10863.1, 10902.6, 10881.6, 10689.9, 10551.2, 10452.7, 10346.3, 10400.44]"
+   "spark": "[10863.1, 10902.6, 10881.6, 10689.9, 10551.2, 10452.7, 10346.3, 10479.14]"
   },
   {
    "group": "Europe",
    "name": "DAX",
    "symbol": "^GDAXI",
-   "last": 25014.81,
-   "chg_pct": 0.85,
+   "last": 25350.35,
+   "chg_pct": 2.21,
    "as_of": "2026-11-23",
    "why": "Europe's close, yesterday",
-   "spark": "[26771.88, 26749.95, 26598.64, 26045.37, 25736.24, 25463.81, 24802.78, 25014.81]"
+   "spark": "[26771.88, 26749.95, 26598.64, 26045.37, 25736.24, 25463.81, 24802.78, 25350.35]"
   },
   {
    "group": "India",
@@ -105,61 +105,61 @@
    "group": "Money",
    "name": "US dollar index",
    "symbol": "DX-Y.NYB",
-   "last": 103.89,
-   "chg_pct": 0.08,
+   "last": 104.28,
+   "chg_pct": 0.45,
    "as_of": "2026-11-23",
    "why": "A strong dollar pulls money out of India",
-   "spark": "[103.17, 103.41, 103.55, 103.49, 103.86, 103.9, 103.81, 103.89]"
+   "spark": "[103.17, 103.41, 103.55, 103.49, 103.86, 103.9, 103.81, 104.28]"
   },
   {
    "group": "Money",
    "name": "Dollar in rupees",
    "symbol": "INR=X",
-   "last": 92.73,
-   "chg_pct": -0.61,
+   "last": 92.9,
+   "chg_pct": -0.42,
    "as_of": "2026-11-23",
    "why": "A weak rupee hurts importers, helps IT",
-   "spark": "[93.7, 94.03, 94.24, 93.96, 93.47, 93.47, 93.29, 92.73]"
+   "spark": "[93.7, 94.03, 94.24, 93.96, 93.47, 93.47, 93.29, 92.9]"
   },
   {
    "group": "Money",
    "name": "US 10-year yield",
    "symbol": "^TNX",
-   "last": 4.91,
-   "chg_pct": -2.77,
-   "as_of": "2026-11-20",
+   "last": 4.96,
+   "chg_pct": 0.98,
+   "as_of": "2026-11-23",
    "why": "Higher yields pressure growth stocks",
-   "spark": "[5.0, 5.1, 5.15, 5.12, 5.1, 5.07, 5.05, 4.91]"
+   "spark": "[5.1, 5.15, 5.12, 5.1, 5.07, 5.05, 4.91, 4.96]"
   },
   {
    "group": "Commodities",
    "name": "Brent crude",
    "symbol": "BZ=F",
-   "last": 88.29,
-   "chg_pct": -4.62,
+   "last": 86.83,
+   "chg_pct": -6.2,
    "as_of": "2026-11-23",
    "why": "India imports its oil: higher is worse",
-   "spark": "[95.82, 95.84, 92.44, 93.14, 91.95, 91.98, 92.57, 88.29]"
+   "spark": "[95.82, 95.84, 92.44, 93.14, 91.95, 91.98, 92.57, 86.83]"
   },
   {
    "group": "Commodities",
    "name": "Gold",
    "symbol": "GC=F",
-   "last": 3621.2,
-   "chg_pct": 3.01,
+   "last": 3674.9,
+   "chg_pct": 4.54,
    "as_of": "2026-11-23",
    "why": "Your largest holding follows this",
-   "spark": "[3885.3, 3886.3, 3853.0, 3864.2, 3741.9, 3685.5, 3515.4, 3621.2]"
+   "spark": "[3885.3, 3886.3, 3853.0, 3864.2, 3741.9, 3685.5, 3515.4, 3674.9]"
   },
   {
    "group": "Commodities",
    "name": "Silver",
    "symbol": "SI=F",
-   "last": 42.4,
-   "chg_pct": 3.33,
+   "last": 43.55,
+   "chg_pct": 6.13,
    "as_of": "2026-11-23",
    "why": "Your second-largest holding",
-   "spark": "[49.97, 49.03, 46.78, 47.29, 45.0, 44.32, 41.03, 42.4]"
+   "spark": "[49.97, 49.03, 46.78, 47.29, 45.0, 44.32, 41.03, 43.55]"
   }
  ]
 }
