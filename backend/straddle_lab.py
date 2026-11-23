@@ -152,7 +152,7 @@ def features(days: list[date], dclose: dict, dopen: dict, vclose: dict) -> dict:
 
 
 # ------------------------------------------------------------------ the replay
-def path(bars_n: dict, bars_v: dict, d: date, entry: str, exp: date, strike_rule: str, f: dict, trading: set = frozenset()) -> dict | None:
+def path(bars_n: dict, bars_v: dict, d: date, entry: str, exp: date, strike_rule: str, f: dict, trading: set = frozenset(), k_shift: float | None = None) -> dict | None:
     """Straddle value at the entry bar and every later 15-minute close until 15:15."""
     times = sorted(t for t in bars_n if t >= ENTRIES[entry] and t <= EXIT_BAR)
     if not times or times[0] != ENTRIES[entry] or EXIT_BAR not in bars_n:
@@ -162,6 +162,8 @@ def path(bars_n: dict, bars_v: dict, d: date, entry: str, exp: date, strike_rule
     K = round(S0 / 50) * 50
     if strike_rule != "atm" and abs(move) >= 0.003:
         K += (-50 if move > 0 else 50) * (1 if strike_rule == "with" else -1)      # "with": the call side in the money, so the straddle leans with the move
+    if k_shift is not None:
+        K = round(S0 / 50) * 50 + k_shift
     dte = (exp - d).days
     vals = []
     for t in times:
@@ -268,9 +270,16 @@ def train(data: dict, today: date) -> dict:
                 r, why = pnl_rs(p["vals"], tgt, stp)
                 results.setdefault(key, []).append((d, r, why, f))
     ceo = {}
-    for d, entry, xsel, srule, p in rows:                                       # the CEO's rule: 09:30-10:00 entry, this week's expiry, at the money, trailing exits, every day
-        if entry == "10:00" and xsel == "this week" and srule == "atm":
-            r, why = trail_rs(p["vals"])
+    for d in idays:                                                             # the CEO's rule as it trades: decided at 10:00, this week's expiry, two strikes toward the
+        b = bn[d]                                                               # morning's move (or the move since yesterday, or the gap), +50% target, -35% stop, out by 15:15
+        if "09:45" not in b:
+            continue
+        o, s0 = dn[d][1], b["09:45"]
+        mo, mp, gp = (s0 / o - 1) * 100, (s0 / F[d]["prev_close"] - 1) * 100, F[d]["gap"]
+        dirn = (1 if mo > 0 else -1) if abs(mo) >= 0.15 else (1 if mp > 0 else -1) if abs(mp) >= 0.3 else (1 if gp > 0 else -1) if abs(gp) >= 0.3 else 0
+        p = path(b, bv.get(d, {}), d, "10:00", expiry_on(d, trading), "atm", F[d], trading, k_shift=-100 * dirn)
+        if p:
+            r, why = pnl_rs(p["vals"], 0.5, 0.35)
             ceo.setdefault("all", []).append((d, r, why, p["dte"]))
     cond_rows = {}
     for d, entry, xsel, srule, p in rows:
@@ -294,7 +303,7 @@ def train(data: dict, today: date) -> dict:
     ceo_rule = {"every_day": stats([x[1] for x in cl]), "near_expiry_0_4_days": stats([x[1] for x in near]),
                 "train": stats([x[1] for x in near if x[0] <= TRAIN_TO]), "test": stats([x[1] for x in near if x[0] >= TEST_FROM]),
                 "by_year": {str(y): stats([x[1] for x in near if x[0].year == y]) for y in sorted({x[0].year for x in near})},
-                "exits": {w: sum(1 for x in near if x[2] == w) for w in ("stop", "trailing stop", "time")}, "conditions": conditions}
+                "exits": {w: sum(1 for x in near if x[2] == w) for w in ("target", "stop", "time")}, "conditions": conditions}
     s_ = ceo_rule["near_expiry_0_4_days"]
     ceo_rule["note"] = (f"replayed on {s_.get('n', 0)} near-expiry days since 2022 with model prices from India VIX, this exact rule won {s_.get('win_rate')}% of days and averaged "
                         f"Rs {s_.get('avg_rs')} a day (total Rs {s_.get('total_rs')}); the desk's live record decides from here.")

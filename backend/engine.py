@@ -889,11 +889,12 @@ def run() -> None:
                                  "fc": ((fc.get("views") or {}).get("Nifty 50") or {}).get("score") if fc.get("day") == today else None}
                         oh_ = n.get("ohlc") or {}
                         pc_ = (sdl["closes"][-1][1] if sdl["closes"] else None) or prev_n
-                        morn_ = {"range_pct": round((float(oh_["high"]) - float(oh_["low"])) / pc_ * 100, 2), "move_open_pct": round((spot / float(oh_["open"]) - 1) * 100, 2)} \
+                        morn_ = {"range_pct": round((float(oh_["high"]) - float(oh_["low"])) / pc_ * 100, 2), "move_open_pct": round((spot / float(oh_["open"]) - 1) * 100, 2),
+                                 "move_prev_pct": round((spot / pc_ - 1) * 100, 2)} \
                             if oh_.get("high") and oh_.get("low") and oh_.get("open") and pc_ else {}
                         cond = D.straddle_conditions({**fv0, **morn_, "vix_now": round(vixq, 2)}, news_) if fv0 else {"go": False, "lean": 0, "reasons": ["today's VIX and gap are not known yet"], "go_signals": [], "skip_signals": []}
                         cond["news"] = news_
-                        ctx["straddle"] = {"ok": True, "mode": "ceo", "quant": True, "trail": True, "expiry": exps[0], "entry": "10:00", "stop": 0.25, "target": None, "conditions": cond,
+                        ctx["straddle"] = {"ok": True, "mode": "ceo", "quant": True, "trail": False, "expiry": exps[0], "entry": "10:00", "stop": 0.35, "target": 0.5, "conditions": cond,
                                            "rule": {"entry": "10:00, after watching the first 45 minutes", "expiry": "this week", "strike": "chosen by the quant", "filter": "movement days: VIX rising, a big gap or strong news (the CEO's rule)"},
                                            "trained": sdl.get("view"), "backtest_note": cr_.get("note", "")}
                         sh_ = xb.get("straddle_sheet") or {}

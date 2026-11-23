@@ -252,16 +252,17 @@ def _greeks(rows: list[dict], strike: float, kind: str) -> dict:
 
 
 def straddle_conditions(f: dict, news: dict) -> dict:
-    """Whether today is a day for a bought straddle, from India VIX, the gap and the news, and which way to lean the strike.
-    f: vix (yesterday's close), vix_now, vix_chg (% since yesterday's close), vix_pct (1-year percentile), gap (% open against yesterday's close),
-    range_pct (the morning's high minus low, % of yesterday's close) and move_open_pct (% from today's open), read at 10:00 after the first 45 minutes.
-    news: strong (market-moving signals in the last hour, |score| 4+), net (their positive minus negative count), macro (today's RBI, shock or
-    geopolitics headlines), mood (the Claude brief's mood), fc (the morning forecast score, + up / - down).
-    In the 2022-2026 replay, days with VIX up 3% or more by 10:00, a 1%+ gap, a wide first 45 minutes or a 0.4%+ move from the open lost the least;
-    calm mornings and falling-VIX days lost the most."""
-    reasons, go = [], []
+    """At 10:00, after the first 45 minutes: which way the real movement is going, how strongly to lean the strike, and how much the conditions
+    favour a straddle today. The desk buys the straddle every trading day, as it always has; these only lean the strike and rate the day.
+    f: vix, vix_now, vix_chg (% since yesterday's close), vix_pct, gap (% open against yesterday's close), range_pct (first 45 minutes, high to
+    low), move_open_pct (% from today's open by 10:00), move_prev_pct (% from yesterday's close by 10:00).
+    news: strong, net, macro, mood, fc (as before).
+    Lean: two strikes toward the morning's move from the open (0.15%+), even when that reverses the gap; with no clear morning move, toward the
+    move since yesterday's close (0.3%+); at the money only when the market is flat. In the 2022-2026 replay, two strikes toward the morning's
+    move did best of the strike choices tested; one strike against it did worst."""
     vc, gap = float(f.get("vix_chg") or 0), float(f.get("gap") or 0)
-    rng, mo = f.get("range_pct"), f.get("move_open_pct")
+    rng, mo, mp = f.get("range_pct"), f.get("move_open_pct"), f.get("move_prev_pct")
+    go, caution = [], []
     if vc >= 3:
         go.append(f"India VIX is up {vc:.1f}% since yesterday's close ({f.get('vix')} to {f.get('vix_now')}): the market is pricing bigger moves")
     if abs(gap) >= 1.0:
@@ -274,30 +275,30 @@ def straddle_conditions(f: dict, news: dict) -> dict:
         go.append(f"{news['strong']} strong news signals in the last hour")
     if news.get("macro"):
         go.append("market-wide news today: " + "; ".join(news["macro"][:2]))
-    skip = []
-    if vc <= -5 and abs(gap) < 1.0:
-        skip.append(f"India VIX is falling ({vc:.1f}%): option prices are shrinking, which hurts a bought straddle twice")
+    if vc <= -5:
+        caution.append(f"India VIX is falling ({vc:.1f}%): option prices are shrinking")
     if (f.get("vix_pct") or 0) >= 80 and vc < 1:
-        skip.append(f"India VIX is in the top fifth of its year ({f.get('vix_pct')}th percentile) and not rising: expensive options that tend to cheapen")
+        caution.append(f"India VIX is in the top fifth of its year ({f.get('vix_pct')}th percentile) and not rising")
     if not go:
-        skip.append(f"a calm morning: VIX change {vc:+.1f}%, gap {gap:+.2f}%" + (f", first 45 minutes {rng:.2f}% high to low, {mo:+.2f}% from the open" if rng is not None and mo is not None else "")
-                    + f", {news.get('strong') or 0} strong news signals; a straddle needs movement")
-    mdir = (1 if mo > 0 else -1) if mo is not None and abs(mo) >= 0.4 else 0
-    gdir = (1 if gap > 0 else -1) if abs(gap) >= 0.6 else 0
-    votes = [gdir or mdir, (1 if (news.get("net") or 0) > 0 else -1) if abs(news.get("net") or 0) >= 2 else 0,
-             (1 if news.get("mood") == "bullish" else -1 if news.get("mood") == "bearish" else 0), (1 if (news.get("fc") or 0) > 0.15 else -1 if (news.get("fc") or 0) < -0.15 else 0)]
-    if gdir and mdir and gdir != mdir:
-        votes[0] = 0                          # the gap is being reversed by the morning: no lean
-    elif mdir and gdir == mdir:
-        votes.append(mdir)                    # gap and morning agree: that counts as a second vote
-    lean = 0
-    if votes[0] and sum(1 for v in votes[1:] if v == votes[0]) >= 1 and not any(v == -votes[0] for v in votes[1:]):
-        lean = votes[0]                       # a big gap that the news or the forecast agrees with: lean one strike with it (replay: slightly better than neutral)
-    reasons = go + skip
-    return {"go": bool(go) and not skip, "lean": lean, "reasons": reasons, "go_signals": go, "skip_signals": skip, "votes": votes}
+        caution.append(f"a calm morning: VIX {vc:+.1f}%, gap {gap:+.2f}%" + (f", first 45 minutes {rng:.2f}% high to low, {mo:+.2f}% from the open" if rng is not None and mo is not None else ""))
+    if mo is not None and abs(mo) >= 0.15:
+        lean, basis = (1 if mo > 0 else -1), f"the morning's move from the open ({mo:+.2f}%)" + (", which is reversing the gap" if abs(gap) >= 0.3 and (gap > 0) != (mo > 0) else "")
+    elif mp is not None and abs(mp) >= 0.3:
+        lean, basis = (1 if mp > 0 else -1), f"the move since yesterday's close ({mp:+.2f}%)"
+    elif abs(gap) >= 0.3:
+        lean, basis = (1 if gap > 0 else -1), f"the gap ({gap:+.2f}%)"
+    else:
+        lean, basis = 0, "a flat market: at the money"
+    agree = [x for x in ((1 if (news.get("net") or 0) >= 2 else -1 if (news.get("net") or 0) <= -2 else 0), (1 if news.get("mood") == "bullish" else -1 if news.get("mood") == "bearish" else 0),
+                         (1 if (news.get("fc") or 0) > 0.15 else -1 if (news.get("fc") or 0) < -0.15 else 0)) if x]
+    support = sum(1 for x in agree if x == lean) if lean else 0
+    against = sum(1 for x in agree if x == -lean) if lean else 0
+    conf = "High" if len(go) >= 2 and not caution else "Normal" if go else "Low"
+    return {"go": True, "lean": lean, "steps": 2 if lean else 0, "basis": basis, "confidence": conf, "news_support": support, "news_against": against,
+            "reasons": go + caution, "go_signals": go, "skip_signals": caution}
 
 
-def pick_straddle_strike(rows: list[dict], spot: float, days_left: float, steps: int = 2, lean: int = 0) -> tuple[float | None, list[dict]]:
+def pick_straddle_strike(rows: list[dict], spot: float, days_left: float, steps: int = 2, lean: int = 0, lean_steps: int = 2) -> tuple[float | None, list[dict]]:
     """The quant's strike for a bought straddle (buy the call and the put of one strike). For the strikes around the index it compares:
     the cost against the move the options market expects before expiry (cheaper is better), how evenly the profit zone sits on both sides
     (the same move up or down should pay, so the result does not depend on direction), the two deltas (together close to zero), the bid-ask
@@ -335,6 +336,14 @@ def pick_straddle_strike(rows: list[dict], spot: float, days_left: float, steps:
     if not sheet:
         return None, []
     best = min(sheet, key=lambda x: x["score"])
+    if lean:                                  # lean with the real movement: the strike lean_steps below (up-move) or above (down-move) the money, so the leg
+        step = (ks[i + 1] - ks[i]) if i + 1 < len(ks) else 50.0       # on the moving side is in the money and pays more than the other leg loses
+        for n_ in range(lean_steps, 0, -1):
+            want = atm - lean * step * n_
+            hit = next((x for x in sheet if x["strike"] == want), None)
+            if hit:
+                best = hit
+                break
     for x in sheet:
         x["chosen"] = x is best
     return best["strike"], sheet
@@ -429,14 +438,11 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
         exp_ = sd.get("expiry") if name == "long_straddle" and sd.get("expiry") else ctx["expiry"]
         if name == "long_straddle" and sd.get("quant"):
             cond_ = sd.get("conditions") or {"go": True, "lean": 0, "reasons": []}
-            if not cond_.get("go"):
-                book["straddle_sheet"] = {"day": day, "at": now.strftime("%H:%M"), "expiry": exp_, "spot": spot, "sheet": [], "conditions": cond_}
-                continue                      # not a movement day (VIX, gap and news): no straddle today
-            k_, sheet_ = pick_straddle_strike(rows, spot, days_to(exp_, now) * 5 / 7, lean=cond_.get("lean", 0))
+            k_, sheet_ = pick_straddle_strike(rows, spot, days_to(exp_, now) * 5 / 7, lean=cond_.get("lean", 0), lean_steps=cond_.get("steps", 2) or 2)
             book["straddle_sheet"] = {"day": day, "at": now.strftime("%H:%M"), "expiry": exp_, "spot": spot, "sheet": sheet_, "conditions": cond_}
             best_ = next((x for x in sheet_ if x.get("chosen")), None)
-            if not best_ or best_["cost_vs_move"] > 1.1:
-                continue                      # no liquid strike, or the straddle costs more than the move the market expects: skip today
+            if not best_:
+                continue                      # no strike with a two-sided market right now
             sd = {**sd, "strike": k_}
         b = _build(name, spot, prev, rows, sd)
         if not b:
@@ -486,13 +492,15 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
         if name == "long_straddle" and sd.get("quant"):
             sh_ = next((x for x in (book.get("straddle_sheet") or {}).get("sheet") or [] if x.get("chosen")), {})
             cd_ = (book.get("straddle_sheet") or {}).get("conditions") or {}
-            th["data"] += ["Why today: " + "; ".join(cd_.get("go_signals") or ["(conditions not recorded)"]) + "."]
+            th["data"] += [f"Conditions at 10:00 ({cd_.get('confidence', '—')} confidence): " + "; ".join(cd_.get("reasons") or ["(not recorded)"]) + "."]
             if cd_.get("lean"):
-                th["data"] += [f"Strike leans one step {'up' if cd_['lean'] > 0 else 'down'} with the gap, because the news or the forecast agrees."]
+                th["data"] += [f"Strike leans {cd_.get('steps', 2)} strikes {'up' if cd_['lean'] > 0 else 'down'} with {cd_.get('basis')}: the {'call' if cd_['lean'] > 0 else 'put'} is in the money, "
+                               f"so a continued move pays on that leg more than the other leg loses; a sharp turn the other way still pays through the other leg." +
+                               (f" The news or the forecast agrees ({cd_.get('news_support')})." if cd_.get("news_support") else "") + (f" Some news points the other way ({cd_.get('news_against')})." if cd_.get("news_against") else "")]
             th["data"] += [f"The quant chose strike {sh_.get('strike'):,.0f} from {len((book.get('straddle_sheet') or {}).get('sheet') or [])} strikes: cost {sh_.get('cost')} points, "
                            f"{sh_.get('cost_vs_move')}x the move the market expects; it pays beyond {sh_.get('be_up'):,} up ({sh_.get('need_up_pct')}%) or {sh_.get('be_dn'):,} down "
                            f"({sh_.get('need_dn_pct')}%); calls and puts together delta {sh_.get('net_delta')}; spreads up to {sh_.get('spread_pct')}%.",
-                           "Exits: stop at 25% below the cost; once the straddle is 20% up the stop moves to 5% above cost and then trails 15% below the best value; out by 15:15.",
+                           "Exits (unchanged): take profit at 50% above the cost, stop at 35% below it, out by 15:15.",
                            f"The historical backtest disagrees with trading this every day: {sd.get('backtest_note', '')}"]
         if name == "long_straddle" and sd.get("rule"):
             tr_, te_, kn_ = sd.get("train") or {}, sd.get("test") or {}, sd.get("knn") or {}
