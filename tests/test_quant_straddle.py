@@ -1,0 +1,89 @@
+import sys
+from datetime import date, datetime, timedelta, timezone
+from pathlib import Path
+
+import pytest
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "quant"))
+from src.agent import trainer as TR                       # noqa: E402
+from src.backtest.costs import charges                    # noqa: E402
+from src.backtest.straddle_engine import Backtester, Config, as_rows   # noqa: E402
+from src.data.upstox_client import Candle                 # noqa: E402
+from src.models import regime_pricing as RP               # noqa: E402
+from src.reports import report as RPT                     # noqa: E402
+
+IST = timezone(timedelta(hours=5, minutes=30))
+
+
+def test_black76_parity_greeks_and_modes():
+    S, K, T, s = 25500.0, 25500.0, RP.t_years(2 * 375), 0.14
+    c, p = RP.black76(S, K, T, s, "CE"), RP.black76(S, K, T, s, "PE")
+    import math
+    F = S * math.exp((0.065 - 0.012) * T)
+    assert abs((c.price - p.price) - math.exp(-0.065 * T) * (F - K)) < 1e-6          # put-call parity on the futures price
+    assert 0.45 < c.delta < 0.6 and -0.55 < p.delta < -0.4 and c.gamma > 0 and c.theta_per_day < 0 and c.vega_per_pt > 0
+    assert RP.mode_of(RP.sigma_eff(0.12)) == "MODE_1_QUIET" and RP.mode_of(RP.sigma_eff(0.15)) == "MODE_2_VOLATILE" and RP.mode_of(RP.sigma_eff(0.12, 1, 1, 1)) == "MODE_3_HIGH_VOLATILITY"
+    assert RP.sigma_eff(0.2, -5, -5, -5) == pytest.approx(0.05)                          # floored at 0.25x
+    assert RP.trading_minutes_left(datetime(2026, 11, 20, 15, 0), date(2026, 11, 23)) == 30 + 375
+
+
+def test_charges_both_legs():
+    ch = charges(17000.0, 20000.0)
+    assert ch["brokerage"] == 80 and ch["stt"] == 20.0 and 120 < ch["total"] < 140
+
+
+def test_permission_gate_blocks_training(tmp_path, monkeypatch):
+    monkeypatch.delenv("QUANT_APPROVALS", raising=False)
+    with pytest.raises(TR.PermissionDenied):
+        TR.train([], tmp_path)
+    (tmp_path / "APPROVALS").write_text("APPROVE_AGENT_TRAINING\n")
+    assert TR.approved("APPROVE_AGENT_TRAINING", tmp_path) and not TR.approved("APPROVE_PAPER_EXECUTION", tmp_path)
+    assert TR.WalkForward(2).splits(["2025-01", "2025-02", "2025-03", "2025-04"]) == [(["2025-01", "2025-02"], "2025-03"), (["2025-01", "2025-02", "2025-03"], "2025-04")]
+
+
+class FakeClient:
+    """One expiry, one trading day: NIFTY rises 1% from 10:00 to 13:00; the 25000 call rises, the put falls."""
+    calls = cache_hits = 0
+
+    def __init__(self):
+        self.day = date(2026, 11, 17)
+
+    def _bars(self, f):
+        out = []
+        for i in range(0, 376):
+            t = datetime(2026, 11, 17, 9, 15, tzinfo=IST) + timedelta(minutes=i)
+            v = f(i)
+            out.append(Candle(t, v, v, v, v, 100, 10))
+        return out
+
+    def index_candles(self, key, unit, interval, f, t, chunk_days=27):
+        if unit == "days":
+            return [Candle(datetime(2026, 11, 16, tzinfo=IST), 25000, 25000, 25000, 25000 if "Nifty" in key else 14.0, 0, 0),
+                    Candle(datetime(2026, 11, 17, tzinfo=IST), 25000, 25300, 24990, 25250 if "Nifty" in key else 15.0, 0, 0)]
+        if "VIX" in key:
+            return self._bars(lambda i: 14.5)
+        return self._bars(lambda i: 25000 + max(0, min(i - 45, 180)) * 250 / 180)
+
+    def expired_expiries(self, u):
+        return ["2026-11-17"]
+
+    def expired_contracts(self, e, u=None):
+        return [{"strike_price": 25000.0, "instrument_type": k, "instrument_key": f"K{k}", "trading_symbol": f"NIFTY 25000 {k}", "lot_size": 65} for k in ("CE", "PE")]
+
+    def expired_candles(self, key, interval, f, t):
+        if key == "KCE":
+            return self._bars(lambda i: 60 + max(0, min(i - 45, 180)) * 200 / 180)
+        return self._bars(lambda i: 60 - max(0, min(i - 45, 180)) * 50 / 180)
+
+
+def test_engine_trades_one_day_on_real_style_candles(monkeypatch):
+    import src.data.macro_news_feed as MF
+    monkeypatch.setattr(MF, "load_all", lambda s, e, nb=None: {"nifty_bank": nb or {}})
+    cfg = Config(start=date(2026, 11, 17), end=date(2026, 11, 17), entries=("10:00",), targets=(0.5,), stops=(0.35,), policies=("atm",))
+    rows = as_rows(Backtester(FakeClient(), cfg, log=lambda *a: None).run())
+    assert len(rows) == 1
+    r = rows[0]
+    assert r["dte"] == 0 and r["strike"] == 25000 and r["mode"] == "MODE_2_VOLATILE" and r["exit_reason"] == "TARGET_50PCT" and r["net_pnl_inr"] > 0
+    assert r["data_source_status"] == "VERIFIED_HISTORICAL" and r["lot_size"] == 65 and r["combined_entry_premium"] > 120
+    s = RPT.summary(rows, {"x": "test"}, cfg)
+    assert s["overall_all_configs"]["trades"] == 1 and s["overall_all_configs"]["win_rate_pct"] == 100.0
