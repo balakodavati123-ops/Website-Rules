@@ -1,73 +1,68 @@
 {
- "mood": "bearish",
- "brief": "A global AI-led sell-off hit Nasdaq, Asian markets and gold, and GIFT Nifty signals a sharply lower open. Indian benchmarks have held up better than peers, but the RBI rate hike and falling bullion add pressure.",
+ "mood": "mixed",
+ "brief": "Indian shares opened higher on foreign inflows as the global AI-trade reversal continues, with IT stocks like TCS and Tech Mahindra rallying and US futures rebounding. Metals remain volatile after a week of mayhem, and Tata Steel fell nearly 5% on its APL Apollo Tubes deal.",
  "themes": [
-  "Global AI sell-off",
-  "Gold and metals rout",
-  "RBI rate hike",
-  "Nvidia results cushion"
+  "Anti-AI trade lifts Indian IT",
+  "Metals and copper volatility",
+  "Tata Steel and APL Apollo deal",
+  "Strong festive auto retail"
  ],
  "companies": [
   {
-   "name": "Muthoot Finance",
+   "name": "Tata Steel",
    "tone": "negative",
-   "why": "Gold rout triggers worst week since April 2025"
+   "why": "Shares plunge nearly 5% on APL Apollo Tubes stake buy"
   },
   {
-   "name": "Titan",
-   "tone": "negative",
-   "why": "Jewellers fall up to 5% on bullion slump"
+   "name": "APL Apollo Tubes",
+   "tone": "neutral",
+   "why": "Tata Steel to acquire 26.38% stake"
   },
   {
-   "name": "Kalyan Jewellers",
-   "tone": "negative",
-   "why": "Falls up to 5% as gold crashes"
-  },
-  {
-   "name": "PB Fintech",
-   "tone": "negative",
-   "why": "Shares fall as co-founder steps down from executive role"
-  },
-  {
-   "name": "Alkem Laboratories",
-   "tone": "negative",
-   "why": "USFDA warning letter for Daman facility"
-  },
-  {
-   "name": "Voltas",
+   "name": "TCS",
    "tone": "positive",
-   "why": "JV with Atomberg for AC compressors"
+   "why": "Surges up to 5% as anti-AI trade lifts IT"
   },
   {
-   "name": "Dalmia Bharat",
-   "tone": "neutral",
-   "why": "Board to consider share buyback November 23"
-  },
-  {
-   "name": "Paytm",
-   "tone": "neutral",
-   "why": "Investing up to Rs 200 crore in Funding Societies units"
-  },
-  {
-   "name": "LT Foods",
-   "tone": "neutral",
-   "why": "Acquiring US-based Maya Kaimal parent"
-  },
-  {
-   "name": "Go Digit",
+   "name": "Tech Mahindra",
    "tone": "positive",
-   "why": "IFSCA approval for GIFT City insurance office"
+   "why": "Surges up to 5% as anti-AI trade lifts IT"
+  },
+  {
+   "name": "Westlife Foodworld",
+   "tone": "negative",
+   "why": "Goldman Sachs downgraded it to Sell"
+  },
+  {
+   "name": "SG Mart",
+   "tone": "positive",
+   "why": "Hits 52-week high as board considers fundraiser"
+  },
+  {
+   "name": "Ashoka Buildcon",
+   "tone": "positive",
+   "why": "Jumps 8% on Rs 4,223 crore project wins"
+  },
+  {
+   "name": "Hindalco",
+   "tone": "negative",
+   "why": "Falls 2% as copper slides below $12,000"
+  },
+  {
+   "name": "Infosys",
+   "tone": "negative",
+   "why": "Nirmal Bang stays bearish on large-cap IT"
   }
  ],
- "global": "Nasdaq entered a bear market and Asian indices fell sharply despite Anthropic's IPO, though Nvidia's strong results lifted US futures.",
+ "global": "US stock futures are rebounding after last week's bloodbath, though a week of mayhem rocked metals markets and Asian authorities are stepping in to support stocks.",
  "risks": [
-  "AI sell-off may not be over, per IMF",
-  "Fed and RBI rate hike worries",
-  "Further falls in gold and metals"
+  "AI-trade reversal may be volatile",
+  "Copper and metals sell-off",
+  "Large-cap IT bearish brokerage views"
  ],
- "time": "21 Nov 08:55",
- "at": 1795231506.465674,
- "day": "2026-11-21",
+ "time": "23 Nov 11:20",
+ "at": 1795413057.070344,
+ "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "n": 40
 }

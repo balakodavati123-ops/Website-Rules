@@ -1,54 +1,627 @@
 {
- "updated_at": "2026-11-23T06:22:45+05:30",
- "scans": 272,
+ "updated_at": "2026-11-23T11:23:17+05:30",
+ "scans": 444,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "06:22:45"
+   "at": "11:23:17"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "06:22:45"
+   "at": "11:23:17"
   },
   "Moneycontrol": {
-   "ok": false,
-   "items": 0,
-   "at": "06:22:45"
+   "ok": true,
+   "items": 15,
+   "at": "11:23:17"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "06:22:45"
+   "at": "11:23:17"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "06:22:45"
+   "at": "11:23:17"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "06:22:45"
+   "at": "11:23:17"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "06:22:45"
+   "at": "11:23:17"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "06:22:45"
+   "at": "11:23:17"
   },
   "Google News": {
    "ok": true,
-   "items": 7,
-   "at": "06:22:45"
+   "items": 9,
+   "at": "11:23:17"
   }
  },
  "signals": [
+  {
+   "id": "N112317-24",
+   "t": "11:23:17",
+   "ts": 1795413197.560608,
+   "pub": "11:22",
+   "lag_s": 30,
+   "symbol": "SWSOLAR",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "SWSOLAR: Press Release",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/SWSOLAR_23112026112208_PRESSRELEASE.pdf",
+   "kind": "filing",
+   "status": "not taken: the day's trade limit is reached",
+   "px0": 163.68,
+   "px": 163.68,
+   "move_pct": 0.0
+  },
+  {
+   "id": "N112317-23",
+   "t": "11:23:17",
+   "ts": 1795413197.560608,
+   "pub": "11:14",
+   "lag_s": 501,
+   "symbol": "MARKSANS",
+   "tone": "negative",
+   "score": -1.5,
+   "emotion": "Fear",
+   "why": [
+    "observations"
+   ],
+   "headline": "Marksans Pharma shares fall 3% after USFDA flags six observations at Goa facility",
+   "source": "CNBC-TV18",
+   "link": "https://www.cnbctv18.com/market/marksans-pharma-share-price-fall-extends-two-session-loss-us-fda-form-483-six-observations-goa-plant-inspection-20039668.htm",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 281.3,
+   "px": 281.3,
+   "move_pct": 0.0,
+   "ai": {
+    "verdict": "confirm",
+    "why": "Specific USFDA Form 483 news and the price fell over 3%"
+   }
+  },
+  {
+   "id": "N111533-22",
+   "t": "11:15:33",
+   "ts": 1795412733.334388,
+   "pub": "11:06",
+   "lag_s": 566,
+   "symbol": "WESTLIFE",
+   "tone": "negative",
+   "score": -3,
+   "emotion": "Fear",
+   "why": [
+    "downgraded"
+   ],
+   "headline": "Here's why Goldman Sachs downgraded Westlife Foodworld to 'Sell'; check target",
+   "source": "CNBC-TV18",
+   "link": "https://www.cnbctv18.com/market/westlife-foodworld-share-price-goldman-sachs-downgrades-to-sell-key-reasons-why-target-downside-20039663.htm",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 661.05,
+   "px": 661.0,
+   "move_pct": -0.01,
+   "ai": {
+    "verdict": "confirm",
+    "why": "Fresh, specific Goldman downgrade to Sell; price has not moved yet"
+   }
+  },
+  {
+   "id": "N110748-21",
+   "t": "11:07:48",
+   "ts": 1795412268.969388,
+   "pub": "10:49",
+   "lag_s": 1075,
+   "symbol": "SGMART",
+   "tone": "positive",
+   "score": 4.55,
+   "emotion": "Euphoria",
+   "why": [
+    "52-week high",
+    "rallies"
+   ],
+   "headline": "SG Mart shares zoom over 14% to 52-week high as board to consider fundraiser; stock rallies 217% YTD - Upstox",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQOTBVd3RreURsNnhRWGRSbnlxV3ZqQWdsUHV0QVFxeWxkQ1ZLaVBia0dLbERRTUx1c253T0xmSGJLZGl5YXo1d1drazdQbDJKdnhKcFI5N1dqVW1paXVsZ1VoeEo3WHFodW0zRzB3NzIwUTMxdWxqZlFGY0NUV1ZCdlZ1UlU0alQwakQ0SUx6SG1VaWpKNVBZc08zREgxWE5ERmRyUGlPZ3loY0ZWRUI3MGJNQV85aVFCTUhybWJ3NXFnbmlxZjVrZFZEcFhORXlac1RFdEF3bF92azYyY1JIMnF5VHJqUnZBa19Mcw?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1143.0,
+   "px": 1104.9,
+   "move_pct": -3.33,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Euphoric spike already happened and the price has since turned down"
+   }
+  },
+  {
+   "id": "N110428-20",
+   "t": "11:04:28",
+   "ts": 1795412068.907852,
+   "pub": "10:51",
+   "lag_s": 800,
+   "symbol": "TECHM",
+   "tone": "positive",
+   "score": 2.6,
+   "emotion": "Optimism",
+   "why": [
+    "surge"
+   ],
+   "headline": "TCS, Tech Mahindra Surge Up To 5% As Global Anti AI Trade Lifts Indian IT Stocks",
+   "source": "NDTV Profit",
+   "link": "https://www.ndtvprofit.com/markets/it-stocks-jump-tcs-tech-mahindra-surge-up-to-5-percent-as-global-anti-ai-trade-lifts-sentiment-12364388#publisher=newsstand",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1796.0,
+   "px": 1799.5,
+   "move_pct": 0.19,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Market-wide IT rally, not company-specific, and price barely moved"
+   }
+  },
+  {
+   "id": "N110428-19",
+   "t": "11:04:28",
+   "ts": 1795412068.907852,
+   "pub": "11:02",
+   "lag_s": 122,
+   "symbol": "ASHOKA",
+   "tone": "positive",
+   "score": 2.6,
+   "emotion": "Optimism",
+   "why": [
+    "jumps"
+   ],
+   "headline": "Ashoka Buildcon share price jumps 8% on  \u20b94,223 crore project wins; stock up 17% in a month | What should investors do?",
+   "source": "Mint",
+   "link": "https://www.livemint.com/market/stock-market-news/ashoka-buildcon-share-price-jumps-8-on-rs-4-223-crore-project-wins-stock-up-17-in-a-month-what-should-investors-do-11795409853245.html",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 115.14,
+   "px": 115.22,
+   "move_pct": 0.07,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Order wins already priced in after 8% jump; price now flat"
+   }
+  },
+  {
+   "id": "N105200-18",
+   "t": "10:52:00",
+   "ts": 1795411320.653864,
+   "pub": "09:55",
+   "lag_s": 3373,
+   "symbol": "HINDALCO",
+   "tone": "negative",
+   "score": -1.5,
+   "emotion": "Fear",
+   "why": [
+    "slides"
+   ],
+   "headline": "Hindalco shares fall 2% to \u20b9910.30 after a 3% gap down at the open, as copper slides below $12,000 a ton - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNV0VJa2g1cVJJMEdwcDltNEpfU1dXQ1llck5iaVVZeHZrZmZ6eXVDVjlSTktvWUhnMV9LU2JJZ05DbXB6U2c1V1VjN19ObWdvMDV0X2pKTWwyOWxiWThicXlzckRMYWxneldzTEg2M09ZbUg4NUVfZTViQWZ2Sms3VjJ3X2VqYTU1Zm13OEZBS0ZORTBqckl2MEF2NWNiN1FkcGpJY1NrZVQ0MUNTLThQV0gwT2ZSXy1mYm9palpmWDRqQ1dZejZzTW1RRHJLcF92Ymcxc1UxTFJ0OWsyTkhkejZrMXE?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 910.85,
+   "px": 911.65,
+   "move_pct": 0.09,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Over an hour old and already priced in; price flat since"
+   }
+  },
+  {
+   "id": "N102232-17",
+   "t": "10:22:32",
+   "ts": 1795409552.600472,
+   "pub": "10:19",
+   "lag_s": 211,
+   "symbol": "SGMART",
+   "tone": "positive",
+   "score": 5.2,
+   "emotion": "Euphoria",
+   "why": [
+    "record high",
+    "surges"
+   ],
+   "headline": "Multibagger stock: SG Mart surges 13% to record high on fundraise buzz",
+   "source": "Business Standard",
+   "link": "https://www.business-standard.com/markets/news/multibagger-stock-sg-mart-surges-13-to-record-high-on-fundraise-buzz-126112300224_1.html",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1180.5,
+   "px": 1104.9,
+   "move_pct": -6.4,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Euphoric spike already happened and the price has since turned down"
+   }
+  },
+  {
+   "id": "N101920-16",
+   "t": "10:19:20",
+   "ts": 1795409360.405404,
+   "pub": "10:13",
+   "lag_s": 373,
+   "symbol": "POLYCAB",
+   "tone": "negative",
+   "score": -2.6,
+   "emotion": "Fear",
+   "why": [
+    "target cut"
+   ],
+   "headline": "Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues",
+   "source": "CNBC-TV18",
+   "link": "https://www.cnbctv18.com/market/polycab-india-share-price-target-cut-by-icici-securities-copper-sell-off-continues-20039649.htm",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 7496.5,
+   "px": 7480.0,
+   "move_pct": -0.22,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Broker target cut is opinion tied to the copper move; price barely moved"
+   }
+  },
+  {
+   "id": "N100619-15",
+   "t": "10:06:19",
+   "ts": 1795408579.155151,
+   "pub": "10:02",
+   "lag_s": 226,
+   "symbol": "WEALTH",
+   "tone": "negative",
+   "score": -3,
+   "emotion": "Fear",
+   "why": [
+    "crash"
+   ],
+   "headline": "Gold, silver, bitcoin rates crash: Rich Dad Poor Dad author Robert Kiyosaki has this wealth creation tip for investors",
+   "source": "Mint",
+   "link": "https://www.livemint.com/market/stock-market-news/gold-silver-bitcoin-rates-crash-rich-dad-poor-dad-author-robert-kiyosaki-has-this-wealth-creation-tip-for-investors-11795404307920.html",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 822.0,
+   "px": 822.45,
+   "move_pct": 0.05,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Commentary on gold and bitcoin, not specific company news; price rose"
+   }
+  },
+  {
+   "id": "N093505-14",
+   "t": "09:35:05",
+   "ts": 1795406705.085578,
+   "pub": "09:34",
+   "lag_s": 61,
+   "symbol": "LT",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "LT: Bagging/Receiving of orders/contracts",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/PAM_23112026093338_PressRelease23112026.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 4176.1,
+   "px": 4153.0,
+   "move_pct": -0.55,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Order filing gives no size or value and the price is slightly down"
+   }
+  },
+  {
+   "id": "N093045-13",
+   "t": "09:30:45",
+   "ts": 1795406445.588503,
+   "pub": "09:29",
+   "lag_s": 87,
+   "symbol": "DBL",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "DBL: Bagging/Receiving of orders/contracts",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/DBL_23112026092902_intimation231126.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 402.45,
+   "px": 400.3,
+   "move_pct": -0.53,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Order filing gives no size or value and the price is down"
+   }
+  },
+  {
+   "id": "N092311-12",
+   "t": "09:23:11",
+   "ts": 1795405991.443894,
+   "pub": "09:20",
+   "lag_s": 156,
+   "symbol": "APOLLO",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "acquisition"
+   ],
+   "headline": "Apollo Micro Systems announces acquisition plans for IEC Group - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWERHSF9ySXk3RzQ5bGhzUDdDQ200SHJFMGlDbHh1WEVtblRXOHF0czlNOHd5Nl9XRDYweFhwSWRjNC16cE5JcjQxVjFEcFlrNmZQUi1jaEI3U3F5dHlzTkZYZGw2WWVUT1pndW9Gcnk2YUVKQi1rTmJORXBKeGV1Rk5BMUw2a0dkMnprdnZ2ZVlLS0w3UnNzMDBqOFQyLUpn?oc=5",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 427.85,
+   "px": 426.85,
+   "move_pct": -0.23,
+   "ai": {
+    "verdict": "confirm",
+    "why": "Specific, fresh acquisition announcement; price has not moved against it"
+   }
+  },
+  {
+   "id": "N091645-11",
+   "t": "09:16:45",
+   "ts": 1795405605.437591,
+   "pub": "09:15",
+   "lag_s": 47,
+   "symbol": "MARKSANS",
+   "tone": "negative",
+   "score": -1.5,
+   "emotion": "Fear",
+   "why": [
+    "observations"
+   ],
+   "headline": "Marksans Pharma receives Form 483 with six procedural observations from USFDA - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOLWxkQXF0WS02WGxtWG4xMTlqWUlEcWNpcHVGM3Z4bk1CY29ON0ItX3pXTW9TcnNJVzYxcVNMVUlFY1VDRlI4aFN6dW41RkhTcXg2THJfai1CdkF0ZTFOdjdwaUEwMUJ4SW12Ym9hRngzbGRJSEU3bG5Zc3Ewc3liNzI5bWNQM0hwYlR0V3U4YVpfaXAzVlFyRHFvRDFvMUU2c3pJMWpUYkVSZ1FoaXRUTVZLYW4?oc=5",
+   "kind": "headline",
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 291.15,
+   "px": 281.3,
+   "move_pct": -3.38,
+   "ai": {
+    "verdict": "confirm",
+    "why": "Specific USFDA Form 483 news and the price fell over 3%"
+   }
+  },
+  {
+   "id": "N091133-10",
+   "t": "09:11:33",
+   "ts": 1795405293.916895,
+   "pub": "09:10",
+   "lag_s": 41,
+   "symbol": "ONEPOINT",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "ONEPOINT: Press Release",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/ONEPOINT_23112026091000_ONEPOINT.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 71.0,
+   "px": 68.96,
+   "move_pct": -2.87,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Vague press release and the price fell over 4%"
+   }
+  },
+  {
+   "id": "N090722-9",
+   "t": "09:07:22",
+   "ts": 1795405042.171461,
+   "pub": "09:06",
+   "lag_s": 51,
+   "symbol": "MARKSANS",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "MARKSANS: General Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/MARKSANS_23112026090618_SEIntimation.pdf",
+   "kind": "filing",
+   "status": "watching: price has not confirmed yet",
+   "px0": 291.0,
+   "px": 281.3,
+   "move_pct": -3.33,
+   "ai": {
+    "verdict": "confirm",
+    "why": "Specific USFDA Form 483 news and the price fell over 3%"
+   }
+  },
+  {
+   "id": "N083002-8",
+   "t": "08:30:02",
+   "ts": 1795402802.067678,
+   "pub": "07:54",
+   "lag_s": 2138,
+   "symbol": "SURYAROSNI",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "jumps"
+   ],
+   "headline": "Surya's Scene Crosses Rs 150 Crore Mark On Day 17, Box Office Collection Jumps On Weekend",
+   "source": "NDTV Profit",
+   "link": "https://www.ndtvprofit.com/entertainment/suryas-scene-crosses-rs-150-crore-mark-on-day-17-box-office-collection-jumps-on-weekend-12363804#publisher=newsstand",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 214.0,
+   "px": 219.66,
+   "move_pct": 2.64,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Box office story about a film, not company news; price moved down"
+   }
+  },
+  {
+   "id": "N080245-7",
+   "t": "08:02:45",
+   "ts": 1795401165.420115,
+   "pub": "08:01",
+   "lag_s": 95,
+   "symbol": "SRD",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Current rally in large-caps a bear market one: veteran investor Shankar Sharma",
+   "source": "Mint",
+   "link": "https://www.livemint.com/market/stock-market-news/current-rally-in-large-caps-a-bear-market-one-veteran-investor-shankar-sharma-11795325109594.html",
+   "kind": "headline",
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 45.0,
+   "px": 45.41,
+   "move_pct": 0.91
+  },
+  {
+   "id": "N075242-6",
+   "t": "07:52:42",
+   "ts": 1795400562.128724,
+   "pub": "07:28",
+   "lag_s": 1457,
+   "symbol": "SOUTHWEST",
+   "tone": "negative",
+   "score": -3.5,
+   "emotion": "Fear",
+   "why": [
+    "pledge",
+    "slump"
+   ],
+   "headline": "South Korean shares slump nearly 3% on AI-driven tech selloff despite policy pledge",
+   "source": "ET Markets",
+   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/south-korean-shares-slump-nearly-3-on-ai-driven-tech-selloff-despite-policy-pledge/articleshow/136086822.cms",
+   "kind": "headline",
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 159.02,
+   "px": 156.99,
+   "move_pct": -1.28
+  },
+  {
+   "id": "N074231-5",
+   "t": "07:42:31",
+   "ts": 1795399951.980864,
+   "pub": "07:35",
+   "lag_s": 425,
+   "symbol": "TATASTEEL",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "acquisition"
+   ],
+   "headline": "TATASTEEL: Acquisition",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/NIDHIFADNAVIS_23112026073427_BSENSE.pdf",
+   "kind": "filing",
+   "status": "watching: price has not confirmed yet",
+   "px0": 173.7,
+   "px": 164.32,
+   "move_pct": -5.4
+  },
+  {
+   "id": "N074231-4",
+   "t": "07:42:31",
+   "ts": 1795399951.980864,
+   "pub": "07:39",
+   "lag_s": 195,
+   "symbol": "TATASTEEL",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "TATASTEEL: General Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/NIDHIFADNAVIS_23112026073828_BSENSE.pdf",
+   "kind": "filing",
+   "status": "watching: price has not confirmed yet",
+   "px0": 173.7,
+   "px": 164.32,
+   "move_pct": -5.4
+  },
+  {
+   "id": "N072229-3",
+   "t": "07:22:29",
+   "ts": 1795398749.369518,
+   "pub": "06:30",
+   "lag_s": 3149,
+   "symbol": "JSWSTEEL",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "surge"
+   ],
+   "headline": "Weekly Recap: EU anti-dumping duty and JSW Steel Q2 profit surge - TradingView",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOUWlRXzVucnZLVmRLSkszVk5UcEtwcnU1Y3lCYWkxVW1LbUVoU1RfamxEbEtzV0FfcWh0U2U3aVRYRzAwSlFhSExaLVEzTlp3NGZNTFpEc09EN2Vjd2JvUXh3dWVFdFZ0Q0NuMHVBdW51ZkNhclctRWViblkxM200cGZOYmFYRjBBQ3VTZU1pZXhlWi1oLTBHNTBpTlNnZGtyR0QyLWVVOXVtQXRVb3UwTmNqdU91RExHQ3ozQ09zMS1iZVU?oc=5",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 1332.5,
+   "px": 1313.0,
+   "move_pct": -1.46
+  },
+  {
+   "id": "N072229-2",
+   "t": "07:22:29",
+   "ts": 1795398749.369518,
+   "pub": "06:30",
+   "lag_s": 3149,
+   "symbol": "AGARIND",
+   "tone": "negative",
+   "score": -2,
+   "emotion": "Fear",
+   "why": [
+    "cuts target"
+   ],
+   "headline": "Weekly Recap: Shares fall, Citi cuts target and Agarwal opposes transfer - TradingView",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQYWJmcDBoNDhtbkNfQTJ1RkRvVTItVzVScm9sRm5XcV85R0ljaGpqZGVLYURSV3VRSkJxdlFNeG93YkROemRQekxQcHFUaEJmdWJiTWVad0dyeFY0eDlyNDhWdTNtWWZpMWwwRjc4aUNkYVN3bHE1TDZxbl9EWVI0UXdVN1NuQnJUcGtsd1dDTm51UXBRNHZ0dlBacmQtcV9zQTlKeGRpc2dBUXZZdThSSHBrUUN3R2g1TjZZTmVNZmUwa2YtSVUyUXVkLU0?oc=5",
+   "kind": "headline",
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 406.95,
+   "px": 400.65,
+   "move_pct": -1.55
+  },
   {
    "id": "N010136-1",
    "t": "01:01:36",
@@ -66,15 +639,18 @@
    "source": "NDTV Profit",
    "link": "https://www.ndtvprofit.com/sports/south-africa-vs-bangladesh-2nd-test-live-streaming-when-and-where-to-watch-sa-vs-ban-match-in-india-12362898#publisher=newsstand",
    "kind": "headline",
-   "status": "new"
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 159.02,
+   "px": 156.99,
+   "move_pct": -1.28
   }
  ],
  "stats": {
-  "last_hour": 0,
-  "positive": 0,
-  "negative": 0,
-  "today": 1,
-  "median_lag_min": null,
-  "new_this_scan": 0
+  "last_hour": 7,
+  "positive": 4,
+  "negative": 3,
+  "today": 24,
+  "median_lag_min": 3.8,
+  "new_this_scan": 2
  }
 }

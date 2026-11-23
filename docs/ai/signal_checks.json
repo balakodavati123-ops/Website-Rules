@@ -1,12 +1,12 @@
 {
- "time": "23 Nov 11:20",
- "at": 1795413057.070344,
+ "time": "23 Nov 15:21",
+ "at": 1795427496.595779,
  "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "checks": {
   "MARKSANS": {
-   "verdict": "confirm",
-   "why": "Specific USFDA Form 483 news and the price fell over 3%"
+   "verdict": "doubt",
+   "why": "USFDA news already reported and the price drop already happened"
   },
   "ONEPOINT": {
    "verdict": "doubt",
@@ -38,7 +38,7 @@
   },
   "WESTLIFE": {
    "verdict": "confirm",
-   "why": "Fresh, specific Goldman downgrade to Sell; price has not moved yet"
+   "why": "Fresh, specific Goldman downgrade to Sell; price has not yet reacted"
   },
   "SGMART": {
    "verdict": "doubt",
@@ -46,7 +46,7 @@
   },
   "TECHM": {
    "verdict": "doubt",
-   "why": "Market-wide IT rally, not company-specific, and price barely moved"
+   "why": "Bonus issue is cosmetic and already announced; price has not reacted"
   },
   "ASHOKA": {
    "verdict": "doubt",
@@ -55,6 +55,82 @@
   "HINDALCO": {
    "verdict": "doubt",
    "why": "Over an hour old and already priced in; price flat since"
+  },
+  "DALBHARAT": {
+   "verdict": "doubt",
+   "why": "Buyback news is old and the stock has traded flat since"
+  },
+  "LOTUSEYE": {
+   "verdict": "doubt",
+   "why": "Routine takeover-regulation disclosure with no detail; price slightly down"
+  },
+  "ICIL": {
+   "verdict": "doubt",
+   "why": "Headline is about a CFO resignation, yet the price rose, so signals conflict"
+  },
+  "HEXT": {
+   "verdict": "doubt",
+   "why": "Minor accreditation renewal; the rally is not reflected in price"
+  },
+  "FSL": {
+   "verdict": "doubt",
+   "why": "Rally on AI pact already given back, so the move is faded"
+  },
+  "GALLANTT": {
+   "verdict": "doubt",
+   "why": "Sympathy move on another company's deal, and price is down"
+  },
+  "SWSOLAR": {
+   "verdict": "doubt",
+   "why": "Vague press release and the price is falling"
+  },
+  "BAIDFIN": {
+   "verdict": "doubt",
+   "why": "Routine resignation filing with no detail; price has not fallen"
+  },
+  "APLAPOLLO": {
+   "verdict": "doubt",
+   "why": "Open offer news already priced in after the 18% fall; price flat"
+  },
+  "TITAGARH": {
+   "verdict": "doubt",
+   "why": "Vague press release and the price is slightly down"
+  },
+  "CHALET": {
+   "verdict": "doubt",
+   "why": "Expansion news already priced in; price has faded to flat"
+  },
+  "TTL": {
+   "verdict": "doubt",
+   "why": "Tiny open-market share purchase, immaterial; price is down"
+  },
+  "GLOBAL": {
+   "verdict": "doubt",
+   "why": "Buyback filing has no size or price details and no price data yet"
+  },
+  "SIMBHALS": {
+   "verdict": "confirm",
+   "why": "Specific insolvency process filing; no price data yet to contradict"
+  },
+  "THOMASCOOK": {
+   "verdict": "doubt",
+   "why": "Euphoric 15% surge already happened and price is flat since"
+  },
+  "PTCIL": {
+   "verdict": "doubt",
+   "why": "Order win is small and price has not moved"
+  },
+  "GOKUL": {
+   "verdict": "doubt",
+   "why": "Story is about a former director's son, not the company; price flat"
+  },
+  "SOLARWORLD": {
+   "verdict": "doubt",
+   "why": "Order filing gives no size or value despite a small price rise"
+  },
+  "TATASTEEL": {
+   "verdict": "doubt",
+   "why": "Market-wide crash story, nearly an hour old, and price is flat"
   }
  }
 }
