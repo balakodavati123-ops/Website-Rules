@@ -1,8 +1,8 @@
 {
- "updated_at": "2026-11-23T18:09:44+05:30",
+ "updated_at": "2026-11-23T22:13:04+05:30",
  "today": {},
  "playbook": {
-  "trained_at": "2026-11-23 18:08",
+  "trained_at": "2026-11-23 22:11",
   "data": {
    "daily_from": "2015-06-01",
    "daily_to": "2026-11-20",
@@ -209,91 +209,91 @@
   "ceo_rule": {
    "every_day": {
     "n": 1205,
-    "avg_rs": -1424.6,
-    "total_rs": -1716702,
-    "win_rate": 16.4,
-    "pf": 0.24,
-    "lcb_rs": -1496.5,
-    "max_dd_rs": -1719996
+    "avg_rs": -1252.1,
+    "total_rs": -1508740,
+    "win_rate": 23.2,
+    "pf": 0.38,
+    "lcb_rs": -1341.8,
+    "max_dd_rs": -1520584
    },
    "near_expiry_0_4_days": {
     "n": 907,
-    "avg_rs": -1443.3,
-    "total_rs": -1309087,
-    "win_rate": 16.3,
-    "pf": 0.26,
-    "lcb_rs": -1531.2,
-    "max_dd_rs": -1312321
+    "avg_rs": -1254.3,
+    "total_rs": -1137647,
+    "win_rate": 24.0,
+    "pf": 0.4,
+    "lcb_rs": -1362.9,
+    "max_dd_rs": -1149751
    },
    "train": {
     "n": 590,
-    "avg_rs": -1339.6,
-    "total_rs": -790385,
-    "win_rate": 16.3,
-    "pf": 0.28,
-    "lcb_rs": -1449.7,
-    "max_dd_rs": -790385
+    "avg_rs": -1175.3,
+    "total_rs": -693410,
+    "win_rate": 23.9,
+    "pf": 0.42,
+    "lcb_rs": -1308.7,
+    "max_dd_rs": -698998
    },
    "test": {
     "n": 317,
-    "avg_rs": -1636.3,
-    "total_rs": -518701,
-    "win_rate": 16.4,
-    "pf": 0.22,
-    "lcb_rs": -1781.7,
-    "max_dd_rs": -536091
+    "avg_rs": -1401.4,
+    "total_rs": -444238,
+    "win_rate": 24.3,
+    "pf": 0.38,
+    "lcb_rs": -1587.8,
+    "max_dd_rs": -464162
    },
    "by_year": {
     "2022": {
      "n": 197,
-     "avg_rs": -1703.1,
-     "total_rs": -335503,
-     "win_rate": 12.2,
-     "pf": 0.19,
-     "lcb_rs": -1879.3,
-     "max_dd_rs": -338878
+     "avg_rs": -1254.8,
+     "total_rs": -247192,
+     "win_rate": 24.4,
+     "pf": 0.39,
+     "lcb_rs": -1483.3,
+     "max_dd_rs": -261865
     },
     "2023": {
      "n": 195,
-     "avg_rs": -1033.6,
-     "total_rs": -201552,
-     "win_rate": 16.4,
-     "pf": 0.28,
-     "lcb_rs": -1186.5,
-     "max_dd_rs": -212218
+     "avg_rs": -1064.7,
+     "total_rs": -207609,
+     "win_rate": 23.6,
+     "pf": 0.38,
+     "lcb_rs": -1246.5,
+     "max_dd_rs": -226284
     },
     "2024": {
      "n": 198,
-     "avg_rs": -1279.4,
-     "total_rs": -253330,
-     "win_rate": 20.2,
-     "pf": 0.37,
-     "lcb_rs": -1509.6,
-     "max_dd_rs": -253330
+     "avg_rs": -1205.1,
+     "total_rs": -238609,
+     "win_rate": 23.7,
+     "pf": 0.47,
+     "lcb_rs": -1477.6,
+     "max_dd_rs": -238609
     },
     "2025": {
      "n": 184,
-     "avg_rs": -1639.8,
-     "total_rs": -301719,
-     "win_rate": 14.7,
-     "pf": 0.18,
-     "lcb_rs": -1823.2,
-     "max_dd_rs": -315874
+     "avg_rs": -1488.0,
+     "total_rs": -273798,
+     "win_rate": 24.5,
+     "pf": 0.32,
+     "lcb_rs": -1708.6,
+     "max_dd_rs": -287207
     },
     "2026": {
      "n": 133,
-     "avg_rs": -1631.5,
-     "total_rs": -216983,
-     "win_rate": 18.8,
-     "pf": 0.27,
-     "lcb_rs": -1867.5,
-     "max_dd_rs": -220463
+     "avg_rs": -1281.5,
+     "total_rs": -170440,
+     "win_rate": 24.1,
+     "pf": 0.45,
+     "lcb_rs": -1604.1,
+     "max_dd_rs": -177794
     }
    },
    "exits": {
-    "stop": 281,
-    "trailing stop": 62,
-    "time": 564
+    "target": 71,
+    "stop": 157,
+    "time": 679
    },
    "conditions": {
     "every day": {
@@ -396,7 +396,7 @@
      "max_dd_rs": -306193
     }
    },
-   "note": "replayed on 907 near-expiry days since 2022 with model prices from India VIX, this exact rule won 16.3% of days and averaged Rs -1443.3 a day (total Rs -1309087); the desk's live record decides from here."
+   "note": "replayed on 907 near-expiry days since 2022 with model prices from India VIX, this exact rule won 24.0% of days and averaged Rs -1254.3 a day (total Rs -1137647); the desk's live record decides from here."
   },
   "iv_mult": {
    "0": 0.85,

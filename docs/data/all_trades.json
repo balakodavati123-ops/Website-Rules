@@ -152,8 +152,7 @@
   "target_px": 476.97,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INE959C01023",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE959C01023"
  },
  {
   "id": "E261123-8",
@@ -179,8 +178,7 @@
   "target_px": 2536.47,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INE467B01029",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE467B01029"
  },
  {
   "id": "E261123-7",
@@ -206,8 +204,7 @@
   "target_px": 1243.44,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INE541A01023",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE541A01023"
  },
  {
   "id": "F261123-74",
@@ -333,8 +330,7 @@
   "target_px": 519.71,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INE1D0W01018",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE1D0W01018"
  },
  {
   "id": "E261123-5",
@@ -360,8 +356,7 @@
   "target_px": 1274.4,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INE0QPI01025",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE0QPI01025"
  },
  {
   "id": "K261123-71",
@@ -466,8 +461,7 @@
   "target_px": 1269.59,
   "leverage": 5.0,
   "setup": "news",
-  "instrument_key": "NSE_EQ|INE226A01021",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE226A01021"
  },
  {
   "id": "E261123-1",
@@ -493,8 +487,7 @@
   "target_px": 1202.05,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INE385F01024",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE385F01024"
  },
  {
   "id": "E261123-3",
@@ -520,8 +513,7 @@
   "target_px": 298.03,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INE682M01020",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE682M01020"
  },
  {
   "id": "E261123-2",
@@ -547,8 +539,7 @@
   "target_px": 447.06,
   "leverage": 5.0,
   "setup": "gap",
-  "instrument_key": "NSE_EQ|INE255Z01027",
-  "has_thesis": true
+  "instrument_key": "NSE_EQ|INE255Z01027"
  },
  {
   "id": "M261123-69",

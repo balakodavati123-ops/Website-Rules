@@ -1,138 +1,5 @@
 {
- "intents": {
-  "K261123-71": {
-   "id": "K261123-71",
-   "agent": "scalp_vwap_pullback",
-   "symbol": "GOLDBEES",
-   "label": "GOLDBEES long",
-   "side": "BUY",
-   "qty": 388,
-   "entry": 103.0006,
-   "stop": 102.8,
-   "target": 103.3,
-   "created": "09:54:14",
-   "day": "2026-11-23",
-   "hold_min": 10,
-   "qty_sent": 388,
-   "reasons": [],
-   "margin": null,
-   "est_cost": 37.72,
-   "payload": {
-    "txn_type": "BUY",
-    "exchange": "NSE",
-    "segment": "EQUITY",
-    "product": "INTRADAY",
-    "order_type": "LIMIT",
-    "validity": "DAY",
-    "security_id": "",
-    "qty": 388,
-    "limit_price": 103.1,
-    "sl_trigger_price": 102.8,
-    "sl_limit_price": 102.55,
-    "remarks": "K261123-71",
-    "tgt_trigger_price": 103.3,
-    "tgt_limit_price": 103.35
-   },
-   "gate": {
-    "ok": false,
-    "why": "verdict LAB TESTED with 10 closed paper trades; needs WORKING and 30+"
-   },
-   "status": "DRY",
-   "note": "would be held back: verdict LAB TESTED with 10 closed paper trades; needs WORKING and 30+",
-   "paper_status": "LOSS",
-   "paper_pnl": -123.47,
-   "paper_exit": 102.7794,
-   "counted": true
-  },
-  "K261123-72": {
-   "id": "K261123-72",
-   "agent": "scalp_vwap_pullback",
-   "symbol": "ITC",
-   "label": "ITC short",
-   "side": "SELL",
-   "qty": 133,
-   "entry": 299.1402,
-   "stop": 300.25,
-   "target": 297.5,
-   "created": "10:08:28",
-   "day": "2026-11-23",
-   "hold_min": 10,
-   "qty_sent": 133,
-   "reasons": [],
-   "margin": null,
-   "est_cost": 37.61,
-   "payload": {
-    "txn_type": "SELL",
-    "exchange": "NSE",
-    "segment": "EQUITY",
-    "product": "INTRADAY",
-    "order_type": "LIMIT",
-    "validity": "DAY",
-    "security_id": "",
-    "qty": 133,
-    "limit_price": 298.95,
-    "sl_trigger_price": 300.25,
-    "sl_limit_price": 300.9,
-    "remarks": "K261123-72",
-    "tgt_trigger_price": 297.5,
-    "tgt_limit_price": 297.45
-   },
-   "gate": {
-    "ok": false,
-    "why": "verdict LAB TESTED with 11 closed paper trades; needs WORKING and 30+"
-   },
-   "status": "DRY",
-   "note": "would be held back: verdict LAB TESTED with 11 closed paper trades; needs WORKING and 30+",
-   "paper_status": "LOSS",
-   "paper_pnl": -66.83,
-   "paper_exit": 299.3599,
-   "counted": true
-  },
-  "K261123-73": {
-   "id": "K261123-73",
-   "agent": "scalp_vwap_pullback",
-   "symbol": "DIVISLAB",
-   "label": "DIVISLAB short",
-   "side": "SELL",
-   "qty": 3,
-   "entry": 11283.7428,
-   "stop": 11319.45,
-   "target": 11230.2,
-   "created": "10:19:14",
-   "day": "2026-11-23",
-   "hold_min": 10,
-   "qty_sent": 3,
-   "reasons": [],
-   "margin": null,
-   "est_cost": 35.52,
-   "payload": {
-    "txn_type": "SELL",
-    "exchange": "NSE",
-    "segment": "EQUITY",
-    "product": "INTRADAY",
-    "order_type": "LIMIT",
-    "validity": "DAY",
-    "security_id": "",
-    "qty": 3,
-    "limit_price": 11278.1,
-    "sl_trigger_price": 11319.45,
-    "sl_limit_price": 11342.1,
-    "remarks": "K261123-73",
-    "tgt_trigger_price": 11230.2,
-    "tgt_limit_price": 11230.15
-   },
-   "gate": {
-    "ok": false,
-    "why": "verdict LAB TESTED with 12 closed paper trades; needs WORKING and 30+"
-   },
-   "status": "DRY",
-   "note": "would be held back: verdict LAB TESTED with 12 closed paper trades; needs WORKING and 30+",
-   "paper_status": "LOSS",
-   "paper_pnl": -91.08,
-   "paper_exit": 11302.26,
-   "counted": true
-  }
- },
+ "intents": {},
  "events": [
   {
    "t": "10:19:14",
@@ -188,17 +55,17 @@
   }
  ],
  "day": {
-  "day": "2026-11-23",
-  "trades": 3,
-  "pnl": -281.38,
-  "stops": 3
+  "day": "2026-11-24",
+  "trades": 0,
+  "pnl": 0.0,
+  "stops": 0
  },
  "broker": {},
  "mode": "dry",
  "wanted": "dry",
  "blockers": [],
  "killed": false,
- "updated_at": "2026-11-23T22:12:31+05:30",
+ "updated_at": "2026-11-24T03:53:10+05:30",
  "caps": {
   "max_value": 40000.0,
   "risk": 250.0,
@@ -216,6 +83,5 @@
   "agents": [
    "scalp_vwap_pullback"
   ]
- },
- "halted": "3 losing trades in a row"
+ }
 }

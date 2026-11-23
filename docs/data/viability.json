@@ -1,69 +1,59 @@
 {
- "updated_at": "2026-11-23T22:12:31+05:30",
- "skipped": [
-  {
-   "desk": "COMMODITY",
-   "what": "Silver 1 kg",
-   "margin": 30381,
-   "room": 25000,
-   "why": "needs more margin than the commodities limit has free",
-   "at": "22:12:18",
-   "day": "2026-11-23"
-  }
- ],
+ "updated_at": "2026-11-24T03:53:03+05:30",
+ "skipped": [],
  "reference": [
   {
    "name": "Crude oil (100 barrels)",
    "contract": "CRUDEOIL FUT 18 DEC 26",
-   "margin": 240550
+   "margin": 240354
   },
   {
    "name": "Crude oil mini (10 barrels)",
    "contract": "CRUDEOILM FUT 18 DEC 26",
-   "margin": 24044
+   "margin": 24025
   },
   {
    "name": "Natural gas (1,250 mmBtu)",
    "contract": "NATURALGAS FUT 28 DEC 26",
-   "margin": 64058
+   "margin": 63869
   },
   {
    "name": "Natural gas mini (250 mmBtu)",
    "contract": "NATGASMINI FUT 28 DEC 26",
-   "margin": 12562
+   "margin": 12524
   },
   {
    "name": "Gold (1 kg)",
    "contract": "GOLD FUT 04 DEC 26",
-   "margin": 1298836
+   "margin": 1303926
   },
   {
    "name": "Gold mini (100 g)",
    "contract": "GOLDM FUT 04 DEC 26",
-   "margin": 129864
+   "margin": 130380
   },
   {
    "name": "Gold petal (1 g)",
    "contract": "GOLDPETAL FUT 30 NOV 26",
-   "margin": 1317
+   "margin": 1322
   },
   {
    "name": "Silver (30 kg)",
    "contract": "SILVER FUT 04 DEC 26",
-   "margin": 906668
+   "margin": 908657
   },
   {
    "name": "Silver mini (5 kg)",
    "contract": "SILVERM FUT 30 NOV 26",
-   "margin": 152153
+   "margin": 152549
   },
   {
    "name": "Silver micro (1 kg)",
    "contract": "SILVERMIC FUT 30 NOV 26",
-   "margin": 30306
+   "margin": 30381
   }
  ],
- "ref_day": "2026-11-23",
+ "ref_day": "2026-11-24",
  "limits": {
   "swing": 22000,
   "signal": 5000,
