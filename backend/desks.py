@@ -251,7 +251,39 @@ def _greeks(rows: list[dict], strike: float, kind: str) -> dict:
     return ((r.get("call_options") if kind == "CE" else r.get("put_options")) or {}).get("option_greeks") or {}
 
 
-def pick_straddle_strike(rows: list[dict], spot: float, days_left: float, steps: int = 2) -> tuple[float | None, list[dict]]:
+def straddle_conditions(f: dict, news: dict) -> dict:
+    """Whether today is a day for a bought straddle, from India VIX, the gap and the news, and which way to lean the strike.
+    f: vix (yesterday's close), vix_now, vix_chg (% since yesterday's close), vix_pct (1-year percentile), gap (% open against yesterday's close).
+    news: strong (market-moving signals in the last hour, |score| 4+), net (their positive minus negative count), macro (today's RBI, shock or
+    geopolitics headlines), mood (the Claude brief's mood), fc (the morning forecast score, + up / - down).
+    In the 2022-2026 replay, days with VIX up 3% or more by 10:00 and days with a 1%+ gap lost the least; calm days and falling-VIX days lost the most."""
+    reasons, go = [], []
+    vc, gap = float(f.get("vix_chg") or 0), float(f.get("gap") or 0)
+    if vc >= 3:
+        go.append(f"India VIX is up {vc:.1f}% since yesterday's close ({f.get('vix')} to {f.get('vix_now')}): the market is pricing bigger moves")
+    if abs(gap) >= 1.0:
+        go.append(f"NIFTY opened {gap:+.2f}%: a news-sized gap")
+    if (news.get("strong") or 0) >= 3:
+        go.append(f"{news['strong']} strong news signals in the last hour")
+    if news.get("macro"):
+        go.append("market-wide news today: " + "; ".join(news["macro"][:2]))
+    skip = []
+    if vc <= -5 and abs(gap) < 1.0:
+        skip.append(f"India VIX is falling ({vc:.1f}%): option prices are shrinking, which hurts a bought straddle twice")
+    if (f.get("vix_pct") or 0) >= 80 and vc < 1:
+        skip.append(f"India VIX is in the top fifth of its year ({f.get('vix_pct')}th percentile) and not rising: expensive options that tend to cheapen")
+    if not go:
+        skip.append(f"a calm day: VIX change {vc:+.1f}%, gap {gap:+.2f}%, {news.get('strong') or 0} strong news signals; a straddle needs movement")
+    votes = [(1 if gap > 0 else -1) if abs(gap) >= 0.6 else 0, (1 if (news.get("net") or 0) > 0 else -1) if abs(news.get("net") or 0) >= 2 else 0,
+             (1 if news.get("mood") == "bullish" else -1 if news.get("mood") == "bearish" else 0), (1 if (news.get("fc") or 0) > 0.15 else -1 if (news.get("fc") or 0) < -0.15 else 0)]
+    lean = 0
+    if votes[0] and sum(1 for v in votes[1:] if v == votes[0]) >= 1 and not any(v == -votes[0] for v in votes[1:]):
+        lean = votes[0]                       # a big gap that the news or the forecast agrees with: lean one strike with it (replay: slightly better than neutral)
+    reasons = go + skip
+    return {"go": bool(go) and not skip, "lean": lean, "reasons": reasons, "go_signals": go, "skip_signals": skip, "votes": votes}
+
+
+def pick_straddle_strike(rows: list[dict], spot: float, days_left: float, steps: int = 2, lean: int = 0) -> tuple[float | None, list[dict]]:
     """The quant's strike for a bought straddle (buy the call and the put of one strike). For the strikes around the index it compares:
     the cost against the move the options market expects before expiry (cheaper is better), how evenly the profit zone sits on both sides
     (the same move up or down should pay, so the result does not depend on direction), the two deltas (together close to zero), the bid-ask
@@ -277,7 +309,12 @@ def pick_straddle_strike(rows: list[dict], spot: float, days_left: float, steps:
         nd = round(float(dc) + float(dp), 2) if dc is not None and dp is not None else None
         z = lambda x: 0.5 * (1 + math.erf(x / math.sqrt(2)))
         pop = (1 - (z((k + cost - spot) / em) - z((k - cost - spot) / em))) * 100 if em > 0 else None
-        score = cost / em + 0.6 * abs(up - dn) / max((up + dn) / 2, 1e-6) + 3 * spread + (0.5 if oi < 100000 else 0) + (0.3 * abs(nd) if nd is not None else 0)
+        if lean and nd is not None:           # lean: prefer the strike whose call and put together lean that way (delta 0.05 to 0.30), not an even profit zone
+            sym = 0.15 * abs(up - dn) / max((up + dn) / 2, 1e-6)
+            tilt = 0.0 if 0.05 <= nd * lean <= 0.30 else 1.0
+        else:
+            sym, tilt = 0.6 * abs(up - dn) / max((up + dn) / 2, 1e-6), (0.3 * abs(nd) if nd is not None else 0)
+        score = cost / em + sym + 3 * spread + (0.5 if oi < 100000 else 0) + tilt
         sheet.append({"strike": k, "cost": round(cost, 2), "call": round(ca, 2), "put": round(pa, 2), "be_up": round(k + cost), "be_dn": round(k - cost), "need_up_pct": round(up, 2),
                       "need_dn_pct": round(dn, 2), "net_delta": nd, "spread_pct": round(spread * 100, 1), "oi": int(oi), "pop_expiry": round(pop, 1) if pop is not None else None,
                       "cost_vs_move": round(cost / em, 2), "score": round(score, 3)})
@@ -377,8 +414,12 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
                 continue                      # trade only when the trained rule and the days like today agree, within an hour of the trained entry time
         exp_ = sd.get("expiry") if name == "long_straddle" and sd.get("expiry") else ctx["expiry"]
         if name == "long_straddle" and sd.get("quant"):
-            k_, sheet_ = pick_straddle_strike(rows, spot, days_to(exp_, now) * 5 / 7)
-            book["straddle_sheet"] = {"day": day, "at": now.strftime("%H:%M"), "expiry": exp_, "spot": spot, "sheet": sheet_}
+            cond_ = sd.get("conditions") or {"go": True, "lean": 0, "reasons": []}
+            if not cond_.get("go"):
+                book["straddle_sheet"] = {"day": day, "at": now.strftime("%H:%M"), "expiry": exp_, "spot": spot, "sheet": [], "conditions": cond_}
+                continue                      # not a movement day (VIX, gap and news): no straddle today
+            k_, sheet_ = pick_straddle_strike(rows, spot, days_to(exp_, now) * 5 / 7, lean=cond_.get("lean", 0))
+            book["straddle_sheet"] = {"day": day, "at": now.strftime("%H:%M"), "expiry": exp_, "spot": spot, "sheet": sheet_, "conditions": cond_}
             best_ = next((x for x in sheet_ if x.get("chosen")), None)
             if not best_ or best_["cost_vs_move"] > 1.1:
                 continue                      # no liquid strike, or the straddle costs more than the move the market expects: skip today
@@ -430,6 +471,10 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
                    exit_rule=rule_txt, unit_target=base * p["target"], unit_stop=base * p["stop"])
         if name == "long_straddle" and sd.get("quant"):
             sh_ = next((x for x in (book.get("straddle_sheet") or {}).get("sheet") or [] if x.get("chosen")), {})
+            cd_ = (book.get("straddle_sheet") or {}).get("conditions") or {}
+            th["data"] += ["Why today: " + "; ".join(cd_.get("go_signals") or ["(conditions not recorded)"]) + "."]
+            if cd_.get("lean"):
+                th["data"] += [f"Strike leans one step {'up' if cd_['lean'] > 0 else 'down'} with the gap, because the news or the forecast agrees."]
             th["data"] += [f"The quant chose strike {sh_.get('strike'):,.0f} from {len((book.get('straddle_sheet') or {}).get('sheet') or [])} strikes: cost {sh_.get('cost')} points, "
                            f"{sh_.get('cost_vs_move')}x the move the market expects; it pays beyond {sh_.get('be_up'):,} up ({sh_.get('need_up_pct')}%) or {sh_.get('be_dn'):,} down "
                            f"({sh_.get('need_dn_pct')}%); calls and puts together delta {sh_.get('net_delta')}; spreads up to {sh_.get('spread_pct')}%.",

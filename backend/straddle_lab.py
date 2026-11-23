@@ -272,12 +272,22 @@ def train(data: dict, today: date) -> dict:
         if entry == "10:00" and xsel == "this week" and srule == "atm":
             r, why = trail_rs(p["vals"])
             ceo.setdefault("all", []).append((d, r, why, p["dte"]))
+    cond_rows = {}
+    for d, entry, xsel, srule, p in rows:
+        if entry == "10:00" and xsel == "this week":
+            cond_rows.setdefault(d, {})[srule] = (trail_rs(p["vals"])[0], p)
+    def cs(pred, sr="atm"):
+        return stats([v[sr][0] for d, v in cond_rows.items() if sr in v and pred(F[d], v[sr][1])])
+    conditions = {"every day": cs(lambda f, p: True), "VIX up 3%+ by 10:00": cs(lambda f, p: p["vix_chg"] >= 3), "gap 1%+ either way": cs(lambda f, p: abs(f["gap"]) >= 1),
+                  "calm day (gap under 0.25%, VIX not rising)": cs(lambda f, p: abs(f["gap"]) < 0.25 and p["vix_chg"] < 1), "VIX falling 5%+ by 10:00": cs(lambda f, p: p["vix_chg"] <= -5),
+                  "movement day (VIX up 3%+ or gap 1%+)": cs(lambda f, p: p["vix_chg"] >= 3 or abs(f["gap"]) >= 1),
+                  "big gap, strike leaning with it": cs(lambda f, p: abs(f["gap"]) >= 0.6, "with"), "big gap, strike leaning against it": cs(lambda f, p: abs(f["gap"]) >= 0.6, "against")}
     cl = ceo.get("all", [])
     near = [x for x in cl if x[3] <= 4]
     ceo_rule = {"every_day": stats([x[1] for x in cl]), "near_expiry_0_4_days": stats([x[1] for x in near]),
                 "train": stats([x[1] for x in near if x[0] <= TRAIN_TO]), "test": stats([x[1] for x in near if x[0] >= TEST_FROM]),
                 "by_year": {str(y): stats([x[1] for x in near if x[0].year == y]) for y in sorted({x[0].year for x in near})},
-                "exits": {w: sum(1 for x in near if x[2] == w) for w in ("stop", "trailing stop", "time")}}
+                "exits": {w: sum(1 for x in near if x[2] == w) for w in ("stop", "trailing stop", "time")}, "conditions": conditions}
     s_ = ceo_rule["near_expiry_0_4_days"]
     ceo_rule["note"] = (f"replayed on {s_.get('n', 0)} near-expiry days since 2022 with model prices from India VIX, this exact rule won {s_.get('win_rate')}% of days and averaged "
                         f"Rs {s_.get('avg_rs')} a day (total Rs {s_.get('total_rs')}); the desk's live record decides from here.")
