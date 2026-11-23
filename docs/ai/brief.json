@@ -1,62 +1,47 @@
 {
- "mood": "mixed",
- "brief": "Indian shares are trying to steady after a sharp global sell-off, with US futures jumping and gold rebounding over 2%, though the Sensex and Nifty are still lower and investors have lost Rs 4.65 lakh crore. The APL Apollo and Tata Steel deal is the main stock story, and the postponed Tata Sons board meeting adds uncertainty.",
+ "mood": "bearish",
+ "brief": "Indian shares remain under pressure, with Sensex down over 1,100 points and Nifty below 25,500 as the global sell-off weighs, though Indian IT stocks such as TCS are gaining as investors rotate out of Nvidia-led tech. Europe is recovering from its steep tech sell-off, but hedge funds posted their worst week since April 2025.",
  "themes": [
-  "APL Apollo and Tata Steel deal fallout",
-  "Global sell-off versus US futures rebound",
-  "Broker rating changes",
-  "Gold and metals rebound"
+  "Global sell-off weighs on Sensex",
+  "IT stocks gain on tech rotation",
+  "HDFC Bank at 2.5-year low",
+  "Insurance commission cap worries"
  ],
  "companies": [
   {
-   "name": "APL Apollo Tubes",
+   "name": "TCS",
+   "tone": "positive",
+   "why": "Gains 4% as tech sell-off sparks buying in IT"
+  },
+  {
+   "name": "HDFC Bank",
    "tone": "negative",
-   "why": "Stock tanks 18% on Rs 15,510 crore stake sale plans"
+   "why": "Slips to 2.5-year low on legal and leadership woes"
   },
   {
-   "name": "Tata Steel",
+   "name": "PTC Industries",
+   "tone": "positive",
+   "why": "Shares gain after 400-tonne titanium defence order"
+  },
+  {
+   "name": "Thomas Cook",
+   "tone": "positive",
+   "why": "Surges 15%, extends three-session rally to 19%"
+  },
+  {
+   "name": "Simbhals",
    "tone": "negative",
-   "why": "Slides nearly 5% on APL Apollo stake purchase"
-  },
-  {
-   "name": "Chalet Hotels",
-   "tone": "positive",
-   "why": "Gains 3% on Rs 3,500 crore expansion plan"
-  },
-  {
-   "name": "Patel Engineering",
-   "tone": "positive",
-   "why": "ICICI Direct rates Buy, target Rs 80"
-  },
-  {
-   "name": "HDFC Life Insurance",
-   "tone": "positive",
-   "why": "ICICI Securities rates Buy, target Rs 739"
-  },
-  {
-   "name": "Wipro",
-   "tone": "negative",
-   "why": "ICICI Securities rates Reduce, target Rs 410"
-  },
-  {
-   "name": "Persistent Systems",
-   "tone": "neutral",
-   "why": "Among stocks showing RSI trending up"
-  },
-  {
-   "name": "Dalmia Bharat",
-   "tone": "positive",
-   "why": "Approves Rs 700 crore buyback"
+   "why": "Corporate insolvency resolution process filing"
   }
  ],
- "global": "US futures jumped and Taiwan rebounded, but Asian markets stayed mixed with KOSPI sliding and oil falling on robust Gulf exports.",
+ "global": "European stocks recovered after a steep tech-led sell-off, while Indonesia rose 1.63% and hedge funds had their worst week since April 2025.",
  "risks": [
-  "Further global AI-led sell-off",
-  "Tata Sons board meeting postponed with no new date",
-  "Volatile metals and gold prices"
+  "Continued global tech sell-off",
+  "HDFC Bank legal and leadership concerns",
+  "Proposed insurance commission cap"
  ],
- "time": "23 Nov 13:21",
- "at": 1795420297.507769,
+ "time": "23 Nov 14:21",
+ "at": 1795423873.477884,
  "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "n": 40

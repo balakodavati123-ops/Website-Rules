@@ -1,6 +1,6 @@
 {
- "time": "23 Nov 13:21",
- "at": 1795420297.507769,
+ "time": "23 Nov 14:21",
+ "at": 1795423873.477884,
  "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "checks": {
@@ -86,7 +86,7 @@
   },
   "BAIDFIN": {
    "verdict": "doubt",
-   "why": "Routine resignation filing with no detail; price has not reacted"
+   "why": "Routine resignation filing with no detail; price has not fallen"
   },
   "APLAPOLLO": {
    "verdict": "doubt",
@@ -107,6 +107,22 @@
   "GLOBAL": {
    "verdict": "doubt",
    "why": "Buyback filing has no size or price details and no price data yet"
+  },
+  "SIMBHALS": {
+   "verdict": "confirm",
+   "why": "Fresh, specific insolvency process filing; no price data yet to contradict"
+  },
+  "THOMASCOOK": {
+   "verdict": "doubt",
+   "why": "Euphoric 15% surge already happened and price is flat since"
+  },
+  "PTCIL": {
+   "verdict": "doubt",
+   "why": "Order win is small and price has not moved"
+  },
+  "GOKUL": {
+   "verdict": "doubt",
+   "why": "Story is about a former director's son, not the company; price flat"
   }
  }
 }
