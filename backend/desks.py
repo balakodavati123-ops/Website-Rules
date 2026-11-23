@@ -207,6 +207,7 @@ def crypto_step(book: dict, now: datetime, ticks: dict, paused: set, room=None, 
 
 # ---------------------------------------------------------------- NIFTY F&O
 RISK = {"fixed": "Fixed return · controlled loss", "hrhl": "High return · high loss", "hrll": "High return · low loss"}
+MIN_ROM = 0.05          # a structure that collects a credit must be able to make at least 5% of the margin it locks up (the CEO's rule)
 FNO_RULES = {"first": "09:45", "last": "13:30", "close": "15:15", "leg_cost": 40, "trend": 0.25, "breakout": 0.5}
 
 
@@ -348,6 +349,10 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
                        "needs more margin than the F&O limit has free" if real else "margin could not be checked", now)
                 continue                              # not viable on this account today: the broker would ask for more than we can post
             margin, src = real, "Upstox margin calculator"
+            if net > 0 and gain and real and gain * lot / real < MIN_ROM:
+                M.skip("FNO", f"NIFTY {name.replace('_', ' ')} (daily)", real, ctx["room"][0] if ctx.get("room") is not None else 0,
+                       f"the most it can make, Rs {gain * lot:,.0f}, is only {gain * lot / real * 100:.1f}% of the Rs {real:,.0f} margin it locks up; the desk needs {MIN_ROM:.0%}", now)
+                continue
         elif ctx.get("room") is not None and margin > ctx["room"][0]:
             continue                                  # the account cannot carry this structure's margin today
         if ctx.get("room") is not None:

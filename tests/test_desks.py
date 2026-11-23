@@ -111,7 +111,8 @@ def hctx(room=100000.0, score=0.1, rv=12.0, fn=None):
             "chain": lambda u, e: rows, "lot": lambda u, e: 65, "margin": fn or FakeM(), "room": [room], "env": {}, "acct": 100000.0, "vix": 15.0, "view": {"NIFTY": {"score": score, "rv": rv}, "BANKNIFTY": {"score": score, "rv": rv}}}
 
 
-def test_weekly_credit_spread_booked_with_real_margin_and_thesis():
+def test_weekly_credit_spread_booked_with_real_margin_and_thesis(monkeypatch):
+    monkeypatch.setattr(D, "MIN_ROM", 0.0)                                    # mechanics only; the return-on-margin rule has its own test
     book, now = D.new_book(), datetime(2026, 11, 18, 10, 0, tzinfo=IST)
     c = hctx()
     H.hold_step(book, now, c, set())
@@ -123,6 +124,15 @@ def test_weekly_credit_spread_booked_with_real_margin_and_thesis():
     assert c["room"][0] == 20000.0                                                              # the monthly Bank Nifty structure also booked (40,000 each)
     H.hold_step(book, now, c, set())
     assert len([x for x in book["trades"] if x["horizon"] == "weekly"]) == 1                      # one per weekly expiry
+
+
+def test_credit_too_small_for_its_margin_is_skipped():
+    book, now = D.new_book(), datetime(2026, 11, 18, 10, 0, tzinfo=IST)
+    c = hctx()
+    H.hold_step(book, now, c, set())
+    assert not [x for x in book["trades"] if x["horizon"] == "weekly" and x["strategy"].endswith("credit_spread")]
+    why = [v["why"] for v in c["margin"].log.values() if v["desk"] == "FNO"]
+    assert any("of the Rs 40,000 margin it locks up; the desk needs 5%" in w for w in why)
 
 
 def test_not_viable_when_margin_exceeds_room():
@@ -144,7 +154,8 @@ def test_cheap_options_without_direction_buy_a_straddle_and_no_margin_check_mean
     assert not book2["trades"]                                                                       # margin could not be verified: nothing is traded
 
 
-def test_weekly_settles_at_expiry_and_monthly_leaves_early():
+def test_weekly_settles_at_expiry_and_monthly_leaves_early(monkeypatch):
+    monkeypatch.setattr(D, "MIN_ROM", 0.0)
     book, now = D.new_book(), datetime(2026, 11, 18, 10, 0, tzinfo=IST)
     c = hctx()
     H.hold_step(book, now, c, set())

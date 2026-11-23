@@ -250,6 +250,7 @@ def run() -> None:
     for k_, v_ in NP.new_state().items():
         pulse.setdefault(k_, v_)
     pulse_at, pulse_thread, px_now = [0.0], [None], {}
+    inbox_at, inbox_thread = [0.0], [None]
 
     def get_chain(under: str, expiry: str, ttl: float = 10.0):
         hit = chain_cache.get((under, expiry))
@@ -363,6 +364,51 @@ def run() -> None:
         if rows:
             via_ref.update(rows=rows, day=at.strftime("%Y-%m-%d"))
 
+    def ceo_close(tid: str, at) -> str:
+        """The CEO's manual override: close one open trade now at its latest marked price (after charges)."""
+        tid = str(tid).strip().split()[0] if str(tid).strip() else ""
+        t = next((x for x in xb["trades"] + eq["trades"] if str(x.get("id", "")).lower() == tid.lower()), None)
+        if not t:
+            return f"I could not find a trade called {tid or '(none given)'} on the desks I run (intraday, scalping, F&O, commodities, crypto)."
+        if t["status"] != "OPEN":
+            return f"{t['label']} is already closed ({t['status']}: {t.get('why', '')})."
+        why, today_ = "closed by the CEO from the dashboard", at.strftime("%Y-%m-%d")
+        with clock:
+            if any(x is t for x in eq["trades"]):
+                I.close_trade(t, float(t.get("last") or t["entry"]), why)
+                t["closed"] = at.strftime("%H:%M:%S")
+            else:
+                D.finish(t, float(t["last"] if t.get("last") is not None else t["entry"]), why, at, float(t.get("pnl_rs") or 0))
+            cst.setdefault("ceo_blocks", {})[t["strategy"]] = today_          # no instant re-entry of the same strategy today
+            paused.add(t["strategy"])
+            pnl_ = float(t.get("pnl_rs") or 0)
+            text = (f"Done. {t['label']} is closed at the latest marked price: {'+' if pnl_ > 0 else '−' if pnl_ < 0 else ''}Rs {abs(pnl_):,.0f} after charges"
+                    + (f", and its Rs {float(t['margin_rs']):,.0f} of margin is free again" if t.get("margin_rs") else "") + f". The desk will not open another {str(t['strategy']).replace('_', ' ')} today.")
+            CO.say(cst, at, f"{CO.COO['name']} (COO)", text, "decision")
+        return text
+
+    def ceo_commands(at) -> None:
+        """Instructions saved on the branch (docs/ceo/commands.json) by the CEO's own Claude sessions: same commands as the inbox."""
+        br = os.environ.get("GITHUB_REF_NAME") or _git("rev-parse", "--abbrev-ref", "HEAD", check=False).stdout.strip()
+        if not br or _git("fetch", "-q", "--depth=1", "origin", br, check=False).returncode != 0:
+            return
+        r = _git("show", "FETCH_HEAD:docs/ceo/commands.json", check=False)
+        try:
+            cmds = json.loads(r.stdout) if r.returncode == 0 and r.stdout.strip() else []
+        except ValueError:
+            cmds = []
+        done = cst.setdefault("done_cmds", [])
+        for c in cmds:
+            if not isinstance(c, dict) or not c.get("id") or c["id"] in done:
+                continue
+            done.append(c["id"])
+            cst["done_cmds"] = done[-200:]
+            if c.get("kind") == "close":
+                ceo_close(c.get("arg", ""), at)
+            else:
+                with clock:
+                    CO.apply(cst, {"kind": c.get("kind", "note"), "arg": c.get("arg", ""), "text": c.get("text", "")}, at)
+
     def ceo_inbox(at) -> None:
         """Instructions from the CEO (GitHub issues titled CEO ..., owner only): apply them and answer."""
         gt, repo = os.environ.get("GITHUB_TOKEN"), os.environ.get("GITHUB_REPOSITORY")
@@ -372,8 +418,11 @@ def run() -> None:
             if not cmd["owner"]:
                 CI.reply(gt, repo, cmd["issue"], "Only the CEO (the owner of this repository) can give the company instructions.")
                 continue
-            with clock:
-                text = CO.apply(cst, cmd, at)
+            if cmd["kind"] == "close":
+                text = ceo_close(cmd["arg"], at)
+            else:
+                with clock:
+                    text = CO.apply(cst, cmd, at)
             CI.reply(gt, repo, cmd["issue"], text)
 
     def ai_ask(kind, system, prompt, tier="read", max_tokens=None):
@@ -674,6 +723,7 @@ def run() -> None:
         nonlocal_state["tick"] = allt
         with clock:                                    # the strategies that may open trades now: the record's pauses, the CEO's decisions
             fresh = CO.paused_strategies(cst, {s["strategy"] for s in stats if s["verdict"] == "PAUSED"}, {})
+            fresh |= {k_ for k_, d_ in (cst.get("ceo_blocks") or {}).items() if d_ == datetime.now(IST).strftime("%Y-%m-%d")}
             paused.clear()
             paused.update(fresh)
         summ = A.summary(allt)
@@ -923,7 +973,7 @@ def run() -> None:
             if not (news_thread and news_thread.is_alive()):        # the slow fetches (news, world markets, NSE files) can take a while from a cloud address: never hold up the price loop for them
                 def _slow(at=now):
                     for name_, fn_ in (("news", lambda: (lambda n2: (news.clear(), news.update(n2)) if n2 else None)(I.filings_news())), ("news_feed", lambda: I.update_news_feed(at)), ("ai_sync", lambda: ai_sync(at)), ("news_ai", lambda: news_ai(at)), ("ipo", lambda: ipo_desk(at)), ("review", lambda: review_day(at)),
-                                       ("world", lambda: refresh_world(at)), ("smart_money", lambda: token and refresh_smart(at)), ("margin_reference", lambda: margin_reference(at)), ("indstocks_master", lambda: load_master()), ("ceo_inbox", lambda: ceo_inbox(at))):
+                                       ("world", lambda: refresh_world(at)), ("smart_money", lambda: token and refresh_smart(at)), ("margin_reference", lambda: margin_reference(at)), ("indstocks_master", lambda: load_master()), ("noop", lambda: None)):
                         try:
                             fn_()
                         except Exception as e:
@@ -955,6 +1005,18 @@ def run() -> None:
             except Exception as e:
                 info["intraday"] = f"error: {str(e)[:80]}"
         hm_ = now.strftime("%H:%M")
+        inbox_every = 60 if now.weekday() < 5 and "09:00" <= hm_ <= "15:35" else 300     # your instructions: checked every minute in market hours
+        if time.time() - inbox_at[0] >= inbox_every and not (inbox_thread[0] and inbox_thread[0].is_alive()):
+            inbox_at[0] = time.time()
+
+            def _inbox(at=now):
+                for fn_ in (ceo_inbox, ceo_commands):
+                    try:
+                        fn_(at)
+                    except Exception as e:
+                        status["desks"]["ceo_inbox"] = f"error: {str(e)[:80]}"
+            inbox_thread[0] = threading.Thread(target=_inbox, daemon=True)
+            inbox_thread[0].start()
         every_ = 60 if now.weekday() < 5 and "08:30" <= hm_ <= "15:35" else 600     # once a minute in market hours, every 10 minutes otherwise
         if time.time() - pulse_at[0] >= every_ and not (pulse_thread[0] and pulse_thread[0].is_alive()):
             pulse_at[0] = time.time()

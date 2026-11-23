@@ -87,7 +87,7 @@ def test_ceo_reject_keeps_the_team_and_pause_resume_work():
 
 
 def test_inbox_obeys_only_the_owner():
-    assert CI.parse("CEO APPROVE R261119-scalp-1") == {"kind": "approve", "arg": "R261119-scalp-1"}
+    assert CI.parse("CEO APPROVE R261119-scalp-1") == {"kind": "approve", "arg": "R261119-scalp-1"} and CI.parse("CEO CLOSE F261123-70") == {"kind": "close", "arg": "F261123-70"}
     assert CI.parse("ceo: pause scalp")["kind"] == "pause" and CI.parse("Bug report") is None and CI.parse("CEO well done team")["kind"] == "note"
     issues = [{"number": 1, "title": "CEO APPROVE R1", "author_association": "OWNER", "user": {"login": "someone"}},
               {"number": 2, "title": "CEO APPROVE R1", "author_association": "NONE", "user": {"login": "stranger"}},

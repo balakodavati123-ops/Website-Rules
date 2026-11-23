@@ -149,6 +149,11 @@ def hold_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
             if M:
                 M.skip("FNO", f"{horizon} {H['label']} {name.split('_', 1)[1].replace('_', ' ')}", margin, ctx["room"][0], "needs more margin than the F&O limit has free" if margin else "margin could not be checked", now)
             continue
+        if net > 0 and margin and net * lot / margin < D.MIN_ROM:
+            if M:
+                M.skip("FNO", f"{horizon} {H['label']} {name.split('_', 1)[1].replace('_', ' ')}", margin, ctx["room"][0],
+                       f"the most it can make, Rs {net * lot:,.0f}, is only {net * lot / margin * 100:.1f}% of the Rs {margin:,.0f} margin it locks up; the desk needs {D.MIN_ROM:.0%}", now)
+            continue
         ctx["room"][0] -= margin
         book["seen"][f"{horizon}|{under}|{exp}"] = day
         st = T.payoff_stats(legs, net, spot, iv or ctx.get("vix") or 15.0, days)

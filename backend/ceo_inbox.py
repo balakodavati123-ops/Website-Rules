@@ -1,7 +1,7 @@
 """The CEO's inbox: instructions arrive as GitHub issues whose title starts with "CEO", opened from buttons on the dashboard.
 
 Only the repository owner's issues are obeyed (the repository is public, so anyone could open one); others are closed with a note.
-Recognised titles: CEO APPROVE <request id>, CEO REJECT <request id>, CEO PAUSE <team>, CEO RESUME <team>; anything else is passed to the
+Recognised titles: CEO APPROVE <request id>, CEO REJECT <request id>, CEO PAUSE <team>, CEO RESUME <team>, CEO CLOSE <trade id>; anything else is passed to the
 COO as a note. The COO's reply is posted as a comment and the issue is closed.
 """
 from __future__ import annotations
@@ -23,7 +23,7 @@ def parse(title: str, body: str = "") -> dict | None:
     if not w or w[0].upper().rstrip(":") != "CEO":
         return None
     verb = w[1].lower() if len(w) > 1 else "note"
-    if verb in ("approve", "reject", "pause", "resume") and len(w) > 2:
+    if verb in ("approve", "reject", "pause", "resume", "close") and len(w) > 2:
         return {"kind": verb, "arg": " ".join(w[2:])}
     return {"kind": "note", "arg": " ".join(w[1:]), "text": (" ".join(w[1:]) + (" — " + body.strip() if body and body.strip() else ""))[:500]}
 
