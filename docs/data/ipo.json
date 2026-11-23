@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T15:24:25+05:30",
+ "updated_at": "2026-11-23T17:29:06+05:30",
  "ipos": [
   {
    "name": "Mahanadi Coalfields Limited",
@@ -19,11 +19,11 @@
    "fresh_cr": null,
    "ofs_cr": 9000.97,
    "subscription": {
-    "qib": 3.94,
-    "nii": 0.6,
-    "retail": 0.41,
-    "total": 1.25,
-    "as_of": "23-Nov-2026 15:21:00"
+    "qib": 4.95,
+    "nii": 0.66,
+    "retail": 0.46,
+    "total": 1.52,
+    "as_of": "23-Nov-2026 17:27:00"
    },
    "drhp_url": null,
    "news": [
@@ -63,7 +63,7 @@
     "score": 30,
     "verdict": "Avoid",
     "reasons": [
-     "Subscription: QIB 3.94x*0.5, NII 0.60x*0.3, RETAIL 0.41x*0.2 -> weighted 2.23x.",
+     "Subscription: QIB 4.95x*0.5, NII 0.66x*0.3, RETAIL 0.46x*0.2 -> weighted 2.77x.",
      "Score 30 is below 40: demand is weak for the size."
     ],
     "risks": [
@@ -73,7 +73,7 @@
     "listing_view": {
      "low_pct": -5,
      "high_pct": 8,
-     "basis": "QIB 3.94x*0.5, NII 0.60x*0.3, RETAIL 0.41x*0.2 -> weighted 2.23x. Rule of thumb for this multiple on a Mainboard issue, not a forecast"
+     "basis": "QIB 4.95x*0.5, NII 0.66x*0.3, RETAIL 0.46x*0.2 -> weighted 2.77x. Rule of thumb for this multiple on a Mainboard issue, not a forecast"
     },
     "listing_px": [
      129.2,
@@ -104,7 +104,7 @@
     "qib": null,
     "nii": null,
     "retail": null,
-    "total": 116.4,
+    "total": 139.76,
     "as_of": null
    },
    "drhp_url": null,
@@ -146,7 +146,7 @@
     "verdict": "Apply (1 lot)",
     "reasons": [
      "Fresh issue is Rs 120 cr of Rs 120 cr, money that goes to the company.",
-     "Subscription: overall 116.40x (NSE gave no category split).",
+     "Subscription: overall 139.76x (NSE gave no category split).",
      "Score 70 is at or above the 70 bar for a SME issue."
     ],
     "risks": [
@@ -156,7 +156,7 @@
     "listing_view": {
      "low_pct": 12,
      "high_pct": 70,
-     "basis": "overall 116.40x (NSE gave no category split). Rule of thumb for this multiple on a SME issue, not a forecast"
+     "basis": "overall 139.76x (NSE gave no category split). Rule of thumb for this multiple on a SME issue, not a forecast"
     },
     "listing_px": [
      274.4,
@@ -240,6 +240,116 @@
    }
   },
   {
+   "name": "Foodlink F&B Holdings (India) Limited",
+   "symbol": "FOODLINK",
+   "board": "Mainboard",
+   "status": "upcoming",
+   "open_date": "2026-11-26",
+   "close_date": "2026-11-30",
+   "listing_date": null,
+   "price_band": [
+    181.0,
+    191.0
+   ],
+   "lot_size": 78,
+   "min_invest_rs": 14898.0,
+   "issue_size_cr": 360.76,
+   "fresh_cr": 192.0,
+   "ofs_cr": 168.76,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [
+    {
+     "title": "Foodlink F&B Holdings to Launch Rs 192 Crore IPO Next Week",
+     "source": "EventFAQs",
+     "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTDJQcEh4ak9YRm1UWXVLc08yQy1PR0pxSVF4b3BqS3dNZlJsUkRmV00yTzNJeXlfd3p1UW1mNWo2OUtBaFRYclE3dXRnRkdyMmVoSnU0X0w5cjR3eF95WjdCc09FS3ZybUFzcXV4THZnY3VHMHBJSXpoaHRPMzdWalNHVmJsMUtRQno5Vm5SVGNpLXN2RGFIT0d3?oc=5",
+     "time": "2026-11-23T10:17:25Z"
+    },
+    {
+     "title": "Foodlink F&B Holdings Sets IPO Price Band At Rs 181-191, To Raise Rs 361 Cr",
+     "source": "TradingView",
+     "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNamZEV0t3TVpvQkhjSkdhcmVnYnBYS3V5TFBHNlZQNkVLTzNQdWFvaUNsSGFoaW1GSk8tLWpuUDVIdlBmcWh3V3FhVUdmSnJ2bGFFQVZEaDBYNFJ3QnVFQnQ0MEZLS3JwWDBIT0x4ajN2OHU1Snk5cVBxcWlka3htdWJHdEdBcFFhLXdGRUo3dTFGNnpxdHB5RTVnZlZwdEtwcTQtS0xnNG9vc0YzLWltM1RIMF9jZV9yQTZwNTBRRHo1SERmcFJnLWxOYw?oc=5",
+     "time": "2026-11-23T10:07:48Z"
+    },
+    {
+     "title": "Foodlink F&B Holdings IPO GMP, Date, Price Band & Review",
+     "source": "IndiaIPO",
+     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5GMERPd0VpZndKbDJNa0xhZFA4VDdtTzNDMlJvSlYzalJaN1BVc3I2R0praE01N0hZdEVGNTNtZTNjaDF3TTlsU0E1ZF9JelhUcU4xUzlPRjh3MWNRRGw2Yy02ZzV0UVBhYXFR?oc=5",
+     "time": "2026-11-23T09:18:12Z"
+    },
+    {
+     "title": "Foodlink F&B Holdings IPO GMP, Date, Price Band & Review",
+     "source": "IndiaIPO",
+     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQVW9RUjJIeThzZDQxTm5YOThYbW9nc0lOLVVoaWVmMEE1UVRSMlV4OGlYa2ZUR0h4SkNWRm9OMVducURuVS1GM1ZiTkpDLXVSVXg4MTk3enFsZTFibTVQbV9wTXIxT0d3OW1VMEVvWll6OGR0X29kemFYUDNmQTg4aEZzZw?oc=5",
+     "time": "2026-11-23T09:18:11Z"
+    },
+    {
+     "title": "Luxury Caterer Foodlink F&B Holdings IPO Opens 26 November",
+     "source": "Prop News Time",
+     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOZUxUZnZ2eUc4eFliUnYxcWNqN295MUZpSmpfVlVrQmxwNnd6eTlUWlNKLUU1MFotS2RCZkE5c2ttaUwtaVR5WHRaY0IydjJ2QjVZbC1DUFFTdEU3VUVfQjdnTEN4UUpuRDl1cHVHRnUtR2ZOaWlIcEVka3dlMl9NTmt1UzNCWVBFSE5mMkRTbWlpVWhjVzdyNEwzejNTMkYydFFIazU4RHdLVEN0YlNR?oc=5",
+     "time": "2026-11-23T08:45:41Z"
+    }
+   ],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Fresh issue is Rs 192 cr of Rs 361 cr, money that goes to the company.",
+     "No subscription data yet: demand is the main signal and it appears only once bidding opens."
+    ],
+    "risks": [
+     "No matching DRHP found in SEBI's recent listing (older filings are not searched)."
+    ],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "unknown until bidding opens"
+    },
+    "listing_px": null,
+    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 191.00. No target range yet: it needs subscription numbers. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot.",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "Paras Healthcare Limited",
+   "symbol": "PARASHLTH",
+   "board": "Mainboard",
+   "status": "listed",
+   "open_date": "2026-10-21",
+   "close_date": "2026-10-23",
+   "listing_date": "2026-10-28",
+   "price_band": [
+    693.0,
+    693.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
    "name": "Jio Platforms Limited",
    "symbol": "JPL",
    "board": "Mainboard",
@@ -266,44 +376,6 @@
      "time": "2026-10-21T07:00:00Z"
     }
    ],
-   "thesis": null,
-   "analysis": {
-    "score": null,
-    "verdict": "Watch",
-    "reasons": [
-     "Already listed on NSE: nothing to apply for."
-    ],
-    "risks": [],
-    "listing_view": {
-     "low_pct": null,
-     "high_pct": null,
-     "basis": "already listed"
-    },
-    "listing_px": null,
-    "after_listing": "",
-    "method": "rules"
-   }
-  },
-  {
-   "name": "Paras Healthcare Limited",
-   "symbol": "PARASHLTH",
-   "board": "Mainboard",
-   "status": "listed",
-   "open_date": "2026-10-21",
-   "close_date": "2026-10-23",
-   "listing_date": "2026-10-28",
-   "price_band": [
-    693.0,
-    693.0
-   ],
-   "lot_size": null,
-   "min_invest_rs": null,
-   "issue_size_cr": null,
-   "fresh_cr": null,
-   "ofs_cr": null,
-   "subscription": null,
-   "drhp_url": null,
-   "news": [],
    "thesis": null,
    "analysis": {
     "score": null,
@@ -513,44 +585,6 @@
    }
   },
   {
-   "name": "Maxwell Engineering Solutions Limited",
-   "symbol": "MAXENGS",
-   "board": "SME",
-   "status": "listed",
-   "open_date": "2026-10-30",
-   "close_date": "2026-11-03",
-   "listing_date": "2026-11-06",
-   "price_band": [
-    158.0,
-    158.0
-   ],
-   "lot_size": null,
-   "min_invest_rs": null,
-   "issue_size_cr": null,
-   "fresh_cr": null,
-   "ofs_cr": null,
-   "subscription": null,
-   "drhp_url": null,
-   "news": [],
-   "thesis": null,
-   "analysis": {
-    "score": null,
-    "verdict": "Watch",
-    "reasons": [
-     "Already listed on NSE: nothing to apply for."
-    ],
-    "risks": [],
-    "listing_view": {
-     "low_pct": null,
-     "high_pct": null,
-     "basis": "already listed"
-    },
-    "listing_px": null,
-    "after_listing": "",
-    "method": "rules"
-   }
-  },
-  {
    "name": "HGS (India) Limited",
    "symbol": "HGSINDIALT",
    "board": "SME",
@@ -577,6 +611,44 @@
      "time": "2026-11-03T08:00:00Z"
     }
    ],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "Maxwell Engineering Solutions Limited",
+   "symbol": "MAXENGS",
+   "board": "SME",
+   "status": "listed",
+   "open_date": "2026-10-30",
+   "close_date": "2026-11-03",
+   "listing_date": "2026-11-06",
+   "price_band": [
+    158.0,
+    158.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
    "thesis": null,
    "analysis": {
     "score": null,
@@ -716,5 +788,5 @@
   "sebi": "ok",
   "news": "ok"
  },
- "at": 1795427682.9838626
+ "at": 1795435158.823945
 }

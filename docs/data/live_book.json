@@ -257,7 +257,7 @@
  },
  "seq": 9,
  "diag": {
-  "at": "15:30",
+  "at": "15:40",
   "effort": 2,
   "setups_on": [
    "news",
@@ -274,7 +274,7 @@
   },
   "taken": [],
   "skipped": {},
-  "news_names": 16,
+  "news_names": 17,
   "headline_names": 12
  }
 }

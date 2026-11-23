@@ -1,92 +1,81 @@
 {
- "day": "2026-11-20",
- "trades": 22,
- "closed": 20,
- "open": 2,
- "wins": 5,
- "win_rate": 25,
- "pnl": 8585.93,
+ "day": "2026-11-23",
+ "trades": 17,
+ "closed": 17,
+ "open": 0,
+ "wins": 6,
+ "win_rate": 35,
+ "pnl": 6320.16,
  "by_desk": {
   "EQUITY": {
-   "trades": 14,
-   "pnl": -1447.49
+   "trades": 12,
+   "pnl": -565.88
   },
   "FNO": {
    "trades": 2,
-   "pnl": 8437.25
+   "pnl": 7381.0
   },
   "COMMODITY": {
-   "trades": 2,
-   "pnl": 1698.38
+   "trades": 3,
+   "pnl": -494.96
   },
   "CRYPTO": {
-   "trades": 4,
-   "pnl": -102.21
+   "trades": 0,
+   "pnl": 0
   }
  },
  "by_strategy": [
   {
    "strategy": "long_straddle",
    "n": 1,
-   "pnl": 4522.0
+   "pnl": 4882.75
   },
   {
    "strategy": "long_breakout",
    "n": 1,
-   "pnl": 3915.25
-  },
-  {
-   "strategy": "mcx_momentum",
-   "n": 1,
-   "pnl": 1007.05
-  },
-  {
-   "strategy": "mcx_pullback",
-   "n": 1,
-   "pnl": 691.33
-  },
-  {
-   "strategy": "crypto_dip_bounce",
-   "n": 4,
-   "pnl": -102.21
-  },
-  {
-   "strategy": "news-led",
-   "n": 1,
-   "pnl": -179.17
-  },
-  {
-   "strategy": "scalp_vwap_pullback",
-   "n": 5,
-   "pnl": -514.43
+   "pnl": 2498.25
   },
   {
    "strategy": "gap-and-go",
    "n": 8,
-   "pnl": -753.89
+   "pnl": -105.68
+  },
+  {
+   "strategy": "headline-led",
+   "n": 1,
+   "pnl": -178.82
+  },
+  {
+   "strategy": "scalp_vwap_pullback",
+   "n": 3,
+   "pnl": -281.38
+  },
+  {
+   "strategy": "mcx_pullback",
+   "n": 3,
+   "pnl": -494.96
   }
  ],
- "equity": 119322.09,
+ "equity": 124277.03,
  "best": {
   "label": "NIFTY long straddle \u00b7 11-23",
-  "pnl": 4522.0
+  "pnl": 4882.75
  },
  "worst": {
-  "label": "ESDS short",
-  "pnl": -223.72
+  "label": "Natural gas mini short",
+  "pnl": -466.99
  },
  "news": {
-  "n": 1,
-  "pnl": -179.17
+  "n": 0,
+  "pnl": 0
  },
  "planned": {
   "n": 0,
   "pnl": 0
  },
  "notes": [
-  "22 trades: 5 won and 15 lost of 20 closed; net +8,586 rupees.",
-  "Best market: FNO (+8,437). Weakest: EQUITY (-1,447).",
-  "News-led trades: 1, net -179.",
+  "17 trades: 6 won and 11 lost of 17 closed; net +6,320 rupees.",
+  "Best market: FNO (+7,381). Weakest: EQUITY (-566).",
   "Win rate under 40% today: the strategies below the line on the scoreboard are the ones to watch for a pause."
  ]
 }
