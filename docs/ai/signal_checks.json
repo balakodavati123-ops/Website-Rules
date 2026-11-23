@@ -1,6 +1,6 @@
 {
- "time": "23 Nov 15:21",
- "at": 1795427496.595779,
+ "time": "23 Nov 16:21",
+ "at": 1795431064.938936,
  "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "checks": {
@@ -130,7 +130,27 @@
   },
   "TATASTEEL": {
    "verdict": "doubt",
-   "why": "Market-wide crash story, nearly an hour old, and price is flat"
+   "why": "Market-wide crash story, not company-specific; price flat"
+  },
+  "AVROIND": {
+   "verdict": "doubt",
+   "why": "Routine resignation filing with no detail; price has not moved"
+  },
+  "POLICYBZR": {
+   "verdict": "doubt",
+   "why": "9% jump already happened and price shows no follow-through"
+  },
+  "JWL": {
+   "verdict": "doubt",
+   "why": "Vague filings with no content; price flat"
+  },
+  "RATNAVEER": {
+   "verdict": "doubt",
+   "why": "Euphoric 10% surge already happened; chasing it is risky"
+  },
+  "KRYSTAL": {
+   "verdict": "doubt",
+   "why": "Order filing gives no size or value; price flat"
   }
  }
 }
