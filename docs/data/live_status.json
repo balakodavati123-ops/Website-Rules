@@ -4,12 +4,12 @@
   "crypto": "6 coins from Kraken, real time",
   "gateway": "dry \u00b7 3 intents, 0 refused",
   "company": "error: float division by zero",
-  "news_pulse": "1 new signal(s); 6 in the last hour from 9 feeds",
-  "charts": "4 live charts"
+  "charts": "4 live charts",
+  "news_pulse": "6 new signal(s); 12 in the last hour from 9 feeds"
  },
- "updated_at": "2026-11-23T18:02:47+05:30",
- "updated_hm": "23 Nov 18:02:47",
- "loops": 113,
+ "updated_at": "2026-11-23T18:09:13+05:30",
+ "updated_hm": "23 Nov 18:09:13",
+ "loops": 46,
  "sessions": {
   "equity": false,
   "fno": false,
@@ -21,12 +21,12 @@
  "first_iteration": {
   "equity": 0.4,
   "fill": 0.4,
-  "mcx": 0.9,
-  "fno": 0.9,
-  "crypto": 1.1,
-  "snapshots": 1.4,
-  "plan": 1.4,
-  "slow_and_intraday": 1.8,
-  "persist": 1.9
+  "mcx": 0.8,
+  "fno": 0.8,
+  "crypto": 0.9,
+  "snapshots": 1.1,
+  "plan": 1.3,
+  "slow_and_intraday": 2.3,
+  "persist": 2.9
  }
 }
