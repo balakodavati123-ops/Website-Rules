@@ -1,47 +1,67 @@
 {
  "mood": "bearish",
- "brief": "Indian shares remain under pressure, with Sensex down over 1,100 points and Nifty below 25,500 as the global sell-off weighs, though Indian IT stocks such as TCS are gaining as investors rotate out of Nvidia-led tech. Europe is recovering from its steep tech sell-off, but hedge funds posted their worst week since April 2025.",
+ "brief": "Indian markets sold off broadly into the afternoon, with Sensex shedding about 1,430 points and Nifty slipping below 25,400 as metals and banks dragged, despite IT and auto stocks leading gains. Cyber incident reports at Suzlon and L&T Technology Services added caution, while US tech weakness and falling gold kept global sentiment fragile.",
  "themes": [
-  "Global sell-off weighs on Sensex",
-  "IT stocks gain on tech rotation",
-  "HDFC Bank at 2.5-year low",
-  "Insurance commission cap worries"
+  "Broad Sensex sell-off, metals drag",
+  "IT and auto stocks lead gains",
+  "Cyber incidents at Indian firms",
+  "Gold and crypto weakness"
  ],
  "companies": [
   {
-   "name": "TCS",
-   "tone": "positive",
-   "why": "Gains 4% as tech sell-off sparks buying in IT"
-  },
-  {
-   "name": "HDFC Bank",
+   "name": "Tata Steel",
    "tone": "negative",
-   "why": "Slips to 2.5-year low on legal and leadership woes"
+   "why": "Dips 7% on APL Apollo deal; top loser"
   },
   {
-   "name": "PTC Industries",
-   "tone": "positive",
-   "why": "Shares gain after 400-tonne titanium defence order"
-  },
-  {
-   "name": "Thomas Cook",
-   "tone": "positive",
-   "why": "Surges 15%, extends three-session rally to 19%"
-  },
-  {
-   "name": "Simbhals",
+   "name": "Hindalco",
    "tone": "negative",
-   "why": "Corporate insolvency resolution process filing"
+   "why": "Under pressure as metal stocks drag"
+  },
+  {
+   "name": "Suzlon Energy",
+   "tone": "negative",
+   "why": "Reports cyber attack; says no critical impact"
+  },
+  {
+   "name": "L&T Technology Services",
+   "tone": "neutral",
+   "why": "Says systems secure amid cybersecurity incident reports"
+  },
+  {
+   "name": "Sterling and Wilson",
+   "tone": "positive",
+   "why": "Gains 7% on Rs 2,050 crore orders"
+  },
+  {
+   "name": "Dalmia Bharat",
+   "tone": "neutral",
+   "why": "Pares losses to trade flat after buyback news"
+  },
+  {
+   "name": "Tech Mahindra",
+   "tone": "neutral",
+   "why": "Fixes record date for 1:1 bonus issue"
+  },
+  {
+   "name": "Patel Engineering",
+   "tone": "positive",
+   "why": "ICICI Direct rates Buy, target Rs 80"
+  },
+  {
+   "name": "HDFC Life Insurance",
+   "tone": "positive",
+   "why": "ICICI Securities rates Buy, target Rs 739"
   }
  ],
- "global": "European stocks recovered after a steep tech-led sell-off, while Indonesia rose 1.63% and hedge funds had their worst week since April 2025.",
+ "global": "Gold fell sharply alongside US stocks on margin calls, while crypto tumbled in November and Iran tensions over a US naval blockade added geopolitical risk.",
  "risks": [
-  "Continued global tech sell-off",
-  "HDFC Bank legal and leadership concerns",
-  "Proposed insurance commission cap"
+  "Further sell-off in metals and banks",
+  "Cybersecurity incidents at listed firms",
+  "Iran and US naval blockade escalation"
  ],
- "time": "23 Nov 14:21",
- "at": 1795423873.477884,
+ "time": "23 Nov 15:21",
+ "at": 1795427496.595779,
  "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "n": 40

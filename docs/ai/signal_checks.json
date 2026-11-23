@@ -1,6 +1,6 @@
 {
- "time": "23 Nov 14:21",
- "at": 1795423873.477884,
+ "time": "23 Nov 15:21",
+ "at": 1795427496.595779,
  "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "checks": {
@@ -46,7 +46,7 @@
   },
   "TECHM": {
    "verdict": "doubt",
-   "why": "Market-wide IT rally, not company-specific, and price barely moved"
+   "why": "Bonus issue is cosmetic and already announced; price has not reacted"
   },
   "ASHOKA": {
    "verdict": "doubt",
@@ -58,7 +58,7 @@
   },
   "DALBHARAT": {
    "verdict": "doubt",
-   "why": "News over an hour old and price has drifted down since"
+   "why": "Buyback news is old and the stock has traded flat since"
   },
   "LOTUSEYE": {
    "verdict": "doubt",
@@ -110,7 +110,7 @@
   },
   "SIMBHALS": {
    "verdict": "confirm",
-   "why": "Fresh, specific insolvency process filing; no price data yet to contradict"
+   "why": "Specific insolvency process filing; no price data yet to contradict"
   },
   "THOMASCOOK": {
    "verdict": "doubt",
@@ -123,6 +123,14 @@
   "GOKUL": {
    "verdict": "doubt",
    "why": "Story is about a former director's son, not the company; price flat"
+  },
+  "SOLARWORLD": {
+   "verdict": "doubt",
+   "why": "Order filing gives no size or value despite a small price rise"
+  },
+  "TATASTEEL": {
+   "verdict": "doubt",
+   "why": "Market-wide crash story, nearly an hour old, and price is flat"
   }
  }
 }
