@@ -1086,7 +1086,13 @@
   "indiangreenenergystocksfallamidmarketselloffassensexdeclines18selectrenewablesharesbucktre": 1,
   "stockmarketholidaytomorrowtuesday24novbsenseopenorclosedforgurunanakjayanticheckexchangeca": 1,
   "physicswallahentershighereducationwithdigitaluniversityinpatialapunjab": 1,
-  "rmcbaggingreceivingoforderscontracts": 1
+  "rmcbaggingreceivingoforderscontracts": 1,
+  "mediassistbuyback": 1,
+  "tatasteelaplapollodealtriggers31000croremarketcaperosion": 1,
+  "nsesharepricetodaynationalstockexchangeofindiaonnsebsescanxtrade": 1,
+  "6stockshit52weekhighsonnsehonasaconsumerdlfeichermotorsapollohospitalsandothersinfocusdala": 1,
+  "marutisuzukiraisespricesofselectmodelsby031percentindiantelevisiondotcom": 1,
+  "zenithexpodisclosureundersebitakeoverregulations": 1
  },
  "signals": [
   {
@@ -2824,6 +2830,44 @@
    "px0": 164.69,
    "px": 164.69,
    "move_pct": 0.0
+  },
+  {
+   "id": "N174638-70",
+   "t": "17:46:38",
+   "ts": 1795436198.377493,
+   "pub": "17:45",
+   "lag_s": 50,
+   "symbol": "MEDIASSIST",
+   "tone": "positive",
+   "score": 3,
+   "emotion": "Optimism",
+   "why": [
+    "buyback"
+   ],
+   "headline": "MEDIASSIST: Buyback",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/MEDIASSIST_23112026174239_MAHSSEIntimationLetterOfOffersd.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N175646-71",
+   "t": "17:56:46",
+   "ts": 1795436806.280269,
+   "pub": "17:54",
+   "lag_s": 107,
+   "symbol": "ZENITHEXPO",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "ZENITHEXPO: Disclosure under SEBI Takeover Regulations",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/team_sandeshc_23112026174633_Dis1.PDF",
+   "kind": "filing",
+   "status": "new"
   }
  ],
  "cache": {
@@ -2845,7 +2889,7 @@
   },
   "https://www.business-standard.com/rss/markets-106.rss": {
    "etag": "\"b76264b1dfb0910e1ba98076d0b29725\"",
-   "mod": "Mon, 23 Nov 2026 12:04:20 GMT"
+   "mod": "Mon, 23 Nov 2026 12:19:45 GMT"
   },
   "https://www.thehindubusinessline.com/markets/feeder/default.rss": {
    "etag": null,
@@ -2868,48 +2912,48 @@
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "Moneycontrol": {
    "ok": true,
    "items": 15,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "17:45:54"
+   "at": "17:56:46"
   },
   "Google News": {
    "ok": true,
-   "items": 8,
-   "at": "17:45:54"
+   "items": 11,
+   "at": "17:56:46"
   }
  },
- "scans": 685
+ "scans": 687
 }
