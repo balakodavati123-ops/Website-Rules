@@ -1,67 +1,67 @@
 {
- "mood": "mixed",
- "brief": "Indian shares opened higher on foreign inflows as the global AI-trade reversal continues, with IT stocks like TCS and Tech Mahindra rallying and US futures rebounding. Metals remain volatile after a week of mayhem, and Tata Steel fell nearly 5% on its APL Apollo Tubes deal.",
+ "mood": "bearish",
+ "brief": "Indian markets sold off broadly into the afternoon, with Sensex shedding about 1,430 points and Nifty slipping below 25,400 as metals and banks dragged, despite IT and auto stocks leading gains. Cyber incident reports at Suzlon and L&T Technology Services added caution, while US tech weakness and falling gold kept global sentiment fragile.",
  "themes": [
-  "Anti-AI trade lifts Indian IT",
-  "Metals and copper volatility",
-  "Tata Steel and APL Apollo deal",
-  "Strong festive auto retail"
+  "Broad Sensex sell-off, metals drag",
+  "IT and auto stocks lead gains",
+  "Cyber incidents at Indian firms",
+  "Gold and crypto weakness"
  ],
  "companies": [
   {
    "name": "Tata Steel",
    "tone": "negative",
-   "why": "Shares plunge nearly 5% on APL Apollo Tubes stake buy"
-  },
-  {
-   "name": "APL Apollo Tubes",
-   "tone": "neutral",
-   "why": "Tata Steel to acquire 26.38% stake"
-  },
-  {
-   "name": "TCS",
-   "tone": "positive",
-   "why": "Surges up to 5% as anti-AI trade lifts IT"
-  },
-  {
-   "name": "Tech Mahindra",
-   "tone": "positive",
-   "why": "Surges up to 5% as anti-AI trade lifts IT"
-  },
-  {
-   "name": "Westlife Foodworld",
-   "tone": "negative",
-   "why": "Goldman Sachs downgraded it to Sell"
-  },
-  {
-   "name": "SG Mart",
-   "tone": "positive",
-   "why": "Hits 52-week high as board considers fundraiser"
-  },
-  {
-   "name": "Ashoka Buildcon",
-   "tone": "positive",
-   "why": "Jumps 8% on Rs 4,223 crore project wins"
+   "why": "Dips 7% on APL Apollo deal; top loser"
   },
   {
    "name": "Hindalco",
    "tone": "negative",
-   "why": "Falls 2% as copper slides below $12,000"
+   "why": "Under pressure as metal stocks drag"
   },
   {
-   "name": "Infosys",
+   "name": "Suzlon Energy",
    "tone": "negative",
-   "why": "Nirmal Bang stays bearish on large-cap IT"
+   "why": "Reports cyber attack; says no critical impact"
+  },
+  {
+   "name": "L&T Technology Services",
+   "tone": "neutral",
+   "why": "Says systems secure amid cybersecurity incident reports"
+  },
+  {
+   "name": "Sterling and Wilson",
+   "tone": "positive",
+   "why": "Gains 7% on Rs 2,050 crore orders"
+  },
+  {
+   "name": "Dalmia Bharat",
+   "tone": "neutral",
+   "why": "Pares losses to trade flat after buyback news"
+  },
+  {
+   "name": "Tech Mahindra",
+   "tone": "neutral",
+   "why": "Fixes record date for 1:1 bonus issue"
+  },
+  {
+   "name": "Patel Engineering",
+   "tone": "positive",
+   "why": "ICICI Direct rates Buy, target Rs 80"
+  },
+  {
+   "name": "HDFC Life Insurance",
+   "tone": "positive",
+   "why": "ICICI Securities rates Buy, target Rs 739"
   }
  ],
- "global": "US stock futures are rebounding after last week's bloodbath, though a week of mayhem rocked metals markets and Asian authorities are stepping in to support stocks.",
+ "global": "Gold fell sharply alongside US stocks on margin calls, while crypto tumbled in November and Iran tensions over a US naval blockade added geopolitical risk.",
  "risks": [
-  "AI-trade reversal may be volatile",
-  "Copper and metals sell-off",
-  "Large-cap IT bearish brokerage views"
+  "Further sell-off in metals and banks",
+  "Cybersecurity incidents at listed firms",
+  "Iran and US naval blockade escalation"
  ],
- "time": "23 Nov 11:20",
- "at": 1795413057.070344,
+ "time": "23 Nov 15:21",
+ "at": 1795427496.595779,
  "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "n": 40

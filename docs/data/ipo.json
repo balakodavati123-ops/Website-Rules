@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T11:17:11+05:30",
+ "updated_at": "2026-11-23T15:24:25+05:30",
  "ipos": [
   {
    "name": "Mahanadi Coalfields Limited",
@@ -19,11 +19,11 @@
    "fresh_cr": null,
    "ofs_cr": 9000.97,
    "subscription": {
-    "qib": 1.37,
-    "nii": 0.28,
-    "retail": 0.32,
-    "total": 0.55,
-    "as_of": "23-Nov-2026 11:15:00"
+    "qib": 3.94,
+    "nii": 0.6,
+    "retail": 0.41,
+    "total": 1.25,
+    "as_of": "23-Nov-2026 15:21:00"
    },
    "drhp_url": null,
    "news": [
@@ -60,26 +60,26 @@
    ],
    "thesis": "Bidding is open until 23 Nov and was 0.48x subscribed on day 2; QIBs are at 1.37x while retail is 0.24x. Institutions usually bid late, so early numbers say little. The issue is entirely offer-for-sale, so no money goes to the company. One lot costs about Rs 14,960; only a small bet is sensible, ideally after checking final-day demand.",
    "analysis": {
-    "score": 15,
+    "score": 30,
     "verdict": "Avoid",
     "reasons": [
-     "Subscription: QIB 1.37x*0.5, NII 0.28x*0.3, RETAIL 0.32x*0.2 -> weighted 0.83x.",
-     "Score 15 is below 40: demand is weak for the size."
+     "Subscription: QIB 3.94x*0.5, NII 0.60x*0.3, RETAIL 0.41x*0.2 -> weighted 2.23x.",
+     "Score 30 is below 40: demand is weak for the size."
     ],
     "risks": [
      "Offer-for-sale heavy: 100% of the issue (Rs 9,001 cr of Rs 9,001 cr) pays existing holders, not the company.",
      "No matching DRHP found in SEBI's recent listing (older filings are not searched)."
     ],
     "listing_view": {
-     "low_pct": -15,
-     "high_pct": 0,
-     "basis": "QIB 1.37x*0.5, NII 0.28x*0.3, RETAIL 0.32x*0.2 -> weighted 0.83x. Rule of thumb for this multiple on a Mainboard issue, not a forecast"
+     "low_pct": -5,
+     "high_pct": 8,
+     "basis": "QIB 3.94x*0.5, NII 0.60x*0.3, RETAIL 0.41x*0.2 -> weighted 2.23x. Rule of thumb for this multiple on a Mainboard issue, not a forecast"
     },
     "listing_px": [
-     115.6,
-     136.0
+     129.2,
+     146.88
     ],
-    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 136.00. Target for the first half: inside the Rs 115.60 to Rs 136.00 range, ideally near the top. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot.",
+    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 136.00. Target for the first half: inside the Rs 129.20 to Rs 146.88 range, ideally near the top. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot.",
     "method": "rules+claude"
    }
   },
@@ -104,7 +104,7 @@
     "qib": null,
     "nii": null,
     "retail": null,
-    "total": 30.45,
+    "total": 116.4,
     "as_of": null
    },
    "drhp_url": null,
@@ -142,27 +142,27 @@
    ],
    "thesis": "This SME issue was subscribed 11.1x overall, showing strong demand, though no category split is available. SME stocks have large lots, thin trading and big price swings. One lot costs about Rs 1.47 lakh, which is heavy for a small bet. Our score of 53 is below the bar to apply, so treat it as watch only.",
    "analysis": {
-    "score": 63,
-    "verdict": "Watch",
+    "score": 70,
+    "verdict": "Apply (1 lot)",
     "reasons": [
      "Fresh issue is Rs 120 cr of Rs 120 cr, money that goes to the company.",
-     "Subscription: overall 30.45x (NSE gave no category split).",
-     "Score 63 is below the 70 bar to apply."
+     "Subscription: overall 116.40x (NSE gave no category split).",
+     "Score 70 is at or above the 70 bar for a SME issue."
     ],
     "risks": [
      "SME board: lots are large, trading is thin and prices swing far more than on the mainboard. Higher risk.",
      "No matching DRHP found in SEBI's recent listing (older filings are not searched)."
     ],
     "listing_view": {
-     "low_pct": 7,
-     "high_pct": 55,
-     "basis": "overall 30.45x (NSE gave no category split). Rule of thumb for this multiple on a SME issue, not a forecast"
+     "low_pct": 12,
+     "high_pct": 70,
+     "basis": "overall 116.40x (NSE gave no category split). Rule of thumb for this multiple on a SME issue, not a forecast"
     },
     "listing_px": [
-     262.15,
-     379.75
+     274.4,
+     416.5
     ],
-    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 245.00. Target for the first half: inside the Rs 262.15 to Rs 379.75 range, ideally near the top. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot. SME shares are thinly traded, so a sell order may not fill at the price you want.",
+    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 245.00. Target for the first half: inside the Rs 274.40 to Rs 416.50 range, ideally near the top. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot. SME shares are thinly traded, so a sell order may not fill at the price you want.",
     "method": "rules+claude"
    }
   },
@@ -211,9 +211,9 @@
      "time": "2026-11-20T06:37:50Z"
     },
     {
-     "title": "Shree Siddhivinayak Greentech Industries IPO GMP Today, Expected Listing Gain & Price Band",
+     "title": "Shree Siddhivinayak Greentech Industries IPO: Details & Review",
      "source": "IndiaIPO",
-     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOTmZMckVxdjlFRjRMQ1RGdTBOMkNfLWcyRnJJSFE5UllPZ1BtWllJUFpYUllwN3ZCZnV4eE1YQTN5NnplLUk5LU96UzBmaG5UOFUtUDVza014SFMzSnVJOERxWkFWTl9xVU5uRWFWMVFNVUk3bnFMVk13MzlXa1ZtUFN2dGFUQXc2RFFhSjdYTWs?oc=5",
+     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQU1BxTml3YVpTa2RONGI5aUdIdFpZOXNTWTFCT2cxa1Z0NmhUT1Z3QUVNY2hQUFpaWkhXVnRtaVBWQmlMWnhCbkZ3OVZXSFMxQ3J4RkQ3THlmT1RXUlZOOXJGaHZsQTBXS2dhYTJxeHFjX3VaSDRNMTdKMW1RZXJTR3pPTEM?oc=5",
      "time": "2026-11-20T04:14:00Z"
     }
    ],
@@ -636,6 +636,11 @@
  ],
  "drhp_recent": [
   {
+   "date": "2026-11-23",
+   "company": "Pride Hotels Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/pride-hotels-limited-addendum-to-the-drhp_105935.html"
+  },
+  {
    "date": "2026-11-19",
    "company": "Chartered Speed Limited",
    "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/chartered-speed-limited-addendum-to-the-drhp_105815.html"
@@ -704,11 +709,6 @@
    "date": "2026-10-26",
    "company": "Integris Medtech Limited",
    "url": "https://www.sebi.gov.in/filings/public-issues/oct-2026/integris-medtech-limited-addendum-to-drhp_105416.html"
-  },
-  {
-   "date": "2026-10-21",
-   "company": "GAMP Services Limited",
-   "url": "https://www.sebi.gov.in/filings/public-issues/oct-2026/gamp-services-limited-drhp_105424.html"
   }
  ],
  "sources": {
@@ -716,5 +716,5 @@
   "sebi": "ok",
   "news": "ok"
  },
- "at": 1795412844.665465
+ "at": 1795427682.9838626
 }
