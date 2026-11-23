@@ -1,59 +1,79 @@
 {
- "updated_at": "2026-11-23T00:42:36+05:30",
- "scans": 238,
+ "updated_at": "2026-11-23T06:22:45+05:30",
+ "scans": 272,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "Moneycontrol": {
    "ok": false,
    "items": 0,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "Google News": {
    "ok": true,
-   "items": 6,
-   "at": "00:42:36"
+   "items": 7,
+   "at": "06:22:45"
   }
  },
- "signals": [],
+ "signals": [
+  {
+   "id": "N010136-1",
+   "t": "01:01:36",
+   "ts": 1795375896.094845,
+   "pub": "13:30",
+   "lag_s": -44905,
+   "symbol": "SOUTHWEST",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "ban"
+   ],
+   "headline": "South Africa vs Bangladesh 2nd Test Live Streaming: When And Where To Watch SA vs BAN Match In India",
+   "source": "NDTV Profit",
+   "link": "https://www.ndtvprofit.com/sports/south-africa-vs-bangladesh-2nd-test-live-streaming-when-and-where-to-watch-sa-vs-ban-match-in-india-12362898#publisher=newsstand",
+   "kind": "headline",
+   "status": "new"
+  }
+ ],
  "stats": {
   "last_hour": 0,
   "positive": 0,
   "negative": 0,
-  "today": 0,
+  "today": 1,
   "median_lag_min": null,
   "new_this_scan": 0
  }

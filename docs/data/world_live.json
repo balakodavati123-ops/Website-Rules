@@ -1,5 +1,5 @@
 {
- "at": 1795372473.6371987,
+ "at": 1795394096.6559432,
  "rows": [
   {
    "group": "United States",
@@ -105,11 +105,11 @@
    "group": "Money",
    "name": "US dollar index",
    "symbol": "DX-Y.NYB",
-   "last": 103.81,
-   "chg_pct": -0.09,
-   "as_of": "2026-11-20",
+   "last": 103.84,
+   "chg_pct": 0.03,
+   "as_of": "2026-11-22",
    "why": "A strong dollar pulls money out of India",
-   "spark": "[102.91, 103.17, 103.41, 103.55, 103.49, 103.86, 103.9, 103.81]"
+   "spark": "[103.17, 103.41, 103.55, 103.49, 103.86, 103.9, 103.81, 103.84]"
   },
   {
    "group": "Money",
@@ -135,31 +135,31 @@
    "group": "Commodities",
    "name": "Brent crude",
    "symbol": "BZ=F",
-   "last": 89.95,
-   "chg_pct": -2.21,
-   "as_of": "2026-11-20",
+   "last": 89.28,
+   "chg_pct": -3.55,
+   "as_of": "2026-11-22",
    "why": "India imports its oil: higher is worse",
-   "spark": "[92.76, 95.82, 95.84, 92.44, 93.14, 91.95, 91.98, 89.95]"
+   "spark": "[95.82, 95.84, 92.44, 93.14, 91.95, 91.98, 92.57, 89.28]"
   },
   {
    "group": "Commodities",
    "name": "Gold",
    "symbol": "GC=F",
-   "last": 3515.4,
-   "chg_pct": -4.62,
-   "as_of": "2026-11-20",
+   "last": 3573.4,
+   "chg_pct": 1.65,
+   "as_of": "2026-11-22",
    "why": "Your largest holding follows this",
-   "spark": "[4000.5, 3885.3, 3886.3, 3853.0, 3864.2, 3741.9, 3685.5, 3515.4]"
+   "spark": "[3885.3, 3886.3, 3853.0, 3864.2, 3741.9, 3685.5, 3515.4, 3573.4]"
   },
   {
    "group": "Commodities",
    "name": "Silver",
    "symbol": "SI=F",
-   "last": 41.07,
-   "chg_pct": -7.33,
-   "as_of": "2026-11-20",
+   "last": 41.95,
+   "chg_pct": 2.23,
+   "as_of": "2026-11-22",
    "why": "Your second-largest holding",
-   "spark": "[51.88, 49.97, 49.03, 46.78, 47.29, 45.0, 44.32, 41.07]"
+   "spark": "[49.97, 49.03, 46.78, 47.29, 45.0, 44.32, 41.03, 41.95]"
   }
  ]
 }

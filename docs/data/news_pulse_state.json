@@ -433,17 +433,68 @@
   "integrismedtechipodatepricebandissuesizeipowatch": 1,
   "nsetightensretailalgotradingcompliancerestrictsstaticipaccesstoselfcodinginvestorsindiaipo": 1,
   "goldratetodayinindia23nov2026live18k22k24kgoldpriceskotakneo": 1,
-  "isitcnseiitcfullypricedgivenitscashflowoutlooksimplywallst": 1
+  "isitcnseiitcfullypricedgivenitscashflowoutlooksimplywallst": 1,
+  "southafricavsbangladesh2ndtestlivestreamingwhenandwheretowatchsavsbanmatchinindia": 1,
+  "stockstowatchtodaywaareeenergiesbergerpaintsbluedartexpressraymondindianbankmore": 1,
+  "fourdaytrainingforirsofficertraineesorganisedthehansindia": 1,
+  "whyistheanupengineeringsharepricefallingkeyreasons2026univest": 1,
+  "watranarentalsipoallotmentstatus1189xsubscribedcheckonlineunivest": 1,
+  "goldratetodayinkozhikode23nov2026kotakneo": 1,
+  "goldratetodayinjanjgir22nov2026kotakneo": 1,
+  "goldratetodayinhyderabad22nov2026kotakneo": 1,
+  "goldratetodayingoalpara23nov2026kotakneo": 1,
+  "goldratetodayinmaharashtra23nov2026live18k22k24kgoldpriceskotakneo": 1,
+  "goldratetodayinkathua23nov2026kotakneo": 1,
+  "goldratetodayinnadiad23nov2026kotakneo": 1,
+  "aplapollotubessharesinfocusaftermega28000croredealwithtatasteel": 1,
+  "beijingtobaryoungredchipfirmsfromlistingoutsidemainlandchinasourcessay": 1,
+  "stockmarkettodayallyouneedtoknowgoingintotradeonoct23": 1,
+  "goldratetodayindibrugarh23nov2026kotakneo": 1,
+  "usfuturesbouncewhileasiamarketsbraceforaiwipeout": 1,
+  "dollaredgesoff19monthhighaftermarketroutyensoftens": 1,
+  "dowjonesnasdaqfuturesreboundupto600pointsthisisthemostimportanttriggeroftheweek": 1,
+  "goldratetodayinsiddipet22nov2026kotakneo": 1,
+  "oswalpumpsnseoswalpumpsweakearningsmayonlyrevealapartofthewholepicturesimplywallst": 1,
+  "genuspowerinfrastructuresnsegenuspowerprofitsmaynotrevealunderlyingissuessimplywallst": 1,
+  "rupeerallymayextendbutforeigninflowsandglobalsentimentposerisks": 1,
+  "vodafoneideasnseideaperformanceraisessomequestionssimplywallst": 1,
+  "bombayburmahtradingsnsebbtcperformanceisevenbetterthanitsearningssuggestsimplywallst": 1,
+  "rajavenkatramanrecommendsthreestocksfor23november": 1,
+  "dowjonesnasdaqfuturesreboundupto750pointsthisisthemostimportanttriggeroftheweek": 1,
+  "nsevsbsewhichstockexchangeshareisthebetterstockin2026equitymaster": 1,
+  "sensextodaystockmarketliveupdatesniftyaimsfor26000onmonthlyexpirywallstreetfuturesrebound": 1,
+  "indianstockmarketnewsequitymarketandsensextodayinindiaequitymaster": 1,
+  "cochinshipyardsnsecochinshipsluggishearningsmightbejustthebeginningofitsproblemssimplywall": 1
  },
- "signals": [],
+ "signals": [
+  {
+   "id": "N010136-1",
+   "t": "01:01:36",
+   "ts": 1795375896.094845,
+   "pub": "13:30",
+   "lag_s": -44905,
+   "symbol": "SOUTHWEST",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "ban"
+   ],
+   "headline": "South Africa vs Bangladesh 2nd Test Live Streaming: When And Where To Watch SA vs BAN Match In India",
+   "source": "NDTV Profit",
+   "link": "https://www.ndtvprofit.com/sports/south-africa-vs-bangladesh-2nd-test-live-streaming-when-and-where-to-watch-sa-vs-ban-match-in-india-12362898#publisher=newsstand",
+   "kind": "headline",
+   "status": "new"
+  }
+ ],
  "cache": {
   "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms": {
-   "etag": "\"0216e31646a0ef7dbf6177d877fc43343-gzip\"",
-   "mod": "Sun, 22 Nov 2026 19:03:01 GMT"
+   "etag": "\"02bd79ce17dbf1cf24b3a251cd82ea435-gzip\"",
+   "mod": "Mon, 23 Nov 2026 00:26:26 GMT"
   },
   "https://economictimes.indiatimes.com/markets/stocks/rssfeeds/2146842.cms": {
-   "etag": "\"0fcb9363edd06dbfa307b59a59715f5ea-gzip\"",
-   "mod": "Sun, 22 Nov 2026 19:08:34 GMT"
+   "etag": "\"07b62dec6bbb197cb479858d1bc565d5e-gzip\"",
+   "mod": "Mon, 23 Nov 2026 00:38:25 GMT"
   },
   "https://www.moneycontrol.com/rss/latestnews.xml": {
    "etag": null,
@@ -455,7 +506,7 @@
   },
   "https://www.business-standard.com/rss/markets-106.rss": {
    "etag": "\"3205ab93356a76678b35e8f5870670ca\"",
-   "mod": "Sun, 22 Nov 2026 19:05:09 GMT"
+   "mod": "Sun, 22 Nov 2026 19:49:29 GMT"
   },
   "https://www.thehindubusinessline.com/markets/feeder/default.rss": {
    "etag": null,
@@ -463,7 +514,7 @@
   },
   "https://feeds.feedburner.com/ndtvprofit-latest": {
    "etag": null,
-   "mod": "Sun, 22 Nov 2026 18:27:04 GMT"
+   "mod": "Sun, 22 Nov 2026 23:33:37 GMT"
   },
   "https://www.cnbctv18.com/commonfeeds/v1/cne/rss/market.xml": {
    "etag": null,
@@ -478,48 +529,48 @@
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "Moneycontrol": {
    "ok": false,
    "items": 0,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "00:42:36"
+   "at": "06:22:45"
   },
   "Google News": {
    "ok": true,
-   "items": 6,
-   "at": "00:42:36"
+   "items": 7,
+   "at": "06:22:45"
   }
  },
- "scans": 238
+ "scans": 272
 }

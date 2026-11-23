@@ -1,78 +1,6 @@
 [
  {
-  "time": "23 Nov 00:24",
-  "source": "GoogleNews-Business",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold crashes 31%, silver plunges 64%: How much your \u20b910 lakh investment shrunk since January peak, what lies ahead? - Livemint",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:24",
-  "source": "GoogleNews-Business",
-  "category": "DEAL/ORDER",
-  "headline": "China ran 2-year spy campaign to acquire advanced AI chips, evade US curbs: Report - India Today",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "23 Nov 00:24",
-  "source": "GoogleNews-Business",
-  "category": "DEAL/ORDER",
-  "headline": "8th Pay Commission: Merger of 50% dearness allowance with basic pay demand returns as 8th CPC completes a year - Upstox",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "23 Nov 00:24",
-  "source": "GoogleNews-Business",
-  "category": "CRASH/SHOCK",
-  "headline": "Asia\u2019s stock rescue efforts gather pace after Wall Street plunge - Moneycontrol.com",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:24",
-  "source": "GoogleNews-Business",
-  "category": "GEOPOLITICS",
-  "headline": "Rubio says tech outages are not part of 'systemic attack' against US - BBC",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "23 Nov 00:24",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Nikkei, Kospi fall over 4% each; Asian markets crash as AI sell-off deepens despite record Anthropic IPO",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:24",
-  "source": "CNBC-TV18",
-  "category": "LEADER-EXIT",
-  "headline": "PB Fintech shares fall up to 6% after co-founder Alok Bansal to step down from executive role next year",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:24",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Global commodity prices plunge: These are the metals impacted and Emkay's preferred plays",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:29",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "UK stocks sink as global selloff weighs on banks and miners",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:29",
+  "time": "23 Nov 05:39",
   "source": "ET",
   "category": "CRASH/SHOCK",
   "headline": "SELLAS Life Sciences shares plunge 19%: What triggered the sharp sell-off?",
@@ -80,79 +8,7 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "23 Nov 00:29",
-  "source": "GoogleNews-Business",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold falls 4.49% to Rs 1.21 lakh, silver plunges 6.6% in a single day to Rs 1.47 lakh; wedding shoppers g - The Times of India",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:29",
-  "source": "GoogleNews-Business",
-  "category": "CRASH/SHOCK",
-  "headline": "Nvidia's $2.6 trillion rout: Shares tumble 46% in 7 weeks; market cap falls to 4th place - The Economic Times",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:29",
-  "source": "GoogleNews-Business",
-  "category": "GEOPOLITICS",
-  "headline": "The AI talent war: China is the factory, America the magnet, India an also-ran - The Times of India",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "23 Nov 00:29",
-  "source": "GoogleNews-Business",
-  "category": "CRASH/SHOCK",
-  "headline": "Is the AI Bubble Finally Popping? Nvidia Crashes 48% as Wall Street Experts Sound the Alarm - Decrypt",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:29",
-  "source": "Yahoo-Nifty",
-  "category": "RBI-POLICY",
-  "headline": "India stocks dip after RBI hikes rates for first time in nearly 4 yrs",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "23 Nov 00:29",
-  "source": "CNBC-TV18",
-  "category": "RBI-POLICY",
-  "headline": "Asian markets mixed as investors weigh Anthropic's record IPO against Fed rate hike risks",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "23 Nov 00:29",
-  "source": "CNBC-TV18",
-  "category": "DEAL/ORDER",
-  "headline": "Dalmia Bharat to consider share buyback at November 23 board meeting",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "23 Nov 00:29",
-  "source": "CNBC-TV18",
-  "category": "DEAL/ORDER",
-  "headline": "LT Foods to acquire 100% stake in US-based Maya Kaimal parent for $5.8 million",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "23 Nov 00:29",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Metal Stocks Under Pressure: Why Domestic Steel Outshines Aluminium Amid Global Sell-Off",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:34",
+  "time": "23 Nov 05:39",
   "source": "Mint",
   "category": "CRASH/SHOCK",
   "headline": "Asia\u2019s Stock Rescue Efforts Gather Pace After Wall Street Plunge",
@@ -160,223 +16,7 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "23 Nov 00:34",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "What is future of gold rates? Price crash continues as AI selloff, Fed rate-hike concerns weigh on investors' sentiment",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:34",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "Stock split reset: SanDisk stock crashes 87.5% overnight? Here's what investors need to know about its 8-for-1 split",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:34",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex, Nifty Open Lower as Global AI Selloff Weighs - HDFC Sky",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:34",
-  "source": "GoogleNews-Business",
-  "category": "GEOPOLITICS",
-  "headline": "GTA 6 Becomes Latest BJP-Congress Battleground: How PM Modi's Post Triggered Political Meme War - News18",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "23 Nov 00:34",
-  "source": "Yahoo-Nifty",
-  "category": "CRASH/SHOCK",
-  "headline": "AI stock selloff drives investors to China, India, and overlooked Asian sectors",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:34",
-  "source": "Yahoo-Nifty",
-  "category": "CRASH/SHOCK",
-  "headline": "Why India\u2019s Nifty 50 Is Holding Steady Despite Asian Market Selloff",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:34",
-  "source": "BusinessLine",
-  "category": "CRASH/SHOCK",
-  "headline": "US Market Outlook: Indices plunge deeply",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:34",
-  "source": "BusinessLine",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold price continues to fall as AI selloff, rate-hike bets weigh. What\u2019s ahead?",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:34",
-  "source": "BusinessLine",
-  "category": "CRASH/SHOCK",
-  "headline": "Wall Street selloff deepens as Dow, S&P 500 enter correction; Nasdaq plunges 5.28%",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:34",
-  "source": "BusinessLine",
-  "category": "DEAL/ORDER",
-  "headline": "TSMC invests $500 million in Anthropic, acquires 0.03% stake at IPO price",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "23 Nov 00:39",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "Wall Street sell-off: Is the worst over? Goldman Sachs warns of fresh selling wave, flags 3 recovery triggers",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:39",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "Bitcoin price crash: \u200bFalls to lowest level in two years - What\u2019s behind plunge of world\u2019s largest cryptocurrency",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:39",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold, silver price crash: DSP Mutual Fund turns bullish on bullion, reveals new buying strategy; check price levels",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:39",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "Taiwan Widens Short Sale Curbs After Shares Plunge on AI Concern",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:39",
-  "source": "RBI",
-  "category": "EARNINGS",
-  "headline": "Government Stock - Full Auction Results",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "23 Nov 00:39",
-  "source": "BusinessLine",
-  "category": "GEOPOLITICS",
-  "headline": "Crude oil futures gain on reports of Houthi attack in Riyadh",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "23 Nov 00:39",
-  "source": "BusinessLine",
-  "category": "CRASH/SHOCK",
-  "headline": "Nifty opens lower as global tech selloff weighs; Max Healthcare, Apollo top gainers",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:39",
-  "source": "NDTVProfit",
-  "category": "LEADER-EXIT",
-  "headline": "Lodha Developers Chairman Mukund Chitale Steps Down; Akhil Gupta To Replace",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:39",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Global AI Sell-off: Taiwan takes action yet again to support collapsing stock market",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:39",
-  "source": "CNBC-TV18",
-  "category": "APPROVAL",
-  "headline": "Cohance Lifesciences: USFDA inspects and classifies Telangana facility as \u2018voluntary action indicated\u2019",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "23 Nov 00:39",
-  "source": "CNBC-TV18",
-  "category": "RBI-POLICY",
-  "headline": "Gold falls further, set for worst week since March as Fed rate hike worries rise",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "23 Nov 00:44",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "5 penny stocks plunge up to 68% in six months. Do you own any?",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:44",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Anthropic shares tumble after record IPO as AI trade faces reality check",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:44",
-  "source": "BusinessStandard",
-  "category": "DEAL/ORDER",
-  "headline": "Dilip Buildcon share price surges 7% on \u20b9419-crore Gurugram Metro order win",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "23 Nov 00:44",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold ETFs down 5%; Silver ETFs plunge over 6%, trade at 52-week lows",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:44",
-  "source": "RBI",
-  "category": "EARNINGS",
-  "headline": "Government Stock - Auction Results: Cut-off",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "23 Nov 00:44",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "What RBI\u2019s FY26 bank fraud data reveals as Fraud Awareness Week concludes - CNBC TV18",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:44",
+  "time": "23 Nov 05:39",
   "source": "GoogleNews-Business",
   "category": "CRASH/SHOCK",
   "headline": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis - CNBC",
@@ -384,87 +24,23 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "23 Nov 00:44",
-  "source": "CNBC-TV18",
-  "category": "APPROVAL",
-  "headline": "Aurobindo Pharma's Apitoria unit gets 'voluntary action indicated' classification from USFDA",
-  "event": "no",
-  "hint": "LONG-lean headline"
+  "time": "23 Nov 05:39",
+  "source": "GoogleNews-Business",
+  "category": "GEOPOLITICS",
+  "headline": "The AI talent war: China is the factory, America the magnet, India an also-ran - The Times of India",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
  },
  {
-  "time": "23 Nov 00:44",
-  "source": "CNBC-TV18",
+  "time": "23 Nov 05:39",
+  "source": "GoogleNews-Business",
   "category": "CRASH/SHOCK",
-  "headline": "'More To Come' - IMF Managing Director warns the AI sell-off may not be over yet",
+  "headline": "Asia\u2019s stock rescue efforts gather pace after Wall Street plunge - Moneycontrol.com",
   "event": "yes",
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "23 Nov 00:44",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "US Market Crash: Dow Jones tanks 1,100 points, nears technical correction - What is plaguing Wall Street?",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:49",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Nasdaq tumbles 2% as Anthropic retreat deepens AI trade concerns",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:49",
-  "source": "BusinessStandard",
-  "category": "CRASH/SHOCK",
-  "headline": "Ashoka Buildcon shares tank 6% as \u20b9846-cr Saudi Arabia project cancelled",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:49",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Nifty, Sensex open lower as sell-off in AI weighs on sentiment, Gold down to lowest level of 2026 - ChiniMandi",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:49",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Indian IT Stocks Rally 1.96% as TCS, Infosys and Tech Mahindra Gain Despite Global Tech Selloff - Kotak Neo",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:49",
-  "source": "CNBC-TV18",
-  "category": "APPROVAL",
-  "headline": "Natco Pharma gets seven observations after USFDA inspection at Hyderabad plant",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "23 Nov 00:49",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "US Market Crash: Nasdaq enters 'bear market' - 10 things for investors to know",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:49",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Anthropic tumbles more than 10% in premarket trade as AI slump engulfs markets",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "23 Nov 00:49",
+  "time": "23 Nov 05:39",
   "source": "CNBC-TV18",
   "category": "CRASH/SHOCK",
   "headline": "Muthoot Finance heads for worst week since April 2025 as gold rout triggers sell-off",
@@ -472,10 +48,434 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "23 Nov 00:49",
+  "time": "23 Nov 05:39",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Gold price crash: Yellow metal and silver slump over 4% each on MCX",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:39",
+  "source": "CNBC-TV18",
+  "category": "RBI-POLICY",
+  "headline": "Japan core inflation picks up, makes case for BoJ rate hike stronger",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "23 Nov 05:44",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "What is future of gold rates? Price crash continues as AI selloff, Fed rate-hike concerns weigh on investors' sentiment",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:44",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Wall Street sell-off: Is the worst over? Goldman Sachs warns of fresh selling wave, flags 3 recovery triggers",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:44",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Bitcoin price crash: \u200bFalls to lowest level in two years - What\u2019s behind plunge of world\u2019s largest cryptocurrency",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:44",
+  "source": "GoogleNews-Business",
+  "category": "CRASH/SHOCK",
+  "headline": "Is the AI Bubble Finally Popping? Nvidia Crashes 48% as Wall Street Experts Sound the Alarm - Decrypt",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:44",
+  "source": "CNBC-TV18",
+  "category": "RBI-POLICY",
+  "headline": "Gold falls further, set for worst week since March as Fed rate hike worries rise",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "23 Nov 05:44",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "'More To Come' - IMF Managing Director warns the AI sell-off may not be over yet",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:44",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "US Market Crash: Dow Jones tanks 1,100 points, nears technical correction - What is plaguing Wall Street?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:44",
   "source": "CNBC-TV18",
   "category": "DEAL/ORDER",
   "headline": "Voltas signs JV agreement with Atomberg for room AC compressors, to acquire 50% stake",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "23 Nov 05:49",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "5 penny stocks plunge up to 68% in six months. Do you own any?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:49",
+  "source": "Yahoo-Nifty",
+  "category": "RBI-POLICY",
+  "headline": "India stocks dip after RBI hikes rates for first time in nearly 4 yrs",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "23 Nov 05:49",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Nikkei, Kospi fall over 4% each; Asian markets crash as AI sell-off deepens despite record Anthropic IPO",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:49",
+  "source": "CNBC-TV18",
+  "category": "DEAL/ORDER",
+  "headline": "Paytm to invest up to \u20b9200 crore in Funding Societies' subsidiaries, acquires 19% in CardUp",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "23 Nov 05:49",
+  "source": "CNBC-TV18",
+  "category": "LEGAL/REGULATORY",
+  "headline": "Atul's US subsidiary faces probe over alleged evasion of anti-dumping duties on 2,4-D imports",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:49",
+  "source": "CNBC-TV18",
+  "category": "APPROVAL",
+  "headline": "Go Digit gets IFSCA approval to set up insurance office in GIFT City",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "23 Nov 05:54",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Stock split reset: SanDisk stock crashes 87.5% overnight? Here's what investors need to know about its 8-for-1 split",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:54",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Gold, silver price crash: DSP Mutual Fund turns bullish on bullion, reveals new buying strategy; check price levels",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:54",
+  "source": "GoogleNews-Business",
+  "category": "DEAL/ORDER",
+  "headline": "Yashoda Hospitals defers IPO; explores part stake sale targeting up to $3.2 bn valuation - Moneycontrol.com",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "23 Nov 05:54",
+  "source": "CNBC-TV18",
+  "category": "APPROVAL",
+  "headline": "Alkem Laboratories gets USFDA warning letter with OAI classification for Daman facility",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "23 Nov 05:54",
+  "source": "CNBC-TV18",
+  "category": "LEADER-EXIT",
+  "headline": "PB Fintech shares fall up to 6% after co-founder Alok Bansal to step down from executive role next year",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:59",
+  "source": "GoogleNews-Business",
+  "category": "GEOPOLITICS",
+  "headline": "GTA 6 Becomes Latest BJP-Congress Battleground: How PM Modi's Post Triggered Political Meme War - News18",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "23 Nov 05:59",
+  "source": "Yahoo-Nifty",
+  "category": "CRASH/SHOCK",
+  "headline": "AI stock selloff drives investors to China, India, and overlooked Asian sectors",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:59",
+  "source": "Yahoo-Nifty",
+  "category": "CRASH/SHOCK",
+  "headline": "Why India\u2019s Nifty 50 Is Holding Steady Despite Asian Market Selloff",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:59",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Global commodity prices plunge: These are the metals impacted and Emkay's preferred plays",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 05:59",
+  "source": "CNBC-TV18",
+  "category": "RBI-POLICY",
+  "headline": "Asian markets mixed as investors weigh Anthropic's record IPO against Fed rate hike risks",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "23 Nov 06:04",
+  "source": "RBI",
+  "category": "EARNINGS",
+  "headline": "Government Stock - Full Auction Results",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "23 Nov 06:04",
+  "source": "BusinessLine",
+  "category": "CRASH/SHOCK",
+  "headline": "US Market Outlook: Indices plunge deeply",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:04",
+  "source": "BusinessLine",
+  "category": "CRASH/SHOCK",
+  "headline": "Gold price continues to fall as AI selloff, rate-hike bets weigh. What\u2019s ahead?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:04",
+  "source": "BusinessLine",
+  "category": "CRASH/SHOCK",
+  "headline": "Wall Street selloff deepens as Dow, S&P 500 enter correction; Nasdaq plunges 5.28%",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:04",
+  "source": "BusinessLine",
+  "category": "DEAL/ORDER",
+  "headline": "TSMC invests $500 million in Anthropic, acquires 0.03% stake at IPO price",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "23 Nov 06:09",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Why gold\u2019s five-year winning streak is under threat after dramatic selloff",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:09",
+  "source": "BusinessLine",
+  "category": "GEOPOLITICS",
+  "headline": "Crude oil futures gain on reports of Houthi attack in Riyadh",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "23 Nov 06:09",
+  "source": "CNBC-TV18",
+  "category": "DEAL/ORDER",
+  "headline": "Dalmia Bharat to consider share buyback at November 23 board meeting",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "23 Nov 06:09",
+  "source": "CNBC-TV18",
+  "category": "DEAL/ORDER",
+  "headline": "LT Foods to acquire 100% stake in US-based Maya Kaimal parent for $5.8 million",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "23 Nov 06:09",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Metal Stocks Under Pressure: Why Domestic Steel Outshines Aluminium Amid Global Sell-Off",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:14",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq tumbles 2% as Anthropic retreat deepens AI trade concerns",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:14",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Anthropic shares tumble after record IPO as AI trade faces reality check",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:14",
+  "source": "BusinessStandard",
+  "category": "DEAL/ORDER",
+  "headline": "Dilip Buildcon share price surges 7% on \u20b9419-crore Gurugram Metro order win",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "23 Nov 06:14",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Gold ETFs down 5%; Silver ETFs plunge over 6%, trade at 52-week lows",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:14",
+  "source": "RBI",
+  "category": "EARNINGS",
+  "headline": "Government Stock - Auction Results: Cut-off",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "23 Nov 06:19",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "UK stocks sink as global selloff weighs on banks and miners",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:19",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq crashes 5% at close, erasing 2026 gains; S&P 500, Dow in correction: Stock Market Highlights",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:19",
+  "source": "BusinessStandard",
+  "category": "CRASH/SHOCK",
+  "headline": "Ashoka Buildcon shares tank 6% as \u20b9846-cr Saudi Arabia project cancelled",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:19",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "What RBI\u2019s FY26 bank fraud data reveals as Fraud Awareness Week concludes - CNBC TV18",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:19",
+  "source": "BusinessLine",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty opens lower as global tech selloff weighs; Max Healthcare, Apollo top gainers",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:25",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Indian IT Stocks Rally 1.96% as TCS, Infosys and Tech Mahindra Gain Despite Global Tech Selloff - Kotak Neo",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:25",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "Ujjivan SFB board seeks RBI nod to extend Carol Furtado\u2019s interim CEO tenure - Elets BFSI",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "23 Nov 06:25",
+  "source": "GoogleNews-Business",
+  "category": "CRASH/SHOCK",
+  "headline": "Gold Price Forecast: Selloff Echoes 2022 as Fed Hike Fears Grow - FXEmpire",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:25",
+  "source": "NDTVProfit",
+  "category": "LEADER-EXIT",
+  "headline": "Lodha Developers Chairman Mukund Chitale Steps Down; Akhil Gupta To Replace",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:30",
+  "source": "GoogleNews-Business",
+  "category": "DEAL/ORDER",
+  "headline": "8th Pay Commission: Merger of 50% dearness allowance with basic pay demand returns as 8th CPC completes a year - Upstox",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "23 Nov 06:30",
+  "source": "GoogleNews-Business",
+  "category": "DEAL/ORDER",
+  "headline": "China ran 2-year spy campaign to acquire advanced AI chips, evade US curbs: Report - India Today",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "23 Nov 06:30",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Global AI Sell-off: Taiwan takes action yet again to support collapsing stock market",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "23 Nov 06:30",
+  "source": "CNBC-TV18",
+  "category": "APPROVAL",
+  "headline": "Cohance Lifesciences: USFDA inspects and classifies Telangana facility as \u2018voluntary action indicated\u2019",
   "event": "no",
   "hint": "LONG-lean headline"
  }
