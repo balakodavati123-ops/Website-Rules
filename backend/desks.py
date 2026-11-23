@@ -253,16 +253,23 @@ def _greeks(rows: list[dict], strike: float, kind: str) -> dict:
 
 def straddle_conditions(f: dict, news: dict) -> dict:
     """Whether today is a day for a bought straddle, from India VIX, the gap and the news, and which way to lean the strike.
-    f: vix (yesterday's close), vix_now, vix_chg (% since yesterday's close), vix_pct (1-year percentile), gap (% open against yesterday's close).
+    f: vix (yesterday's close), vix_now, vix_chg (% since yesterday's close), vix_pct (1-year percentile), gap (% open against yesterday's close),
+    range_pct (the morning's high minus low, % of yesterday's close) and move_open_pct (% from today's open), read at 10:00 after the first 45 minutes.
     news: strong (market-moving signals in the last hour, |score| 4+), net (their positive minus negative count), macro (today's RBI, shock or
     geopolitics headlines), mood (the Claude brief's mood), fc (the morning forecast score, + up / - down).
-    In the 2022-2026 replay, days with VIX up 3% or more by 10:00 and days with a 1%+ gap lost the least; calm days and falling-VIX days lost the most."""
+    In the 2022-2026 replay, days with VIX up 3% or more by 10:00, a 1%+ gap, a wide first 45 minutes or a 0.4%+ move from the open lost the least;
+    calm mornings and falling-VIX days lost the most."""
     reasons, go = [], []
     vc, gap = float(f.get("vix_chg") or 0), float(f.get("gap") or 0)
+    rng, mo = f.get("range_pct"), f.get("move_open_pct")
     if vc >= 3:
         go.append(f"India VIX is up {vc:.1f}% since yesterday's close ({f.get('vix')} to {f.get('vix_now')}): the market is pricing bigger moves")
     if abs(gap) >= 1.0:
         go.append(f"NIFTY opened {gap:+.2f}%: a news-sized gap")
+    if rng is not None and rng >= 0.5:
+        go.append(f"the first 45 minutes covered {rng:.2f}% (high to low): the market is moving")
+    if mo is not None and abs(mo) >= 0.4:
+        go.append(f"NIFTY is {mo:+.2f}% from its open by 10:00")
     if (news.get("strong") or 0) >= 3:
         go.append(f"{news['strong']} strong news signals in the last hour")
     if news.get("macro"):
@@ -273,9 +280,16 @@ def straddle_conditions(f: dict, news: dict) -> dict:
     if (f.get("vix_pct") or 0) >= 80 and vc < 1:
         skip.append(f"India VIX is in the top fifth of its year ({f.get('vix_pct')}th percentile) and not rising: expensive options that tend to cheapen")
     if not go:
-        skip.append(f"a calm day: VIX change {vc:+.1f}%, gap {gap:+.2f}%, {news.get('strong') or 0} strong news signals; a straddle needs movement")
-    votes = [(1 if gap > 0 else -1) if abs(gap) >= 0.6 else 0, (1 if (news.get("net") or 0) > 0 else -1) if abs(news.get("net") or 0) >= 2 else 0,
+        skip.append(f"a calm morning: VIX change {vc:+.1f}%, gap {gap:+.2f}%" + (f", first 45 minutes {rng:.2f}% high to low, {mo:+.2f}% from the open" if rng is not None and mo is not None else "")
+                    + f", {news.get('strong') or 0} strong news signals; a straddle needs movement")
+    mdir = (1 if mo > 0 else -1) if mo is not None and abs(mo) >= 0.4 else 0
+    gdir = (1 if gap > 0 else -1) if abs(gap) >= 0.6 else 0
+    votes = [gdir or mdir, (1 if (news.get("net") or 0) > 0 else -1) if abs(news.get("net") or 0) >= 2 else 0,
              (1 if news.get("mood") == "bullish" else -1 if news.get("mood") == "bearish" else 0), (1 if (news.get("fc") or 0) > 0.15 else -1 if (news.get("fc") or 0) < -0.15 else 0)]
+    if gdir and mdir and gdir != mdir:
+        votes[0] = 0                          # the gap is being reversed by the morning: no lean
+    elif mdir and gdir == mdir:
+        votes.append(mdir)                    # gap and morning agree: that counts as a second vote
     lean = 0
     if votes[0] and sum(1 for v in votes[1:] if v == votes[0]) >= 1 and not any(v == -votes[0] for v in votes[1:]):
         lean = votes[0]                       # a big gap that the news or the forecast agrees with: lean one strike with it (replay: slightly better than neutral)

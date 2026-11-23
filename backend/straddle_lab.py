@@ -276,11 +276,18 @@ def train(data: dict, today: date) -> dict:
     for d, entry, xsel, srule, p in rows:
         if entry == "10:00" and xsel == "this week":
             cond_rows.setdefault(d, {})[srule] = (trail_rs(p["vals"])[0], p)
+    def morning(d):
+        b, o = bn[d], dn[d][1]
+        xs = [o] + [b[t] for t in ("09:15", "09:30", "09:45") if t in b]
+        return (max(xs) - min(xs)) / F[d]["prev_close"] * 100, (b.get("09:45", o) / o - 1) * 100
+
     def cs(pred, sr="atm"):
-        return stats([v[sr][0] for d, v in cond_rows.items() if sr in v and pred(F[d], v[sr][1])])
+        return stats([v[sr][0] for d, v in cond_rows.items() if sr in v and pred({**F[d], "rng": morning(d)[0], "mo": morning(d)[1]}, v[sr][1])])
     conditions = {"every day": cs(lambda f, p: True), "VIX up 3%+ by 10:00": cs(lambda f, p: p["vix_chg"] >= 3), "gap 1%+ either way": cs(lambda f, p: abs(f["gap"]) >= 1),
                   "calm day (gap under 0.25%, VIX not rising)": cs(lambda f, p: abs(f["gap"]) < 0.25 and p["vix_chg"] < 1), "VIX falling 5%+ by 10:00": cs(lambda f, p: p["vix_chg"] <= -5),
-                  "movement day (VIX up 3%+ or gap 1%+)": cs(lambda f, p: p["vix_chg"] >= 3 or abs(f["gap"]) >= 1),
+                  "first 45 minutes 0.5%+ high to low": cs(lambda f, p: f["rng"] >= 0.5), "0.4%+ from the open by 10:00": cs(lambda f, p: abs(f["mo"]) >= 0.4),
+                  "calm morning (under 0.3% high to low)": cs(lambda f, p: f["rng"] < 0.3),
+                  "movement day (VIX up 3%+, gap 1%+, morning 0.5%+ or 0.4%+ from open)": cs(lambda f, p: p["vix_chg"] >= 3 or abs(f["gap"]) >= 1 or f["rng"] >= 0.5 or abs(f["mo"]) >= 0.4),
                   "big gap, strike leaning with it": cs(lambda f, p: abs(f["gap"]) >= 0.6, "with"), "big gap, strike leaning against it": cs(lambda f, p: abs(f["gap"]) >= 0.6, "against")}
     cl = ceo.get("all", [])
     near = [x for x in cl if x[3] <= 4]

@@ -887,10 +887,14 @@ def run() -> None:
                         nd_ = digest[0] if digest[0].get("day") == today else {}
                         news_ = {"strong": len(hour_), "net": sum(1 if x["tone"] == "positive" else -1 for x in hour_), "macro": macro_, "mood": nd_.get("mood"),
                                  "fc": ((fc.get("views") or {}).get("Nifty 50") or {}).get("score") if fc.get("day") == today else None}
-                        cond = D.straddle_conditions({**fv0, "vix_now": round(vixq, 2)}, news_) if fv0 else {"go": False, "lean": 0, "reasons": ["today's VIX and gap are not known yet"], "go_signals": [], "skip_signals": []}
+                        oh_ = n.get("ohlc") or {}
+                        pc_ = (sdl["closes"][-1][1] if sdl["closes"] else None) or prev_n
+                        morn_ = {"range_pct": round((float(oh_["high"]) - float(oh_["low"])) / pc_ * 100, 2), "move_open_pct": round((spot / float(oh_["open"]) - 1) * 100, 2)} \
+                            if oh_.get("high") and oh_.get("low") and oh_.get("open") and pc_ else {}
+                        cond = D.straddle_conditions({**fv0, **morn_, "vix_now": round(vixq, 2)}, news_) if fv0 else {"go": False, "lean": 0, "reasons": ["today's VIX and gap are not known yet"], "go_signals": [], "skip_signals": []}
                         cond["news"] = news_
-                        ctx["straddle"] = {"ok": True, "mode": "ceo", "quant": True, "trail": True, "expiry": exps[0], "entry": "09:45", "stop": 0.25, "target": None, "conditions": cond,
-                                           "rule": {"entry": "09:45", "expiry": "this week", "strike": "chosen by the quant", "filter": "movement days: VIX rising, a big gap or strong news (the CEO's rule)"},
+                        ctx["straddle"] = {"ok": True, "mode": "ceo", "quant": True, "trail": True, "expiry": exps[0], "entry": "10:00", "stop": 0.25, "target": None, "conditions": cond,
+                                           "rule": {"entry": "10:00, after watching the first 45 minutes", "expiry": "this week", "strike": "chosen by the quant", "filter": "movement days: VIX rising, a big gap or strong news (the CEO's rule)"},
                                            "trained": sdl.get("view"), "backtest_note": cr_.get("note", "")}
                         sh_ = xb.get("straddle_sheet") or {}
                         mine_ = [t for t in xb["trades"] + list(archive.values()) if t.get("desk") == "FNO" and t.get("strategy") == "long_straddle" and t.get("status") in ("WIN", "LOSS")]

@@ -246,7 +246,7 @@ def test_straddle_only_quant_picks_a_balanced_liquid_strike_and_trails_the_stop(
 
 def test_straddle_only_conditions_vix_gap_and_news_decide_the_day_and_the_lean():
     calm = D.straddle_conditions({"vix": 15.0, "vix_now": 15.1, "vix_chg": 0.6, "vix_pct": 40, "gap": 0.1}, {"strong": 0, "net": 0, "macro": []})
-    assert not calm["go"] and "calm day" in calm["reasons"][-1]
+    assert not calm["go"] and "calm morning" in calm["reasons"][-1]
     vixup = D.straddle_conditions({"vix": 15.6, "vix_now": 16.3, "vix_chg": 4.2, "vix_pct": 69, "gap": -0.16}, {"strong": 0, "net": 0, "macro": []})
     assert vixup["go"] and vixup["lean"] == 0 and "India VIX is up 4.2%" in vixup["go_signals"][0]           # 19 Nov 2026 looked like this
     falling = D.straddle_conditions({"vix": 18.0, "vix_now": 16.9, "vix_chg": -6.1, "vix_pct": 85, "gap": 0.2}, {"strong": 4, "net": 1, "macro": []})
@@ -267,3 +267,15 @@ def test_straddle_only_conditions_vix_gap_and_news_decide_the_day_and_the_lean()
     base = {"spot": 25130.0, "prev": 25000.0, "chains": {"2026-11-19": rows}, "expiry": "2026-11-19", "lot": 65}
     D.fno_step(book, datetime(2026, 11, 17, 9, 50, tzinfo=IST), {**base, "straddle": {"ok": True, "mode": "ceo", "quant": True, "trail": True, "expiry": "2026-11-19", "entry": "09:45", "stop": 0.25, "conditions": calm}}, set())
     assert not book["trades"] and book["straddle_sheet"]["conditions"]["go"] is False
+
+
+def test_straddle_only_waits_for_the_first_45_minutes():
+    quiet = {"vix": 15.0, "vix_now": 15.1, "vix_chg": 0.6, "vix_pct": 40, "gap": 0.1}
+    moving = D.straddle_conditions({**quiet, "range_pct": 0.62, "move_open_pct": -0.45}, {"strong": 0, "net": 0, "macro": []})
+    assert moving["go"] and any("first 45 minutes covered 0.62%" in r for r in moving["go_signals"])
+    still = D.straddle_conditions({**quiet, "range_pct": 0.2, "move_open_pct": 0.05}, {"strong": 0, "net": 0, "macro": []})
+    assert not still["go"] and "first 45 minutes 0.20% high to low" in still["skip_signals"][-1]
+    reversed_gap = D.straddle_conditions({**quiet, "gap": 1.2, "range_pct": 1.4, "move_open_pct": -0.8}, {"strong": 0, "net": 2, "macro": [], "mood": "bullish"})
+    assert reversed_gap["go"] and reversed_gap["lean"] == 0                                                 # a gap up being sold off by 10:00: no lean
+    trend = D.straddle_conditions({**quiet, "gap": 0.8, "range_pct": 0.9, "move_open_pct": 0.5}, {"strong": 0, "net": 0, "macro": []})
+    assert trend["lean"] == 1                                                                               # gap up and the morning keeps going up
