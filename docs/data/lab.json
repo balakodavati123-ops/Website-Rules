@@ -1228,41 +1228,41 @@
    "team": "crypto",
    "desk": "CRYPTO",
    "stage": "TESTED",
-   "closed": 18,
-   "open": 1,
-   "net_rs": -275.74,
-   "win_rate": 27.8,
+   "closed": 19,
+   "open": 0,
+   "net_rs": -285.88,
+   "win_rate": 26.3,
    "since": "2026-11-17",
    "passed": 0,
    "checks": [
     {
      "name": "Enough trades",
      "ok": false,
-     "value": "18 closed",
+     "value": "19 closed",
      "need": "30 or more"
     },
     {
      "name": "Profit after charges",
      "ok": false,
-     "value": "\u20b9-276",
+     "value": "\u20b9-286",
      "need": "above \u20b90"
     },
     {
      "name": "Survives double costs",
      "ok": false,
-     "value": "\u20b9-636",
+     "value": "\u20b9-666",
      "need": "above \u20b90 with one more round trip of charges per trade"
     },
     {
      "name": "Out of sample",
      "ok": false,
-     "value": "\u20b9-279 on the latest 6",
+     "value": "\u20b9-256 on the latest 6",
      "need": "the most recent 30% of trades still profitable"
     },
     {
      "name": "Beats chance",
      "ok": false,
-     "value": "targets 1 vs 6.0 by chance (z -2.5)",
+     "value": "targets 1 vs 6.3 by chance (z -2.59)",
      "need": "z of 1.0 or more"
     },
     {
@@ -1274,13 +1274,13 @@
     {
      "name": "Losing streak in limits",
      "ok": false,
-     "value": "worst run 9",
+     "value": "worst run 10",
      "need": "8 losses in a row at most"
     }
    ],
    "lessons": [
-    "12 of 18 trades ended at the stop.",
-    "Average win \u20b968 against average loss \u20b947."
+    "12 of 19 trades ended at the stop.",
+    "Average win \u20b968 against average loss \u20b945."
    ]
   },
   {
@@ -1469,20 +1469,12 @@
  "rule": "Only APPROVED strategies may reach the execution gateway; passing is a prerequisite, not proof of future profit.",
  "review": {},
  "ai": {
-  "on": false,
-  "mode": "off",
-  "usd_5h": 0,
-  "cap_5h": 0.25,
-  "usd_day": 0,
-  "cap_day": 0.75,
-  "pct_5h": 0.0,
-  "calls_day": 0,
-  "by_kind": {},
+  "on": true,
+  "mode": "scheduled",
+  "last": "21 Nov 08:55",
+  "next": "every hour from 09:20 to 16:20 IST on weekdays",
   "models": {
-   "read": "claude-haiku-5-5",
-   "write": "claude-sonnet-5-5",
-   "review": "claude-opus-5-5"
-  },
-  "last_error": ""
+   "analyst": "Claude (your plan, scheduled)"
+  }
  }
 }

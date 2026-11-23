@@ -1,16 +1,16 @@
 {
- "updated_at": "2026-11-21T08:56:20+05:30",
+ "updated_at": "2026-11-23T06:31:31+05:30",
  "skipped": [],
  "reference": [
   {
    "name": "Crude oil (100 barrels)",
    "contract": "CRUDEOIL FUT 18 DEC 26",
-   "margin": 243850
+   "margin": 240550
   },
   {
    "name": "Crude oil mini (10 barrels)",
    "contract": "CRUDEOILM FUT 18 DEC 26",
-   "margin": 24384
+   "margin": 24044
   },
   {
    "name": "Natural gas (1,250 mmBtu)",
@@ -25,35 +25,35 @@
   {
    "name": "Gold (1 kg)",
    "contract": "GOLD FUT 04 DEC 26",
-   "margin": 1172036
+   "margin": 1298836
   },
   {
    "name": "Gold mini (100 g)",
    "contract": "GOLDM FUT 04 DEC 26",
-   "margin": 117234
+   "margin": 129864
   },
   {
    "name": "Gold petal (1 g)",
    "contract": "GOLDPETAL FUT 30 NOV 26",
-   "margin": 1183
+   "margin": 1317
   },
   {
    "name": "Silver (30 kg)",
    "contract": "SILVER FUT 04 DEC 26",
-   "margin": 850988
+   "margin": 906668
   },
   {
    "name": "Silver mini (5 kg)",
    "contract": "SILVERM FUT 30 NOV 26",
-   "margin": 141513
+   "margin": 152153
   },
   {
    "name": "Silver micro (1 kg)",
    "contract": "SILVERMIC FUT 30 NOV 26",
-   "margin": 28316
+   "margin": 30306
   }
  ],
- "ref_day": "2026-11-21",
+ "ref_day": "2026-11-23",
  "limits": {
   "swing": 22000,
   "signal": 5000,

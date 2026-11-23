@@ -3,11 +3,11 @@
   "crypto": "6 coins from Kraken, real time",
   "gateway": "dry \u00b7 0 intents, 0 refused",
   "charts": "3 live charts",
-  "news_feed": "error: Expecting value: line 1 column 1 (char 0)"
+  "news_pulse": "0 new signal(s); 0 in the last hour from 8 feeds"
  },
- "updated_at": "2026-11-21T08:56:20+05:30",
- "updated_hm": "21 Nov 08:56:20",
- "loops": 437,
+ "updated_at": "2026-11-23T06:31:31+05:30",
+ "updated_hm": "23 Nov 06:31:31",
+ "loops": 3216,
  "sessions": {
   "equity": false,
   "fno": false,
@@ -15,7 +15,7 @@
   "crypto": true
  },
  "note": "Real-time Upstox prices for equities, NIFTY options and MCX; Kraken for crypto. Paper trades only.",
- "open": 14,
+ "open": 13,
  "first_iteration": {
   "equity": 0.0,
   "fill": 0.0,
@@ -24,7 +24,7 @@
   "crypto": 0.2,
   "snapshots": 0.2,
   "plan": 0.2,
-  "slow_and_intraday": 0.5,
-  "persist": 0.5
+  "slow_and_intraday": 0.6,
+  "persist": 0.6
  }
 }

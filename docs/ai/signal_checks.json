@@ -1,0 +1,60 @@
+{
+ "time": "23 Nov 11:20",
+ "at": 1795413057.070344,
+ "day": "2026-11-23",
+ "model": "Claude (your plan, scheduled)",
+ "checks": {
+  "MARKSANS": {
+   "verdict": "confirm",
+   "why": "Specific USFDA Form 483 news and the price fell over 3%"
+  },
+  "ONEPOINT": {
+   "verdict": "doubt",
+   "why": "Vague press release and the price fell over 4%"
+  },
+  "SURYAROSNI": {
+   "verdict": "doubt",
+   "why": "Box office story about a film, not company news; price moved down"
+  },
+  "POLYCAB": {
+   "verdict": "doubt",
+   "why": "Broker target cut is opinion tied to the copper move; price barely moved"
+  },
+  "WEALTH": {
+   "verdict": "doubt",
+   "why": "Commentary on gold and bitcoin, not specific company news; price rose"
+  },
+  "LT": {
+   "verdict": "doubt",
+   "why": "Order filing gives no size or value and the price is slightly down"
+  },
+  "DBL": {
+   "verdict": "doubt",
+   "why": "Order filing gives no size or value and the price is down"
+  },
+  "APOLLO": {
+   "verdict": "confirm",
+   "why": "Specific, fresh acquisition announcement; price has not moved against it"
+  },
+  "WESTLIFE": {
+   "verdict": "confirm",
+   "why": "Fresh, specific Goldman downgrade to Sell; price has not moved yet"
+  },
+  "SGMART": {
+   "verdict": "doubt",
+   "why": "Euphoric spike already happened and the price has since turned down"
+  },
+  "TECHM": {
+   "verdict": "doubt",
+   "why": "Market-wide IT rally, not company-specific, and price barely moved"
+  },
+  "ASHOKA": {
+   "verdict": "doubt",
+   "why": "Order wins already priced in after 8% jump; price now flat"
+  },
+  "HINDALCO": {
+   "verdict": "doubt",
+   "why": "Over an hour old and already priced in; price flat since"
+  }
+ }
+}
