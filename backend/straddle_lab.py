@@ -2,9 +2,9 @@
 no margin beyond the premium), on history.
 
 Data: NIFTY 50 and India VIX from Upstox: daily candles since 2016 and 15-minute candles since 2022.
-Prices: historical option prices are not available, so every straddle is priced with Black-Scholes from India VIX, scaled by days to expiry
-to match what the desk has recorded live (weekly ATM implied volatility is about 0.8x VIX three to four days out, about 1x a week out and
-nearly 2x on expiry day). Costs: 0.4% slippage each way plus brokerage, STT, exchange fees, GST and stamp duty. One lot of 65.
+Prices: historical option prices are not available, so every straddle is priced with Black-Scholes from India VIX in market-hours time
+(time decay happens while the market is open, not overnight or at weekends), scaled to the desk's live readings (about 0.85x VIX within
+four days of expiry, about 1x a week out). Costs: 0.4% slippage each way plus brokerage, STT, exchange fees, GST and stamp duty. One lot of 65.
 Training (intraday, 2022-2024): every combination of entry time, expiry (this week's or next week's), strike (at the money, or one strike
 with or against the morning's move), target, stop-loss and a market-condition filter (cheap or rich volatility, realised above implied,
 news-sized gaps or VIX jumps, days to expiry) is replayed on 15-minute bars, exit by 15:15 at the latest. The rule is chosen on 2022-2024
@@ -40,8 +40,24 @@ TRAIN_TO, TEST_FROM = date(2024, 12, 31), date(2025, 1, 1)
 
 
 def iv_mult(dte: int) -> float:
-    """Weekly at-the-money implied volatility as a multiple of India VIX, by calendar days to expiry (calibrated on live chain readings)."""
-    return 1.85 if dte <= 0 else 1.15 if dte == 1 else 0.82 if dte <= 4 else 0.92 if dte <= 7 else 1.0
+    """Weekly at-the-money volatility as a multiple of India VIX in market-hours time (calibrated on the desk's live chain readings:
+    about 0.85 within four days of expiry, expiry day included, and about 1.0 a week out)."""
+    return 0.85 if dte <= 4 else 0.92 if dte <= 7 else 1.0
+
+
+SESSION = 375                                                             # minutes from 09:15 to 15:30
+
+
+def t_years(now: datetime, exp: date, trading: set) -> float:
+    """Time to expiry in market hours: what is left of today's session plus one session for every trading day up to expiry, over 252 sessions a
+    year. Nights, weekends and holidays carry almost no decay in this convention, which is how option prices actually behave through a week."""
+    left = max(0.0, min(SESSION, (datetime(now.year, now.month, now.day, 15, 30) - now).total_seconds() / 60)) if now.date() <= exp else 0.0
+    hi = max(trading) if trading else None
+    d, n = now.date() + timedelta(days=1), 0
+    while d <= exp:
+        n += (d in trading) if (trading and d <= hi) else (d.weekday() < 5)
+        d += timedelta(days=1)
+    return (left + n * SESSION) / (252 * SESSION)
 
 
 def ncdf(x: float) -> float:
@@ -136,7 +152,7 @@ def features(days: list[date], dclose: dict, dopen: dict, vclose: dict) -> dict:
 
 
 # ------------------------------------------------------------------ the replay
-def path(bars_n: dict, bars_v: dict, d: date, entry: str, exp: date, strike_rule: str, f: dict) -> dict | None:
+def path(bars_n: dict, bars_v: dict, d: date, entry: str, exp: date, strike_rule: str, f: dict, trading: set = frozenset()) -> dict | None:
     """Straddle value at the entry bar and every later 15-minute close until 15:15."""
     times = sorted(t for t in bars_n if t >= ENTRIES[entry] and t <= EXIT_BAR)
     if not times or times[0] != ENTRIES[entry] or EXIT_BAR not in bars_n:
@@ -147,12 +163,11 @@ def path(bars_n: dict, bars_v: dict, d: date, entry: str, exp: date, strike_rule
     if strike_rule != "atm" and abs(move) >= 0.003:
         K += (-50 if move > 0 else 50) * (1 if strike_rule == "with" else -1)      # "with": the call side in the money, so the straddle leans with the move
     dte = (exp - d).days
-    exp_t = datetime(exp.year, exp.month, exp.day, 15, 30)
     vals = []
     for t in times:
         hh, mm = int(t[:2]), int(t[3:]) + 15
         now = datetime(d.year, d.month, d.day, hh + mm // 60, mm % 60)
-        T = max(0.0, (exp_t - now).total_seconds()) / (365 * 86400)
+        T = t_years(now, exp, trading)
         sig = iv_mult(dte) * (bars_v.get(t) or f["vix"]) / 100
         vals.append(straddle(bars_n[t], K, T, sig))
     vchg = ((bars_v.get(times[0]) or f["vix"]) / f["vix"] - 1) * 100
@@ -225,7 +240,7 @@ def train(data: dict, today: date) -> dict:
         for entry in ENTRIES:
             for xsel, exp in (("this week", e_near), ("next week", e_next)):
                 for srule in ("atm", "with", "against"):
-                    p = path(bn[d], bv.get(d, {}), d, entry, exp, srule, F[d])
+                    p = path(bn[d], bv.get(d, {}), d, entry, exp, srule, F[d], trading)
                     if p:
                         rows.append((d, entry, xsel, srule, p))
     results = {}
@@ -279,8 +294,8 @@ def train(data: dict, today: date) -> dict:
         o, c = dn[d][1], dn[d][4]
         vo, vc = dv[d][1] or F[d]["vix"], dv[d][4]
         K = round(o / 50) * 50
-        T0 = (datetime(exp.year, exp.month, exp.day, 15, 30) - datetime(d.year, d.month, d.day, 9, 15)).total_seconds() / (365 * 86400)
-        T1 = (datetime(exp.year, exp.month, exp.day, 15, 30) - datetime(d.year, d.month, d.day, 15, 15)).total_seconds() / (365 * 86400)
+        T0 = t_years(datetime(d.year, d.month, d.day, 9, 15), exp, trading)
+        T1 = t_years(datetime(d.year, d.month, d.day, 15, 15), exp, trading)
         v0, v1 = straddle(o, K, T0, iv_mult(dte) * vo / 100), straddle(c, K, max(T1, 0.0), iv_mult(dte) * vc / 100)
         f = {**F[d], "dte": dte, "vix_chg": round((vo / F[d]["vix"] - 1) * 100, 2)}
         if fn(f):
@@ -317,6 +332,9 @@ def today_view(pb: dict, f: dict, k: int = 40) -> dict:
     pn = [r[7] for r in near]
     knn = {"k": len(pn), "avg_rs": round(sum(pn) / len(pn), 1) if pn else None, "win_rate": round(sum(1 for x in pn if x > 0) / len(pn) * 100, 1) if pn else None,
            "dates": [r[0] for r in near[:5]]}
+    if not pb.get("rules_passing_train"):
+        return {"ok": False, "why": f"no straddle rule beat time decay and costs in training ({pb.get('rules_tried', 0)} rules tested); "
+                                     f"on the {knn['k']} days most like today the trade averaged Rs {knn['avg_rs']:,.0f}", "match": hit, "knn": knn, "features": f}
     ok = bool(hit and (knn["avg_rs"] or 0) >= 0)
     why = (f"today matches the trained condition ({pb['rule']['filter']}) and the {knn['k']} most similar days averaged Rs {knn['avg_rs']:,.0f}" if ok else
            f"today does not match the trained condition ({pb['rule']['filter']})" if not hit else f"the {knn['k']} most similar days averaged Rs {knn['avg_rs']:,.0f}: no edge on days like today")

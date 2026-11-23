@@ -215,3 +215,10 @@ def test_straddle_only_desk_trades_the_trained_rule_and_nothing_sold():
     book2 = D.new_book()
     D.fno_step(book2, late, {**base, "straddle": sd}, set())
     assert not book2["trades"]                                                                       # more than an hour after the trained entry time: no chase
+
+
+def test_straddle_only_no_trade_when_training_found_no_edge():
+    import straddle_lab as SL
+    pb = {"rule": {"filter": "all"}, "rules_tried": 2592, "rules_passing_train": 0, "table": [["2026-01-0%d" % i, 15 + i, 50, 1.0, 0.1, 0.0, 3, -1000.0] for i in range(1, 9)]}
+    v = SL.today_view(pb, {"vix": 16, "vix_pct": 50, "rv_iv": 1.0, "gap": 0.1, "vix_chg": 0.0, "dte": 3})
+    assert v["ok"] is False and "no straddle rule beat time decay" in v["why"] and v["knn"]["avg_rs"] == -1000.0
