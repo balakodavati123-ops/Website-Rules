@@ -246,7 +246,7 @@ def _buy(m): return float(m.get("ask_price") or 0)
 def _sell(m): return float(m.get("bid_price") or 0)
 
 
-def _build(name: str, spot: float, prev: float, rows: list[dict]):
+def _build(name: str, spot: float, prev: float, rows: list[dict], sd: dict | None = None):
     """Return (legs, risk class, params) or None. legs: (side 'S'/'B', strike, kind)."""
     ks = sorted({r["strike_price"] for r in rows})
     near = lambda x: min(ks, key=lambda k: abs(k - x))
@@ -266,7 +266,8 @@ def _build(name: str, spot: float, prev: float, rows: list[dict]):
             s = near(spot * 1.006); b = near(s + 150); legs = [("S", s, "CE"), ("B", b, "CE")]
         return (legs, "fixed", {"width": abs(s - b), "target": 0.5, "stop": 1.0}) if s != b else None
     if name == "long_straddle":
-        return [("B", atm, "CE"), ("B", atm, "PE")], "hrhl", {"width": None, "target": 0.5, "stop": 0.35}
+        k = (sd or {}).get("strike") or atm
+        return [("B", k, "CE"), ("B", k, "PE")], "hrhl", {"width": None, "target": (sd or {}).get("target") or 9.99, "stop": (sd or {}).get("stop") or 0.35}
     if name == "debit_spread":
         if abs(chg) < FNO_RULES["trend"]:
             return None
@@ -279,7 +280,7 @@ def _build(name: str, spot: float, prev: float, rows: list[dict]):
     return None
 
 
-FNO_STRATEGIES = ["iron_condor", "credit_spread", "long_straddle", "debit_spread", "long_breakout"]
+FNO_STRATEGIES = ["long_straddle"]        # the CEO's rule: bought NIFTY straddles only (no sold option: no margin beyond the premium on a Rs 1,00,000 account)
 
 
 def _unit_pnl(legs: list[dict], rows: list[dict]):
@@ -315,10 +316,16 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
     spot, prev, rows, day = ctx.get("spot"), ctx.get("prev"), ctx["chains"].get(ctx["expiry"]), now.strftime("%Y-%m-%d")
     if not (spot and prev and rows) or not (mins(R["first"]) <= t <= mins(R["last"])):
         return
+    sd = ctx.get("straddle") or {}
     for name in FNO_STRATEGIES:
         if name in paused or book["seen"].get(f"{day}|{name}"):
             continue
-        b = _build(name, spot, prev, rows)
+        if name == "long_straddle" and "straddle" in ctx:
+            rows = ctx["chains"].get(sd.get("expiry") or ctx["expiry"])
+            if not sd.get("ok") or not rows or not (mins(sd.get("entry", "09:45")) <= t <= mins(sd.get("entry", "09:45")) + 60):
+                continue                      # trade only when the trained rule and the days like today agree, within an hour of the trained entry time
+        b = _build(name, spot, prev, rows, sd)
+        exp_ = sd.get("expiry") if name == "long_straddle" and sd.get("expiry") else ctx["expiry"]
         if not b:
             continue
         legs_def, risk, p = b
@@ -358,14 +365,22 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
         if ctx.get("room") is not None:
             ctx["room"][0] -= margin
         book["seen"][f"{day}|{name}"] = "booked"
-        days = days_to(ctx["expiry"], now)
-        th = T.fno(name, "daily", legs, net, spot, prev, ctx.get("iv"), ctx.get("vix"), days, lot, margin, ctx.get("acct") or 100000.0, ctx["expiry"], ctx.get("env") or {},
-                   exit_rule=f"Take profit at {p['target']:.0%} of the {'credit' if net > 0 else 'debit'}, cut at {p['stop']:.0%}, and be flat by 15:15 whatever happens.", unit_target=base * p["target"], unit_stop=base * p["stop"])
-        mk(book, "FNO", name, f"NIFTY {name.replace('_', ' ')} · {ctx['expiry'][5:]}", "SHORT" if net > 0 else "LONG", net, 1, now, expiry=ctx["expiry"], lot=lot, legs=legs, horizon="daily", underlying="NIFTY",
+        days = days_to(exp_, now)
+        rule_txt = (f"Take profit at {p['target']:.0%} of the {'credit' if net > 0 else 'debit'}, " if p["target"] < 5 else "No profit target (the backtest did better letting winners run), ") + \
+            f"cut at {p['stop']:.0%}, and be flat by 15:15 whatever happens."
+        th = T.fno(name, "daily", legs, net, spot, prev, ctx.get("iv"), ctx.get("vix"), days, lot, margin, ctx.get("acct") or 100000.0, exp_, ctx.get("env") or {},
+                   exit_rule=rule_txt, unit_target=base * p["target"], unit_stop=base * p["stop"])
+        if name == "long_straddle" and sd.get("rule"):
+            tr_, te_, kn_ = sd.get("train") or {}, sd.get("test") or {}, sd.get("knn") or {}
+            th["data"] += [f"Trained rule: buy at {sd['rule'].get('entry')} on {sd['rule'].get('expiry')}'s expiry, strike {sd['rule'].get('strike')}, when {sd['rule'].get('filter')}.",
+                           f"Backtest 2022-2024 (15-minute bars, model prices from India VIX): {tr_.get('n')} trades, {tr_.get('win_rate')}% won, average Rs {tr_.get('avg_rs')}; "
+                           f"out of sample 2025-2026: {te_.get('n')} trades, {te_.get('win_rate')}% won, average Rs {te_.get('avg_rs')}.",
+                           f"Days like today ({kn_.get('k')} most similar): {kn_.get('win_rate')}% won, average Rs {kn_.get('avg_rs')}. {sd.get('why', '')}."]
+        mk(book, "FNO", name, f"NIFTY {name.replace('_', ' ')} · {exp_[5:]}", "SHORT" if net > 0 else "LONG", net, 1, now, expiry=exp_, lot=lot, legs=legs, horizon="daily", underlying="NIFTY",
            unit_base=base, target_u=round(base * p["target"], 2), stop_u=round(base * p["stop"], 2), risk_class=RISK[risk],
            max_gain_rs=round(gain * lot) if gain else None, max_loss_rs=round(loss * lot) if loss else None,
            margin_rs=margin, margin_src=src, thesis=th,
-           reason=f"NIFTY {spot:,.0f} ({(spot / prev - 1) * 100:+.2f}% on the close). {'Credit' if net > 0 else 'Debit'} {base:.1f} points; target {p['target']:.0%} of it, stop {p['stop']:.0%} of it; out by 15:15")
+           reason=f"NIFTY {spot:,.0f} ({(spot / prev - 1) * 100:+.2f}% on the close). {'Credit' if net > 0 else 'Debit'} {base:.1f} points; " + (f"target {p['target']:.0%} of it, " if p["target"] < 5 else "no target, ") + f"stop {p['stop']:.0%} of it; out by 15:15")
 
 
 # ---------------------------------------------------------------- learning: which strategies earn their place

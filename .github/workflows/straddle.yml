@@ -1,0 +1,25 @@
+name: straddle-train
+# Retrains the F&O desk's straddle rule every Saturday on the latest history (backend/straddle_lab.py) and saves the playbook on this branch.
+on:
+  schedule: [{ cron: "37 4 * * 6" }]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: Train on history
+        env:
+          UPSTOX_TOKEN: ${{ secrets.UPSTOX_TOKEN }}
+        run: python backend/straddle_lab.py train
+      - name: Save the playbook
+        run: |
+          git config user.name desk-bot && git config user.email desk-bot@users.noreply.github.com
+          git add docs/models/straddle_playbook.json
+          git commit -q -m "models: straddle playbook retrained" || exit 0
+          for i in 1 2 3 4; do git push -q && break || { git pull -q --no-rebase --no-edit; sleep $((i*3)); }; done

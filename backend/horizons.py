@@ -85,6 +85,9 @@ def choose(horizon: str, rows: list[dict], spot: float, score: float, iv: float 
     return None, "options are cheap and the forecast has no direction: no edge worth the margin"
 
 
+BOOK_NEW = False          # the CEO's rule: no sold options (spreads and condors need large margin on a Rs 1,00,000 account); open ones still run to their exits
+
+
 def hold_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
     """ctx: {u: {UNDER: {spot, prev, exps}}, chain(under, expiry)->rows, lot(under, expiry)->int, margin, room, env, acct, vix, view: {UNDER: {score, rv}}}"""
     R, t, day = D.FNO_RULES, D.mins(now.strftime("%H:%M")), now.strftime("%Y-%m-%d")
@@ -108,7 +111,7 @@ def hold_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
         calendar = tr["horizon"] == "monthly" and (exp - now.date()).days <= 5 and t >= D.mins(R["close"])
         if tgt or stp or calendar:
             D.finish(tr, u, "target" if tgt else "stop" if stp else "time: monthly positions leave five days before expiry", now, pnl)
-    if now.weekday() >= 5 or not (D.mins(R["first"]) <= t <= D.mins(R["last"])):
+    if not BOOK_NEW or now.weekday() >= 5 or not (D.mins(R["first"]) <= t <= D.mins(R["last"])):
         return
     M = ctx.get("margin")
     for horizon, H in HOLD.items():

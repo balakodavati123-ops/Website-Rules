@@ -1,3 +1,4 @@
+import pytest
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -7,6 +8,15 @@ import desks as D  # noqa: E402
 
 IST = D.IST
 
+
+
+@pytest.fixture(autouse=True)
+def _old_structures(monkeypatch, request):
+    """Most tests here check the mechanics of every structure; the live desk now buys straddles only (see the straddle tests)."""
+    if "straddle_only" in request.node.name:
+        return
+    monkeypatch.setattr(D, "FNO_STRATEGIES", ["iron_condor", "credit_spread", "long_straddle", "debit_spread", "long_breakout"])
+    monkeypatch.setattr(H, "BOOK_NEW", True)
 
 def chain(spot=25000, step=50, iv_base=100):
     rows = []
@@ -186,3 +196,22 @@ def test_desks_share_one_pool_of_cash():
     assert a[0] == 5000 and b[0] == 10000                      # b only has what is left of the shared cash
     b[0] -= 10000
     assert b[0] == 0 and a[0] == 0 and cash[0] == 0
+
+
+def test_straddle_only_desk_trades_the_trained_rule_and_nothing_sold():
+    now = datetime(2026, 11, 17, 10, 5, tzinfo=IST)
+    base = {"spot": 25150.0, "prev": 25000.0, "chains": {"2026-11-19": chain(25150), "2026-11-26": chain(25150)}, "expiry": "2026-11-19", "lot": 65}
+    book = D.new_book()
+    D.fno_step(book, now, {**base, "straddle": {"ok": False, "why": "today does not match"}}, set())
+    assert not book["trades"]                                                                        # the trained rule says no: no trade
+    sd = {"ok": True, "strike": 25100, "expiry": "2026-11-26", "entry": "10:00", "target": None, "stop": 0.3, "why": "matches", "rule": {"entry": "10:00", "expiry": "next week", "strike": "one strike with the morning's move", "filter": "all"},
+          "train": {"n": 300, "avg_rs": 120, "win_rate": 44}, "test": {"n": 200, "avg_rs": 80, "win_rate": 42}, "knn": {"k": 40, "avg_rs": 150, "win_rate": 48}}
+    D.fno_step(book, now, {**base, "straddle": sd}, set())
+    assert [t["strategy"] for t in book["trades"]] == ["long_straddle"]                              # the only trade the live desk makes
+    t = book["trades"][0]
+    assert t["expiry"] == "2026-11-26" and {(l["side"], l["strike"]) for l in t["legs"]} == {("B", 25100)} and t["stop_u"] == round(t["unit_base"] * 0.3, 2)
+    assert any("out of sample" in x for x in t["thesis"]["data"]) and "No profit target" in t["thesis"]["risk"]
+    late = datetime(2026, 11, 17, 11, 30, tzinfo=IST)
+    book2 = D.new_book()
+    D.fno_step(book2, late, {**base, "straddle": sd}, set())
+    assert not book2["trades"]                                                                       # more than an hour after the trained entry time: no chase

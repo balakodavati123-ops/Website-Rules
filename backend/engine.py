@@ -12,7 +12,7 @@ import os
 import sys
 import threading
 import time
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -42,6 +42,7 @@ import lab as LB            # noqa: E402
 import ipo as IPO           # noqa: E402
 import charts_feed as CF    # noqa: E402
 import news_pulse as NP     # noqa: E402
+import straddle_lab as SL   # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = Path(os.environ.get("DESK_DOCS") or ROOT / "docs" / "data")
@@ -251,6 +252,13 @@ def run() -> None:
         pulse.setdefault(k_, v_)
     pulse_at, pulse_thread, px_now = [0.0], [None], {}
     inbox_at, inbox_thread = [0.0], [None]
+    try:                                                              # the straddle desk's trained playbook (backend/straddle_lab.py, retrained weekly)
+        playbook = json.loads((ROOT / "docs" / "models" / "straddle_playbook.json").read_text())
+    except Exception:
+        playbook = {}
+    sdl = {"day": "", "closes": list(playbook.get("closes") or []), "view": {}}
+    if playbook:
+        save("straddle.json", {"updated_at": datetime.now(IST).isoformat(timespec="seconds"), "today": {}, "playbook": {k: v for k, v in playbook.items() if k not in ("table", "closes")}})
 
     def get_chain(under: str, expiry: str, ttl: float = 10.0):
         hit = chain_cache.get((under, expiry))
@@ -838,12 +846,41 @@ def run() -> None:
                 spot = n.get("last_price")
                 exps = [e for e in U.expiries(token, NIFTY) if e >= today]
                 open_exp = {t["expiry"] for t in xb["trades"] if t["desk"] == "FNO" and t["status"] == "OPEN" and t.get("underlying", "NIFTY") == "NIFTY" and t.get("horizon", "daily") == "daily"}
-                chains = {e: get_chain("NIFTY", e, 5) for e in sorted(open_exp | {exps[0]}) if e >= today or e in open_exp}
+                rule_ = playbook.get("rule") or {}
+                sx_ = exps[1] if rule_.get("expiry") == "next week" and len(exps) > 1 else exps[0]
+                chains = {e: get_chain("NIFTY", e, 5) for e in sorted(open_exp | {exps[0], sx_}) if e >= today or e in open_exp}
                 prev_n = (spot - n["net_change"]) if spot and n.get("net_change") is not None else None
                 env = make_env()
                 vixq = (q_idx.get(IDX["vix"]) or {}).get("last_price")
                 ctx = {"spot": spot, "prev": prev_n, "chains": chains, "expiry": exps[0], "lot": U.lot_size(NIFTY, exps[0]), "room": rm["FNO"], "margin": M, "env": env, "vix": vixq,
                        "iv": D.atm_iv(chains.get(exps[0]) or [], spot), "acct": acct[0]}
+                ctx["straddle"] = {"ok": False, "why": "no trained playbook yet"}
+                if playbook and spot and vixq:
+                    if sdl["day"] != today:                           # once a day: the closes since training, so today's features are current
+                        try:
+                            recent = SL.fetch(U._get, token, NIFTY, "days/1", now.date() - timedelta(days=20), now.date() - timedelta(days=1), 30)
+                            recv = SL.fetch(U._get, token, IDX["vix"], "days/1", now.date() - timedelta(days=20), now.date() - timedelta(days=1), 30)
+                            vmap = {r[0][:10]: r[4] for r in recv}
+                            have = {r[0] for r in sdl["closes"]}
+                            sdl["closes"] += [[r[0][:10], r[4], vmap[r[0][:10]]] for r in recent if r[0][:10] not in have and r[0][:10] in vmap and r[0][:10] < today]
+                            sdl["closes"].sort()
+                        except Exception:
+                            pass
+                        sdl["day"] = today
+                    if sdl["closes"]:
+                        open_ = (n.get("ohlc") or {}).get("open") or spot
+                        mv_ = spot / sdl["closes"][-1][1] - 1
+                        k_ = round(spot / 50) * 50
+                        if rule_.get("strike_code") in ("with", "against") and abs(mv_) >= 0.003:
+                            k_ += (-50 if mv_ > 0 else 50) * (1 if rule_["strike_code"] == "with" else -1)
+                        f_ = SL.live_features(playbook, sdl["closes"], vixq, open_, (date.fromisoformat(sx_) - now.date()).days)
+                        v_ = SL.today_view(playbook, f_)
+                        sdl["view"] = {**v_, "strike": k_, "expiry": sx_, "entry": rule_.get("entry"), "target": rule_.get("target"), "stop": rule_.get("stop"), "rule": rule_,
+                                       "train": {k: (playbook.get("train") or {}).get(k) for k in ("n", "avg_rs", "win_rate", "pf")},
+                                       "test": {k: (playbook.get("test") or {}).get(k) for k in ("n", "avg_rs", "win_rate", "pf")}, "at": now.strftime("%H:%M")}
+                        ctx["straddle"] = sdl["view"]
+                        save("straddle.json", {"updated_at": now.isoformat(timespec="seconds"), "today": sdl["view"],
+                                               "playbook": {k: v for k, v in playbook.items() if k not in ("table", "closes")}})
                 # weekly and monthly structures claim margin first: they are held for days, the daily ones are flat by 15:15 and take what is left
                 uq, fv_ = {}, ((fc.get("views") or {}) if fc.get("day") == today else {})
                 for u_, k_ in UNDER.items():
