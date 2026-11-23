@@ -1,67 +1,62 @@
 {
- "mood": "bearish",
- "brief": "Indian shares are lower at midday, with Sensex down about 1,000 points and Nifty below 25,500 as the global sell-off weighs, even though US futures are rebounding. Tata Steel fell sharply on its APL Apollo Tubes deal and metals stay under pressure.",
+ "mood": "mixed",
+ "brief": "Indian shares are trying to steady after a sharp global sell-off, with US futures jumping and gold rebounding over 2%, though the Sensex and Nifty are still lower and investors have lost Rs 4.65 lakh crore. The APL Apollo and Tata Steel deal is the main stock story, and the postponed Tata Sons board meeting adds uncertainty.",
  "themes": [
-  "Global sell-off weighs on Sensex",
-  "Tata Steel and APL Apollo deal",
-  "Metals and gold volatility",
-  "Broker rating changes"
+  "APL Apollo and Tata Steel deal fallout",
+  "Global sell-off versus US futures rebound",
+  "Broker rating changes",
+  "Gold and metals rebound"
  ],
  "companies": [
   {
-   "name": "Tata Steel",
+   "name": "APL Apollo Tubes",
    "tone": "negative",
-   "why": "Dips 7% on APL Apollo deal; margin and debt worries"
+   "why": "Stock tanks 18% on Rs 15,510 crore stake sale plans"
   },
   {
-   "name": "Hindalco",
+   "name": "Tata Steel",
    "tone": "negative",
-   "why": "Under pressure alongside metals"
+   "why": "Slides nearly 5% on APL Apollo stake purchase"
+  },
+  {
+   "name": "Chalet Hotels",
+   "tone": "positive",
+   "why": "Gains 3% on Rs 3,500 crore expansion plan"
+  },
+  {
+   "name": "Patel Engineering",
+   "tone": "positive",
+   "why": "ICICI Direct rates Buy, target Rs 80"
+  },
+  {
+   "name": "HDFC Life Insurance",
+   "tone": "positive",
+   "why": "ICICI Securities rates Buy, target Rs 739"
+  },
+  {
+   "name": "Wipro",
+   "tone": "negative",
+   "why": "ICICI Securities rates Reduce, target Rs 410"
+  },
+  {
+   "name": "Persistent Systems",
+   "tone": "neutral",
+   "why": "Among stocks showing RSI trending up"
   },
   {
    "name": "Dalmia Bharat",
    "tone": "positive",
-   "why": "Board approves Rs 700 crore buyback"
-  },
-  {
-   "name": "Ashoka Buildcon",
-   "tone": "positive",
-   "why": "Jumps 8% on Rs 4,223 crore project wins"
-  },
-  {
-   "name": "Polycab",
-   "tone": "negative",
-   "why": "ICICI Securities cuts target 11%"
-  },
-  {
-   "name": "Bajaj Finance",
-   "tone": "positive",
-   "why": "Emkay rates Buy with Rs 9000 target"
-  },
-  {
-   "name": "Persistent Systems",
-   "tone": "negative",
-   "why": "Emkay rates Reduce with Rs 3700 target"
-  },
-  {
-   "name": "Aditya Birla Fashion and Retail",
-   "tone": "negative",
-   "why": "Emkay rates Reduce with Rs 230 target"
-  },
-  {
-   "name": "Tejas Networks",
-   "tone": "positive",
-   "why": "Emkay rates Buy with Rs 1100 target"
+   "why": "Approves Rs 700 crore buyback"
   }
  ],
- "global": "Asia stocks slid as the AI rout deepened despite a US futures rebound, with Nvidia futures up about 6%.",
+ "global": "US futures jumped and Taiwan rebounded, but Asian markets stayed mixed with KOSPI sliding and oil falling on robust Gulf exports.",
  "risks": [
   "Further global AI-led sell-off",
-  "Tata Steel deal margin and debt concerns",
-  "Metals price volatility"
+  "Tata Sons board meeting postponed with no new date",
+  "Volatile metals and gold prices"
  ],
- "time": "23 Nov 12:21",
- "at": 1795416692.698341,
+ "time": "23 Nov 13:21",
+ "at": 1795420297.507769,
  "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "n": 40

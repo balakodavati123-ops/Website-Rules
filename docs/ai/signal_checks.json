@@ -1,6 +1,6 @@
 {
- "time": "23 Nov 12:21",
- "at": 1795416692.698341,
+ "time": "23 Nov 13:21",
+ "at": 1795420297.507769,
  "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "checks": {
@@ -57,8 +57,8 @@
    "why": "Over an hour old and already priced in; price flat since"
   },
   "DALBHARAT": {
-   "verdict": "confirm",
-   "why": "Specific, fresh Rs 700 crore buyback approval; price has not moved against it"
+   "verdict": "doubt",
+   "why": "News over an hour old and price has drifted down since"
   },
   "LOTUSEYE": {
    "verdict": "doubt",
@@ -83,6 +83,30 @@
   "SWSOLAR": {
    "verdict": "doubt",
    "why": "Vague press release and the price is falling"
+  },
+  "BAIDFIN": {
+   "verdict": "doubt",
+   "why": "Routine resignation filing with no detail; price has not reacted"
+  },
+  "APLAPOLLO": {
+   "verdict": "doubt",
+   "why": "Open offer news already priced in after the 18% fall; price flat"
+  },
+  "TITAGARH": {
+   "verdict": "doubt",
+   "why": "Vague press release and the price is slightly down"
+  },
+  "CHALET": {
+   "verdict": "doubt",
+   "why": "Expansion news already priced in; price has faded to flat"
+  },
+  "TTL": {
+   "verdict": "doubt",
+   "why": "Tiny open-market share purchase, immaterial; price is down"
+  },
+  "GLOBAL": {
+   "verdict": "doubt",
+   "why": "Buyback filing has no size or price details and no price data yet"
   }
  }
 }
