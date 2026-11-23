@@ -46,10 +46,11 @@
    "effort": 2,
    "reason": "Gap and go: opened -3.3% lower and is holding below the open and VWAP, near the day low. Stop 457.92 (0.80%), target 447.06 (2R), stop moves to entry after a 1R gain, out by 15:10.",
    "label": "E2E short",
-   "status": "OPEN",
-   "pnl_rs": 0,
-   "exit": "",
-   "why": ""
+   "status": "WIN",
+   "pnl_rs": 45.69,
+   "exit": 452.45,
+   "why": "time",
+   "closed": "15:10"
   },
   {
    "id": 3,
@@ -161,7 +162,7 @@
    "symbol": "GMMPFAUDLR",
    "side": "LONG",
    "entry": 1214.3,
-   "last": 1204.6,
+   "last": 1192.7,
    "qty": 10,
    "stop": 1199.73,
    "target": 1243.44,
@@ -172,10 +173,11 @@
    "effort": 2,
    "reason": "Gap and go: opened +2.6% higher and is holding above the open and VWAP, near the day high. Stop 1,199.73 (1.20%), target 1,243.44 (2R), stop moves to entry after a 1R gain, out by 15:10.",
    "label": "GMMPFAUDLR long",
-   "status": "OPEN",
-   "pnl_rs": 0,
-   "exit": "",
-   "why": ""
+   "status": "LOSS",
+   "pnl_rs": -243.82,
+   "exit": 1192.7,
+   "why": "stop",
+   "closed": "12:32"
   },
   {
    "id": 8,
@@ -185,7 +187,7 @@
    "symbol": "TCS",
    "side": "LONG",
    "entry": 2484.9,
-   "last": 2479.9,
+   "last": 2459.0,
    "qty": 5,
    "stop": 2459.11,
    "target": 2536.47,
@@ -196,10 +198,11 @@
    "effort": 2,
    "reason": "Gap and go: opened +1.8% higher and is holding above the open and VWAP, near the day high. Stop 2,459.11 (1.04%), target 2,536.47 (2R), stop moves to entry after a 1R gain, out by 15:10.",
    "label": "TCS long",
-   "status": "OPEN",
-   "pnl_rs": 0,
-   "exit": "",
-   "why": ""
+   "status": "LOSS",
+   "pnl_rs": -157.44,
+   "exit": 2459.0,
+   "why": "stop",
+   "closed": "12:05"
   },
   {
    "id": 9,
@@ -209,7 +212,7 @@
    "symbol": "OAL",
    "side": "SHORT",
    "entry": 488.7,
-   "last": 481.45,
+   "last": 488.8,
    "qty": 25,
    "stop": 488.7,
    "target": 476.97,
@@ -220,11 +223,12 @@
    "effort": 2,
    "reason": "Gap and go: opened -4.2% lower and is holding below the open and VWAP, near the day low. Stop 494.56 (1.20%), target 476.97 (2R), stop moves to entry after a 1R gain, out by 15:10.",
    "label": "OAL short",
-   "status": "OPEN",
-   "pnl_rs": 0,
-   "exit": "",
-   "why": "",
-   "protected": true
+   "status": "LOSS",
+   "pnl_rs": -30.41,
+   "exit": 488.8,
+   "why": "breakeven stop",
+   "protected": true,
+   "closed": "11:35"
   }
  ],
  "seen": {
@@ -241,11 +245,19 @@
   "TECHNOCRAF": "LONG",
   "GMMPFAUDLR": "LONG",
   "TCS": "LONG",
-  "OAL": "SHORT"
+  "OAL": "SHORT",
+  "ICIL": "conflict",
+  "DALBHARAT": "conflict",
+  "ACE": "conflict",
+  "TITAGARH": "conflict",
+  "GLASSWALL": "conflict",
+  "ALKEM": "conflict",
+  "SUZLON": "conflict",
+  "DBL": "conflict"
  },
  "seq": 9,
  "diag": {
-  "at": "11:23",
+  "at": "15:30",
   "effort": 2,
   "setups_on": [
    "news",
@@ -253,44 +265,16 @@
    "momentum",
    "vwap"
   ],
-  "scanned": 528,
+  "scanned": 0,
   "found": {
    "news": [],
-   "gap": [
-    "MARUTI",
-    "OAL",
-    "SWSOLAR",
-    "TCS",
-    "JLHL",
-    "TECHNOCRAF",
-    "E2E"
-   ],
-   "momentum": [
-    "GOLDAXIS",
-    "PNB",
-    "MEESHO",
-    "SURYAROSNI",
-    "SHANTIGOLD",
-    "TMCV",
-    "SGFIN",
-    "BANKBARODA"
-   ],
-   "vwap": [
-    "GOLDAXIS",
-    "MEESHO",
-    "SHANTIGOLD",
-    "TMCV",
-    "SGFIN",
-    "BANKBARODA",
-    "KISSHT",
-    "HINDPETRO"
-   ]
+   "gap": [],
+   "momentum": [],
+   "vwap": []
   },
   "taken": [],
-  "skipped": {
-   "SWSOLAR": "the day's trade limit is reached"
-  },
-  "news_names": 5,
-  "headline_names": 15
+  "skipped": {},
+  "news_names": 16,
+  "headline_names": 12
  }
 }

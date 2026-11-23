@@ -1,67 +1,62 @@
 {
  "mood": "bearish",
- "brief": "Indian markets sold off broadly into the afternoon, with Sensex shedding about 1,430 points and Nifty slipping below 25,400 as metals and banks dragged, despite IT and auto stocks leading gains. Cyber incident reports at Suzlon and L&T Technology Services added caution, while US tech weakness and falling gold kept global sentiment fragile.",
+ "brief": "Indian markets closed sharply lower, with Sensex down about 1,484 points and Nifty 50 down 1.75% as banks and metals bled, though IT and Maruti held up. Wall Street futures are bouncing and Asian regulators are stepping in to support markets, but AI-trade jitters remain.",
  "themes": [
-  "Broad Sensex sell-off, metals drag",
-  "IT and auto stocks lead gains",
-  "Cyber incidents at Indian firms",
-  "Gold and crypto weakness"
+  "Sharp Sensex and Nifty fall",
+  "IT and Maruti resilient",
+  "Asian regulators support markets",
+  "Wall Street futures rebound"
  ],
  "companies": [
   {
    "name": "Tata Steel",
    "tone": "negative",
-   "why": "Dips 7% on APL Apollo deal; top loser"
+   "why": "Top loser after APL Apollo Tubes stake deal"
   },
   {
-   "name": "Hindalco",
-   "tone": "negative",
-   "why": "Under pressure as metal stocks drag"
-  },
-  {
-   "name": "Suzlon Energy",
-   "tone": "negative",
-   "why": "Reports cyber attack; says no critical impact"
-  },
-  {
-   "name": "L&T Technology Services",
-   "tone": "neutral",
-   "why": "Says systems secure amid cybersecurity incident reports"
-  },
-  {
-   "name": "Sterling and Wilson",
+   "name": "APL Apollo Tubes",
    "tone": "positive",
-   "why": "Gains 7% on Rs 2,050 crore orders"
+   "why": "Rose above VWAP among three stocks"
   },
   {
-   "name": "Dalmia Bharat",
-   "tone": "neutral",
-   "why": "Pares losses to trade flat after buyback news"
-  },
-  {
-   "name": "Tech Mahindra",
-   "tone": "neutral",
-   "why": "Fixes record date for 1:1 bonus issue"
-  },
-  {
-   "name": "Patel Engineering",
+   "name": "HDFC Bank",
    "tone": "positive",
-   "why": "ICICI Direct rates Buy, target Rs 80"
+   "why": "ICICI Securities rates Buy, target Rs 1,850"
   },
   {
-   "name": "HDFC Life Insurance",
+   "name": "TCS",
    "tone": "positive",
-   "why": "ICICI Securities rates Buy, target Rs 739"
+   "why": "Rises despite Sensex and Nifty crash"
+  },
+  {
+   "name": "Infosys",
+   "tone": "positive",
+   "why": "Rises despite Sensex and Nifty crash"
+  },
+  {
+   "name": "HCL Technologies",
+   "tone": "positive",
+   "why": "Rises despite Sensex and Nifty crash"
+  },
+  {
+   "name": "Maruti Suzuki",
+   "tone": "positive",
+   "why": "Rises despite Sensex and Nifty crash"
+  },
+  {
+   "name": "PB Fintech",
+   "tone": "positive",
+   "why": "Jumps 9% after recent rout"
   }
  ],
- "global": "Gold fell sharply alongside US stocks on margin calls, while crypto tumbled in November and Iran tensions over a US naval blockade added geopolitical risk.",
+ "global": "Wall Street futures are bouncing after AI jitters pushed US stocks into correction, while the Trump administration reportedly approved shipment of nearly 900,000 AI chips to China.",
  "risks": [
-  "Further sell-off in metals and banks",
-  "Cybersecurity incidents at listed firms",
-  "Iran and US naval blockade escalation"
+  "AI-trade sell-off may resume",
+  "Banks and metals weakness",
+  "Policy risk on chip exports to China"
  ],
- "time": "23 Nov 15:21",
- "at": 1795427496.595779,
+ "time": "23 Nov 16:21",
+ "at": 1795431064.938936,
  "day": "2026-11-23",
  "model": "Claude (your plan, scheduled)",
  "n": 40

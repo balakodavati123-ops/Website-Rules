@@ -4864,6 +4864,31 @@
   "setup": "gap"
  },
  {
+  "id": "E261123-2",
+  "desk": "EQUITY",
+  "strategy": "gap-and-go",
+  "label": "E2E short",
+  "symbol": "E2E",
+  "side": "SHORT",
+  "entry": 454.3,
+  "last": 452.45,
+  "exit": 452.45,
+  "qty": 41,
+  "stop": 457.92,
+  "status": "WIN",
+  "pnl_rs": 45.69,
+  "reason": "Gap and go: opened -3.3% lower and is holding below the open and VWAP, near the day low. Stop 457.92 (0.80%), target 447.06 (2R), stop moves to entry after a 1R gain, out by 15:10.",
+  "why": "time",
+  "day": "2026-11-23",
+  "opened": "09:20",
+  "closed": "15:10",
+  "risk_class": "Intraday hunter",
+  "margin_rs": 3725,
+  "target_px": 447.06,
+  "leverage": 5.0,
+  "setup": "gap"
+ },
+ {
   "id": "E261123-4",
   "desk": "EQUITY",
   "strategy": "headline-led",
@@ -4887,6 +4912,133 @@
   "target_px": 1269.59,
   "leverage": 5.0,
   "setup": "news"
+ },
+ {
+  "id": "F261123-70",
+  "desk": "FNO",
+  "strategy": "weekly_credit_spread",
+  "label": "NIFTY credit spread \u00b7 12-01",
+  "side": "SHORT",
+  "entry": 23.3,
+  "last": -3.9,
+  "qty": 1,
+  "status": "LOSS",
+  "pnl_rs": -333.5,
+  "exit": -3.9,
+  "why": "closed by the CEO from the dashboard",
+  "day": "2026-11-23",
+  "opened": "09:45:12",
+  "closed": "11:23:58",
+  "ts": 1795407316.4540262,
+  "expiry": "2026-12-01",
+  "lot": 65,
+  "legs": [
+   {
+    "side": "S",
+    "strike": 25000.0,
+    "kind": "PE",
+    "entry": 63.25,
+    "last": 68.35,
+    "key": "NSE_FO|47768"
+   },
+   {
+    "side": "B",
+    "strike": 24800.0,
+    "kind": "PE",
+    "entry": 39.95,
+    "last": 41.15,
+    "key": "NSE_FO|47720"
+   }
+  ],
+  "horizon": "weekly",
+  "underlying": "NIFTY",
+  "unit_base": 23.299999999999997,
+  "target_u": 16.31,
+  "stop_u": 23.3,
+  "risk_class": "Fixed return \u00b7 controlled loss",
+  "max_gain_rs": 1514,
+  "max_loss_rs": 11486,
+  "margin_rs": 44846,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "weekly",
+   "headline": "Sell 25,000 PE, Buy 24,800 PE \u00b7 NIFTY 2026-12-01",
+   "news": [
+    "US markets averaged -3.64% at the 20/11 close.",
+    "Asia averaged -2.77%.",
+    "Brent crude 89.78 (-3.01%).",
+    "Go Digit gets IFSCA approval to set up insurance office in GIFT City (CNBC-TV18)",
+    "Atul's US subsidiary faces probe over alleged evasion of anti-dumping duties on 2,4-D imports (CNBC-TV18)",
+    "Paytm to invest up to \u20b9200 crore in Funding Societies' subsidiaries, acquires 19% in CardUp (CNBC-TV18)",
+    "6 companies filed results or hold board meetings today."
+   ],
+   "data": [
+    "NIFTY 25,686, -0.45% on the previous close. India VIX 18.2.",
+    "Implied volatility at the money 18.2% a year. Over 8 days to 2026-12-01 that prices a one-standard-deviation move of about \u00b1692 points (\u00b12.7%), so the market gives roughly a 68% chance of finishing between 24,994 and 26,377.",
+    "Realised volatility over the last 10 sessions is 10.1% against 18.2% implied: options are richer than the index has actually moved.",
+    "Option positioning: put-to-call ratio 0.92, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,000 (a floor), max pain 25,700.",
+    "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+    "Our forecast for today: Sideways (score +0.10); likely range 25,520 to 26,098."
+   ],
+   "strategy": "Sell an out-of-the-money option about one standard deviation away and buy a farther one, held toward the weekly expiry.",
+   "why": [
+    "Regime: options are rich (implied 18.2% against 10.1% realised).",
+    "Used when options are priced richer than the index has actually been moving (implied volatility above realised): the seller is paid for that gap, and each day that passes without a big move is profit.",
+    "The short strike 25,000 is 686 points (2.7%) from the index, 1.0 times the expected move to expiry, inside the expected move, which is why the credit is larger and the risk higher.",
+    "It sits at or beyond the heaviest open-interest strike (25,000), where option writers have the most at stake.",
+    "Direction: today's forecast leans sideways (World tone is weak: US and Asia weighted average -3.29% at the 20/11 close; Brent crude 89.78 (-3.01%).; Nifty 50 closed at 25,801, +5.8% from its 20-day average (24,396) and +2.6% over five sessions: the trend is up.)."
+   ],
+   "numbers": [
+    [
+     "Net credit",
+     "23.3 points = \u20b91,514 per lot",
+     "What you receive (or pay) up front"
+    ],
+    [
+     "Most you can make",
+     "\u20b91,514",
+     "At expiry, if everything goes right"
+    ],
+    [
+     "Most you can lose",
+     "\u20b911,486",
+     "At expiry, if everything goes wrong (fixed by the bought options)"
+    ],
+    [
+     "Break-even at expiry",
+     "24,977",
+     "Where the structure stops losing money"
+    ],
+    [
+     "Chance of profit at expiry",
+     "85%",
+     "From the options market's own implied volatility; not our edge, the market's odds"
+    ],
+    [
+     "Expected move to expiry",
+     "\u00b1692 points",
+     "8 days at 18.2% implied volatility"
+    ],
+    [
+     "Reward for the risk",
+     "0.13 to 1",
+     "Best case divided by worst case"
+    ],
+    [
+     "Margin the broker asks",
+     "\u20b944,846",
+     "38% of the account (Upstox margin calculator)"
+    ],
+    [
+     "Our exit levels",
+     "Take profit at \u20b91,060, cut at \u20b91,514",
+     "Rupees on one lot, before the exit rule below"
+    ]
+   ],
+   "risk": "Take profit at 70% of the credit, cut at 100% of it, otherwise hold: it settles at the index close on expiry day. Fails when: A move through the short strike before expiry. Loss is capped by the bought option.",
+   "viability": "One lot of 65 needs \u20b944,846 of margin, checked with the broker's calculator when the trade was booked."
+  },
+  "reason": "NIFTY 25,686; options are rich (implied 18.2% against 10.1% realised); weekly structure held toward 2026-12-01. Credit 23.3 points."
  },
  {
   "id": "K261123-71",
@@ -5319,5 +5471,410 @@
    "viability": "One lot of 65 needs \u20b94,830 of margin, checked with the broker's calculator when the trade was booked."
   },
   "reason": "NIFTY 25,621 (-0.69% on the close). Debit 74.5 points; target 50% of it, stop 30% of it; out by 15:15"
+ },
+ {
+  "id": "E261123-8",
+  "desk": "EQUITY",
+  "strategy": "gap-and-go",
+  "label": "TCS long",
+  "symbol": "TCS",
+  "side": "LONG",
+  "entry": 2484.9,
+  "last": 2459.0,
+  "exit": 2459.0,
+  "qty": 5,
+  "stop": 2459.11,
+  "status": "LOSS",
+  "pnl_rs": -157.44,
+  "reason": "Gap and go: opened +1.8% higher and is holding above the open and VWAP, near the day high. Stop 2,459.11 (1.04%), target 2,536.47 (2R), stop moves to entry after a 1R gain, out by 15:10.",
+  "why": "stop",
+  "day": "2026-11-23",
+  "opened": "10:39",
+  "closed": "12:05",
+  "risk_class": "Intraday hunter",
+  "margin_rs": 2485,
+  "target_px": 2536.47,
+  "leverage": 5.0,
+  "setup": "gap"
+ },
+ {
+  "id": "E261123-7",
+  "desk": "EQUITY",
+  "strategy": "gap-and-go",
+  "label": "GMMPFAUDLR long",
+  "symbol": "GMMPFAUDLR",
+  "side": "LONG",
+  "entry": 1214.3,
+  "last": 1192.7,
+  "exit": 1192.7,
+  "qty": 10,
+  "stop": 1199.73,
+  "status": "LOSS",
+  "pnl_rs": -243.82,
+  "reason": "Gap and go: opened +2.6% higher and is holding above the open and VWAP, near the day high. Stop 1,199.73 (1.20%), target 1,243.44 (2R), stop moves to entry after a 1R gain, out by 15:10.",
+  "why": "stop",
+  "day": "2026-11-23",
+  "opened": "10:39",
+  "closed": "12:32",
+  "risk_class": "Intraday hunter",
+  "margin_rs": 2429,
+  "target_px": 1243.44,
+  "leverage": 5.0,
+  "setup": "gap"
+ },
+ {
+  "id": "E261123-9",
+  "desk": "EQUITY",
+  "strategy": "gap-and-go",
+  "label": "OAL short",
+  "symbol": "OAL",
+  "side": "SHORT",
+  "entry": 488.7,
+  "last": 488.8,
+  "exit": 488.8,
+  "qty": 25,
+  "stop": 488.7,
+  "status": "LOSS",
+  "pnl_rs": -30.41,
+  "reason": "Gap and go: opened -4.2% lower and is holding below the open and VWAP, near the day low. Stop 494.56 (1.20%), target 476.97 (2R), stop moves to entry after a 1R gain, out by 15:10.",
+  "why": "breakeven stop",
+  "day": "2026-11-23",
+  "opened": "10:51",
+  "closed": "11:35",
+  "risk_class": "Intraday hunter",
+  "margin_rs": 2444,
+  "target_px": 476.97,
+  "leverage": 5.0,
+  "setup": "gap"
+ },
+ {
+  "id": "F261123-75",
+  "desk": "FNO",
+  "strategy": "monthly_credit_spread",
+  "label": "BANKNIFTY credit spread \u00b7 12-29",
+  "side": "SHORT",
+  "entry": 82.45,
+  "last": -20.7,
+  "qty": 1,
+  "status": "LOSS",
+  "pnl_rs": -701.0,
+  "exit": -20.7,
+  "why": "closed by the CEO from the dashboard",
+  "day": "2026-11-23",
+  "opened": "11:24:14",
+  "closed": "11:30:47",
+  "ts": 1795413259.4534736,
+  "expiry": "2026-12-29",
+  "lot": 30,
+  "legs": [
+   {
+    "side": "S",
+    "strike": 60700.0,
+    "kind": "PE",
+    "entry": 446.9,
+    "last": 454.45,
+    "key": "NSE_FO|59890"
+   },
+   {
+    "side": "B",
+    "strike": 60100.0,
+    "kind": "PE",
+    "entry": 364.45,
+    "last": 351.3,
+    "key": "NSE_FO|59866"
+   }
+  ],
+  "horizon": "monthly",
+  "underlying": "BANKNIFTY",
+  "unit_base": 82.44999999999999,
+  "target_u": 41.22,
+  "stop_u": 82.45,
+  "risk_class": "Fixed return \u00b7 controlled loss",
+  "max_gain_rs": 2473,
+  "max_loss_rs": 15527,
+  "margin_rs": 47137,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "monthly",
+   "headline": "Sell 60,700 PE, Buy 60,100 PE \u00b7 BANKNIFTY 2026-12-29",
+   "news": [
+    "US markets averaged -3.64% at the 20/11 close.",
+    "Asia averaged -2.77%.",
+    "Brent crude 89.78 (-3.01%).",
+    "Go Digit gets IFSCA approval to set up insurance office in GIFT City (CNBC-TV18)",
+    "Atul's US subsidiary faces probe over alleged evasion of anti-dumping duties on 2,4-D imports (CNBC-TV18)",
+    "Paytm to invest up to \u20b9200 crore in Funding Societies' subsidiaries, acquires 19% in CardUp (CNBC-TV18)",
+    "6 companies filed results or hold board meetings today."
+   ],
+   "data": [
+    "BANKNIFTY 63,449, -1.84% on the previous close. India VIX 18.3.",
+    "Implied volatility at the money 17.9% a year. Over 36 days to 2026-12-29 that prices a one-standard-deviation move of about \u00b13,560 points (\u00b15.6%), so the market gives roughly a 68% chance of finishing between 59,889 and 67,009.",
+    "Realised volatility over the last 10 sessions is 17.0% against 17.9% implied: options are richer than the index has actually moved.",
+    "Option positioning: put-to-call ratio 0.85, largest call open interest at 65,000 (a ceiling), largest put open interest at 63,000 (a floor), max pain 63,400.",
+    "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+    "Our forecast for today: Sideways (score +0.12); likely range 63,518 to 65,836."
+   ],
+   "strategy": "Sell an out-of-the-money option well away from the index and buy a farther one, held for weeks toward the monthly expiry.",
+   "why": [
+    "Regime: options are rich (implied 17.9% against 17.0% realised).",
+    "Used for a slower, larger-premium version of the weekly trade: more time to be right, a wider cushion, and a smaller daily swing in value.",
+    "The short strike 60,700 is 2,749 points (4.3%) from the index, 0.8 times the expected move to expiry, inside the expected move, which is why the credit is larger and the risk higher.",
+    "It sits at or beyond the heaviest open-interest strike (63,000), where option writers have the most at stake.",
+    "Direction: today's forecast leans sideways (World tone is weak: US and Asia weighted average -3.29% at the 20/11 close; Brent crude 89.78 (-3.01%).; Bank Nifty closed at 64,635, +10.4% from its 20-day average (58,552) and +5.9% over five sessions: the trend is up.)."
+   ],
+   "numbers": [
+    [
+     "Net credit",
+     "82.4 points = \u20b92,473 per lot",
+     "What you receive (or pay) up front"
+    ],
+    [
+     "Most you can make",
+     "\u20b92,473",
+     "At expiry, if everything goes right"
+    ],
+    [
+     "Most you can lose",
+     "\u20b915,527",
+     "At expiry, if everything goes wrong (fixed by the bought options)"
+    ],
+    [
+     "Break-even at expiry",
+     "60,618",
+     "Where the structure stops losing money"
+    ],
+    [
+     "Chance of profit at expiry",
+     "78%",
+     "From the options market's own implied volatility; not our edge, the market's odds"
+    ],
+    [
+     "Expected move to expiry",
+     "\u00b13,560 points",
+     "36 days at 17.9% implied volatility"
+    ],
+    [
+     "Reward for the risk",
+     "0.16 to 1",
+     "Best case divided by worst case"
+    ],
+    [
+     "Margin the broker asks",
+     "\u20b947,137",
+     "39% of the account (Upstox margin calculator)"
+    ],
+    [
+     "Our exit levels",
+     "Take profit at \u20b91,237, cut at \u20b92,473",
+     "Rupees on one lot, before the exit rule below"
+    ]
+   ],
+   "risk": "Take profit at 50% of the credit, cut at 100% of it, otherwise hold: it leaves five days before expiry to avoid the final-week swings. Fails when: A trend that carries the index through the short strike. Loss is capped by the bought option.",
+   "viability": "One lot of 30 needs \u20b947,137 of margin, checked with the broker's calculator when the trade was booked."
+  },
+  "reason": "BANKNIFTY 63,449; options are rich (implied 17.9% against 17.0% realised); monthly structure held toward 2026-12-29. Credit 82.4 points."
+ },
+ {
+  "id": "F261123-76",
+  "desk": "FNO",
+  "strategy": "long_straddle",
+  "label": "NIFTY long straddle \u00b7 11-23",
+  "side": "LONG",
+  "entry": -146.35,
+  "last": 76.35,
+  "qty": 1,
+  "status": "WIN",
+  "pnl_rs": 4882.75,
+  "exit": 76.35,
+  "why": "target",
+  "day": "2026-11-23",
+  "opened": "11:31:00",
+  "closed": "14:54:38",
+  "ts": 1795413664.853178,
+  "expiry": "2026-11-23",
+  "lot": 65,
+  "legs": [
+   {
+    "side": "B",
+    "strike": 25600.0,
+    "kind": "CE",
+    "entry": 80.0,
+    "last": 1.4,
+    "key": "NSE_FO|64477"
+   },
+   {
+    "side": "B",
+    "strike": 25600.0,
+    "kind": "PE",
+    "entry": 66.35,
+    "last": 221.3,
+    "key": "NSE_FO|64478"
+   }
+  ],
+  "horizon": "daily",
+  "underlying": "NIFTY",
+  "unit_base": 146.35,
+  "target_u": 73.17,
+  "stop_u": 51.22,
+  "risk_class": "High return \u00b7 high loss",
+  "max_gain_rs": null,
+  "max_loss_rs": 9513,
+  "margin_rs": 9815,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "daily",
+   "headline": "Buy 25,600 CE, Buy 25,600 PE \u00b7 NIFTY 2026-11-23",
+   "news": [
+    "US markets averaged -3.64% at the 20/11 close.",
+    "Asia averaged -2.77%.",
+    "Brent crude 89.78 (-3.01%).",
+    "Go Digit gets IFSCA approval to set up insurance office in GIFT City (CNBC-TV18)",
+    "Atul's US subsidiary faces probe over alleged evasion of anti-dumping duties on 2,4-D imports (CNBC-TV18)",
+    "Paytm to invest up to \u20b9200 crore in Funding Societies' subsidiaries, acquires 19% in CardUp (CNBC-TV18)",
+    "6 companies filed results or hold board meetings today."
+   ],
+   "data": [
+    "NIFTY 25,619, -0.70% on the previous close. India VIX 17.9.",
+    "Implied volatility at the money 33.1% a year. Over 0 days to 2026-11-23 that prices a one-standard-deviation move of about \u00b1222 points (\u00b10.9%), so the market gives roughly a 68% chance of finishing between 25,397 and 25,841.",
+    "Option positioning: put-to-call ratio 0.76, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,500 (a floor), max pain 25,750.",
+    "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+    "Our forecast for today: Sideways (score +0.10); likely range 25,520 to 26,098."
+   ],
+   "strategy": "Buy the at-the-money call and put.",
+   "why": [
+    "Used when a big move is plausible but its direction is not: either leg can pay for both. It loses if the index drifts, because time decay eats the premium."
+   ],
+   "numbers": [
+    [
+     "Net debit",
+     "146.3 points = \u20b99,513 per lot",
+     "What you receive (or pay) up front"
+    ],
+    [
+     "Most you can make",
+     "\u20b9491,280",
+     "At expiry, if everything goes right"
+    ],
+    [
+     "Most you can lose",
+     "\u20b99,120",
+     "At expiry, if everything goes wrong (fixed by the bought options)"
+    ],
+    [
+     "Break-even at expiry",
+     "25,454 and 25,746",
+     "Where the structure stops losing money"
+    ],
+    [
+     "Chance of profit at expiry",
+     "51%",
+     "From the options market's own implied volatility; not our edge, the market's odds"
+    ],
+    [
+     "Expected move to expiry",
+     "\u00b1222 points",
+     "0 days at 33.1% implied volatility"
+    ],
+    [
+     "Reward for the risk",
+     "53.87 to 1",
+     "Best case divided by worst case"
+    ],
+    [
+     "Margin the broker asks",
+     "\u20b99,815",
+     "8% of the account (Upstox margin calculator)"
+    ],
+    [
+     "Our exit levels",
+     "Take profit at \u20b94,756, cut at \u20b93,329",
+     "Rupees on one lot, before the exit rule below"
+    ]
+   ],
+   "risk": "Take profit at 50% of the debit, cut at 35%, and be flat by 15:15 whatever happens. Fails when: A quiet day. The cost of both options is the most you can lose.",
+   "viability": "One lot of 65 needs \u20b99,815 of margin, checked with the broker's calculator when the trade was booked."
+  },
+  "reason": "NIFTY 25,619 (-0.70% on the close). Debit 146.3 points; target 50% of it, stop 35% of it; out by 15:15"
+ },
+ {
+  "id": "M261123-77",
+  "desk": "COMMODITY",
+  "strategy": "mcx_pullback",
+  "label": "Crude oil mini long",
+  "side": "LONG",
+  "entry": 7794.0,
+  "last": 7752.0,
+  "qty": 1,
+  "status": "LOSS",
+  "pnl_rs": -458.97,
+  "exit": 7752.0,
+  "why": "stop",
+  "day": "2026-11-23",
+  "opened": "11:31:21",
+  "closed": "11:44:37",
+  "ts": 1795413685.129494,
+  "key": "MCX_FO|576265",
+  "mult": 10.0,
+  "symbol": "CRUDEOILM FUT 18 DEC 26",
+  "stop": 7755.03,
+  "target_px": 7864.15,
+  "horizon": "intraday",
+  "risk_class": "Intraday pullback",
+  "margin_rs": 24056,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "Crude oil mini long",
+   "news": [
+    "US markets averaged -3.64% at the 20/11 close.",
+    "Asia averaged -2.77%.",
+    "Brent crude 89.78 (-3.01%)."
+   ],
+   "data": [
+    "Crude oil mini (CRUDEOILM FUT 18 DEC 26) at 7,794.00, +1.31% on the previous close; day range 7,708.00 to 7,834.00, price is 0.51% from the day high.",
+    "Lot: 10 unit(s) \u00d7 1 lot(s); contract value \u20b977,940.",
+    "Global reference: Brent crude 89.78 (-3.01% at the 11-22 close)."
+   ],
+   "strategy": "Buy a dip inside an up day or sell a bounce inside a down day.",
+   "why": [
+    "Used after a trend day pulls back 0.4% to 1.2%: you join the trend at a better price than the chasers.",
+    "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|576265)."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "7,794.00",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "7,755.03",
+     "Costs about \u20b9390"
+    ],
+    [
+     "Target (exit if right)",
+     "7,864.15",
+     "Earns about \u20b9701"
+    ],
+    [
+     "Reward for the risk",
+     "1.8 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "36% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b924,056",
+     "20% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: The pullback becomes a reversal. The 0.5% stop caps the loss.",
+   "viability": "Needs \u20b924,056 to hold (Upstox margin calculator)."
+  },
+  "reason": "+1.3% on the day and pulled back 0.5% from its high: buying the dip in an up day, selling the bounce in a down day; stop 0.5%, target 0.9%"
  }
 ]

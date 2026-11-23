@@ -1,60 +1,760 @@
 {
- "updated_at": "2026-11-23T11:23:17+05:30",
- "scans": 444,
+ "updated_at": "2026-11-23T15:30:25+05:30",
+ "scans": 668,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "11:23:17"
+   "at": "15:30:25"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "11:23:17"
+   "at": "15:30:25"
   },
   "Moneycontrol": {
    "ok": true,
    "items": 15,
-   "at": "11:23:17"
+   "at": "15:30:25"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "11:23:17"
+   "at": "15:30:25"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "11:23:17"
+   "at": "15:30:25"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "11:23:17"
+   "at": "15:30:25"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "11:23:17"
+   "at": "15:30:25"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "11:23:17"
+   "at": "15:30:25"
   },
   "Google News": {
    "ok": true,
    "items": 9,
-   "at": "11:23:17"
+   "at": "15:30:25"
   }
  },
  "signals": [
   {
-   "id": "N112317-24",
-   "t": "11:23:17",
-   "ts": 1795413197.560608,
-   "pub": "11:22",
+   "id": "N150727-51",
+   "t": "15:07:27",
+   "ts": 1795426647.67033,
+   "pub": "15:03",
+   "lag_s": 235,
+   "symbol": "TECHM",
+   "tone": "positive",
+   "score": 3,
+   "emotion": "Optimism",
+   "why": [
+    "bonus issue"
+   ],
+   "headline": "Tech Mahindra fixes record date for 1:1 bonus issue: What 7 lakh retail shareholders need to know",
+   "source": "CNBC-TV18",
+   "link": "https://www.cnbctv18.com/market/tech-mahindra-fixes-record-date-for-1-1-bonus-issue-shares-gain-2-5-pc-20039927.htm",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1780.1,
+   "px": 1777.5,
+   "move_pct": -0.15,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Bonus issue is cosmetic and already announced; price has not reacted"
+   }
+  },
+  {
+   "id": "N144919-50",
+   "t": "14:49:19",
+   "ts": 1795425559.135748,
+   "pub": "14:31",
+   "lag_s": 1047,
+   "symbol": "DALBHARAT",
+   "tone": "positive",
+   "score": 3,
+   "emotion": "Optimism",
+   "why": [
+    "buyback"
+   ],
+   "headline": "Dalmia Bharat pares losses to trade flat after \u20b9700-cr buyback announcement - Business Standard",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPMExKeHJYSUlDRE9yVWxUVHhaWTdhV2lvQ1NFc256RHhOME5OZkFXbm5JLVl4dXU2TjFDY3pUX3d4b1AySjdrcU4wa3ZXWGNibFotRWtQVlhmQlViTWhneWVMcEZVeU1OZHhJaUhSeXpjM3hOSUVkWDBZb1ZjcWE1UW1YemI3bnN5OXFGSEFiQTJSMjVITklMb0tveXNza1dNcS01dzUxeW10R243X255LVgyLXRFeUZrRkFUM25BT1FlMm90ZXR3SEZpYmpwRGlRRkRWaTd3TE7SAd4BQVVfeXFMUFpOSVR5UXdTaFRXcTJNa1pBMUQ5Q3ZyWkd5MG8wYkxRZk44V3lpVkpHYUtzanJMZXBaQ1RkbElkQ2lvQ1EyWVdDZ0J1cU9oM09tOWlmVWY1SDJVVDJ2QkxNaGVnRTJxemJpV1cwVWFkU3JaV2g0Y0VjR0t1bUZSYllsQU55SXJ4UTVWSEZpSERLSWRKM0hXMXJsU29uTzN1OW1IRFBsN001alAySncxTmlmeWp0ckg5NTFKSTlRVDF0NGQ1ZWxSeUg2SnBCekZ3RXVxMFFJaWhJaXYtRi1n?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1564.5,
+   "px": 1565.0,
+   "move_pct": 0.03,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Buyback news is old and the stock has traded flat since"
+   }
+  },
+  {
+   "id": "N144341-49",
+   "t": "14:43:41",
+   "ts": 1795425221.923135,
+   "pub": "14:40",
+   "lag_s": 200,
+   "symbol": "DALBHARAT",
+   "tone": "positive",
+   "score": 4.5,
+   "emotion": "Euphoria",
+   "why": [
+    "approves",
+    "buyback"
+   ],
+   "headline": "Dalmia Bharat board approves \u20b9700 crore share buyback at up to \u20b91,850 per share",
+   "source": "BusinessLine",
+   "link": "https://www.thehindubusinessline.com/markets/dalmia-bharat-board-approves-700-crore-share-buyback-at-up-to-1850-per-share/article71734042.ece",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1567.0,
+   "px": 1565.0,
+   "move_pct": -0.13,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Buyback news is old and the stock has traded flat since"
+   }
+  },
+  {
+   "id": "N144102-48",
+   "t": "14:41:02",
+   "ts": 1795425062.01275,
+   "pub": "14:39",
+   "lag_s": 97,
+   "symbol": "SOLARWORLD",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "SOLARWORLD: Bagging/Receiving of orders/contracts",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/SUNSHINE123_23112026143915_Intimation.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 102.35,
+   "px": 102.96,
+   "move_pct": 0.6,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Order filing gives no size or value despite a small price rise"
+   }
+  },
+  {
+   "id": "N144102-47",
+   "t": "14:41:02",
+   "ts": 1795425062.01275,
+   "pub": "14:36",
+   "lag_s": 272,
+   "symbol": "TECHM",
+   "tone": "positive",
+   "score": 3,
+   "emotion": "Optimism",
+   "why": [
+    "bonus issue"
+   ],
+   "headline": "Tech Mahindra fixes 30 November as record date for 1:1 bonus issue; bonus shares to trade from 2 December - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOaEhzdnA0WTQzREVTV0RjdXlhc09BXzFocHQ1c2gxempnVVZzT3BDb1Y0N1pMTzdMeXdZY3lyZ0V4TFVyQ29qOExWN0xvQk5oR0E4QnkxZ3EyWjhJSUpOQnhkazhRSnMyLTlXYUViMWRiMU1JdDQtZmdtbWdPN2dOT1dMUnVVSVdlbjU0Qm5wS0NJUzZGOTd0RXNlUk95THZ5R3RxbUtKT0FrOGQ4N1hBY0oyUVRGWFR2UEVaV0gyaGVsOXI5U0N5c3F0NkRKY25JZE56bTY0eEE?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1784.0,
+   "px": 1777.5,
+   "move_pct": -0.36,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Bonus issue is cosmetic and already announced; price has not reacted"
+   }
+  },
+  {
+   "id": "N143845-46",
+   "t": "14:38:45",
+   "ts": 1795424925.731069,
+   "pub": "14:31",
+   "lag_s": 414,
+   "symbol": "DALBHARAT",
+   "tone": "positive",
+   "score": 3,
+   "emotion": "Optimism",
+   "why": [
+    "buyback"
+   ],
+   "headline": "Dalmia Bharat pares losses to trade flat after \u20b9700-cr buyback announcement",
+   "source": "Business Standard",
+   "link": "https://www.business-standard.com/markets/news/dalmia-bharat-pares-losses-to-trade-flat-after-700-cr-buyback-announcement-126112300559_1.html",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1567.3,
+   "px": 1565.0,
+   "move_pct": -0.15,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Buyback news is old and the stock has traded flat since"
+   }
+  },
+  {
+   "id": "N143518-45",
+   "t": "14:35:18",
+   "ts": 1795424718.400809,
+   "pub": "13:47",
+   "lag_s": 2875,
+   "symbol": "TATASTEEL",
+   "tone": "negative",
+   "score": -3,
+   "emotion": "Fear",
+   "why": [
+    "crashes"
+   ],
+   "headline": "Stock Market Today: Sensex Crashes 1,200 Points, Nifty 50 Below 25,500 As Banks, Metals Drag; Tata Steel Top Loser",
+   "source": "NDTV Profit",
+   "link": "https://www.ndtvprofit.com/markets/stock-market-today-sensex-today-nifty-50-bank-nifty-gift-nifty-nasdaq-kospi-crude-oil-prices-gold-rate-today-silver-prices-12364071#publisher=newsstand",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 162.78,
+   "px": 163.0,
+   "move_pct": 0.14,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Market-wide crash story, nearly an hour old, and price is flat"
+   }
+  },
+  {
+   "id": "N143159-44",
+   "t": "14:31:59",
+   "ts": 1795424519.258428,
+   "pub": "14:31",
+   "lag_s": 54,
+   "symbol": "TECHM",
+   "tone": "positive",
+   "score": 3,
+   "emotion": "Optimism",
+   "why": [
+    "bonus issue"
+   ],
+   "headline": "Tech Mahindra announces 1:1 bonus issue of equity shares - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPMWRkbDk1ZktORUlxNWhoVFZiSTlVU1JCNlJ6RlBMMlRhZHlQMXN4U1lmRjlmZGFZZzlnVXZuNW1EcWFoOHZyN2JwZXBfckdseGFfOUNWWDVMZ0ZwUEhPZ1lnUEdpQmpDZDZTdG9DRTNfdmlkd092VnF0b29FRDNQLVpUZklQZ0V0dmd0ZkNfMGNReWhkYUVqbUl0WFZOUQ?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1790.9,
+   "px": 1777.5,
+   "move_pct": -0.75,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Bonus issue is cosmetic and already announced; price has not reacted"
+   }
+  },
+  {
+   "id": "N142310-43",
+   "t": "14:23:10",
+   "ts": 1795423990.58655,
+   "pub": "14:21",
+   "lag_s": 72,
+   "symbol": "TECHM",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "TECHM: Record Date",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/Apekshakhemka_23112026142123_SE_intimation_record_dateF_S.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1789.3,
+   "px": 1777.5,
+   "move_pct": -0.66,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Bonus issue is cosmetic and already announced; price has not reacted"
+   }
+  },
+  {
+   "id": "N141631-42",
+   "t": "14:16:31",
+   "ts": 1795423591.301679,
+   "pub": "14:16",
    "lag_s": 30,
+   "symbol": "SIMBHALS",
+   "tone": "negative",
+   "score": -3.5,
+   "emotion": "Fear",
+   "why": [
+    "insolvency"
+   ],
+   "headline": "SIMBHALS: Corporate Insolvency Resolution Process",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/SIMBHALS_23112026141436_CIRP_Updates_-_Extension_of_Last_day_for_resolution_plan.pdf",
+   "kind": "filing",
+   "status": "new",
+   "ai": {
+    "verdict": "confirm",
+    "why": "Specific insolvency process filing; no price data yet to contradict"
+   }
+  },
+  {
+   "id": "N140030-41",
+   "t": "14:00:30",
+   "ts": 1795422630.191478,
+   "pub": "13:55",
+   "lag_s": 289,
+   "symbol": "THOMASCOOK",
+   "tone": "positive",
+   "score": 4.55,
+   "emotion": "Euphoria",
+   "why": [
+    "surges",
+    "rally"
+   ],
+   "headline": "Thomas Cook share price surges 15%, extends three-session rally to 19% | More upside ahead? Key levels to watch",
+   "source": "Mint",
+   "link": "https://www.livemint.com/market/stock-market-news/thomas-cook-share-price-surges-15-extends-three-session-rally-to-19-more-upside-ahead-key-levels-to-watch-11795417866319.html",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 128.99,
+   "px": 128.0,
+   "move_pct": -0.77,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Euphoric 15% surge already happened and price is flat since"
+   }
+  },
+  {
+   "id": "N133157-40",
+   "t": "13:31:57",
+   "ts": 1795420917.316838,
+   "pub": "13:30",
+   "lag_s": 60,
+   "symbol": "PTCIL",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "PTCIL: Bagging/Receiving of orders/contracts",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/PTCINDUSTRIES_23112026133047_20261123_Press_Release_Indian_Defence_Order.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 24405.0,
+   "px": 24450.0,
+   "move_pct": 0.18,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Order win is small and price has not moved"
+   }
+  },
+  {
+   "id": "N133050-39",
+   "t": "13:30:50",
+   "ts": 1795420850.363003,
+   "pub": "13:04",
+   "lag_s": 1585,
+   "symbol": "GOKUL",
+   "tone": "negative",
+   "score": -3,
+   "emotion": "Fear",
+   "why": [
+    "crash"
+   ],
+   "headline": "Drink And Drive Crash: Former Gokul Director's Son Runs Over Two At Midnight",
+   "source": "NDTV Profit",
+   "link": "https://www.ndtvprofit.com/india/drink-and-drive-crash-former-gokul-director-and-ranjitsinh-patil-son-runs-over-two-at-midnight-12364896#publisher=newsstand",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 35.01,
+   "px": 35.12,
+   "move_pct": 0.31,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Story is about a former director's son, not the company; price flat"
+   }
+  },
+  {
+   "id": "N132053-38",
+   "t": "13:20:53",
+   "ts": 1795420253.131917,
+   "pub": "13:19",
+   "lag_s": 91,
+   "symbol": "BAIDFIN",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "BAIDFIN: Resignation of Director/KMP/SMP",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/BAIDFIN_ROID_105144_KMP_Doc.zip",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 9.87,
+   "px": 9.83,
+   "move_pct": -0.41,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Routine resignation filing with no detail; price has not fallen"
+   }
+  },
+  {
+   "id": "N131209-37",
+   "t": "13:12:09",
+   "ts": 1795419729.163778,
+   "pub": "13:11",
+   "lag_s": 29,
+   "symbol": "BAIDFIN",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "BAIDFIN: Resignation",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/20121991_23112026131043_Intimation.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 9.82,
+   "px": 9.83,
+   "move_pct": 0.1,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Routine resignation filing with no detail; price has not fallen"
+   }
+  },
+  {
+   "id": "N130223-36",
+   "t": "13:02:23",
+   "ts": 1795419143.378817,
+   "pub": "13:01",
+   "lag_s": 59,
+   "symbol": "APLAPOLLO",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "APLAPOLLO: Public Announcement-Open Offer",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/team_sandeshc_23112026125413_APL.zip",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1697.3,
+   "px": 1670.0,
+   "move_pct": -1.61,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Open offer news already priced in after the 18% fall; price flat"
+   }
+  },
+  {
+   "id": "N124139-35",
+   "t": "12:41:39",
+   "ts": 1795417899.350484,
+   "pub": "12:40",
+   "lag_s": 68,
+   "symbol": "TITAGARH",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "TITAGARH: Press Release",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/TWL_23112026124022_PressRelease23112026ACTwagons.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 720.2,
+   "px": 716.2,
+   "move_pct": -0.56,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Vague press release and the price is slightly down"
+   }
+  },
+  {
+   "id": "N123822-34",
+   "t": "12:38:22",
+   "ts": 1795417702.583174,
+   "pub": "12:27",
+   "lag_s": 637,
+   "symbol": "CHALET",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "expansion",
+    "gains"
+   ],
+   "headline": "Chalet Hotels gains 3% on \u20b93,500-cr expansion plan; analysts stay bullish",
+   "source": "Business Standard",
+   "link": "https://www.business-standard.com/markets/news/chalet-hotels-gains-3-on-3-500-cr-expansion-plan-analysts-stay-bullish-126112300391_1.html",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 848.2,
+   "px": 868.0,
+   "move_pct": 2.33,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Expansion news already priced in; price has faded to flat"
+   }
+  },
+  {
+   "id": "N123716-33",
+   "t": "12:37:16",
+   "ts": 1795417636.588088,
+   "pub": "12:32",
+   "lag_s": 268,
+   "symbol": "TTL",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "acquires"
+   ],
+   "headline": "T.T. Brands acquires 37,760 equity shares of T.T. Ltd in open market - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbDNLemx4emd3ZkY3NmxqVi1vVkFxa1NJNWpIaDJ6Q1o4dTVDWmJ6Zm1sa2VUb0FTcnBoX1EyWjN4eFAycWFjcDFIM2w1RVc5NnFxNkJRUFBnaHBMZ0dGRVlQc25wak5DZ0RNUVJqSDhWQlJyZXl5RWNYdjJXcXFlRXJnenJxVnRZYk82eHp5V1ZHUWl3VGQ1cE1IZWMzTHVWTDRPby1WZ0dmdzQ2ZGIxU2d2b2xRaDlj?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 6.44,
+   "px": 6.3,
+   "move_pct": -2.17,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Tiny open-market share purchase, immaterial; price is down"
+   }
+  },
+  {
+   "id": "N122937-32",
+   "t": "12:29:37",
+   "ts": 1795417177.655056,
+   "pub": "12:28",
+   "lag_s": 82,
+   "symbol": "GLOBAL",
+   "tone": "positive",
+   "score": 3,
+   "emotion": "Optimism",
+   "why": [
+    "buyback"
+   ],
+   "headline": "GLOBAL: Buyback",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/GLOBAL_23112026122738_Intimation_of_Buy_Back.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "ai": {
+    "verdict": "doubt",
+    "why": "Buyback filing has no size or price details and no price data yet"
+   }
+  },
+  {
+   "id": "N121529-31",
+   "t": "12:15:29",
+   "ts": 1795416329.608255,
+   "pub": "12:07",
+   "lag_s": 489,
+   "symbol": "DALBHARAT",
+   "tone": "positive",
+   "score": 4.5,
+   "emotion": "Euphoria",
+   "why": [
+    "approves",
+    "buyback"
+   ],
+   "headline": "Dalmia Bharat approves \u20b9700 crore buyback: Here's why this repurchase plan is different",
+   "source": "CNBC-TV18",
+   "link": "https://www.cnbctv18.com/market/dalmia-bharat-share-price-board-approves-700-crore-buyback-open-market-route-different-tender-offer-timeline-premium-price-cap-20039749.htm",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1554.1,
+   "px": 1565.0,
+   "move_pct": 0.7,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Buyback news is old and the stock has traded flat since"
+   }
+  },
+  {
+   "id": "N115549-30",
+   "t": "11:55:49",
+   "ts": 1795415149.5495,
+   "pub": "11:54",
+   "lag_s": 64,
+   "symbol": "LOTUSEYE",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "LOTUSEYE: Disclosure under SEBI Takeover Regulations",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/team_jfutak_23112026101450_Dis3.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 102.98,
+   "px": 100.5,
+   "move_pct": -2.41,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Routine takeover-regulation disclosure with no detail; price slightly down"
+   }
+  },
+  {
+   "id": "N113925-29",
+   "t": "11:39:25",
+   "ts": 1795414165.719825,
+   "pub": "11:35",
+   "lag_s": 220,
+   "symbol": "ICIL",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "Indo Count shares rise despite CFO resignation - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORGFCZThFcngwRnVHZVprSWVTTmtQVVlTWFNfTDJVbU5kT0VFWUhUM1VvMHlremk4MHJZZHhybndLaVRrNU1nUVhzdlVLSjRXRGs0UEE5ci15U05EWUF0LUNrR1BfcEhOY2JGYXVvZ3FwcFliQ09ndzdLMlRjb2hkR3F4cGtLdXhEa2lIS1dEQUo3RHJmU1R4alVla2ZWUGx1T0hVOEV1czlWelJ4OEJld2c4LV9qNTZsNmxj?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 587.35,
+   "px": 588.35,
+   "move_pct": 0.17,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Headline is about a CFO resignation, yet the price rose, so signals conflict"
+   }
+  },
+  {
+   "id": "N113715-28",
+   "t": "11:37:15",
+   "ts": 1795414035.229346,
+   "pub": "11:35",
+   "lag_s": 89,
+   "symbol": "HEXT",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Hexaware shares rally 3% on Azure accreditation renewal - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOaVpzUkNJM25hNVF3Q0Jxd182VmFjcm1LSTNqOGUzVjBpM0toa3Mwczl4YWt1M3VIX3Y2UUFON0pEUmFkSlhWaWMwVGpjVjR3aEUtcHpFMGNqYUV3WldELUxSNmdZQVdUWnNsd1V4ODJZWDNJM1pCLTZaUS1EM2ZDWFo2OTBmaU1tUWpUNWR1ODFGSzFLMDNzcXRTalNFRk5JNW9CdWpuY0pLNnB5bmc?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 486.5,
+   "px": 483.05,
+   "move_pct": -0.71,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Minor accreditation renewal; the rally is not reflected in price"
+   }
+  },
+  {
+   "id": "N113715-27",
+   "t": "11:37:15",
+   "ts": 1795414035.229346,
+   "pub": "11:35",
+   "lag_s": 81,
+   "symbol": "FSL",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Firstsource shares rally 4% on AI pact, then give it back - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPU3NicWNQNWgtRTNHZW1KZ0VuVkc4dnZIeVlWWEt6Z3hkNHIweWFaNllrcXczOEVvMkwzYWpaeHI2bFFJZFI0UV9aa0ZFQlhjLVMzTmQ4eWRwNXFDRnRpckZHQ3ZQcVR0SDg5NEVIdHFYVHBMQmgzcFdvaV9CRFZmYV9BZXVTTXlIcTQ2T3JxWVpNbGc2UDQ0N3NHMnlXcnBkSXBWQnVIWWU2Z3ppRWN2SERqZ3YtNm5QSEEwQWxsX3l5akVC?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 281.5,
+   "px": 283.5,
+   "move_pct": 0.71,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Rally on AI pact already given back, so the move is faded"
+   }
+  },
+  {
+   "id": "N113715-26",
+   "t": "11:37:15",
+   "ts": 1795414035.229346,
+   "pub": "11:35",
+   "lag_s": 89,
+   "symbol": "GALLANTT",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Gallantt shares rally 4% as steel names move on the APL deal - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUlFuSjliVlNfWUp4aXVmZjBJZkJ5ak9DdmJjMzdJWnV0U2RFNDZBY2ZWUFVJS3VhbV9YNWFrbDVaRFBzczZKWks3TjR3bXduMkQtMGF3YXFqcmVUb29DWU9rUDBSUnl0QXRWYXFaWXBqMlRxTmJhekR0VVVNcWN3T1BycDlBdFZSRlJ6WFZNYlJzS3VzWnJZb202UTRPNmx2cTVzd0VKREg?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 545.25,
+   "px": 544.6,
+   "move_pct": -0.12,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Sympathy move on another company's deal, and price is down"
+   }
+  },
+  {
+   "id": "N113257-25",
+   "t": "11:32:57",
+   "ts": 1795413777.03597,
+   "pub": "11:32",
+   "lag_s": 51,
+   "symbol": "DALBHARAT",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "DALBHARAT: Outcome of Board Meeting",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/DALBHARAT_23112026113131_outcomeBMbb23112026n.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1561.1,
+   "px": 1565.0,
+   "move_pct": 0.25,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Buyback news is old and the stock has traded flat since"
+   }
+  },
+  {
+   "id": "N112358-24",
+   "t": "11:23:58",
+   "ts": 1795413238.301161,
+   "pub": "11:22",
+   "lag_s": 70,
    "symbol": "SWSOLAR",
    "tone": "positive",
    "score": 2.5,
@@ -66,17 +766,21 @@
    "source": "NSE filing",
    "link": "https://nsearchives.nseindia.in/corporate/SWSOLAR_23112026112208_PRESSRELEASE.pdf",
    "kind": "filing",
-   "status": "not taken: the day's trade limit is reached",
-   "px0": 163.68,
-   "px": 163.68,
-   "move_pct": 0.0
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 162.65,
+   "px": 161.33,
+   "move_pct": -0.81,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Vague press release and the price is falling"
+   }
   },
   {
-   "id": "N112317-23",
-   "t": "11:23:17",
-   "ts": 1795413197.560608,
+   "id": "N112358-23",
+   "t": "11:23:58",
+   "ts": 1795413238.301161,
    "pub": "11:14",
-   "lag_s": 501,
+   "lag_s": 541,
    "symbol": "MARKSANS",
    "tone": "negative",
    "score": -1.5,
@@ -88,13 +792,13 @@
    "source": "CNBC-TV18",
    "link": "https://www.cnbctv18.com/market/marksans-pharma-share-price-fall-extends-two-session-loss-us-fda-form-483-six-observations-goa-plant-inspection-20039668.htm",
    "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 281.3,
-   "px": 281.3,
-   "move_pct": 0.0,
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 281.15,
+   "px": 277.8,
+   "move_pct": -1.19,
    "ai": {
-    "verdict": "confirm",
-    "why": "Specific USFDA Form 483 news and the price fell over 3%"
+    "verdict": "doubt",
+    "why": "USFDA news already reported and the price drop already happened"
    }
   },
   {
@@ -114,13 +818,13 @@
    "source": "CNBC-TV18",
    "link": "https://www.cnbctv18.com/market/westlife-foodworld-share-price-goldman-sachs-downgrades-to-sell-key-reasons-why-target-downside-20039663.htm",
    "kind": "headline",
-   "status": "watching: price has not confirmed yet",
+   "status": "price agrees: hunters checking the entry rule",
    "px0": 661.05,
-   "px": 661.0,
-   "move_pct": -0.01,
+   "px": 654.0,
+   "move_pct": -1.07,
    "ai": {
     "verdict": "confirm",
-    "why": "Fresh, specific Goldman downgrade to Sell; price has not moved yet"
+    "why": "Fresh, specific Goldman downgrade to Sell; price has not yet reacted"
    }
   },
   {
@@ -143,8 +847,8 @@
    "kind": "headline",
    "status": "skipped: the AI analyst doubted it",
    "px0": 1143.0,
-   "px": 1104.9,
-   "move_pct": -3.33,
+   "px": 1033.5,
+   "move_pct": -9.58,
    "ai": {
     "verdict": "doubt",
     "why": "Euphoric spike already happened and the price has since turned down"
@@ -169,11 +873,11 @@
    "kind": "headline",
    "status": "skipped: the AI analyst doubted it",
    "px0": 1796.0,
-   "px": 1799.5,
-   "move_pct": 0.19,
+   "px": 1777.5,
+   "move_pct": -1.03,
    "ai": {
     "verdict": "doubt",
-    "why": "Market-wide IT rally, not company-specific, and price barely moved"
+    "why": "Bonus issue is cosmetic and already announced; price has not reacted"
    }
   },
   {
@@ -195,8 +899,8 @@
    "kind": "headline",
    "status": "skipped: the AI analyst doubted it",
    "px0": 115.14,
-   "px": 115.22,
-   "move_pct": 0.07,
+   "px": 116.55,
+   "move_pct": 1.22,
    "ai": {
     "verdict": "doubt",
     "why": "Order wins already priced in after 8% jump; price now flat"
@@ -221,8 +925,8 @@
    "kind": "headline",
    "status": "skipped: the AI analyst doubted it",
    "px0": 910.85,
-   "px": 911.65,
-   "move_pct": 0.09,
+   "px": 900.45,
+   "move_pct": -1.14,
    "ai": {
     "verdict": "doubt",
     "why": "Over an hour old and already priced in; price flat since"
@@ -248,8 +952,8 @@
    "kind": "headline",
    "status": "skipped: the AI analyst doubted it",
    "px0": 1180.5,
-   "px": 1104.9,
-   "move_pct": -6.4,
+   "px": 1033.5,
+   "move_pct": -12.45,
    "ai": {
     "verdict": "doubt",
     "why": "Euphoric spike already happened and the price has since turned down"
@@ -274,8 +978,8 @@
    "kind": "headline",
    "status": "skipped: the AI analyst doubted it",
    "px0": 7496.5,
-   "px": 7480.0,
-   "move_pct": -0.22,
+   "px": 7430.0,
+   "move_pct": -0.89,
    "ai": {
     "verdict": "doubt",
     "why": "Broker target cut is opinion tied to the copper move; price barely moved"
@@ -300,8 +1004,8 @@
    "kind": "headline",
    "status": "skipped: the AI analyst doubted it",
    "px0": 822.0,
-   "px": 822.45,
-   "move_pct": 0.05,
+   "px": 807.0,
+   "move_pct": -1.82,
    "ai": {
     "verdict": "doubt",
     "why": "Commentary on gold and bitcoin, not specific company news; price rose"
@@ -326,8 +1030,8 @@
    "kind": "filing",
    "status": "skipped: the AI analyst doubted it",
    "px0": 4176.1,
-   "px": 4153.0,
-   "move_pct": -0.55,
+   "px": 4099.9,
+   "move_pct": -1.82,
    "ai": {
     "verdict": "doubt",
     "why": "Order filing gives no size or value and the price is slightly down"
@@ -352,8 +1056,8 @@
    "kind": "filing",
    "status": "skipped: the AI analyst doubted it",
    "px0": 402.45,
-   "px": 400.3,
-   "move_pct": -0.53,
+   "px": 396.0,
+   "move_pct": -1.6,
    "ai": {
     "verdict": "doubt",
     "why": "Order filing gives no size or value and the price is down"
@@ -378,8 +1082,8 @@
    "kind": "headline",
    "status": "watching: price has not confirmed yet",
    "px0": 427.85,
-   "px": 426.85,
-   "move_pct": -0.23,
+   "px": 425.0,
+   "move_pct": -0.67,
    "ai": {
     "verdict": "confirm",
     "why": "Specific, fresh acquisition announcement; price has not moved against it"
@@ -402,13 +1106,13 @@
    "source": "Google News",
    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOLWxkQXF0WS02WGxtWG4xMTlqWUlEcWNpcHVGM3Z4bk1CY29ON0ItX3pXTW9TcnNJVzYxcVNMVUlFY1VDRlI4aFN6dW41RkhTcXg2THJfai1CdkF0ZTFOdjdwaUEwMUJ4SW12Ym9hRngzbGRJSEU3bG5Zc3Ewc3liNzI5bWNQM0hwYlR0V3U4YVpfaXAzVlFyRHFvRDFvMUU2c3pJMWpUYkVSZ1FoaXRUTVZLYW4?oc=5",
    "kind": "headline",
-   "status": "price agrees: hunters checking the entry rule",
+   "status": "skipped: the AI analyst doubted it",
    "px0": 291.15,
-   "px": 281.3,
-   "move_pct": -3.38,
+   "px": 277.8,
+   "move_pct": -4.59,
    "ai": {
-    "verdict": "confirm",
-    "why": "Specific USFDA Form 483 news and the price fell over 3%"
+    "verdict": "doubt",
+    "why": "USFDA news already reported and the price drop already happened"
    }
   },
   {
@@ -430,8 +1134,8 @@
    "kind": "filing",
    "status": "skipped: the AI analyst doubted it",
    "px0": 71.0,
-   "px": 68.96,
-   "move_pct": -2.87,
+   "px": 67.6,
+   "move_pct": -4.79,
    "ai": {
     "verdict": "doubt",
     "why": "Vague press release and the price fell over 4%"
@@ -454,13 +1158,13 @@
    "source": "NSE filing",
    "link": "https://nsearchives.nseindia.in/corporate/MARKSANS_23112026090618_SEIntimation.pdf",
    "kind": "filing",
-   "status": "watching: price has not confirmed yet",
+   "status": "skipped: the AI analyst doubted it",
    "px0": 291.0,
-   "px": 281.3,
-   "move_pct": -3.33,
+   "px": 277.8,
+   "move_pct": -4.54,
    "ai": {
-    "verdict": "confirm",
-    "why": "Specific USFDA Form 483 news and the price fell over 3%"
+    "verdict": "doubt",
+    "why": "USFDA news already reported and the price drop already happened"
    }
   },
   {
@@ -482,8 +1186,8 @@
    "kind": "headline",
    "status": "skipped: the AI analyst doubted it",
    "px0": 214.0,
-   "px": 219.66,
-   "move_pct": 2.64,
+   "px": 217.84,
+   "move_pct": 1.79,
    "ai": {
     "verdict": "doubt",
     "why": "Box office story about a film, not company news; price moved down"
@@ -508,8 +1212,8 @@
    "kind": "headline",
    "status": "price agrees: hunters checking the entry rule",
    "px0": 45.0,
-   "px": 45.41,
-   "move_pct": 0.91
+   "px": 45.35,
+   "move_pct": 0.78
   },
   {
    "id": "N075242-6",
@@ -529,10 +1233,10 @@
    "source": "ET Markets",
    "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/south-korean-shares-slump-nearly-3-on-ai-driven-tech-selloff-despite-policy-pledge/articleshow/136086822.cms",
    "kind": "headline",
-   "status": "price agrees: hunters checking the entry rule",
+   "status": "watching: price has not confirmed yet",
    "px0": 159.02,
-   "px": 156.99,
-   "move_pct": -1.28
+   "px": 166.65,
+   "move_pct": 4.8
   },
   {
    "id": "N074231-5",
@@ -551,10 +1255,14 @@
    "source": "NSE filing",
    "link": "https://nsearchives.nseindia.in/corporate/NIDHIFADNAVIS_23112026073427_BSENSE.pdf",
    "kind": "filing",
-   "status": "watching: price has not confirmed yet",
+   "status": "skipped: the AI analyst doubted it",
    "px0": 173.7,
-   "px": 164.32,
-   "move_pct": -5.4
+   "px": 163.0,
+   "move_pct": -6.16,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Market-wide crash story, nearly an hour old, and price is flat"
+   }
   },
   {
    "id": "N074231-4",
@@ -573,10 +1281,14 @@
    "source": "NSE filing",
    "link": "https://nsearchives.nseindia.in/corporate/NIDHIFADNAVIS_23112026073828_BSENSE.pdf",
    "kind": "filing",
-   "status": "watching: price has not confirmed yet",
+   "status": "skipped: the AI analyst doubted it",
    "px0": 173.7,
-   "px": 164.32,
-   "move_pct": -5.4
+   "px": 163.0,
+   "move_pct": -6.16,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Market-wide crash story, nearly an hour old, and price is flat"
+   }
   },
   {
    "id": "N072229-3",
@@ -597,8 +1309,8 @@
    "kind": "headline",
    "status": "watching: price has not confirmed yet",
    "px0": 1332.5,
-   "px": 1313.0,
-   "move_pct": -1.46
+   "px": 1311.9,
+   "move_pct": -1.55
   },
   {
    "id": "N072229-2",
@@ -619,8 +1331,8 @@
    "kind": "headline",
    "status": "price agrees: hunters checking the entry rule",
    "px0": 406.95,
-   "px": 400.65,
-   "move_pct": -1.55
+   "px": 398.1,
+   "move_pct": -2.17
   },
   {
    "id": "N010136-1",
@@ -639,18 +1351,18 @@
    "source": "NDTV Profit",
    "link": "https://www.ndtvprofit.com/sports/south-africa-vs-bangladesh-2nd-test-live-streaming-when-and-where-to-watch-sa-vs-ban-match-in-india-12362898#publisher=newsstand",
    "kind": "headline",
-   "status": "price agrees: hunters checking the entry rule",
+   "status": "watching: price has not confirmed yet",
    "px0": 159.02,
-   "px": 156.99,
-   "move_pct": -1.28
+   "px": 166.65,
+   "move_pct": 4.8
   }
  ],
  "stats": {
-  "last_hour": 7,
-  "positive": 4,
-  "negative": 3,
-  "today": 24,
-  "median_lag_min": 3.8,
-  "new_this_scan": 2
+  "last_hour": 8,
+  "positive": 7,
+  "negative": 1,
+  "today": 51,
+  "median_lag_min": 3.3,
+  "new_this_scan": 0
  }
 }

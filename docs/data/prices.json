@@ -1,119 +1,127 @@
 {
- "updated_at": "2026-11-23T11:23:17+05:30",
+ "updated_at": "2026-11-23T15:30:59+05:30",
+ "fno": {
+  "spot": 25349.65,
+  "expiry": "2026-11-23",
+  "lot": 65,
+  "atm": 25350.0,
+  "straddle": 0.6,
+  "vix": 17.55
+ },
  "crypto": [
   {
    "name": "BTC",
-   "last": 61594.0,
-   "chg_pct": 0.6929856253300226,
+   "last": 61384.8,
+   "chg_pct": 0.3509884731265789,
    "high": 61886.1,
-   "low": 58771.5,
+   "low": 60267.6,
    "unit": "$"
   },
   {
    "name": "ETH",
-   "last": 1729.87,
-   "chg_pct": 0.479783458506855,
+   "last": 1721.77,
+   "chg_pct": 0.00929362631489905,
    "high": 1749.84,
-   "low": 1652.4,
+   "low": 1693.23,
    "unit": "$"
   },
   {
    "name": "SOL",
-   "last": 71.76,
-   "chg_pct": 1.5998867336825873,
-   "high": 72.18,
-   "low": 68.7,
+   "last": 72.4,
+   "chg_pct": 2.5060172731134145,
+   "high": 72.74,
+   "low": 69.69,
    "unit": "$"
   },
   {
    "name": "XRP",
-   "last": 0.93814,
-   "chg_pct": 1.1428078573430644,
-   "high": 0.9415,
+   "last": 0.93834,
+   "chg_pct": 1.1643702697457625,
+   "high": 0.94692,
    "low": 0.91177,
    "unit": "$"
   },
   {
    "name": "DOGE",
-   "last": 0.0556821,
-   "chg_pct": 0.7204642227922164,
+   "last": 0.0554789,
+   "chg_pct": 0.3529062763413471,
    "high": 0.0558937,
-   "low": 0.0538876,
+   "low": 0.0542499,
    "unit": "$"
   },
   {
    "name": "ADA",
-   "last": 0.145631,
-   "chg_pct": 0.7109119451186974,
+   "last": 0.146777,
+   "chg_pct": 1.5034266232373916,
    "high": 0.1472,
-   "low": 0.141075,
+   "low": 0.141706,
    "unit": "$"
   }
  ],
  "indices": {
   "Bank Nifty": {
    "name": "Bank Nifty",
-   "last": 63469.4,
-   "chg_pct": -1.8036611629576451,
+   "last": 62585.35,
+   "chg_pct": -3.171414337698344,
    "high": 65193.4,
-   "low": 63168.2
+   "low": 62546.2
   },
   "Nifty 50": {
    "name": "Nifty 50",
-   "last": 25606.65,
-   "chg_pct": -0.7517267040301387,
+   "last": 25349.65,
+   "chg_pct": -1.747827569901475,
    "high": 25992.6,
-   "low": 25513.6
+   "low": 25343.85
   },
   "India VIX": {
    "name": "India VIX",
-   "last": 18.3,
-   "chg_pct": 5.658198614318707,
+   "last": 17.55,
+   "chg_pct": 1.327944572748268,
    "high": 18.65,
    "low": 17.04
   },
   "Sensex": {
    "name": "Sensex",
-   "last": 83283.78,
-   "chg_pct": -0.7577838388621696,
+   "last": 82435.99,
+   "chg_pct": -1.768023268907864,
    "high": 84662.96,
-   "low": 82998.26
+   "low": 82395.88
   }
  },
  "mcx": [
   {
    "key": "MCX_FO|574841",
    "name": "Gold 1 g",
-   "last": 12596.0,
-   "chg_pct": 2.581643456307517,
-   "high": 12617.0,
+   "last": 12561.0,
+   "chg_pct": 2.296603957977034,
+   "high": 12654.0,
    "low": 12375.0,
    "unit": "\u20b9"
   },
   {
    "key": "MCX_FO|578250",
    "name": "Natural gas mini",
-   "last": 336.5,
-   "chg_pct": -1.0002942041776994,
+   "last": 325.9,
+   "chg_pct": -4.1188584877905265,
    "high": 340.0,
-   "low": 334.1,
+   "low": 324.8,
    "unit": "\u20b9"
   },
   {
    "key": "MCX_FO|576265",
    "name": "Crude oil mini",
-   "last": 7807.0,
-   "chg_pct": 1.4818666320031197,
+   "last": 7757.0,
+   "chg_pct": 0.8319251267385936,
    "high": 7834.0,
-   "low": 7708.0,
+   "low": 7701.0,
    "unit": "\u20b9"
   },
   {
    "key": "MCX_FO|562058",
    "name": "Silver 1 kg",
-   "last": 153521.0,
-   "chg_pct": 3.2275199870899196,
-   "high": 153544.0,
+   "last": 153105.0,
+   "chg_pct": 2.947801588208794,
+   "high": 154994.0,
    "low": 150040.0,
    "unit": "\u20b9"
   }
@@ -121,162 +129,154 @@
  "movers": {
   "gainers": [
    {
-    "symbol": "SHALPAINTS",
-    "price": 113.28,
-    "chg_pct": 16.28,
-    "turnover_cr": 56.3
-   },
-   {
-    "symbol": "WINDMACHIN",
-    "price": 363.5,
-    "chg_pct": 13.17,
-    "turnover_cr": 80.4
-   },
-   {
-    "symbol": "HITECH",
-    "price": 85.3,
-    "chg_pct": 13.07,
-    "turnover_cr": 126.8
-   },
-   {
     "symbol": "HMAAGRO",
-    "price": 38.03,
-    "chg_pct": 12.15,
-    "turnover_cr": 360.2
+    "price": 40.69,
+    "chg_pct": 19.99,
+    "turnover_cr": 508.1
    },
    {
     "symbol": "PERMAGN",
-    "price": 1263.0,
-    "chg_pct": 11.89,
-    "turnover_cr": 11.0
+    "price": 1319.0,
+    "chg_pct": 16.85,
+    "turnover_cr": 31.1
    },
    {
-    "symbol": "SAMBHV",
-    "price": 176.25,
-    "chg_pct": 11.51,
-    "turnover_cr": 176.7
+    "symbol": "WELSPLSOL",
+    "price": 47.15,
+    "chg_pct": 13.97,
+    "turnover_cr": 86.4
+   },
+   {
+    "symbol": "HITECH",
+    "price": 85.41,
+    "chg_pct": 13.22,
+    "turnover_cr": 231.7
    },
    {
     "symbol": "THOMASCOOK",
-    "price": 127.65,
-    "chg_pct": 11.33,
-    "turnover_cr": 290.5
+    "price": 128.0,
+    "chg_pct": 11.63,
+    "turnover_cr": 515.4
+   },
+   {
+    "symbol": "SCPL",
+    "price": 707.0,
+    "chg_pct": 11.25,
+    "turnover_cr": 12.6
    },
    {
     "symbol": "ITI",
-    "price": 272.39,
-    "chg_pct": 10.85,
-    "turnover_cr": 734.6
+    "price": 273.05,
+    "chg_pct": 11.12,
+    "turnover_cr": 1358.2
+   },
+   {
+    "symbol": "SAMBHV",
+    "price": 174.95,
+    "chg_pct": 10.69,
+    "turnover_cr": 397.3
    }
   ],
   "losers": [
    {
     "symbol": "APLAPOLLO",
-    "price": 1751.6,
-    "chg_pct": -17.44,
-    "turnover_cr": 2375.8
+    "price": 1670.0,
+    "chg_pct": -21.29,
+    "turnover_cr": 4359.5
    },
    {
-    "symbol": "QPOWER",
-    "price": 1419.0,
-    "chg_pct": -7.83,
-    "turnover_cr": 58.2
-   },
-   {
-    "symbol": "JLHL",
-    "price": 292.95,
-    "chg_pct": -7.7,
-    "turnover_cr": 44.2
+    "symbol": "APOLLOPIPE",
+    "price": 484.95,
+    "chg_pct": -9.36,
+    "turnover_cr": 49.8
    },
    {
     "symbol": "TATASTEEL",
-    "price": 164.32,
-    "chg_pct": -7.69,
-    "turnover_cr": 1471.4
+    "price": 163.0,
+    "chg_pct": -8.43,
+    "turnover_cr": 2750.8
    },
    {
-    "symbol": "SSWL",
-    "price": 486.65,
-    "chg_pct": -7.27,
-    "turnover_cr": 37.0
+    "symbol": "KMCSHIL",
+    "price": 188.32,
+    "chg_pct": -7.59,
+    "turnover_cr": 12.1
    },
    {
-    "symbol": "OAL",
-    "price": 481.45,
+    "symbol": "V2RETAIL",
+    "price": 151.0,
     "chg_pct": -6.82,
-    "turnover_cr": 25.6
+    "turnover_cr": 277.3
+   },
+   {
+    "symbol": "DECNGOLD",
+    "price": 170.0,
+    "chg_pct": -6.82,
+    "turnover_cr": 19.8
+   },
+   {
+    "symbol": "SHANTIGOLD",
+    "price": 212.0,
+    "chg_pct": -6.69,
+    "turnover_cr": 39.8
    },
    {
     "symbol": "SKYGOLD",
-    "price": 822.4,
-    "chg_pct": -6.0,
-    "turnover_cr": 89.5
-   },
-   {
-    "symbol": "POKARNA",
-    "price": 662.4,
-    "chg_pct": -5.92,
-    "turnover_cr": 23.8
+    "price": 818.1,
+    "chg_pct": -6.49,
+    "turnover_cr": 161.1
    }
   ],
   "active": [
    {
     "symbol": "HDFCBANK",
-    "price": 830.05,
-    "chg_pct": -1.89,
-    "turnover_cr": 2587.1
+    "price": 817.8,
+    "chg_pct": -3.33,
+    "turnover_cr": 4548.2
    },
    {
     "symbol": "APLAPOLLO",
-    "price": 1751.6,
-    "chg_pct": -17.44,
-    "turnover_cr": 2375.8
-   },
-   {
-    "symbol": "TATASTEEL",
-    "price": 164.32,
-    "chg_pct": -7.69,
-    "turnover_cr": 1471.4
-   },
-   {
-    "symbol": "GROWW",
-    "price": 218.38,
-    "chg_pct": -2.76,
-    "turnover_cr": 1128.2
+    "price": 1670.0,
+    "chg_pct": -21.29,
+    "turnover_cr": 4359.5
    },
    {
     "symbol": "ICICIBANK",
-    "price": 1617.2,
-    "chg_pct": -1.39,
-    "turnover_cr": 1087.3
+    "price": 1585.5,
+    "chg_pct": -3.32,
+    "turnover_cr": 3526.4
    },
    {
-    "symbol": "MARUTI",
-    "price": 14244.0,
-    "chg_pct": 1.66,
-    "turnover_cr": 1049.1
+    "symbol": "TATASTEEL",
+    "price": 163.0,
+    "chg_pct": -8.43,
+    "turnover_cr": 2750.8
+   },
+   {
+    "symbol": "RELIANCE",
+    "price": 1351.0,
+    "chg_pct": -1.92,
+    "turnover_cr": 2079.0
    },
    {
     "symbol": "TCS",
-    "price": 2479.9,
-    "chg_pct": 4.36,
-    "turnover_cr": 954.7
+    "price": 2460.0,
+    "chg_pct": 3.53,
+    "turnover_cr": 1816.5
    },
    {
-    "symbol": "AXISBANK",
-    "price": 1413.1,
-    "chg_pct": -2.28,
-    "turnover_cr": 888.0
+    "symbol": "MARUTI",
+    "price": 14010.0,
+    "chg_pct": -0.01,
+    "turnover_cr": 1753.9
+   },
+   {
+    "symbol": "SBIN",
+    "price": 1132.65,
+    "chg_pct": -2.79,
+    "turnover_cr": 1690.1
    }
   ],
-  "count": 2763
- },
- "fno": {
-  "spot": 25606.65,
-  "expiry": "2026-11-23",
-  "lot": 65,
-  "atm": 25600.0,
-  "straddle": 151.3,
-  "vix": 18.3
+  "count": 2773
  }
 }
