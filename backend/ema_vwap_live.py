@@ -10,7 +10,7 @@ Same rules as the backtest (quant/src/research/ema_vwap.py, tests check the two 
   Exits: a 3-minute candle closes beyond EMA9 against the trade, an opposite crossover, the option down 25% (checked on every loop), 15:20.
   Entries 09:21-15:00, one position at a time, one lot; bought at the ask and sold at the bid from the live option chain, full charges.
 
-Candles: Upstox's 1-minute intraday candles when it serves them. When it does not (it returned nothing all day on 24 Nov 2026), the desk
+Candles: Upstox's 1-minute intraday candles when it serves them. When it does not (candles can be missing or lag), the desk
 builds 1-minute bars from the live quotes of the future it reads every loop (about every 15 seconds): open/high/low/close from the last
 prices seen, volume from the change in the day's cumulative volume. If those bars start after the open (the engine restarted), VWAP is
 anchored with the exchange's session average traded price and volume at the first quote, so it still covers the whole session, and the

@@ -84,6 +84,19 @@ def option_chain(token: str, underlying_key: str, expiry: str) -> list[dict]:
     return json.loads(_get("https://api.upstox.com/v2/option/chain?" + q, token)).get("data", [])
 
 
+def holiday(token: str, day: str) -> dict:
+    """Exchange holiday for one date (YYYY-MM-DD): {"name", "closed": [exchanges], "open": {exchange: (start epoch, end epoch)}}.
+    On a normal trading day both are empty."""
+    rows = json.loads(_get(f"https://api.upstox.com/v2/market/holidays/{day}", token)).get("data") or []
+    out = {"name": "", "closed": [], "open": {}}
+    for h in rows:
+        out["name"] = h.get("description") or out["name"]
+        out["closed"] += [x for x in h.get("closed_exchanges") or [] if x not in out["closed"]]
+        for o in h.get("open_exchanges") or []:
+            out["open"][o["exchange"]] = (o["start_time"] / 1000, o["end_time"] / 1000)
+    return out
+
+
 def intraday(token: str, key: str, minutes: int = 5) -> list[list]:
     """Today's candles for one instrument, oldest first: [HH:MM, open, high, low, close, volume]."""
     url = f"https://api.upstox.com/v3/historical-candle/intraday/{urllib.parse.quote(key, safe='')}/minutes/{minutes}"

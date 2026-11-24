@@ -89,10 +89,42 @@ def OF_opens(token: str, led: list[dict]) -> dict:
     return {s: float((q.get(k, {}).get("ohlc") or {}).get("open") or 0) or None for s, k in keys.items()}
 
 
+HOL = {"day": None, "name": "", "closed": [], "open": {}, "at": 0.0}       # today's exchange holiday, from Upstox (refreshed once a day)
+EXCH = {"EQUITY": "NSE", "FNO": "NFO", "COMMODITY": "MCX"}
+
+
 def sessions(now: datetime) -> dict:
+    """Which markets trade now: weekdays in market hours, minus exchange holidays (an exchange open only part of a holiday, as MCX's
+    evening session, trades only in that window)."""
     t, wk = D.mins(now.strftime("%H:%M")), now.weekday() < 5
-    return {"equity": wk and D.mins("09:10") <= t <= D.mins("15:40"), "fno": wk and D.mins("09:15") <= t <= D.mins("15:30"),
-            "mcx": wk and D.mins("09:00") <= t <= D.mins("23:30"), "crypto": True}
+    hol = HOL if HOL["day"] == now.strftime("%Y-%m-%d") else {"closed": [], "open": {}}
+
+    def open_(ex: str, ok: bool) -> bool:
+        if ex in hol["open"]:
+            return wk and hol["open"][ex][0] <= now.timestamp() <= hol["open"][ex][1]
+        return ok and ex not in hol["closed"]
+    return {"equity": open_("NSE", wk and D.mins("09:10") <= t <= D.mins("15:40")), "fno": open_("NFO", wk and D.mins("09:15") <= t <= D.mins("15:30")),
+            "mcx": open_("MCX", wk and D.mins("09:00") <= t <= D.mins("23:30")), "crypto": True}
+
+
+def void_holiday_trades(books: list[dict], today: str, now: datetime) -> list[str]:
+    """A trade booked today on an exchange that is closed (or outside its holiday window) never had a market: it was priced on the last
+    session's frozen quotes. It is voided (status VOID, no profit or loss) so it cannot enter any record."""
+    if HOL["day"] != today or not (HOL["closed"] or HOL["open"]):
+        return []
+    out = []
+    for book in books:
+        for t in book.get("trades", []):
+            ex = EXCH.get(t.get("desk"))
+            if t.get("day") != today or t.get("status") == "VOID" or not ex or ":" not in str(t.get("opened")):
+                continue
+            at = datetime.fromisoformat(f"{today}T{str(t['opened'])[:8]}").replace(tzinfo=IST).timestamp()
+            win = HOL["open"].get(ex)
+            if ex in HOL["closed"] or (win and not win[0] <= at <= win[1]):
+                t.update(status="VOID", pnl_rs=0.0, closed=now.strftime("%H:%M:%S"),
+                         why=f"void: {ex} was closed today ({HOL['name'] or 'exchange holiday'}); the trade was priced on the last session's frozen quotes and could never have filled")
+                out.append(t["id"])
+    return out
 
 
 def close_stale(eq: dict, xb: dict, today: str) -> None:
@@ -763,7 +795,23 @@ def run() -> None:
     last_pub = 0.0
     while True:
         now = datetime.now(IST)
+        if token and HOL["day"] != now.strftime("%Y-%m-%d") and time.time() - HOL["at"] > 300:
+            HOL["at"] = time.time()
+            try:
+                HOL.update(U.holiday(token, now.strftime("%Y-%m-%d")), day=now.strftime("%Y-%m-%d"))
+            except Exception as e:                                    # unknown: fall back to weekdays and market hours, try again in 5 minutes
+                status["desks"]["holiday"] = f"holiday check failed: {str(e)[:80]}"
         today, hhmm, ses = now.strftime("%Y-%m-%d"), now.strftime("%H:%M"), sessions(now)
+        if HOL["day"] == today and (HOL["closed"] or HOL["open"]):
+            status["desks"]["holiday"] = f"{HOL['name']}: closed {', '.join(HOL['closed'])}" + (f"; open in a window: {', '.join(HOL['open'])}" if HOL["open"] else "")
+            gone = void_holiday_trades([xb, eq], today, now)
+            if gone:
+                print("voided (exchange closed today):", gone)
+            if not ses["fno"] and HOL["day"] == today and "NFO" in HOL["closed"] and not nonlocal_state.get("ev_hol") == today:
+                nonlocal_state["ev_hol"] = today
+                all_ = xb["trades"] + [t for t in archive.values() if t["id"] not in {x["id"] for x in xb["trades"]}]
+                save("ema_vwap.json", {"updated_at": now.isoformat(timespec="seconds"), "today": {"note": f"No F&O trading today: NSE is closed for {HOL['name']}."},
+                                       "books": {"ema_vwap": EV.record(all_, EV.STRATEGY), "straddle": EV.record(all_, "long_straddle")}, "backtest": ev_bt})
         it0, T = time.time(), {}
         close_stale(eq, xb, today)
         rm = A.rooms(nonlocal_state.get("tick") or compose()[0])
