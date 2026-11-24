@@ -1,32 +1,36 @@
 {
  "desks": {
-  "commodities": "4 MCX futures, real time",
   "crypto": "6 coins from Kraken, real time",
-  "gateway": "dry \u00b7 3 intents, 0 refused",
-  "company": "error: float division by zero",
+  "gateway": "dry \u00b7 0 intents, 0 refused",
+  "news_pulse": "0 new signal(s); 2 in the last hour from 9 feeds",
   "charts": "4 live charts",
-  "news_pulse": "0 new signal(s); 3 in the last hour from 9 feeds"
+  "forecast": "built at 09:27",
+  "commodities": "4 MCX futures, real time",
+  "equity": "2773 stocks, real time",
+  "scalp": "45 names scanned, bars refreshed 0 s ago",
+  "fno": "NIFTY 25349.65 , expiry 2026-12-01, 1 chain(s), real time",
+  "paper_orders": "0 pending orders filled or expired at today's open"
  },
- "updated_at": "2026-11-23T22:12:31+05:30",
- "updated_hm": "23 Nov 22:12:31",
- "loops": 1886,
+ "updated_at": "2026-11-24T09:33:45+05:30",
+ "updated_hm": "24 Nov 09:33:45",
+ "loops": 3353,
  "sessions": {
-  "equity": false,
-  "fno": false,
+  "equity": true,
+  "fno": true,
   "mcx": true,
   "crypto": true
  },
  "note": "Real-time Upstox prices for equities, NIFTY options and MCX; Kraken for crypto. Paper trades only.",
  "open": 13,
  "first_iteration": {
-  "equity": 0.3,
-  "fill": 0.3,
-  "mcx": 0.8,
-  "fno": 0.8,
-  "crypto": 0.9,
-  "snapshots": 1.1,
-  "plan": 1.1,
-  "slow_and_intraday": 1.4,
-  "persist": 1.5
+  "equity": 0.0,
+  "fill": 0.0,
+  "mcx": 0.0,
+  "fno": 0.0,
+  "crypto": 0.1,
+  "snapshots": 0.1,
+  "plan": 0.1,
+  "slow_and_intraday": 0.4,
+  "persist": 0.4
  }
 }

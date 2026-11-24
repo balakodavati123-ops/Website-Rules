@@ -1,60 +1,153 @@
 {
- "updated_at": "2026-11-23T22:11:41+05:30",
- "scans": 713,
+ "updated_at": "2026-11-24T09:32:47+05:30",
+ "scans": 835,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "22:11:41"
+   "at": "09:32:47"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "22:11:41"
+   "at": "09:32:47"
   },
   "Moneycontrol": {
    "ok": true,
    "items": 15,
-   "at": "22:11:41"
+   "at": "09:32:47"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "22:11:41"
+   "at": "09:32:47"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "22:11:41"
+   "at": "09:32:47"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "22:11:41"
+   "at": "09:32:47"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "22:11:41"
+   "at": "09:32:47"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "22:11:41"
+   "at": "09:32:47"
   },
   "Google News": {
    "ok": true,
    "items": 9,
-   "at": "22:11:41"
+   "at": "09:32:47"
   }
  },
  "signals": [
   {
-   "id": "N220137-94",
-   "t": "22:01:37",
-   "ts": 1795451497.513301,
+   "id": "N092720-11",
+   "t": "09:27:20",
+   "ts": 1795492640.708417,
+   "pub": "08:35",
+   "lag_s": 3139,
+   "symbol": "SOUTHWEST",
+   "tone": "positive",
+   "score": 3.25,
+   "emotion": "Optimism",
+   "why": [
+    "rockets"
+   ],
+   "headline": "South Korea\u2019s Kospi rockets 8% as AI-linked stocks get breather after Jensen Huang\u2019s return as Nvidia CEO. Worst over?",
+   "source": "ET Markets",
+   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/south-korean-shares-rebound-as-huangs-nvidia-return-lifts-ai-stocks/articleshow/136118071.cms",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 166.11,
+   "px": 166.11,
+   "move_pct": 0.0
+  },
+  {
+   "id": "N092403-10",
+   "t": "09:24:03",
+   "ts": 1795492443.231747,
+   "pub": "09:14",
+   "lag_s": 585,
+   "symbol": "TAKE",
+   "tone": "positive",
+   "score": 1.95,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "TAKE shares rally 24% in three weeks as company returns to profitability",
+   "source": "Business Standard",
+   "link": "https://www.business-standard.com/markets/news/take-shares-rally-24-in-three-weeks-as-company-returns-to-profitability-126112300872_1.html",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 14.34,
+   "px": 14.34,
+   "move_pct": 0.0
+  },
+  {
+   "id": "N082531-9",
+   "t": "08:25:31",
+   "ts": 1795488931.919576,
+   "pub": "08:21",
+   "lag_s": 264,
+   "symbol": "ICICIBANK",
+   "tone": "negative",
+   "score": -2,
+   "emotion": "Fear",
+   "why": [
+    "declines",
+    "drops"
+   ],
+   "headline": "ICICI Bank Share Price Declines 3.32 Percent; ICICI Reverses from 52-week Highs, NSE Nifty Drops 450 Points - TopNews",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTGhYQmZSeENJbUZzbGY1amx2aVo2S3JyUnBCeUl1S3cxNldZS01wMnk4bkVCeFFSZ3I5SzFVOFZmQTVWb1IteVg0ZkVfdU5acWwwOG12NTBjc3JJemNVZGx0RVlibVJKeDRsbG82V3VKajJITUNhLUVsbkc5UllpbmFldEpGS2pFRVg2bVh6Zmg5NUtWM3ZTNXlXTldCbDdBVXlNMDgzN1pVZEYzNDNnRnJ0aGFhSDlS?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1585.5,
+   "px": 1585.5,
+   "move_pct": 0.0,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Market-wide bank sell-off story and price has not moved since"
+   }
+  },
+  {
+   "id": "N061440-8",
+   "t": "06:14:40",
+   "ts": 1795481080.293817,
+   "pub": "06:00",
+   "lag_s": 874,
+   "symbol": "RVNL",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "upgrade"
+   ],
+   "headline": "Indian Railways plans Rs 348-crore workshop upgrade; RVNL emerges as lowest bidder - The Financial Express",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPbmxiQmpGYlFsWFlZMVd3MTM4V255dFY1dmpyRG84WG5Fa182eDY1N1NGTkN3aU5QNXY1X1RWU0dlbHE2Q3g2ckxfbWFJaXZiY19yUVhvbGVoVkRnWUVZLTFudGZBMzg3RHk3OFFHRDhoSE5kRW1uZVdadzJQRXZkakVTRFM0T04zcmNSaTBlS2dENC1KLTJSbjBoRzdHUVB2ZG8ySTFnUkw2LTgxMUQ5OEZucEN1OGNIS2xXNHJPOUxFTHFXM1ZWZUpJeGs0Z2FxWmlidEV6S2PSAd8BQVVfeXFMTnlBRkxtbncxWXFaWkhLR29PdHJ0TU5vRklvNzBLNUNEMmJuMmJ6clpmNXhET1NMRWpycnlXeXRVQjFjMVhGWkdNVmJvZW1LdjlKZlcyMER1VWIwWGRWenBuT1JWdkNRdy1wMGU3RUFNMVlqallmUFdlRkZvb3ctb0ZVWnlQSWpFNFpKcUdpTU5GRDdLSTVYV2F5SG5NbkhHZ2t5bVctY0RFdEJwTUYzckhocW5tU0hrWThkOVVpSEJzbGxvVGZuQU9FeUJhMm5WbDlUNXFPQjdJU09HMHhrTQ?oc=5",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 185.1,
+   "px": 185.1,
+   "move_pct": 0.0
+  },
+  {
+   "id": "N000407-7",
+   "t": "00:04:07",
+   "ts": 1795458847.214837,
    "pub": "21:55",
-   "lag_s": 359,
+   "lag_s": 7708,
    "symbol": "SECMARK",
    "tone": "positive",
    "score": 2,
@@ -66,14 +159,105 @@
    "source": "NSE filing",
    "link": "https://nsearchives.nseindia.in/corporate/SECMARK_23112026215513_20261123_SCL_Reg_30_MSE_signed.pdf",
    "kind": "filing",
-   "status": "new"
+   "status": "watching: price has not confirmed yet",
+   "px0": 154.59,
+   "px": 154.59,
+   "move_pct": 0.0
   },
   {
-   "id": "N214124-93",
-   "t": "21:41:24",
-   "ts": 1795450284.116037,
+   "id": "N000407-6",
+   "t": "00:04:07",
+   "ts": 1795458847.214837,
+   "pub": "22:12",
+   "lag_s": 6683,
+   "symbol": "ADANIENT",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "acquisition"
+   ],
+   "headline": "ADANIENT: Acquisition",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/nishant_joshi_adani_com_23112026221158_AELintimationNashikPhataRoadLimited.pdf",
+   "kind": "filing",
+   "status": "watching: price has not confirmed yet",
+   "px0": 2677.9,
+   "px": 2677.9,
+   "move_pct": 0.0
+  },
+  {
+   "id": "N000407-5",
+   "t": "00:04:07",
+   "ts": 1795458847.214837,
+   "pub": "22:16",
+   "lag_s": 6473,
+   "symbol": "SOUTHBANK",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "SOUTHBANK: General Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/SOUTHBANK_23112026221040_SE_sbi_mf_SD.pdf",
+   "kind": "filing",
+   "status": "watching: price has not confirmed yet",
+   "px0": 58.87,
+   "px": 58.87,
+   "move_pct": 0.0
+  },
+  {
+   "id": "N000407-4",
+   "t": "00:04:07",
+   "ts": 1795458847.214837,
+   "pub": "22:18",
+   "lag_s": 6356,
+   "symbol": "SAMMAANCAP",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "filing: negative"
+   ],
+   "headline": "SAMMAANCAP: Appointment",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/IHFL_23112026221652_SCL_Change_in_Director_Chairman_Intimation_23Nov2026.pdf",
+   "kind": "filing",
+   "status": "watching: price has not confirmed yet",
+   "px0": 125.71,
+   "px": 125.71,
+   "move_pct": 0.0
+  },
+  {
+   "id": "N000407-3",
+   "t": "00:04:07",
+   "ts": 1795458847.214837,
+   "pub": "23:08",
+   "lag_s": 3310,
+   "symbol": "RVNL",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "RVNL: Bagging/Receiving of orders/contracts",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/RVNL_23112026230754_LOA231126.pdf",
+   "kind": "filing",
+   "status": "watching: price has not confirmed yet",
+   "px0": 185.1,
+   "px": 185.1,
+   "move_pct": 0.0
+  },
+  {
+   "id": "N000407-2",
+   "t": "00:04:07",
+   "ts": 1795458847.214837,
    "pub": "21:23",
-   "lag_s": 1084,
+   "lag_s": 9647,
    "symbol": "VALUE",
    "tone": "positive",
    "score": 3.9,
@@ -86,1852 +270,40 @@
    "source": "CNBC-TV18",
    "link": "https://www.cnbctv18.com/market/nvidia-stock-gains-nearly-usd1-trillion-in-market-value-as-jensen-huang-returns-as-ceo-shares-surge-33-20040244.htm",
    "kind": "headline",
-   "status": "new"
+   "status": "watching: price has not confirmed yet",
+   "px0": 15.68,
+   "px": 15.68,
+   "move_pct": 0.0
   },
   {
-   "id": "N213107-92",
-   "t": "21:31:07",
-   "ts": 1795449667.488209,
-   "pub": "21:29",
-   "lag_s": 77,
-   "symbol": "LUPIN",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "LUPIN: Press Release",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/Lupin2_23112026212514_SELetterPressRelease.pdf",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N203049-91",
-   "t": "20:30:49",
-   "ts": 1795446049.189488,
-   "pub": "20:20",
-   "lag_s": 621,
-   "symbol": "IIFL",
-   "tone": "negative",
-   "score": -2.5,
-   "emotion": "Fear",
-   "why": [
-    "resignation"
-   ],
-   "headline": "IIFL: Resignation of Director/KMP/SMP",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/IIFL_ROID_105176_KMP_Doc.zip",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N202046-90",
-   "t": "20:20:46",
-   "ts": 1795445446.456322,
-   "pub": "20:10",
-   "lag_s": 594,
-   "symbol": "LEMERITE",
+   "id": "N000407-1",
+   "t": "00:04:07",
+   "ts": 1795458847.214837,
+   "pub": "23:24",
+   "lag_s": 2372,
+   "symbol": "OFSS",
    "tone": "positive",
    "score": 2,
-   "emotion": "Optimism",
-   "why": [
-    "acquisition"
-   ],
-   "headline": "LEMERITE: Acquisition",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/LMEL_23112026201042_Reg30.pdf",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N202046-89",
-   "t": "20:20:46",
-   "ts": 1795445446.456322,
-   "pub": "20:16",
-   "lag_s": 250,
-   "symbol": "MEDIASSIST",
-   "tone": "positive",
-   "score": 3,
-   "emotion": "Optimism",
-   "why": [
-    "buyback"
-   ],
-   "headline": "Medi Assist submits letter of offer for \u20b949.27 crore buyback at \u20b9425 - scanx.trade",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQczBFcUNMXzM5amU3bzFjUEpjVHR6TGVKSlgxLXNiQTJKQ1hHTmZJQ0VYeVJyYlFtWmtIVUlhMXRRcFd0RERoRUF2ZjctVkVUTE1YeHBuQW1NeXBTUGtZZmV2QVozRnJaeTByMlZ0VjBIWkJGWXhqR2t3dm9BX3JOWXpJc0tmRkYwMnRzbFMydjZ1QmtmUXZZSm9Ha0w2aXlsSFhSdmdIcFptd2diVVJRQTh5WQ?oc=5",
-   "kind": "headline",
-   "status": "new"
-  },
-  {
-   "id": "N200035-88",
-   "t": "20:00:35",
-   "ts": 1795444235.608311,
-   "pub": "19:13",
-   "lag_s": 2838,
-   "symbol": "BRIGADE",
-   "tone": "positive",
-   "score": 2.6,
-   "emotion": "Optimism",
-   "why": [
-    "acquires"
-   ],
-   "headline": "Brigade Enterprises acquires land parcel in Hyderabad with \u20b91,000 crore revenue potential; shares gain 6.5% in a month - Upstox",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPTWNNNXlUZkZHNHgwOGUzVUpXa25GeHB6dDE0U2poX3N6OE4taW9EWC1ubXhfbW9uM2ZyU0UzYkhrX3VqT3h1OXNIZjVhN0x1eWc1TFp3Z3RqdlR3X1p1czgxYm1tY19MczJyUFdrZ3pCdnF0amZqQkJTcnhDR1RSOTBWb1dueHRqd1RZdjlGcXZuaTdIRDlaRllwTFNZZzdGUUZnYWZpRW9tTXBqamVGVHZMcEc5TkVmci1WR0NEU3JFYm56ckNVc3pzX0RCRFo2X1N4dEZkQjlmMjluV21acFUwZDBTR004a2s5WGhvX0lnbm1DNlgxMjg2dzFDS01jNHkycmhB?oc=5",
-   "kind": "headline",
-   "status": "new"
-  },
-  {
-   "id": "N195035-87",
-   "t": "19:50:35",
-   "ts": 1795443635.748256,
-   "pub": "19:43",
-   "lag_s": 440,
-   "symbol": "ARHAM",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "ARHAM: General Updates",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/ARHAM_23112026194259_Intimation_Listing_and_Trading_Approval.pdf",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N195035-86",
-   "t": "19:50:35",
-   "ts": 1795443635.748256,
-   "pub": "19:49",
-   "lag_s": 86,
-   "symbol": "HITECHGEAR",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "HITECHGEAR: General Updates",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/HITECHGEAR_23112026194858_Intimation_of_BM-23-11-26_Sd.pdf",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N193030-85",
-   "t": "19:30:30",
-   "ts": 1795442430.090855,
-   "pub": "19:20",
-   "lag_s": 620,
-   "symbol": "BCSSL",
-   "tone": "positive",
-   "score": 2.6,
-   "emotion": "Optimism",
-   "why": [
-    "net profit up"
-   ],
-   "headline": "Bombay Coated Q2FY27 Results: Net profit up 40% YoY to \u20b9484 lakh - scanx.trade",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTnRpV1ZSazlSQ0g1dnRNZ2w5dWtZYTliSTRIdlBLUmRwaElfMTdpNS1wLUtvMTVQUFhORVROVHUxX1NSZTJJUmp2TkROLWtBcWpzY3YySUtiZzNhUTdLR0JiTjJGUUlDbHRMOG80b0s4cXExOUNkZzhoS1dzYVY0Uk95THVLTFdGRWM1NW5nRVJsN0ZFU1BQcWFRNzItTFNlbXFSMFZwdXZOdjBmM1gyNXdmYVBOUQ?oc=5",
-   "kind": "headline",
-   "status": "new"
-  },
-  {
-   "id": "N193030-84",
-   "t": "19:30:30",
-   "ts": 1795442430.090855,
-   "pub": "19:13",
-   "lag_s": 1032,
-   "symbol": "BRIGADE",
-   "tone": "positive",
-   "score": 2.6,
-   "emotion": "Optimism",
-   "why": [
-    "acquires"
-   ],
-   "headline": "Brigade Enterprises acquires land parcel in Hyderabad with \u20b91,000 crore revenue poetantial; shares gain 6.5% in a month - Upstox",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPTWNNNXlUZkZHNHgwOGUzVUpXa25GeHB6dDE0U2poX3N6OE4taW9EWC1ubXhfbW9uM2ZyU0UzYkhrX3VqT3h1OXNIZjVhN0x1eWc1TFp3Z3RqdlR3X1p1czgxYm1tY19MczJyUFdrZ3pCdnF0amZqQkJTcnhDR1RSOTBWb1dueHRqd1RZdjlGcXZuaTdIRDlaRllwTFNZZzdGUUZnYWZpRW9tTXBqamVGVHZMcEc5TkVmci1WR0NEU3JFYm56ckNVc3pzX0RCRFo2X1N4dEZkQjlmMjluV21acFUwZDBTR004a2s5WGhvX0lnbm1DNlgxMjg2dzFDS01jNHkycmhB?oc=5",
-   "kind": "headline",
-   "status": "new"
-  },
-  {
-   "id": "N192020-83",
-   "t": "19:20:20",
-   "ts": 1795441820.315026,
-   "pub": "19:15",
-   "lag_s": 270,
-   "symbol": "TBOTEK",
-   "tone": "negative",
-   "score": -2.5,
-   "emotion": "Fear",
-   "why": [
-    "filing: negative"
-   ],
-   "headline": "TBOTEK: Cessation",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/9810411243_23112026190836_SEResignation_of_CFOsigned.pdf",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N191018-82",
-   "t": "19:10:18",
-   "ts": 1795441218.341425,
-   "pub": "19:03",
-   "lag_s": 410,
-   "symbol": "MAXHEALTH",
-   "tone": "negative",
-   "score": -2.5,
-   "emotion": "Fear",
-   "why": [
-    "resignation"
-   ],
-   "headline": "MAXHEALTH: Resignation of Director/KMP/SMP",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/MAXHEALTH_ROID_105167_KMP_Doc.zip",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N185010-81",
-   "t": "18:50:10",
-   "ts": 1795440010.668587,
-   "pub": "18:40",
-   "lag_s": 601,
-   "symbol": "SKYWAYS",
-   "tone": "positive",
-   "score": 2,
-   "emotion": "Optimism",
-   "why": [
-    "acquires"
-   ],
-   "headline": "Skyways Air CFO Himanshu Chhabra acquires 8,782 equity shares on NSE - scanx.trade",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPMk9NYzd6d21OQVpWNHlmY1BlTTZWbm04aFZoc1Uyb1EybDVkSkRUY0ZxaHYzdDZkUXZmdF9oSXJUcE84a2E4TFFNbXhnOVlLS1Mxbjc2U0NXWmZ6QVZOSUY3Q3RBM0otNWY2WmdzZzZXTk95UFVqS05fWG04RW5yZ0t0UlFOUFhCSnEwRUloR3ROR0FIZUltQlVJTXpRcEJPMEl5Q2pVVGkzV0ZYRFdfUzVCZ1VTZ0pMZzdySmw5NA?oc=5",
-   "kind": "headline",
-   "status": "new"
-  },
-  {
-   "id": "N181950-80",
-   "t": "18:19:50",
-   "ts": 1795438190.726258,
-   "pub": "18:11",
-   "lag_s": 487,
-   "symbol": "BRIGADE",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "BRIGADE: Press Release",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/BRIGADE_23112026180704_34PressReleaseandMaterialSecunderabad.pdf",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N181950-79",
-   "t": "18:19:50",
-   "ts": 1795438190.726258,
-   "pub": "18:18",
-   "lag_s": 103,
-   "symbol": "JETFREIGHT",
-   "tone": "negative",
-   "score": -2.5,
-   "emotion": "Fear",
-   "why": [
-    "resignation"
-   ],
-   "headline": "JETFREIGHT: Resignation of Director/KMP/SMP",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/JETFREIGHT_ROID_105160_KMP_Doc.zip",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N181950-78",
-   "t": "18:19:50",
-   "ts": 1795438190.726258,
-   "pub": "18:19",
-   "lag_s": 35,
-   "symbol": "JETFREIGHT",
-   "tone": "negative",
-   "score": -2.5,
-   "emotion": "Fear",
-   "why": [
-    "filing: negative"
-   ],
-   "headline": "JETFREIGHT: Cessation",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/JETFREIGHT_23112026181910_SE_Intimation_Resignation_Priyank_Acharya_SIgned.pdf",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N180318-77",
-   "t": "18:03:18",
-   "ts": 1795437198.346555,
-   "pub": "17:58",
-   "lag_s": 277,
-   "symbol": "TRU",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "TRU: Disclosure under SEBI Takeover Regulations",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/team_sandeshc_23112026174949_Dis2.pdf",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N180318-76",
-   "t": "18:03:18",
-   "ts": 1795437198.346555,
-   "pub": "17:59",
-   "lag_s": 243,
-   "symbol": "TEXRAIL",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "TEXRAIL: Bagging/Receiving of orders/contracts",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/TEXRAIL_23112026175853_TexRailReceiptofoOrderER23112026Signed.pdf",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N180318-75",
-   "t": "18:03:18",
-   "ts": 1795437198.346555,
-   "pub": "18:01",
-   "lag_s": 82,
-   "symbol": "PRESTIGE",
-   "tone": "positive",
-   "score": 2,
-   "emotion": "Optimism",
-   "why": [
-    "acquisition"
-   ],
-   "headline": "PRESTIGE: Acquisition",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/PRESTIGE_23112026180131_Intimation_231126.pdf",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N180318-74",
-   "t": "18:03:18",
-   "ts": 1795437198.346555,
-   "pub": "18:02",
-   "lag_s": 73,
-   "symbol": "BRIGADE",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "BRIGADE: General Updates",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/BRIGADE_23112026180159_34PressReleaseandMaterialSecunderabad.pdf",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N180318-73",
-   "t": "18:03:18",
-   "ts": 1795437198.346555,
-   "pub": "17:58",
-   "lag_s": 295,
-   "symbol": "DALBHARAT",
-   "tone": "positive",
-   "score": 4.5,
-   "emotion": "Euphoria",
-   "why": [
-    "approves",
-    "buyback"
-   ],
-   "headline": "Dalmia Bharat approves  \u20b9700 crore share buyback: From price per share to record date - what investors need to know",
-   "source": "Mint",
-   "link": "https://www.livemint.com/market/dalmia-bharat-approves-rs-700-crore-share-buyback-from-price-per-share-to-record-date-what-investors-need-to-know-11795433750301.html",
-   "kind": "headline",
-   "status": "skipped: the AI analyst doubted it",
-   "ai": {
-    "verdict": "doubt",
-    "why": "Buyback news is old and the stock has traded flat since"
-   }
-  },
-  {
-   "id": "N180318-72",
-   "t": "18:03:18",
-   "ts": 1795437198.346555,
-   "pub": "18:01",
-   "lag_s": 98,
-   "symbol": "TECHM",
-   "tone": "positive",
-   "score": 3,
-   "emotion": "Optimism",
-   "why": [
-    "bonus issue"
-   ],
-   "headline": "Tech Mahindra bonus issue record date out! Get 1 extra share for every share held- Check eligibility, ratio, returns",
-   "source": "Mint",
-   "link": "https://www.livemint.com/market/stock-market-news/tech-mahindra-bonus-issue-record-date-out-get-1-extra-share-for-every-share-held-check-eligibility-ratio-returns-11795435897518.html",
-   "kind": "headline",
-   "status": "skipped: the AI analyst doubted it",
-   "ai": {
-    "verdict": "doubt",
-    "why": "Bonus issue is cosmetic and already announced; price has not reacted"
-   }
-  },
-  {
-   "id": "N175646-71",
-   "t": "17:56:46",
-   "ts": 1795436806.280269,
-   "pub": "17:54",
-   "lag_s": 107,
-   "symbol": "ZENITHEXPO",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "ZENITHEXPO: Disclosure under SEBI Takeover Regulations",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/team_sandeshc_23112026174633_Dis1.PDF",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N174638-70",
-   "t": "17:46:38",
-   "ts": 1795436198.377493,
-   "pub": "17:45",
-   "lag_s": 50,
-   "symbol": "MEDIASSIST",
-   "tone": "positive",
-   "score": 3,
-   "emotion": "Optimism",
-   "why": [
-    "buyback"
-   ],
-   "headline": "MEDIASSIST: Buyback",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/MEDIASSIST_23112026174239_MAHSSEIntimationLetterOfOffersd.pdf",
-   "kind": "filing",
-   "status": "new"
-  },
-  {
-   "id": "N174554-69",
-   "t": "17:45:54",
-   "ts": 1795436154.513258,
-   "pub": "17:44",
-   "lag_s": 90,
-   "symbol": "RMC",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "RMC: Bagging/Receiving of orders/contracts",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/RMC_23112026174235_LETTER_OFAWARD_INTIMATION_23112026.pdf",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 164.69,
-   "px": 164.69,
-   "move_pct": 0.0
-  },
-  {
-   "id": "N172551-68",
-   "t": "17:25:51",
-   "ts": 1795434951.056416,
-   "pub": "17:01",
-   "lag_s": 1451,
-   "symbol": "SUZLON",
-   "tone": "positive",
-   "score": 2,
-   "emotion": "Optimism",
-   "why": [
-    "52-week high"
-   ],
-   "headline": "Suzlon Energy shares fall 3% after cyber incident report; stock down 40% from 52-week high - The Economic Times",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPcW9oei01bC1rQnAzUXB2aDBaSER3RkZFYjQySTJhaFFZa3YzWjRtN2VHT3JtY09vdGdpNU1lZXd4MjAwd3B3RlJQM1UzR0lWWkR6ZzhTbXZ6VVhQc2xqMDlidHFGN3lOMVNEM2toZUV6Q3plekdDRUd2cWc3MFpsUE9CR0J5enJ1aXd1TFJjVVFZM3E4eWZUOW1YY3ZWcFJLb09za1BFOUUyTV9FUDFDdExJRTNGZm9pOWNTNXVrdmM1cjhFdUxRLWRteGZfX3ZWY3BVZzAycktkRUdUWl9jUXpmLVlzU3dWNFJVczFWcm1FalnSAfgBQVVfeXFMUEtBTExzUEhEaGpQYmJVcWszRmNIbUI5VXRhdjR4RkQxZUxzRkZQZGY1YlJ6emRDZ2lCYXVVWE5wbmViZjQxaUZIeTFJVjktdXZaSDNDWVVpMG1PSnBCRDdOSFFFaldlSmJvdDFRNTFwUjA4WTN1MFU3cGlaLTVHRHliMFlMSnZEN1NSc3BjbkRTWm90OTh0SkxlYmVGRWEyLU4wQzNOejlxLU91NGZteHl6dG5nczdXanJhUGp6TzN3MFM4aWc1R0YwdElTSDFmaWFYNWo0OERVREp0WXVXWkt5dXFFeGZoV3k3dGpFdWsxV21RTmZPbDE?oc=5",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 35.86,
-   "px": 35.86,
-   "move_pct": 0.0
-  },
-  {
-   "id": "N171546-67",
-   "t": "17:15:46",
-   "ts": 1795434346.438264,
-   "pub": "17:09",
-   "lag_s": 379,
-   "symbol": "LAOPALA",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "LAOPALA: Updates",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/LAOPALA_23112026170912_LORG_Genesis_SAST_29_2_23112026.pdf",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 159.0,
-   "px": 159.0,
-   "move_pct": 0.0
-  },
-  {
-   "id": "N171546-66",
-   "t": "17:15:46",
-   "ts": 1795434346.438264,
-   "pub": "16:16",
-   "lag_s": 3548,
-   "symbol": "HEROMOTOCO",
-   "tone": "negative",
-   "score": -2,
-   "emotion": "Fear",
-   "why": [
-    "tax demand"
-   ],
-   "headline": "Hero MotoCorp Secures Relief from ITAT Against Outstanding Tax Demand of Rs 27 Crore for AY 2013-14 to 2019-20 - StudyCafe",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVkdRQmlTUWhTQ0hVSTVpY3FXaWlPSEJZYXRhOVBWWmZMdHJZQWswYWUwQUtRSjhqb2Fjc3BLamQtb1VQVXpBemp1VXFsX0tMVHI3Nk52RmcwOG4xdDY1ZnBjWnNGamhPZllTcEZpc2JHcVJId2tTdWJkTXJHci0xUWVPSkpiYlI4aHZMQkV6dDNiWm50ZDhXbXc3ZWQwVWVYS0Z3Z2psYVNLbTFOSERfbHJBMFdVUjh4LTZ0UFpwTWhfY2FkX1BidFZXdkJXSUFwLWRuYjAza01aQnc?oc=5",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 5535.0,
-   "px": 5535.0,
-   "move_pct": 0.0
-  },
-  {
-   "id": "N165537-65",
-   "t": "16:55:37",
-   "ts": 1795433137.418014,
-   "pub": "16:52",
-   "lag_s": 208,
-   "symbol": "KRSNAA",
-   "tone": "negative",
-   "score": -2.5,
-   "emotion": "Fear",
-   "why": [
-    "resignation"
-   ],
-   "headline": "KRSNAA: Resignation of Director/KMP/SMP",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/KRSNAA_ROID_105154_KMP_Doc.zip",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 521.45,
-   "px": 521.45,
-   "move_pct": 0.0
-  },
-  {
-   "id": "N165537-64",
-   "t": "16:55:37",
-   "ts": 1795433137.418014,
-   "pub": "16:46",
-   "lag_s": 536,
-   "symbol": "INTELLECT",
-   "tone": "positive",
-   "score": 2.6,
-   "emotion": "Optimism",
-   "why": [
-    "jumps"
-   ],
-   "headline": "Intellect Design Arena wins Gartner recognition, stock jumps 6.4%",
-   "source": "BusinessLine",
-   "link": "https://www.thehindubusinessline.com/markets/stock-markets/intellect-design-arena-wins-gartner-recognition-stock-jumps-64/article71734305.ece",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 584.0,
-   "px": 584.0,
-   "move_pct": 0.0
-  },
-  {
-   "id": "N164536-63",
-   "t": "16:45:36",
-   "ts": 1795432536.866626,
-   "pub": "16:40",
-   "lag_s": 307,
-   "symbol": "KRSNAA",
-   "tone": "negative",
-   "score": -2.5,
-   "emotion": "Fear",
-   "why": [
-    "resignation"
-   ],
-   "headline": "KRSNAA: Resignation",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/KRSNAA_23112026163946_543328_Signed.pdf",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 521.45,
-   "px": 521.45,
-   "move_pct": 0.0
-  },
-  {
-   "id": "N163532-62",
-   "t": "16:35:32",
-   "ts": 1795431932.513234,
-   "pub": "16:33",
-   "lag_s": 147,
-   "symbol": "OAL",
-   "tone": "negative",
-   "score": -2.5,
-   "emotion": "Fear",
-   "why": [
-    "resignation"
-   ],
-   "headline": "OAL: Resignation",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/OAL_23112026163256_Intimation.pdf",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 538.0,
-   "px": 538.0,
-   "move_pct": 0.0
-  },
-  {
-   "id": "N163532-61",
-   "t": "16:35:32",
-   "ts": 1795431932.513234,
-   "pub": "16:34",
-   "lag_s": 71,
-   "symbol": "OAL",
-   "tone": "negative",
-   "score": -2.5,
-   "emotion": "Fear",
-   "why": [
-    "resignation"
-   ],
-   "headline": "OAL: Resignation of Director/KMP/SMP",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/OAL_ROID_105151_KMP_Doc.zip",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 538.0,
-   "px": 538.0,
-   "move_pct": 0.0
-  },
-  {
-   "id": "N163532-60",
-   "t": "16:35:32",
-   "ts": 1795431932.513234,
-   "pub": "15:51",
-   "lag_s": 2648,
-   "symbol": "NAVKARCORP",
-   "tone": "positive",
-   "score": 2,
-   "emotion": "Optimism",
-   "why": [
-    "approval"
-   ],
-   "headline": "Navkar Corporation seeks approval for director appointment through postal ballot - Business Upturn",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMktaeWYtQlNMblNJOHZDS0dPQV85cUgyUHBQUm9UV0VHTGQ5aDIyWDZLN2VpRVJ5UDBaR3BWbEhrZlBNNVo4LWlpMWFTazRjMHR4dHZtZ0NmUlNEMGxZRkxRTFU0Vi1tTjFqX2lrNFNhMUhybFpDQ3M4dXloU2RaT0ZXdU9tVkVDY1lJLU8zd0hvcU5yRkF0dEZUNHNYUEFsZzF1cGk2ZGRLclFnOHhxb2JNcXZwUnly?oc=5",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 79.47,
-   "px": 79.47,
-   "move_pct": 0.0
-  },
-  {
-   "id": "N161525-59",
-   "t": "16:15:25",
-   "ts": 1795430725.470385,
-   "pub": "16:06",
-   "lag_s": 544,
-   "symbol": "AVROIND",
-   "tone": "negative",
-   "score": -2.5,
-   "emotion": "Fear",
-   "why": [
-    "resignation"
-   ],
-   "headline": "AVROIND: Resignation of Director/KMP/SMP",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/AVROIND_ROID_105147_KMP_Doc.zip",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 5.39,
-   "px": 5.39,
-   "move_pct": 0.0,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Routine resignation filing with no detail; price has not moved"
-   }
-  },
-  {
-   "id": "N160507-58",
-   "t": "16:05:07",
-   "ts": 1795430107.583967,
-   "pub": "16:02",
-   "lag_s": 148,
-   "symbol": "AVROIND",
-   "tone": "negative",
-   "score": -2.5,
-   "emotion": "Fear",
-   "why": [
-    "resignation"
-   ],
-   "headline": "AVROIND: Resignation",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/AVONMPL_23112026160025_Pawanresignationdetails.pdf",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 5.39,
-   "px": 5.39,
-   "move_pct": 0.0,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Routine resignation filing with no detail; price has not moved"
-   }
-  },
-  {
-   "id": "N160507-57",
-   "t": "16:05:07",
-   "ts": 1795430107.583967,
-   "pub": "15:58",
-   "lag_s": 402,
-   "symbol": "POLICYBZR",
-   "tone": "positive",
-   "score": 2.6,
-   "emotion": "Optimism",
-   "why": [
-    "jumps"
-   ],
-   "headline": "PB Fintech jumps 9% after recent rout, among top Nifty 500 gainers",
-   "source": "CNBC-TV18",
-   "link": "https://www.cnbctv18.com/market/pb-fintech-share-price-rally-rebound-irdai-draft-insurance-distribution-norms-policybazaar-stock-recovery-20039950.htm",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 1089.1,
-   "px": 1089.1,
-   "move_pct": 0.0,
-   "ai": {
-    "verdict": "doubt",
-    "why": "9% jump already happened and price shows no follow-through"
-   }
-  },
-  {
-   "id": "N155517-56",
-   "t": "15:55:17",
-   "ts": 1795429517.229247,
-   "pub": "15:46",
-   "lag_s": 502,
-   "symbol": "JWL",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "JWL: General Updates",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/CEBBCO_23112026154633_reg30_Woojin.pdf",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 185.45,
-   "px": 185.45,
-   "move_pct": 0.0,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Vague filings with no content; price flat"
-   }
-  },
-  {
-   "id": "N155517-55",
-   "t": "15:55:17",
-   "ts": 1795429517.229247,
-   "pub": "15:51",
-   "lag_s": 214,
-   "symbol": "JWL",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "JWL: Press Release",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/CEBBCO_23112026155133_SEPRESSRELEASE.pdf",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 185.45,
-   "px": 185.45,
-   "move_pct": 0.0,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Vague filings with no content; price flat"
-   }
-  },
-  {
-   "id": "N155517-54",
-   "t": "15:55:17",
-   "ts": 1795429517.229247,
-   "pub": "15:43",
-   "lag_s": 698,
-   "symbol": "TATASTEEL",
-   "tone": "negative",
-   "score": -3,
-   "emotion": "Fear",
-   "why": [
-    "crashes"
-   ],
-   "headline": "Market Highlights: Sensex Crashes 1,484 Points, Nifty 50 Ends Below 25,350 As Banks, Metals Bleed; Tata Steel Top Loser",
-   "source": "NDTV Profit",
-   "link": "https://www.ndtvprofit.com/markets/stock-market-today-sensex-today-nifty-50-bank-nifty-gift-nifty-nasdaq-kospi-crude-oil-prices-gold-rate-today-silver-prices-12364071#publisher=newsstand",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 163.0,
-   "px": 163.0,
-   "move_pct": 0.0,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Market-wide crash story, not company-specific; price flat"
-   }
-  },
-  {
-   "id": "N154513-53",
-   "t": "15:45:13",
-   "ts": 1795428913.26046,
-   "pub": "15:21",
-   "lag_s": 1396,
-   "symbol": "RATNAVEER",
-   "tone": "positive",
-   "score": 5.85,
-   "emotion": "Euphoria",
-   "why": [
-    "surges",
-    "zooms"
-   ],
-   "headline": "Ratnaveer Precision surges 10% on huge volume; zooms 215% thus far in FY27",
-   "source": "Business Standard",
-   "link": "https://www.business-standard.com/markets/news/ratnaveer-precision-surges-10-on-huge-volume-zooms-215-thus-far-in-fy27-126112300644_1.html",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 402.5,
-   "px": 402.5,
-   "move_pct": 0.0,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Euphoric 10% surge already happened; chasing it is risky"
-   }
-  },
-  {
-   "id": "N153259-52",
-   "t": "15:32:59",
-   "ts": 1795428179.003152,
-   "pub": "15:31",
-   "lag_s": 61,
-   "symbol": "KRYSTAL",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "KRYSTAL: Bagging/Receiving of orders/contracts",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/KISL123_23112026153148_Reg30intimation23112026.pdf",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 586.1,
-   "px": 586.1,
-   "move_pct": 0.0,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Order filing gives no size or value; price flat"
-   }
-  },
-  {
-   "id": "N150727-51",
-   "t": "15:07:27",
-   "ts": 1795426647.67033,
-   "pub": "15:03",
-   "lag_s": 235,
-   "symbol": "TECHM",
-   "tone": "positive",
-   "score": 3,
-   "emotion": "Optimism",
-   "why": [
-    "bonus issue"
-   ],
-   "headline": "Tech Mahindra fixes record date for 1:1 bonus issue: What 7 lakh retail shareholders need to know",
-   "source": "CNBC-TV18",
-   "link": "https://www.cnbctv18.com/market/tech-mahindra-fixes-record-date-for-1-1-bonus-issue-shares-gain-2-5-pc-20039927.htm",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 1780.1,
-   "px": 1777.5,
-   "move_pct": -0.15,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Bonus issue is cosmetic and already announced; price has not reacted"
-   }
-  },
-  {
-   "id": "N144919-50",
-   "t": "14:49:19",
-   "ts": 1795425559.135748,
-   "pub": "14:31",
-   "lag_s": 1047,
-   "symbol": "DALBHARAT",
-   "tone": "positive",
-   "score": 3,
-   "emotion": "Optimism",
-   "why": [
-    "buyback"
-   ],
-   "headline": "Dalmia Bharat pares losses to trade flat after \u20b9700-cr buyback announcement - Business Standard",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPMExKeHJYSUlDRE9yVWxUVHhaWTdhV2lvQ1NFc256RHhOME5OZkFXbm5JLVl4dXU2TjFDY3pUX3d4b1AySjdrcU4wa3ZXWGNibFotRWtQVlhmQlViTWhneWVMcEZVeU1OZHhJaUhSeXpjM3hOSUVkWDBZb1ZjcWE1UW1YemI3bnN5OXFGSEFiQTJSMjVITklMb0tveXNza1dNcS01dzUxeW10R243X255LVgyLXRFeUZrRkFUM25BT1FlMm90ZXR3SEZpYmpwRGlRRkRWaTd3TE7SAd4BQVVfeXFMUFpOSVR5UXdTaFRXcTJNa1pBMUQ5Q3ZyWkd5MG8wYkxRZk44V3lpVkpHYUtzanJMZXBaQ1RkbElkQ2lvQ1EyWVdDZ0J1cU9oM09tOWlmVWY1SDJVVDJ2QkxNaGVnRTJxemJpV1cwVWFkU3JaV2g0Y0VjR0t1bUZSYllsQU55SXJ4UTVWSEZpSERLSWRKM0hXMXJsU29uTzN1OW1IRFBsN001alAySncxTmlmeWp0ckg5NTFKSTlRVDF0NGQ1ZWxSeUg2SnBCekZ3RXVxMFFJaWhJaXYtRi1n?oc=5",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 1564.5,
-   "px": 1565.0,
-   "move_pct": 0.03,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Buyback news is old and the stock has traded flat since"
-   }
-  },
-  {
-   "id": "N144341-49",
-   "t": "14:43:41",
-   "ts": 1795425221.923135,
-   "pub": "14:40",
-   "lag_s": 200,
-   "symbol": "DALBHARAT",
-   "tone": "positive",
-   "score": 4.5,
-   "emotion": "Euphoria",
-   "why": [
-    "approves",
-    "buyback"
-   ],
-   "headline": "Dalmia Bharat board approves \u20b9700 crore share buyback at up to \u20b91,850 per share",
-   "source": "BusinessLine",
-   "link": "https://www.thehindubusinessline.com/markets/dalmia-bharat-board-approves-700-crore-share-buyback-at-up-to-1850-per-share/article71734042.ece",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 1567.0,
-   "px": 1565.0,
-   "move_pct": -0.13,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Buyback news is old and the stock has traded flat since"
-   }
-  },
-  {
-   "id": "N144102-48",
-   "t": "14:41:02",
-   "ts": 1795425062.01275,
-   "pub": "14:39",
-   "lag_s": 97,
-   "symbol": "SOLARWORLD",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "SOLARWORLD: Bagging/Receiving of orders/contracts",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/SUNSHINE123_23112026143915_Intimation.pdf",
-   "kind": "filing",
-   "status": "price agrees: hunters checking the entry rule",
-   "px0": 102.35,
-   "px": 102.96,
-   "move_pct": 0.6,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Order filing gives no size or value despite a small price rise"
-   }
-  },
-  {
-   "id": "N144102-47",
-   "t": "14:41:02",
-   "ts": 1795425062.01275,
-   "pub": "14:36",
-   "lag_s": 272,
-   "symbol": "TECHM",
-   "tone": "positive",
-   "score": 3,
-   "emotion": "Optimism",
-   "why": [
-    "bonus issue"
-   ],
-   "headline": "Tech Mahindra fixes 30 November as record date for 1:1 bonus issue; bonus shares to trade from 2 December - Business Upturn",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOaEhzdnA0WTQzREVTV0RjdXlhc09BXzFocHQ1c2gxempnVVZzT3BDb1Y0N1pMTzdMeXdZY3lyZ0V4TFVyQ29qOExWN0xvQk5oR0E4QnkxZ3EyWjhJSUpOQnhkazhRSnMyLTlXYUViMWRiMU1JdDQtZmdtbWdPN2dOT1dMUnVVSVdlbjU0Qm5wS0NJUzZGOTd0RXNlUk95THZ5R3RxbUtKT0FrOGQ4N1hBY0oyUVRGWFR2UEVaV0gyaGVsOXI5U0N5c3F0NkRKY25JZE56bTY0eEE?oc=5",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 1784.0,
-   "px": 1777.5,
-   "move_pct": -0.36,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Bonus issue is cosmetic and already announced; price has not reacted"
-   }
-  },
-  {
-   "id": "N143845-46",
-   "t": "14:38:45",
-   "ts": 1795424925.731069,
-   "pub": "14:31",
-   "lag_s": 414,
-   "symbol": "DALBHARAT",
-   "tone": "positive",
-   "score": 3,
-   "emotion": "Optimism",
-   "why": [
-    "buyback"
-   ],
-   "headline": "Dalmia Bharat pares losses to trade flat after \u20b9700-cr buyback announcement",
-   "source": "Business Standard",
-   "link": "https://www.business-standard.com/markets/news/dalmia-bharat-pares-losses-to-trade-flat-after-700-cr-buyback-announcement-126112300559_1.html",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 1567.3,
-   "px": 1565.0,
-   "move_pct": -0.15,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Buyback news is old and the stock has traded flat since"
-   }
-  },
-  {
-   "id": "N143518-45",
-   "t": "14:35:18",
-   "ts": 1795424718.400809,
-   "pub": "13:47",
-   "lag_s": 2875,
-   "symbol": "TATASTEEL",
-   "tone": "negative",
-   "score": -3,
-   "emotion": "Fear",
-   "why": [
-    "crashes"
-   ],
-   "headline": "Stock Market Today: Sensex Crashes 1,200 Points, Nifty 50 Below 25,500 As Banks, Metals Drag; Tata Steel Top Loser",
-   "source": "NDTV Profit",
-   "link": "https://www.ndtvprofit.com/markets/stock-market-today-sensex-today-nifty-50-bank-nifty-gift-nifty-nasdaq-kospi-crude-oil-prices-gold-rate-today-silver-prices-12364071#publisher=newsstand",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 162.78,
-   "px": 163.0,
-   "move_pct": 0.14,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Market-wide crash story, not company-specific; price flat"
-   }
-  },
-  {
-   "id": "N143159-44",
-   "t": "14:31:59",
-   "ts": 1795424519.258428,
-   "pub": "14:31",
-   "lag_s": 54,
-   "symbol": "TECHM",
-   "tone": "positive",
-   "score": 3,
-   "emotion": "Optimism",
-   "why": [
-    "bonus issue"
-   ],
-   "headline": "Tech Mahindra announces 1:1 bonus issue of equity shares - Business Upturn",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPMWRkbDk1ZktORUlxNWhoVFZiSTlVU1JCNlJ6RlBMMlRhZHlQMXN4U1lmRjlmZGFZZzlnVXZuNW1EcWFoOHZyN2JwZXBfckdseGFfOUNWWDVMZ0ZwUEhPZ1lnUEdpQmpDZDZTdG9DRTNfdmlkd092VnF0b29FRDNQLVpUZklQZ0V0dmd0ZkNfMGNReWhkYUVqbUl0WFZOUQ?oc=5",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 1790.9,
-   "px": 1777.5,
-   "move_pct": -0.75,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Bonus issue is cosmetic and already announced; price has not reacted"
-   }
-  },
-  {
-   "id": "N142310-43",
-   "t": "14:23:10",
-   "ts": 1795423990.58655,
-   "pub": "14:21",
-   "lag_s": 72,
-   "symbol": "TECHM",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "TECHM: Record Date",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/Apekshakhemka_23112026142123_SE_intimation_record_dateF_S.pdf",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 1789.3,
-   "px": 1777.5,
-   "move_pct": -0.66,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Bonus issue is cosmetic and already announced; price has not reacted"
-   }
-  },
-  {
-   "id": "N141631-42",
-   "t": "14:16:31",
-   "ts": 1795423591.301679,
-   "pub": "14:16",
-   "lag_s": 30,
-   "symbol": "SIMBHALS",
-   "tone": "negative",
-   "score": -3.5,
-   "emotion": "Fear",
-   "why": [
-    "insolvency"
-   ],
-   "headline": "SIMBHALS: Corporate Insolvency Resolution Process",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/SIMBHALS_23112026141436_CIRP_Updates_-_Extension_of_Last_day_for_resolution_plan.pdf",
-   "kind": "filing",
-   "status": "new",
-   "ai": {
-    "verdict": "confirm",
-    "why": "Specific insolvency process filing; no price data yet to contradict"
-   }
-  },
-  {
-   "id": "N140030-41",
-   "t": "14:00:30",
-   "ts": 1795422630.191478,
-   "pub": "13:55",
-   "lag_s": 289,
-   "symbol": "THOMASCOOK",
-   "tone": "positive",
-   "score": 4.55,
-   "emotion": "Euphoria",
-   "why": [
-    "surges",
-    "rally"
-   ],
-   "headline": "Thomas Cook share price surges 15%, extends three-session rally to 19% | More upside ahead? Key levels to watch",
-   "source": "Mint",
-   "link": "https://www.livemint.com/market/stock-market-news/thomas-cook-share-price-surges-15-extends-three-session-rally-to-19-more-upside-ahead-key-levels-to-watch-11795417866319.html",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 128.99,
-   "px": 128.0,
-   "move_pct": -0.77,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Euphoric 15% surge already happened and price is flat since"
-   }
-  },
-  {
-   "id": "N133157-40",
-   "t": "13:31:57",
-   "ts": 1795420917.316838,
-   "pub": "13:30",
-   "lag_s": 60,
-   "symbol": "PTCIL",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "PTCIL: Bagging/Receiving of orders/contracts",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/PTCINDUSTRIES_23112026133047_20261123_Press_Release_Indian_Defence_Order.pdf",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 24405.0,
-   "px": 24450.0,
-   "move_pct": 0.18,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Order win is small and price has not moved"
-   }
-  },
-  {
-   "id": "N133050-39",
-   "t": "13:30:50",
-   "ts": 1795420850.363003,
-   "pub": "13:04",
-   "lag_s": 1585,
-   "symbol": "GOKUL",
-   "tone": "negative",
-   "score": -3,
-   "emotion": "Fear",
-   "why": [
-    "crash"
-   ],
-   "headline": "Drink And Drive Crash: Former Gokul Director's Son Runs Over Two At Midnight",
-   "source": "NDTV Profit",
-   "link": "https://www.ndtvprofit.com/india/drink-and-drive-crash-former-gokul-director-and-ranjitsinh-patil-son-runs-over-two-at-midnight-12364896#publisher=newsstand",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 35.01,
-   "px": 35.12,
-   "move_pct": 0.31,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Story is about a former director's son, not the company; price flat"
-   }
-  },
-  {
-   "id": "N132053-38",
-   "t": "13:20:53",
-   "ts": 1795420253.131917,
-   "pub": "13:19",
-   "lag_s": 91,
-   "symbol": "BAIDFIN",
-   "tone": "negative",
-   "score": -2.5,
-   "emotion": "Fear",
-   "why": [
-    "resignation"
-   ],
-   "headline": "BAIDFIN: Resignation of Director/KMP/SMP",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/BAIDFIN_ROID_105144_KMP_Doc.zip",
-   "kind": "filing",
-   "status": "price agrees: hunters checking the entry rule",
-   "px0": 9.87,
-   "px": 9.83,
-   "move_pct": -0.41,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Routine resignation filing with no detail; price has not fallen"
-   }
-  },
-  {
-   "id": "N131209-37",
-   "t": "13:12:09",
-   "ts": 1795419729.163778,
-   "pub": "13:11",
-   "lag_s": 29,
-   "symbol": "BAIDFIN",
-   "tone": "negative",
-   "score": -2.5,
-   "emotion": "Fear",
-   "why": [
-    "resignation"
-   ],
-   "headline": "BAIDFIN: Resignation",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/20121991_23112026131043_Intimation.pdf",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 9.82,
-   "px": 9.83,
-   "move_pct": 0.1,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Routine resignation filing with no detail; price has not fallen"
-   }
-  },
-  {
-   "id": "N130223-36",
-   "t": "13:02:23",
-   "ts": 1795419143.378817,
-   "pub": "13:01",
-   "lag_s": 59,
-   "symbol": "APLAPOLLO",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "APLAPOLLO: Public Announcement-Open Offer",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/team_sandeshc_23112026125413_APL.zip",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 1697.3,
-   "px": 1670.0,
-   "move_pct": -1.61,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Open offer news already priced in after the 18% fall; price flat"
-   }
-  },
-  {
-   "id": "N124139-35",
-   "t": "12:41:39",
-   "ts": 1795417899.350484,
-   "pub": "12:40",
-   "lag_s": 68,
-   "symbol": "TITAGARH",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "TITAGARH: Press Release",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/TWL_23112026124022_PressRelease23112026ACTwagons.pdf",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 720.2,
-   "px": 716.2,
-   "move_pct": -0.56,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Vague press release and the price is slightly down"
-   }
-  },
-  {
-   "id": "N123822-34",
-   "t": "12:38:22",
-   "ts": 1795417702.583174,
-   "pub": "12:27",
-   "lag_s": 637,
-   "symbol": "CHALET",
-   "tone": "positive",
-   "score": 2,
-   "emotion": "Optimism",
-   "why": [
-    "expansion",
-    "gains"
-   ],
-   "headline": "Chalet Hotels gains 3% on \u20b93,500-cr expansion plan; analysts stay bullish",
-   "source": "Business Standard",
-   "link": "https://www.business-standard.com/markets/news/chalet-hotels-gains-3-on-3-500-cr-expansion-plan-analysts-stay-bullish-126112300391_1.html",
-   "kind": "headline",
-   "status": "price agrees: hunters checking the entry rule",
-   "px0": 848.2,
-   "px": 868.0,
-   "move_pct": 2.33,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Expansion news already priced in; price has faded to flat"
-   }
-  },
-  {
-   "id": "N123716-33",
-   "t": "12:37:16",
-   "ts": 1795417636.588088,
-   "pub": "12:32",
-   "lag_s": 268,
-   "symbol": "TTL",
-   "tone": "positive",
-   "score": 2,
-   "emotion": "Optimism",
-   "why": [
-    "acquires"
-   ],
-   "headline": "T.T. Brands acquires 37,760 equity shares of T.T. Ltd in open market - scanx.trade",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbDNLemx4emd3ZkY3NmxqVi1vVkFxa1NJNWpIaDJ6Q1o4dTVDWmJ6Zm1sa2VUb0FTcnBoX1EyWjN4eFAycWFjcDFIM2w1RVc5NnFxNkJRUFBnaHBMZ0dGRVlQc25wak5DZ0RNUVJqSDhWQlJyZXl5RWNYdjJXcXFlRXJnenJxVnRZYk82eHp5V1ZHUWl3VGQ1cE1IZWMzTHVWTDRPby1WZ0dmdzQ2ZGIxU2d2b2xRaDlj?oc=5",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 6.44,
-   "px": 6.3,
-   "move_pct": -2.17,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Tiny open-market share purchase, immaterial; price is down"
-   }
-  },
-  {
-   "id": "N122937-32",
-   "t": "12:29:37",
-   "ts": 1795417177.655056,
-   "pub": "12:28",
-   "lag_s": 82,
-   "symbol": "GLOBAL",
-   "tone": "positive",
-   "score": 3,
-   "emotion": "Optimism",
-   "why": [
-    "buyback"
-   ],
-   "headline": "GLOBAL: Buyback",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/GLOBAL_23112026122738_Intimation_of_Buy_Back.pdf",
-   "kind": "filing",
-   "status": "skipped: the AI analyst doubted it",
-   "ai": {
-    "verdict": "doubt",
-    "why": "Buyback filing has no size or price details and no price data yet"
-   }
-  },
-  {
-   "id": "N121529-31",
-   "t": "12:15:29",
-   "ts": 1795416329.608255,
-   "pub": "12:07",
-   "lag_s": 489,
-   "symbol": "DALBHARAT",
-   "tone": "positive",
-   "score": 4.5,
-   "emotion": "Euphoria",
-   "why": [
-    "approves",
-    "buyback"
-   ],
-   "headline": "Dalmia Bharat approves \u20b9700 crore buyback: Here's why this repurchase plan is different",
-   "source": "CNBC-TV18",
-   "link": "https://www.cnbctv18.com/market/dalmia-bharat-share-price-board-approves-700-crore-buyback-open-market-route-different-tender-offer-timeline-premium-price-cap-20039749.htm",
-   "kind": "headline",
-   "status": "price agrees: hunters checking the entry rule",
-   "px0": 1554.1,
-   "px": 1565.0,
-   "move_pct": 0.7,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Buyback news is old and the stock has traded flat since"
-   }
-  },
-  {
-   "id": "N115549-30",
-   "t": "11:55:49",
-   "ts": 1795415149.5495,
-   "pub": "11:54",
-   "lag_s": 64,
-   "symbol": "LOTUSEYE",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "LOTUSEYE: Disclosure under SEBI Takeover Regulations",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/team_jfutak_23112026101450_Dis3.pdf",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 102.98,
-   "px": 100.5,
-   "move_pct": -2.41,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Routine takeover-regulation disclosure with no detail; price slightly down"
-   }
-  },
-  {
-   "id": "N113925-29",
-   "t": "11:39:25",
-   "ts": 1795414165.719825,
-   "pub": "11:35",
-   "lag_s": 220,
-   "symbol": "ICIL",
-   "tone": "negative",
-   "score": -2.5,
-   "emotion": "Fear",
-   "why": [
-    "resignation"
-   ],
-   "headline": "Indo Count shares rise despite CFO resignation - Business Upturn",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORGFCZThFcngwRnVHZVprSWVTTmtQVVlTWFNfTDJVbU5kT0VFWUhUM1VvMHlremk4MHJZZHhybndLaVRrNU1nUVhzdlVLSjRXRGs0UEE5ci15U05EWUF0LUNrR1BfcEhOY2JGYXVvZ3FwcFliQ09ndzdLMlRjb2hkR3F4cGtLdXhEa2lIS1dEQUo3RHJmU1R4alVla2ZWUGx1T0hVOEV1czlWelJ4OEJld2c4LV9qNTZsNmxj?oc=5",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 587.35,
-   "px": 588.35,
-   "move_pct": 0.17,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Headline is about a CFO resignation, yet the price rose, so signals conflict"
-   }
-  },
-  {
-   "id": "N113715-28",
-   "t": "11:37:15",
-   "ts": 1795414035.229346,
-   "pub": "11:35",
-   "lag_s": 89,
-   "symbol": "HEXT",
-   "tone": "positive",
-   "score": 1.5,
-   "emotion": "Optimism",
-   "why": [
-    "rally"
-   ],
-   "headline": "Hexaware shares rally 3% on Azure accreditation renewal - Business Upturn",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOaVpzUkNJM25hNVF3Q0Jxd182VmFjcm1LSTNqOGUzVjBpM0toa3Mwczl4YWt1M3VIX3Y2UUFON0pEUmFkSlhWaWMwVGpjVjR3aEUtcHpFMGNqYUV3WldELUxSNmdZQVdUWnNsd1V4ODJZWDNJM1pCLTZaUS1EM2ZDWFo2OTBmaU1tUWpUNWR1ODFGSzFLMDNzcXRTalNFRk5JNW9CdWpuY0pLNnB5bmc?oc=5",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 486.5,
-   "px": 483.05,
-   "move_pct": -0.71,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Minor accreditation renewal; the rally is not reflected in price"
-   }
-  },
-  {
-   "id": "N113715-27",
-   "t": "11:37:15",
-   "ts": 1795414035.229346,
-   "pub": "11:35",
-   "lag_s": 81,
-   "symbol": "FSL",
-   "tone": "positive",
-   "score": 1.5,
-   "emotion": "Optimism",
-   "why": [
-    "rally"
-   ],
-   "headline": "Firstsource shares rally 4% on AI pact, then give it back - Business Upturn",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPU3NicWNQNWgtRTNHZW1KZ0VuVkc4dnZIeVlWWEt6Z3hkNHIweWFaNllrcXczOEVvMkwzYWpaeHI2bFFJZFI0UV9aa0ZFQlhjLVMzTmQ4eWRwNXFDRnRpckZHQ3ZQcVR0SDg5NEVIdHFYVHBMQmgzcFdvaV9CRFZmYV9BZXVTTXlIcTQ2T3JxWVpNbGc2UDQ0N3NHMnlXcnBkSXBWQnVIWWU2Z3ppRWN2SERqZ3YtNm5QSEEwQWxsX3l5akVC?oc=5",
-   "kind": "headline",
-   "status": "price agrees: hunters checking the entry rule",
-   "px0": 281.5,
-   "px": 283.5,
-   "move_pct": 0.71,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Rally on AI pact already given back, so the move is faded"
-   }
-  },
-  {
-   "id": "N113715-26",
-   "t": "11:37:15",
-   "ts": 1795414035.229346,
-   "pub": "11:35",
-   "lag_s": 89,
-   "symbol": "GALLANTT",
-   "tone": "positive",
-   "score": 1.5,
-   "emotion": "Optimism",
-   "why": [
-    "rally"
-   ],
-   "headline": "Gallantt shares rally 4% as steel names move on the APL deal - Business Upturn",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUlFuSjliVlNfWUp4aXVmZjBJZkJ5ak9DdmJjMzdJWnV0U2RFNDZBY2ZWUFVJS3VhbV9YNWFrbDVaRFBzczZKWks3TjR3bXduMkQtMGF3YXFqcmVUb29DWU9rUDBSUnl0QXRWYXFaWXBqMlRxTmJhekR0VVVNcWN3T1BycDlBdFZSRlJ6WFZNYlJzS3VzWnJZb202UTRPNmx2cTVzd0VKREg?oc=5",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 545.25,
-   "px": 544.6,
-   "move_pct": -0.12,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Sympathy move on another company's deal, and price is down"
-   }
-  },
-  {
-   "id": "N113257-25",
-   "t": "11:32:57",
-   "ts": 1795413777.03597,
-   "pub": "11:32",
-   "lag_s": 51,
-   "symbol": "DALBHARAT",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "DALBHARAT: Outcome of Board Meeting",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/DALBHARAT_23112026113131_outcomeBMbb23112026n.pdf",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 1561.1,
-   "px": 1565.0,
-   "move_pct": 0.25,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Buyback news is old and the stock has traded flat since"
-   }
-  },
-  {
-   "id": "N112358-24",
-   "t": "11:23:58",
-   "ts": 1795413238.301161,
-   "pub": "11:22",
-   "lag_s": 70,
-   "symbol": "SWSOLAR",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "SWSOLAR: Press Release",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/SWSOLAR_23112026112208_PRESSRELEASE.pdf",
-   "kind": "filing",
-   "status": "watching: price has not confirmed yet",
-   "px0": 162.65,
-   "px": 161.33,
-   "move_pct": -0.81,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Vague press release and the price is falling"
-   }
-  },
-  {
-   "id": "N112358-23",
-   "t": "11:23:58",
-   "ts": 1795413238.301161,
-   "pub": "11:14",
-   "lag_s": 541,
-   "symbol": "MARKSANS",
-   "tone": "negative",
-   "score": -1.5,
-   "emotion": "Fear",
-   "why": [
-    "observations"
-   ],
-   "headline": "Marksans Pharma shares fall 3% after USFDA flags six observations at Goa facility",
-   "source": "CNBC-TV18",
-   "link": "https://www.cnbctv18.com/market/marksans-pharma-share-price-fall-extends-two-session-loss-us-fda-form-483-six-observations-goa-plant-inspection-20039668.htm",
-   "kind": "headline",
-   "status": "price agrees: hunters checking the entry rule",
-   "px0": 281.15,
-   "px": 277.8,
-   "move_pct": -1.19,
-   "ai": {
-    "verdict": "doubt",
-    "why": "USFDA news already reported and the price drop already happened"
-   }
-  },
-  {
-   "id": "N111533-22",
-   "t": "11:15:33",
-   "ts": 1795412733.334388,
-   "pub": "11:06",
-   "lag_s": 566,
-   "symbol": "WESTLIFE",
-   "tone": "negative",
-   "score": -3,
-   "emotion": "Fear",
-   "why": [
-    "downgraded"
-   ],
-   "headline": "Here's why Goldman Sachs downgraded Westlife Foodworld to 'Sell'; check target",
-   "source": "CNBC-TV18",
-   "link": "https://www.cnbctv18.com/market/westlife-foodworld-share-price-goldman-sachs-downgrades-to-sell-key-reasons-why-target-downside-20039663.htm",
-   "kind": "headline",
-   "status": "price agrees: hunters checking the entry rule",
-   "px0": 661.05,
-   "px": 654.0,
-   "move_pct": -1.07,
-   "ai": {
-    "verdict": "confirm",
-    "why": "Fresh, specific Goldman downgrade to Sell; price has not yet reacted"
-   }
-  },
-  {
-   "id": "N110748-21",
-   "t": "11:07:48",
-   "ts": 1795412268.969388,
-   "pub": "10:49",
-   "lag_s": 1075,
-   "symbol": "SGMART",
-   "tone": "positive",
-   "score": 4.55,
-   "emotion": "Euphoria",
-   "why": [
-    "52-week high",
-    "rallies"
-   ],
-   "headline": "SG Mart shares zoom over 14% to 52-week high as board to consider fundraiser; stock rallies 217% YTD - Upstox",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQOTBVd3RreURsNnhRWGRSbnlxV3ZqQWdsUHV0QVFxeWxkQ1ZLaVBia0dLbERRTUx1c253T0xmSGJLZGl5YXo1d1drazdQbDJKdnhKcFI5N1dqVW1paXVsZ1VoeEo3WHFodW0zRzB3NzIwUTMxdWxqZlFGY0NUV1ZCdlZ1UlU0alQwakQ0SUx6SG1VaWpKNVBZc08zREgxWE5ERmRyUGlPZ3loY0ZWRUI3MGJNQV85aVFCTUhybWJ3NXFnbmlxZjVrZFZEcFhORXlac1RFdEF3bF92azYyY1JIMnF5VHJqUnZBa19Mcw?oc=5",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 1143.0,
-   "px": 1033.5,
-   "move_pct": -9.58,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Euphoric spike already happened and the price has since turned down"
-   }
-  },
-  {
-   "id": "N110428-20",
-   "t": "11:04:28",
-   "ts": 1795412068.907852,
-   "pub": "10:51",
-   "lag_s": 800,
-   "symbol": "TECHM",
-   "tone": "positive",
-   "score": 2.6,
    "emotion": "Optimism",
    "why": [
     "surge"
    ],
-   "headline": "TCS, Tech Mahindra Surge Up To 5% As Global Anti AI Trade Lifts Indian IT Stocks",
-   "source": "NDTV Profit",
-   "link": "https://www.ndtvprofit.com/markets/it-stocks-jump-tcs-tech-mahindra-surge-up-to-5-percent-as-global-anti-ai-trade-lifts-sentiment-12364388#publisher=newsstand",
+   "headline": "Nvidia stock massive surge, Jensen reinstatement impact on Micron vs AMD vs Sandisk vs Oracle shares - Data details",
+   "source": "Mint",
+   "link": "https://www.livemint.com/market/stock-market-news/nvidia-stock-massive-surge-jensen-reinstatement-impact-on-micron-vs-amd-vs-sandisk-vs-oracle-shares-data-details-11795453234829.html",
    "kind": "headline",
    "status": "watching: price has not confirmed yet",
-   "px0": 1796.0,
-   "px": 1777.5,
-   "move_pct": -1.03,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Bonus issue is cosmetic and already announced; price has not reacted"
-   }
-  },
-  {
-   "id": "N110428-19",
-   "t": "11:04:28",
-   "ts": 1795412068.907852,
-   "pub": "11:02",
-   "lag_s": 122,
-   "symbol": "ASHOKA",
-   "tone": "positive",
-   "score": 2.6,
-   "emotion": "Optimism",
-   "why": [
-    "jumps"
-   ],
-   "headline": "Ashoka Buildcon share price jumps 8% on  \u20b94,223 crore project wins; stock up 17% in a month | What should investors do?",
-   "source": "Mint",
-   "link": "https://www.livemint.com/market/stock-market-news/ashoka-buildcon-share-price-jumps-8-on-rs-4-223-crore-project-wins-stock-up-17-in-a-month-what-should-investors-do-11795409853245.html",
-   "kind": "headline",
-   "status": "price agrees: hunters checking the entry rule",
-   "px0": 115.14,
-   "px": 116.55,
-   "move_pct": 1.22,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Order wins already priced in after 8% jump; price now flat"
-   }
-  },
-  {
-   "id": "N105200-18",
-   "t": "10:52:00",
-   "ts": 1795411320.653864,
-   "pub": "09:55",
-   "lag_s": 3373,
-   "symbol": "HINDALCO",
-   "tone": "negative",
-   "score": -1.5,
-   "emotion": "Fear",
-   "why": [
-    "slides"
-   ],
-   "headline": "Hindalco shares fall 2% to \u20b9910.30 after a 3% gap down at the open, as copper slides below $12,000 a ton - Business Upturn",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNV0VJa2g1cVJJMEdwcDltNEpfU1dXQ1llck5iaVVZeHZrZmZ6eXVDVjlSTktvWUhnMV9LU2JJZ05DbXB6U2c1V1VjN19ObWdvMDV0X2pKTWwyOWxiWThicXlzckRMYWxneldzTEg2M09ZbUg4NUVfZTViQWZ2Sms3VjJ3X2VqYTU1Zm13OEZBS0ZORTBqckl2MEF2NWNiN1FkcGpJY1NrZVQ0MUNTLThQV0gwT2ZSXy1mYm9palpmWDRqQ1dZejZzTW1RRHJLcF92Ymcxc1UxTFJ0OWsyTkhkejZrMXE?oc=5",
-   "kind": "headline",
-   "status": "price agrees: hunters checking the entry rule",
-   "px0": 910.85,
-   "px": 900.45,
-   "move_pct": -1.14,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Over an hour old and already priced in; price flat since"
-   }
-  },
-  {
-   "id": "N102232-17",
-   "t": "10:22:32",
-   "ts": 1795409552.600472,
-   "pub": "10:19",
-   "lag_s": 211,
-   "symbol": "SGMART",
-   "tone": "positive",
-   "score": 5.2,
-   "emotion": "Euphoria",
-   "why": [
-    "record high",
-    "surges"
-   ],
-   "headline": "Multibagger stock: SG Mart surges 13% to record high on fundraise buzz",
-   "source": "Business Standard",
-   "link": "https://www.business-standard.com/markets/news/multibagger-stock-sg-mart-surges-13-to-record-high-on-fundraise-buzz-126112300224_1.html",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 1180.5,
-   "px": 1033.5,
-   "move_pct": -12.45,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Euphoric spike already happened and the price has since turned down"
-   }
-  },
-  {
-   "id": "N101920-16",
-   "t": "10:19:20",
-   "ts": 1795409360.405404,
-   "pub": "10:13",
-   "lag_s": 373,
-   "symbol": "POLYCAB",
-   "tone": "negative",
-   "score": -2.6,
-   "emotion": "Fear",
-   "why": [
-    "target cut"
-   ],
-   "headline": "Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues",
-   "source": "CNBC-TV18",
-   "link": "https://www.cnbctv18.com/market/polycab-india-share-price-target-cut-by-icici-securities-copper-sell-off-continues-20039649.htm",
-   "kind": "headline",
-   "status": "price agrees: hunters checking the entry rule",
-   "px0": 7496.5,
-   "px": 7430.0,
-   "move_pct": -0.89,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Broker target cut is opinion tied to the copper move; price barely moved"
-   }
-  },
-  {
-   "id": "N100619-15",
-   "t": "10:06:19",
-   "ts": 1795408579.155151,
-   "pub": "10:02",
-   "lag_s": 226,
-   "symbol": "WEALTH",
-   "tone": "negative",
-   "score": -3,
-   "emotion": "Fear",
-   "why": [
-    "crash"
-   ],
-   "headline": "Gold, silver, bitcoin rates crash: Rich Dad Poor Dad author Robert Kiyosaki has this wealth creation tip for investors",
-   "source": "Mint",
-   "link": "https://www.livemint.com/market/stock-market-news/gold-silver-bitcoin-rates-crash-rich-dad-poor-dad-author-robert-kiyosaki-has-this-wealth-creation-tip-for-investors-11795404307920.html",
-   "kind": "headline",
-   "status": "price agrees: hunters checking the entry rule",
-   "px0": 822.0,
-   "px": 807.0,
-   "move_pct": -1.82,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Commentary on gold and bitcoin, not specific company news; price rose"
-   }
+   "px0": 9675.0,
+   "px": 9675.0,
+   "move_pct": 0.0
   }
  ],
  "stats": {
-  "last_hour": 3,
-  "positive": 3,
+  "last_hour": 2,
+  "positive": 2,
   "negative": 0,
-  "today": 94,
-  "median_lag_min": 5.1,
+  "today": 11,
+  "median_lag_min": 55.2,
   "new_this_scan": 0
  }
 }

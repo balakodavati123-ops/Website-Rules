@@ -1,63 +1,43 @@
 {
- "mood": "bearish",
- "brief": "Indian markets closed sharply lower, with Sensex down about 1,484 points and Nifty 50 down 1.75% as banks and metals bled, though IT and Maruti held up. Wall Street futures are bouncing and Asian regulators are stepping in to support markets, but AI-trade jitters remain.",
+ "mood": "mixed",
+ "brief": "NSE and BSE are shut today for Guru Nanak Jayanti, so Indian shares do not trade, though MCX evening trade is open. Global sentiment improved sharply after Jensen Huang's return as Nvidia CEO, but India closed yesterday with Sensex down 1,484 points and Nifty at 25,349.65.",
  "themes": [
-  "Sharp Sensex and Nifty fall",
-  "IT and Maruti resilient",
-  "Asian regulators support markets",
-  "Wall Street futures rebound"
+  "Indian markets closed for holiday",
+  "Nvidia-led global rally",
+  "Yesterday's bank-led sell-off",
+  "Gold rebounds"
  ],
  "companies": [
   {
-   "name": "Tata Steel",
-   "tone": "negative",
-   "why": "Top loser after APL Apollo Tubes stake deal"
+   "name": "Reliance Industries",
+   "tone": "positive",
+   "why": "Promoter group buys 14.27 lakh shares worth Rs 194 crore"
   },
   {
-   "name": "APL Apollo Tubes",
+   "name": "Persistent Systems",
    "tone": "positive",
-   "why": "Rose above VWAP among three stocks"
+   "why": "Named a top stock to buy on 25 Nov"
+  },
+  {
+   "name": "Ather Energy",
+   "tone": "positive",
+   "why": "Named a top stock to buy on 25 Nov"
   },
   {
    "name": "HDFC Bank",
-   "tone": "positive",
-   "why": "ICICI Securities rates Buy, target Rs 1,850"
-  },
-  {
-   "name": "TCS",
-   "tone": "positive",
-   "why": "Rises despite Sensex and Nifty crash"
-  },
-  {
-   "name": "Infosys",
-   "tone": "positive",
-   "why": "Rises despite Sensex and Nifty crash"
-  },
-  {
-   "name": "HCL Technologies",
-   "tone": "positive",
-   "why": "Rises despite Sensex and Nifty crash"
-  },
-  {
-   "name": "Maruti Suzuki",
-   "tone": "positive",
-   "why": "Rises despite Sensex and Nifty crash"
-  },
-  {
-   "name": "PB Fintech",
-   "tone": "positive",
-   "why": "Jumps 9% after recent rout"
+   "tone": "negative",
+   "why": "Banks dragged markets in yesterday's heavy fall"
   }
  ],
- "global": "Wall Street futures are bouncing after AI jitters pushed US stocks into correction, while the Trump administration reportedly approved shipment of nearly 900,000 AI chips to China.",
+ "global": "US stocks had their best day in over a year after Huang's reinstatement, lifting Nvidia suppliers such as SK Hynix, while the US blacklisted an Alibaba subsidiary and Megaspeed over the Nvidia scandal.",
  "risks": [
-  "AI-trade sell-off may resume",
-  "Banks and metals weakness",
-  "Policy risk on chip exports to China"
+  "Gains from Nvidia news may not last",
+  "Indian markets reopen after a 1,484-point fall",
+  "Crypto and gold volatility"
  ],
- "time": "23 Nov 16:21",
- "at": 1795431064.938936,
- "day": "2026-11-23",
+ "time": "24 Nov 10:21",
+ "at": 1795495870.552081,
+ "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
  "n": 40
 }

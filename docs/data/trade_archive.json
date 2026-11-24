@@ -4836,7 +4836,8 @@
   "margin_rs": 3549,
   "target_px": 1202.05,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INE385F01024"
  },
  {
   "id": "E261123-3",
@@ -4861,7 +4862,8 @@
   "margin_rs": 3099,
   "target_px": 298.03,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INE682M01020"
  },
  {
   "id": "E261123-2",
@@ -4886,7 +4888,8 @@
   "margin_rs": 3725,
   "target_px": 447.06,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INE255Z01027"
  },
  {
   "id": "E261123-4",
@@ -4911,7 +4914,8 @@
   "margin_rs": 2987,
   "target_px": 1269.59,
   "leverage": 5.0,
-  "setup": "news"
+  "setup": "news",
+  "instrument_key": "NSE_EQ|INE226A01021"
  },
  {
   "id": "F261123-70",
@@ -5152,7 +5156,8 @@
   "margin_rs": 2745,
   "target_px": 1274.4,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INE0QPI01025"
  },
  {
   "id": "E261123-6",
@@ -5177,7 +5182,8 @@
   "margin_rs": 4930,
   "target_px": 519.71,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INE1D0W01018"
  },
  {
   "id": "K261123-72",
@@ -5495,7 +5501,8 @@
   "margin_rs": 2485,
   "target_px": 2536.47,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INE467B01029"
  },
  {
   "id": "E261123-7",
@@ -5520,7 +5527,8 @@
   "margin_rs": 2429,
   "target_px": 1243.44,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INE541A01023"
  },
  {
   "id": "E261123-9",
@@ -5545,7 +5553,8 @@
   "margin_rs": 2444,
   "target_px": 476.97,
   "leverage": 5.0,
-  "setup": "gap"
+  "setup": "gap",
+  "instrument_key": "NSE_EQ|INE959C01023"
  },
  {
   "id": "F261123-75",
