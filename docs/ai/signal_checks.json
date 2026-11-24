@@ -1,6 +1,6 @@
 {
- "time": "24 Nov 11:21",
- "at": 1795499468.128168,
+ "time": "24 Nov 12:21",
+ "at": 1795503078.938391,
  "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
  "checks": {
@@ -23,6 +23,14 @@
   "TAKE": {
    "verdict": "doubt",
    "why": "Weeks-long rally already happened; no new catalyst and exchange closed"
+  },
+  "GLAND": {
+   "verdict": "doubt",
+   "why": "Vague general-updates filing; exchange is closed today"
+  },
+  "SILVERTUC": {
+   "verdict": "doubt",
+   "why": "Order filing gives no size or value; exchange is closed today"
   }
  }
 }

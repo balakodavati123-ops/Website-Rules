@@ -1,51 +1,51 @@
 {
- "updated_at": "2026-11-24T12:01:32+05:30",
- "scans": 970,
+ "updated_at": "2026-11-24T12:05:31+05:30",
+ "scans": 973,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "Moneycontrol": {
    "ok": true,
    "items": 15,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "Google News": {
    "ok": true,
    "items": 6,
-   "at": "12:01:32"
+   "at": "12:05:31"
   }
  },
  "signals": [

@@ -653,7 +653,8 @@
   "homefirstfinancehomefirstesopshareallotmentnov2026kalkineindia": 1,
   "stockmarketclosedforgurunanakjayantiknowwhatcantradersaccessonmcxfrom5pmfreepressjournal": 1,
   "hdfcbankrelianceindustriesamong10stockswithhighestdiiholdinginq2seefulllist": 1,
-  "moneyviewsharepricetodaygains746onpriceactionunivest": 1
+  "moneyviewsharepricetodaygains746onpriceactionunivest": 1,
+  "goldholdsgainafternvidiasrehiringofhuangsparksrally": 1
  },
  "signals": [
   {
@@ -1010,7 +1011,7 @@
   },
   "https://www.thehindubusinessline.com/markets/feeder/default.rss": {
    "etag": null,
-   "mod": "Tue, 24 Nov 2026 05:52:04 GMT"
+   "mod": "Tue, 24 Nov 2026 06:28:20 GMT"
   },
   "https://feeds.feedburner.com/ndtvprofit-latest": {
    "etag": null,
@@ -1029,48 +1030,48 @@
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "Moneycontrol": {
    "ok": true,
    "items": 15,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "12:01:32"
+   "at": "12:05:31"
   },
   "Google News": {
    "ok": true,
    "items": 6,
-   "at": "12:01:32"
+   "at": "12:05:31"
   }
  },
- "scans": 970
+ "scans": 973
 }
