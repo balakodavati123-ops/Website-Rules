@@ -87,3 +87,18 @@ def test_engine_trades_one_day_on_real_style_candles(monkeypatch):
     assert r["data_source_status"] == "VERIFIED_HISTORICAL" and r["lot_size"] == 65 and r["combined_entry_premium"] > 120
     s = RPT.summary(rows, {"x": "test"}, cfg)
     assert s["overall_all_configs"]["trades"] == 1 and s["overall_all_configs"]["win_rate_pct"] == 100.0
+
+
+def test_regime_walk_forward_picks_per_cell_from_past_months_only():
+    from src.research import regime_strategy as RS
+    rows = []
+    for mi in range(1, 11):
+        for dd in range(1, 21):
+            d = f"2025-{mi:02d}-{dd:02d}"
+            mode = "MODE_1_QUIET" if dd % 2 else "MODE_2_VOLATILE"
+            for cid, pnl in (("good|09:20|TP50|SL35", 300 if mode == "MODE_1_QUIET" else -400), ("bad|09:20|TP50|SL35", -200)):
+                rows.append({"entry_timestamp_ist": f"{d}T09:20:00+05:30", "entry_window": "09:20", "mode": mode, "dte": 0, "config_id": cid, "net_pnl_inr": pnl + (dd % 3) * 10,
+                             "gross_pnl_inr": pnl, "est_charges_inr": 100, "slippage_inr": 50, "mae_pct": -5, "mfe_pct": 5, "capital_deployed": 15000, "data_source_status": "VERIFIED_HISTORICAL"})
+    wf = RS.walk_forward(rows, min_months=6)
+    assert wf["test_from"] == "2025-07" and wf["days_traded"] == 40 and wf["days_skipped"] == 40          # quiet days traded, volatile days skipped
+    assert wf["out_of_sample"]["win_rate_pct"] == 100.0 and wf["rules_today_from_all_data"]["MODE_2_VOLATILE | DTE 0"]["rule"] is None

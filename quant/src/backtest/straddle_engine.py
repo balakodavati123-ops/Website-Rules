@@ -8,6 +8,9 @@ charges follow costs.charges. Strike policies:
   atm            the 50-point strike nearest NIFTY at entry
   lean_150_250   150 points (MODE_1_QUIET) or 250 points (MODE_2/3) toward the morning's move from the open (0.15%+), else toward the move since
                  yesterday's close (0.3%+), else at the money; the leg on the moving side starts in the money
+  lean_100       the same, 100 points (the live desk's current rule)
+  dir_with       one at-the-money option bought in the direction of that move (call if up, put if down); no trade when there is no move
+  dir_against    one at-the-money option bought against that move (a bet on the morning reversing)
 DATA_SOURCE_STATUS per trade: VERIFIED_HISTORICAL when both legs traded in the entry minute and the exit minute, PARTIAL when a price had to
 be carried forward from an earlier minute (illiquid strike). Nothing here places an order.
 """
@@ -37,7 +40,7 @@ class Config:
     slip_pct: float = 0.003            # per leg, per side, as a share of the price
     slip_min: float = 0.10             # at least 0.10 point per leg per side
     max_dte: int = 4
-    policies: tuple = ("atm", "lean_150_250")
+    policies: tuple = ("atm", "lean_150_250", "lean_100", "dir_with", "dir_against")
     capital: float = 100000.0
     weights: tuple = (0.25, 0.20, 0.15)
 
@@ -158,15 +161,22 @@ class Backtester:
                     dirn = (1 if mo > 0 else -1) if abs(mo) >= 0.15 else (1 if mp > 0 else -1) if abs(mp) >= 0.3 else 0
                     atm = int(round(spot / cfg.step) * cfg.step)
                     for pol in cfg.policies:
-                        k = atm if pol == "atm" else atm - (150 if mode == RP.MODES[0] else 250) * dirn
+                        if pol in ("dir_with", "dir_against"):
+                            if not dirn:
+                                continue
+                            up = (dirn > 0) == (pol == "dir_with")
+                            legs = [("CE" if up else "PE", atm)]
+                        else:
+                            k = atm if pol == "atm" else atm - (100 if pol == "lean_100" else 150 if mode == RP.MODES[0] else 250) * dirn
+                            legs = [("CE", k), ("PE", k)]
                         plans.append({"day": d, "expiry": e, "dte": dte, "entry": w, "spot": spot, "vix": vix, "se": se, "mode": mode, "scores": sc, "policy": pol,
-                                      "strike": k, "mo": round(mo, 2)})
+                                      "strike": legs[0][1], "legs": legs, "mo": round(mo, 2)})
         return plans
 
     def fetch_contracts(self, plans: list[dict]) -> None:
         cfg, need = self.cfg, {}
         for p in plans:
-            need.setdefault(p["expiry"], set()).add(p["strike"])
+            need.setdefault(p["expiry"], set()).update(k for _, k in p["legs"])
         self.legs: dict = {}
         jobs = []
         for e, ks in need.items():
@@ -197,40 +207,39 @@ class Backtester:
 
     def simulate(self, plans: list[dict]) -> list[Trade]:
         cfg, out = self.cfg, []
-        for n, p in enumerate(plans):
-            ce, pe = self.legs.get((p["expiry"], p["strike"], "CE")), self.legs.get((p["expiry"], p["strike"], "PE"))
-            if not ce or not pe or "error" in ce[1] or "error" in pe[1]:
+        for p in plans:
+            legs = [self.legs.get((p["expiry"], k, kind)) for kind, k in p["legs"]]
+            if any(not lg or "error" in lg[1] for lg in legs):
                 continue
-            cb, pb = ce[1].get(p["day"]) or {}, pe[1].get(p["day"]) or {}
+            lb = [lg[1].get(p["day"]) or {} for lg in legs]
             nb = self.n1[p["day"]]
             times, t = [], p["entry"]
             while t <= cfg.square_off:
                 times.append(t)
                 t = _minute(t, 1)
-            path, last_c, last_p, imputed_at, verified_entry = [], None, None, set(), True
+            path, last, imputed_at, ok = [], [None] * len(legs), set(), True
             for t in times:
-                c_, p_ = _price_at(cb, t), _price_at(pb, t)
-                if c_ is None:
+                px = [_price_at(b_, t) for b_ in lb]
+                if any(x is None for x in px):
                     imputed_at.add(t)
-                if p_ is None:
-                    imputed_at.add(t)
-                last_c, last_p = c_ if c_ is not None else last_c, p_ if p_ is not None else last_p
-                if last_c is None or last_p is None:
+                last = [x if x is not None else l_ for x, l_ in zip(px, last)]
+                if any(x is None for x in last):
                     if t == times[0]:
-                        verified_entry = False
+                        ok = False
                     continue
-                path.append((t, last_c, last_p, _price_at(nb, t)))
-            if len(path) < 2 or path[0][0] != times[0] or not verified_entry:
+                path.append((t, list(last), _price_at(nb, t)))
+            if len(path) < 2 or path[0][0] != times[0] or not ok or times[0] in imputed_at:
                 continue                                              # no real price at the entry minute: not a trade we could have made
-            lot = int(ce[0].get("lot_size") or 65)
-            c0, p0 = path[0][1] + self._slip(path[0][1]), path[0][2] + self._slip(path[0][2])
-            e0 = c0 + p0
-            vals = [(t, c - self._slip(c), q - self._slip(q), s) for t, c, q, s in path]
+            lot = int(legs[0][0].get("lot_size") or 65)
+            ins = [x + self._slip(x) for x in path[0][1]]
+            e0 = sum(ins)
+            vals = [(t, [x - self._slip(x) for x in xs], sp) for t, xs, sp in path]
+            kinds = [kind for kind, _ in p["legs"]]
             for tgt in cfg.targets:
                 for stp in cfg.stops:
                     ex, why, lo, hi = vals[-1], "SQUARE_OFF_1520", 0.0, 0.0
                     for v in vals[1:]:
-                        r = (max(v[1], 0.05) + max(v[2], 0.05)) / e0 - 1
+                        r = sum(max(x, 0.05) for x in v[1]) / e0 - 1
                         lo, hi = min(lo, r), max(hi, r)
                         if r >= tgt:
                             ex, why = v, f"TARGET_{int(tgt * 100)}PCT"
@@ -238,25 +247,27 @@ class Backtester:
                         if r <= -stp:
                             ex, why = v, f"STOP_{int(stp * 100)}PCT"
                             break
-                    c1, p1 = max(ex[1], 0.05), max(ex[2], 0.05)
-                    x1 = c1 + p1
+                    outs = [max(x, 0.05) for x in ex[1]]
+                    x1 = sum(outs)
                     buy, sell = e0 * lot, x1 * lot
-                    ch = charges(buy, sell)["total"]
+                    ch = charges(buy, sell, orders=2 * len(legs))["total"]
                     gross = (x1 - e0) * lot
-                    slip = (self._slip(path[0][1]) + self._slip(path[0][2]) + self._slip(c1) + self._slip(p1)) * lot
+                    slip = (sum(self._slip(x) for x in path[0][1]) + sum(self._slip(x) for x in outs)) * lot
                     net = gross - ch
-                    status = "VERIFIED_HISTORICAL" if ex[0] not in imputed_at else "PARTIAL"
+                    get = lambda kind, arr: next((arr[i] for i, k_ in enumerate(kinds) if k_ == kind), 0.0)
+                    sym = lambda kind: next((lg[0].get("trading_symbol", "") for lg, k_ in zip(legs, kinds) if k_ == kind), "")
                     cid = f"{p['policy']}|{p['entry']}|TP{int(tgt * 100)}|SL{int(stp * 100)}"
                     out.append(Trade(trade_id=f"STRD_{p['day']:%Y%m%d}_{p['entry'].replace(':', '')}_{p['policy']}_{int(tgt * 100)}_{int(stp * 100)}", config_id=cid,
                                      strike_policy=p["policy"], target_pct=tgt, stop_pct=stp, expiry_date=p["expiry"], dte=p["dte"], mode=p["mode"],
                                      sigma_iv=round(p["vix"] / 100, 4), sigma_eff=round(p["se"], 4),
                                      news_scores=f"IN_Bank={p['scores']['S_IN_Bank']};US={p['scores']['S_US_Macro']};Asia={p['scores']['S_Asia_FX']};news=0",
-                                     spot_at_entry=round(p["spot"], 2), strike=p["strike"], ce_symbol=ce[0].get("trading_symbol", ""), pe_symbol=pe[0].get("trading_symbol", ""),
-                                     entry_window=p["entry"], entry_timestamp_ist=f"{p['day']}T{p['entry']}:00+05:30", ce_entry_price=round(c0, 2), pe_entry_price=round(p0, 2),
+                                     spot_at_entry=round(p["spot"], 2), strike=p["strike"], ce_symbol=sym("CE"), pe_symbol=sym("PE"),
+                                     entry_window=p["entry"], entry_timestamp_ist=f"{p['day']}T{p['entry']}:00+05:30", ce_entry_price=round(get("CE", ins), 2), pe_entry_price=round(get("PE", ins), 2),
                                      combined_entry_premium=round(e0, 2), lot_size=lot, capital_deployed=round(buy, 2), exit_timestamp_ist=f"{p['day']}T{ex[0]}:00+05:30",
-                                     exit_reason=why, spot_at_exit=round(ex[3] or 0, 2), ce_exit_price=round(c1, 2), pe_exit_price=round(p1, 2), combined_exit_premium=round(x1, 2),
+                                     exit_reason=why, spot_at_exit=round(ex[2] or 0, 2), ce_exit_price=round(get("CE", outs), 2), pe_exit_price=round(get("PE", outs), 2), combined_exit_premium=round(x1, 2),
                                      gross_pnl_inr=round(gross, 2), slippage_inr=round(slip, 2), est_charges_inr=round(ch, 2), net_pnl_inr=round(net, 2),
-                                     return_pct=round(net / buy * 100, 2), mae_pct=round(lo * 100, 2), mfe_pct=round(hi * 100, 2), data_source_status=status, morning_move_pct=p["mo"]))
+                                     return_pct=round(net / buy * 100, 2), mae_pct=round(lo * 100, 2), mfe_pct=round(hi * 100, 2),
+                                     data_source_status="VERIFIED_HISTORICAL" if ex[0] not in imputed_at else "PARTIAL", morning_move_pct=p["mo"]))
         return out
 
     def run(self) -> list[Trade]:
