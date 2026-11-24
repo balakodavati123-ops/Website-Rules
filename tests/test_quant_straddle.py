@@ -102,3 +102,20 @@ def test_regime_walk_forward_picks_per_cell_from_past_months_only():
     wf = RS.walk_forward(rows, min_months=6)
     assert wf["test_from"] == "2025-07" and wf["days_traded"] == 40 and wf["days_skipped"] == 40          # quiet days traded, volatile days skipped
     assert wf["out_of_sample"]["win_rate_pct"] == 100.0 and wf["rules_today_from_all_data"]["MODE_2_VOLATILE | DTE 0"]["rule"] is None
+
+
+def test_ema_vwap_indicators_on_three_minute_candles():
+    from src.research import ema_vwap as EV
+    d = date(2026, 11, 17)
+    bars = {}
+    for i in range(30):
+        t = (datetime(2026, 11, 17, 9, 15) + timedelta(minutes=i)).strftime("%H:%M")
+        px = 100 - i * 0.5 if i < 15 else 92.5 + (i - 15) * 1.0                       # falls, then rallies
+        bars[t] = (px, px + 0.2, px - 0.2, px, 10.0)
+    three = EV.three_minute(bars)
+    assert three[0][:2] == ("09:15", "09:18") and three[0][2] == 100 and three[0][5] == 99.0 and three[0][6] == 30.0
+    rows = EV.indicators({d: bars}, [d])[d]
+    s, e, o, h, l, c, ema, vw = rows[0]
+    assert ema == c and abs(vw - (o + h + l + c) / 4) < 1e-9                              # VWAP starts at the first candle's (O+H+L+C)/4
+    crosses = [(rows[i][1], "up" if rows[i][6] > rows[i][7] else "down") for i in range(1, len(rows)) if (rows[i - 1][6] - rows[i - 1][7]) * (rows[i][6] - rows[i][7]) < 0]
+    assert crosses and crosses[-1][1] == "up"                                            # the rally lifts EMA9 back above VWAP
