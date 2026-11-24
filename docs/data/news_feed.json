@@ -1,142 +1,6 @@
 [
  {
-  "time": "24 Nov 09:22",
-  "source": "CNBC-TV18",
-  "category": "LEGAL/REGULATORY",
-  "headline": "Atul's US subsidiary faces probe over alleged evasion of anti-dumping duties on 2,4-D imports",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "ET",
-  "category": "LEGAL/REGULATORY",
-  "headline": "NSEL releases Rs 1,950 crore in one-time settlement, ends 14-year payment default",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "Mint",
-  "category": "DEAL/ORDER",
-  "headline": "Tech Mahindra bonus issue record date out! Get 1 extra share for every share held- Check eligibility, ratio, returns",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "Mint",
-  "category": "DEAL/ORDER",
-  "headline": "Dalmia Bharat approves  \u20b9700 crore share buyback: From price per share to record date - what investors need to know",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "BusinessStandard",
-  "category": "DEAL/ORDER",
-  "headline": "PTC Industries rebounds, up 3% from day's low on major defence order win",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Stock market crash today: Investors lose over Rs 6 lakh crore as Sensex ends over 1,400 points down; top - The Times of India",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex tumbled nearly 1,500 points: Why stock market fell today? - India Today",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "RBI proposes trusted approver, stop switch to curb digital fraud - The Times of India",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Bank Nifty Crashes Nearly 1,000 Points in Early Trade as Banking Stocks Sell Off; Axis Bank, SBI Lead Losses - Kotak Neo",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Markets crashes 1,484 points on heavy bank stock sell-off; Sensex plunges 1,484 pts, Nifty dives to 25,349.65 - Deccan Herald",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Record highs give way to market rout: Bank Nifty plunges 2,608 points Sensex sheds 2,227 from intraday peaks - Fortune India",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex plunges 1,484 points, Nifty falls 1.75% by closing amid high profit booking - ANI News",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "GoogleNews-Business",
-  "category": "CRASH/SHOCK",
-  "headline": "Stock Market Today Highlights November 23: Markets take heavy drubbing dragged by banks; Sensex plunges 1,484 pts, Nifty dives to 25,349.65 - BusinessLine",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "GoogleNews-Business",
-  "category": "CRASH/SHOCK",
-  "headline": "Asian stock markets tumble as AI bubble fears mount - Al Jazeera",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "GoogleNews-Business",
-  "category": "CRASH/SHOCK",
-  "headline": "5 penny stocks plunge up to 68% in six months. Do you own any? - The Economic Times",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "Yahoo-Nifty",
-  "category": "RBI-POLICY",
-  "headline": "India stocks dip after RBI hikes rates for first time in nearly 4 yrs",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "Yahoo-Nifty",
-  "category": "CRASH/SHOCK",
-  "headline": "AI stock selloff drives investors to China, India, and overlooked Asian sectors",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
+  "time": "24 Nov 11:47",
   "source": "Yahoo-Nifty",
   "category": "CRASH/SHOCK",
   "headline": "Why India\u2019s Nifty 50 Is Holding Steady Despite Asian Market Selloff",
@@ -144,7 +8,7 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "24 Nov 09:27",
+  "time": "24 Nov 11:47",
   "source": "BusinessLine",
   "category": "CRASH/SHOCK",
   "headline": "Banks sell-off ends four-week rally; Nifty slumps 1.75%, Rupee weakens",
@@ -152,7 +16,7 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "24 Nov 09:27",
+  "time": "24 Nov 11:47",
   "source": "BusinessLine",
   "category": "CRASH/SHOCK",
   "headline": "Sensex today | Stock Market Highlights: Markets take heavy drubbing dragged by banks; Sensex plunges 1,484 pts, Nifty dives to 25,349.65",
@@ -160,7 +24,7 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "24 Nov 09:27",
+  "time": "24 Nov 11:47",
   "source": "BusinessLine",
   "category": "CRASH/SHOCK",
   "headline": "Rupee snaps 5-day rally; tumbles 30 paise to settle at 92.92 against US dollar",
@@ -168,7 +32,7 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "24 Nov 09:27",
+  "time": "24 Nov 11:47",
   "source": "BusinessLine",
   "category": "CRASH/SHOCK",
   "headline": "Tata Steel dips 7% as APL Apollo plunge on \u20b928,000 cr deal; Hindalco under pressure",
@@ -176,215 +40,7 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "24 Nov 09:27",
-  "source": "NDTVProfit",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold Rate Today: Yellow Metal Extends Recovery On Bargain Buying After Selloff; Spot Gold Above $3,645 An Ounce",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold, silver recover after sharp sell-off: Key triggers for prices this week",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Kospi slumps nearly 4%; Asian markets fall as Wall Street sell-off deepens",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Global AI Sell-off: Taiwan takes action yet again to support collapsing stock market",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Anthropic tumbles more than 10% in premarket trade as AI slump engulfs markets",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Muthoot Finance heads for worst week since April 2025 as gold rout triggers sell-off",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold price crash: Yellow metal and silver slump over 4% each on MCX",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:27",
-  "source": "CNBC-TV18",
-  "category": "RBI-POLICY",
-  "headline": "Japan core inflation picks up, makes case for BoJ rate hike stronger",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "Manic Monday for Bank Nifty as index crashes over 2000 points \u2014 Check worst hit shares and reasons behind mega plunge",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "Stock market crash today wipes out  \u20b96 lakh cr: Red! Sensex down 1,484 points, Nifty below 25,350 - What went wrong?",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Banks sell-off ends four-week rally; Nifty slumps 1.75%, Rupee weakens - BusinessLine",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Stock Market Crash: Sensex Falls 1.77%, Nifty at 25,350 - HDFC Sky",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "RBI Proposes Default-Off Payment Channels, Stop Switch and Trusted-Person Approval to Prevent Fraud - The Policy Edge",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex Today Tanks 1,484 Points | Nifty Below 25,350 | 4 Reasons Why Indian Share Markets Are Falling - Equitymaster",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "Sensex Plunges 1484 Points as Nifty Falls Below 25350 - cwibc.co.id",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "GoogleNews",
-  "category": "APPROVAL",
-  "headline": "RBI proposes 'Stop Switch', trusted person approval for digital payments to curb banking frauds - ANI News",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "GoogleNews-Business",
-  "category": "DEAL/ORDER",
-  "headline": "Brookfield agrees to acquire Blackstone-backed PGP Glass for $1.7billion - Moneycontrol.com",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "BusinessLine",
-  "category": "DEAL/ORDER",
-  "headline": "Dalmia Bharat board approves \u20b9700 crore share buyback at up to \u20b91,850 per share",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "BusinessLine",
-  "category": "CRASH/SHOCK",
-  "headline": "Copper falls below $12,000 as doubts over AI spending deepen selloff",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "BusinessLine",
-  "category": "CRASH/SHOCK",
-  "headline": "US Market Outlook: Indices plunge deeply",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "BusinessLine",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold price continues to fall as AI selloff, rate-hike bets weigh. What\u2019s ahead?",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "BusinessLine",
-  "category": "CRASH/SHOCK",
-  "headline": "Wall Street selloff deepens as Dow, S&P 500 enter correction; Nasdaq plunges 5.28%",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Stock Market Crash: Over \u20b95 lakh crore investor wealth wiped out as Nifty falls 435 points; Here\u2019s why",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "CNBC-TV18",
-  "category": "DEAL/ORDER",
-  "headline": "Brookfield Asset Management agrees to acquire PGP Glass from Blackstone for $1.7 billion",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "TCS gains 4% as Nvidia-led tech sell-off sparks buying in Indian IT stocks",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
+  "time": "24 Nov 11:47",
   "source": "CNBC-TV18",
   "category": "CRASH/SHOCK",
   "headline": "Bitcoin, Ether, Solana tumble in November as security breaches and regulatory uncertainty weigh",
@@ -392,7 +48,7 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "24 Nov 09:32",
+  "time": "24 Nov 11:47",
   "source": "CNBC-TV18",
   "category": "DEAL/ORDER",
   "headline": "Dalmia Bharat approves \u20b9700 crore buyback: Here's why this repurchase plan is different",
@@ -400,7 +56,7 @@
   "hint": "LONG-lean headline"
  },
  {
-  "time": "24 Nov 09:32",
+  "time": "24 Nov 11:47",
   "source": "CNBC-TV18",
   "category": "APPROVAL",
   "headline": "Marksans Pharma shares fall 3% after USFDA flags six observations at Goa facility",
@@ -408,7 +64,199 @@
   "hint": "LONG-lean headline"
  },
  {
-  "time": "24 Nov 09:32",
+  "time": "24 Nov 11:47",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Kospi slumps nearly 4%; Asian markets fall as Wall Street sell-off deepens",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:47",
+  "source": "CNBC-TV18",
+  "category": "DEAL/ORDER",
+  "headline": "Voltas signs JV agreement with Atomberg for room AC compressors, to acquire 50% stake",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "24 Nov 11:47",
+  "source": "CNBC-TV18",
+  "category": "DEAL/ORDER",
+  "headline": "Paytm to invest up to \u20b9200 crore in Funding Societies' subsidiaries, acquires 19% in CardUp",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "ET",
+  "category": "LEGAL/REGULATORY",
+  "headline": "NSEL releases Rs 1,950 crore in one-time settlement, ends 14-year payment default",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "Mint",
+  "category": "DEAL/ORDER",
+  "headline": "Dividend, Buyback, rights issue record date Nov 25: Zee, Vraj Iron, Bonlon, and more: 5 stocks to turn ex-date tomorrow",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "Mint",
+  "category": "DEAL/ORDER",
+  "headline": "Tech Mahindra bonus issue record date out! Get 1 extra share for every share held- Check eligibility, ratio, returns",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "BusinessStandard",
+  "category": "DEAL/ORDER",
+  "headline": "PTC Industries rebounds, up 3% from day's low on major defence order win",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Stock market crash today: Investors lose over Rs 6 lakh crore as Sensex ends over 1,400 points down; top - The Times of India",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "India Inc rushes to raise $2.7 billion debt ahead of expected RBI rate hike - Reuters",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "CortexSpark Ventures Enters India's VC Market With Sebi Nod For Rs1,000 Cr Deeptech Fund - BW Disrupt",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex Plunges 1,484 Points as $7.7 Billion Wiped Off Indian Stocks - BigGo Finance",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "Sebi warns investors against trading fraud on WhatsApp, Telegram groups - The Times of India",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Stock Market Crash Today: Sensex, Nifty Tumble Nearly 2%; Investors Lose Over \u20b95 Lakh Crore \u2013 What Triggered The Massive Sell-Off? - Jagran Josh",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Bank Nifty crashes over 2,000 points, plunges 3.1%; HDFC Bank, ICICI Bank, Axis Bank, SBI among top losers - Moneycontrol.com",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Nifty crashes by 350 points, Sensex down 1.35%. Why is the market down today? - India Infoline",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Sensex crashes 1,484 points, Nifty falls below 25,350 as banking stocks drag markets - Telegraph India",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "RBI Proposes New Digital Payment Safety Rules to Prevent Fraud - Deshabhimani",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "GoogleNews",
+  "category": "EARNINGS",
+  "headline": "India Inc sees earnings revival: NIFTY 500 companies post strongest Q2 profit in 3 years - Upstox",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "BusinessLine",
+  "category": "DEAL/ORDER",
+  "headline": "Dalmia Bharat board approves \u20b9700 crore share buyback at up to \u20b91,850 per share",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "BusinessLine",
+  "category": "CRASH/SHOCK",
+  "headline": "Copper falls below $12,000 as doubts over AI spending deepen selloff",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "BusinessLine",
+  "category": "CRASH/SHOCK",
+  "headline": "US Market Outlook: Indices plunge deeply",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "CNBC-TV18",
+  "category": "APPROVAL",
+  "headline": "Lupin gets USFDA nod for generic drug to treat anaemia, high phosphorus in kidney patients",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "CNBC-TV18",
+  "category": "DEAL/ORDER",
+  "headline": "Tech Mahindra fixes record date for 1:1 bonus issue: What 7 lakh retail shareholders need to know",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Global AI Sell-off: Taiwan takes action yet again to support collapsing stock market",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
   "source": "CNBC-TV18",
   "category": "APPROVAL",
   "headline": "Cohance Lifesciences: USFDA inspects and classifies Telangana facility as \u2018voluntary action indicated\u2019",
@@ -416,7 +264,7 @@
   "hint": "LONG-lean headline"
  },
  {
-  "time": "24 Nov 09:32",
+  "time": "24 Nov 11:52",
   "source": "CNBC-TV18",
   "category": "APPROVAL",
   "headline": "Aurobindo Pharma's Apitoria unit gets 'voluntary action indicated' classification from USFDA",
@@ -424,7 +272,7 @@
   "hint": "LONG-lean headline"
  },
  {
-  "time": "24 Nov 09:32",
+  "time": "24 Nov 11:52",
   "source": "CNBC-TV18",
   "category": "APPROVAL",
   "headline": "Natco Pharma gets seven observations after USFDA inspection at Hyderabad plant",
@@ -432,7 +280,7 @@
   "hint": "LONG-lean headline"
  },
  {
-  "time": "24 Nov 09:32",
+  "time": "24 Nov 11:52",
   "source": "CNBC-TV18",
   "category": "CRASH/SHOCK",
   "headline": "US Market Crash: Nasdaq enters 'bear market' - 10 things for investors to know",
@@ -440,7 +288,183 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "24 Nov 09:32",
+  "time": "24 Nov 11:52",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Anthropic tumbles more than 10% in premarket trade as AI slump engulfs markets",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:52",
+  "source": "CNBC-TV18",
+  "category": "APPROVAL",
+  "headline": "Go Digit gets IFSCA approval to set up insurance office in GIFT City",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Of 30 Sensex stocks, 22 closed in the red - These 8 shares defied stock market crash | Full list of 22 red and 8 green",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "RBI proposes trusted approver, stop switch to curb digital fraud - The Times of India",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Bank Nifty Crashes Nearly 1,000 Points in Early Trade as Banking Stocks Sell Off; Axis Bank, SBI Lead Losses - Kotak Neo",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "RBI proposes 'trusted person' sign-off on electronic transfers to curb fraud - Reuters",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "GoogleNews",
+  "category": "LEGAL/REGULATORY",
+  "headline": "RBI's Stop Switch: A New Shield Against Digital Fraud - varindia",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Indian Stocks Plunge Nearly 2% as Sensex Sheds 1,484 Points, Investors Lose $5.7 Billion - INDIA New England News",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Banks sell-off ends four-week rally; Nifty slumps 1.75%, Rupee weakens - TradingView",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Markets crashes 1,484 points on heavy bank stock sell-off; Sensex plunges 1,484 pts, Nifty dives to 25,349.65 - Deccan Herald",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "Record highs give way to market rout: Bank Nifty plunges 2,608 points Sensex sheds 2,227 from intraday peaks - Fortune India",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "Yahoo-Nifty",
+  "category": "RBI-POLICY",
+  "headline": "India stocks dip after RBI hikes rates for first time in nearly 4 yrs",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "Yahoo-Nifty",
+  "category": "CRASH/SHOCK",
+  "headline": "AI stock selloff drives investors to China, India, and overlooked Asian sectors",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "BusinessLine",
+  "category": "CRASH/SHOCK",
+  "headline": "Gold price continues to fall as AI selloff, rate-hike bets weigh. What\u2019s ahead?",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Stock Market Crash: Over \u20b95 lakh crore investor wealth wiped out as Nifty falls 435 points; Here\u2019s why",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "CNBC-TV18",
+  "category": "DEAL/ORDER",
+  "headline": "Brookfield Asset Management agrees to acquire PGP Glass from Blackstone for $1.7 billion",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "TCS gains 4% as Nvidia-led tech sell-off sparks buying in Indian IT stocks",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Bitcoin reclaims $61,000 after weekend crash: Can the recovery hold",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Muthoot Finance heads for worst week since April 2025 as gold rout triggers sell-off",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Gold price crash: Yellow metal and silver slump over 4% each on MCX",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "24 Nov 11:57",
+  "source": "CNBC-TV18",
+  "category": "RBI-POLICY",
+  "headline": "Japan core inflation picks up, makes case for BoJ rate hike stronger",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "24 Nov 11:57",
   "source": "CNBC-TV18",
   "category": "CRASH/SHOCK",
   "headline": "Nikkei, Kospi fall over 4% each; Asian markets crash as AI sell-off deepens despite record Anthropic IPO",
@@ -448,35 +472,11 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "24 Nov 09:32",
+  "time": "24 Nov 11:57",
   "source": "CNBC-TV18",
-  "category": "RBI-POLICY",
-  "headline": "Gold falls further, set for worst week since March as Fed rate hike worries rise",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "'More To Come' - IMF Managing Director warns the AI sell-off may not be over yet",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "US Market Crash: Dow Jones tanks 1,100 points, nears technical correction - What is plaguing Wall Street?",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "24 Nov 09:32",
-  "source": "CNBC-TV18",
-  "category": "DEAL/ORDER",
-  "headline": "Voltas signs JV agreement with Atomberg for room AC compressors, to acquire 50% stake",
+  "category": "LEGAL/REGULATORY",
+  "headline": "Atul's US subsidiary faces probe over alleged evasion of anti-dumping duties on 2,4-D imports",
   "event": "no",
-  "hint": "LONG-lean headline"
+  "hint": "SHORT-lean headline"
  }
 ]

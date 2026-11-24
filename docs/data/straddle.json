@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T09:33:45+05:30",
+ "updated_at": "2026-11-24T12:01:32+05:30",
  "today": {
   "ok": false,
   "why": "no straddle rule beat time decay and costs in training (2592 rules tested); on the 40 days most like today the trade averaged Rs -1,553",
@@ -52,7 +52,7 @@
    "win_rate": 15.6,
    "pf": 0.21
   },
-  "at": "09:33"
+  "at": "12:01"
  },
  "playbook": {
   "trained_at": "2026-11-23 22:11",

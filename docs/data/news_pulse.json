@@ -1,54 +1,128 @@
 {
- "updated_at": "2026-11-24T09:32:47+05:30",
- "scans": 835,
+ "updated_at": "2026-11-24T12:01:32+05:30",
+ "scans": 970,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "09:32:47"
+   "at": "12:01:32"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "09:32:47"
+   "at": "12:01:32"
   },
   "Moneycontrol": {
    "ok": true,
    "items": 15,
-   "at": "09:32:47"
+   "at": "12:01:32"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "09:32:47"
+   "at": "12:01:32"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "09:32:47"
+   "at": "12:01:32"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "09:32:47"
+   "at": "12:01:32"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "09:32:47"
+   "at": "12:01:32"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "09:32:47"
+   "at": "12:01:32"
   },
   "Google News": {
    "ok": true,
-   "items": 9,
-   "at": "09:32:47"
+   "items": 6,
+   "at": "12:01:32"
   }
  },
  "signals": [
+  {
+   "id": "N112238-14",
+   "t": "11:22:38",
+   "ts": 1795499558.072901,
+   "pub": "11:21",
+   "lag_s": 52,
+   "symbol": "SILVERTUC",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "SILVERTUC: Bagging/Receiving of orders/contracts",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/SILVERTUC_24112026112132_Receipt_of_Order.pdf",
+   "kind": "filing",
+   "status": "watching: price has not confirmed yet",
+   "px0": 124.73,
+   "px": 124.73,
+   "move_pct": 0.0
+  },
+  {
+   "id": "N101554-13",
+   "t": "10:15:54",
+   "ts": 1795495554.437267,
+   "pub": "09:39",
+   "lag_s": 2159,
+   "symbol": "WORTHPERI",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "jumps"
+   ],
+   "headline": "Jensen Huang Net Worth: Nvidia CEO's Fortune Jumps $33 Billion In A Day After Wall Street Comeback",
+   "source": "NDTV Profit",
+   "link": "https://www.ndtvprofit.com/markets/jensen-huang-net-worth-nvidia-ceos-fortune-jumps-33-billion-in-a-day-after-wall-street-comeback-12368928#publisher=newsstand",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 148.98,
+   "px": 148.98,
+   "move_pct": 0.0,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Story is about Nvidia CEO's net worth, not this company; exchange closed"
+   }
+  },
+  {
+   "id": "N095603-12",
+   "t": "09:56:03",
+   "ts": 1795494363.439963,
+   "pub": "09:54",
+   "lag_s": 71,
+   "symbol": "AXISCADES",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "acquisition"
+   ],
+   "headline": "AXISCADES: Acquisition",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/AXISCADES_24112026095411_IncorporationUK24112026.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1869.0,
+   "px": 1869.0,
+   "move_pct": 0.0,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Acquisition filing gives no details and the exchange is closed today"
+   }
+  },
   {
    "id": "N092720-11",
    "t": "09:27:20",
@@ -66,10 +140,14 @@
    "source": "ET Markets",
    "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/south-korean-shares-rebound-as-huangs-nvidia-return-lifts-ai-stocks/articleshow/136118071.cms",
    "kind": "headline",
-   "status": "watching: price has not confirmed yet",
+   "status": "skipped: the AI analyst doubted it",
    "px0": 166.11,
    "px": 166.11,
-   "move_pct": 0.0
+   "move_pct": 0.0,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Kospi story, not about this company; market-wide and exchange closed"
+   }
   },
   {
    "id": "N092403-10",
@@ -88,10 +166,14 @@
    "source": "Business Standard",
    "link": "https://www.business-standard.com/markets/news/take-shares-rally-24-in-three-weeks-as-company-returns-to-profitability-126112300872_1.html",
    "kind": "headline",
-   "status": "watching: price has not confirmed yet",
+   "status": "skipped: the AI analyst doubted it",
    "px0": 14.34,
    "px": 14.34,
-   "move_pct": 0.0
+   "move_pct": 0.0,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Weeks-long rally already happened; no new catalyst and exchange closed"
+   }
   },
   {
    "id": "N082531-9",
@@ -299,11 +381,11 @@
   }
  ],
  "stats": {
-  "last_hour": 2,
-  "positive": 2,
+  "last_hour": 1,
+  "positive": 1,
   "negative": 0,
-  "today": 11,
-  "median_lag_min": 55.2,
+  "today": 14,
+  "median_lag_min": 52.3,
   "new_this_scan": 0
  }
 }

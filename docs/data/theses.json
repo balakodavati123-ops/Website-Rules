@@ -1,4 +1,85 @@
 {
+ "F261124-78": {
+  "horizon": "daily",
+  "headline": "Buy 25,450 CE, Buy 25,450 PE \u00b7 NIFTY 2026-12-01",
+  "news": [
+   "US markets averaged +4.75% at the 23/11 close.",
+   "Asia averaged +1.83%.",
+   "Brent crude 86.4 (-6.67%).",
+   "Japan core inflation picks up, makes case for BoJ rate hike stronger (CNBC-TV18)",
+   "Gold price crash: Yellow metal and silver slump over 4% each on MCX (CNBC-TV18)",
+   "Muthoot Finance heads for worst week since April 2025 as gold rout triggers sell-off (CNBC-TV18)",
+   "6 companies filed results or hold board meetings today."
+  ],
+  "data": [
+   "NIFTY 25,350, -1.75% on the previous close. India VIX 17.7.",
+   "Implied volatility at the money 16.6% a year. Over 7 days to 2026-12-01 that prices a one-standard-deviation move of about \u00b1584 points (\u00b12.3%), so the market gives roughly a 68% chance of finishing between 24,766 and 25,933.",
+   "Option positioning: put-to-call ratio 0.7, largest call open interest at 26,000 (a ceiling), largest put open interest at 24,000 (a floor), max pain 26,000.",
+   "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+   "Our forecast for today: Bullish (score +0.32); likely range 25,094 to 25,659.",
+   "Conditions at 10:00 (Normal confidence): NIFTY opened +2.29%: a news-sized gap; the first 45 minutes covered 2.56% (high to low): the market is moving; NIFTY is -2.23% from its open by 10:00; market-wide news today: Gold price crash: Yellow metal and silver slump over 4% each on MCX; Japan core inflation picks up, makes case for BoJ rate hike stronger; India VIX is in the top fifth of its year (81.0th percentile) and not rising.",
+   "Strike leans 2 strikes down with the morning's move from the open (-2.23%), which is reversing the gap: the put is in the money, so a continued move pays on that leg more than the other leg loses; a sharp turn the other way still pays through the other leg. Some news points the other way (1).",
+   "The quant chose strike 25,450 from 5 strikes: cost 504.5 points, 0.85x the move the market expects; it pays beyond 25,954 up (2.39%) or 24,946 down (1.59%); calls and puts together delta -0.07; spreads up to 0.7%.",
+   "Exits (unchanged): take profit at 50% above the cost, stop at 35% below it, out by 15:15.",
+   "The historical backtest disagrees with trading this every day: replayed on 907 near-expiry days since 2022 with model prices from India VIX, this exact rule won 24.0% of days and averaged Rs -1254.3 a day (total Rs -1137647); the desk's live record decides from here.",
+   "Trained rule: buy at 10:00, after watching the first 45 minutes on this week's expiry, strike chosen by the quant, when movement days: VIX rising, a big gap or strong news (the CEO's rule).",
+   "Backtest 2022-2024 (15-minute bars, model prices from India VIX): None trades, None% won, average Rs None; out of sample 2025-2026: None trades, None% won, average Rs None.",
+   "Days like today (None most similar): None% won, average Rs None. ."
+  ],
+  "strategy": "Buy the at-the-money call and put.",
+  "why": [
+   "Used when a big move is plausible but its direction is not: either leg can pay for both. It loses if the index drifts, because time decay eats the premium."
+  ],
+  "numbers": [
+   [
+    "Net debit",
+    "504.5 points = \u20b932,792 per lot",
+    "What you receive (or pay) up front"
+   ],
+   [
+    "Most you can make",
+    "\u20b9468,048",
+    "At expiry, if everything goes right"
+   ],
+   [
+    "Most you can lose",
+    "\u20b932,724",
+    "At expiry, if everything goes wrong (fixed by the bought options)"
+   ],
+   [
+    "Break-even at expiry",
+    "24,946 and 25,954",
+    "Where the structure stops losing money"
+   ],
+   [
+    "Chance of profit at expiry",
+    "39%",
+    "From the options market's own implied volatility; not our edge, the market's odds"
+   ],
+   [
+    "Expected move to expiry",
+    "\u00b1584 points",
+    "7 days at 16.6% implied volatility"
+   ],
+   [
+    "Reward for the risk",
+    "14.30 to 1",
+    "Best case divided by worst case"
+   ],
+   [
+    "Margin the broker asks",
+    "\u20b932,662",
+    "26% of the account (Upstox margin calculator)"
+   ],
+   [
+    "Our exit levels",
+    "Take profit at \u20b916,396, cut at \u20b911,477",
+    "Rupees on one lot, before the exit rule below"
+   ]
+  ],
+  "risk": "Take profit at 50% of the debit, cut at 35%, and be flat by 15:15 whatever happens. Fails when: A quiet day. The cost of both options is the most you can lose.",
+  "viability": "One lot of 65 needs \u20b932,662 of margin, checked with the broker's calculator when the trade was booked."
+ },
  "M261123-77": {
   "horizon": "intraday",
   "headline": "Crude oil mini long",
@@ -2646,7 +2727,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9242",
-    "0.19% of the account"
+    "0.20% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",

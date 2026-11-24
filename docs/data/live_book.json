@@ -6,7 +6,7 @@
  },
  "seq": 0,
  "diag": {
-  "at": "09:33",
+  "at": "12:01",
   "effort": 2,
   "setups_on": [
    "news",
@@ -43,7 +43,7 @@
   "skipped": {
    "AXISBANK": "no intraday margin left"
   },
-  "news_names": 0,
-  "headline_names": 13
+  "news_names": 2,
+  "headline_names": 14
  }
 }
