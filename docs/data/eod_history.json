@@ -34,5 +34,14 @@
   "win_rate": 35,
   "pnl": 6320.16,
   "equity": 124277.03
+ },
+ {
+  "day": "2026-11-24",
+  "trades": 1,
+  "closed": 0,
+  "wins": 0,
+  "win_rate": null,
+  "pnl": 0.0,
+  "equity": 124277.03
  }
 ]

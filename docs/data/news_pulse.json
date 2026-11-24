@@ -1,54 +1,429 @@
 {
- "updated_at": "2026-11-24T12:37:20+05:30",
- "scans": 1003,
+ "updated_at": "2026-11-24T18:16:01+05:30",
+ "scans": 1189,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "12:37:20"
+   "at": "18:16:01"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "12:37:20"
+   "at": "18:16:01"
   },
   "Moneycontrol": {
    "ok": true,
    "items": 15,
-   "at": "12:37:20"
+   "at": "18:16:01"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "12:37:20"
+   "at": "18:16:01"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "12:37:20"
+   "at": "18:16:01"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "12:37:20"
+   "at": "18:16:01"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "12:37:20"
+   "at": "18:16:01"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "12:37:20"
+   "at": "18:16:01"
   },
   "Google News": {
    "ok": true,
-   "items": 6,
-   "at": "12:37:20"
+   "items": 8,
+   "at": "18:16:01"
   }
  },
  "signals": [
+  {
+   "id": "N181601-33",
+   "t": "18:16:01",
+   "ts": 1795524361.860038,
+   "pub": "18:14",
+   "lag_s": 114,
+   "symbol": "LLOYDSME",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "acquisition"
+   ],
+   "headline": "LLOYDSME: Acquisition",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/LLOYDSME_24112026181359_20261124_Intimation.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N175557-32",
+   "t": "17:55:57",
+   "ts": 1795523157.107729,
+   "pub": "17:52",
+   "lag_s": 224,
+   "symbol": "PAVNAIND",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "acquisition"
+   ],
+   "headline": "PAVNAIND: Acquisition",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/PAVNA_24112026175119_DisclosurePES24112026sd.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N173548-31",
+   "t": "17:35:48",
+   "ts": 1795521948.053043,
+   "pub": "17:30",
+   "lag_s": 312,
+   "symbol": "LUMINO",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "LUMINO: Rescission/termination(s)",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/LUMINO123_24112026173014_Reg_30_Intimation.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N172542-30",
+   "t": "17:25:42",
+   "ts": 1795521342.125131,
+   "pub": "17:21",
+   "lag_s": 237,
+   "symbol": "VALUEIND",
+   "tone": "negative",
+   "score": -3.5,
+   "emotion": "Fear",
+   "why": [
+    "insolvency"
+   ],
+   "headline": "VALUEIND: Corporate Insolvency Resolution Process",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/VALUEIND_24112026171419_Value_VGD_Intimation_S.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N172542-29",
+   "t": "17:25:42",
+   "ts": 1795521342.125131,
+   "pub": "17:16",
+   "lag_s": 546,
+   "symbol": "POONAWALLA",
+   "tone": "positive",
+   "score": 2.6,
+   "emotion": "Optimism",
+   "why": [
+    "raises target"
+   ],
+   "headline": "Poonawalla Fincorp share price: After 25% jump in 1 month, JM Financial sees 21% further upside, raises target",
+   "source": "Mint",
+   "link": "https://www.livemint.com/market/stock-market-news/poonawalla-fincorp-share-price-after-25-jump-in-1-month-jm-financial-sees-21-further-upside-raises-target-11795515723611.html",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N170538-28",
+   "t": "17:05:38",
+   "ts": 1795520138.97811,
+   "pub": "16:58",
+   "lag_s": 458,
+   "symbol": "DICIND",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "filing: negative"
+   ],
+   "headline": "DICIND: Action(s) initiated or orders passed",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/DICIND_24112026165733_Sd_Disclosure_TPO_Order_23112026.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N170538-27",
+   "t": "17:05:38",
+   "ts": 1795520138.97811,
+   "pub": "17:00",
+   "lag_s": 298,
+   "symbol": "RUNWALENTR",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "RUNWALENTR: Resignation",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/RUNWAL1978_24112026165848_Reg_30For24112026BSRResignation.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N165538-26",
+   "t": "16:55:38",
+   "ts": 1795519538.559758,
+   "pub": "16:50",
+   "lag_s": 334,
+   "symbol": "ASTRON",
+   "tone": "negative",
+   "score": -3.5,
+   "emotion": "Fear",
+   "why": [
+    "insolvency"
+   ],
+   "headline": "ASTRON: Corporate Insolvency Resolution Process",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/ASTRON_24112026164957_Letter-_8th_meeting_Adjourned.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N164531-25",
+   "t": "16:45:31",
+   "ts": 1795518931.394965,
+   "pub": "16:43",
+   "lag_s": 104,
+   "symbol": "HEXAGON",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "HEXAGON: Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/HEXAGONNUTRITION_24112026164216_HNL-Promoter-NK.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N164531-24",
+   "t": "16:45:31",
+   "ts": 1795518931.394965,
+   "pub": "16:44",
+   "lag_s": 45,
+   "symbol": "FLAIR",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "FLAIR: Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/flair2016_24112026164436_BSE_NSE_Intimation_for_Transfer_of_FCIPL_Shares.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N155524-23",
+   "t": "15:55:24",
+   "ts": 1795515924.058397,
+   "pub": "15:53",
+   "lag_s": 104,
+   "symbol": "VASCONEQ",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "VASCONEQ: Awarding of order(s)/contract(s)",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/VASCONEQ_24112026155249_24112026LetterofIntent_Kanakia_Sd.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "ai": {
+    "verdict": "doubt",
+    "why": "Order filing gives no size or value; exchange was closed today"
+   }
+  },
+  {
+   "id": "N145757-22",
+   "t": "14:57:57",
+   "ts": 1795512477.862824,
+   "pub": "14:55",
+   "lag_s": 122,
+   "symbol": "TURTLEMINT",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "filing: negative"
+   ],
+   "headline": "TURTLEMINT: Action(s) initiated or orders passed",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/TURTLEMINT_24112026145541_TFS_GST_Notice_Intimation.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "ai": {
+    "verdict": "doubt",
+    "why": "Filing gives no details of the action or amount; exchange is closed"
+   }
+  },
+  {
+   "id": "N145757-21",
+   "t": "14:57:57",
+   "ts": 1795512477.862824,
+   "pub": "14:57",
+   "lag_s": 22,
+   "symbol": "AFFORDABLE",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "AFFORDABLE: Bagging/Receiving of orders/contracts",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/AFFORDABLE_24112026145510_signed24112026Reg_30ReceiptofPO.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "ai": {
+    "verdict": "doubt",
+    "why": "Order filing gives no size or value; exchange is closed"
+   }
+  },
+  {
+   "id": "N142520-20",
+   "t": "14:25:20",
+   "ts": 1795510520.363314,
+   "pub": "14:25",
+   "lag_s": 15,
+   "symbol": "LOKESHMACH",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "LOKESHMACH: General Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/LOKESHMACH_24112026142303_sdFinal.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "ai": {
+    "verdict": "doubt",
+    "why": "Vague general-updates filing; exchange is closed"
+   }
+  },
+  {
+   "id": "N135147-19",
+   "t": "13:51:47",
+   "ts": 1795508507.012463,
+   "pub": "13:02",
+   "lag_s": 2959,
+   "symbol": "TATASTEEL",
+   "tone": "negative",
+   "score": -3.9,
+   "emotion": "Fear",
+   "why": [
+    "crash"
+   ],
+   "headline": "APL shares crash 21% on Tata Steel deal - Ahmedabad Mirror",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxONE1NVFpoTUtxY2dsN1ppdGJZOE9EbnQwVEhaRmtwUHR0S0I3NmZWM0cxZDFKOW5pRXgxS2xwSU01UWlaZ2EySHYtVDE3UVdoTm1MYmI5bzV5QldsUTI0RGVxTkk4TXZkSGtCbnY2QVVtczJrM3hxZWtqbmtnZ3hRTEVKOUh1SjV4bFN6ZQ?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "ai": {
+    "verdict": "doubt",
+    "why": "Headline is about APL's crash and is old news already priced in"
+   }
+  },
+  {
+   "id": "N134119-18",
+   "t": "13:41:19",
+   "ts": 1795507879.945849,
+   "pub": "13:20",
+   "lag_s": 1266,
+   "symbol": "BHARTIARTL",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "penalty"
+   ],
+   "headline": "Bharti Airtel faces Rs. 7,96,000 penalty for subscriber verification norm breach - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUE03U0dkTVBaRERqY3JzcTZFeTFPTEE4eTkwTG9OcGluYU5KM2U2a0llUTdWR1pjREZrd3FzSmpNZk1UZ1NOMTA2c0Y1MllnWVdmRGw5a3kxejZZa1NPMm5MTUFFMUN1YTkxTjlnMlRfcDh1U0hXd0ozWlkxUmg4ZDEzeHFJUjJreDNtX0ZGMV9jMy1mSlNVTjNyd0ZHcUNrVEpPN21xS09BVHhnRUFiQTBXWnNVVDQ?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "ai": {
+    "verdict": "doubt",
+    "why": "Penalty is small for Airtel's size and not material"
+   }
+  },
+  {
+   "id": "N132643-17",
+   "t": "13:26:43",
+   "ts": 1795507003.007946,
+   "pub": "13:25",
+   "lag_s": 89,
+   "symbol": "KALPATARU",
+   "tone": "positive",
+   "score": 3,
+   "emotion": "Optimism",
+   "why": [
+    "approval",
+    "merger"
+   ],
+   "headline": "Kalpataru 's merger scheme receives regulatory approval - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPQm1aZVdUZ3gybnJTUVNLd0tvWTgyTEdCYkVhUnYwcjBiLW0tamdYNENub2dLeFBweVdLRnhGS1A3cEpzMVFkSnNCZ0RKVU14d2s4a2NZYmMwcEZCU29USjlZdkRscG9ERVFqcjlHYmhYckZCdGhHeXJwMmRRSmNleDUtQkdROVp0TXhtYnByZWs0UG9MeE5tcDBYVQ?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "ai": {
+    "verdict": "confirm",
+    "why": "Specific, fresh regulatory approval of merger scheme; exchange shut today"
+   }
+  },
+  {
+   "id": "N131918-16",
+   "t": "13:19:18",
+   "ts": 1795506558.275532,
+   "pub": "13:17",
+   "lag_s": 105,
+   "symbol": "KALPATARU",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "KALPATARU: Scheme of Arrangement",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/ravi_sah_24112026131637_Reg_30_disclosure_-_RD_order_for_merger_of_K_Hills.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "ai": {
+    "verdict": "confirm",
+    "why": "Specific, fresh regulatory approval of merger scheme; exchange shut today"
+   }
+  },
   {
    "id": "N120728-15",
    "t": "12:07:28",
@@ -411,11 +786,11 @@
   }
  ],
  "stats": {
-  "last_hour": 1,
-  "positive": 1,
-  "negative": 0,
-  "today": 15,
-  "median_lag_min": 39.5,
-  "new_this_scan": 0
+  "last_hour": 5,
+  "positive": 4,
+  "negative": 1,
+  "today": 33,
+  "median_lag_min": 5.2,
+  "new_this_scan": 1
  }
 }

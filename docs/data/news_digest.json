@@ -1,32 +1,42 @@
 {
  "mood": "mixed",
- "brief": "NSE and BSE are closed today for Guru Nanak Jayanti, with MCX trading resuming in the evening, so Indian equity prices do not move. Global markets rallied hard after Jensen Huang's return to Nvidia, but India's last session ended with a bank-led fall and Nifty down 1.75%.",
+ "brief": "Indian exchanges were shut today for Guru Nanak Jayanti, so Sensex and Nifty did not trade after Monday's 1,484-point fall. Global markets rebounded on Nvidia's surge, but US tech futures are mixed as investors test the rally.",
  "themes": [
   "Indian markets closed for holiday",
   "Nvidia-led global rebound",
-  "Banks drag India's last session",
-  "Two IPOs lined up for December"
+  "Tata Motors and Hyundai price hikes",
+  "Two December IPOs lined up"
  ],
  "companies": [
   {
-   "name": "HDFC Bank",
-   "tone": "negative",
-   "why": "Slips to 2.5-year low on legal and leadership woes"
+   "name": "Tata Motors",
+   "tone": "neutral",
+   "why": "Passenger vehicle prices to rise from December 1"
   },
   {
-   "name": "Google Cloud India",
+   "name": "Hyundai",
    "tone": "neutral",
-   "why": "Rejects huge layoffs claim; confirms 30 roles cut"
+   "why": "Car prices to rise from December 1"
+  },
+  {
+   "name": "Navneet Education",
+   "tone": "positive",
+   "why": "Prabhudas Lilladher rates Buy, target Rs 182"
+  },
+  {
+   "name": "Jindal Drilling and Industries",
+   "tone": "positive",
+   "why": "Anand Rathi rates Buy, target Rs 960"
   }
  ],
- "global": "Nasdaq gained about 6.5% and Taiwan led an Asian rebound of 9% after Huang was reinstated, while the US blacklisted Megaspeed over the Nvidia scandal.",
+ "global": "Nvidia shares rose about 31% on Jensen Huang's return, lifting Asian shares and Wall Street, while the US blacklisted an Alibaba-owned company.",
  "risks": [
-  "Global rebound may not hold",
-  "Indian banks remain weak",
-  "Politics and regulation around Nvidia"
+  "Nvidia-led rally may fade",
+  "Indian banks and metals stay weak after Monday's fall",
+  "Price hikes may dampen car demand"
  ],
- "time": "24 Nov 12:21",
- "at": 1795503078.938391,
+ "time": "24 Nov 16:21",
+ "at": 1795517505.423574,
  "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
  "n": 40

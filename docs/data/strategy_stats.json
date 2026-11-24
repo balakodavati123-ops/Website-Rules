@@ -2,13 +2,13 @@
  {
   "desk": "COMMODITY",
   "strategy": "mcx_momentum",
-  "closed": 12,
+  "closed": 13,
   "wins": 5,
-  "win_rate": 41.7,
-  "pnl_rs": -2163.11,
-  "avg_rs": -180.26,
-  "t_stat": -1.07,
-  "confidence": 14.2,
+  "win_rate": 38.5,
+  "pnl_rs": -2504.26,
+  "avg_rs": -192.64,
+  "t_stat": -1.24,
+  "confidence": 10.8,
   "verdict": "COLLECTING"
  },
  {

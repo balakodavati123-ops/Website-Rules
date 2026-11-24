@@ -1,98 +1,8 @@
 {
- "updated_at": "2026-11-24T12:38:10+05:30",
+ "updated_at": "2026-11-24T12:38:52+05:30",
  "today": {
-  "at": "12:38:10",
-  "fut": "NIFTY FUT 29 DEC 26",
-  "rules": {
-   "slope_bars": 3,
-   "cooldown_min": 30,
-   "stop": 0.25,
-   "first": "09:21",
-   "last": "15:00",
-   "square_off": "15:20",
-   "breach": "close"
-  },
-  "candles": 10,
-  "seeded": false,
-  "source": "1-minute bars built from live quotes (Upstox candles unavailable)",
-  "warmup": {
-   "needed": 12,
-   "from": "12:06",
-   "vwap_anchor": "12:06"
-  },
-  "last": [
-   {
-    "end": "12:09",
-    "close": 25530.0,
-    "ema9": 25530.0,
-    "vwap": 25683.51
-   },
-   {
-    "end": "12:12",
-    "close": 25530.0,
-    "ema9": 25530.0,
-    "vwap": 25683.51
-   },
-   {
-    "end": "12:15",
-    "close": 25530.0,
-    "ema9": 25530.0,
-    "vwap": 25683.51
-   },
-   {
-    "end": "12:18",
-    "close": 25530.0,
-    "ema9": 25530.0,
-    "vwap": 25683.51
-   },
-   {
-    "end": "12:21",
-    "close": 25530.0,
-    "ema9": 25530.0,
-    "vwap": 25683.51
-   },
-   {
-    "end": "12:24",
-    "close": 25530.0,
-    "ema9": 25530.0,
-    "vwap": 25683.51
-   },
-   {
-    "end": "12:27",
-    "close": 25530.0,
-    "ema9": 25530.0,
-    "vwap": 25683.51
-   },
-   {
-    "end": "12:30",
-    "close": 25530.0,
-    "ema9": 25530.0,
-    "vwap": 25683.51
-   },
-   {
-    "end": "12:33",
-    "close": 25530.0,
-    "ema9": 25530.0,
-    "vwap": 25683.51
-   },
-   {
-    "end": "12:36",
-    "close": 25530.0,
-    "ema9": 25530.0,
-    "vwap": 25683.51
-   }
-  ],
-  "crosses": [],
-  "now": {
-   "end": "12:36",
-   "close": 25530.0,
-   "ema9": 25530.0,
-   "vwap": 25683.51,
-   "side": "EMA9 below VWAP (puts side)",
-   "vwap_slope": -0.0
-  }
+  "note": "No F&O trading today: NSE is closed for Guru Nanak Jayanti."
  },
- "paused": false,
  "books": {
   "ema_vwap": {
    "closed": 0,
@@ -118,8 +28,8 @@
    "worst_rs": 4447,
    "sessions": 3,
    "since": "2026-11-19",
-   "open": 1,
-   "open_rs": -285,
+   "open": 0,
+   "open_rs": 0,
    "trades": [
     {
      "id": "F261119-37",
@@ -208,36 +118,6 @@
        "entry": 66.35,
        "last": 221.3,
        "key": "NSE_FO|64478"
-      }
-     ]
-    },
-    {
-     "id": "F261124-78",
-     "day": "2026-11-24",
-     "opened": "10:00:06",
-     "closed": "",
-     "label": "NIFTY long straddle \u00b7 12-01",
-     "status": "OPEN",
-     "pnl_rs": -284.75,
-     "why": "",
-     "entry": -504.5,
-     "exit_premium": null,
-     "legs": [
-      {
-       "side": "B",
-       "strike": 25450.0,
-       "kind": "CE",
-       "entry": 222.5,
-       "last": 221.3,
-       "key": "NSE_FO|47808"
-      },
-      {
-       "side": "B",
-       "strike": 25450.0,
-       "kind": "PE",
-       "entry": 282.0,
-       "last": 280.05,
-       "key": "NSE_FO|47809"
       }
      ]
     }
