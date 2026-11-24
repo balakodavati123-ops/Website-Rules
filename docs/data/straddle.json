@@ -1,6 +1,59 @@
 {
- "updated_at": "2026-11-23T22:13:04+05:30",
- "today": {},
+ "updated_at": "2026-11-24T09:33:45+05:30",
+ "today": {
+  "ok": false,
+  "why": "no straddle rule beat time decay and costs in training (2592 rules tested); on the 40 days most like today the trade averaged Rs -1,553",
+  "match": true,
+  "knn": {
+   "k": 40,
+   "avg_rs": -1553.0,
+   "win_rate": 15.0,
+   "dates": [
+    "2026-11-11",
+    "2025-04-11",
+    "2024-11-25",
+    "2026-11-05",
+    "2022-06-27"
+   ]
+  },
+  "features": {
+   "vix": 17.7,
+   "vix_pct": 81.0,
+   "rv_iv": 1.0,
+   "gap": 2.29,
+   "vix_chg": 0.0,
+   "dte": 7,
+   "prev_close": 25349.65
+  },
+  "strike": 25350,
+  "expiry": "2026-12-01",
+  "entry": "10:00",
+  "target": 0.4,
+  "stop": 0.3,
+  "rule": {
+   "entry": "10:00",
+   "expiry": "this week",
+   "strike": "at the money",
+   "strike_code": "atm",
+   "target": 0.4,
+   "stop": 0.3,
+   "exit_by": "15:15",
+   "filter": "all"
+  },
+  "train": {
+   "n": 738,
+   "avg_rs": -1364.5,
+   "win_rate": 17.2,
+   "pf": 0.26
+  },
+  "test": {
+   "n": 467,
+   "avg_rs": -1669.0,
+   "win_rate": 15.6,
+   "pf": 0.21
+  },
+  "at": "09:33"
+ },
  "playbook": {
   "trained_at": "2026-11-23 22:11",
   "data": {

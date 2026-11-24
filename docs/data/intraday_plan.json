@@ -1,73 +1,73 @@
 {
- "day": "2026-11-23",
- "built_at": "09:10",
+ "day": "2026-11-24",
+ "built_at": "09:27",
  "stage": 2,
  "tone": {
-  "label": "Weak",
-  "score": -3.29,
+  "label": "Positive",
+  "score": 3.58,
   "notes": [
-   "US markets averaged -3.64% at the 20/11 close.",
-   "Asia averaged -2.77%.",
-   "Brent crude 89.78 (-3.01%).",
-   "Dollar-rupee 92.44 (-0.91%).",
-   "India VIX 17.32: normal."
+   "US markets averaged +4.75% at the 23/11 close.",
+   "Asia averaged +1.83%.",
+   "Brent crude 86.4 (-6.67%).",
+   "Dollar-rupee 92.9 (+0.24%).",
+   "India VIX 17.70: normal."
   ],
-  "as_of": "2026-11-20"
+  "as_of": "2026-11-23"
  },
  "nifty": {
-  "last": 25929.15,
-  "chg_pct": 0.5
+  "last": 25349.65,
+  "chg_pct": -1.75
  },
  "world": [
   {
    "name": "S&P 500",
-   "last": 6910.39,
-   "chg_pct": -3.7
+   "last": 7237.17,
+   "chg_pct": 4.73
   },
   {
    "name": "Nasdaq",
-   "last": 22617.73,
-   "chg_pct": -5.28
+   "last": 24089.56,
+   "chg_pct": 6.51
   },
   {
    "name": "Dow Jones",
-   "last": 48147.33,
-   "chg_pct": -1.93
+   "last": 49595.31,
+   "chg_pct": 3.01
   },
   {
    "name": "US fear index (VIX)",
-   "last": 35.89,
-   "chg_pct": 26.2
+   "last": 26.62,
+   "chg_pct": -25.83
   },
   {
    "name": "Nikkei 225",
-   "last": 56436.65,
-   "chg_pct": -5.06
+   "last": 58734.7,
+   "chg_pct": 4.07
   },
   {
    "name": "Hang Seng",
-   "last": 22299.95,
-   "chg_pct": -0.49
+   "last": 22292.35,
+   "chg_pct": -0.41
   },
   {
    "name": "Shanghai",
-   "last": 3499.02,
-   "chg_pct": -0.98
+   "last": 3555.49,
+   "chg_pct": 0.47
   },
   {
    "name": "FTSE 100",
-   "last": 10346.3,
-   "chg_pct": -1.02
+   "last": 10480.8,
+   "chg_pct": 1.3
   },
   {
    "name": "DAX",
-   "last": 24802.78,
-   "chg_pct": -2.6
+   "last": 25337.27,
+   "chg_pct": 2.15
   },
   {
    "name": "Nifty 50",
-   "last": 25800.6,
-   "chg_pct": 1.12
+   "last": 25349.65,
+   "chg_pct": -1.75
   }
  ],
  "events": [],
@@ -105,77 +105,55 @@
  ],
  "headlines": [
   {
-   "headline": "Go Digit gets IFSCA approval to set up insurance office in GIFT City",
-   "category": "APPROVAL",
-   "source": "CNBC-TV18",
-   "time": "23 Nov 09:09"
-  },
-  {
-   "headline": "Atul's US subsidiary faces probe over alleged evasion of anti-dumping duties on 2,4-D imports",
-   "category": "LEGAL/REGULATORY",
-   "source": "CNBC-TV18",
-   "time": "23 Nov 09:09"
-  },
-  {
-   "headline": "Paytm to invest up to \u20b9200 crore in Funding Societies' subsidiaries, acquires 19% in CardUp",
-   "category": "DEAL/ORDER",
-   "source": "CNBC-TV18",
-   "time": "23 Nov 09:09"
-  },
-  {
-   "headline": "Voltas signs JV agreement with Atomberg for room AC compressors, to acquire 50% stake",
-   "category": "DEAL/ORDER",
-   "source": "CNBC-TV18",
-   "time": "23 Nov 09:09"
-  },
-  {
-   "headline": "US Market Crash: Dow Jones tanks 1,100 points, nears technical correction - What is plaguing Wall Street?",
-   "category": "CRASH/SHOCK",
-   "source": "CNBC-TV18",
-   "time": "23 Nov 09:09"
-  },
-  {
-   "headline": "'More To Come' - IMF Managing Director warns the AI sell-off may not be over yet",
-   "category": "CRASH/SHOCK",
-   "source": "CNBC-TV18",
-   "time": "23 Nov 09:09"
-  },
-  {
-   "headline": "Gold falls further, set for worst week since March as Fed rate hike worries rise",
+   "headline": "Japan core inflation picks up, makes case for BoJ rate hike stronger",
    "category": "RBI-POLICY",
    "source": "CNBC-TV18",
-   "time": "23 Nov 09:09"
+   "time": "24 Nov 09:27"
   },
   {
-   "headline": "Nikkei, Kospi fall over 4% each; Asian markets crash as AI sell-off deepens despite record Anthropic IPO",
+   "headline": "Gold price crash: Yellow metal and silver slump over 4% each on MCX",
    "category": "CRASH/SHOCK",
    "source": "CNBC-TV18",
-   "time": "23 Nov 09:09"
+   "time": "24 Nov 09:27"
+  },
+  {
+   "headline": "Muthoot Finance heads for worst week since April 2025 as gold rout triggers sell-off",
+   "category": "CRASH/SHOCK",
+   "source": "CNBC-TV18",
+   "time": "24 Nov 09:27"
+  },
+  {
+   "headline": "Anthropic tumbles more than 10% in premarket trade as AI slump engulfs markets",
+   "category": "CRASH/SHOCK",
+   "source": "CNBC-TV18",
+   "time": "24 Nov 09:27"
+  },
+  {
+   "headline": "Global AI Sell-off: Taiwan takes action yet again to support collapsing stock market",
+   "category": "CRASH/SHOCK",
+   "source": "CNBC-TV18",
+   "time": "24 Nov 09:27"
+  },
+  {
+   "headline": "Kospi slumps nearly 4%; Asian markets fall as Wall Street sell-off deepens",
+   "category": "CRASH/SHOCK",
+   "source": "CNBC-TV18",
+   "time": "24 Nov 09:27"
+  },
+  {
+   "headline": "Gold, silver recover after sharp sell-off: Key triggers for prices this week",
+   "category": "CRASH/SHOCK",
+   "source": "CNBC-TV18",
+   "time": "24 Nov 09:27"
+  },
+  {
+   "headline": "Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues",
+   "category": "CRASH/SHOCK",
+   "source": "CNBC-TV18",
+   "time": "24 Nov 09:27"
   }
  ],
  "watch": [
-  {
-   "symbol": "MARKSANS",
-   "why": [
-    "positive filing"
-   ],
-   "prev_close": 291.15,
-   "long_above": 292.9,
-   "short_below": 285.33,
-   "stop_pct": 1.0,
-   "bias": "long"
-  },
-  {
-   "symbol": "TATASTEEL",
-   "why": [
-    "positive filing"
-   ],
-   "prev_close": 178.0,
-   "long_above": 179.07,
-   "short_below": 174.44,
-   "stop_pct": 1.0,
-   "bias": "long"
-  },
   {
    "symbol": "SETCO",
    "why": [
@@ -202,113 +180,113 @@
    "note": "Pays only on a big move; the desk skips it when its cost does not fit the F&O limit"
   }
  ],
- "outlook": "Tone weak. 3 names in the news to watch; the desks act only when price confirms: a 2% move near the day's extreme (0.6% when a filing agrees) on real turnover.",
- "world_at": 1795405169.871518,
+ "outlook": "Tone positive. 1 names in the news to watch; the desks act only when price confirms: a 2% move near the day's extreme (0.6% when a filing agrees) on real turnover.",
+ "world_at": 1795492655.9048939,
  "gaps": {
   "up": [
    {
-    "symbol": "RATNAVEER",
-    "price": 390.0,
-    "chg_pct": 5.33
+    "symbol": "PERMAGN",
+    "price": 1335.9,
+    "chg_pct": 18.35
    },
    {
-    "symbol": "GROWWHOSPI",
-    "price": 52.77,
-    "chg_pct": 4.12
+    "symbol": "HMAAGRO",
+    "price": 40.03,
+    "chg_pct": 18.05
    },
    {
-    "symbol": "SHRIRAMFIN",
-    "price": 1009.9,
-    "chg_pct": 3.9
+    "symbol": "WELSPLSOL",
+    "price": 47.66,
+    "chg_pct": 15.2
    },
    {
-    "symbol": "HDFCPVTBAN",
-    "price": 32.38,
-    "chg_pct": 3.48
+    "symbol": "HITECH",
+    "price": 85.63,
+    "chg_pct": 13.51
    },
    {
-    "symbol": "PVTBANIETF",
-    "price": 32.14,
-    "chg_pct": 3.28
+    "symbol": "THOMASCOOK",
+    "price": 129.39,
+    "chg_pct": 12.85
    },
    {
-    "symbol": "BANKIETF",
-    "price": 66.48,
-    "chg_pct": 2.74
+    "symbol": "ITI",
+    "price": 276.21,
+    "chg_pct": 12.41
    },
    {
-    "symbol": "BANKETF",
-    "price": 659.9,
-    "chg_pct": 2.72
+    "symbol": "SAMBHV",
+    "price": 176.9,
+    "chg_pct": 11.92
    },
    {
-    "symbol": "HDFCNIFBAN",
-    "price": 66.6,
-    "chg_pct": 2.71
+    "symbol": "INDIAGLYCO",
+    "price": 294.85,
+    "chg_pct": 11.54
    },
    {
-    "symbol": "BANKBEES",
-    "price": 669.37,
-    "chg_pct": 2.55
+    "symbol": "SCPL",
+    "price": 707.0,
+    "chg_pct": 11.25
    },
    {
-    "symbol": "SBIBANKNIF",
-    "price": 664.25,
-    "chg_pct": 2.54
+    "symbol": "WINDMACHIN",
+    "price": 354.0,
+    "chg_pct": 10.21
    }
   ],
   "down": [
    {
     "symbol": "APLAPOLLO",
-    "price": 1955.0,
-    "chg_pct": -7.85
+    "price": 1670.0,
+    "chg_pct": -21.29
    },
    {
-    "symbol": "PASHUPATI",
-    "price": 25.81,
-    "chg_pct": -5.04
-   },
-   {
-    "symbol": "HINDALCO",
-    "price": 901.5,
-    "chg_pct": -3.01
-   },
-   {
-    "symbol": "MAFANG",
-    "price": 221.5,
-    "chg_pct": -2.7
-   },
-   {
-    "symbol": "MASPTOP50",
-    "price": 91.78,
-    "chg_pct": -2.43
+    "symbol": "APOLLOPIPE",
+    "price": 489.6,
+    "chg_pct": -8.49
    },
    {
     "symbol": "TATASTEEL",
-    "price": 173.7,
-    "chg_pct": -2.42
+    "price": 163.0,
+    "chg_pct": -8.43
    },
    {
-    "symbol": "MONQ50",
-    "price": 216.89,
-    "chg_pct": -2.32
+    "symbol": "AMANTA",
+    "price": 204.97,
+    "chg_pct": -7.82
    },
    {
-    "symbol": "MON100",
-    "price": 298.89,
-    "chg_pct": -1.45
+    "symbol": "POKARNA",
+    "price": 655.6,
+    "chg_pct": -6.88
    },
    {
-    "symbol": "NETWEB",
-    "price": 4050.0,
-    "chg_pct": -1.11
+    "symbol": "FISCHER",
+    "price": 20.8,
+    "chg_pct": -6.85
    },
    {
-    "symbol": "GROWWRAIL",
-    "price": 26.54,
-    "chg_pct": -0.75
+    "symbol": "KMCSHIL",
+    "price": 189.94,
+    "chg_pct": -6.79
+   },
+   {
+    "symbol": "EPACK",
+    "price": 154.55,
+    "chg_pct": -6.7
+   },
+   {
+    "symbol": "SSWL",
+    "price": 490.45,
+    "chg_pct": -6.55
+   },
+   {
+    "symbol": "V2RETAIL",
+    "price": 151.61,
+    "chg_pct": -6.45
    }
   ],
-  "at": "09:12"
+  "at": "09:27"
  }
 }

@@ -1593,7 +1593,7 @@
  "ai": {
   "on": true,
   "mode": "scheduled",
-  "last": "23 Nov 16:21",
+  "last": "24 Nov 09:21",
   "next": "every hour from 09:20 to 16:20 IST on weekdays",
   "models": {
    "analyst": "Claude (your plan, scheduled)"
