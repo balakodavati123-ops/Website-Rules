@@ -1,6 +1,6 @@
 {
- "time": "24 Nov 15:21",
- "at": 1795513867.02778,
+ "time": "24 Nov 16:21",
+ "at": 1795517505.423574,
  "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
  "checks": {
@@ -55,6 +55,10 @@
   "LOKESHMACH": {
    "verdict": "doubt",
    "why": "Vague general-updates filing; exchange is closed"
+  },
+  "VASCONEQ": {
+   "verdict": "doubt",
+   "why": "Order filing gives no size or value; exchange was closed today"
   }
  }
 }

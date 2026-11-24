@@ -1,52 +1,42 @@
 {
  "mood": "mixed",
- "brief": "NSE and BSE are shut today for Guru Nanak Jayanti, so there is no Indian cash trading, while global markets stay buoyant after Nvidia's surge and gold extended gains. Several Indian company items are in focus, including Gland Pharma's USFDA clearance and South Indian Bank's RBI nod for an SBI Mutual Fund stake.",
+ "brief": "Indian exchanges were shut today for Guru Nanak Jayanti, so Sensex and Nifty did not trade after Monday's 1,484-point fall. Global markets rebounded on Nvidia's surge, but US tech futures are mixed as investors test the rally.",
  "themes": [
   "Indian markets closed for holiday",
-  "Nvidia-led global rally",
-  "USFDA clearance for Gland Pharma",
-  "Broker Buy calls"
+  "Nvidia-led global rebound",
+  "Tata Motors and Hyundai price hikes",
+  "Two December IPOs lined up"
  ],
  "companies": [
   {
-   "name": "Gland Pharma",
-   "tone": "positive",
-   "why": "Gets USFDA clearance for Visakhapatnam facility"
-  },
-  {
-   "name": "South Indian Bank",
-   "tone": "positive",
-   "why": "RBI nod for SBI Mutual Fund to acquire up to 9.99%"
-  },
-  {
-   "name": "Bajaj Finance",
-   "tone": "positive",
-   "why": "Emkay rates Buy with Rs 9000 target"
-  },
-  {
-   "name": "Tejas Networks",
-   "tone": "positive",
-   "why": "Emkay rates Buy with Rs 1100 target"
-  },
-  {
-   "name": "HDFC Bank",
-   "tone": "positive",
-   "why": "ICICI Securities rates Buy with Rs 1,850 target"
+   "name": "Tata Motors",
+   "tone": "neutral",
+   "why": "Passenger vehicle prices to rise from December 1"
   },
   {
    "name": "Hyundai",
    "tone": "neutral",
-   "why": "Car prices rise from December 1"
+   "why": "Car prices to rise from December 1"
+  },
+  {
+   "name": "Navneet Education",
+   "tone": "positive",
+   "why": "Prabhudas Lilladher rates Buy, target Rs 182"
+  },
+  {
+   "name": "Jindal Drilling and Industries",
+   "tone": "positive",
+   "why": "Anand Rathi rates Buy, target Rs 960"
   }
  ],
- "global": "Taiwan surged 9%, Kospi rose 7% and Nikkei nearly 5% after Nvidia shares soared over 30% on its CEO's reinstatement.",
+ "global": "Nvidia shares rose about 31% on Jensen Huang's return, lifting Asian shares and Wall Street, while the US blacklisted an Alibaba-owned company.",
  "risks": [
-  "Global rally may reverse",
-  "Tata Sons listing decision pending",
-  "Rupee and bond market volatility"
+  "Nvidia-led rally may fade",
+  "Indian banks and metals stay weak after Monday's fall",
+  "Price hikes may dampen car demand"
  ],
- "time": "24 Nov 15:21",
- "at": 1795513867.02778,
+ "time": "24 Nov 16:21",
+ "at": 1795517505.423574,
  "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
  "n": 40

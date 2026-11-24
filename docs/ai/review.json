@@ -1,7 +1,7 @@
 {
- "time": "23 Nov 16:21",
- "at": 1795431064.938936,
- "day": "2026-11-23",
+ "time": "24 Nov 16:21",
+ "at": 1795517505.423574,
+ "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
- "text": "What worked: Option long trades on NIFTY hit their targets (long straddle +Rs 4,883, long breakout +Rs 2,498), and Gold 1 g long, SGMART long and JLHL short also hit targets. The company paper result for the day is -Rs 354.\n\nWhat did not: Most gap-and-go and scalp trades were stopped out or timed out, and the Commodities desk lost on crude oil and natural gas. Two credit spreads were closed by the CEO at a loss. The COO notes flag no edge so far for Scalping, Commodities and Crypto desks. Paper results are not proof of an edge.\n\nWhat I am changing tomorrow: Treat headline signals about routine filings and already-priced moves as doubtful, and size down gap-and-go on a falling market.\n\nWatch tomorrow: Whether Wall Street's rebound holds, banks and metals after today's fall, and any further AI-trade weakness."
+ "text": "What worked: Nothing could be tested today. The company paper result was Rs 0 because NSE and BSE were shut for Guru Nanak Jayanti.\n\nWhat did not: The one trade, a NIFTY long straddle for 1 Dec, was marked VOID because NFO was closed and it was priced on the last session's frozen quotes, so it could never have filled. The COO notes still flag no edge so far for the Scalping and Crypto desks, though paper results are not proof of an edge.\n\nWhat I am changing tomorrow: Trust no signal or trade created on a holiday, and treat today's filings as unconfirmed until prices move on a trading day.\n\nWatch tomorrow: How Indian banks and metals open after Monday's sharp fall, whether the Nvidia-led rebound carries into Indian shares, and Tata Sons' board meeting on November 30."
 }
