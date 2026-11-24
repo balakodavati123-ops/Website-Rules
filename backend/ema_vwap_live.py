@@ -9,6 +9,12 @@ Same rules as the backtest (quant/src/research/ema_vwap.py, tests check the two 
   the same way over the last SLOPE_BARS candles, and skip any crossover within COOLDOWN_MIN minutes of the previous one (whipsaw).
   Exits: a 3-minute candle closes beyond EMA9 against the trade, an opposite crossover, the option down 25% (checked on every loop), 15:20.
   Entries 09:21-15:00, one position at a time, one lot; bought at the ask and sold at the bid from the live option chain, full charges.
+
+Candles: Upstox's 1-minute intraday candles when it serves them. When it does not (it returned nothing all day on 24 Nov 2026), the desk
+builds 1-minute bars from the live quotes of the future it reads every loop (about every 15 seconds): open/high/low/close from the last
+prices seen, volume from the change in the day's cumulative volume. If those bars start after the open (the engine restarted), VWAP is
+anchored with the exchange's session average traded price and volume at the first quote, so it still covers the whole session, and the
+EMA starts from the first close and needs WARMUP candles before any signal counts.
 """
 from __future__ import annotations
 
@@ -21,6 +27,7 @@ import thesis as T
 
 STRATEGY = "ema_vwap_cross"
 RULES = {"slope_bars": 3, "cooldown_min": 30, "stop": 0.25, "first": "09:21", "last": "15:00", "square_off": "15:20", "breach": "close"}
+WARMUP = 12                                                           # 3-minute candles (36 minutes) before a cold EMA is trusted
 
 
 def _m(t: str, d: int) -> str:
@@ -50,9 +57,11 @@ def three_minute(day_bars: dict, upto: str = "15:30") -> list[tuple]:
     return out
 
 
-def indicators(bars3: list[tuple], ema0: float | None) -> list[tuple]:
-    """[(start, end, o, h, l, c, ema9, vwap)]: EMA carried from ema0 (the previous session's last value), VWAP reset for the session."""
-    k, ema, pv, vv, rows = 0.2, ema0, 0.0, 0.0, []
+def indicators(bars3: list[tuple], ema0: float | None, vw0: tuple | None = None) -> list[tuple]:
+    """[(start, end, o, h, l, c, ema9, vwap)]: EMA carried from ema0 (the previous session's last value), VWAP reset for the session.
+    vw0 = (price x volume, volume) traded before the first bar, when the bars start after the open."""
+    k, ema, rows = 0.2, ema0, []
+    pv, vv = (float(vw0[0]), float(vw0[1])) if vw0 else (0.0, 0.0)
     for s, e, o, h, l, c, v in bars3:
         ema = c if ema is None else ema + k * (c - ema)
         w = v if v > 0 else 1.0
@@ -98,6 +107,34 @@ def seed_ema(get, token: str, key: str, today: str) -> float | None:
     return ind[-1][6] if ind else None
 
 
+def _state(book: dict, now: datetime) -> dict:
+    st = book.setdefault("ema_vwap_state", {})
+    if st.get("day") != now.strftime("%Y-%m-%d"):
+        st.clear()
+        st["day"] = now.strftime("%Y-%m-%d")
+    return st
+
+
+def tick(book: dict, now: datetime, q: dict | None) -> None:
+    """Add one live quote of the future (last_price, volume = the day's cumulative volume, average_price) to today's 1-minute bars."""
+    st, t = _state(book, now), now.strftime("%H:%M")
+    px, cum = float((q or {}).get("last_price") or 0), float((q or {}).get("volume") or 0)
+    if px <= 0 or not ("09:15" <= t < "15:30"):
+        return
+    if "vw0" not in st:
+        atp = float((q or {}).get("average_price") or 0)
+        st["vw0"] = [round(atp * cum, 2), cum, t] if atp > 0 and cum > 0 else [0.0, 0.0, t]
+        st["cum"] = cum
+    dv = max(0.0, cum - float(st.get("cum") or cum))
+    st["cum"] = max(cum, float(st.get("cum") or 0))
+    qb = st.setdefault("qbars", {})
+    b = qb.get(t)
+    if b:
+        b[1], b[2], b[3], b[4] = max(b[1], px), min(b[2], px), px, b[4] + dv
+    else:
+        qb[t] = [px, px, px, px, dv]
+
+
 def _leg_px(rows: list[dict], strike: float, kind: str) -> tuple[float, float]:
     m = D._px(rows, strike, kind)
     return D._sell(m), D._buy(m)
@@ -106,23 +143,33 @@ def _leg_px(rows: list[dict], strike: float, kind: str) -> tuple[float, float]:
 def step(book: dict, now: datetime, ctx: dict, paused: set) -> dict:
     """ctx: {bars1: [[HH:MM, o, h, l, c, v]] today's 1-minute futures candles, ema0, chains: {expiry: rows}, expiry, lot, spot, room, vix, fut}.
     Manages the open EMA trade, then takes a new signal. Returns the view saved to ema_vwap.json."""
-    R, st = RULES, book.setdefault("ema_vwap_state", {})
-    day, hhmm = now.strftime("%Y-%m-%d"), now.strftime("%H:%M")
-    if st.get("day") != day:
-        st.clear()
-        st["day"] = day
-    bars = {b[0]: (float(b[1]), float(b[2]), float(b[3]), float(b[4]), float(b[5] or 0)) for b in ctx.get("bars1") or []}
-    rows = indicators(three_minute(bars, upto=hhmm), ctx.get("ema0"))
+    R, st = RULES, _state(book, now)
+    hhmm = now.strftime("%H:%M")
+    api = {b[0]: (float(b[1]), float(b[2]), float(b[3]), float(b[4]), float(b[5] or 0)) for b in ctx.get("bars1") or []}
+    qb = {k: tuple(v) for k, v in (st.get("qbars") or {}).items()}
+    ema0, vw0, warm = ctx.get("ema0"), None, 0
+    if api and min(api) <= "09:16":
+        bars, src = {**qb, **api}, "Upstox 1-minute candles" + (" + live quotes after the last candle" if qb and max(qb) > max(api) else "")
+    else:
+        bars, src = qb, "1-minute bars built from live quotes (Upstox candles unavailable)"
+        if qb and min(qb) > "09:20":                                  # started after the open: anchor VWAP on the session so far, warm the EMA up
+            vw0, ema0, warm = (st.get("vw0") or [0, 0])[:2], None, WARMUP
+    rows = indicators(three_minute(bars, upto=hhmm), ema0, vw0)
     sig = signals(rows, R["slope_bars"], R["cooldown_min"])
+    for s in sig:
+        if s["take"] and s["i"] < warm:
+            s["take"], s["why"] = False, f"skipped: EMA9 warming up ({warm} candles needed after a mid-session start)"
+    ready = ema0 is not None or warm > 0
     new = [s for s in sig if s["end"] > st.get("acted", "09:15")]
-    view = {"at": now.strftime("%H:%M:%S"), "fut": ctx.get("fut"), "rules": R, "candles": len(rows), "seeded": ctx.get("ema0") is not None,
+    view = {"at": now.strftime("%H:%M:%S"), "fut": ctx.get("fut"), "rules": R, "candles": len(rows), "seeded": ema0 is not None, "source": src,
+            "warmup": {"needed": warm, "from": min(qb) if qb else None, "vwap_anchor": (st.get("vw0") or [None, None, None])[2]} if warm else None,
             "last": [{"end": r[1], "close": round(r[5], 2), "ema9": round(r[6], 2), "vwap": round(r[7], 2)} for r in rows[-40:]],
             "crosses": [{"end": s["end"], "dir": "up" if s["up"] else "down", "taken": s["take"], "why": s["why"]} for s in sig if s["up"] or s["dn"]][-12:]}
     if rows:
         r = rows[-1]
         view["now"] = {"end": r[1], "close": round(r[5], 2), "ema9": round(r[6], 2), "vwap": round(r[7], 2), "side": "EMA9 above VWAP (calls side)" if r[6] > r[7] else "EMA9 below VWAP (puts side)",
                        "vwap_slope": round(r[7] - rows[-1 - R["slope_bars"]][7], 2) if len(rows) > R["slope_bars"] else None}
-    if not ctx.get("ema0"):
+    if not ready:
         view["note"] = "EMA9 could not be seeded from yesterday's futures candles; the desk waits rather than trade a cold EMA"
     late = _mins(hhmm) >= _mins(R["square_off"])
     # 1) the open position: mark it, stop on every loop, EMA9 breach / opposite cross at a new candle close, square off at 15:20
@@ -159,7 +206,7 @@ def step(book: dict, now: datetime, ctx: dict, paused: set) -> dict:
     # 2) a new filtered crossover opens a trade at the candle's close (bought at the ask on this loop)
     open_ = any(t.get("strategy") == STRATEGY and t["status"] == "OPEN" for t in book["trades"])
     for s in new:
-        if open_ or not s["take"] or STRATEGY in paused or not (R["first"] <= s["end"] <= R["last"]) or not ctx.get("ema0"):
+        if open_ or not s["take"] or STRATEGY in paused or not (R["first"] <= s["end"] <= R["last"]) or not ready:
             continue
         if _mins(hhmm) - _mins(s["end"]) > 3:
             continue                                                  # a signal older than one candle is stale (the engine was restarting)

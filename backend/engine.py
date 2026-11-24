@@ -941,12 +941,13 @@ def run() -> None:
                             ev_["ema0"] = EV.seed_ema(U._get, token, ev_["key"], today)
                         if time.time() - ev_["at"] >= 20:
                             ev_["bars"], ev_["at"] = U.intraday(token, ev_["key"], 1), time.time()
+                        EV.tick(xb, now, U.quotes([ev_["key"]], token).get(ev_["key"]))      # live-quote bars, used when Upstox serves no candles
                         view_ = EV.step(xb, now, {"bars1": ev_["bars"], "ema0": ev_["ema0"], "chains": chains, "expiry": exps[0], "lot": ctx["lot"], "spot": spot, "room": rm["FNO"],
                                                   "vix": vixq, "fut": ev_["name"]}, paused)
                         all_ = xb["trades"] + [t for t in archive.values() if t["id"] not in {x["id"] for x in xb["trades"]}]
                         save("ema_vwap.json", {"updated_at": now.isoformat(timespec="seconds"), "today": view_, "paused": EV.STRATEGY in paused,
                                                "books": {"ema_vwap": EV.record(all_, EV.STRATEGY), "straddle": EV.record(all_, "long_straddle")}, "backtest": ev_bt})
-                        info["ema_vwap"] = f"{view_.get('candles')} candles of {ev_['name']}, EMA9 {'seeded' if ev_['ema0'] else 'not seeded'}"
+                        info["ema_vwap"] = f"{view_.get('candles')} candles of {ev_['name']} from {view_.get('source')}, EMA9 {'seeded' if view_.get('seeded') else 'warming up' if view_.get('warmup') else 'not seeded'}"
                 except Exception as e:                        # a fault here must never stop the straddle desk
                     import traceback
                     traceback.print_exc()

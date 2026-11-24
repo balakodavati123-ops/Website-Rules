@@ -103,3 +103,40 @@ def test_record_keeps_the_two_books_apart():
           {"desk": "FNO", "strategy": "long_straddle", "status": "LOSS", "pnl_rs": -900, "day": "2026-11-24", "opened": "10:00:10", "id": "c"}]
     e, s = EV.record(tt, EV.STRATEGY), EV.record(tt, "long_straddle")
     assert (e["closed"], e["wins"], e["total_rs"], e["avg_rs"]) == (2, 1, 200, 100) and (s["closed"], s["total_rs"]) == (1, -900)
+
+
+def _run_on_quotes(start_min, today, ema0, atp_before=None):
+    """Drive the desk with live quotes every 15 seconds and no Upstox candles, as on 24 Nov 2026."""
+    book, room, view, cum = D.new_book(), [100000.0], {}, 0.0
+    for j in range(start_min * 4, 375 * 4):
+        now = datetime(2026, 11, 24, 9, 15, 5, tzinfo=IST) + timedelta(seconds=15 * j)
+        bar = today[now.strftime("%H:%M")] if now.strftime("%H:%M") in today else None
+        if bar is None:
+            break
+        cum += 25.0
+        atp = atp_before if atp_before is not None else bar[3]
+        EV.tick(book, now, {"last_price": bar[3], "volume": 1_000_000 + cum, "average_price": atp})
+        view = EV.step(book, now, {"bars1": [], "ema0": ema0, "chains": {"2026-11-24": _chain(bar[3])}, "expiry": "2026-11-24", "lot": 65, "spot": bar[3], "room": room, "fut": "NIFTY FUT"}, set())
+    return book, view
+
+
+def test_quote_built_bars_trade_the_same_session_when_upstox_serves_no_candles():
+    prev, today = _day(lambda i: 25000 + (i % 30) - 15), _day(_vee)
+    ema0 = EV.indicators(EV.three_minute(prev), None)[-1][6]
+    book, view = _run_on_quotes(0, today, ema0)
+    tr = [t for t in book["trades"] if t["strategy"] == EV.STRATEGY]
+    assert view["source"].startswith("1-minute bars built from live quotes") and view["seeded"] and view["warmup"] is None
+    assert ("CE", "11:03") in [(t["legs"][0]["kind"], t["opened"][:5]) for t in tr] and ("PE", "12:54") in [(t["legs"][0]["kind"], t["opened"][:5]) for t in tr]
+    assert all(t["status"] != "OPEN" for t in tr)
+
+
+def test_mid_session_start_anchors_vwap_on_the_session_and_warms_up_the_ema():
+    prev, today = _day(lambda i: 25000 + (i % 30) - 15), _day(_vee)
+    ema0 = EV.indicators(EV.three_minute(prev), None)[-1][6]
+    book, view = _run_on_quotes(105, today, ema0, atp_before=24900.0)            # engine restarted at 11:00
+    st = book["ema_vwap_state"]
+    assert st["vw0"][:2] == [24900.0 * 1_000_025.0, 1_000_025.0] and view["warmup"]["needed"] == EV.WARMUP and view["warmup"]["from"] == "11:00"
+    assert abs(view["last"][0]["vwap"] - 24900.0) < 5.0                          # the session's earlier trading (1M units) dominates the VWAP
+    tr = [t for t in book["trades"] if t["strategy"] == EV.STRATEGY]
+    assert all(t["opened"][:5] >= "11:36" for t in tr)                             # nothing before 12 candles of warm-up
+    assert any("warming up" in c["why"] for c in view["crosses"]) or not [c for c in view["crosses"] if c["end"] < "11:36"]
