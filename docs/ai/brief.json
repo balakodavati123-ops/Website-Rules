@@ -1,32 +1,47 @@
 {
  "mood": "mixed",
- "brief": "Indian exchanges are shut today for Guru Nanak Jayanti, but Asia surged, with Kospi up 7% and Nikkei up nearly 5% after Nvidia's rally, which could lift the next open. Banks warn that a possible further RBI repo hike could hurt demand, and the Tata Sons board meeting has moved to November 30.",
+ "brief": "NSE and BSE are closed today for Guru Nanak Jayanti, with MCX reopening in the evening, so Indian equities do not trade. Global sentiment is strong after Nvidia's rally, but banks warn a further RBI repo hike could hurt demand and the Tata Sons board meeting has moved to November 30.",
  "themes": [
   "Indian markets closed for holiday",
-  "Asia surges on Nvidia rally",
-  "RBI rate hike worries for banks",
-  "Mahanadi IPO fully subscribed"
+  "Nvidia-led global rally",
+  "RBI repo hike worries",
+  "Tech hiring freezes in India"
  ],
  "companies": [
   {
-   "name": "Coal India",
+   "name": "Infosys",
    "tone": "positive",
-   "why": "Unit Mahanadi's IPO fully subscribed on final day"
+   "why": "KR Choksey rates Accumulate, target Rs 1531"
   },
   {
-   "name": "Tata Sons",
-   "tone": "neutral",
-   "why": "Board meeting postponed to November 30"
+   "name": "Patel Engineering",
+   "tone": "positive",
+   "why": "ICICI Direct rates Buy, target Rs 80"
+  },
+  {
+   "name": "Bharti Airtel",
+   "tone": "negative",
+   "why": "Faces Rs 7,96,000 penalty for subscriber verification breach"
+  },
+  {
+   "name": "Tata Steel",
+   "tone": "negative",
+   "why": "APL Apollo shares crash on Tata Steel deal"
+  },
+  {
+   "name": "Kalpataru",
+   "tone": "positive",
+   "why": "Merger scheme receives regulatory approval"
   }
  ],
- "global": "Kospi rose 7% and Nikkei nearly 5% after Wall Street's best session in over a year, while CrowdStrike agreed a $44 billion deal for Zscaler.",
+ "global": "The Nasdaq gained 6.5% after Nvidia's CEO was reinstated, the dollar climbed on Fed hike bets, and short Nvidia ETFs blew up.",
  "risks": [
-  "Rate hike worries from RBI",
-  "Gains may fade after the holiday",
-  "Volatile gold and AI-linked stocks"
+  "RBI may hike repo rate further",
+  "Global rally could reverse",
+  "Tech hiring freezes in India"
  ],
- "time": "24 Nov 13:21",
- "at": 1795506708.734303,
+ "time": "24 Nov 14:21",
+ "at": 1795510304.727965,
  "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
  "n": 40
