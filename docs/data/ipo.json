@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T09:22:20+05:30",
+ "updated_at": "2026-11-24T11:57:17+05:30",
  "ipos": [
   {
    "name": "Shree Siddhivinayak Greentech Industries Limited",
@@ -95,6 +95,12 @@
    "drhp_url": null,
    "news": [
     {
+     "title": "Foodlink F&B Holdings IPO: GMP signals 8% listing pop; Check price band, lot size - Know key dates",
+     "source": "ET Now",
+     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOTXJvVnp6WGpOTFFORk9nVS1wd1pGMTZGZ1JNa2tLV3hGWlhvUno5UGhxRmFsSkh0b01mZUNvcTRzRUVxS25WMHNCMXRUb3ZvcFQ1eUlRcHlOUUI0dnV2VW9sWmJfeFhkNWVuYUI1ZktiSzFGc0pkRExXZW9rNVZsYm0xNDliZldGbUgzT0lkVGRNTFg2MkRKVzVlQ2NwUmk4ekpCWG5GbkVxOGt3OHJkVFJMOTU1YWJLQnJ3ak00LTlCNEdOQ2xpdnVEcUdZLUZJS3AyMTZ5WXlrYmPSAeABQVVfeXFMUHBzNnJNZ0dhU1RkMGx0c0JrM2tPVzhPVWxJeUYxbWQ4TFB1d2YxVjFvRVJ4eVNkazRuOXRmbmF0RHFibDVfVWhZbFp1TnZ5czZmNWVNT3dWd0pTNVQzbGFyUll3RDljdHdaMUtFY1E1czQ1NHg4SnFVM0lIdW1IWVNoRnN4eTVBaVR6ZUtVZkNuZkR2ZkdGSkVmSzlnZWl0d3loYVB3SVZobUptQjYtYkR0cTVXTHBVWGVSQkFrR0NSUDkzd3JDRXhvcmM3SEF6RmdlZWphXzF4YU1pR19maEU?oc=5",
+     "time": "2026-11-24T03:56:57Z"
+    },
+    {
      "title": "Foodlink F&B Holdings' \u20b9361 crore IPO opens for subscription on Nov 26",
      "source": "FlipItMoney",
      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNb04xMjlhd1ZZRmp4blVtU2tKSFhYTlpZNnVkMzBnTEx0UzZVZklablpTMW1MNWg2YXllVU1VXzZJNFk2VnFiemFIWE15WktxbHdIYWRjMHg2djhLUTFXeXVTWHdHbFlBaHc4QmVON3JHcUY4SGdmc0gyYldSaUNKUjR6dnB2VzJmX21adHBYcGhKNTNLRWNFNU9IMTc?oc=5",
@@ -117,12 +123,6 @@
      "source": "EventFAQs",
      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTDJQcEh4ak9YRm1UWXVLc08yQy1PR0pxSVF4b3BqS3dNZlJsUkRmV00yTzNJeXlfd3p1UW1mNWo2OUtBaFRYclE3dXRnRkdyMmVoSnU0X0w5cjR3eF95WjdCc09FS3ZybUFzcXV4THZnY3VHMHBJSXpoaHRPMzdWalNHVmJsMUtRQno5Vm5SVGNpLXN2RGFIT0d3?oc=5",
      "time": "2026-11-23T10:17:25Z"
-    },
-    {
-     "title": "Foodlink F&B Holdings Sets IPO Price Band At Rs 181-191, To Raise Rs 361 Cr",
-     "source": "TradingView",
-     "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNamZEV0t3TVpvQkhjSkdhcmVnYnBYS3V5TFBHNlZQNkVLTzNQdWFvaUNsSGFoaW1GSk8tLWpuUDVIdlBmcWh3V3FhVUdmSnJ2bGFFQVZEaDBYNFJ3QnVFQnQ0MEZLS3JwWDBIT0x4ajN2OHU1Snk5cVBxcWlka3htdWJHdEdBcFFhLXdGRUo3dTFGNnpxdHB5RTVnZlZwdEtwcTQtS0xnNG9vc0YzLWltM1RIMF9jZV9yQTZwNTBRRHo1SERmcFJnLWxOYw?oc=5",
-     "time": "2026-11-23T10:07:48Z"
     }
    ],
    "thesis": "The Rs 361 crore mainboard issue opens 26 Nov and closes 30 Nov at Rs 181-191 per share; there is no subscription data yet, so demand is unknown. About Rs 192 crore is fresh money for the company and Rs 169 crore is an offer for sale. No matching DRHP was found in SEBI's recent listing. One lot of 78 shares costs about Rs 14,898; a small bet is only reasonable after seeing demand on the final day.",
@@ -623,5 +623,5 @@
   "sebi": "ok",
   "news": "ok"
  },
- "at": 1795492350.7658424
+ "at": 1795501647.3101642
 }

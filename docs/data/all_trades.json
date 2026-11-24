@@ -1,5 +1,55 @@
 [
  {
+  "id": "F261124-78",
+  "desk": "FNO",
+  "strategy": "long_straddle",
+  "label": "NIFTY long straddle \u00b7 12-01",
+  "side": "LONG",
+  "entry": -504.5,
+  "last": -3.15,
+  "qty": 1,
+  "status": "OPEN",
+  "pnl_rs": -284.75,
+  "exit": "",
+  "why": "",
+  "day": "2026-11-24",
+  "opened": "10:00:06",
+  "closed": "",
+  "ts": 1795494609.4013214,
+  "expiry": "2026-12-01",
+  "lot": 65,
+  "legs": [
+   {
+    "side": "B",
+    "strike": 25450.0,
+    "kind": "CE",
+    "entry": 222.5,
+    "last": 221.3,
+    "key": "NSE_FO|47808"
+   },
+   {
+    "side": "B",
+    "strike": 25450.0,
+    "kind": "PE",
+    "entry": 282.0,
+    "last": 280.05,
+    "key": "NSE_FO|47809"
+   }
+  ],
+  "horizon": "daily",
+  "underlying": "NIFTY",
+  "unit_base": 504.5,
+  "target_u": 252.25,
+  "stop_u": 176.57,
+  "risk_class": "High return \u00b7 high loss",
+  "max_gain_rs": null,
+  "max_loss_rs": 32792,
+  "margin_rs": 32662,
+  "margin_src": "Upstox margin calculator",
+  "reason": "NIFTY 25,350 (-1.75% on the close). Debit 504.5 points; target 50% of it, stop 35% of it; out by 15:15",
+  "has_thesis": true
+ },
+ {
   "id": "M261123-77",
   "desk": "COMMODITY",
   "strategy": "mcx_pullback",

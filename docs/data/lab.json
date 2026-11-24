@@ -260,7 +260,7 @@
    "desk": "FNO",
    "stage": "BUILT",
    "closed": 3,
-   "open": 0,
+   "open": 1,
    "net_rs": 13852.0,
    "win_rate": 100.0,
    "since": "2026-11-19",
@@ -1593,7 +1593,7 @@
  "ai": {
   "on": true,
   "mode": "scheduled",
-  "last": "24 Nov 09:21",
+  "last": "24 Nov 11:21",
   "next": "every hour from 09:20 to 16:20 IST on weekdays",
   "models": {
    "analyst": "Claude (your plan, scheduled)"
