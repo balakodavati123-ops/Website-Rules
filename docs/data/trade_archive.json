@@ -6096,5 +6096,166 @@
    "viability": "Needs \u20b95,809 to hold (Upstox margin calculator)."
   },
   "reason": "-1.1% on the previous close and within 0.3% of the day low; stop 0.6%, target 1.2%"
+ },
+ {
+  "id": "M261124-80",
+  "desk": "COMMODITY",
+  "strategy": "mcx_momentum",
+  "label": "Natural gas mini long",
+  "side": "LONG",
+  "entry": 333.8,
+  "last": 337.9,
+  "qty": 1,
+  "status": "WIN",
+  "pnl_rs": 983.27,
+  "exit": 337.9,
+  "why": "target",
+  "day": "2026-11-24",
+  "opened": "17:00:01",
+  "closed": "19:12:35",
+  "ts": 1795519803.3751206,
+  "key": "MCX_FO|578250",
+  "mult": 250.0,
+  "symbol": "NATGASMINI FUT 28 DEC 26",
+  "stop": 331.8,
+  "target_px": 337.81,
+  "horizon": "intraday",
+  "risk_class": "Intraday momentum",
+  "margin_rs": 12792,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "Natural gas mini long",
+   "news": [
+    "US markets averaged +4.75% at the 23/11 close.",
+    "Asia averaged +1.83%.",
+    "Brent crude 86.4 (-6.67%)."
+   ],
+   "data": [
+    "Natural gas mini (NATGASMINI FUT 28 DEC 26) at 333.80, +1.64% on the previous close; day range 328.60 to 334.50, price is 0.21% from the day high.",
+    "Lot: 250 unit(s) \u00d7 1 lot(s); contract value \u20b983,450."
+   ],
+   "strategy": "A futures position in the direction the market is already moving hard.",
+   "why": [
+    "Used when a commodity is up or down 0.8% or more and sitting at its day extreme: strong days tend to extend into the evening session when global markets open.",
+    "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|578250)."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "333.80",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "331.80",
+     "Costs about \u20b9500"
+    ],
+    [
+     "Target (exit if right)",
+     "337.81",
+     "Earns about \u20b91,002"
+    ],
+    [
+     "Reward for the risk",
+     "2.0 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "33% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b912,792",
+     "10% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
+   "viability": "Needs \u20b912,792 to hold (Upstox margin calculator)."
+  },
+  "reason": "+1.6% on the previous close and within 0.3% of the day high; stop 0.6%, target 1.2%"
+ },
+ {
+  "id": "M261124-81",
+  "desk": "COMMODITY",
+  "strategy": "mcx_pullback",
+  "label": "Crude oil mini short",
+  "side": "SHORT",
+  "entry": 7522.0,
+  "last": 7561.0,
+  "qty": 1,
+  "status": "LOSS",
+  "pnl_rs": -427.61,
+  "exit": 7561.0,
+  "why": "stop",
+  "day": "2026-11-24",
+  "opened": "19:19:10",
+  "closed": "19:34:28",
+  "ts": 1795528151.2615755,
+  "key": "MCX_FO|576265",
+  "mult": 10.0,
+  "symbol": "CRUDEOILM FUT 18 DEC 26",
+  "stop": 7559.61,
+  "target_px": 7454.3,
+  "horizon": "intraday",
+  "risk_class": "Intraday pullback",
+  "margin_rs": 23650,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "Crude oil mini short",
+   "news": [
+    "US markets averaged +4.75% at the 23/11 close.",
+    "Asia averaged +1.83%.",
+    "Brent crude 86.4 (-6.67%)."
+   ],
+   "data": [
+    "Crude oil mini (CRUDEOILM FUT 18 DEC 26) at 7,522.00, -0.65% on the previous close; day range 7,434.00 to 7,545.00, price is 1.18% from the day low.",
+    "Lot: 10 unit(s) \u00d7 1 lot(s); contract value \u20b975,220.",
+    "Global reference: Brent crude 87.0 (-2.65% at the 11-24 close)."
+   ],
+   "strategy": "Buy a dip inside an up day or sell a bounce inside a down day.",
+   "why": [
+    "Used after a trend day pulls back 0.4% to 1.2%: you join the trend at a better price than the chasers.",
+    "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|576265)."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "7,522.00",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "7,559.61",
+     "Costs about \u20b9376"
+    ],
+    [
+     "Target (exit if right)",
+     "7,454.30",
+     "Earns about \u20b9677"
+    ],
+    [
+     "Reward for the risk",
+     "1.8 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "36% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b923,650",
+     "19% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: The pullback becomes a reversal. The 0.5% stop caps the loss.",
+   "viability": "Needs \u20b923,650 to hold (Upstox margin calculator)."
+  },
+  "reason": "-0.6% on the day and pulled back 1.2% from its low: buying the dip in an up day, selling the bounce in a down day; stop 0.5%, target 0.9%"
  }
 ]

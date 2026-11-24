@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T18:18:49+05:30",
+ "updated_at": "2026-11-24T23:59:25+05:30",
  "ceo": {
   "name": "Balaji",
   "title": "CEO"
@@ -13,11 +13,6 @@
     "team": "scalp",
     "level": "warn",
     "text": "Scalping desk: targets hit 1 times against 5.2 expected by pure chance (z -2.39): no edge so far."
-   },
-   {
-    "team": "mcx",
-    "level": "warn",
-    "text": "Commodities desk: targets hit 3 times against 6.1 expected by pure chance (z -1.55): no edge so far."
    },
    {
     "team": "crypto",
@@ -52,434 +47,434 @@
     "decided": "24 Nov 08:36"
    }
   ],
-  "doing": "Supervising 9 teams: 2 traded today, company +\u20b9267. Bonus race leader: Commodities desk (+\u20b9267).",
+  "doing": "Supervising 9 teams: 2 traded today, company +\u20b9215. Bonus race leader: Commodities desk (+\u20b9215).",
   "hires": [],
   "designation": "COO"
  },
  "pnl": {
-  "today_rs": 267.12,
-  "open_rs": 452.28,
-  "closed_rs": -341.15,
-  "trades": 3,
-  "open": 14,
-  "equity_rs": 124544.15
+  "today_rs": 214.51,
+  "open_rs": -155.99,
+  "closed_rs": 214.51,
+  "trades": 4,
+  "open": 13,
+  "equity_rs": 124491.54
  },
  "flows": [
   {
-   "t": "17:56:23",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "17:56:36",
-   "from": "src:yahoo",
-   "to": "mcx-1",
-   "kind": "data",
-   "text": "-2.51% today, moving: watching for an entry"
-  },
-  {
-   "t": "17:57:08",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "17:57:21",
+   "t": "23:35:06",
    "from": "src:upstox",
    "to": "mcx-0",
    "kind": "data",
-   "text": "-1.30% today, moving: watching for an entry"
+   "text": "-3.13% today, moving: watching for an entry"
   },
   {
-   "t": "17:57:58",
+   "t": "23:35:06",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "17:58:12",
+   "t": "23:35:52",
    "from": "src:upstox",
-   "to": "mcx-2",
+   "to": "mcx-3",
    "kind": "data",
-   "text": "-1.57% today, moving: watching for an entry"
+   "text": "+5.05% today, moving: watching for an entry"
   },
   {
-   "t": "17:58:45",
+   "t": "23:35:52",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "17:58:45",
+   "t": "23:36:39",
+   "from": "src:yahoo",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "-5.87% today, moving: watching for an entry"
+  },
+  {
+   "t": "23:36:39",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:37:26",
+   "from": "src:yahoo",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "-5.86% today, moving: watching for an entry"
+  },
+  {
+   "t": "23:37:26",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:38:15",
+   "from": "src:upstox",
+   "to": "mcx-0",
+   "kind": "data",
+   "text": "-3.12% today, moving: watching for an entry"
+  },
+  {
+   "t": "23:38:15",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:39:10",
+   "from": "src:upstox",
+   "to": "mcx-0",
+   "kind": "data",
+   "text": "-3.13% today, moving: watching for an entry"
+  },
+  {
+   "t": "23:39:10",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:39:38",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
-   "text": "Company today +\u20b9167"
+   "text": "Company today +\u20b9215"
   },
   {
-   "t": "17:59:01",
-   "from": "src:yahoo",
-   "to": "mcx-1",
-   "kind": "data",
-   "text": "-2.51% today, moving: watching for an entry"
-  },
-  {
-   "t": "17:59:34",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "17:59:47",
-   "from": "src:yahoo",
+   "t": "23:39:58",
+   "from": "src:upstox",
    "to": "mcx-3",
    "kind": "data",
-   "text": "+2.28% today, in a trade"
+   "text": "+5.45% today, moving: watching for an entry"
   },
   {
-   "t": "18:00:24",
+   "t": "23:39:58",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "18:00:37",
+   "t": "23:40:46",
+   "from": "src:upstox",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "+5.48% today, moving: watching for an entry"
+  },
+  {
+   "t": "23:40:46",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:41:33",
    "from": "src:yahoo",
    "to": "mcx-1",
    "kind": "data",
-   "text": "-2.55% today, moving: watching for an entry"
+   "text": "-5.95% today, moving: watching for an entry"
   },
   {
-   "t": "18:01:09",
+   "t": "23:41:33",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "18:01:28",
+   "t": "23:42:22",
+   "from": "src:yahoo",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "-5.93% today, moving: watching for an entry"
+  },
+  {
+   "t": "23:42:22",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:43:15",
    "from": "src:upstox",
    "to": "mcx-0",
    "kind": "data",
-   "text": "-1.33% today, moving: watching for an entry"
+   "text": "-3.11% today, moving: watching for an entry"
   },
   {
-   "t": "18:01:55",
+   "t": "23:43:15",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "18:02:20",
-   "from": "src:yahoo",
-   "to": "mcx-3",
+   "t": "23:44:04",
+   "from": "src:upstox",
+   "to": "mcx-0",
    "kind": "data",
-   "text": "+2.44% today, in a trade"
+   "text": "-3.12% today, moving: watching for an entry"
   },
   {
-   "t": "18:02:45",
+   "t": "23:44:04",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "18:03:16",
-   "from": "src:yahoo",
-   "to": "mcx-1",
-   "kind": "data",
-   "text": "-2.65% today, moving: watching for an entry"
-  },
-  {
-   "t": "18:03:35",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "18:03:49",
+   "t": "23:44:45",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
-   "text": "Company today +\u20b9392"
+   "text": "Company today +\u20b9215"
   },
   {
-   "t": "18:04:02",
+   "t": "23:44:52",
    "from": "src:upstox",
-   "to": "mcx-0",
-   "kind": "data",
-   "text": "-1.37% today, moving: watching for an entry"
-  },
-  {
-   "t": "18:04:27",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "18:04:52",
-   "from": "src:upstox",
-   "to": "mcx-2",
-   "kind": "data",
-   "text": "-1.52% today, moving: watching for an entry"
-  },
-  {
-   "t": "18:05:21",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "18:05:40",
-   "from": "src:yahoo",
-   "to": "mcx-1",
-   "kind": "data",
-   "text": "-2.44% today, moving: watching for an entry"
-  },
-  {
-   "t": "18:06:08",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "18:06:26",
-   "from": "src:yahoo",
    "to": "mcx-3",
    "kind": "data",
-   "text": "+2.59% today, in a trade"
+   "text": "+5.33% today, moving: watching for an entry"
   },
   {
-   "t": "18:06:58",
+   "t": "23:44:52",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "18:07:12",
+   "t": "23:45:38",
    "from": "src:yahoo",
    "to": "mcx-1",
    "kind": "data",
-   "text": "-2.46% today, moving: watching for an entry"
+   "text": "-5.84% today, moving: watching for an entry"
   },
   {
-   "t": "18:07:47",
+   "t": "23:45:38",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "18:08:01",
+   "t": "23:46:26",
+   "from": "src:yahoo",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "-5.84% today, moving: watching for an entry"
+  },
+  {
+   "t": "23:46:26",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:47:20",
+   "from": "src:yahoo",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "-5.83% today, moving: watching for an entry"
+  },
+  {
+   "t": "23:47:20",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:48:08",
    "from": "src:upstox",
    "to": "mcx-0",
    "kind": "data",
-   "text": "-1.03% today, moving: watching for an entry"
+   "text": "-3.21% today, moving: watching for an entry"
   },
   {
-   "t": "18:08:40",
+   "t": "23:48:08",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "18:08:51",
+   "t": "23:48:55",
    "from": "src:upstox",
-   "to": "mcx-2",
+   "to": "mcx-3",
    "kind": "data",
-   "text": "-1.25% today, moving: watching for an entry"
+   "text": "+5.45% today, moving: watching for an entry"
   },
   {
-   "t": "18:08:51",
+   "t": "23:48:55",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:49:43",
+   "from": "src:upstox",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "+5.42% today, moving: watching for an entry"
+  },
+  {
+   "t": "23:49:43",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:49:51",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
-   "text": "Company today +\u20b9367"
+   "text": "Company today +\u20b9215"
   },
   {
-   "t": "18:09:35",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "18:09:42",
+   "t": "23:50:31",
    "from": "src:yahoo",
    "to": "mcx-1",
    "kind": "data",
-   "text": "-2.34% today, moving: watching for an entry"
+   "text": "-5.87% today, moving: watching for an entry"
   },
   {
-   "t": "18:10:21",
+   "t": "23:50:31",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "18:10:38",
-   "from": "src:yahoo",
-   "to": "mcx-3",
-   "kind": "data",
-   "text": "+2.50% today, in a trade"
-  },
-  {
-   "t": "18:11:06",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "18:11:25",
-   "from": "src:upstox",
-   "to": "mcx-2",
-   "kind": "data",
-   "text": "-1.35% today, moving: watching for an entry"
-  },
-  {
-   "t": "18:11:56",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "18:12:15",
+   "t": "23:51:17",
    "from": "src:upstox",
    "to": "mcx-0",
    "kind": "data",
-   "text": "-0.98% today, moving: watching for an entry"
+   "text": "-3.16% today, moving: watching for an entry"
   },
   {
-   "t": "18:12:46",
+   "t": "23:51:17",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "18:13:05",
-   "from": "src:yahoo",
+   "t": "23:52:04",
+   "from": "src:upstox",
+   "to": "mcx-0",
+   "kind": "data",
+   "text": "-3.17% today, moving: watching for an entry"
+  },
+  {
+   "t": "23:52:04",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:52:51",
+   "from": "src:upstox",
    "to": "mcx-3",
    "kind": "data",
-   "text": "+2.22% today, in a trade"
+   "text": "+5.48% today, moving: watching for an entry"
   },
   {
-   "t": "18:13:32",
+   "t": "23:52:51",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "18:13:56",
+   "t": "23:53:38",
    "from": "src:yahoo",
    "to": "mcx-1",
    "kind": "data",
-   "text": "-2.22% today, moving: watching for an entry"
+   "text": "-5.96% today, moving: watching for an entry"
   },
   {
-   "t": "18:13:56",
+   "t": "23:53:38",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:54:24",
+   "from": "src:yahoo",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "-5.96% today, moving: watching for an entry"
+  },
+  {
+   "t": "23:54:24",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:54:57",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
-   "text": "Company today +\u20b9142"
+   "text": "Company today +\u20b9215"
   },
   {
-   "t": "18:14:21",
+   "t": "23:55:09",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "18:14:52",
-   "from": "src:upstox",
-   "to": "mcx-0",
-   "kind": "data",
-   "text": "-0.85% today, moving: watching for an entry"
-  },
-  {
-   "t": "18:15:12",
+   "t": "23:55:57",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "18:15:38",
-   "from": "src:upstox",
-   "to": "mcx-2",
-   "kind": "data",
-   "text": "-1.15% today, moving: watching for an entry"
-  },
-  {
-   "t": "18:16:02",
+   "t": "23:56:47",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "18:16:08",
-   "from": "src:nse",
-   "to": "intraday-0",
-   "kind": "data",
-   "text": "Optimism \u00b7 LLOYDSME: LLOYDSME: Acquisition"
-  },
-  {
-   "t": "18:16:28",
-   "from": "src:yahoo",
-   "to": "mcx-1",
-   "kind": "data",
-   "text": "-2.21% today, moving: watching for an entry"
-  },
-  {
-   "t": "18:16:58",
+   "t": "23:57:36",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "18:17:18",
-   "from": "src:yahoo",
-   "to": "mcx-3",
-   "kind": "data",
-   "text": "+2.47% today, in a trade"
-  },
-  {
-   "t": "18:17:45",
+   "t": "23:58:22",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "18:18:10",
-   "from": "src:upstox",
-   "to": "mcx-2",
-   "kind": "data",
-   "text": "-1.20% today, moving: watching for an entry"
-  },
-  {
-   "t": "18:18:35",
+   "t": "23:59:12",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
@@ -1213,7 +1208,7 @@
     {
      "name": "Pooja",
      "role": "Lead analyst",
-     "doing": "Brent -2.65%, gold -0.49% overnight; tracking 4 MCX contracts the account can carry.",
+     "doing": "Brent -3.39%, gold -2.03% overnight; tracking 4 MCX contracts the account can carry.",
      "tokens": 0
     },
     {
@@ -1225,7 +1220,7 @@
     {
      "name": "Zoya",
      "role": "Trading manager",
-     "doing": "Holding 1: Natural gas mini long at 333.80, stop 331.80, now +\u20b9608.",
+     "doing": "Closed Crude oil mini short (stop): \u2212\u20b9428.",
      "tokens": 0
     }
    ],
@@ -1238,8 +1233,8 @@
      "designation": "Associate",
      "role": "Gold 1 g",
      "kind": "research",
-     "status": "active",
-     "doing": "-0.94% today, moving: watching for an entry",
+     "status": "idle",
+     "doing": "Market closed: -3.20% today, moving: watching for an entry",
      "record": {
       "trades": 5,
       "wins": 3,
@@ -1253,8 +1248,8 @@
      "designation": "Associate",
      "role": "Silver 1 kg",
      "kind": "research",
-     "status": "active",
-     "doing": "-2.24% today, moving: watching for an entry",
+     "status": "idle",
+     "doing": "Market closed: -5.95% today, moving: watching for an entry",
      "record": {
       "trades": 2,
       "wins": 1,
@@ -1268,12 +1263,12 @@
      "designation": "Associate",
      "role": "Crude oil mini",
      "kind": "research",
-     "status": "active",
-     "doing": "-1.16% today, moving: watching for an entry",
+     "status": "idle",
+     "doing": "Market closed: +0.24% today",
      "record": {
-      "trades": 6,
+      "trades": 7,
       "wins": 2,
-      "pnl_rs": -1065.16,
+      "pnl_rs": -1492.77,
       "basis": "own trades"
      }
     },
@@ -1283,12 +1278,12 @@
      "designation": "Associate",
      "role": "Natural gas mini",
      "kind": "research",
-     "status": "holding",
-     "doing": "+2.44% today, in a trade",
+     "status": "idle",
+     "doing": "Market closed: +5.57% today, moving: watching for an entry",
      "record": {
-      "trades": 5,
-      "wins": 1,
-      "pnl_rs": -897.96,
+      "trades": 6,
+      "wins": 2,
+      "pnl_rs": 85.31,
       "basis": "own trades"
      }
     },
@@ -1299,11 +1294,11 @@
      "role": "Margin quant",
      "kind": "quant",
      "status": "idle",
-     "doing": "Checks margin and noise before every trade",
+     "doing": "Market closed: checks margin and noise before every trade",
      "record": {
-      "trades": 18,
-      "wins": 7,
-      "pnl_rs": -2720.21,
+      "trades": 20,
+      "wins": 8,
+      "pnl_rs": -2164.55,
       "basis": "team record"
      }
     },
@@ -1313,50 +1308,50 @@
      "designation": "Manager",
      "role": "Trading manager",
      "kind": "trader",
-     "status": "holding",
-     "doing": "Holding 1: Natural gas mini long at 333.80, stop 331.80, now +\u20b9608.",
+     "status": "idle",
+     "doing": "Market closed: closed Crude oil mini short (stop): \u2212\u20b9428.",
      "record": {
-      "trades": 18,
-      "wins": 7,
-      "pnl_rs": -2720.21,
+      "trades": 20,
+      "wins": 8,
+      "pnl_rs": -2164.55,
       "basis": "team record"
      }
     }
    ],
    "manager": "mcx-m",
    "today": {
-    "pnl": 267.12,
-    "pnl_rs": 267.12,
-    "trades": 2,
-    "open": 1,
-    "closed": 1,
-    "wins": 0
+    "pnl": 214.51,
+    "pnl_rs": 214.51,
+    "trades": 3,
+    "open": 0,
+    "closed": 3,
+    "wins": 1
    },
    "record": {
-    "n": 18,
-    "win_rate": 38.9,
-    "avg_rs": -151.12,
-    "net_rs": -2720.21,
+    "n": 20,
+    "win_rate": 40.0,
+    "avg_rs": -108.23,
+    "net_rs": -2164.55,
     "worst_run": 4,
-    "profit_factor": 0.53,
-    "target_hits": 3,
-    "expected_hits": 6.1,
-    "edge_z": -1.55,
-    "hit_rate": 0.167
+    "profit_factor": 0.65,
+    "target_hits": 4,
+    "expected_hits": 6.8,
+    "edge_z": -1.33,
+    "hit_rate": 0.2
    },
    "verdicts": [
     {
      "strategy": "mcx_momentum",
-     "closed": 13,
-     "win_rate": 38.5,
-     "pnl_rs": -2504.26,
+     "closed": 14,
+     "win_rate": 42.9,
+     "pnl_rs": -1520.99,
      "verdict": "COLLECTING"
     },
     {
      "strategy": "mcx_pullback",
-     "closed": 5,
-     "win_rate": 40.0,
-     "pnl_rs": -215.95,
+     "closed": 6,
+     "win_rate": 33.3,
+     "pnl_rs": -643.56,
      "verdict": "COLLECTING"
     }
    ],
@@ -1402,7 +1397,7 @@
      "role": "BTC",
      "kind": "research",
      "status": "vacant",
-     "doing": "-1.35% today, moving: watching for an entry",
+     "doing": "-1.95% today, moving: watching for an entry",
      "record": {
       "trades": 3,
       "wins": 1,
@@ -1417,7 +1412,7 @@
      "role": "ETH",
      "kind": "research",
      "status": "vacant",
-     "doing": "-0.52% today",
+     "doing": "-1.55% today, moving: watching for an entry",
      "record": {
       "trades": 4,
       "wins": 1,
@@ -1432,7 +1427,7 @@
      "role": "SOL",
      "kind": "research",
      "status": "vacant",
-     "doing": "-1.68% today, moving: watching for an entry",
+     "doing": "-3.25% today, moving: watching for an entry",
      "record": {
       "trades": 6,
       "wins": 2,
@@ -1447,7 +1442,7 @@
      "role": "XRP",
      "kind": "research",
      "status": "vacant",
-     "doing": "-1.14% today, moving: watching for an entry",
+     "doing": "-1.88% today, moving: watching for an entry",
      "record": {
       "trades": 6,
       "wins": 2,
@@ -1462,7 +1457,7 @@
      "role": "DOGE",
      "kind": "research",
      "status": "vacant",
-     "doing": "-1.23% today, moving: watching for an entry",
+     "doing": "-1.89% today, moving: watching for an entry",
      "record": {
       "trades": 4,
       "wins": 1,
@@ -1477,7 +1472,7 @@
      "role": "ADA",
      "kind": "research",
      "status": "vacant",
-     "doing": "-1.94% today, moving: watching for an entry",
+     "doing": "-2.30% today, moving: watching for an entry",
      "record": {
       "trades": 5,
       "wins": 1,
@@ -1910,7 +1905,7 @@
      "role": "IPO news reader",
      "kind": "research",
      "status": "idle",
-     "doing": "Market closed: headlines for 4 issue(s)",
+     "doing": "Market closed: headlines for 2 issue(s)",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1971,7 +1966,7 @@
    "id": "nse",
    "name": "NSE",
    "status": "ok",
-   "detail": "17 filings lean one way today; participant positions for 2026-11-18"
+   "detail": "27 filings lean one way today; participant positions for 2026-11-18"
   },
   {
    "id": "upstox",
@@ -1995,13 +1990,13 @@
    "id": "yahoo",
    "name": "Yahoo Finance",
    "status": "ok",
-   "detail": "world markets refreshed 47 min ago"
+   "detail": "world markets refreshed 147 min ago"
   },
   {
    "id": "news",
    "name": "News feeds",
    "status": "ok",
-   "detail": "news pulse: 9 feeds read every minute in market hours, 33 signals today; 0 with the hunters now"
+   "detail": "news pulse: 8 feeds read every minute in market hours, 44 signals today; 0 with the hunters now"
   },
   {
    "id": "claude",
@@ -2069,13 +2064,13 @@
   }
  ],
  "company": {
-  "pnl_today": 267.12,
+  "pnl_today": 214.51,
   "nifty_chg": -1.747827569901475,
-  "equity": 124544.15,
+  "equity": 124491.54,
   "sessions": {
    "equity": false,
    "fno": false,
-   "mcx": true,
+   "mcx": false,
    "crypto": true
   }
  },
@@ -2089,16 +2084,27 @@
   "refused": 0
  },
  "quant": {
+  "M261124-81": {
+   "risk_rs": 376.1,
+   "reward_rs": 677.0,
+   "rr": 1.8,
+   "base_p": 0.357,
+   "breakeven_p": 0.357,
+   "used_p": 0.2,
+   "p_source": "team record",
+   "ev_rs": -165.48,
+   "kelly": -0.244
+  },
   "M261124-79": {
    "risk_rs": 301.76,
    "reward_rs": 603.56,
    "rr": 2.0,
    "base_p": 0.333,
    "breakeven_p": 0.333,
-   "used_p": 0.333,
-   "p_source": "random-walk baseline",
-   "ev_rs": 0.0,
-   "kelly": 0.0
+   "used_p": 0.2,
+   "p_source": "team record",
+   "ev_rs": -120.7,
+   "kelly": -0.2
   },
   "M261124-80": {
    "risk_rs": 500.0,
@@ -2106,10 +2112,10 @@
    "rr": 2.0,
    "base_p": 0.333,
    "breakeven_p": 0.333,
-   "used_p": 0.333,
-   "p_source": "random-walk baseline",
-   "ev_rs": -0.0,
-   "kelly": -0.0
+   "used_p": 0.2,
+   "p_source": "team record",
+   "ev_rs": -199.5,
+   "kelly": -0.199
   },
   "S3": {
    "risk_rs": 242.15
@@ -2368,560 +2374,560 @@
   },
   "flows": [
    {
-    "t": "17:49:16",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "17:49:28",
+    "t": "23:27:49",
     "from": "src:upstox",
-    "to": "mcx-0",
+    "to": "mcx-3",
     "kind": "data",
-    "text": "-1.33% today, moving: watching for an entry"
+    "text": "+4.81% today, moving: watching for an entry"
    },
    {
-    "t": "17:50:01",
+    "t": "23:27:49",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "17:50:14",
-    "from": "src:upstox",
-    "to": "mcx-2",
-    "kind": "data",
-    "text": "-1.55% today, moving: watching for an entry"
-   },
-   {
-    "t": "17:50:46",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "17:51:00",
+    "t": "23:28:38",
     "from": "src:yahoo",
     "to": "mcx-1",
     "kind": "data",
-    "text": "-2.69% today, moving: watching for an entry"
+    "text": "-5.88% today, moving: watching for an entry"
    },
    {
-    "t": "17:51:36",
+    "t": "23:28:38",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "17:51:51",
+    "t": "23:29:24",
     "from": "src:yahoo",
-    "to": "mcx-3",
+    "to": "mcx-1",
     "kind": "data",
-    "text": "+2.59% today, in a trade"
+    "text": "-5.88% today, moving: watching for an entry"
    },
    {
-    "t": "17:52:24",
+    "t": "23:29:24",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "17:52:40",
-    "from": "src:upstox",
-    "to": "mcx-2",
-    "kind": "data",
-    "text": "-1.60% today, moving: watching for an entry"
-   },
-   {
-    "t": "17:53:13",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "17:53:26",
-    "from": "src:upstox",
-    "to": "mcx-0",
-    "kind": "data",
-    "text": "-1.31% today, moving: watching for an entry"
-   },
-   {
-    "t": "17:53:44",
+    "t": "23:29:30",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
-    "text": "Company today +\u20b9292"
+    "text": "Company today +\u20b9215"
    },
    {
-    "t": "17:53:58",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "17:54:11",
-    "from": "src:upstox",
-    "to": "mcx-2",
-    "kind": "data",
-    "text": "-1.56% today, moving: watching for an entry"
-   },
-   {
-    "t": "17:54:47",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "17:55:00",
-    "from": "src:yahoo",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "-2.54% today, moving: watching for an entry"
-   },
-   {
-    "t": "17:55:34",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "17:55:50",
-    "from": "src:yahoo",
-    "to": "mcx-3",
-    "kind": "data",
-    "text": "+2.31% today, in a trade"
-   },
-   {
-    "t": "17:56:03",
-    "from": "src:nse",
-    "to": "intraday-0",
-    "kind": "data",
-    "text": "Optimism \u00b7 PAVNAIND: PAVNAIND: Acquisition"
-   },
-   {
-    "t": "17:56:23",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "17:56:36",
-    "from": "src:yahoo",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "-2.51% today, moving: watching for an entry"
-   },
-   {
-    "t": "17:57:08",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "17:57:21",
+    "t": "23:30:11",
     "from": "src:upstox",
     "to": "mcx-0",
     "kind": "data",
-    "text": "-1.30% today, moving: watching for an entry"
+    "text": "-3.10% today, moving: watching for an entry"
    },
    {
-    "t": "17:57:58",
+    "t": "23:30:11",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "17:58:12",
+    "t": "23:31:01",
     "from": "src:upstox",
-    "to": "mcx-2",
+    "to": "mcx-0",
     "kind": "data",
-    "text": "-1.57% today, moving: watching for an entry"
+    "text": "-3.10% today, moving: watching for an entry"
    },
    {
-    "t": "17:58:45",
+    "t": "23:31:01",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "17:58:45",
+    "t": "23:31:54",
+    "from": "src:upstox",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "+5.02% today, moving: watching for an entry"
+   },
+   {
+    "t": "23:31:54",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:32:43",
+    "from": "src:upstox",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "+4.99% today, moving: watching for an entry"
+   },
+   {
+    "t": "23:32:43",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:33:31",
+    "from": "src:yahoo",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "-5.92% today, moving: watching for an entry"
+   },
+   {
+    "t": "23:33:31",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:34:18",
+    "from": "src:upstox",
+    "to": "mcx-0",
+    "kind": "data",
+    "text": "-3.13% today, moving: watching for an entry"
+   },
+   {
+    "t": "23:34:18",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:34:33",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
-    "text": "Company today +\u20b9167"
+    "text": "Company today +\u20b9215"
    },
    {
-    "t": "17:59:01",
-    "from": "src:yahoo",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "-2.51% today, moving: watching for an entry"
-   },
-   {
-    "t": "17:59:34",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "17:59:47",
-    "from": "src:yahoo",
-    "to": "mcx-3",
-    "kind": "data",
-    "text": "+2.28% today, in a trade"
-   },
-   {
-    "t": "18:00:24",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "18:00:37",
-    "from": "src:yahoo",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "-2.55% today, moving: watching for an entry"
-   },
-   {
-    "t": "18:01:09",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "18:01:28",
+    "t": "23:35:06",
     "from": "src:upstox",
     "to": "mcx-0",
     "kind": "data",
-    "text": "-1.33% today, moving: watching for an entry"
+    "text": "-3.13% today, moving: watching for an entry"
    },
    {
-    "t": "18:01:55",
+    "t": "23:35:06",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "18:02:20",
-    "from": "src:yahoo",
+    "t": "23:35:52",
+    "from": "src:upstox",
     "to": "mcx-3",
     "kind": "data",
-    "text": "+2.44% today, in a trade"
+    "text": "+5.05% today, moving: watching for an entry"
    },
    {
-    "t": "18:02:45",
+    "t": "23:35:52",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "18:03:16",
+    "t": "23:36:39",
     "from": "src:yahoo",
     "to": "mcx-1",
     "kind": "data",
-    "text": "-2.65% today, moving: watching for an entry"
+    "text": "-5.87% today, moving: watching for an entry"
    },
    {
-    "t": "18:03:35",
+    "t": "23:36:39",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "18:03:49",
+    "t": "23:37:26",
+    "from": "src:yahoo",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "-5.86% today, moving: watching for an entry"
+   },
+   {
+    "t": "23:37:26",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:38:15",
+    "from": "src:upstox",
+    "to": "mcx-0",
+    "kind": "data",
+    "text": "-3.12% today, moving: watching for an entry"
+   },
+   {
+    "t": "23:38:15",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:39:10",
+    "from": "src:upstox",
+    "to": "mcx-0",
+    "kind": "data",
+    "text": "-3.13% today, moving: watching for an entry"
+   },
+   {
+    "t": "23:39:10",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:39:38",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
-    "text": "Company today +\u20b9392"
+    "text": "Company today +\u20b9215"
    },
    {
-    "t": "18:04:02",
+    "t": "23:39:58",
     "from": "src:upstox",
-    "to": "mcx-0",
-    "kind": "data",
-    "text": "-1.37% today, moving: watching for an entry"
-   },
-   {
-    "t": "18:04:27",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "18:04:52",
-    "from": "src:upstox",
-    "to": "mcx-2",
-    "kind": "data",
-    "text": "-1.52% today, moving: watching for an entry"
-   },
-   {
-    "t": "18:05:21",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "18:05:40",
-    "from": "src:yahoo",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "-2.44% today, moving: watching for an entry"
-   },
-   {
-    "t": "18:06:08",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "18:06:26",
-    "from": "src:yahoo",
     "to": "mcx-3",
     "kind": "data",
-    "text": "+2.59% today, in a trade"
+    "text": "+5.45% today, moving: watching for an entry"
    },
    {
-    "t": "18:06:58",
+    "t": "23:39:58",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "18:07:12",
+    "t": "23:40:46",
+    "from": "src:upstox",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "+5.48% today, moving: watching for an entry"
+   },
+   {
+    "t": "23:40:46",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:41:33",
     "from": "src:yahoo",
     "to": "mcx-1",
     "kind": "data",
-    "text": "-2.46% today, moving: watching for an entry"
+    "text": "-5.95% today, moving: watching for an entry"
    },
    {
-    "t": "18:07:47",
+    "t": "23:41:33",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "18:08:01",
+    "t": "23:42:22",
+    "from": "src:yahoo",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "-5.93% today, moving: watching for an entry"
+   },
+   {
+    "t": "23:42:22",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:43:15",
     "from": "src:upstox",
     "to": "mcx-0",
     "kind": "data",
-    "text": "-1.03% today, moving: watching for an entry"
+    "text": "-3.11% today, moving: watching for an entry"
    },
    {
-    "t": "18:08:40",
+    "t": "23:43:15",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "18:08:51",
+    "t": "23:44:04",
     "from": "src:upstox",
-    "to": "mcx-2",
+    "to": "mcx-0",
     "kind": "data",
-    "text": "-1.25% today, moving: watching for an entry"
+    "text": "-3.12% today, moving: watching for an entry"
    },
    {
-    "t": "18:08:51",
+    "t": "23:44:04",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:44:45",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
-    "text": "Company today +\u20b9367"
+    "text": "Company today +\u20b9215"
    },
    {
-    "t": "18:09:35",
+    "t": "23:44:52",
+    "from": "src:upstox",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "+5.33% today, moving: watching for an entry"
+   },
+   {
+    "t": "23:44:52",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "18:09:42",
+    "t": "23:45:38",
     "from": "src:yahoo",
     "to": "mcx-1",
     "kind": "data",
-    "text": "-2.34% today, moving: watching for an entry"
+    "text": "-5.84% today, moving: watching for an entry"
    },
    {
-    "t": "18:10:21",
+    "t": "23:45:38",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "18:10:38",
+    "t": "23:46:26",
     "from": "src:yahoo",
-    "to": "mcx-3",
+    "to": "mcx-1",
     "kind": "data",
-    "text": "+2.50% today, in a trade"
+    "text": "-5.84% today, moving: watching for an entry"
    },
    {
-    "t": "18:11:06",
+    "t": "23:46:26",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "18:11:25",
-    "from": "src:upstox",
-    "to": "mcx-2",
+    "t": "23:47:20",
+    "from": "src:yahoo",
+    "to": "mcx-1",
     "kind": "data",
-    "text": "-1.35% today, moving: watching for an entry"
+    "text": "-5.83% today, moving: watching for an entry"
    },
    {
-    "t": "18:11:56",
+    "t": "23:47:20",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "18:12:15",
+    "t": "23:48:08",
     "from": "src:upstox",
     "to": "mcx-0",
     "kind": "data",
-    "text": "-0.98% today, moving: watching for an entry"
+    "text": "-3.21% today, moving: watching for an entry"
    },
    {
-    "t": "18:12:46",
+    "t": "23:48:08",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "18:13:05",
-    "from": "src:yahoo",
+    "t": "23:48:55",
+    "from": "src:upstox",
     "to": "mcx-3",
     "kind": "data",
-    "text": "+2.22% today, in a trade"
+    "text": "+5.45% today, moving: watching for an entry"
    },
    {
-    "t": "18:13:32",
+    "t": "23:48:55",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "18:13:56",
-    "from": "src:yahoo",
-    "to": "mcx-1",
+    "t": "23:49:43",
+    "from": "src:upstox",
+    "to": "mcx-3",
     "kind": "data",
-    "text": "-2.22% today, moving: watching for an entry"
+    "text": "+5.42% today, moving: watching for an entry"
    },
    {
-    "t": "18:13:56",
+    "t": "23:49:43",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:49:51",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
-    "text": "Company today +\u20b9142"
+    "text": "Company today +\u20b9215"
    },
    {
-    "t": "18:14:21",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "18:14:52",
-    "from": "src:upstox",
-    "to": "mcx-0",
-    "kind": "data",
-    "text": "-0.85% today, moving: watching for an entry"
-   },
-   {
-    "t": "18:15:12",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "18:15:38",
-    "from": "src:upstox",
-    "to": "mcx-2",
-    "kind": "data",
-    "text": "-1.15% today, moving: watching for an entry"
-   },
-   {
-    "t": "18:16:02",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "18:16:08",
-    "from": "src:nse",
-    "to": "intraday-0",
-    "kind": "data",
-    "text": "Optimism \u00b7 LLOYDSME: LLOYDSME: Acquisition"
-   },
-   {
-    "t": "18:16:28",
+    "t": "23:50:31",
     "from": "src:yahoo",
     "to": "mcx-1",
     "kind": "data",
-    "text": "-2.21% today, moving: watching for an entry"
+    "text": "-5.87% today, moving: watching for an entry"
    },
    {
-    "t": "18:16:58",
+    "t": "23:50:31",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "18:17:18",
-    "from": "src:yahoo",
+    "t": "23:51:17",
+    "from": "src:upstox",
+    "to": "mcx-0",
+    "kind": "data",
+    "text": "-3.16% today, moving: watching for an entry"
+   },
+   {
+    "t": "23:51:17",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:52:04",
+    "from": "src:upstox",
+    "to": "mcx-0",
+    "kind": "data",
+    "text": "-3.17% today, moving: watching for an entry"
+   },
+   {
+    "t": "23:52:04",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:52:51",
+    "from": "src:upstox",
     "to": "mcx-3",
     "kind": "data",
-    "text": "+2.47% today, in a trade"
+    "text": "+5.48% today, moving: watching for an entry"
    },
    {
-    "t": "18:17:45",
+    "t": "23:52:51",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "18:18:10",
-    "from": "src:upstox",
-    "to": "mcx-2",
+    "t": "23:53:38",
+    "from": "src:yahoo",
+    "to": "mcx-1",
     "kind": "data",
-    "text": "-1.20% today, moving: watching for an entry"
+    "text": "-5.96% today, moving: watching for an entry"
    },
    {
-    "t": "18:18:35",
+    "t": "23:53:38",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:54:24",
+    "from": "src:yahoo",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "-5.96% today, moving: watching for an entry"
+   },
+   {
+    "t": "23:54:24",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:54:57",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today +\u20b9215"
+   },
+   {
+    "t": "23:55:09",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:55:57",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:56:47",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:57:36",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:58:22",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:59:12",
     "from": "src:github",
     "to": "lab-4",
     "kind": "data",
@@ -2986,13 +2992,27 @@
    "sig:N172542-30": "2026-11-24",
    "sig:N173548-31": "2026-11-24",
    "sig:N175557-32": "2026-11-24",
-   "sig:N181601-33": "2026-11-24"
+   "sig:N181601-33": "2026-11-24",
+   "sig:N182931-34": "2026-11-24",
+   "sig:N182931-35": "2026-11-24",
+   "sig:N184932-36": "2026-11-24",
+   "M261124-80:WIN": "2026-11-24",
+   "M261124-81:OPEN": "2026-11-24",
+   "sig:N191944-37": "2026-11-24",
+   "M261124-81:LOSS": "2026-11-24",
+   "sig:N193955-38": "2026-11-24",
+   "sig:N200000-39": "2026-11-24",
+   "sig:N201004-40": "2026-11-24",
+   "sig:N203009-41": "2026-11-24",
+   "sig:N205014-42": "2026-11-24",
+   "sig:N213030-43": "2026-11-24",
+   "sig:N225103-44": "2026-11-24"
   },
   "flow_at": {
    "crypto": 1795229124.147547,
-   "lab": 1795524515.602015,
-   "ceo": 1795524236.647777,
-   "mcx": 1795524490.379333,
+   "lab": 1795544952.287357,
+   "ceo": 1795544697.384792,
+   "mcx": 1795544664.74856,
    "scalp": 1795504095.556498,
    "intraday": 1795405911.526052,
    "swing": 1795504095.556498,

@@ -1,15 +1,15 @@
 {
- "updated_at": "2026-11-24T18:18:47+05:30",
+ "updated_at": "2026-11-24T23:59:24+05:30",
  "start": 100000.0,
- "realised": 24091.87,
- "unrealised": 452.28,
- "equity": 124544.15,
- "in_use": 59282.11,
- "cash": 65262.04,
- "pnl": 24544.15,
- "pnl_pct": 24.54,
- "open": 14,
- "closed": 118,
+ "realised": 24647.53,
+ "unrealised": -155.99,
+ "equity": 124491.54,
+ "in_use": 46490.11,
+ "cash": 78001.43,
+ "pnl": 24491.54,
+ "pnl_pct": 24.49,
+ "open": 13,
+ "closed": 120,
  "buckets": {
   "swing": {
    "label": "Swing (daily bars)",
@@ -44,8 +44,8 @@
   "COMMODITY": {
    "label": "Commodities margin",
    "budget": 25000,
-   "used": 12792,
-   "room": 12208
+   "used": 0,
+   "room": 25000
   },
   "CRYPTO": {
    "label": "Crypto",

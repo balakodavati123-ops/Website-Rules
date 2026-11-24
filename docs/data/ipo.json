@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T18:07:10+05:30",
+ "updated_at": "2026-11-24T23:54:43+05:30",
  "ipos": [
   {
    "name": "Shree Siddhivinayak Greentech Industries Limited",
@@ -203,14 +203,7 @@
    "ofs_cr": null,
    "subscription": null,
    "drhp_url": null,
-   "news": [
-    {
-     "title": "Jio Platforms IPO to Open on October 21, 2026: Check Price Band, Issue Size and Key Details",
-     "source": "Groww",
-     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4zVXlqbkpwT0kwV1U0R2I4Ymp1T0hFVnVJaEhQZWZUTlVKaU1wcFpHVF9mRzJIelg4UmY4M21JSi1LTHgxYllrdXg4c1J4VGlZZHJRZHhGUDhpVWh2WEQ0UzVhdThIeTE1V3JOTk9DVnpCVU5l?oc=5",
-     "time": "2026-10-21T07:00:00Z"
-    }
-   ],
+   "news": [],
    "thesis": null,
    "analysis": {
     "score": null,
@@ -248,26 +241,7 @@
    "ofs_cr": null,
    "subscription": null,
    "drhp_url": null,
-   "news": [
-    {
-     "title": "EAAA India Alternatives IPO subscribed 11% on Day 1: Check price band, lot size and key dates",
-     "source": "Upstox",
-     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPNFJXTFFzZFI1ZUNydE1kMmpFdTJQNF93dTBuajRDUHQ0THRrSkFvcUlxSnQxa2V2Z2llWEl3RDd4WUhKQzhwVURCbkdsZjdXYXRUSnFPeFpfWTlGU1JaYl9fdDFjaDhtRXVsdnVPdVhxVUNDaVcyd3Bqc3I0OTVFTm0yWFNoWWxsS3pGUkoxR0hKM1pCQVBwNVJPMDNjMjgwakgzWW5FSW5YQi1zX214VXBjVTU0NG1SaUNPRG1kMkhkY25OMlc4RTFLeEVWMWdEZ0FxcGNvNkRSbTdNSGNTczVpTQ?oc=5",
-     "time": "2026-10-26T07:00:00Z"
-    },
-    {
-     "title": "EAAA India Alternatives Sets INR 1,585\u20131,665 Price Band for INR 1,200 Crore IPO",
-     "source": "Energetica India Magazine",
-     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMnc3THUxUFpJU3loM3dXb3Z2X3gxMUpxcFlvbTRZd2FOTUZsT0RCeG83Z1p0eHA1cVp1QUVkMGR4ZWpBU21BR3cyU3J2MDZEZVplVkNUUUZsLXZ1WVhjZ2hva2RZRFVIMjhEd19Yd1dNT0tva0VKQkV2U1ZmTEUyQ2E1N3FoNGJ6dm9xVXVvZEtIcE1EQ0FmdjNNVVhpSkhJQ0tYRHlaa3hqYl9pOS1mN3hYXzA?oc=5",
-     "time": "2026-10-23T07:00:00Z"
-    },
-    {
-     "title": "EAAA India Alternatives IPO: Price Band Fixed At \u20b91,585-1,665; Subscription Opens On 26 October With OFS Of Up To \u20b91,200 Crore",
-     "source": "Kotak Neo",
-     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBfMDVuVTE1NG5lamVBLXIzTWJETldDX2QzWEhXcmNhbkZ5YUxKZ1lrRS03b09hcTBLTmJVS3djZ05qQ0xIWGRxajV2bTd4NUFMV05LemZjTzBLeF9HWVVxSkw4b2tkVUlrVUdOQjBfSFdYeHczZHpMaldXV1FSQQ?oc=5",
-     "time": "2026-10-21T07:00:00Z"
-    }
-   ],
+   "news": [],
    "thesis": null,
    "analysis": {
     "score": null,
@@ -633,7 +607,7 @@
  "sources": {
   "nse": "ok",
   "sebi": "ok",
-  "news": "ok"
+  "news": "error: HTTP 503"
  },
- "at": 1795523839.625275
+ "at": 1795544724.501199
 }

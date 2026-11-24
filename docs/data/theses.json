@@ -1,4 +1,57 @@
 {
+ "M261124-81": {
+  "horizon": "intraday",
+  "headline": "Crude oil mini short",
+  "news": [
+   "US markets averaged +4.75% at the 23/11 close.",
+   "Asia averaged +1.83%.",
+   "Brent crude 86.4 (-6.67%)."
+  ],
+  "data": [
+   "Crude oil mini (CRUDEOILM FUT 18 DEC 26) at 7,522.00, -0.65% on the previous close; day range 7,434.00 to 7,545.00, price is 1.18% from the day low.",
+   "Lot: 10 unit(s) \u00d7 1 lot(s); contract value \u20b975,220.",
+   "Global reference: Brent crude 87.0 (-2.65% at the 11-24 close)."
+  ],
+  "strategy": "Buy a dip inside an up day or sell a bounce inside a down day.",
+  "why": [
+   "Used after a trend day pulls back 0.4% to 1.2%: you join the trend at a better price than the chasers.",
+   "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|576265)."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "7,522.00",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "7,559.61",
+    "Costs about \u20b9376"
+   ],
+   [
+    "Target (exit if right)",
+    "7,454.30",
+    "Earns about \u20b9677"
+   ],
+   [
+    "Reward for the risk",
+    "1.8 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "36% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b923,650",
+    "19% of the account"
+   ]
+  ],
+  "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: The pullback becomes a reversal. The 0.5% stop caps the loss.",
+  "viability": "Needs \u20b923,650 to hold (Upstox margin calculator)."
+ },
  "M261124-79": {
   "horizon": "intraday",
   "headline": "Gold 1 g short",

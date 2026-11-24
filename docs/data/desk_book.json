@@ -1,86 +1,5 @@
 {
- "trades": [
-  {
-   "id": "M261124-80",
-   "desk": "COMMODITY",
-   "strategy": "mcx_momentum",
-   "label": "Natural gas mini long",
-   "side": "LONG",
-   "entry": 333.8,
-   "last": 336.4,
-   "qty": 1,
-   "status": "OPEN",
-   "pnl_rs": 608.27,
-   "exit": "",
-   "why": "",
-   "day": "2026-11-24",
-   "opened": "17:00:01",
-   "closed": "",
-   "ts": 1795519803.3751206,
-   "key": "MCX_FO|578250",
-   "mult": 250.0,
-   "symbol": "NATGASMINI FUT 28 DEC 26",
-   "stop": 331.8,
-   "target_px": 337.81,
-   "horizon": "intraday",
-   "risk_class": "Intraday momentum",
-   "margin_rs": 12792,
-   "margin_src": "Upstox margin calculator",
-   "thesis": {
-    "horizon": "intraday",
-    "headline": "Natural gas mini long",
-    "news": [
-     "US markets averaged +4.75% at the 23/11 close.",
-     "Asia averaged +1.83%.",
-     "Brent crude 86.4 (-6.67%)."
-    ],
-    "data": [
-     "Natural gas mini (NATGASMINI FUT 28 DEC 26) at 333.80, +1.64% on the previous close; day range 328.60 to 334.50, price is 0.21% from the day high.",
-     "Lot: 250 unit(s) \u00d7 1 lot(s); contract value \u20b983,450."
-    ],
-    "strategy": "A futures position in the direction the market is already moving hard.",
-    "why": [
-     "Used when a commodity is up or down 0.8% or more and sitting at its day extreme: strong days tend to extend into the evening session when global markets open.",
-     "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|578250)."
-    ],
-    "numbers": [
-     [
-      "Entry",
-      "333.80",
-      "Price when the paper trade was opened"
-     ],
-     [
-      "Stop (exit if wrong)",
-      "331.80",
-      "Costs about \u20b9500"
-     ],
-     [
-      "Target (exit if right)",
-      "337.81",
-      "Earns about \u20b91,002"
-     ],
-     [
-      "Reward for the risk",
-      "2.0 to 1",
-      "Target gain divided by stop loss"
-     ],
-     [
-      "Needs to be right",
-      "33% of the time",
-      "The win rate this reward-to-risk must beat to break even, before costs"
-     ],
-     [
-      "Capital tied up",
-      "\u20b912,792",
-      "10% of the account"
-     ]
-    ],
-    "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
-    "viability": "Needs \u20b912,792 to hold (Upstox margin calculator)."
-   },
-   "reason": "+1.6% on the previous close and within 0.3% of the day high; stop 0.6%, target 1.2%"
-  }
- ],
+ "trades": [],
  "seen": {
   "2026-11-17|SOL": "crypto_breakout",
   "2026-11-17|CRUDEOILM FUT 19 NOV 26": "SHORT",
@@ -4660,9 +4579,10 @@
   "2026-11-23|CRUDEOILM FUT 18 DEC 26": "LONG",
   "2026-11-24|long_straddle": "booked",
   "2026-11-24|GOLDPETAL FUT 30 NOV 26": "SHORT",
-  "2026-11-24|NATGASMINI FUT 28 DEC 26": "LONG"
+  "2026-11-24|NATGASMINI FUT 28 DEC 26": "LONG",
+  "2026-11-24|CRUDEOILM FUT 18 DEC 26": "SHORT"
  },
- "seq": 80,
+ "seq": 81,
  "rebased": true,
  "cool": {
   "RELIANCE": 1795070015.846615,
