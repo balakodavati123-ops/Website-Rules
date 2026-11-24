@@ -1,57 +1,42 @@
 {
  "mood": "mixed",
- "brief": "Global sentiment is recovering, with Wall Street posting its best session since April last year and Nasdaq futures up 3% after Jensen Huang's return as Nvidia CEO, while Asian stocks rallied. Indian shares are coming off a sharp bank-led sell-off that ended a four-week rally, so the open may be firmer but remains fragile.",
+ "brief": "NSE and BSE are shut today for Guru Nanak Jayanti, so Indian shares do not trade, though MCX evening trade is open. Global sentiment improved sharply after Jensen Huang's return as Nvidia CEO, but India closed yesterday with Sensex down 1,484 points and Nifty at 25,349.65.",
  "themes": [
-  "Global AI-trade rebound",
-  "Bank sell-off ended four-week rally",
-  "Adani Airports funding",
-  "Rupee and bond pressure"
+  "Indian markets closed for holiday",
+  "Nvidia-led global rally",
+  "Yesterday's bank-led sell-off",
+  "Gold rebounds"
  ],
  "companies": [
   {
-   "name": "HDFC Bank",
-   "tone": "negative",
-   "why": "Slips to 2.5-year low on legal and leadership woes"
-  },
-  {
-   "name": "ICICI Bank",
-   "tone": "negative",
-   "why": "Share price declines 3.32% from 52-week highs"
-  },
-  {
-   "name": "Adani Airports",
+   "name": "Reliance Industries",
    "tone": "positive",
-   "why": "Raises $300 million from 360 ONE Asset"
-  },
-  {
-   "name": "Bajaj Finance",
-   "tone": "positive",
-   "why": "Emkay rates Buy with Rs 9000 target"
+   "why": "Promoter group buys 14.27 lakh shares worth Rs 194 crore"
   },
   {
    "name": "Persistent Systems",
-   "tone": "negative",
-   "why": "Emkay rates Reduce with Rs 3700 target"
-  },
-  {
-   "name": "Aditya Birla Fashion and Retail",
-   "tone": "negative",
-   "why": "Emkay rates Reduce with Rs 230 target"
-  },
-  {
-   "name": "Ratnaveer Precision",
    "tone": "positive",
-   "why": "Surges 10% on huge volume"
+   "why": "Named a top stock to buy on 25 Nov"
+  },
+  {
+   "name": "Ather Energy",
+   "tone": "positive",
+   "why": "Named a top stock to buy on 25 Nov"
+  },
+  {
+   "name": "HDFC Bank",
+   "tone": "negative",
+   "why": "Banks dragged markets in yesterday's heavy fall"
   }
  ],
- "global": "Nvidia's Jensen Huang returned as CEO, lifting US indices to their best session since April last year and Asian stocks, with Taiwan up 9%.",
+ "global": "US stocks had their best day in over a year after Huang's reinstatement, lifting Nvidia suppliers such as SK Hynix, while the US blacklisted an Alibaba subsidiary and Megaspeed over the Nvidia scandal.",
  "risks": [
-  "Rebound may fade if AI-trade jitters return",
-  "Bank and HDFC Bank weakness",
-  "Rupee weakness and bond supply"
+  "Gains from Nvidia news may not last",
+  "Indian markets reopen after a 1,484-point fall",
+  "Crypto and gold volatility"
  ],
- "time": "24 Nov 09:21",
- "at": 1795492283.668148,
+ "time": "24 Nov 10:21",
+ "at": 1795495870.552081,
  "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
  "n": 40

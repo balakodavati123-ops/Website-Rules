@@ -1,12 +1,28 @@
 {
- "time": "24 Nov 09:21",
- "at": 1795492283.668148,
+ "time": "24 Nov 10:21",
+ "at": 1795495870.552081,
  "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
  "checks": {
   "ICICIBANK": {
    "verdict": "doubt",
    "why": "Market-wide bank sell-off story and price has not moved since"
+  },
+  "WORTHPERI": {
+   "verdict": "doubt",
+   "why": "Story is about Nvidia CEO's net worth, not this company; market shut"
+  },
+  "AXISCADES": {
+   "verdict": "doubt",
+   "why": "Acquisition filing gives no details and the exchange is closed today"
+  },
+  "SOUTHWEST": {
+   "verdict": "doubt",
+   "why": "Kospi story, not about this company; market-wide and exchange closed"
+  },
+  "TAKE": {
+   "verdict": "doubt",
+   "why": "Weeks-long rally already happened; no new catalyst and exchange closed"
   }
  }
 }
