@@ -1,6 +1,6 @@
 {
- "time": "24 Nov 10:21",
- "at": 1795495870.552081,
+ "time": "24 Nov 11:21",
+ "at": 1795499468.128168,
  "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
  "checks": {
@@ -10,7 +10,7 @@
   },
   "WORTHPERI": {
    "verdict": "doubt",
-   "why": "Story is about Nvidia CEO's net worth, not this company; market shut"
+   "why": "Story is about Nvidia CEO's net worth, not this company; exchange closed"
   },
   "AXISCADES": {
    "verdict": "doubt",

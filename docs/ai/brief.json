@@ -1,42 +1,47 @@
 {
  "mood": "mixed",
- "brief": "NSE and BSE are shut today for Guru Nanak Jayanti, so Indian shares do not trade, though MCX evening trade is open. Global sentiment improved sharply after Jensen Huang's return as Nvidia CEO, but India closed yesterday with Sensex down 1,484 points and Nifty at 25,349.65.",
+ "brief": "NSE and BSE are shut today for Guru Nanak Jayanti, so there is no Indian cash trading, while Wall Street rallied hard after Jensen Huang's return to Nvidia. Tata Sons' decision on going public this week and the market reaction to Tata Steel's APL Apollo deal are the main Indian stories to watch.",
  "themes": [
   "Indian markets closed for holiday",
   "Nvidia-led global rally",
-  "Yesterday's bank-led sell-off",
-  "Gold rebounds"
+  "Tata Sons listing decision",
+  "Crude near three-month lows"
  ],
  "companies": [
   {
-   "name": "Reliance Industries",
+   "name": "Lupin",
    "tone": "positive",
-   "why": "Promoter group buys 14.27 lakh shares worth Rs 194 crore"
+   "why": "Gets USFDA nod for a generic kidney-patient drug"
   },
   {
-   "name": "Persistent Systems",
+   "name": "RVNL",
    "tone": "positive",
-   "why": "Named a top stock to buy on 25 Nov"
+   "why": "Bags Rs 87 crore contract from NMDC"
   },
   {
-   "name": "Ather Energy",
-   "tone": "positive",
-   "why": "Named a top stock to buy on 25 Nov"
-  },
-  {
-   "name": "HDFC Bank",
+   "name": "Tata Steel",
    "tone": "negative",
-   "why": "Banks dragged markets in yesterday's heavy fall"
+   "why": "Investors give thumbs down to APL Apollo deal"
+  },
+  {
+   "name": "Shriram Finance",
+   "tone": "positive",
+   "why": "Shares rise on Sensex inclusion"
+  },
+  {
+   "name": "MIDHANI",
+   "tone": "neutral",
+   "why": "Faces Rs 1,500 crore revenue ceiling; plans Rs 1,000 crore capex"
   }
  ],
- "global": "US stocks had their best day in over a year after Huang's reinstatement, lifting Nvidia suppliers such as SK Hynix, while the US blacklisted an Alibaba subsidiary and Megaspeed over the Nvidia scandal.",
+ "global": "Nasdaq jumped sharply as Nvidia shares soared, with US futures edging higher and leveraged short-Nvidia ETFs blowing up.",
  "risks": [
-  "Gains from Nvidia news may not last",
-  "Indian markets reopen after a 1,484-point fall",
-  "Crypto and gold volatility"
+  "Rebound may not last",
+  "Indian markets reopen after a sharp fall",
+  "Tata Steel deal concerns"
  ],
- "time": "24 Nov 10:21",
- "at": 1795495870.552081,
+ "time": "24 Nov 11:21",
+ "at": 1795499468.128168,
  "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
  "n": 40
