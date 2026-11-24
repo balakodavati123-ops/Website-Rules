@@ -75,8 +75,11 @@ def indicators(fut: dict, days: list[date]) -> dict:
     return out
 
 
-def simulate(bt, ind: dict, stop: float = 0.25, breach: str = "close", first_entry: str = "09:21", last_entry: str = "15:00", square_off: str = "15:20", label: str = "") -> list[dict]:
-    """bt: a loaded straddle_engine.Backtester (index minutes, expiries, contracts cache, client)."""
+def simulate(bt, ind: dict, stop: float = 0.25, breach: str = "close", first_entry: str = "09:21", last_entry: str = "15:00", square_off: str = "15:20", label: str = "",
+             slope_bars: int = 0, cooldown_min: int = 0) -> list[dict]:
+    """bt: a loaded straddle_engine.Backtester (index minutes, expiries, contracts cache, client).
+    Cleaner signals: slope_bars > 0 takes a crossover only when VWAP has risen (calls) or fallen (puts) over the last slope_bars 3-minute candles;
+    cooldown_min > 0 skips any crossover that comes within that many minutes of the previous crossover (whipsaw filter)."""
     from ..backtest.straddle_engine import _price_at, _series
     trades, cache = [], {}
 
@@ -101,11 +104,20 @@ def simulate(bt, ind: dict, stop: float = 0.25, breach: str = "close", first_ent
         if not expiry:
             continue
         dte = sum(1 for x in bt.trading if d < x <= date.fromisoformat(expiry))
-        pos = None
+        pos, last_cross = None, None
         for i in range(1, len(rows)):
             s, end, o, h, l, c, ema, vw = rows[i]
             pe_, pv_ = rows[i - 1][6], rows[i - 1][7]
             up, dn = pe_ <= pv_ and ema > vw, pe_ >= pv_ and ema < vw
+            take = up or dn
+            if take:
+                mins_now = int(end[:2]) * 60 + int(end[3:])
+                if cooldown_min and last_cross is not None and mins_now - last_cross < cooldown_min:
+                    take = False                                  # a second crossover within the cooldown: whipsaw, skip it
+                last_cross = mins_now
+                if take and slope_bars and i >= slope_bars:
+                    sl_ = vw - rows[i - slope_bars][7]
+                    take = (sl_ > 0) if up else (sl_ < 0)         # VWAP must slope the way of the trade
             # 1) manage an open position: minute-by-minute stop inside this candle, then the EMA9 breach at the candle close
             if pos:
                 bars = pos["bars"]
@@ -140,7 +152,7 @@ def simulate(bt, ind: dict, stop: float = 0.25, breach: str = "close", first_ent
                                    "entry_timestamp_ist": f"{d}T{pos['t']}:00+05:30", "slippage_inr": 0.0, "mae_pct": 0.0, "mfe_pct": 0.0, "data_source_status": "VERIFIED_HISTORICAL"})
                     pos = None
             # 2) a new crossover opens a trade at the candle close
-            if not pos and (up or dn) and first_entry <= end <= last_entry:
+            if not pos and take and first_entry <= end <= last_entry:
                 spot = _price_at(bt.n1[d], end)
                 if not spot:
                     continue

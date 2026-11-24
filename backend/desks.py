@@ -403,8 +403,8 @@ def fno_step(book: dict, now: datetime, ctx: dict, paused: set) -> None:
     """ctx: {spot, prev, chains: {expiry: rows}, expiry, lot}"""
     R, t = FNO_RULES, mins(now.strftime("%H:%M"))
     for tr in book["trades"]:
-        if tr["desk"] != "FNO" or tr["status"] != "OPEN" or tr.get("horizon", "daily") != "daily":
-            continue
+        if tr["desk"] != "FNO" or tr["status"] != "OPEN" or tr.get("horizon", "daily") != "daily" or tr.get("strategy") == "ema_vwap_cross":
+            continue                          # the EMA9 / VWAP book manages its own exits (backend/ema_vwap_live.py)
         rows = ctx["chains"].get(tr["expiry"])
         if rows is None:
             continue

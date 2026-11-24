@@ -43,6 +43,7 @@ import ipo as IPO           # noqa: E402
 import charts_feed as CF    # noqa: E402
 import news_pulse as NP     # noqa: E402
 import straddle_lab as SL   # noqa: E402
+import ema_vwap_live as EV  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = Path(os.environ.get("DESK_DOCS") or ROOT / "docs" / "data")
@@ -247,6 +248,15 @@ def run() -> None:
     digest, review = [load("news_digest.json", {})], [load("day_review.json", {})]
     ipo_v, ipo_st, lab_v = [load("ipo.json", {})], load("ipo_state.json", {}), [load("lab.json", {})]
     charts_at, charts_thread, fut_key = [0.0], [None], [None]
+    ev_ = {"day": None, "key": None}                                  # the EMA9 / VWAP book's futures contract and seed for the day
+    try:
+        _f = json.loads((Path(__file__).resolve().parents[1] / "quant/results/ema_vwap_filters.json").read_text())
+        ev_bt = {k: {p: {m: v[p].get(m) for m in ("trades", "win_rate_pct", "expectancy_inr", "net_pnl_inr", "gross_pnl_inr", "charges_inr")} for p in ("year1", "year2", "all")} | {"per_session": v.get("per_session")}
+                 for k, v in _f.items() if not k.startswith("_")}
+        ev_bt["_live_rule"] = "slope 3 + 30 min"
+        ev_bt["_chosen_on_year1"] = _f.get("_chosen_on_year1")
+    except Exception:
+        ev_bt = {}
     pulse = load("news_pulse_state.json", NP.new_state())               # the first look at every headline and filing, about once a minute
     for k_, v_ in NP.new_state().items():
         pulse.setdefault(k_, v_)
@@ -903,6 +913,7 @@ def run() -> None:
                                                "live": {"n": len(mine_), "wins": sum(t["status"] == "WIN" for t in mine_), "total_rs": round(sum(float(t.get("pnl_rs") or 0) for t in mine_)),
                                                         "trades": [{k: t.get(k) for k in ("id", "day", "label", "status", "pnl_rs", "why")} for t in sorted(mine_, key=lambda t: t["day"])[-12:]]},
                                                "playbook": {k: v for k, v in playbook.items() if k not in ("table", "closes")}})
+                    elif sdl.get("view"):
                         save("straddle.json", {"updated_at": now.isoformat(timespec="seconds"), "today": sdl["view"],
                                                "playbook": {k: v for k, v in playbook.items() if k not in ("table", "closes")}})
                 # weekly and monthly structures claim margin first: they are held for days, the daily ones are flat by 15:15 and take what is left
@@ -919,6 +930,27 @@ def run() -> None:
                     traceback.print_exc()
                     info["fno_hold"] = f"error: {str(e)[:100]}"
                 D.fno_step(xb, now, ctx, paused)
+                try:                                          # the EMA9 / VWAP book: the CEO's crossover strategy, kept apart from the straddle
+                    if ev_["day"] != today:
+                        futs = [x for x in U.instruments("NSE") if x.get("segment") == "NSE_FO" and x.get("instrument_type") == "FUT" and x.get("name") == "NIFTY" and x.get("expiry", 0) / 1000 > time.time()]
+                        f0 = min(futs, key=lambda x: x["expiry"]) if futs else {}
+                        ev_.update(day=today, key=f0.get("instrument_key"), name=f0.get("trading_symbol"), ema0=None, seed_at=0.0, bars=[], at=0.0)
+                    if ev_["key"]:
+                        if ev_["ema0"] is None and time.time() - ev_["seed_at"] > 300:
+                            ev_["seed_at"] = time.time()
+                            ev_["ema0"] = EV.seed_ema(U._get, token, ev_["key"], today)
+                        if time.time() - ev_["at"] >= 20:
+                            ev_["bars"], ev_["at"] = U.intraday(token, ev_["key"], 1), time.time()
+                        view_ = EV.step(xb, now, {"bars1": ev_["bars"], "ema0": ev_["ema0"], "chains": chains, "expiry": exps[0], "lot": ctx["lot"], "spot": spot, "room": rm["FNO"],
+                                                  "vix": vixq, "fut": ev_["name"]}, paused)
+                        all_ = xb["trades"] + [t for t in archive.values() if t["id"] not in {x["id"] for x in xb["trades"]}]
+                        save("ema_vwap.json", {"updated_at": now.isoformat(timespec="seconds"), "today": view_, "paused": EV.STRATEGY in paused,
+                                               "books": {"ema_vwap": EV.record(all_, EV.STRATEGY), "straddle": EV.record(all_, "long_straddle")}, "backtest": ev_bt})
+                        info["ema_vwap"] = f"{view_.get('candles')} candles of {ev_['name']}, EMA9 {'seeded' if ev_['ema0'] else 'not seeded'}"
+                except Exception as e:                        # a fault here must never stop the straddle desk
+                    import traceback
+                    traceback.print_exc()
+                    info["ema_vwap"] = f"error: {str(e)[:100]}"
                 rows_ = chains.get(exps[0]) or []
                 if rows_ and spot:
                     atm = min((r["strike_price"] for r in rows_), key=lambda k: abs(k - spot))
