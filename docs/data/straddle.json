@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T12:05:39+05:30",
+ "updated_at": "2026-11-24T12:38:10+05:30",
  "today": {
   "ok": false,
   "why": "no straddle rule beat time decay and costs in training (2592 rules tested); on the 40 days most like today the trade averaged Rs -1,553",
@@ -52,7 +52,7 @@
    "win_rate": 15.6,
    "pf": 0.21
   },
-  "at": "12:05",
+  "at": "12:38",
   "mode": "ceo"
  },
  "conditions": {
@@ -67,14 +67,14 @@
    "NIFTY opened +2.29%: a news-sized gap",
    "the first 45 minutes covered 2.56% (high to low): the market is moving",
    "NIFTY is -2.23% from its open by 10:00",
-   "market-wide news today: Gold falls further, set for worst week since March as Fed rate hike worries rise; 'More To Come' - IMF Managing Director warns the AI sell-off may not be over yet",
+   "market-wide news today: Global AI Sell-off: Taiwan takes action yet again to support collapsing stock market; US Market Crash: Nasdaq enters 'bear market' - 10 things for investors to know",
    "India VIX is in the top fifth of its year (81.0th percentile) and not rising"
   ],
   "go_signals": [
    "NIFTY opened +2.29%: a news-sized gap",
    "the first 45 minutes covered 2.56% (high to low): the market is moving",
    "NIFTY is -2.23% from its open by 10:00",
-   "market-wide news today: Gold falls further, set for worst week since March as Fed rate hike worries rise; 'More To Come' - IMF Managing Director warns the AI sell-off may not be over yet"
+   "market-wide news today: Global AI Sell-off: Taiwan takes action yet again to support collapsing stock market; US Market Crash: Nasdaq enters 'bear market' - 10 things for investors to know"
   ],
   "skip_signals": [
    "India VIX is in the top fifth of its year (81.0th percentile) and not rising"
@@ -83,9 +83,9 @@
    "strong": 0,
    "net": 0,
    "macro": [
-    "Gold falls further, set for worst week since March as Fed rate hike worries rise",
-    "'More To Come' - IMF Managing Director warns the AI sell-off may not be over yet",
-    "US Market Crash: Dow Jones tanks 1,100 points, nears technical correction - What is plagui"
+    "Global AI Sell-off: Taiwan takes action yet again to support collapsing stock market",
+    "US Market Crash: Nasdaq enters 'bear market' - 10 things for investors to know",
+    "Anthropic tumbles more than 10% in premarket trade as AI slump engulfs markets"
    ],
    "mood": "mixed",
    "fc": 0.32

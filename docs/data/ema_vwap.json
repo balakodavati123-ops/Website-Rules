@@ -1,7 +1,7 @@
 {
- "updated_at": "2026-11-24T12:05:39+05:30",
+ "updated_at": "2026-11-24T12:38:10+05:30",
  "today": {
-  "at": "12:05:39",
+  "at": "12:38:10",
   "fut": "NIFTY FUT 29 DEC 26",
   "rules": {
    "slope_bars": 3,
@@ -12,10 +12,85 @@
    "square_off": "15:20",
    "breach": "close"
   },
-  "candles": 0,
-  "seeded": true,
-  "last": [],
-  "crosses": []
+  "candles": 10,
+  "seeded": false,
+  "source": "1-minute bars built from live quotes (Upstox candles unavailable)",
+  "warmup": {
+   "needed": 12,
+   "from": "12:06",
+   "vwap_anchor": "12:06"
+  },
+  "last": [
+   {
+    "end": "12:09",
+    "close": 25530.0,
+    "ema9": 25530.0,
+    "vwap": 25683.51
+   },
+   {
+    "end": "12:12",
+    "close": 25530.0,
+    "ema9": 25530.0,
+    "vwap": 25683.51
+   },
+   {
+    "end": "12:15",
+    "close": 25530.0,
+    "ema9": 25530.0,
+    "vwap": 25683.51
+   },
+   {
+    "end": "12:18",
+    "close": 25530.0,
+    "ema9": 25530.0,
+    "vwap": 25683.51
+   },
+   {
+    "end": "12:21",
+    "close": 25530.0,
+    "ema9": 25530.0,
+    "vwap": 25683.51
+   },
+   {
+    "end": "12:24",
+    "close": 25530.0,
+    "ema9": 25530.0,
+    "vwap": 25683.51
+   },
+   {
+    "end": "12:27",
+    "close": 25530.0,
+    "ema9": 25530.0,
+    "vwap": 25683.51
+   },
+   {
+    "end": "12:30",
+    "close": 25530.0,
+    "ema9": 25530.0,
+    "vwap": 25683.51
+   },
+   {
+    "end": "12:33",
+    "close": 25530.0,
+    "ema9": 25530.0,
+    "vwap": 25683.51
+   },
+   {
+    "end": "12:36",
+    "close": 25530.0,
+    "ema9": 25530.0,
+    "vwap": 25683.51
+   }
+  ],
+  "crosses": [],
+  "now": {
+   "end": "12:36",
+   "close": 25530.0,
+   "ema9": 25530.0,
+   "vwap": 25683.51,
+   "side": "EMA9 below VWAP (puts side)",
+   "vwap_slope": -0.0
+  }
  },
  "paused": false,
  "books": {

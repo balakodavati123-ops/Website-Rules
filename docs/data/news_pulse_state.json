@@ -654,7 +654,25 @@
   "stockmarketclosedforgurunanakjayantiknowwhatcantradersaccessonmcxfrom5pmfreepressjournal": 1,
   "hdfcbankrelianceindustriesamong10stockswithhighestdiiholdinginq2seefulllist": 1,
   "moneyviewsharepricetodaygains746onpriceactionunivest": 1,
-  "goldholdsgainafternvidiasrehiringofhuangsparksrally": 1
+  "goldholdsgainafternvidiasrehiringofhuangsparksrally": 1,
+  "glandgeneralupdates": 1,
+  "microsoftbuildsinhouserockettrainingsystemtocutrelianceonrivalaimodels": 1,
+  "googlecloudindiarejectshugelayoffsclaimconfirms30roleseliminated": 1,
+  "delhiaqianditstocksajaysrivastavastwothingsthatmayneverhappen": 1,
+  "perfect100100anupamkhersmotherdularireviewsayushmannkhurranasharvarisyehpremmolliya": 1,
+  "airqualityonnovember24howbadistheaqiinyourcitytoday": 1,
+  "shubmangillakashdeepincidentwhyajinkyarahanewasunhappywithindiascaptain": 1,
+  "trumpclaimshehelpedbringjensenhuangbacktonvidiafearedchinacouldhirehim": 1,
+  "fatherandsonbothgettingpmkisanmoneywhatdorulessay": 1,
+  "showerpipestuckinsideyoungmansbodyinrajasthandoctorsremoveitafteremergencysurgery": 1,
+  "asiacuprisingstars2026howindiaapakistanacanmeetinfinalaftergroupbclash": 1,
+  "hereswhywethinkkarurvysyabanknsekarurvysyaiswellworthwatchingsimplywallst": 1,
+  "arebanksopenorclosedtodaycheckrbis21cityholidaylistforgurunanakjayantithefinancialexpress": 1,
+  "stockstowatchfornovember25adanienterprisestatasteeljupiterwagonsphysicswallahandmore": 1,
+  "goldratetoday24november2026goldpricereboundsfrom14monthlowisittherighttimetobuyexpertsexpl": 1,
+  "jensenhuangisback1trnmcapnvidias9284lakhcrcomeback70lossesrecoveredbairdisbullishtarget": 1,
+  "nseandbseholidaynoticetradingsegmentsclosedon24november2026marketsresumeon25novemberkalkin": 1,
+  "nsetoincludeacutaaschemicalsaparindustriesinfosegmentdailyhunt": 1
  },
  "signals": [
   {
@@ -982,20 +1000,50 @@
    "source": "NSE filing",
    "link": "https://nsearchives.nseindia.in/corporate/SILVERTUC_24112026112132_Receipt_of_Order.pdf",
    "kind": "filing",
-   "status": "watching: price has not confirmed yet",
+   "status": "skipped: the AI analyst doubted it",
    "px0": 124.73,
    "px": 124.73,
-   "move_pct": 0.0
+   "move_pct": 0.0,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Order filing gives no size or value; exchange is closed today"
+   }
+  },
+  {
+   "id": "N120728-15",
+   "t": "12:07:28",
+   "ts": 1795502248.122326,
+   "pub": "12:05",
+   "lag_s": 95,
+   "symbol": "GLAND",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "GLAND: General Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/GLAND_24112026120546_USFDA_VSEZ_EIR_24112026.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 3297.4,
+   "px": 3297.4,
+   "move_pct": 0.0,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Vague general-updates filing; exchange is closed today"
+   }
   }
  ],
  "cache": {
   "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms": {
-   "etag": "\"0883e37893fdcfe69d1c4bfc3916ac90b-gzip\"",
-   "mod": "Tue, 24 Nov 2026 06:16:42 GMT"
+   "etag": "\"018e2bdc8408bcfeef63c2668c11d2a18-gzip\"",
+   "mod": "Tue, 24 Nov 2026 06:48:44 GMT"
   },
   "https://economictimes.indiatimes.com/markets/stocks/rssfeeds/2146842.cms": {
-   "etag": "\"0329892c2cfb21d5e824eb808d5e0a867-gzip\"",
-   "mod": "Tue, 24 Nov 2026 06:22:47 GMT"
+   "etag": "\"07bc0b57a721e8dafb1a89ba5bdd1d88c-gzip\"",
+   "mod": "Tue, 24 Nov 2026 06:54:48 GMT"
   },
   "https://www.moneycontrol.com/rss/latestnews.xml": {
    "etag": null,
@@ -1007,15 +1055,15 @@
   },
   "https://www.business-standard.com/rss/markets-106.rss": {
    "etag": "\"9fdf71eb74def458489af4f66d74272f\"",
-   "mod": "Tue, 24 Nov 2026 06:21:10 GMT"
+   "mod": "Tue, 24 Nov 2026 06:51:52 GMT"
   },
   "https://www.thehindubusinessline.com/markets/feeder/default.rss": {
    "etag": null,
-   "mod": "Tue, 24 Nov 2026 06:28:20 GMT"
+   "mod": "Tue, 24 Nov 2026 06:32:38 GMT"
   },
   "https://feeds.feedburner.com/ndtvprofit-latest": {
    "etag": null,
-   "mod": "Tue, 24 Nov 2026 05:45:46 GMT"
+   "mod": "Tue, 24 Nov 2026 06:41:43 GMT"
   },
   "https://www.cnbctv18.com/commonfeeds/v1/cne/rss/market.xml": {
    "etag": null,
@@ -1030,48 +1078,48 @@
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "Moneycontrol": {
    "ok": true,
    "items": 15,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "Google News": {
    "ok": true,
    "items": 6,
-   "at": "12:05:31"
+   "at": "12:37:20"
   }
  },
- "scans": 973
+ "scans": 1003
 }

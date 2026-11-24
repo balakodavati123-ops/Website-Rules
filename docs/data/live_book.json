@@ -6,7 +6,7 @@
  },
  "seq": 0,
  "diag": {
-  "at": "12:05",
+  "at": "12:38",
   "effort": 2,
   "setups_on": [
    "news",
@@ -17,8 +17,7 @@
   "scanned": 778,
   "found": {
    "news": [
-    "AXISBANK",
-    "POLYCAB"
+    "AXISBANK"
    ],
    "gap": [
     "COHANCE",
@@ -43,7 +42,7 @@
   "skipped": {
    "AXISBANK": "no intraday margin left"
   },
-  "news_names": 2,
-  "headline_names": 14
+  "news_names": 3,
+  "headline_names": 12
  }
 }

@@ -1,54 +1,80 @@
 {
- "updated_at": "2026-11-24T12:05:31+05:30",
- "scans": 973,
+ "updated_at": "2026-11-24T12:37:20+05:30",
+ "scans": 1003,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "Moneycontrol": {
    "ok": true,
    "items": 15,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "12:05:31"
+   "at": "12:37:20"
   },
   "Google News": {
    "ok": true,
    "items": 6,
-   "at": "12:05:31"
+   "at": "12:37:20"
   }
  },
  "signals": [
+  {
+   "id": "N120728-15",
+   "t": "12:07:28",
+   "ts": 1795502248.122326,
+   "pub": "12:05",
+   "lag_s": 95,
+   "symbol": "GLAND",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "GLAND: General Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/GLAND_24112026120546_USFDA_VSEZ_EIR_24112026.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 3297.4,
+   "px": 3297.4,
+   "move_pct": 0.0,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Vague general-updates filing; exchange is closed today"
+   }
+  },
   {
    "id": "N112238-14",
    "t": "11:22:38",
@@ -66,10 +92,14 @@
    "source": "NSE filing",
    "link": "https://nsearchives.nseindia.in/corporate/SILVERTUC_24112026112132_Receipt_of_Order.pdf",
    "kind": "filing",
-   "status": "watching: price has not confirmed yet",
+   "status": "skipped: the AI analyst doubted it",
    "px0": 124.73,
    "px": 124.73,
-   "move_pct": 0.0
+   "move_pct": 0.0,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Order filing gives no size or value; exchange is closed today"
+   }
   },
   {
    "id": "N101554-13",
@@ -384,8 +414,8 @@
   "last_hour": 1,
   "positive": 1,
   "negative": 0,
-  "today": 14,
-  "median_lag_min": 52.3,
+  "today": 15,
+  "median_lag_min": 39.5,
   "new_this_scan": 0
  }
 }
