@@ -1,63 +1,58 @@
 {
- "mood": "bearish",
- "brief": "Indian markets closed sharply lower, with Sensex down about 1,484 points and Nifty 50 down 1.75% as banks and metals bled, though IT and Maruti held up. Wall Street futures are bouncing and Asian regulators are stepping in to support markets, but AI-trade jitters remain.",
+ "mood": "mixed",
+ "brief": "Global sentiment is recovering, with Wall Street posting its best session since April last year and Nasdaq futures up 3% after Jensen Huang's return as Nvidia CEO, while Asian stocks rallied. Indian shares are coming off a sharp bank-led sell-off that ended a four-week rally, so the open may be firmer but remains fragile.",
  "themes": [
-  "Sharp Sensex and Nifty fall",
-  "IT and Maruti resilient",
-  "Asian regulators support markets",
-  "Wall Street futures rebound"
+  "Global AI-trade rebound",
+  "Bank sell-off ended four-week rally",
+  "Adani Airports funding",
+  "Rupee and bond pressure"
  ],
  "companies": [
   {
-   "name": "Tata Steel",
-   "tone": "negative",
-   "why": "Top loser after APL Apollo Tubes stake deal"
-  },
-  {
-   "name": "APL Apollo Tubes",
-   "tone": "positive",
-   "why": "Rose above VWAP among three stocks"
-  },
-  {
    "name": "HDFC Bank",
-   "tone": "positive",
-   "why": "ICICI Securities rates Buy, target Rs 1,850"
+   "tone": "negative",
+   "why": "Slips to 2.5-year low on legal and leadership woes"
   },
   {
-   "name": "TCS",
-   "tone": "positive",
-   "why": "Rises despite Sensex and Nifty crash"
+   "name": "ICICI Bank",
+   "tone": "negative",
+   "why": "Share price declines 3.32% from 52-week highs"
   },
   {
-   "name": "Infosys",
+   "name": "Adani Airports",
    "tone": "positive",
-   "why": "Rises despite Sensex and Nifty crash"
+   "why": "Raises $300 million from 360 ONE Asset"
   },
   {
-   "name": "HCL Technologies",
+   "name": "Bajaj Finance",
    "tone": "positive",
-   "why": "Rises despite Sensex and Nifty crash"
+   "why": "Emkay rates Buy with Rs 9000 target"
   },
   {
-   "name": "Maruti Suzuki",
-   "tone": "positive",
-   "why": "Rises despite Sensex and Nifty crash"
+   "name": "Persistent Systems",
+   "tone": "negative",
+   "why": "Emkay rates Reduce with Rs 3700 target"
   },
   {
-   "name": "PB Fintech",
+   "name": "Aditya Birla Fashion and Retail",
+   "tone": "negative",
+   "why": "Emkay rates Reduce with Rs 230 target"
+  },
+  {
+   "name": "Ratnaveer Precision",
    "tone": "positive",
-   "why": "Jumps 9% after recent rout"
+   "why": "Surges 10% on huge volume"
   }
  ],
- "global": "Wall Street futures are bouncing after AI jitters pushed US stocks into correction, while the Trump administration reportedly approved shipment of nearly 900,000 AI chips to China.",
+ "global": "Nvidia's Jensen Huang returned as CEO, lifting US indices to their best session since April last year and Asian stocks, with Taiwan up 9%.",
  "risks": [
-  "AI-trade sell-off may resume",
-  "Banks and metals weakness",
-  "Policy risk on chip exports to China"
+  "Rebound may fade if AI-trade jitters return",
+  "Bank and HDFC Bank weakness",
+  "Rupee weakness and bond supply"
  ],
- "time": "23 Nov 16:21",
- "at": 1795431064.938936,
- "day": "2026-11-23",
+ "time": "24 Nov 09:21",
+ "at": 1795492283.668148,
+ "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
  "n": 40
 }
