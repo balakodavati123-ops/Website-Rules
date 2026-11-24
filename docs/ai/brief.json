@@ -1,47 +1,32 @@
 {
  "mood": "mixed",
- "brief": "NSE and BSE are shut today for Guru Nanak Jayanti, so there is no Indian cash trading, while Wall Street rallied hard after Jensen Huang's return to Nvidia. Tata Sons' decision on going public this week and the market reaction to Tata Steel's APL Apollo deal are the main Indian stories to watch.",
+ "brief": "NSE and BSE are closed today for Guru Nanak Jayanti, with MCX trading resuming in the evening, so Indian equity prices do not move. Global markets rallied hard after Jensen Huang's return to Nvidia, but India's last session ended with a bank-led fall and Nifty down 1.75%.",
  "themes": [
   "Indian markets closed for holiday",
-  "Nvidia-led global rally",
-  "Tata Sons listing decision",
-  "Crude near three-month lows"
+  "Nvidia-led global rebound",
+  "Banks drag India's last session",
+  "Two IPOs lined up for December"
  ],
  "companies": [
   {
-   "name": "Lupin",
-   "tone": "positive",
-   "why": "Gets USFDA nod for a generic kidney-patient drug"
-  },
-  {
-   "name": "RVNL",
-   "tone": "positive",
-   "why": "Bags Rs 87 crore contract from NMDC"
-  },
-  {
-   "name": "Tata Steel",
+   "name": "HDFC Bank",
    "tone": "negative",
-   "why": "Investors give thumbs down to APL Apollo deal"
+   "why": "Slips to 2.5-year low on legal and leadership woes"
   },
   {
-   "name": "Shriram Finance",
-   "tone": "positive",
-   "why": "Shares rise on Sensex inclusion"
-  },
-  {
-   "name": "MIDHANI",
+   "name": "Google Cloud India",
    "tone": "neutral",
-   "why": "Faces Rs 1,500 crore revenue ceiling; plans Rs 1,000 crore capex"
+   "why": "Rejects huge layoffs claim; confirms 30 roles cut"
   }
  ],
- "global": "Nasdaq jumped sharply as Nvidia shares soared, with US futures edging higher and leveraged short-Nvidia ETFs blowing up.",
+ "global": "Nasdaq gained about 6.5% and Taiwan led an Asian rebound of 9% after Huang was reinstated, while the US blacklisted Megaspeed over the Nvidia scandal.",
  "risks": [
-  "Rebound may not last",
-  "Indian markets reopen after a sharp fall",
-  "Tata Steel deal concerns"
+  "Global rebound may not hold",
+  "Indian banks remain weak",
+  "Politics and regulation around Nvidia"
  ],
- "time": "24 Nov 11:21",
- "at": 1795499468.128168,
+ "time": "24 Nov 12:21",
+ "at": 1795503078.938391,
  "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
  "n": 40
