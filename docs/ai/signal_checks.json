@@ -1,6 +1,6 @@
 {
- "time": "24 Nov 12:21",
- "at": 1795503078.938391,
+ "time": "24 Nov 13:21",
+ "at": 1795506708.734303,
  "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
  "checks": {
@@ -31,6 +31,10 @@
   "SILVERTUC": {
    "verdict": "doubt",
    "why": "Order filing gives no size or value; exchange is closed today"
+  },
+  "KALPATARU": {
+   "verdict": "doubt",
+   "why": "Scheme of arrangement filing gives no terms; exchange closed and no price data"
   }
  }
 }

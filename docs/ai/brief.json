@@ -1,32 +1,32 @@
 {
  "mood": "mixed",
- "brief": "NSE and BSE are closed today for Guru Nanak Jayanti, with MCX trading resuming in the evening, so Indian equity prices do not move. Global markets rallied hard after Jensen Huang's return to Nvidia, but India's last session ended with a bank-led fall and Nifty down 1.75%.",
+ "brief": "Indian exchanges are shut today for Guru Nanak Jayanti, but Asia surged, with Kospi up 7% and Nikkei up nearly 5% after Nvidia's rally, which could lift the next open. Banks warn that a possible further RBI repo hike could hurt demand, and the Tata Sons board meeting has moved to November 30.",
  "themes": [
   "Indian markets closed for holiday",
-  "Nvidia-led global rebound",
-  "Banks drag India's last session",
-  "Two IPOs lined up for December"
+  "Asia surges on Nvidia rally",
+  "RBI rate hike worries for banks",
+  "Mahanadi IPO fully subscribed"
  ],
  "companies": [
   {
-   "name": "HDFC Bank",
-   "tone": "negative",
-   "why": "Slips to 2.5-year low on legal and leadership woes"
+   "name": "Coal India",
+   "tone": "positive",
+   "why": "Unit Mahanadi's IPO fully subscribed on final day"
   },
   {
-   "name": "Google Cloud India",
+   "name": "Tata Sons",
    "tone": "neutral",
-   "why": "Rejects huge layoffs claim; confirms 30 roles cut"
+   "why": "Board meeting postponed to November 30"
   }
  ],
- "global": "Nasdaq gained about 6.5% and Taiwan led an Asian rebound of 9% after Huang was reinstated, while the US blacklisted Megaspeed over the Nvidia scandal.",
+ "global": "Kospi rose 7% and Nikkei nearly 5% after Wall Street's best session in over a year, while CrowdStrike agreed a $44 billion deal for Zscaler.",
  "risks": [
-  "Global rebound may not hold",
-  "Indian banks remain weak",
-  "Politics and regulation around Nvidia"
+  "Rate hike worries from RBI",
+  "Gains may fade after the holiday",
+  "Volatile gold and AI-linked stocks"
  ],
- "time": "24 Nov 12:21",
- "at": 1795503078.938391,
+ "time": "24 Nov 13:21",
+ "at": 1795506708.734303,
  "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
  "n": 40
