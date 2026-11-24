@@ -1,6 +1,6 @@
 {
- "time": "24 Nov 14:21",
- "at": 1795510304.727965,
+ "time": "24 Nov 15:21",
+ "at": 1795513867.02778,
  "day": "2026-11-24",
  "model": "Claude (your plan, scheduled)",
  "checks": {
@@ -43,6 +43,18 @@
   "BHARTIARTL": {
    "verdict": "doubt",
    "why": "Penalty is small for Airtel's size and not material"
+  },
+  "TURTLEMINT": {
+   "verdict": "doubt",
+   "why": "Filing gives no details of the action or amount; exchange is closed"
+  },
+  "AFFORDABLE": {
+   "verdict": "doubt",
+   "why": "Order filing gives no size or value; exchange is closed"
+  },
+  "LOKESHMACH": {
+   "verdict": "doubt",
+   "why": "Vague general-updates filing; exchange is closed"
   }
  }
 }
