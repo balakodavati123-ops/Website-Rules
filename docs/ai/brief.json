@@ -1,67 +1,62 @@
 {
  "mood": "bullish",
- "brief": "Indian shares are rallying strongly, with Sensex up about 1,300 to 1,500 points intraday and about Rs 2.2 lakh crore of wealth added as Infosys, TCS and HDFC Bank gain. Foreign inflows and lower oil prices are helping, even though US markets slid and the Nvidia rally fizzled.",
+ "brief": "Indian shares are surging, with the Sensex up over 1,700 points and Nifty above 25,800 as IT stocks gain about 2%. Falling oil prices and a strong GIFT Nifty signal are helping, though Asian markets slid on an AI selloff and US tariff worries.",
  "themes": [
-  "Sensex rallies on foreign inflows",
-  "IT and banks gain",
-  "Lower oil prices help sentiment",
-  "Zee trades ex-buyback"
+  "Sensex rallies over 1,700 points",
+  "IT index up 2%",
+  "Oil prices fall on supply glut",
+  "Asian AI selloff and tariff worries"
  ],
  "companies": [
   {
    "name": "Infosys",
    "tone": "positive",
-   "why": "Gains as Sensex jumps 1,300 points"
-  },
-  {
-   "name": "TCS",
-   "tone": "positive",
-   "why": "Gains as Sensex jumps 1,300 points"
+   "why": "KR Choksey says accumulate with Rs 1531 target"
   },
   {
    "name": "HDFC Bank",
    "tone": "positive",
-   "why": "Gains as Sensex jumps 1,300 points"
+   "why": "Bank Nifty hits a record, bank gains"
   },
   {
-   "name": "Jupiter Wagons",
-   "tone": "positive",
-   "why": "Surges over 9% on JV with Woojin Industrial Systems"
+   "name": "APL Apollo",
+   "tone": "negative",
+   "why": "Plunges 20% to 52-week low on Tata Steel deal"
   },
   {
-   "name": "Narayana Hrudayalaya",
-   "tone": "positive",
-   "why": "HSBC upgrades rating and raises target 29%"
+   "name": "Tata Steel",
+   "tone": "neutral",
+   "why": "Rs 28,000-crore APL Apollo deal under scrutiny"
+  },
+  {
+   "name": "Hindustan Zinc",
+   "tone": "negative",
+   "why": "Falls as silver slumps to 14-month low"
   },
   {
    "name": "Zee Entertainment",
    "tone": "neutral",
-   "why": "Shares trade adjusted for buyback today"
+   "why": "Trades ex-buyback, adjusted decline of 5%"
   },
   {
-   "name": "Shadowfax Tech",
-   "tone": "negative",
-   "why": "Shares decline on WeFast acquisition"
-  },
-  {
-   "name": "PB Fintech",
+   "name": "Narayana Hrudayalaya",
    "tone": "positive",
-   "why": "Among Nifty500 stocks flashing RSI uptrend"
+   "why": "HSBC upgrade and higher target price"
   },
   {
-   "name": "APL Apollo Tubes",
-   "tone": "negative",
-   "why": "Among stocks closing below VWAP"
+   "name": "Jupiter Wagons",
+   "tone": "positive",
+   "why": "Surges on Korean joint venture"
   }
  ],
- "global": "US stocks slid after Nvidia's rally fizzled while Dow ended above 50,000, and Asian markets rebounded.",
+ "global": "Asian stocks slid as an AI selloff deepened and US tariff threats weighed, while Dow futures fell.",
  "risks": [
-  "Rally may fade as US markets slide",
-  "HDFC Bank legal and leadership concerns",
-  "Brokerage earnings pressure from MTF exposure"
+  "Asian AI selloff may spill into IT stocks",
+  "US tariff threats weigh on sentiment",
+  "Rally may fade after sharp intraday jump"
  ],
- "time": "25 Nov 10:21",
- "at": 1795582304.537729,
+ "time": "25 Nov 11:21",
+ "at": 1795585913.129168,
  "day": "2026-11-25",
  "model": "Claude (your plan, scheduled)",
  "n": 40
