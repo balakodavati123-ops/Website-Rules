@@ -26,7 +26,7 @@ def test_plain_words_view_up_day():
     assert "4 good and 1 bad" in text and "RBI keeps rates unchanged" in text and "forecast team's view is positive" in text
     assert not [j for j in JARGON if j.lower() in text.lower()], [j for j in JARGON if j.lower() in text.lower()]
     lo, hi = v["prediction"]["day_range"]
-    assert hi - 25350 == 25350 - lo and 230 < hi - 25350 < 245                           # 25350 x 15% / sqrt(252) = 239.5 points
+    assert hi - 25400 == 25400 - lo and 235 < hi - 25400 < 245                           # centred on today's open: 25400 x 15% / sqrt(252) = 240 points
     fc = {f["label"]: f["px"] for f in v["chart"]["forecast"]}
     assert fc["Likely high by close"] > fc["Desk's call: up"] > 25480 > fc["Likely low by close"]
     assert [l["label"] for l in v["chart"]["levels"]] == ["Yesterday's close", "Today's open", "Desk decided here (10:00)"]

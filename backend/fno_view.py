@@ -55,7 +55,8 @@ def view(now: datetime, spot: float, prev: float | None, ohlc: dict, vix: float 
     final = bool(decided)
     md = mode(vix)
     op = float(ohlc.get("open") or 0) or None
-    day_sd = sigma_pts(prev or spot, vix) if vix else None
+    base = op or prev or spot                                          # the day's range is centred on today's open (a gap moves the whole day)
+    day_sd = sigma_pts(base, vix) if vix else None
     left = minutes_left(now)
     rem_sd = sigma_pts(spot, vix, left) if vix else None
     direction = {1: "UP", -1: "DOWN"}.get(lean, "SIDEWAYS")
@@ -101,7 +102,7 @@ def view(now: datetime, spot: float, prev: float | None, ohlc: dict, vix: float 
               "Early read: the desk watches the first 45 minutes and decides at 10:00" if now.strftime("%H:%M") < "10:00" else "Live read")
     out = {"at": now.strftime("%H:%M:%S"), "day": now.strftime("%Y-%m-%d"), "mode": md, "status": status, "final": final,
            "prediction": {"direction": direction, "headline": head, "confidence": c.get("confidence"), "spot": round(spot, 2),
-                          "day_range": [round((prev or spot) - day_sd), round((prev or spot) + day_sd)] if day_sd else None,
+                          "day_range": [round(base - day_sd), round(base + day_sd)] if day_sd else None,
                           "close_range": [round(spot - rem_sd), round(spot + rem_sd)] if rem_sd and left else None},
            "why": why, "plan": plan, "trade": trade}
     lv = [{"px": round(prev, 2), "label": "Yesterday's close", "kind": "ref"}] if prev else []
