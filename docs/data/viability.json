@@ -1,22 +1,22 @@
 {
- "updated_at": "2026-11-25T09:26:43+05:30",
+ "updated_at": "2026-11-25T15:07:23+05:30",
  "skipped": [
   {
    "desk": "COMMODITY",
-   "what": "Crude oil mini",
-   "margin": 23679,
-   "room": 10182,
+   "what": "Silver 1 kg",
+   "margin": 33407,
+   "room": 19133,
    "why": "needs more margin than the commodities limit has free",
-   "at": "09:26:43",
+   "at": "15:07:23",
    "day": "2026-11-25"
   },
   {
    "desk": "COMMODITY",
-   "what": "Silver 1 kg",
-   "margin": 33432,
-   "room": 10182,
+   "what": "Crude oil mini",
+   "margin": 23675,
+   "room": 19133,
    "why": "needs more margin than the commodities limit has free",
-   "at": "09:26:43",
+   "at": "14:20:21",
    "day": "2026-11-25"
   }
  ],

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T09:14:38+05:30",
+ "updated_at": "2026-11-25T14:53:30+05:30",
  "ipos": [
   {
    "name": "Shree Siddhivinayak Greentech Industries Limited",
@@ -18,7 +18,13 @@
    "issue_size_cr": 93.66,
    "fresh_cr": 93.66,
    "ofs_cr": null,
-   "subscription": null,
+   "subscription": {
+    "qib": null,
+    "nii": null,
+    "retail": null,
+    "total": 0.36,
+    "as_of": null
+   },
    "drhp_url": null,
    "news": [
     {
@@ -48,11 +54,12 @@
    ],
    "thesis": "This SME issue opens today and closes 27 Nov at Rs 130-142 per share, with no subscription data yet, so demand is unknown. All Rs 94 crore is fresh capital for the company. SME stocks have large lots, thin trading and big price swings, and no matching DRHP was found in SEBI's recent listing. One lot of 1,000 shares costs about Rs 1.42 lakh, too large for a small bet; wait for demand data before deciding.",
    "analysis": {
-    "score": null,
+    "score": 10,
     "verdict": "Watch",
     "reasons": [
      "Fresh issue is Rs 94 cr of Rs 94 cr, money that goes to the company.",
-     "No subscription data yet: demand is the main signal and it appears only once bidding opens."
+     "Subscription: overall 0.36x (NSE gave no category split).",
+     "Bidding is still open; institutions usually bid on the last day, so an early low multiple says little. Re-check on the final day."
     ],
     "risks": [
      "SME board: lots are large, trading is thin and prices swing far more than on the mainboard. Higher risk.",
@@ -61,7 +68,7 @@
     "listing_view": {
      "low_pct": null,
      "high_pct": null,
-     "basis": "unknown until bidding opens"
+     "basis": "too early to read: overall 0.36x (NSE gave no category split); the final-day demand is not visible yet"
     },
     "listing_px": null,
     "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 142.00. No target range yet: it needs subscription numbers. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot. SME shares are thinly traded, so a sell order may not fill at the price you want.",
@@ -138,6 +145,67 @@
     "listing_px": null,
     "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 191.00. No target range yet: it needs subscription numbers. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot.",
     "method": "rules+claude"
+   }
+  },
+  {
+   "name": "Airpro Technology India Limited",
+   "symbol": "AIRPRO",
+   "board": "SME",
+   "status": "upcoming",
+   "open_date": "2026-11-27",
+   "close_date": "2026-12-01",
+   "listing_date": null,
+   "price_band": [
+    99.0,
+    99.0
+   ],
+   "lot_size": 1200,
+   "min_invest_rs": 118800.0,
+   "issue_size_cr": 35.64,
+   "fresh_cr": 28.91,
+   "ofs_cr": 6.73,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [
+    {
+     "title": "Airpro Technology India Ltd \u2013 Share Price, Fundamentals & Ratios",
+     "source": "Multibagg AI",
+     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE42a1VsTkpDb1VydFNJN1Z3alRVM0lBYUhibWRfTkw3VjI2eHExa1IyY2U1NTV6WTJZaEhQcU9yeEM4WkRuWGdaODdfWTExaDNncXdhaktxUFpJNlhFYTR1U2RDS3VjS1pvZGgzRC0temVndk9SWEZVWQ?oc=5",
+     "time": "2026-11-25T01:54:02Z"
+    },
+    {
+     "title": "Airpro Technology IPO GMP Today with Trend",
+     "source": "IPO Watch",
+     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5EQzdLRFRwNEd1UEVDSHVwOV9ubWZQWlpuLWVucWo4NWo3MnhfNHNZallvLU5iTzIyeEpDZHJPMW9ySE01a1d6cDE5eWpuQUlONDhuSzZvenREQQ?oc=5",
+     "time": "2026-11-24T12:50:00Z"
+    },
+    {
+     "title": "Airpro Technology IPO Date, Price Band, Issue Size",
+     "source": "IPO Watch",
+     "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5wTUdodFRhU2V4cloydUk5YWE2UzJ3T1RhRzE1S1hobDlUbGlveXZvYUJTd1FuMDVDQXQzRmplQTBPZ0ZJRDlIUGVpY1ZxaDdsSHFmQ0tDSGRER0ppQUNz?oc=5",
+     "time": "2026-11-24T05:03:10Z"
+    }
+   ],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Fresh issue is Rs 29 cr of Rs 36 cr, money that goes to the company.",
+     "No subscription data yet: demand is the main signal and it appears only once bidding opens."
+    ],
+    "risks": [
+     "SME board: lots are large, trading is thin and prices swing far more than on the mainboard. Higher risk.",
+     "No matching DRHP found in SEBI's recent listing (older filings are not searched)."
+    ],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "unknown until bidding opens"
+    },
+    "listing_px": null,
+    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 99.00. No target range yet: it needs subscription numbers. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot. SME shares are thinly traded, so a sell order may not fill at the price you want.",
+    "method": "rules"
    }
   },
   {
@@ -241,18 +309,6 @@
      "source": "Kotak Neo",
      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9ReUs3SG9veGpFS1pEQjBkOElycWlrV2wxdTgybUgwWG1Jc0M2M3JqbWZsakFjWmhLRGNqcThrTzl2a0RMSUdjTDE1Q09pVmh6YVRBaktfZE1SdEl3NW91enVOVXlQUlQtS28wMnpic2Y5SnVRWVhaTW5MUQ?oc=5",
      "time": "2026-11-02T08:00:00Z"
-    },
-    {
-     "title": "EAAA India Alternatives IPO subscribed 11% on Day 1: Check price band, lot size and key dates",
-     "source": "Upstox",
-     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPNFJXTFFzZFI1ZUNydE1kMmpFdTJQNF93dTBuajRDUHQ0THRrSkFvcUlxSnQxa2V2Z2llWEl3RDd4WUhKQzhwVURCbkdsZjdXYXRUSnFPeFpfWTlGU1JaYl9fdDFjaDhtRXVsdnVPdVhxVUNDaVcyd3Bqc3I0OTVFTm0yWFNoWWxsS3pGUkoxR0hKM1pCQVBwNVJPMDNjMjgwakgzWW5FSW5YQi1zX214VXBjVTU0NG1SaUNPRG1kMkhkY25OMlc4RTFLeEVWMWdEZ0FxcGNvNkRSbTdNSGNTczVpTQ?oc=5",
-     "time": "2026-10-26T07:00:00Z"
-    },
-    {
-     "title": "EAAA India Alternatives Sets INR 1,585\u20131,665 Price Band for INR 1,200 Crore IPO",
-     "source": "Energetica India Magazine",
-     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMnc3THUxUFpJU3loM3dXb3Z2X3gxMUpxcFlvbTRZd2FOTUZsT0RCeG83Z1p0eHA1cVp1QUVkMGR4ZWpBU21BR3cyU3J2MDZEZVplVkNUUUZsLXZ1WVhjZ2hva2RZRFVIMjhEd19Yd1dNT0tva0VKQkV2U1ZmTEUyQ2E1N3FoNGJ6dm9xVXVvZEtIcE1EQ0FmdjNNVVhpSkhJQ0tYRHlaa3hqYl9pOS1mN3hYXzA?oc=5",
-     "time": "2026-10-23T07:00:00Z"
     }
    ],
    "thesis": null,
@@ -542,6 +598,11 @@
  ],
  "drhp_recent": [
   {
+   "date": "2026-11-25",
+   "company": "NLC India Renewables Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/nlc-india-renewables-limited-drhp_97166.html"
+  },
+  {
    "date": "2026-11-23",
    "company": "Pride Hotels Limited",
    "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/pride-hotels-limited-addendum-to-the-drhp_105935.html"
@@ -610,11 +671,6 @@
    "date": "2026-10-26",
    "company": "Oravel Stays Limited",
    "url": "https://www.sebi.gov.in/filings/public-issues/oct-2026/oravel-stays-limited-addendum-to-drhp_105418.html"
-  },
-  {
-   "date": "2026-10-26",
-   "company": "Integris Medtech Limited",
-   "url": "https://www.sebi.gov.in/filings/public-issues/oct-2026/integris-medtech-limited-addendum-to-drhp_105416.html"
   }
  ],
  "sources": {
@@ -622,5 +678,5 @@
   "sebi": "ok",
   "news": "ok"
  },
- "at": 1795578289.4973996
+ "at": 1795598623.959768
 }

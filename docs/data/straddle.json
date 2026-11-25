@@ -1,19 +1,19 @@
 {
- "updated_at": "2026-11-25T09:26:43+05:30",
+ "updated_at": "2026-11-25T15:07:23+05:30",
  "today": {
   "ok": false,
-  "why": "no straddle rule beat time decay and costs in training (2592 rules tested); on the 40 days most like today the trade averaged Rs -1,716",
+  "why": "no straddle rule beat time decay and costs in training (2592 rules tested); on the 40 days most like today the trade averaged Rs -1,873",
   "match": true,
   "knn": {
    "k": 40,
-   "avg_rs": -1716.2,
+   "avg_rs": -1872.8,
    "win_rate": 10.0,
    "dates": [
-    "2024-08-09",
     "2026-11-11",
-    "2025-04-11",
-    "2022-06-03",
-    "2024-08-16"
+    "2022-04-29",
+    "2022-06-24",
+    "2024-08-16",
+    "2026-10-21"
    ]
   },
   "features": {
@@ -21,11 +21,11 @@
    "vix_pct": 81.0,
    "rv_iv": 1.0,
    "gap": 1.22,
-   "vix_chg": -4.24,
+   "vix_chg": 0.4,
    "dte": 6,
    "prev_close": 25349.65
   },
-  "strike": 25750,
+  "strike": 25800,
   "expiry": "2026-12-01",
   "entry": "10:00",
   "target": 0.4,
@@ -52,27 +52,29 @@
    "win_rate": 15.6,
    "pf": 0.21
   },
-  "at": "09:26",
+  "at": "15:07",
   "mode": "ceo"
  },
  "conditions": {
   "go": true,
   "lean": 1,
   "steps": 2,
-  "basis": "the morning's move from the open (+0.27%)",
+  "basis": "the morning's move from the open (+0.46%)",
   "confidence": "Normal",
-  "news_support": 0,
+  "news_support": 1,
   "news_against": 0,
   "reasons": [
    "NIFTY opened +1.22%: a news-sized gap",
-   "the first 45 minutes covered 0.54% (high to low): the market is moving",
-   "market-wide news today: Tata Steel dips 7% as APL Apollo plunge on \u20b928,000 cr deal; Hindalco under pressure; Stock Market Crash: Over \u20b95 lakh crore investor wealth wiped out as Nifty falls 435 points",
+   "the first 45 minutes covered 1.31% (high to low): the market is moving",
+   "NIFTY is +0.46% from its open by 10:00",
+   "market-wide news today: Nvidia shares tumble 9% after biggest rally in over two decades as AI-related concerns ret; What is driving fall in gold, silver & crude oil? Fed rate hike fears weigh",
    "India VIX is in the top fifth of its year (81.0th percentile) and not rising"
   ],
   "go_signals": [
    "NIFTY opened +1.22%: a news-sized gap",
-   "the first 45 minutes covered 0.54% (high to low): the market is moving",
-   "market-wide news today: Tata Steel dips 7% as APL Apollo plunge on \u20b928,000 cr deal; Hindalco under pressure; Stock Market Crash: Over \u20b95 lakh crore investor wealth wiped out as Nifty falls 435 points"
+   "the first 45 minutes covered 1.31% (high to low): the market is moving",
+   "NIFTY is +0.46% from its open by 10:00",
+   "market-wide news today: Nvidia shares tumble 9% after biggest rally in over two decades as AI-related concerns ret; What is driving fall in gold, silver & crude oil? Fed rate hike fears weigh"
   ],
   "skip_signals": [
    "India VIX is in the top fifth of its year (81.0th percentile) and not rising"
@@ -81,15 +83,143 @@
    "strong": 0,
    "net": 0,
    "macro": [
-    "Tata Steel dips 7% as APL Apollo plunge on \u20b928,000 cr deal; Hindalco under pressure",
-    "Stock Market Crash: Over \u20b95 lakh crore investor wealth wiped out as Nifty falls 435 points",
-    "US Market Crash: Nasdaq enters 'bear market' - 10 things for investors to know"
+    "Nvidia shares tumble 9% after biggest rally in over two decades as AI-related concerns ret",
+    "What is driving fall in gold, silver & crude oil? Fed rate hike fears weigh",
+    "Tata Steel dips 7% as APL Apollo plunge on \u20b928,000 cr deal; Hindalco under pressure"
    ],
-   "mood": "mixed",
+   "mood": "bullish",
    "fc": -0.06
   }
  },
- "sheet": {},
+ "sheet": {
+  "day": "2026-11-25",
+  "at": "10:00",
+  "expiry": "2026-12-01",
+  "spot": 25774.7,
+  "sheet": [
+   {
+    "strike": 25650.0,
+    "cost": 480.55,
+    "call": 317.7,
+    "put": 162.85,
+    "be_up": 26131,
+    "be_dn": 25169,
+    "need_up_pct": 1.38,
+    "need_dn_pct": 2.35,
+    "net_delta": 0.21,
+    "spread_pct": 0.3,
+    "oi": 911495,
+    "pop_expiry": 41.9,
+    "cost_vs_move": 0.83,
+    "score": 0.913,
+    "chosen": true
+   },
+   {
+    "strike": 25700.0,
+    "cost": 472.25,
+    "call": 289.15,
+    "put": 183.1,
+    "be_up": 26172,
+    "be_dn": 25228,
+    "need_up_pct": 1.54,
+    "need_dn_pct": 2.12,
+    "net_delta": 0.14,
+    "spread_pct": 0.2,
+    "oi": 5012020,
+    "pop_expiry": 42.0,
+    "cost_vs_move": 0.81,
+    "score": 0.867,
+    "chosen": false
+   },
+   {
+    "strike": 25750.0,
+    "cost": 467.15,
+    "call": 261.55,
+    "put": 205.6,
+    "be_up": 26217,
+    "be_dn": 25283,
+    "need_up_pct": 1.72,
+    "need_dn_pct": 1.91,
+    "net_delta": 0.08,
+    "spread_pct": 0.3,
+    "oi": 3653455,
+    "pop_expiry": 42.2,
+    "cost_vs_move": 0.8,
+    "score": 0.828,
+    "chosen": false
+   },
+   {
+    "strike": 25800.0,
+    "cost": 464.55,
+    "call": 235.3,
+    "put": 229.25,
+    "be_up": 26265,
+    "be_dn": 25335,
+    "need_up_pct": 1.9,
+    "need_dn_pct": 1.7,
+    "net_delta": 0.01,
+    "spread_pct": 0.1,
+    "oi": 4604210,
+    "pop_expiry": 42.4,
+    "cost_vs_move": 0.8,
+    "score": 1.82,
+    "chosen": false
+   },
+   {
+    "strike": 25850.0,
+    "cost": 466.05,
+    "call": 211.3,
+    "put": 254.75,
+    "be_up": 26316,
+    "be_dn": 25384,
+    "need_up_pct": 2.1,
+    "need_dn_pct": 1.52,
+    "net_delta": -0.06,
+    "spread_pct": 0.2,
+    "oi": 590785,
+    "pop_expiry": 42.6,
+    "cost_vs_move": 0.8,
+    "score": 1.857,
+    "chosen": false
+   }
+  ],
+  "conditions": {
+   "go": true,
+   "lean": 1,
+   "steps": 2,
+   "basis": "the morning's move from the open (+0.45%)",
+   "confidence": "Normal",
+   "news_support": 0,
+   "news_against": 0,
+   "reasons": [
+    "NIFTY opened +1.22%: a news-sized gap",
+    "the first 45 minutes covered 0.70% (high to low): the market is moving",
+    "NIFTY is +0.45% from its open by 10:00",
+    "market-wide news today: Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues; Gold falls further, set for worst week since March as Fed rate hike worries rise",
+    "India VIX is in the top fifth of its year (81.0th percentile) and not rising"
+   ],
+   "go_signals": [
+    "NIFTY opened +1.22%: a news-sized gap",
+    "the first 45 minutes covered 0.70% (high to low): the market is moving",
+    "NIFTY is +0.45% from its open by 10:00",
+    "market-wide news today: Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues; Gold falls further, set for worst week since March as Fed rate hike worries rise"
+   ],
+   "skip_signals": [
+    "India VIX is in the top fifth of its year (81.0th percentile) and not rising"
+   ],
+   "news": {
+    "strong": 1,
+    "net": 1,
+    "macro": [
+     "Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues",
+     "Gold falls further, set for worst week since March as Fed rate hike worries rise",
+     "'More To Come' - IMF Managing Director warns the AI sell-off may not be over yet"
+    ],
+    "mood": "mixed",
+    "fc": -0.06
+   }
+  }
+ },
  "live": {
   "n": 3,
   "wins": 3,

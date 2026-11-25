@@ -1,63 +1,64 @@
 {
  "trades": [
   {
-   "id": "M261125-82",
+   "id": "M261125-83",
    "desk": "COMMODITY",
    "strategy": "mcx_momentum",
-   "label": "Natural gas mini short",
+   "label": "Gold 1 g short",
    "side": "SHORT",
-   "entry": 342.1,
-   "last": 342.4,
-   "qty": 1,
+   "entry": 12215.0,
+   "last": 12135.0,
+   "qty": 4,
    "status": "OPEN",
-   "pnl_rs": -117.76,
+   "pnl_rs": 295.57,
    "exit": "",
    "why": "",
    "day": "2026-11-25",
-   "opened": "09:15:09",
+   "opened": "09:37:25",
    "closed": "",
-   "ts": 1795578312.3364542,
-   "key": "MCX_FO|578250",
-   "mult": 250.0,
-   "symbol": "NATGASMINI FUT 28 DEC 26",
-   "stop": 344.15,
-   "target_px": 337.99,
+   "ts": 1795579648.4770532,
+   "key": "MCX_FO|574841",
+   "mult": 1.0,
+   "symbol": "GOLDPETAL FUT 30 NOV 26",
+   "stop": 12288.29,
+   "target_px": 12068.42,
    "horizon": "intraday",
    "risk_class": "Intraday momentum",
-   "margin_rs": 14818,
+   "margin_rs": 5867,
    "margin_src": "Upstox margin calculator",
    "thesis": {
     "horizon": "intraday",
-    "headline": "Natural gas mini short",
+    "headline": "Gold 1 g short",
     "news": [
      "US markets averaged -0.38% at the 24/11 close.",
      "Asia averaged -1.40%.",
      "Brent crude 87.64 (-1.94%)."
     ],
     "data": [
-     "Natural gas mini (NATGASMINI FUT 28 DEC 26) at 342.10, -1.01% on the previous close; day range 341.60 to 343.00, price is 0.15% from the day low.",
-     "Lot: 250 unit(s) \u00d7 1 lot(s); contract value \u20b985,525."
+     "Gold 1 g (GOLDPETAL FUT 30 NOV 26) at 12,215.00, -0.81% on the previous close; day range 12,215.00 to 12,314.00, price is 0.00% from the day low.",
+     "Lot: 1 unit(s) \u00d7 4 lot(s); contract value \u20b948,860.",
+     "Global reference: Gold 3552.0 (-2.72% at the 11-24 close)."
     ],
     "strategy": "A futures position in the direction the market is already moving hard.",
     "why": [
      "Used when a commodity is up or down 0.8% or more and sitting at its day extreme: strong days tend to extend into the evening session when global markets open.",
-     "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|578250)."
+     "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|574841)."
     ],
     "numbers": [
      [
       "Entry",
-      "342.10",
+      "12,215.00",
       "Price when the paper trade was opened"
      ],
      [
       "Stop (exit if wrong)",
-      "344.15",
-      "Costs about \u20b9512"
+      "12,288.29",
+      "Costs about \u20b9293"
      ],
      [
       "Target (exit if right)",
-      "337.99",
-      "Earns about \u20b91,028"
+      "12,068.42",
+      "Earns about \u20b9586"
      ],
      [
       "Reward for the risk",
@@ -71,14 +72,144 @@
      ],
      [
       "Capital tied up",
-      "\u20b914,818",
-      "12% of the account"
+      "\u20b95,867",
+      "5% of the account"
      ]
     ],
     "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
-    "viability": "Needs \u20b914,818 to hold (Upstox margin calculator)."
+    "viability": "Needs \u20b95,867 to hold (Upstox margin calculator)."
    },
-   "reason": "-1.0% on the previous close and within 0.3% of the day low; stop 0.6%, target 1.2%"
+   "reason": "-0.8% on the previous close and within 0.3% of the day low; stop 0.6%, target 1.2%"
+  },
+  {
+   "id": "F261125-87",
+   "desk": "FNO",
+   "strategy": "long_straddle",
+   "label": "NIFTY long straddle \u00b7 12-01",
+   "side": "LONG",
+   "entry": -480.55,
+   "last": -8.9,
+   "qty": 1,
+   "status": "OPEN",
+   "pnl_rs": -658.5,
+   "exit": "",
+   "why": "",
+   "day": "2026-11-25",
+   "opened": "10:00:03",
+   "closed": "",
+   "ts": 1795581006.4751692,
+   "expiry": "2026-12-01",
+   "lot": 65,
+   "legs": [
+    {
+     "side": "B",
+     "strike": 25650.0,
+     "kind": "CE",
+     "entry": 317.7,
+     "last": 322.3,
+     "key": "NSE_FO|47821"
+    },
+    {
+     "side": "B",
+     "strike": 25650.0,
+     "kind": "PE",
+     "entry": 162.85,
+     "last": 149.35,
+     "key": "NSE_FO|47834"
+    }
+   ],
+   "horizon": "daily",
+   "underlying": "NIFTY",
+   "unit_base": 480.54999999999995,
+   "target_u": 240.27,
+   "stop_u": 168.19,
+   "risk_class": "High return \u00b7 high loss",
+   "max_gain_rs": null,
+   "max_loss_rs": 31236,
+   "margin_rs": 31246,
+   "margin_src": "Upstox margin calculator",
+   "thesis": {
+    "horizon": "daily",
+    "headline": "Buy 25,650 CE, Buy 25,650 PE \u00b7 NIFTY 2026-12-01",
+    "news": [
+     "US markets averaged -0.38% at the 24/11 close.",
+     "Asia averaged -1.40%.",
+     "Brent crude 87.64 (-1.94%).",
+     "'More To Come' - IMF Managing Director warns the AI sell-off may not be over yet (CNBC-TV18)",
+     "Gold falls further, set for worst week since March as Fed rate hike worries rise (CNBC-TV18)",
+     "Nikkei, Kospi fall over 4% each; Asian markets crash as AI sell-off deepens despite record Anthropic IPO (CNBC-TV18)",
+     "6 companies filed results or hold board meetings today."
+    ],
+    "data": [
+     "NIFTY 25,775, +1.68% on the previous close. India VIX 17.6.",
+     "Implied volatility at the money 17.3% a year. Over 6 days to 2026-12-01 that prices a one-standard-deviation move of about \u00b1571 points (\u00b12.2%), so the market gives roughly a 68% chance of finishing between 25,203 and 26,346.",
+     "Option positioning: put-to-call ratio 0.89, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,500 (a floor), max pain 25,750.",
+     "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+     "Our forecast for today: Sideways (score -0.06); likely range 25,073 to 25,616.",
+     "Conditions at 10:00 (Normal confidence): NIFTY opened +1.22%: a news-sized gap; the first 45 minutes covered 0.70% (high to low): the market is moving; NIFTY is +0.45% from its open by 10:00; market-wide news today: Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues; Gold falls further, set for worst week since March as Fed rate hike worries rise; India VIX is in the top fifth of its year (81.0th percentile) and not rising.",
+     "Strike leans 2 strikes up with the morning's move from the open (+0.45%): the call is in the money, so a continued move pays on that leg more than the other leg loses; a sharp turn the other way still pays through the other leg.",
+     "The quant chose strike 25,650 from 5 strikes: cost 480.55 points, 0.83x the move the market expects; it pays beyond 26,131 up (1.38%) or 25,169 down (2.35%); calls and puts together delta 0.21; spreads up to 0.3%.",
+     "Exits (unchanged): take profit at 50% above the cost, stop at 35% below it, out by 15:15.",
+     "The historical backtest disagrees with trading this every day: replayed on 907 near-expiry days since 2022 with model prices from India VIX, this exact rule won 24.0% of days and averaged Rs -1254.3 a day (total Rs -1137647); the desk's live record decides from here.",
+     "Trained rule: buy at 10:00, after watching the first 45 minutes on this week's expiry, strike chosen by the quant, when movement days: VIX rising, a big gap or strong news (the CEO's rule).",
+     "Backtest 2022-2024 (15-minute bars, model prices from India VIX): None trades, None% won, average Rs None; out of sample 2025-2026: None trades, None% won, average Rs None.",
+     "Days like today (None most similar): None% won, average Rs None. ."
+    ],
+    "strategy": "Buy the at-the-money call and put.",
+    "why": [
+     "Used when a big move is plausible but its direction is not: either leg can pay for both. It loses if the index drifts, because time decay eats the premium."
+    ],
+    "numbers": [
+     [
+      "Net debit",
+      "480.5 points = \u20b931,236 per lot",
+      "What you receive (or pay) up front"
+     ],
+     [
+      "Most you can make",
+      "\u20b9479,476",
+      "At expiry, if everything goes right"
+     ],
+     [
+      "Most you can lose",
+      "\u20b930,964",
+      "At expiry, if everything goes wrong (fixed by the bought options)"
+     ],
+     [
+      "Break-even at expiry",
+      "25,169 and 26,131",
+      "Where the structure stops losing money"
+     ],
+     [
+      "Chance of profit at expiry",
+      "41%",
+      "From the options market's own implied volatility; not our edge, the market's odds"
+     ],
+     [
+      "Expected move to expiry",
+      "\u00b1571 points",
+      "6 days at 17.3% implied volatility"
+     ],
+     [
+      "Reward for the risk",
+      "15.48 to 1",
+      "Best case divided by worst case"
+     ],
+     [
+      "Margin the broker asks",
+      "\u20b931,246",
+      "25% of the account (Upstox margin calculator)"
+     ],
+     [
+      "Our exit levels",
+      "Take profit at \u20b915,618, cut at \u20b910,933",
+      "Rupees on one lot, before the exit rule below"
+     ]
+    ],
+    "risk": "Take profit at 50% of the debit, cut at 35%, and be flat by 15:15 whatever happens. Fails when: A quiet day. The cost of both options is the most you can lose.",
+    "viability": "One lot of 65 needs \u20b931,246 of margin, checked with the broker's calculator when the trade was booked."
+   },
+   "reason": "NIFTY 25,775 (+1.68% on the close). Debit 480.5 points; target 50% of it, stop 35% of it; out by 15:15"
   }
  ],
  "seen": {
@@ -4662,9 +4793,340 @@
   "2026-11-24|GOLDPETAL FUT 30 NOV 26": "SHORT",
   "2026-11-24|NATGASMINI FUT 28 DEC 26": "LONG",
   "2026-11-24|CRUDEOILM FUT 18 DEC 26": "SHORT",
-  "2026-11-25|NATGASMINI FUT 28 DEC 26": "SHORT"
+  "2026-11-25|NATGASMINI FUT 28 DEC 26": "SHORT",
+  "2026-11-25|GOLDPETAL FUT 30 NOV 26": "SHORT",
+  "scalp|LAURUSLABS|09:39": 1,
+  "scalp|JPL|09:39": 1,
+  "scalp|ITC|09:39": 1,
+  "scalp|INDIGO|09:39": 1,
+  "scalp|PPLPHARMA|09:39": 1,
+  "scalp|CHOLAFIN|09:39": 1,
+  "scalp|ATHERENERG|09:39": 1,
+  "scalp|BAJAJFINSV|09:39": 1,
+  "scalp|LAURUSLABS|09:41": 1,
+  "scalp|JPL|09:41": 1,
+  "scalp|INDIGO|09:41": 1,
+  "scalp|GOLDBEES|09:41": 1,
+  "scalp|EICHERMOT|09:41": 1,
+  "scalp|NETWEB|09:41": 1,
+  "scalp|ADANIENT|09:41": 1,
+  "scalp|DIXON|09:41": 1,
+  "scalp|CHOLAFIN|09:41": 1,
+  "scalp|ATHERENERG|09:41": 1,
+  "scalp|BAJAJFINSV|09:41": 1,
+  "scalp|SHRIRAMFIN|09:42": 1,
+  "scalp|LAURUSLABS|09:42": 1,
+  "scalp|JPL|09:42": 1,
+  "scalp|INDIGO|09:42": 1,
+  "scalp|PPLPHARMA|09:42": 1,
+  "scalp|CHOLAFIN|09:42": 1,
+  "scalp|ATHERENERG|09:42": 1,
+  "scalp|MUTHOOTFIN|09:42": 1,
+  "scalp|BAJAJFINSV|09:42": 1,
+  "scalp|DIVISLAB|09:42": 1,
+  "scalp|TATASTEEL|09:43": 1,
+  "scalp|MAXHEALTH|09:43": 1,
+  "scalp|LAURUSLABS|09:43": 1,
+  "scalp|JPL|09:43": 1,
+  "scalp|ITC|09:43": 1,
+  "scalp|INDIGO|09:43": 1,
+  "scalp|PPLPHARMA|09:43": 1,
+  "scalp|BSE|09:43": 1,
+  "scalp|CHOLAFIN|09:43": 1,
+  "scalp|ATHERENERG|09:43": 1,
+  "scalp|BAJAJFINSV|09:43": 1,
+  "scalp|LAURUSLABS|09:44": 1,
+  "scalp|JPL|09:44": 1,
+  "scalp|INDIGO|09:44": 1,
+  "scalp|PPLPHARMA|09:44": 1,
+  "scalp|CHOLAFIN|09:44": 1,
+  "scalp|ATHERENERG|09:44": 1,
+  "scalp|BAJAJFINSV|09:44": 1,
+  "scalp|TMCV|09:44": 1,
+  "scalp|MAXHEALTH|09:45": 1,
+  "scalp|LAURUSLABS|09:45": 1,
+  "scalp|JPL|09:45": 1,
+  "scalp|INDIGO|09:45": 1,
+  "scalp|PPLPHARMA|09:45": 1,
+  "scalp|CHOLAFIN|09:45": 1,
+  "scalp|ATHERENERG|09:45": 1,
+  "scalp|BAJAJFINSV|09:45": 1,
+  "scalp|TMCV|09:45": 1,
+  "scalp|LAURUSLABS|09:46": 1,
+  "scalp|INDIGO|09:46": 1,
+  "scalp|PPLPHARMA|09:46": 1,
+  "scalp|CHOLAFIN|09:46": 1,
+  "scalp|ATHERENERG|09:46": 1,
+  "scalp|BAJAJFINSV|09:46": 1,
+  "scalp|TMCV|09:46": 1,
+  "scalp|MAXHEALTH|09:47": 1,
+  "scalp|LAURUSLABS|09:47": 1,
+  "scalp|INDIGO|09:47": 1,
+  "scalp|PPLPHARMA|09:47": 1,
+  "scalp|CHOLAFIN|09:47": 1,
+  "scalp|ATHERENERG|09:47": 1,
+  "scalp|TMCV|09:47": 1,
+  "scalp|MAXHEALTH|09:48": 1,
+  "scalp|LAURUSLABS|09:48": 1,
+  "scalp|INDIGO|09:48": 1,
+  "scalp|NETWEB|09:48": 1,
+  "scalp|PPLPHARMA|09:48": 1,
+  "scalp|CHOLAFIN|09:48": 1,
+  "scalp|ADANIPORTS|09:48": 1,
+  "scalp|ATHERENERG|09:48": 1,
+  "scalp|BAJAJFINSV|09:48": 1,
+  "scalp|TMCV|09:48": 1,
+  "scalp|MAXHEALTH|09:49": 1,
+  "scalp|LAURUSLABS|09:49": 1,
+  "scalp|INDIGO|09:49": 1,
+  "scalp|GOLDBEES|09:49": 1,
+  "scalp|PPLPHARMA|09:49": 1,
+  "scalp|CHOLAFIN|09:49": 1,
+  "scalp|BAJAJFINSV|09:49": 1,
+  "scalp|ATHERENERG|09:49": 1,
+  "scalp|UNIONBANK|09:49": 1,
+  "scalp|TMCV|09:49": 1,
+  "scalp|KAYNES|09:49": 1,
+  "scalp|SHRIRAMFIN|09:50": 1,
+  "scalp|MAXHEALTH|09:50": 1,
+  "scalp|LAURUSLABS|09:50": 1,
+  "scalp|ITC|09:50": 1,
+  "scalp|INDIGO|09:50": 1,
+  "scalp|KALYANKJIL|09:50": 1,
+  "scalp|ADANIENT|09:50": 1,
+  "scalp|DIXON|09:50": 1,
+  "scalp|CHOLAFIN|09:50": 1,
+  "scalp|ADANIPORTS|09:50": 1,
+  "scalp|BAJAJFINSV|09:50": 1,
+  "scalp|DIVISLAB|09:50": 1,
+  "scalp|TMCV|09:50": 1,
+  "scalp|ATHERENERG|09:50": 1,
+  "scalp|UNIONBANK|09:50": 1,
+  "scalp|TATACONSUM|09:50": 1,
+  "scalp|MAXHEALTH|09:51": 1,
+  "scalp|LAURUSLABS|09:51": 1,
+  "scalp|INDIGO|09:51": 1,
+  "scalp|CHOLAFIN|09:51": 1,
+  "scalp|BAJAJFINSV|09:51": 1,
+  "scalp|ATHERENERG|09:51": 1,
+  "scalp|TMCV|09:51": 1,
+  "scalp|TATACONSUM|09:51": 1,
+  "scalp|ADANIGREEN|09:51": 1,
+  "scalp|SBIN|09:52": 1,
+  "scalp|MAXHEALTH|09:52": 1,
+  "scalp|LAURUSLABS|09:52": 1,
+  "scalp|INDIGO|09:52": 1,
+  "scalp|KALYANKJIL|09:52": 1,
+  "scalp|CHOLAFIN|09:52": 1,
+  "scalp|BAJAJFINSV|09:52": 1,
+  "scalp|TMCV|09:52": 1,
+  "scalp|LTF|09:52": 1,
+  "scalp|ATHERENERG|09:53": 1,
+  "scalp|TATACONSUM|09:53": 1,
+  "scalp|MAXHEALTH|09:53": 1,
+  "scalp|LAURUSLABS|09:54": 1,
+  "scalp|INDIGO|09:54": 1,
+  "scalp|GOLDBEES|09:53": 1,
+  "scalp|KALYANKJIL|09:54": 1,
+  "scalp|BAJAJFINSV|09:54": 1,
+  "scalp|LTF|09:54": 1,
+  "scalp|CHOLAFIN|09:54": 1,
+  "scalp|ATHERENERG|09:54": 1,
+  "scalp|UNIONBANK|09:54": 1,
+  "scalp|TMCV|09:54": 1,
+  "scalp|SBIN|09:55": 1,
+  "scalp|MAXHEALTH|09:55": 1,
+  "scalp|LAURUSLABS|09:55": 1,
+  "scalp|INDIGO|09:55": 1,
+  "scalp|GOLDBEES|09:55": 1,
+  "scalp|KALYANKJIL|09:55": 1,
+  "scalp|LTF|09:55": 1,
+  "scalp|CHOLAFIN|09:55": 1,
+  "scalp|ATHERENERG|09:55": 1,
+  "scalp|MUTHOOTFIN|09:55": 1,
+  "scalp|BAJAJFINSV|09:55": 1,
+  "scalp|POWERINDIA|09:55": 1,
+  "scalp|TMCV|09:55": 1,
+  "scalp|TATACONSUM|09:55": 1,
+  "scalp|MAXHEALTH|09:56": 1,
+  "scalp|LAURUSLABS|09:56": 1,
+  "scalp|INDIGO|09:56": 1,
+  "scalp|GOLDBEES|09:56": 1,
+  "scalp|CHOLAFIN|09:56": 1,
+  "scalp|BAJAJFINSV|09:56": 1,
+  "scalp|UNIONBANK|09:56": 1,
+  "scalp|TMCV|09:56": 1,
+  "scalp|TATACONSUM|09:56": 1,
+  "scalp|LTF|09:56": 1,
+  "scalp|MAXHEALTH|09:57": 1,
+  "scalp|LAURUSLABS|09:57": 1,
+  "scalp|INDIGO|09:57": 1,
+  "scalp|GOLDBEES|09:57": 1,
+  "scalp|KALYANKJIL|09:57": 1,
+  "scalp|CHOLAFIN|09:57": 1,
+  "scalp|ADANIPORTS|09:57": 1,
+  "scalp|ATHERENERG|09:57": 1,
+  "scalp|BAJAJFINSV|09:57": 1,
+  "scalp|TMCV|09:57": 1,
+  "scalp|LTF|09:57": 1,
+  "scalp|UNIONBANK|09:57": 1,
+  "2026-11-25|long_straddle": "booked",
+  "scalp|TATASTEEL|09:58": 1,
+  "scalp|MAXHEALTH|09:58": 1,
+  "scalp|ETERNAL|09:58": 1,
+  "scalp|LAURUSLABS|09:58": 1,
+  "scalp|ITC|09:58": 1,
+  "scalp|INDIGO|09:58": 1,
+  "scalp|GOLDBEES|09:58": 1,
+  "scalp|NETWEB|09:58": 1,
+  "scalp|KALYANKJIL|09:58": 1,
+  "scalp|ADANIENT|09:58": 1,
+  "scalp|CHOLAFIN|09:58": 1,
+  "scalp|ATHERENERG|09:58": 1,
+  "scalp|BAJAJFINSV|09:58": 1,
+  "scalp|UNIONBANK|09:58": 1,
+  "scalp|TMCV|09:58": 1,
+  "scalp|KAYNES|09:58": 1,
+  "scalp|LTF|09:58": 1,
+  "scalp|BRIGADE|09:58": 1,
+  "scalp|BAJFINANCE|09:59": 1,
+  "scalp|M&M|09:59": 1,
+  "scalp|MAXHEALTH|09:59": 1,
+  "scalp|MCX|09:59": 1,
+  "scalp|LAURUSLABS|09:59": 1,
+  "scalp|INDIGO|09:59": 1,
+  "scalp|GOLDBEES|09:59": 1,
+  "scalp|KOTAKBANK|09:59": 1,
+  "scalp|DIXON|09:59": 1,
+  "scalp|CHOLAFIN|09:59": 1,
+  "scalp|ATHERENERG|09:59": 1,
+  "scalp|BAJAJFINSV|09:59": 1,
+  "scalp|UNIONBANK|09:59": 1,
+  "scalp|DIVISLAB|09:59": 1,
+  "scalp|TMCV|09:59": 1,
+  "scalp|LTF|09:59": 1,
+  "scalp|BRIGADE|09:59": 1,
+  "scalp|MAXHEALTH|10:00": 1,
+  "scalp|LAURUSLABS|10:00": 1,
+  "scalp|INDIGO|10:00": 1,
+  "scalp|GOLDBEES|10:00": 1,
+  "scalp|KALYANKJIL|10:00": 1,
+  "scalp|BSE|10:00": 1,
+  "scalp|CHOLAFIN|10:00": 1,
+  "scalp|ADANIPORTS|10:00": 1,
+  "scalp|ATHERENERG|10:00": 1,
+  "scalp|BAJAJFINSV|10:00": 1,
+  "scalp|UNIONBANK|10:00": 1,
+  "scalp|TMCV|10:00": 1,
+  "scalp|APOLLOHOSP|10:00": 1,
+  "scalp|LTF|10:00": 1,
+  "scalp|BRIGADE|10:00": 1,
+  "scalp|SHRIRAMFIN|10:01": 1,
+  "scalp|MAXHEALTH|10:01": 1,
+  "scalp|LAURUSLABS|10:01": 1,
+  "scalp|GOLDBEES|10:01": 1,
+  "scalp|KALYANKJIL|10:01": 1,
+  "scalp|ADANIPORTS|10:01": 1,
+  "scalp|LTF|10:01": 1,
+  "scalp|BRIGADE|10:01": 1,
+  "scalp|INDIGO|10:01": 1,
+  "scalp|CHOLAFIN|10:01": 1,
+  "scalp|ATHERENERG|10:01": 1,
+  "scalp|BAJAJFINSV|10:01": 1,
+  "scalp|TMCV|10:01": 1,
+  "scalp|SBIN|10:02": 1,
+  "scalp|MAXHEALTH|10:02": 1,
+  "scalp|LAURUSLABS|10:02": 1,
+  "scalp|GOLDBEES|10:02": 1,
+  "scalp|KALYANKJIL|10:02": 1,
+  "scalp|ADANIPORTS|10:02": 1,
+  "scalp|LTF|10:02": 1,
+  "scalp|INDIGO|10:02": 1,
+  "scalp|DIXON|10:02": 1,
+  "scalp|CHOLAFIN|10:02": 1,
+  "scalp|ATHERENERG|10:02": 1,
+  "scalp|BAJAJFINSV|10:02": 1,
+  "scalp|UNIONBANK|10:02": 1,
+  "scalp|TMCV|10:02": 1,
+  "scalp|BRIGADE|10:02": 1,
+  "scalp|MAXHEALTH|10:03": 1,
+  "scalp|LAURUSLABS|10:03": 1,
+  "scalp|INDIGO|10:03": 1,
+  "scalp|GOLDBEES|10:03": 1,
+  "scalp|ADANIPORTS|10:03": 1,
+  "scalp|BAJAJFINSV|10:03": 1,
+  "scalp|LTF|10:03": 1,
+  "scalp|BRIGADE|10:03": 1,
+  "scalp|CHOLAFIN|10:03": 1,
+  "scalp|ATHERENERG|10:03": 1,
+  "scalp|UNIONBANK|10:03": 1,
+  "scalp|TMCV|10:03": 1,
+  "scalp|ADANIGREEN|10:03": 1,
+  "scalp|SBIN|10:04": 1,
+  "scalp|MAXHEALTH|10:04": 1,
+  "scalp|LAURUSLABS|10:04": 1,
+  "scalp|ITC|10:04": 1,
+  "scalp|INDIGO|10:05": 1,
+  "scalp|GOLDBEES|10:04": 1,
+  "scalp|ADANIPORTS|10:04": 1,
+  "scalp|LTF|10:05": 1,
+  "scalp|BRIGADE|10:05": 1,
+  "scalp|CHOLAFIN|10:05": 1,
+  "scalp|ATHERENERG|10:05": 1,
+  "scalp|BAJAJFINSV|10:05": 1,
+  "scalp|UNIONBANK|10:05": 1,
+  "scalp|TMCV|10:05": 1,
+  "scalp|ADANIGREEN|10:05": 1,
+  "scalp|MAXHEALTH|10:06": 1,
+  "scalp|LAURUSLABS|10:06": 1,
+  "scalp|INDIGO|10:06": 1,
+  "scalp|GOLDBEES|10:06": 1,
+  "scalp|ADANIPORTS|10:06": 1,
+  "scalp|BAJAJFINSV|10:06": 1,
+  "scalp|LTF|10:06": 1,
+  "scalp|BRIGADE|10:06": 1,
+  "scalp|ATHERENERG|10:06": 1,
+  "scalp|UNIONBANK|10:06": 1,
+  "scalp|TMCV|10:06": 1,
+  "scalp|MAXHEALTH|10:07": 1,
+  "scalp|LAURUSLABS|10:07": 1,
+  "scalp|ITC|10:07": 1,
+  "scalp|INDIGO|10:07": 1,
+  "scalp|GOLDBEES|10:07": 1,
+  "scalp|ADANIPORTS|10:07": 1,
+  "scalp|LTF|10:07": 1,
+  "scalp|BRIGADE|10:07": 1,
+  "scalp|CHOLAFIN|10:07": 1,
+  "scalp|ATHERENERG|10:07": 1,
+  "scalp|BAJAJFINSV|10:07": 1,
+  "scalp|UNIONBANK|10:07": 1,
+  "scalp|TMCV|10:07": 1,
+  "scalp|SBIN|10:08": 1,
+  "scalp|MAXHEALTH|10:08": 1,
+  "scalp|LAURUSLABS|10:08": 1,
+  "scalp|ITC|10:08": 1,
+  "scalp|INDIGO|10:08": 1,
+  "scalp|KALYANKJIL|10:08": 1,
+  "scalp|DIXON|10:08": 1,
+  "scalp|ATHERENERG|10:08": 1,
+  "scalp|BAJAJFINSV|10:08": 1,
+  "scalp|LTF|10:08": 1,
+  "scalp|BRIGADE|10:08": 1,
+  "scalp|HINDUNILVR|10:08": 1,
+  "scalp|TMCV|10:08": 1,
+  "scalp|MAXHEALTH|10:09": 1,
+  "scalp|LAURUSLABS|10:09": 1,
+  "scalp|ITC|10:09": 1,
+  "scalp|INDIGO|10:09": 1,
+  "scalp|CHOLAFIN|10:09": 1,
+  "scalp|ADANIPORTS|10:09": 1,
+  "scalp|ATHERENERG|10:09": 1,
+  "scalp|BAJAJFINSV|10:09": 1,
+  "scalp|LTF|10:09": 1,
+  "scalp|BRIGADE|10:09": 1,
+  "scalp|HINDUNILVR|10:09": 1
  },
- "seq": 82,
+ "seq": 90,
  "rebased": true,
  "cool": {
   "RELIANCE": 1795070015.846615,
@@ -4677,141 +5139,144 @@
   "M&M": 1795149743.511476,
   "ICICIBANK": 1795150712.657819,
   "BHARTIARTL": 1795150712.657819,
-  "GOLDBEES": 1795408384.373939,
+  "GOLDBEES": 1795582158.815462,
   "ITC": 1795409315.265254,
-  "DIVISLAB": 1795409954.661154
+  "DIVISLAB": 1795581699.775782,
+  "EICHERMOT": 1795580591.924112,
+  "JPL": 1795580658.219626
  },
  "streak": {
   "2026-11-19": 3,
   "2026-11-20": 4,
-  "2026-11-23": 3
+  "2026-11-23": 3,
+  "2026-11-25": 4
  },
  "straddle_sheet": {
-  "day": "2026-11-24",
+  "day": "2026-11-25",
   "at": "10:00",
   "expiry": "2026-12-01",
-  "spot": 25349.65,
+  "spot": 25774.7,
   "sheet": [
    {
-    "strike": 25250.0,
-    "cost": 511.75,
-    "call": 326.0,
-    "put": 185.75,
-    "be_up": 25762,
-    "be_dn": 24738,
-    "need_up_pct": 1.63,
-    "need_dn_pct": 2.41,
-    "net_delta": 0.19,
-    "spread_pct": 1.8,
-    "oi": 157235,
-    "pop_expiry": 39.5,
-    "cost_vs_move": 0.86,
-    "score": 1.976,
-    "chosen": false
-   },
-   {
-    "strike": 25300.0,
-    "cost": 503.95,
-    "call": 297.0,
-    "put": 206.95,
-    "be_up": 25804,
-    "be_dn": 24796,
-    "need_up_pct": 1.79,
-    "need_dn_pct": 2.18,
-    "net_delta": 0.13,
-    "spread_pct": 0.9,
-    "oi": 1090245,
-    "pop_expiry": 39.8,
-    "cost_vs_move": 0.85,
-    "score": 1.905,
-    "chosen": false
-   },
-   {
-    "strike": 25350.0,
-    "cost": 500.9,
-    "call": 270.95,
-    "put": 229.95,
-    "be_up": 25851,
-    "be_dn": 24849,
-    "need_up_pct": 1.98,
-    "need_dn_pct": 1.97,
-    "net_delta": 0.06,
-    "spread_pct": 0.7,
-    "oi": 577395,
-    "pop_expiry": 39.9,
-    "cost_vs_move": 0.84,
-    "score": 1.866,
-    "chosen": false
-   },
-   {
-    "strike": 25400.0,
-    "cost": 500.35,
-    "call": 245.4,
-    "put": 254.95,
-    "be_up": 25900,
-    "be_dn": 24900,
-    "need_up_pct": 2.17,
-    "need_dn_pct": 1.78,
-    "net_delta": -0.0,
-    "spread_pct": 0.8,
-    "oi": 2654535,
-    "pop_expiry": 40.1,
-    "cost_vs_move": 0.84,
-    "score": 1.897,
-    "chosen": false
-   },
-   {
-    "strike": 25450.0,
-    "cost": 504.5,
-    "call": 222.5,
-    "put": 282.0,
-    "be_up": 25954,
-    "be_dn": 24946,
-    "need_up_pct": 2.39,
-    "need_dn_pct": 1.59,
-    "net_delta": -0.07,
-    "spread_pct": 0.7,
-    "oi": 500175,
-    "pop_expiry": 40.2,
-    "cost_vs_move": 0.85,
-    "score": 0.93,
+    "strike": 25650.0,
+    "cost": 480.55,
+    "call": 317.7,
+    "put": 162.85,
+    "be_up": 26131,
+    "be_dn": 25169,
+    "need_up_pct": 1.38,
+    "need_dn_pct": 2.35,
+    "net_delta": 0.21,
+    "spread_pct": 0.3,
+    "oi": 911495,
+    "pop_expiry": 41.9,
+    "cost_vs_move": 0.83,
+    "score": 0.913,
     "chosen": true
+   },
+   {
+    "strike": 25700.0,
+    "cost": 472.25,
+    "call": 289.15,
+    "put": 183.1,
+    "be_up": 26172,
+    "be_dn": 25228,
+    "need_up_pct": 1.54,
+    "need_dn_pct": 2.12,
+    "net_delta": 0.14,
+    "spread_pct": 0.2,
+    "oi": 5012020,
+    "pop_expiry": 42.0,
+    "cost_vs_move": 0.81,
+    "score": 0.867,
+    "chosen": false
+   },
+   {
+    "strike": 25750.0,
+    "cost": 467.15,
+    "call": 261.55,
+    "put": 205.6,
+    "be_up": 26217,
+    "be_dn": 25283,
+    "need_up_pct": 1.72,
+    "need_dn_pct": 1.91,
+    "net_delta": 0.08,
+    "spread_pct": 0.3,
+    "oi": 3653455,
+    "pop_expiry": 42.2,
+    "cost_vs_move": 0.8,
+    "score": 0.828,
+    "chosen": false
+   },
+   {
+    "strike": 25800.0,
+    "cost": 464.55,
+    "call": 235.3,
+    "put": 229.25,
+    "be_up": 26265,
+    "be_dn": 25335,
+    "need_up_pct": 1.9,
+    "need_dn_pct": 1.7,
+    "net_delta": 0.01,
+    "spread_pct": 0.1,
+    "oi": 4604210,
+    "pop_expiry": 42.4,
+    "cost_vs_move": 0.8,
+    "score": 1.82,
+    "chosen": false
+   },
+   {
+    "strike": 25850.0,
+    "cost": 466.05,
+    "call": 211.3,
+    "put": 254.75,
+    "be_up": 26316,
+    "be_dn": 25384,
+    "need_up_pct": 2.1,
+    "need_dn_pct": 1.52,
+    "net_delta": -0.06,
+    "spread_pct": 0.2,
+    "oi": 590785,
+    "pop_expiry": 42.6,
+    "cost_vs_move": 0.8,
+    "score": 1.857,
+    "chosen": false
    }
   ],
   "conditions": {
    "go": true,
-   "lean": -1,
+   "lean": 1,
    "steps": 2,
-   "basis": "the morning's move from the open (-2.23%), which is reversing the gap",
+   "basis": "the morning's move from the open (+0.45%)",
    "confidence": "Normal",
    "news_support": 0,
-   "news_against": 1,
+   "news_against": 0,
    "reasons": [
-    "NIFTY opened +2.29%: a news-sized gap",
-    "the first 45 minutes covered 2.56% (high to low): the market is moving",
-    "NIFTY is -2.23% from its open by 10:00",
-    "market-wide news today: Gold price crash: Yellow metal and silver slump over 4% each on MCX; Japan core inflation picks up, makes case for BoJ rate hike stronger",
+    "NIFTY opened +1.22%: a news-sized gap",
+    "the first 45 minutes covered 0.70% (high to low): the market is moving",
+    "NIFTY is +0.45% from its open by 10:00",
+    "market-wide news today: Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues; Gold falls further, set for worst week since March as Fed rate hike worries rise",
     "India VIX is in the top fifth of its year (81.0th percentile) and not rising"
    ],
    "go_signals": [
-    "NIFTY opened +2.29%: a news-sized gap",
-    "the first 45 minutes covered 2.56% (high to low): the market is moving",
-    "NIFTY is -2.23% from its open by 10:00",
-    "market-wide news today: Gold price crash: Yellow metal and silver slump over 4% each on MCX; Japan core inflation picks up, makes case for BoJ rate hike stronger"
+    "NIFTY opened +1.22%: a news-sized gap",
+    "the first 45 minutes covered 0.70% (high to low): the market is moving",
+    "NIFTY is +0.45% from its open by 10:00",
+    "market-wide news today: Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues; Gold falls further, set for worst week since March as Fed rate hike worries rise"
    ],
    "skip_signals": [
     "India VIX is in the top fifth of its year (81.0th percentile) and not rising"
    ],
    "news": {
-    "strong": 0,
-    "net": 0,
+    "strong": 1,
+    "net": 1,
     "macro": [
-     "Gold price crash: Yellow metal and silver slump over 4% each on MCX",
-     "Japan core inflation picks up, makes case for BoJ rate hike stronger",
-     "Nikkei, Kospi fall over 4% each; Asian markets crash as AI sell-off deepens despite record"
+     "Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues",
+     "Gold falls further, set for worst week since March as Fed rate hike worries rise",
+     "'More To Come' - IMF Managing Director warns the AI sell-off may not be over yet"
     ],
     "mood": "mixed",
-    "fc": 0.32
+    "fc": -0.06
    }
   }
  },
@@ -4822,7 +5287,7 @@
    229060.0,
    "09:15"
   ],
-  "cum": 1468740.0,
+  "cum": 7048925.0,
   "qbars": {
    "09:15": [
     25794.3,
@@ -4907,8 +5372,2395 @@
     25809.1,
     25835.4,
     39065.0
+   ],
+   "09:27": [
+    25845.0,
+    25854.7,
+    25845.0,
+    25854.7,
+    137670.0
+   ],
+   "09:28": [
+    25859.8,
+    25870.0,
+    25859.8,
+    25870.0,
+    31525.0
+   ],
+   "09:29": [
+    25875.0,
+    25886.0,
+    25874.2,
+    25886.0,
+    56225.0
+   ],
+   "09:30": [
+    25894.0,
+    25894.0,
+    25890.1,
+    25892.8,
+    59670.0
+   ],
+   "09:31": [
+    25886.2,
+    25900.0,
+    25886.2,
+    25900.0,
+    30940.0
+   ],
+   "09:32": [
+    25895.6,
+    25900.0,
+    25895.6,
+    25900.0,
+    87880.0
+   ],
+   "09:33": [
+    25907.7,
+    25920.0,
+    25895.6,
+    25920.0,
+    48100.0
+   ],
+   "09:34": [
+    25924.1,
+    25924.1,
+    25908.0,
+    25908.0,
+    37570.0
+   ],
+   "09:35": [
+    25910.0,
+    25915.0,
+    25907.0,
+    25914.0,
+    26780.0
+   ],
+   "09:36": [
+    25907.6,
+    25908.6,
+    25905.0,
+    25905.1,
+    25805.0
+   ],
+   "09:37": [
+    25905.0,
+    25915.0,
+    25902.0,
+    25904.9,
+    21710.0
+   ],
+   "09:38": [
+    25900.3,
+    25900.3,
+    25869.9,
+    25873.6,
+    45890.0
+   ],
+   "09:39": [
+    25873.0,
+    25890.0,
+    25873.0,
+    25879.1,
+    17030.0
+   ],
+   "09:40": [
+    25890.0,
+    25890.0,
+    25884.8,
+    25890.0,
+    32305.0
+   ],
+   "09:41": [
+    25891.8,
+    25899.9,
+    25891.8,
+    25896.6,
+    20345.0
+   ],
+   "09:42": [
+    25900.0,
+    25905.0,
+    25880.0,
+    25880.0,
+    16640.0
+   ],
+   "09:43": [
+    25895.0,
+    25895.0,
+    25865.6,
+    25865.6,
+    22230.0
+   ],
+   "09:44": [
+    25863.5,
+    25887.0,
+    25863.5,
+    25865.0,
+    118820.0
+   ],
+   "09:45": [
+    25877.0,
+    25893.9,
+    25877.0,
+    25889.8,
+    15665.0
+   ],
+   "09:46": [
+    25889.3,
+    25889.3,
+    25863.7,
+    25863.7,
+    13520.0
+   ],
+   "09:47": [
+    25856.3,
+    25868.0,
+    25850.0,
+    25868.0,
+    22360.0
+   ],
+   "09:48": [
+    25868.5,
+    25870.0,
+    25860.0,
+    25860.0,
+    13000.0
+   ],
+   "09:49": [
+    25858.2,
+    25872.5,
+    25855.0,
+    25872.5,
+    12740.0
+   ],
+   "09:50": [
+    25879.8,
+    25897.0,
+    25879.4,
+    25897.0,
+    18005.0
+   ],
+   "09:51": [
+    25899.0,
+    25900.0,
+    25889.0,
+    25889.0,
+    50635.0
+   ],
+   "09:52": [
+    25881.0,
+    25894.0,
+    25881.0,
+    25893.2,
+    10335.0
+   ],
+   "09:53": [
+    25895.0,
+    25900.0,
+    25890.7,
+    25898.0,
+    21060.0
+   ],
+   "09:54": [
+    25891.7,
+    25908.5,
+    25891.7,
+    25901.9,
+    27365.0
+   ],
+   "09:55": [
+    25908.0,
+    25911.8,
+    25899.6,
+    25911.4,
+    16445.0
+   ],
+   "09:56": [
+    25911.1,
+    25918.0,
+    25911.0,
+    25911.0,
+    29705.0
+   ],
+   "09:57": [
+    25913.3,
+    25925.0,
+    25913.3,
+    25915.0,
+    23790.0
+   ],
+   "09:58": [
+    25910.8,
+    25912.8,
+    25900.5,
+    25900.5,
+    14495.0
+   ],
+   "09:59": [
+    25908.0,
+    25912.1,
+    25905.0,
+    25905.0,
+    13585.0
+   ],
+   "10:00": [
+    25920.6,
+    25920.6,
+    25890.6,
+    25891.0,
+    13780.0
+   ],
+   "10:01": [
+    25895.1,
+    25909.9,
+    25895.1,
+    25909.9,
+    7735.0
+   ],
+   "10:02": [
+    25897.8,
+    25901.1,
+    25890.0,
+    25894.2,
+    7020.0
+   ],
+   "10:03": [
+    25895.0,
+    25895.8,
+    25876.7,
+    25876.7,
+    17745.0
+   ],
+   "10:04": [
+    25867.1,
+    25871.0,
+    25863.5,
+    25871.0,
+    36595.0
+   ],
+   "10:05": [
+    25860.9,
+    25878.9,
+    25860.9,
+    25878.9,
+    89635.0
+   ],
+   "10:06": [
+    25880.0,
+    25881.2,
+    25874.5,
+    25881.2,
+    6435.0
+   ],
+   "10:07": [
+    25881.9,
+    25882.0,
+    25875.0,
+    25875.0,
+    6890.0
+   ],
+   "10:08": [
+    25863.0,
+    25870.0,
+    25862.4,
+    25862.4,
+    3965.0
+   ],
+   "10:09": [
+    25868.0,
+    25868.0,
+    25854.7,
+    25861.4,
+    18460.0
+   ],
+   "10:10": [
+    25856.3,
+    25869.9,
+    25855.0,
+    25855.0,
+    5850.0
+   ],
+   "10:11": [
+    25852.6,
+    25867.0,
+    25852.6,
+    25867.0,
+    10660.0
+   ],
+   "10:12": [
+    25864.6,
+    25873.0,
+    25863.6,
+    25873.0,
+    7280.0
+   ],
+   "10:13": [
+    25873.0,
+    25878.0,
+    25870.5,
+    25878.0,
+    6175.0
+   ],
+   "10:14": [
+    25881.8,
+    25890.0,
+    25881.1,
+    25890.0,
+    11830.0
+   ],
+   "10:15": [
+    25900.0,
+    25900.0,
+    25887.1,
+    25894.0,
+    12675.0
+   ],
+   "10:16": [
+    25883.3,
+    25898.0,
+    25882.2,
+    25898.0,
+    3770.0
+   ],
+   "10:17": [
+    25905.0,
+    25909.1,
+    25903.5,
+    25909.1,
+    38285.0
+   ],
+   "10:18": [
+    25907.1,
+    25930.0,
+    25907.1,
+    25930.0,
+    46605.0
+   ],
+   "10:19": [
+    25930.0,
+    25935.0,
+    25929.0,
+    25932.1,
+    33995.0
+   ],
+   "10:20": [
+    25937.1,
+    25941.6,
+    25926.5,
+    25926.5,
+    64675.0
+   ],
+   "10:21": [
+    25930.0,
+    25930.0,
+    25913.0,
+    25913.0,
+    36400.0
+   ],
+   "10:22": [
+    25915.5,
+    25915.5,
+    25912.0,
+    25914.4,
+    26455.0
+   ],
+   "10:23": [
+    25901.0,
+    25910.0,
+    25900.7,
+    25910.0,
+    13195.0
+   ],
+   "10:24": [
+    25909.2,
+    25917.8,
+    25909.2,
+    25917.8,
+    6110.0
+   ],
+   "10:25": [
+    25917.7,
+    25921.8,
+    25911.1,
+    25921.8,
+    5720.0
+   ],
+   "10:26": [
+    25924.2,
+    25932.0,
+    25924.1,
+    25932.0,
+    13455.0
+   ],
+   "10:27": [
+    25931.0,
+    25935.0,
+    25925.0,
+    25925.0,
+    7865.0
+   ],
+   "10:28": [
+    25923.5,
+    25925.0,
+    25920.0,
+    25920.0,
+    3380.0
+   ],
+   "10:29": [
+    25921.5,
+    25929.0,
+    25921.5,
+    25929.0,
+    12025.0
+   ],
+   "10:30": [
+    25930.0,
+    25941.8,
+    25930.0,
+    25936.0,
+    19630.0
+   ],
+   "10:31": [
+    25930.2,
+    25935.9,
+    25930.0,
+    25932.5,
+    4875.0
+   ],
+   "10:32": [
+    25932.5,
+    25935.0,
+    25926.1,
+    25935.0,
+    2990.0
+   ],
+   "10:33": [
+    25940.0,
+    25940.0,
+    25932.5,
+    25932.5,
+    6695.0
+   ],
+   "10:34": [
+    25935.3,
+    25936.7,
+    25930.0,
+    25933.5,
+    3185.0
+   ],
+   "10:35": [
+    25934.0,
+    25937.5,
+    25933.0,
+    25933.0,
+    9555.0
+   ],
+   "10:36": [
+    25940.0,
+    25948.0,
+    25940.0,
+    25947.0,
+    16510.0
+   ],
+   "10:37": [
+    25940.0,
+    25949.0,
+    25936.0,
+    25937.0,
+    21190.0
+   ],
+   "10:38": [
+    25939.5,
+    25950.1,
+    25935.3,
+    25950.1,
+    20800.0
+   ],
+   "10:39": [
+    25955.0,
+    25970.5,
+    25955.0,
+    25970.5,
+    29770.0
+   ],
+   "10:40": [
+    25976.0,
+    25985.0,
+    25976.0,
+    25982.8,
+    39000.0
+   ],
+   "10:41": [
+    25983.9,
+    25983.9,
+    25969.0,
+    25969.0,
+    14105.0
+   ],
+   "10:42": [
+    25968.5,
+    25980.0,
+    25968.5,
+    25972.8,
+    9035.0
+   ],
+   "10:43": [
+    25975.0,
+    25975.0,
+    25967.0,
+    25967.0,
+    4875.0
+   ],
+   "10:44": [
+    25969.5,
+    25980.0,
+    25969.5,
+    25977.5,
+    15405.0
+   ],
+   "10:45": [
+    25985.5,
+    25985.5,
+    25977.0,
+    25980.0,
+    16055.0
+   ],
+   "10:46": [
+    25978.3,
+    25980.5,
+    25978.0,
+    25979.5,
+    11245.0
+   ],
+   "10:47": [
+    25985.0,
+    25985.0,
+    25981.0,
+    25985.0,
+    9815.0
+   ],
+   "10:48": [
+    25985.0,
+    25990.9,
+    25985.0,
+    25985.0,
+    33410.0
+   ],
+   "10:49": [
+    25987.1,
+    25995.0,
+    25985.1,
+    25995.0,
+    15730.0
+   ],
+   "10:50": [
+    25990.0,
+    25993.0,
+    25990.0,
+    25990.0,
+    8190.0
+   ],
+   "10:51": [
+    25990.0,
+    25990.0,
+    25985.1,
+    25987.0,
+    9295.0
+   ],
+   "10:52": [
+    25990.0,
+    25992.6,
+    25989.0,
+    25989.0,
+    5460.0
+   ],
+   "10:53": [
+    25990.0,
+    25990.0,
+    25987.5,
+    25987.5,
+    5980.0
+   ],
+   "10:54": [
+    25989.5,
+    25990.0,
+    25985.2,
+    25989.0,
+    4485.0
+   ],
+   "10:55": [
+    25991.0,
+    26008.9,
+    25991.0,
+    26008.9,
+    44655.0
+   ],
+   "10:56": [
+    26010.0,
+    26024.0,
+    26010.0,
+    26024.0,
+    44850.0
+   ],
+   "10:57": [
+    26020.8,
+    26020.8,
+    26015.0,
+    26019.9,
+    17875.0
+   ],
+   "10:58": [
+    26005.7,
+    26017.0,
+    26005.7,
+    26015.6,
+    12545.0
+   ],
+   "10:59": [
+    26015.0,
+    26021.6,
+    26015.0,
+    26021.6,
+    34255.0
+   ],
+   "11:00": [
+    26029.7,
+    26044.0,
+    26028.2,
+    26044.0,
+    43355.0
+   ],
+   "11:01": [
+    26040.5,
+    26040.5,
+    26032.8,
+    26040.0,
+    12025.0
+   ],
+   "11:02": [
+    26043.0,
+    26055.0,
+    26043.0,
+    26052.4,
+    54860.0
+   ],
+   "11:03": [
+    26056.9,
+    26061.0,
+    26056.4,
+    26060.0,
+    27755.0
+   ],
+   "11:04": [
+    26060.0,
+    26060.0,
+    26054.1,
+    26059.2,
+    18330.0
+   ],
+   "11:05": [
+    26055.0,
+    26059.6,
+    26051.0,
+    26051.0,
+    13585.0
+   ],
+   "11:06": [
+    26050.1,
+    26067.9,
+    26050.1,
+    26067.9,
+    30290.0
+   ],
+   "11:07": [
+    26072.0,
+    26072.0,
+    26068.4,
+    26069.1,
+    21190.0
+   ],
+   "11:08": [
+    26065.7,
+    26075.0,
+    26065.7,
+    26075.0,
+    8580.0
+   ],
+   "11:09": [
+    26082.8,
+    26082.8,
+    26075.5,
+    26079.8,
+    19110.0
+   ],
+   "11:10": [
+    26075.0,
+    26080.0,
+    26075.0,
+    26080.0,
+    19305.0
+   ],
+   "11:11": [
+    26070.0,
+    26077.9,
+    26069.0,
+    26069.0,
+    12220.0
+   ],
+   "11:12": [
+    26063.0,
+    26073.0,
+    26061.8,
+    26066.4,
+    14040.0
+   ],
+   "11:13": [
+    26065.1,
+    26066.9,
+    26060.3,
+    26066.9,
+    14430.0
+   ],
+   "11:14": [
+    26071.0,
+    26071.0,
+    26067.0,
+    26067.0,
+    5200.0
+   ],
+   "11:15": [
+    26075.0,
+    26075.0,
+    26069.5,
+    26072.5,
+    7150.0
+   ],
+   "11:16": [
+    26085.0,
+    26085.0,
+    26080.0,
+    26082.6,
+    28795.0
+   ],
+   "11:17": [
+    26088.0,
+    26098.0,
+    26087.5,
+    26096.6,
+    51805.0
+   ],
+   "11:18": [
+    26098.7,
+    26099.7,
+    26097.7,
+    26099.0,
+    15405.0
+   ],
+   "11:19": [
+    26097.2,
+    26099.5,
+    26096.0,
+    26097.0,
+    27495.0
+   ],
+   "11:20": [
+    26095.0,
+    26095.0,
+    26089.0,
+    26090.0,
+    23660.0
+   ],
+   "11:21": [
+    26091.3,
+    26093.1,
+    26089.1,
+    26089.1,
+    5915.0
+   ],
+   "11:22": [
+    26081.0,
+    26081.0,
+    26070.0,
+    26070.0,
+    8580.0
+   ],
+   "11:23": [
+    26072.2,
+    26087.5,
+    26072.2,
+    26087.2,
+    576485.0
+   ],
+   "11:24": [
+    26093.1,
+    26093.1,
+    26075.0,
+    26075.0,
+    6240.0
+   ],
+   "11:25": [
+    26075.0,
+    26075.0,
+    26067.6,
+    26068.0,
+    5460.0
+   ],
+   "11:26": [
+    26071.9,
+    26071.9,
+    26065.0,
+    26065.0,
+    7085.0
+   ],
+   "11:27": [
+    26065.0,
+    26070.0,
+    26063.8,
+    26066.0,
+    7020.0
+   ],
+   "11:28": [
+    26060.0,
+    26074.9,
+    26058.0,
+    26074.9,
+    10075.0
+   ],
+   "11:29": [
+    26074.9,
+    26074.9,
+    26063.5,
+    26063.5,
+    4160.0
+   ],
+   "11:30": [
+    26061.4,
+    26075.3,
+    26060.0,
+    26075.0,
+    7800.0
+   ],
+   "11:31": [
+    26072.2,
+    26080.0,
+    26072.1,
+    26080.0,
+    3315.0
+   ],
+   "11:32": [
+    26080.0,
+    26080.0,
+    26062.0,
+    26062.0,
+    4485.0
+   ],
+   "11:33": [
+    26069.0,
+    26069.0,
+    26059.3,
+    26062.4,
+    3055.0
+   ],
+   "11:34": [
+    26060.0,
+    26069.0,
+    26055.0,
+    26055.0,
+    4290.0
+   ],
+   "11:35": [
+    26050.0,
+    26060.0,
+    26050.0,
+    26060.0,
+    8450.0
+   ],
+   "11:36": [
+    26057.7,
+    26059.0,
+    26057.7,
+    26058.6,
+    5785.0
+   ],
+   "11:37": [
+    26059.0,
+    26079.2,
+    26059.0,
+    26078.0,
+    5330.0
+   ],
+   "11:38": [
+    26078.0,
+    26084.0,
+    26072.5,
+    26084.0,
+    4550.0
+   ],
+   "11:39": [
+    26072.1,
+    26076.9,
+    26072.1,
+    26075.0,
+    3445.0
+   ],
+   "11:40": [
+    26074.5,
+    26095.0,
+    26074.5,
+    26095.0,
+    11440.0
+   ],
+   "11:41": [
+    26097.0,
+    26097.0,
+    26085.0,
+    26085.0,
+    5070.0
+   ],
+   "11:42": [
+    26085.0,
+    26098.2,
+    26085.0,
+    26098.2,
+    6370.0
+   ],
+   "11:43": [
+    26096.0,
+    26100.0,
+    26096.0,
+    26099.8,
+    16250.0
+   ],
+   "11:44": [
+    26099.9,
+    26110.0,
+    26099.0,
+    26110.0,
+    22815.0
+   ],
+   "11:45": [
+    26105.0,
+    26111.9,
+    26099.0,
+    26099.0,
+    14950.0
+   ],
+   "11:46": [
+    26095.5,
+    26110.0,
+    26095.5,
+    26099.1,
+    6305.0
+   ],
+   "11:47": [
+    26095.0,
+    26100.0,
+    26094.7,
+    26099.1,
+    27950.0
+   ],
+   "11:48": [
+    26099.1,
+    26099.1,
+    26088.0,
+    26088.0,
+    5785.0
+   ],
+   "11:49": [
+    26090.0,
+    26090.0,
+    26082.6,
+    26090.0,
+    9815.0
+   ],
+   "11:50": [
+    26091.6,
+    26095.0,
+    26091.6,
+    26095.0,
+    7085.0
+   ],
+   "11:51": [
+    26088.8,
+    26088.8,
+    26080.1,
+    26080.1,
+    2535.0
+   ],
+   "11:52": [
+    26081.3,
+    26085.6,
+    26077.0,
+    26077.0,
+    3250.0
+   ],
+   "11:53": [
+    26075.0,
+    26076.0,
+    26070.3,
+    26070.3,
+    3575.0
+   ],
+   "11:54": [
+    26070.0,
+    26076.5,
+    26070.0,
+    26070.8,
+    4940.0
+   ],
+   "11:55": [
+    26070.0,
+    26080.7,
+    26070.0,
+    26070.0,
+    4095.0
+   ],
+   "11:56": [
+    26070.0,
+    26070.4,
+    26065.0,
+    26070.4,
+    4355.0
+   ],
+   "11:57": [
+    26074.9,
+    26084.0,
+    26074.9,
+    26080.0,
+    5135.0
+   ],
+   "11:58": [
+    26083.0,
+    26084.9,
+    26075.0,
+    26075.0,
+    3705.0
+   ],
+   "11:59": [
+    26076.4,
+    26076.8,
+    26061.0,
+    26061.0,
+    3965.0
+   ],
+   "12:00": [
+    26070.0,
+    26070.0,
+    26055.0,
+    26055.0,
+    8645.0
+   ],
+   "12:01": [
+    26055.1,
+    26060.0,
+    26055.0,
+    26055.1,
+    4875.0
+   ],
+   "12:02": [
+    26055.1,
+    26062.0,
+    26054.8,
+    26062.0,
+    5460.0
+   ],
+   "12:03": [
+    26065.0,
+    26065.0,
+    26056.0,
+    26061.0,
+    4030.0
+   ],
+   "12:04": [
+    26061.0,
+    26061.0,
+    26050.0,
+    26050.0,
+    5915.0
+   ],
+   "12:05": [
+    26053.3,
+    26060.0,
+    26050.0,
+    26051.0,
+    2795.0
+   ],
+   "12:06": [
+    26051.0,
+    26051.0,
+    26045.8,
+    26050.0,
+    10920.0
+   ],
+   "12:07": [
+    26054.0,
+    26075.0,
+    26054.0,
+    26075.0,
+    5980.0
+   ],
+   "12:08": [
+    26062.9,
+    26072.0,
+    26062.9,
+    26071.3,
+    1820.0
+   ],
+   "12:09": [
+    26069.8,
+    26069.8,
+    26035.0,
+    26035.0,
+    11635.0
+   ],
+   "12:10": [
+    26020.0,
+    26020.0,
+    26011.0,
+    26011.0,
+    38545.0
+   ],
+   "12:11": [
+    26010.0,
+    26015.2,
+    26001.1,
+    26015.2,
+    18070.0
+   ],
+   "12:12": [
+    26006.0,
+    26035.0,
+    26006.0,
+    26026.3,
+    14755.0
+   ],
+   "12:13": [
+    26035.8,
+    26041.5,
+    26030.0,
+    26041.0,
+    7345.0
+   ],
+   "12:14": [
+    26044.0,
+    26050.0,
+    26044.0,
+    26050.0,
+    7735.0
+   ],
+   "12:15": [
+    26045.8,
+    26055.0,
+    26045.8,
+    26055.0,
+    6630.0
+   ],
+   "12:16": [
+    26058.1,
+    26071.2,
+    26030.0,
+    26044.3,
+    8580.0
+   ],
+   "12:17": [
+    26030.2,
+    26047.4,
+    26030.2,
+    26045.0,
+    10530.0
+   ],
+   "12:18": [
+    26043.2,
+    26055.0,
+    26043.2,
+    26050.0,
+    2210.0
+   ],
+   "12:19": [
+    26050.0,
+    26053.1,
+    26050.0,
+    26050.0,
+    2015.0
+   ],
+   "12:20": [
+    26050.0,
+    26059.4,
+    26044.2,
+    26051.7,
+    3185.0
+   ],
+   "12:21": [
+    26048.2,
+    26059.4,
+    26040.8,
+    26059.4,
+    3640.0
+   ],
+   "12:22": [
+    26050.0,
+    26058.0,
+    26046.9,
+    26058.0,
+    2080.0
+   ],
+   "12:23": [
+    26058.0,
+    26058.0,
+    26045.5,
+    26045.5,
+    7280.0
+   ],
+   "12:24": [
+    26050.0,
+    26060.0,
+    26044.3,
+    26044.3,
+    2275.0
+   ],
+   "12:25": [
+    26050.5,
+    26050.5,
+    26040.2,
+    26040.2,
+    1950.0
+   ],
+   "12:26": [
+    26040.2,
+    26047.5,
+    26040.0,
+    26040.0,
+    2015.0
+   ],
+   "12:27": [
+    26036.0,
+    26050.0,
+    26036.0,
+    26050.0,
+    6045.0
+   ],
+   "12:28": [
+    26050.0,
+    26050.0,
+    26047.0,
+    26047.0,
+    4810.0
+   ],
+   "12:29": [
+    26047.0,
+    26050.0,
+    26030.0,
+    26030.0,
+    2990.0
+   ],
+   "12:30": [
+    26026.5,
+    26026.5,
+    26010.0,
+    26010.0,
+    7150.0
+   ],
+   "12:31": [
+    25976.1,
+    25995.5,
+    25976.1,
+    25982.3,
+    31915.0
+   ],
+   "12:32": [
+    25977.3,
+    25977.3,
+    25965.1,
+    25972.6,
+    16900.0
+   ],
+   "12:33": [
+    25971.0,
+    25979.6,
+    25955.0,
+    25955.0,
+    20475.0
+   ],
+   "12:34": [
+    25960.0,
+    25960.0,
+    25941.0,
+    25947.0,
+    31395.0
+   ],
+   "12:35": [
+    25955.0,
+    25980.2,
+    25955.0,
+    25980.2,
+    12870.0
+   ],
+   "12:36": [
+    25980.0,
+    25980.0,
+    25971.0,
+    25971.0,
+    8515.0
+   ],
+   "12:37": [
+    25970.0,
+    25970.6,
+    25966.0,
+    25966.0,
+    9490.0
+   ],
+   "12:38": [
+    25960.2,
+    25962.0,
+    25946.0,
+    25946.0,
+    7215.0
+   ],
+   "12:39": [
+    25942.0,
+    25942.0,
+    25925.0,
+    25925.0,
+    26780.0
+   ],
+   "12:40": [
+    25930.0,
+    25938.3,
+    25902.5,
+    25902.5,
+    36595.0
+   ],
+   "12:41": [
+    25903.0,
+    25935.0,
+    25902.7,
+    25935.0,
+    34125.0
+   ],
+   "12:42": [
+    25931.4,
+    25931.5,
+    25915.0,
+    25915.0,
+    37375.0
+   ],
+   "12:43": [
+    25910.0,
+    25915.2,
+    25909.0,
+    25915.2,
+    8905.0
+   ],
+   "12:44": [
+    25915.2,
+    25915.2,
+    25910.0,
+    25910.0,
+    11310.0
+   ],
+   "12:45": [
+    25910.0,
+    25929.5,
+    25908.8,
+    25929.5,
+    27105.0
+   ],
+   "12:46": [
+    25925.0,
+    25925.0,
+    25911.0,
+    25911.0,
+    25415.0
+   ],
+   "12:47": [
+    25928.1,
+    25928.1,
+    25917.9,
+    25917.9,
+    7280.0
+   ],
+   "12:48": [
+    25915.9,
+    25915.9,
+    25900.5,
+    25908.2,
+    14040.0
+   ],
+   "12:49": [
+    25905.1,
+    25910.0,
+    25905.0,
+    25905.5,
+    3705.0
+   ],
+   "12:50": [
+    25906.5,
+    25919.9,
+    25900.0,
+    25900.0,
+    20345.0
+   ],
+   "12:51": [
+    25900.0,
+    25901.9,
+    25897.0,
+    25901.9,
+    7605.0
+   ],
+   "12:52": [
+    25900.0,
+    25900.0,
+    25890.0,
+    25890.0,
+    7865.0
+   ],
+   "12:53": [
+    25885.0,
+    25899.7,
+    25885.0,
+    25887.8,
+    14300.0
+   ],
+   "12:54": [
+    25880.2,
+    25895.1,
+    25876.0,
+    25895.1,
+    24505.0
+   ],
+   "12:55": [
+    25887.2,
+    25889.7,
+    25876.0,
+    25876.0,
+    8840.0
+   ],
+   "12:56": [
+    25880.0,
+    25887.7,
+    25880.0,
+    25887.0,
+    4095.0
+   ],
+   "12:57": [
+    25876.1,
+    25880.0,
+    25855.3,
+    25855.3,
+    27235.0
+   ],
+   "12:58": [
+    25846.1,
+    25858.0,
+    25844.0,
+    25858.0,
+    58955.0
+   ],
+   "12:59": [
+    25850.0,
+    25860.0,
+    25850.0,
+    25858.2,
+    12935.0
+   ],
+   "13:00": [
+    25851.0,
+    25863.6,
+    25851.0,
+    25863.6,
+    15730.0
+   ],
+   "13:01": [
+    25860.5,
+    25860.5,
+    25835.0,
+    25838.4,
+    39910.0
+   ],
+   "13:02": [
+    25839.5,
+    25839.5,
+    25825.0,
+    25825.2,
+    13455.0
+   ],
+   "13:03": [
+    25830.1,
+    25835.0,
+    25828.2,
+    25828.2,
+    9035.0
+   ],
+   "13:04": [
+    25827.8,
+    25859.0,
+    25827.8,
+    25856.3,
+    18005.0
+   ],
+   "13:05": [
+    25869.7,
+    25877.9,
+    25842.6,
+    25842.6,
+    18460.0
+   ],
+   "13:06": [
+    25836.0,
+    25840.3,
+    25806.0,
+    25806.0,
+    37765.0
+   ],
+   "13:07": [
+    25815.2,
+    25816.6,
+    25800.0,
+    25800.0,
+    40495.0
+   ],
+   "13:08": [
+    25805.4,
+    25810.0,
+    25805.4,
+    25808.9,
+    16380.0
+   ],
+   "13:09": [
+    25809.0,
+    25810.0,
+    25807.5,
+    25809.9,
+    13585.0
+   ],
+   "13:10": [
+    25804.9,
+    25815.0,
+    25799.0,
+    25799.0,
+    19370.0
+   ],
+   "13:11": [
+    25805.8,
+    25812.0,
+    25800.1,
+    25812.0,
+    6370.0
+   ],
+   "13:12": [
+    25810.9,
+    25818.3,
+    25807.5,
+    25812.2,
+    7930.0
+   ],
+   "13:13": [
+    25815.1,
+    25815.1,
+    25802.0,
+    25802.0,
+    10075.0
+   ],
+   "13:14": [
+    25804.3,
+    25804.3,
+    25799.0,
+    25799.0,
+    9620.0
+   ],
+   "13:15": [
+    25796.3,
+    25801.1,
+    25781.0,
+    25781.0,
+    35295.0
+   ],
+   "13:16": [
+    25782.8,
+    25782.8,
+    25776.0,
+    25780.0,
+    25220.0
+   ],
+   "13:17": [
+    25782.4,
+    25790.3,
+    25781.4,
+    25785.0,
+    8840.0
+   ],
+   "13:18": [
+    25783.0,
+    25793.0,
+    25769.0,
+    25793.0,
+    15340.0
+   ],
+   "13:19": [
+    25798.4,
+    25819.7,
+    25798.4,
+    25819.7,
+    13715.0
+   ],
+   "13:20": [
+    25822.2,
+    25834.1,
+    25822.2,
+    25825.3,
+    19045.0
+   ],
+   "13:21": [
+    25832.9,
+    25833.3,
+    25822.2,
+    25822.2,
+    16835.0
+   ],
+   "13:22": [
+    25818.5,
+    25820.8,
+    25812.1,
+    25812.1,
+    11375.0
+   ],
+   "13:23": [
+    25807.2,
+    25821.8,
+    25802.0,
+    25821.8,
+    7280.0
+   ],
+   "13:24": [
+    25823.2,
+    25846.2,
+    25823.2,
+    25845.0,
+    12935.0
+   ],
+   "13:25": [
+    25842.6,
+    25842.6,
+    25820.2,
+    25820.2,
+    7670.0
+   ],
+   "13:26": [
+    25829.2,
+    25832.0,
+    25826.8,
+    25832.0,
+    5980.0
+   ],
+   "13:27": [
+    25835.0,
+    25845.0,
+    25831.8,
+    25845.0,
+    11700.0
+   ],
+   "13:28": [
+    25842.0,
+    25864.0,
+    25842.0,
+    25864.0,
+    21775.0
+   ],
+   "13:29": [
+    25856.6,
+    25863.1,
+    25856.6,
+    25863.1,
+    16055.0
+   ],
+   "13:30": [
+    25877.7,
+    25898.9,
+    25877.7,
+    25898.9,
+    23660.0
+   ],
+   "13:31": [
+    25919.8,
+    25922.8,
+    25918.5,
+    25918.5,
+    41600.0
+   ],
+   "13:32": [
+    25908.4,
+    25908.4,
+    25900.0,
+    25900.0,
+    12675.0
+   ],
+   "13:33": [
+    25900.1,
+    25900.1,
+    25892.9,
+    25896.6,
+    13260.0
+   ],
+   "13:34": [
+    25889.0,
+    25889.0,
+    25871.0,
+    25871.0,
+    7930.0
+   ],
+   "13:35": [
+    25864.2,
+    25864.2,
+    25849.9,
+    25850.1,
+    11115.0
+   ],
+   "13:36": [
+    25850.0,
+    25855.6,
+    25832.4,
+    25832.4,
+    16770.0
+   ],
+   "13:37": [
+    25840.0,
+    25840.0,
+    25820.0,
+    25836.5,
+    9815.0
+   ],
+   "13:38": [
+    25834.9,
+    25847.0,
+    25834.9,
+    25842.6,
+    3120.0
+   ],
+   "13:39": [
+    25845.0,
+    25864.9,
+    25845.0,
+    25855.0,
+    4485.0
+   ],
+   "13:40": [
+    25856.2,
+    25860.0,
+    25853.5,
+    25853.5,
+    5005.0
+   ],
+   "13:41": [
+    25846.0,
+    25860.2,
+    25841.3,
+    25853.7,
+    4030.0
+   ],
+   "13:42": [
+    25862.0,
+    25888.9,
+    25862.0,
+    25880.0,
+    4095.0
+   ],
+   "13:43": [
+    25888.0,
+    25888.0,
+    25875.9,
+    25880.9,
+    5135.0
+   ],
+   "13:44": [
+    25876.9,
+    25890.0,
+    25866.5,
+    25890.0,
+    4225.0
+   ],
+   "13:45": [
+    25880.2,
+    25889.7,
+    25878.0,
+    25880.0,
+    4095.0
+   ],
+   "13:46": [
+    25876.2,
+    25876.2,
+    25865.0,
+    25865.0,
+    4290.0
+   ],
+   "13:47": [
+    25860.0,
+    25871.0,
+    25852.2,
+    25859.0,
+    3185.0
+   ],
+   "13:48": [
+    25861.0,
+    25890.0,
+    25861.0,
+    25880.7,
+    5005.0
+   ],
+   "13:49": [
+    25879.1,
+    25887.0,
+    25873.5,
+    25881.1,
+    2990.0
+   ],
+   "13:50": [
+    25875.1,
+    25882.4,
+    25874.0,
+    25874.8,
+    4225.0
+   ],
+   "13:51": [
+    25874.8,
+    25874.8,
+    25865.0,
+    25865.0,
+    6500.0
+   ],
+   "13:52": [
+    25865.0,
+    25865.0,
+    25857.0,
+    25857.0,
+    5720.0
+   ],
+   "13:53": [
+    25860.0,
+    25860.0,
+    25855.0,
+    25855.0,
+    2535.0
+   ],
+   "13:54": [
+    25855.1,
+    25861.1,
+    25855.0,
+    25860.0,
+    2600.0
+   ],
+   "13:55": [
+    25861.5,
+    25870.1,
+    25861.5,
+    25862.6,
+    3055.0
+   ],
+   "13:56": [
+    25862.8,
+    25870.0,
+    25853.2,
+    25867.3,
+    3315.0
+   ],
+   "13:57": [
+    25856.5,
+    25860.4,
+    25851.1,
+    25858.7,
+    1885.0
+   ],
+   "13:58": [
+    25863.0,
+    25863.0,
+    25851.0,
+    25851.0,
+    3185.0
+   ],
+   "13:59": [
+    25868.0,
+    25892.0,
+    25860.7,
+    25892.0,
+    7085.0
+   ],
+   "14:00": [
+    25908.0,
+    25914.7,
+    25900.1,
+    25900.1,
+    21385.0
+   ],
+   "14:01": [
+    25905.5,
+    25930.2,
+    25905.5,
+    25930.2,
+    43810.0
+   ],
+   "14:02": [
+    25942.4,
+    25942.4,
+    25926.8,
+    25935.4,
+    20865.0
+   ],
+   "14:03": [
+    25927.5,
+    25929.9,
+    25920.0,
+    25922.7,
+    5915.0
+   ],
+   "14:04": [
+    25917.6,
+    25917.6,
+    25904.0,
+    25907.8,
+    5850.0
+   ],
+   "14:05": [
+    25909.9,
+    25923.3,
+    25909.9,
+    25923.3,
+    9620.0
+   ],
+   "14:06": [
+    25928.7,
+    25928.7,
+    25895.1,
+    25895.1,
+    11440.0
+   ],
+   "14:07": [
+    25909.8,
+    25910.0,
+    25903.1,
+    25906.8,
+    4485.0
+   ],
+   "14:08": [
+    25901.0,
+    25916.5,
+    25890.6,
+    25890.6,
+    3705.0
+   ],
+   "14:09": [
+    25894.8,
+    25917.7,
+    25894.8,
+    25917.7,
+    4290.0
+   ],
+   "14:10": [
+    25916.9,
+    25934.5,
+    25916.9,
+    25924.6,
+    8060.0
+   ],
+   "14:11": [
+    25926.9,
+    25929.6,
+    25917.2,
+    25920.0,
+    5265.0
+   ],
+   "14:12": [
+    25925.0,
+    25938.0,
+    25925.0,
+    25938.0,
+    11635.0
+   ],
+   "14:13": [
+    25940.0,
+    25941.1,
+    25935.2,
+    25940.0,
+    5850.0
+   ],
+   "14:14": [
+    25940.0,
+    25942.0,
+    25930.0,
+    25930.0,
+    4745.0
+   ],
+   "14:15": [
+    25930.0,
+    25932.1,
+    25923.2,
+    25928.2,
+    6370.0
+   ],
+   "14:16": [
+    25936.4,
+    25937.6,
+    25927.5,
+    25927.5,
+    7475.0
+   ],
+   "14:17": [
+    25916.2,
+    25935.0,
+    25916.2,
+    25935.0,
+    9555.0
+   ],
+   "14:18": [
+    25933.4,
+    25939.5,
+    25930.4,
+    25931.0,
+    5720.0
+   ],
+   "14:19": [
+    25930.4,
+    25930.4,
+    25915.5,
+    25915.5,
+    20735.0
+   ],
+   "14:20": [
+    25932.7,
+    25932.7,
+    25915.3,
+    25915.3,
+    5785.0
+   ],
+   "14:21": [
+    25913.0,
+    25930.0,
+    25913.0,
+    25929.0,
+    6890.0
+   ],
+   "14:22": [
+    25915.0,
+    25915.0,
+    25890.8,
+    25890.8,
+    8385.0
+   ],
+   "14:23": [
+    25888.1,
+    25896.0,
+    25886.8,
+    25888.0,
+    10920.0
+   ],
+   "14:24": [
+    25893.6,
+    25904.1,
+    25893.6,
+    25900.0,
+    7605.0
+   ],
+   "14:25": [
+    25909.0,
+    25916.4,
+    25900.6,
+    25905.8,
+    18135.0
+   ],
+   "14:26": [
+    25905.0,
+    25913.8,
+    25901.8,
+    25901.8,
+    12805.0
+   ],
+   "14:27": [
+    25901.5,
+    25919.9,
+    25901.5,
+    25919.9,
+    2535.0
+   ],
+   "14:28": [
+    25906.8,
+    25906.8,
+    25891.8,
+    25891.8,
+    2730.0
+   ],
+   "14:29": [
+    25900.0,
+    25905.0,
+    25889.8,
+    25889.8,
+    4615.0
+   ],
+   "14:30": [
+    25891.5,
+    25900.0,
+    25886.6,
+    25892.7,
+    4550.0
+   ],
+   "14:31": [
+    25892.7,
+    25895.0,
+    25884.7,
+    25893.8,
+    8190.0
+   ],
+   "14:32": [
+    25900.0,
+    25911.4,
+    25900.0,
+    25900.0,
+    3445.0
+   ],
+   "14:33": [
+    25910.0,
+    25912.0,
+    25900.1,
+    25912.0,
+    3315.0
+   ],
+   "14:34": [
+    25920.0,
+    25920.0,
+    25911.3,
+    25920.0,
+    5525.0
+   ],
+   "14:35": [
+    25921.8,
+    25936.9,
+    25921.8,
+    25925.2,
+    17875.0
+   ],
+   "14:36": [
+    25920.0,
+    25923.7,
+    25913.8,
+    25913.8,
+    12870.0
+   ],
+   "14:37": [
+    25910.1,
+    25910.1,
+    25898.8,
+    25900.0,
+    12610.0
+   ],
+   "14:38": [
+    25900.4,
+    25904.9,
+    25894.0,
+    25902.2,
+    3250.0
+   ],
+   "14:39": [
+    25895.0,
+    25909.9,
+    25895.0,
+    25895.3,
+    4745.0
+   ],
+   "14:40": [
+    25892.1,
+    25895.0,
+    25885.0,
+    25885.0,
+    5265.0
+   ],
+   "14:41": [
+    25875.5,
+    25910.0,
+    25875.5,
+    25908.6,
+    10985.0
+   ],
+   "14:42": [
+    25909.5,
+    25909.5,
+    25877.8,
+    25877.8,
+    3380.0
+   ],
+   "14:43": [
+    25876.4,
+    25876.4,
+    25870.6,
+    25875.0,
+    4875.0
+   ],
+   "14:44": [
+    25872.5,
+    25890.4,
+    25872.5,
+    25890.4,
+    5850.0
+   ],
+   "14:45": [
+    25882.2,
+    25898.0,
+    25882.2,
+    25888.1,
+    5720.0
+   ],
+   "14:46": [
+    25900.0,
+    25908.9,
+    25892.1,
+    25908.9,
+    2665.0
+   ],
+   "14:47": [
+    25909.0,
+    25909.0,
+    25900.0,
+    25900.0,
+    1755.0
+   ],
+   "14:48": [
+    25900.0,
+    25902.6,
+    25895.0,
+    25902.6,
+    2340.0
+   ],
+   "14:49": [
+    25895.0,
+    25909.0,
+    25895.0,
+    25902.1,
+    2990.0
+   ],
+   "14:50": [
+    25892.2,
+    25909.0,
+    25892.1,
+    25901.0,
+    2275.0
+   ],
+   "14:51": [
+    25909.0,
+    25910.0,
+    25902.9,
+    25909.0,
+    3575.0
+   ],
+   "14:52": [
+    25908.5,
+    25918.8,
+    25908.5,
+    25911.0,
+    3705.0
+   ],
+   "14:53": [
+    25910.5,
+    25916.1,
+    25910.5,
+    25915.0,
+    3900.0
+   ],
+   "14:54": [
+    25935.7,
+    25937.2,
+    25929.8,
+    25929.8,
+    16770.0
+   ],
+   "14:55": [
+    25931.1,
+    25931.1,
+    25925.1,
+    25926.1,
+    9490.0
+   ],
+   "14:56": [
+    25926.4,
+    25926.4,
+    25921.0,
+    25921.0,
+    4420.0
+   ],
+   "14:57": [
+    25929.8,
+    25929.8,
+    25917.5,
+    25924.7,
+    7995.0
+   ],
+   "14:58": [
+    25919.1,
+    25932.7,
+    25919.1,
+    25932.7,
+    5265.0
+   ],
+   "14:59": [
+    25930.8,
+    25930.8,
+    25906.7,
+    25906.7,
+    8255.0
+   ],
+   "15:00": [
+    25920.0,
+    25931.0,
+    25920.0,
+    25931.0,
+    4225.0
+   ],
+   "15:01": [
+    25924.6,
+    25938.0,
+    25920.0,
+    25938.0,
+    12155.0
+   ],
+   "15:02": [
+    25944.0,
+    25944.0,
+    25930.0,
+    25930.0,
+    6695.0
+   ],
+   "15:03": [
+    25930.1,
+    25931.7,
+    25925.0,
+    25927.5,
+    8645.0
+   ],
+   "15:04": [
+    25922.0,
+    25930.0,
+    25922.0,
+    25930.0,
+    9425.0
+   ],
+   "15:05": [
+    25928.5,
+    25928.5,
+    25925.0,
+    25925.0,
+    2600.0
+   ],
+   "15:06": [
+    25930.3,
+    25937.1,
+    25930.3,
+    25936.3,
+    8970.0
+   ],
+   "15:07": [
+    25930.0,
+    25934.2,
+    25925.1,
+    25934.2,
+    5135.0
    ]
   },
-  "acted": "09:24"
+  "acted": "15:06"
  }
 }

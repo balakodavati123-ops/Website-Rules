@@ -64,6 +64,29 @@
       "time": "2026-11-24T07:21:57Z"
      }
     ]
+   },
+   "AIRPRO": {
+    "d": "2026-11-25",
+    "items": [
+     {
+      "title": "Airpro Technology India Ltd \u2013 Share Price, Fundamentals & Ratios",
+      "source": "Multibagg AI",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE42a1VsTkpDb1VydFNJN1Z3alRVM0lBYUhibWRfTkw3VjI2eHExa1IyY2U1NTV6WTJZaEhQcU9yeEM4WkRuWGdaODdfWTExaDNncXdhaktxUFpJNlhFYTR1U2RDS3VjS1pvZGgzRC0temVndk9SWEZVWQ?oc=5",
+      "time": "2026-11-25T01:54:02Z"
+     },
+     {
+      "title": "Airpro Technology IPO GMP Today with Trend",
+      "source": "IPO Watch",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5EQzdLRFRwNEd1UEVDSHVwOV9ubWZQWlpuLWVucWo4NWo3MnhfNHNZallvLU5iTzIyeEpDZHJPMW9ySE01a1d6cDE5eWpuQUlONDhuSzZvenREQQ?oc=5",
+      "time": "2026-11-24T12:50:00Z"
+     },
+     {
+      "title": "Airpro Technology IPO Date, Price Band, Issue Size",
+      "source": "IPO Watch",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5wTUdodFRhU2V4cloydUk5YWE2UzJ3T1RhRzE1S1hobDlUbGlveXZvYUJTd1FuMDVDQXQzRmplQTBPZ0ZJRDlIUGVpY1ZxaDdsSHFmQ0tDSGRER0ppQUNz?oc=5",
+      "time": "2026-11-24T05:03:10Z"
+     }
+    ]
    }
   },
   "thesis": {},
@@ -81,13 +104,21 @@
     "fresh_cr": 192.0,
     "ofs_cr": 168.76,
     "issue_size_cr": 360.76
+   },
+   "AIRPRO|99.0": {
+    "lot_size": 1200.0,
+    "issue_text": "Initial Public Offer comprising of Fresh Issue up to 29,20,000 Equity Shares and Offer for Sales up to 6,80,000 Equity Shares (Including Market maker portion of 1,80,000 Equity Shares)",
+    "fresh_cr": 28.91,
+    "ofs_cr": 6.73,
+    "issue_size_cr": 35.64
    }
   }
  },
  "notes": {
   "day": "2026-11-25",
   "n": {
-   "Foodlink F&B Holdings (India) Limited": "The Rs 361 crore mainboard issue opens 26 Nov and closes 30 Nov at Rs 181-191 per share; there is no subscription data yet, so demand is unknown. About Rs 192 crore is fresh money for the company and Rs 169 crore is an offer for sale. No matching DRHP was found in SEBI's recent listing. One lot of 78 shares costs about Rs 14,898; a small bet is only reasonable after seeing demand on the final day."
+   "Foodlink F&B Holdings (India) Limited": "The Rs 361 crore mainboard issue opens 26 Nov and closes 30 Nov at Rs 181-191 per share; there is no subscription data yet, so demand is unknown. About Rs 192 crore is fresh money for the company and Rs 169 crore is an offer for sale. No matching DRHP was found in SEBI's recent listing. One lot of 78 shares costs about Rs 14,898; a small bet is only reasonable after seeing demand on the final day.",
+   "Shree Siddhivinayak Greentech Industries Limited": "This SME issue opens today and closes 27 Nov at Rs 130-142 per share, with no subscription data yet, so demand is unknown. All Rs 94 crore is fresh capital for the company. SME stocks have large lots, thin trading and big price swings, and no matching DRHP was found in SEBI's recent listing. One lot of 1,000 shares costs about Rs 1.42 lakh, too large for a small bet; wait for demand data before deciding."
   },
   "tried": false
  }

@@ -2,13 +2,13 @@
  {
   "desk": "COMMODITY",
   "strategy": "mcx_momentum",
-  "closed": 14,
+  "closed": 15,
   "wins": 6,
-  "win_rate": 42.9,
-  "pnl_rs": -1520.99,
-  "avg_rs": -108.64,
-  "t_stat": -0.65,
-  "confidence": 25.7,
+  "win_rate": 40.0,
+  "pnl_rs": -2113.75,
+  "avg_rs": -140.92,
+  "t_stat": -0.89,
+  "confidence": 18.7,
   "verdict": "COLLECTING"
  },
  {
@@ -110,13 +110,13 @@
  {
   "desk": "EQUITY",
   "strategy": "scalp_vwap_pullback",
-  "closed": 13,
+  "closed": 17,
   "wins": 2,
-  "win_rate": 15.4,
-  "pnl_rs": -958.04,
-  "avg_rs": -73.7,
-  "t_stat": -2.71,
-  "confidence": 0.3,
+  "win_rate": 11.8,
+  "pnl_rs": -1236.81,
+  "avg_rs": -72.75,
+  "t_stat": -3.37,
+  "confidence": 0.0,
   "verdict": "COLLECTING"
  },
  {
@@ -141,6 +141,18 @@
   "avg_rs": 338.17,
   "t_stat": 0.59,
   "confidence": 72.1,
+  "verdict": "COLLECTING"
+ },
+ {
+  "desk": "FNO",
+  "strategy": "ema_vwap_cross",
+  "closed": 2,
+  "wins": 1,
+  "win_rate": 50.0,
+  "pnl_rs": 1724.68,
+  "avg_rs": 862.34,
+  "t_stat": 0.91,
+  "confidence": 81.7,
   "verdict": "COLLECTING"
  },
  {
