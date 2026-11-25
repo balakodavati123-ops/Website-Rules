@@ -55,7 +55,7 @@
   }
  ],
  "day": {
-  "day": "2026-11-24",
+  "day": "2026-11-25",
   "trades": 0,
   "pnl": 0.0,
   "stops": 0
@@ -65,7 +65,7 @@
  "wanted": "dry",
  "blockers": [],
  "killed": false,
- "updated_at": "2026-11-24T23:59:25+05:30",
+ "updated_at": "2026-11-25T05:40:10+05:30",
  "caps": {
   "max_value": 40000.0,
   "risk": 250.0,

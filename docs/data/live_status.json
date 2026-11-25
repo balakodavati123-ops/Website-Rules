@@ -1,15 +1,13 @@
 {
  "desks": {
-  "holiday": "Guru Nanak Jayanti: closed NSE, NFO, CDS, BSE, BFO, BCD; open in a window: MCX, NSE_EG, NSCOM",
-  "commodities": "4 MCX futures, real time",
   "crypto": "6 coins from Kraken, real time",
   "gateway": "dry \u00b7 0 intents, 0 refused",
-  "charts": "4 live charts",
-  "news_pulse": "0 new signal(s); 0 in the last hour from 8 feeds"
+  "news_pulse": "0 new signal(s); 1 in the last hour from 8 feeds",
+  "charts": "3 live charts"
  },
- "updated_at": "2026-11-24T23:59:24+05:30",
- "updated_hm": "24 Nov 23:59:24",
- "loops": 2690,
+ "updated_at": "2026-11-25T05:40:09+05:30",
+ "updated_hm": "25 Nov 05:40:09",
+ "loops": 3276,
  "sessions": {
   "equity": false,
   "fno": false,
@@ -19,14 +17,14 @@
  "note": "Real-time Upstox prices for equities, NIFTY options and MCX; Kraken for crypto. Paper trades only.",
  "open": 13,
  "first_iteration": {
-  "equity": 0.3,
-  "fill": 0.3,
-  "mcx": 1.2,
-  "fno": 1.2,
-  "crypto": 1.5,
-  "snapshots": 1.7,
-  "plan": 1.7,
-  "slow_and_intraday": 2.1,
-  "persist": 2.1
+  "equity": 0.0,
+  "fill": 0.0,
+  "mcx": 0.0,
+  "fno": 0.0,
+  "crypto": 0.1,
+  "snapshots": 0.1,
+  "plan": 0.1,
+  "slow_and_intraday": 0.5,
+  "persist": 0.5
  }
 }
