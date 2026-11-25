@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T05:40:10+05:30",
+ "updated_at": "2026-11-25T09:26:47+05:30",
  "ceo": {
   "name": "Balaji",
   "title": "CEO"
@@ -18,6 +18,11 @@
     "team": "crypto",
     "level": "warn",
     "text": "Crypto desk: targets hit 1 times against 9.3 expected by pure chance (z -3.34): no edge so far."
+   },
+   {
+    "team": "fno",
+    "level": "info",
+    "text": "2 trades were skipped today because the broker's margin did not fit the account: the desks only trade what is viable."
    }
   ],
   "requests": [
@@ -42,438 +47,438 @@
     "decided": "24 Nov 08:36"
    }
   ],
-  "doing": "Supervising 9 teams: 0 traded today, company \u20b90.",
+  "doing": "Supervising 9 teams: 1 traded today, company \u2212\u20b9118.",
   "hires": [],
   "designation": "COO"
  },
  "pnl": {
-  "today_rs": 0,
-  "open_rs": -155.99,
+  "today_rs": -117.76,
+  "open_rs": -273.75,
   "closed_rs": 0,
-  "trades": 0,
-  "open": 13,
-  "equity_rs": 124491.54
+  "trades": 1,
+  "open": 14,
+  "equity_rs": 124373.78
  },
  "flows": [
   {
-   "t": "04:59:37",
-   "from": "src:github",
-   "to": "lab-4",
+   "t": "09:20:05",
+   "from": "src:nse",
+   "to": "ipo-0",
    "kind": "data",
-   "text": "Data gaps: indmoney"
+   "text": "15 recent draft prospectuses filed with SEBI"
   },
   {
-   "t": "05:00:23",
-   "from": "src:github",
-   "to": "lab-4",
+   "t": "09:20:18",
+   "from": "src:upstox",
+   "to": "fno-0",
    "kind": "data",
-   "text": "Data gaps: indmoney"
+   "text": "2026-12-01: put-to-call 0.78, call wall 26,000, put wall 24,000"
   },
   {
-   "t": "05:01:13",
-   "from": "src:github",
-   "to": "lab-4",
+   "t": "09:20:36",
+   "from": "src:nse",
+   "to": "intraday-0",
    "kind": "data",
-   "text": "Data gaps: indmoney"
+   "text": "Optimism \u00b7 HILINFRA: HILINFRA: Press Release"
   },
   {
-   "t": "05:02:02",
-   "from": "src:github",
-   "to": "lab-4",
+   "t": "09:20:45",
+   "from": "src:upstox",
+   "to": "mcx-2",
    "kind": "data",
-   "text": "Data gaps: indmoney"
+   "text": "-0.91% today, moving: watching for an entry"
   },
   {
-   "t": "05:02:19",
+   "t": "09:20:45",
+   "from": "src:github",
+   "to": "lab-2",
+   "kind": "data",
+   "text": "Testing 27 strategies: 22 built, 5 tested, 0 approved, 0 to investigate"
+  },
+  {
+   "t": "09:20:55",
+   "from": "src:upstox",
+   "to": "scalp-0",
+   "kind": "data",
+   "text": "21 liquid names on 1-minute bars"
+  },
+  {
+   "t": "09:20:55",
+   "from": "src:upstox",
+   "to": "swing-2",
+   "kind": "data",
+   "text": "3 open position(s): HAL, HCLTECH, PAYTM"
+  },
+  {
+   "t": "09:20:55",
    "from": "src:news",
-   "to": "intraday-1",
+   "to": "intel-2",
    "kind": "data",
-   "text": "Optimism \u00b7 MKJEWELS: MK Sons Fine Jewels Q2FY27 Results: Net profit up 73% YoY to \u20b9158 mil"
+   "text": "Largest call and put open interest on NIFTY and Bank Nifty"
   },
   {
-   "t": "05:02:48",
-   "from": "src:github",
-   "to": "lab-4",
+   "t": "09:20:55",
+   "from": "src:claude",
+   "to": "ipo-2",
    "kind": "data",
-   "text": "Data gaps: indmoney"
+   "text": "Headlines for 3 issue(s)"
   },
   {
-   "t": "05:03:21",
+   "t": "09:20:55",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
-   "text": "Company today \u20b90"
+   "text": "Company today \u2212\u20b993"
   },
   {
-   "t": "05:03:33",
+   "t": "09:21:05",
+   "from": "src:nse",
+   "to": "fno-3",
+   "kind": "data",
+   "text": "ATM straddle 467.5 points: the market prices about \u00b11.82% to 2026-12-01"
+  },
+  {
+   "t": "09:21:37",
+   "from": "src:upstox",
+   "to": "mcx-2",
+   "kind": "data",
+   "text": "-0.95% today, moving: watching for an entry"
+  },
+  {
+   "t": "09:21:37",
    "from": "src:github",
+   "to": "lab-2",
+   "kind": "data",
+   "text": "Testing 27 strategies: 22 built, 5 tested, 0 approved, 0 to investigate"
+  },
+  {
+   "t": "09:21:46",
+   "from": "src:indmoney",
+   "to": "scalp-2",
+   "kind": "data",
+   "text": "Keeps every stop at least one standard deviation of 10-minute noise away"
+  },
+  {
+   "t": "09:21:46",
+   "from": "src:nse",
+   "to": "swing-1",
+   "kind": "data",
+   "text": "5 open position(s): LAURUSLABS, MAHABANK, PAYTM, SONACOMS"
+  },
+  {
+   "t": "09:21:46",
+   "from": "src:nse",
+   "to": "intel-0",
+   "kind": "data",
+   "text": "Overnight US, Asia, dollar, crude and gold, refreshed every half hour before the"
+  },
+  {
+   "t": "09:21:46",
+   "from": "src:claude",
+   "to": "ipo-2",
+   "kind": "data",
+   "text": "Headlines for 3 issue(s)"
+  },
+  {
+   "t": "09:21:56",
+   "from": "src:nse",
+   "to": "fno-1",
+   "kind": "data",
+   "text": "2026-12-29: put-to-call 0.8, call wall 66,000, put wall 65,000"
+  },
+  {
+   "t": "09:22:28",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "-0.78% today, in a trade"
+  },
+  {
+   "t": "09:22:28",
+   "from": "src:claude",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "05:04:18",
-   "from": "src:github",
+   "t": "09:22:39",
+   "from": "src:indmoney",
+   "to": "scalp-2",
+   "kind": "data",
+   "text": "Keeps every stop at least one standard deviation of 10-minute noise away"
+  },
+  {
+   "t": "09:22:39",
+   "from": "src:nse",
+   "to": "swing-3",
+   "kind": "data",
+   "text": "1 open position(s): PNB"
+  },
+  {
+   "t": "09:22:39",
+   "from": "src:news",
+   "to": "intel-2",
+   "kind": "data",
+   "text": "Largest call and put open interest on NIFTY and Bank Nifty"
+  },
+  {
+   "t": "09:22:39",
+   "from": "src:news",
+   "to": "ipo-1",
+   "kind": "data",
+   "text": "1 IPO(s) open: Shree Siddhivinaya"
+  },
+  {
+   "t": "09:22:47",
+   "from": "src:upstox",
+   "to": "fno-0",
+   "kind": "data",
+   "text": "2026-12-01: put-to-call 0.78, call wall 26,000, put wall 24,000"
+  },
+  {
+   "t": "09:23:16",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "-0.78% today, in a trade"
+  },
+  {
+   "t": "09:23:16",
+   "from": "src:claude",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "05:05:06",
+   "t": "09:23:27",
+   "from": "src:upstox",
+   "to": "scalp-0",
+   "kind": "data",
+   "text": "26 liquid names on 1-minute bars"
+  },
+  {
+   "t": "09:23:27",
+   "from": "src:upstox",
+   "to": "swing-2",
+   "kind": "data",
+   "text": "3 open position(s): HAL, HCLTECH, PAYTM"
+  },
+  {
+   "t": "09:23:27",
+   "from": "src:nse",
+   "to": "intel-0",
+   "kind": "data",
+   "text": "Overnight US, Asia, dollar, crude and gold, refreshed every half hour before the"
+  },
+  {
+   "t": "09:23:27",
+   "from": "src:news",
+   "to": "ipo-1",
+   "kind": "data",
+   "text": "1 IPO(s) open: Shree Siddhivinaya"
+  },
+  {
+   "t": "09:23:37",
+   "from": "src:upstox",
+   "to": "fno-2",
+   "kind": "data",
+   "text": "FIIs net -70,670 index futures, +374,199 puts"
+  },
+  {
+   "t": "09:24:04",
+   "from": "src:upstox",
+   "to": "mcx-2",
+   "kind": "data",
+   "text": "-0.95% today, moving: watching for an entry"
+  },
+  {
+   "t": "09:24:04",
    "from": "src:github",
+   "to": "lab-2",
+   "kind": "data",
+   "text": "Testing 27 strategies: 22 built, 5 tested, 0 approved, 0 to investigate"
+  },
+  {
+   "t": "09:24:14",
+   "from": "src:upstox",
+   "to": "scalp-0",
+   "kind": "data",
+   "text": "26 liquid names on 1-minute bars"
+  },
+  {
+   "t": "09:24:14",
+   "from": "src:upstox",
+   "to": "swing-0",
+   "kind": "data",
+   "text": "5 open position(s): GAIL, PETRONET, PNB"
+  },
+  {
+   "t": "09:24:14",
+   "from": "src:news",
+   "to": "intel-2",
+   "kind": "data",
+   "text": "Largest call and put open interest on NIFTY and Bank Nifty"
+  },
+  {
+   "t": "09:24:14",
+   "from": "src:nse",
+   "to": "ipo-0",
+   "kind": "data",
+   "text": "15 recent draft prospectuses filed with SEBI"
+  },
+  {
+   "t": "09:24:23",
+   "from": "src:nse",
+   "to": "fno-1",
+   "kind": "data",
+   "text": "2026-12-29: put-to-call 0.8, call wall 66,000, put wall 65,000"
+  },
+  {
+   "t": "09:24:55",
+   "from": "src:upstox",
+   "to": "mcx-2",
+   "kind": "data",
+   "text": "-0.95% today, moving: watching for an entry"
+  },
+  {
+   "t": "09:24:55",
+   "from": "src:github",
+   "to": "lab-2",
+   "kind": "data",
+   "text": "Testing 27 strategies: 22 built, 5 tested, 0 approved, 0 to investigate"
+  },
+  {
+   "t": "09:25:05",
+   "from": "src:indmoney",
+   "to": "scalp-2",
+   "kind": "data",
+   "text": "Keeps every stop at least one standard deviation of 10-minute noise away"
+  },
+  {
+   "t": "09:25:05",
+   "from": "src:nse",
+   "to": "swing-3",
+   "kind": "data",
+   "text": "1 open position(s): PNB"
+  },
+  {
+   "t": "09:25:05",
+   "from": "src:nse",
+   "to": "intel-0",
+   "kind": "data",
+   "text": "Overnight US, Asia, dollar, crude and gold, refreshed every half hour before the"
+  },
+  {
+   "t": "09:25:05",
+   "from": "src:nse",
+   "to": "ipo-0",
+   "kind": "data",
+   "text": "15 recent draft prospectuses filed with SEBI"
+  },
+  {
+   "t": "09:25:15",
+   "from": "src:nse",
+   "to": "fno-3",
+   "kind": "data",
+   "text": "ATM straddle 461.1 points: the market prices about \u00b11.79% to 2026-12-01"
+  },
+  {
+   "t": "09:25:48",
+   "from": "src:upstox",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "-0.93% today, in a trade"
+  },
+  {
+   "t": "09:25:48",
+   "from": "src:claude",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "05:05:52",
-   "from": "src:github",
-   "to": "lab-4",
+   "t": "09:25:58",
+   "from": "src:indmoney",
+   "to": "scalp-2",
    "kind": "data",
-   "text": "Data gaps: indmoney"
+   "text": "Keeps every stop at least one standard deviation of 10-minute noise away"
   },
   {
-   "t": "05:06:38",
-   "from": "src:github",
-   "to": "lab-4",
+   "t": "09:25:58",
+   "from": "src:nse",
+   "to": "swing-1",
    "kind": "data",
-   "text": "Data gaps: indmoney"
+   "text": "5 open position(s): LAURUSLABS, MAHABANK, PAYTM, SONACOMS"
   },
   {
-   "t": "05:07:26",
-   "from": "src:github",
-   "to": "lab-4",
+   "t": "09:25:58",
+   "from": "src:news",
+   "to": "intel-2",
    "kind": "data",
-   "text": "Data gaps: indmoney"
+   "text": "Largest call and put open interest on NIFTY and Bank Nifty"
   },
   {
-   "t": "05:08:16",
-   "from": "src:github",
-   "to": "lab-4",
+   "t": "09:25:58",
+   "from": "src:claude",
+   "to": "ipo-2",
    "kind": "data",
-   "text": "Data gaps: indmoney"
+   "text": "Headlines for 3 issue(s)"
   },
   {
-   "t": "05:08:21",
+   "t": "09:25:58",
    "from": "coo",
    "to": "ceo",
    "kind": "report",
-   "text": "Company today \u20b90"
+   "text": "Company today \u2212\u20b9118"
   },
   {
-   "t": "05:09:02",
-   "from": "src:github",
+   "t": "09:26:07",
+   "from": "src:upstox",
+   "to": "fno-2",
+   "kind": "data",
+   "text": "FIIs net -70,670 index futures, +374,199 puts"
+  },
+  {
+   "t": "09:26:38",
+   "from": "src:yahoo",
+   "to": "mcx-2",
+   "kind": "data",
+   "text": "-1.04% today, moving: watching for an entry"
+  },
+  {
+   "t": "09:26:38",
+   "from": "src:claude",
    "to": "lab-4",
    "kind": "data",
    "text": "Data gaps: indmoney"
   },
   {
-   "t": "05:09:53",
-   "from": "src:github",
-   "to": "lab-4",
+   "t": "09:26:47",
+   "from": "src:upstox",
+   "to": "scalp-0",
    "kind": "data",
-   "text": "Data gaps: indmoney"
+   "text": "29 liquid names on 1-minute bars"
   },
   {
-   "t": "05:10:41",
-   "from": "src:github",
-   "to": "lab-4",
+   "t": "09:26:47",
+   "from": "src:upstox",
+   "to": "swing-0",
    "kind": "data",
-   "text": "Data gaps: indmoney"
+   "text": "5 open position(s): GAIL, PETRONET, PNB"
   },
   {
-   "t": "05:11:30",
-   "from": "src:github",
-   "to": "lab-4",
+   "t": "09:26:47",
+   "from": "src:nse",
+   "to": "intel-0",
    "kind": "data",
-   "text": "Data gaps: indmoney"
+   "text": "Overnight US, Asia, dollar, crude and gold, refreshed every half hour before the"
   },
   {
-   "t": "05:12:22",
-   "from": "src:github",
-   "to": "lab-4",
+   "t": "09:26:47",
+   "from": "src:claude",
+   "to": "ipo-2",
    "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:13:08",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:13:23",
-   "from": "coo",
-   "to": "ceo",
-   "kind": "report",
-   "text": "Company today \u20b90"
-  },
-  {
-   "t": "05:13:57",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:14:42",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:15:34",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:16:28",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:17:18",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:18:03",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:18:26",
-   "from": "coo",
-   "to": "ceo",
-   "kind": "report",
-   "text": "Company today \u20b90"
-  },
-  {
-   "t": "05:18:53",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:19:43",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:20:28",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:21:17",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:22:06",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:22:52",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:23:26",
-   "from": "coo",
-   "to": "ceo",
-   "kind": "report",
-   "text": "Company today \u20b90"
-  },
-  {
-   "t": "05:23:38",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:24:25",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:25:11",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:26:01",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:26:56",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:27:42",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:28:31",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:28:31",
-   "from": "coo",
-   "to": "ceo",
-   "kind": "report",
-   "text": "Company today \u20b90"
-  },
-  {
-   "t": "05:29:16",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:30:03",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:30:49",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:31:36",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:32:26",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:33:11",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:33:34",
-   "from": "coo",
-   "to": "ceo",
-   "kind": "report",
-   "text": "Company today \u20b90"
-  },
-  {
-   "t": "05:33:58",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:34:47",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:35:33",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:36:24",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:37:20",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:38:06",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:38:38",
-   "from": "coo",
-   "to": "ceo",
-   "kind": "report",
-   "text": "Company today \u20b90"
-  },
-  {
-   "t": "05:38:55",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "05:39:41",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
+   "text": "Headlines for 3 issue(s)"
   }
  ],
  "teams": [
@@ -491,7 +496,7 @@
     {
      "name": "Riya",
      "role": "Lead analyst",
-     "doing": "Market closed: the scan restarts at 09:30.",
+     "doing": "Scanning the 29 most liquid stocks on 1-minute bars for VWAP pullbacks.",
      "tokens": 0
     },
     {
@@ -516,8 +521,8 @@
      "designation": "Associate",
      "role": "Universe scanner",
      "kind": "data",
-     "status": "idle",
-     "doing": "Market closed: waiting for the session",
+     "status": "active",
+     "doing": "29 liquid names on 1-minute bars",
      "record": {
       "trades": 13,
       "wins": 2,
@@ -532,7 +537,7 @@
      "role": "VWAP pullback hunter",
      "kind": "research",
      "status": "idle",
-     "doing": "Market closed: no pullback has met the rule yet today",
+     "doing": "No pullback has met the rule yet today",
      "record": {
       "trades": 13,
       "wins": 2,
@@ -546,8 +551,8 @@
      "designation": "Associate",
      "role": "Volatility quant",
      "kind": "quant",
-     "status": "idle",
-     "doing": "Market closed: keeps every stop at least one standard deviation of 10-minute noise away",
+     "status": "active",
+     "doing": "Keeps every stop at least one standard deviation of 10-minute noise away",
      "record": {
       "trades": 13,
       "wins": 2,
@@ -562,7 +567,7 @@
      "role": "Charges quant",
      "kind": "quant",
      "status": "idle",
-     "doing": "Market closed: skips any setup whose charges would eat more than a third of the target",
+     "doing": "Skips any setup whose charges would eat more than a third of the target",
      "record": {
       "trades": 13,
       "wins": 2,
@@ -577,7 +582,7 @@
      "role": "Trading manager",
      "kind": "trader",
      "status": "idle",
-     "doing": "Market closed: waiting: no setup has met the rules yet today.",
+     "doing": "Waiting: no setup has met the rules yet today.",
      "record": {
       "trades": 13,
       "wins": 2,
@@ -634,7 +639,7 @@
     {
      "name": "Ananya",
      "role": "Lead analyst",
-     "doing": "Preparing the morning plan at 08:45.",
+     "doing": "Watching 1 name(s) in the news and today's filings; 6 results to read.",
      "tokens": 0
     },
     {
@@ -660,7 +665,7 @@
      "role": "Filings hunter",
      "kind": "research",
      "status": "vacant",
-     "doing": "3 companies filed news today that leans one way",
+     "doing": "1 companies filed news today that leans one way",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -675,7 +680,7 @@
      "role": "Headlines hunter",
      "kind": "research",
      "status": "vacant",
-     "doing": "Reading every market feed once a minute: no headline in the last 3 hours names one company and leans one way",
+     "doing": "13 news signal(s) with the desk: WEALTH (negative), TECHM (positive), NATCOPHARM (positive), FOCUS (Optimism). Latest 09:20: HILINFRA: Press Release",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -690,7 +695,7 @@
      "role": "Gap scanner",
      "kind": "data",
      "status": "vacant",
-     "doing": "5 candidate(s) now: COHANCE, RATNAVEER, HINDALCO, TECHNOCRAF",
+     "doing": "8 candidate(s) now: TATACONSUM, INFY, SILVERBEES, ITI",
      "record": {
       "trades": 17,
       "wins": 4,
@@ -705,7 +710,7 @@
      "role": "Momentum scanner",
      "kind": "data",
      "status": "vacant",
-     "doing": "8 candidate(s) now: EIEL, TATACONSUM, PNB, SYNGENE",
+     "doing": "8 candidate(s) now: TATACONSUM, MEESHO, SHRIRAMFIN, INFY",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -720,7 +725,7 @@
      "role": "VWAP pressure scanner",
      "kind": "data",
      "status": "vacant",
-     "doing": "Scanning 778 liquid stocks: nothing meets the rule right now",
+     "doing": "8 candidate(s) now: COFORGE, ICICILIFE, COCHINSHIP, IREDA",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -913,7 +918,7 @@
      "role": "Backtest quant",
      "kind": "backtest",
      "status": "idle",
-     "doing": "Market closed: five-year tests decide which daily rules may trade",
+     "doing": "Five-year tests decide which daily rules may trade",
      "record": {
       "trades": 1,
       "wins": 0,
@@ -980,7 +985,7 @@
     {
      "name": "Neha",
      "role": "Lead analyst",
-     "doing": "NIFTY 2026-12-01: put-to-call 0.7, call wall 26,000, put wall 24,000.",
+     "doing": "NIFTY 2026-12-01: put-to-call 0.81, call wall 26,000, put wall 24,000.",
      "tokens": 0
     },
     {
@@ -1005,8 +1010,8 @@
      "designation": "Senior Associate",
      "role": "NIFTY chain reader",
      "kind": "research",
-     "status": "idle",
-     "doing": "Market closed: 2026-12-01: put-to-call 0.7, call wall 26,000, put wall 24,000",
+     "status": "active",
+     "doing": "2026-12-01: put-to-call 0.81, call wall 26,000, put wall 24,000",
      "record": {
       "trades": 21,
       "wins": 14,
@@ -1020,8 +1025,8 @@
      "designation": "Associate",
      "role": "Bank Nifty chain reader",
      "kind": "research",
-     "status": "idle",
-     "doing": "Market closed: 2026-12-29: put-to-call 0.81, call wall 66,000, put wall 65,000",
+     "status": "active",
+     "doing": "2026-12-29: put-to-call 0.8, call wall 66,000, put wall 65,000",
      "record": {
       "trades": 1,
       "wins": 0,
@@ -1035,8 +1040,8 @@
      "designation": "Senior Associate",
      "role": "OI & participants",
      "kind": "research",
-     "status": "idle",
-     "doing": "Market closed: fIIs net -70,670 index futures, +374,199 puts",
+     "status": "active",
+     "doing": "FIIs net -70,670 index futures, +374,199 puts",
      "record": {
       "trades": 22,
       "wins": 14,
@@ -1050,8 +1055,8 @@
      "designation": "Senior Associate",
      "role": "IV vs realised quant",
      "kind": "quant",
-     "status": "idle",
-     "doing": "Market closed: compares implied with realised volatility to pick buying or selling",
+     "status": "active",
+     "doing": "ATM straddle 464.0 points: the market prices about \u00b11.80% to 2026-12-01",
      "record": {
       "trades": 22,
       "wins": 14,
@@ -1066,7 +1071,7 @@
      "role": "Margin checker",
      "kind": "quant",
      "status": "idle",
-     "doing": "Market closed: every structure is checked with the broker's margin calculator",
+     "doing": "Every structure is checked with the broker's margin calculator",
      "record": {
       "trades": 22,
       "wins": 14,
@@ -1081,7 +1086,7 @@
      "role": "Trading manager",
      "kind": "trader",
      "status": "idle",
-     "doing": "Market closed: waiting: no setup has met the rules yet today.",
+     "doing": "Waiting: no setup has met the rules yet today.",
      "record": {
       "trades": 22,
       "wins": 14,
@@ -1203,19 +1208,19 @@
     {
      "name": "Pooja",
      "role": "Lead analyst",
-     "doing": "Brent -1.06%, gold -2.79% overnight; tracking 4 MCX contracts the account can carry.",
+     "doing": "Brent -1.94%, gold -2.72% overnight; tracking 4 MCX contracts the account can carry.",
      "tokens": 0
     },
     {
      "name": "Aditya",
      "role": "Quant analyst",
-     "doing": "Record: 20 closed, 40.0% won, average \u2212\u20b9108, target hits 4 vs 6.8 by chance (z -1.33).",
+     "doing": "Natural gas mini short: reward 2.0\u00d7 the risk; a random walk reaches the target first 33% of the time; break-even needs 33% wins after charges.",
      "tokens": 0
     },
     {
      "name": "Zoya",
      "role": "Trading manager",
-     "doing": "Waiting: no setup has met the rules yet today.",
+     "doing": "Holding 1: Natural gas mini short at 342.10, stop 344.15, now \u2212\u20b9118.",
      "tokens": 0
     }
    ],
@@ -1229,7 +1234,7 @@
      "role": "Gold 1 g",
      "kind": "research",
      "status": "idle",
-     "doing": "Market closed: no price yet",
+     "doing": "-0.55% today",
      "record": {
       "trades": 5,
       "wins": 3,
@@ -1243,8 +1248,8 @@
      "designation": "Associate",
      "role": "Silver 1 kg",
      "kind": "research",
-     "status": "idle",
-     "doing": "Market closed: no price yet",
+     "status": "active",
+     "doing": "-0.85% today, moving: watching for an entry",
      "record": {
       "trades": 2,
       "wins": 1,
@@ -1258,8 +1263,8 @@
      "designation": "Associate",
      "role": "Crude oil mini",
      "kind": "research",
-     "status": "idle",
-     "doing": "Market closed: no price yet",
+     "status": "active",
+     "doing": "-1.00% today, moving: watching for an entry",
      "record": {
       "trades": 7,
       "wins": 2,
@@ -1273,8 +1278,8 @@
      "designation": "Associate",
      "role": "Natural gas mini",
      "kind": "research",
-     "status": "idle",
-     "doing": "Market closed: no price yet",
+     "status": "holding",
+     "doing": "-0.93% today, in a trade",
      "record": {
       "trades": 6,
       "wins": 2,
@@ -1289,7 +1294,7 @@
      "role": "Margin quant",
      "kind": "quant",
      "status": "idle",
-     "doing": "Market closed: checks margin and noise before every trade",
+     "doing": "Checks margin and noise before every trade",
      "record": {
       "trades": 20,
       "wins": 8,
@@ -1303,8 +1308,8 @@
      "designation": "Manager",
      "role": "Trading manager",
      "kind": "trader",
-     "status": "idle",
-     "doing": "Market closed: waiting: no setup has met the rules yet today.",
+     "status": "holding",
+     "doing": "Holding 1: Natural gas mini short at 342.10, stop 344.15, now \u2212\u20b9118.",
      "record": {
       "trades": 20,
       "wins": 8,
@@ -1315,10 +1320,10 @@
    ],
    "manager": "mcx-m",
    "today": {
-    "pnl": 0,
-    "pnl_rs": 0,
-    "trades": 0,
-    "open": 0,
+    "pnl": -117.76,
+    "pnl_rs": -117.76,
+    "trades": 1,
+    "open": 1,
     "closed": 0,
     "wins": 0
    },
@@ -1350,7 +1355,7 @@
      "verdict": "COLLECTING"
     }
    ],
-   "activity": 0,
+   "activity": 1,
    "variant": null
   },
   {
@@ -1392,7 +1397,7 @@
      "role": "BTC",
      "kind": "research",
      "status": "vacant",
-     "doing": "-0.27% today",
+     "doing": "-0.77% today",
      "record": {
       "trades": 3,
       "wins": 1,
@@ -1407,7 +1412,7 @@
      "role": "ETH",
      "kind": "research",
      "status": "vacant",
-     "doing": "-0.35% today",
+     "doing": "-1.01% today, moving: watching for an entry",
      "record": {
       "trades": 4,
       "wins": 1,
@@ -1422,7 +1427,7 @@
      "role": "SOL",
      "kind": "research",
      "status": "vacant",
-     "doing": "-0.14% today",
+     "doing": "-0.68% today",
      "record": {
       "trades": 6,
       "wins": 2,
@@ -1437,7 +1442,7 @@
      "role": "XRP",
      "kind": "research",
      "status": "vacant",
-     "doing": "-0.18% today",
+     "doing": "-0.50% today",
      "record": {
       "trades": 6,
       "wins": 2,
@@ -1452,7 +1457,7 @@
      "role": "DOGE",
      "kind": "research",
      "status": "vacant",
-     "doing": "-0.29% today",
+     "doing": "-1.38% today, moving: watching for an entry",
      "record": {
       "trades": 4,
       "wins": 1,
@@ -1467,7 +1472,7 @@
      "role": "ADA",
      "kind": "research",
      "status": "vacant",
-     "doing": "-0.33% today",
+     "doing": "-1.08% today, moving: watching for an entry",
      "record": {
       "trades": 5,
       "wins": 1,
@@ -1563,7 +1568,7 @@
     {
      "name": "Priya",
      "role": "Lead analyst",
-     "doing": "Nifty forecast bullish (score +0.32), range 25,094 to 25,659. FIIs net -70,670 index futures.",
+     "doing": "Nifty forecast sideways (score -0.06), range 25,073 to 25,616. FIIs net -70,670 index futures.",
      "tokens": 0
     },
     {
@@ -1588,8 +1593,8 @@
      "designation": "Associate",
      "role": "World markets",
      "kind": "data",
-     "status": "idle",
-     "doing": "Market closed: overnight US, Asia, dollar, crude and gold, refreshed every half hour before the open",
+     "status": "active",
+     "doing": "Overnight US, Asia, dollar, crude and gold, refreshed every half hour before the open",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1603,8 +1608,8 @@
      "designation": "Associate",
      "role": "Smart money",
      "kind": "research",
-     "status": "idle",
-     "doing": "Market closed: nSE participant positions for 2026-11-18",
+     "status": "active",
+     "doing": "NSE participant positions for 2026-11-18",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1618,8 +1623,8 @@
      "designation": "Associate",
      "role": "Option walls",
      "kind": "research",
-     "status": "idle",
-     "doing": "Market closed: largest call and put open interest on NIFTY and Bank Nifty",
+     "status": "active",
+     "doing": "Largest call and put open interest on NIFTY and Bank Nifty",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1633,8 +1638,8 @@
      "designation": "Associate",
      "role": "Headlines desk",
      "kind": "research",
-     "status": "idle",
-     "doing": "Market closed: claude read the headlines: mixed. Indian exchanges were shut today for Guru Nanak Jayanti, so Sensex and Nifty did not trade after Monday's 1,484-point fall. Gl",
+     "status": "active",
+     "doing": "Claude read the headlines: mixed. Indian markets reopen after the holiday with Sensex rallying over 1,000 points in the pre-market session and Nifty above 25,65",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1648,8 +1653,8 @@
      "designation": "Associate",
      "role": "Forecast quant",
      "kind": "quant",
-     "status": "idle",
-     "doing": "Market closed: nifty bullish, range 25,094 to 25,659",
+     "status": "active",
+     "doing": "Nifty sideways, range 25,073 to 25,616",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1664,7 +1669,7 @@
      "role": "Chief forecaster",
      "kind": "trader",
      "status": "idle",
-     "doing": "Market closed: sends the day's bias and levels to the F&O and equity desks.",
+     "doing": "Sends the day's bias and levels to the F&O and equity desks.",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1729,7 +1734,7 @@
      "role": "Research agent",
      "kind": "research",
      "status": "idle",
-     "doing": "Market closed: reads every losing streak for an idea worth testing",
+     "doing": "Reads every losing streak for an idea worth testing",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1744,7 +1749,7 @@
      "role": "Implementation agent",
      "kind": "implement",
      "status": "idle",
-     "doing": "Market closed: builds approved versions as new paper strategies",
+     "doing": "Builds approved versions as new paper strategies",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1758,8 +1763,8 @@
      "designation": "Associate",
      "role": "Evaluation agent",
      "kind": "backtest",
-     "status": "idle",
-     "doing": "Market closed: testing 27 strategies: 22 built, 5 tested, 0 approved, 0 to investigate",
+     "status": "active",
+     "doing": "Testing 27 strategies: 22 built, 5 tested, 0 approved, 0 to investigate",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1774,7 +1779,7 @@
      "role": "Review agent",
      "kind": "audit",
      "status": "idle",
-     "doing": "Market closed: audits every check before a strategy is approved",
+     "doing": "Audits every check before a strategy is approved",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1804,7 +1809,7 @@
      "role": "Lab manager",
      "kind": "trader",
      "status": "idle",
-     "doing": "Market closed: today's review is written.",
+     "doing": "Today's review is written.",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1869,8 +1874,8 @@
      "designation": "Associate",
      "role": "DRHP reader",
      "kind": "research",
-     "status": "idle",
-     "doing": "Market closed: 15 recent draft prospectuses filed with SEBI",
+     "status": "active",
+     "doing": "15 recent draft prospectuses filed with SEBI",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1884,8 +1889,8 @@
      "designation": "Associate",
      "role": "Subscription tracker",
      "kind": "data",
-     "status": "idle",
-     "doing": "Market closed: 1 IPO(s) open: Shree Siddhivinaya",
+     "status": "active",
+     "doing": "1 IPO(s) open: Shree Siddhivinaya",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1899,8 +1904,8 @@
      "designation": "Associate",
      "role": "IPO news reader",
      "kind": "research",
-     "status": "idle",
-     "doing": "Market closed: headlines for 4 issue(s)",
+     "status": "active",
+     "doing": "Headlines for 3 issue(s)",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1915,7 +1920,7 @@
      "role": "Valuation quant",
      "kind": "quant",
      "status": "idle",
-     "doing": "Market closed: scores each issue on subscription, size and offer-for-sale share",
+     "doing": "Scores each issue on subscription, size and offer-for-sale share",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1930,7 +1935,7 @@
      "role": "IPO manager",
      "kind": "trader",
      "status": "idle",
-     "doing": "Market closed: suggests at most one lot; never applies on its own.",
+     "doing": "Suggests at most one lot; never applies on its own.",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1961,13 +1966,13 @@
    "id": "nse",
    "name": "NSE",
    "status": "ok",
-   "detail": "0 filings lean one way today; participant positions for 2026-11-18"
+   "detail": "1 filings lean one way today; participant positions for 2026-11-18"
   },
   {
    "id": "upstox",
    "name": "Upstox",
-   "status": "idle",
-   "detail": "market closed: quotes resume at 09:00"
+   "status": "ok",
+   "detail": "2614 stocks, real time"
   },
   {
    "id": "indmoney",
@@ -1985,19 +1990,19 @@
    "id": "yahoo",
    "name": "Yahoo Finance",
    "status": "ok",
-   "detail": "world markets refreshed 6 min ago"
+   "detail": "world markets refreshed 12 min ago"
   },
   {
    "id": "news",
    "name": "News feeds",
    "status": "ok",
-   "detail": "news pulse: 8 feeds read every minute in market hours, 4 signals today; 0 with the hunters now"
+   "detail": "news pulse: 9 feeds read every minute in market hours, 8 signals today; 13 with the hunters now"
   },
   {
    "id": "claude",
    "name": "Claude AI",
    "status": "ok",
-   "detail": "scheduled Claude analyst (your plan): last round 24 Nov 16:21, next on the hour's :20 from 09:20 to 16:20 IST on weekdays"
+   "detail": "scheduled Claude analyst (your plan): last round 25 Nov 09:21, next on the hour's :20 from 09:20 to 16:20 IST on weekdays"
   },
   {
    "id": "github",
@@ -2059,13 +2064,13 @@
   }
  ],
  "company": {
-  "pnl_today": 0,
-  "nifty_chg": null,
-  "equity": 124491.54,
+  "pnl_today": -117.76,
+  "nifty_chg": 1.493511744738093,
+  "equity": 124373.78,
   "sessions": {
-   "equity": false,
-   "fno": false,
-   "mcx": false,
+   "equity": true,
+   "fno": true,
+   "mcx": true,
    "crypto": true
   }
  },
@@ -2079,6 +2084,17 @@
   "refused": 0
  },
  "quant": {
+  "M261125-82": {
+   "risk_rs": 512.5,
+   "reward_rs": 1027.5,
+   "rr": 2.0,
+   "base_p": 0.333,
+   "breakeven_p": 0.333,
+   "used_p": 0.2,
+   "p_source": "team record",
+   "ev_rs": -204.5,
+   "kelly": -0.199
+  },
   "S3": {
    "risk_rs": 242.15
   },
@@ -2336,564 +2352,564 @@
   },
   "flows": [
    {
-    "t": "04:46:18",
-    "from": "src:github",
-    "to": "lab-4",
+    "t": "09:17:44",
+    "from": "src:nse",
+    "to": "fno-1",
     "kind": "data",
-    "text": "Data gaps: indmoney"
+    "text": "2026-12-29: put-to-call 0.81, call wall 66,000, put wall 65,000"
    },
    {
-    "t": "04:47:04",
-    "from": "src:github",
-    "to": "lab-4",
+    "t": "09:18:17",
+    "from": "src:upstox",
+    "to": "mcx-2",
     "kind": "data",
-    "text": "Data gaps: indmoney"
+    "text": "-0.92% today, moving: watching for an entry"
    },
    {
-    "t": "04:47:50",
+    "t": "09:18:17",
     "from": "src:github",
-    "to": "lab-4",
+    "to": "lab-2",
     "kind": "data",
-    "text": "Data gaps: indmoney"
+    "text": "Testing 27 strategies: 22 built, 5 tested, 0 approved, 0 to investigate"
    },
    {
-    "t": "04:48:12",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u20b90"
-   },
-   {
-    "t": "04:48:36",
-    "from": "src:github",
-    "to": "lab-4",
+    "t": "09:18:25",
+    "from": "src:indmoney",
+    "to": "scalp-2",
     "kind": "data",
-    "text": "Data gaps: indmoney"
+    "text": "Keeps every stop at least one standard deviation of 10-minute noise away"
    },
    {
-    "t": "04:49:27",
-    "from": "src:github",
-    "to": "lab-4",
+    "t": "09:18:25",
+    "from": "src:nse",
+    "to": "swing-3",
     "kind": "data",
-    "text": "Data gaps: indmoney"
+    "text": "1 open position(s): PNB"
    },
    {
-    "t": "04:50:13",
-    "from": "src:github",
-    "to": "lab-4",
+    "t": "09:18:25",
+    "from": "src:nse",
+    "to": "intel-0",
     "kind": "data",
-    "text": "Data gaps: indmoney"
+    "text": "Overnight US, Asia, dollar, crude and gold, refreshed every half hour before the"
    },
    {
-    "t": "04:51:02",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "04:51:48",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "04:52:33",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "04:53:13",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u20b90"
-   },
-   {
-    "t": "04:53:19",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "04:54:06",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "04:54:52",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "04:55:43",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "04:56:28",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "04:57:18",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "04:58:05",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "04:58:17",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u20b90"
-   },
-   {
-    "t": "04:58:51",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "04:59:37",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:00:23",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:01:13",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:02:02",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:02:19",
+    "t": "09:18:25",
     "from": "src:news",
-    "to": "intraday-1",
+    "to": "ipo-1",
     "kind": "data",
-    "text": "Optimism \u00b7 MKJEWELS: MK Sons Fine Jewels Q2FY27 Results: Net profit up 73% YoY to \u20b9158 mil"
+    "text": "1 IPO(s) open: Shree Siddhivinaya"
    },
    {
-    "t": "05:02:48",
-    "from": "src:github",
+    "t": "09:18:35",
+    "from": "src:nse",
+    "to": "fno-3",
+    "kind": "data",
+    "text": "ATM straddle 464.6 points: the market prices about \u00b11.80% to 2026-12-01"
+   },
+   {
+    "t": "09:19:04",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "-0.90% today, in a trade"
+   },
+   {
+    "t": "09:19:04",
+    "from": "src:claude",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "05:03:21",
+    "t": "09:19:18",
+    "from": "src:indmoney",
+    "to": "scalp-2",
+    "kind": "data",
+    "text": "Keeps every stop at least one standard deviation of 10-minute noise away"
+   },
+   {
+    "t": "09:19:18",
+    "from": "src:nse",
+    "to": "swing-1",
+    "kind": "data",
+    "text": "5 open position(s): LAURUSLABS, MAHABANK, PAYTM, SONACOMS"
+   },
+   {
+    "t": "09:19:18",
+    "from": "src:news",
+    "to": "intel-2",
+    "kind": "data",
+    "text": "Largest call and put open interest on NIFTY and Bank Nifty"
+   },
+   {
+    "t": "09:19:18",
+    "from": "src:nse",
+    "to": "ipo-0",
+    "kind": "data",
+    "text": "15 recent draft prospectuses filed with SEBI"
+   },
+   {
+    "t": "09:19:27",
+    "from": "src:upstox",
+    "to": "fno-2",
+    "kind": "data",
+    "text": "FIIs net -70,670 index futures, +374,199 puts"
+   },
+   {
+    "t": "09:19:56",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "-0.93% today, in a trade"
+   },
+   {
+    "t": "09:19:56",
+    "from": "src:claude",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "09:20:05",
+    "from": "src:upstox",
+    "to": "scalp-0",
+    "kind": "data",
+    "text": "21 liquid names on 1-minute bars"
+   },
+   {
+    "t": "09:20:05",
+    "from": "src:upstox",
+    "to": "swing-0",
+    "kind": "data",
+    "text": "5 open position(s): GAIL, PETRONET, PNB"
+   },
+   {
+    "t": "09:20:05",
+    "from": "src:nse",
+    "to": "intel-0",
+    "kind": "data",
+    "text": "Overnight US, Asia, dollar, crude and gold, refreshed every half hour before the"
+   },
+   {
+    "t": "09:20:05",
+    "from": "src:nse",
+    "to": "ipo-0",
+    "kind": "data",
+    "text": "15 recent draft prospectuses filed with SEBI"
+   },
+   {
+    "t": "09:20:18",
+    "from": "src:upstox",
+    "to": "fno-0",
+    "kind": "data",
+    "text": "2026-12-01: put-to-call 0.78, call wall 26,000, put wall 24,000"
+   },
+   {
+    "t": "09:20:36",
+    "from": "src:nse",
+    "to": "intraday-0",
+    "kind": "data",
+    "text": "Optimism \u00b7 HILINFRA: HILINFRA: Press Release"
+   },
+   {
+    "t": "09:20:45",
+    "from": "src:upstox",
+    "to": "mcx-2",
+    "kind": "data",
+    "text": "-0.91% today, moving: watching for an entry"
+   },
+   {
+    "t": "09:20:45",
+    "from": "src:github",
+    "to": "lab-2",
+    "kind": "data",
+    "text": "Testing 27 strategies: 22 built, 5 tested, 0 approved, 0 to investigate"
+   },
+   {
+    "t": "09:20:55",
+    "from": "src:upstox",
+    "to": "scalp-0",
+    "kind": "data",
+    "text": "21 liquid names on 1-minute bars"
+   },
+   {
+    "t": "09:20:55",
+    "from": "src:upstox",
+    "to": "swing-2",
+    "kind": "data",
+    "text": "3 open position(s): HAL, HCLTECH, PAYTM"
+   },
+   {
+    "t": "09:20:55",
+    "from": "src:news",
+    "to": "intel-2",
+    "kind": "data",
+    "text": "Largest call and put open interest on NIFTY and Bank Nifty"
+   },
+   {
+    "t": "09:20:55",
+    "from": "src:claude",
+    "to": "ipo-2",
+    "kind": "data",
+    "text": "Headlines for 3 issue(s)"
+   },
+   {
+    "t": "09:20:55",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
-    "text": "Company today \u20b90"
+    "text": "Company today \u2212\u20b993"
    },
    {
-    "t": "05:03:33",
+    "t": "09:21:05",
+    "from": "src:nse",
+    "to": "fno-3",
+    "kind": "data",
+    "text": "ATM straddle 467.5 points: the market prices about \u00b11.82% to 2026-12-01"
+   },
+   {
+    "t": "09:21:37",
+    "from": "src:upstox",
+    "to": "mcx-2",
+    "kind": "data",
+    "text": "-0.95% today, moving: watching for an entry"
+   },
+   {
+    "t": "09:21:37",
     "from": "src:github",
+    "to": "lab-2",
+    "kind": "data",
+    "text": "Testing 27 strategies: 22 built, 5 tested, 0 approved, 0 to investigate"
+   },
+   {
+    "t": "09:21:46",
+    "from": "src:indmoney",
+    "to": "scalp-2",
+    "kind": "data",
+    "text": "Keeps every stop at least one standard deviation of 10-minute noise away"
+   },
+   {
+    "t": "09:21:46",
+    "from": "src:nse",
+    "to": "swing-1",
+    "kind": "data",
+    "text": "5 open position(s): LAURUSLABS, MAHABANK, PAYTM, SONACOMS"
+   },
+   {
+    "t": "09:21:46",
+    "from": "src:nse",
+    "to": "intel-0",
+    "kind": "data",
+    "text": "Overnight US, Asia, dollar, crude and gold, refreshed every half hour before the"
+   },
+   {
+    "t": "09:21:46",
+    "from": "src:claude",
+    "to": "ipo-2",
+    "kind": "data",
+    "text": "Headlines for 3 issue(s)"
+   },
+   {
+    "t": "09:21:56",
+    "from": "src:nse",
+    "to": "fno-1",
+    "kind": "data",
+    "text": "2026-12-29: put-to-call 0.8, call wall 66,000, put wall 65,000"
+   },
+   {
+    "t": "09:22:28",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "-0.78% today, in a trade"
+   },
+   {
+    "t": "09:22:28",
+    "from": "src:claude",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "05:04:18",
-    "from": "src:github",
+    "t": "09:22:39",
+    "from": "src:indmoney",
+    "to": "scalp-2",
+    "kind": "data",
+    "text": "Keeps every stop at least one standard deviation of 10-minute noise away"
+   },
+   {
+    "t": "09:22:39",
+    "from": "src:nse",
+    "to": "swing-3",
+    "kind": "data",
+    "text": "1 open position(s): PNB"
+   },
+   {
+    "t": "09:22:39",
+    "from": "src:news",
+    "to": "intel-2",
+    "kind": "data",
+    "text": "Largest call and put open interest on NIFTY and Bank Nifty"
+   },
+   {
+    "t": "09:22:39",
+    "from": "src:news",
+    "to": "ipo-1",
+    "kind": "data",
+    "text": "1 IPO(s) open: Shree Siddhivinaya"
+   },
+   {
+    "t": "09:22:47",
+    "from": "src:upstox",
+    "to": "fno-0",
+    "kind": "data",
+    "text": "2026-12-01: put-to-call 0.78, call wall 26,000, put wall 24,000"
+   },
+   {
+    "t": "09:23:16",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "-0.78% today, in a trade"
+   },
+   {
+    "t": "09:23:16",
+    "from": "src:claude",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "05:05:06",
+    "t": "09:23:27",
+    "from": "src:upstox",
+    "to": "scalp-0",
+    "kind": "data",
+    "text": "26 liquid names on 1-minute bars"
+   },
+   {
+    "t": "09:23:27",
+    "from": "src:upstox",
+    "to": "swing-2",
+    "kind": "data",
+    "text": "3 open position(s): HAL, HCLTECH, PAYTM"
+   },
+   {
+    "t": "09:23:27",
+    "from": "src:nse",
+    "to": "intel-0",
+    "kind": "data",
+    "text": "Overnight US, Asia, dollar, crude and gold, refreshed every half hour before the"
+   },
+   {
+    "t": "09:23:27",
+    "from": "src:news",
+    "to": "ipo-1",
+    "kind": "data",
+    "text": "1 IPO(s) open: Shree Siddhivinaya"
+   },
+   {
+    "t": "09:23:37",
+    "from": "src:upstox",
+    "to": "fno-2",
+    "kind": "data",
+    "text": "FIIs net -70,670 index futures, +374,199 puts"
+   },
+   {
+    "t": "09:24:04",
+    "from": "src:upstox",
+    "to": "mcx-2",
+    "kind": "data",
+    "text": "-0.95% today, moving: watching for an entry"
+   },
+   {
+    "t": "09:24:04",
     "from": "src:github",
+    "to": "lab-2",
+    "kind": "data",
+    "text": "Testing 27 strategies: 22 built, 5 tested, 0 approved, 0 to investigate"
+   },
+   {
+    "t": "09:24:14",
+    "from": "src:upstox",
+    "to": "scalp-0",
+    "kind": "data",
+    "text": "26 liquid names on 1-minute bars"
+   },
+   {
+    "t": "09:24:14",
+    "from": "src:upstox",
+    "to": "swing-0",
+    "kind": "data",
+    "text": "5 open position(s): GAIL, PETRONET, PNB"
+   },
+   {
+    "t": "09:24:14",
+    "from": "src:news",
+    "to": "intel-2",
+    "kind": "data",
+    "text": "Largest call and put open interest on NIFTY and Bank Nifty"
+   },
+   {
+    "t": "09:24:14",
+    "from": "src:nse",
+    "to": "ipo-0",
+    "kind": "data",
+    "text": "15 recent draft prospectuses filed with SEBI"
+   },
+   {
+    "t": "09:24:23",
+    "from": "src:nse",
+    "to": "fno-1",
+    "kind": "data",
+    "text": "2026-12-29: put-to-call 0.8, call wall 66,000, put wall 65,000"
+   },
+   {
+    "t": "09:24:55",
+    "from": "src:upstox",
+    "to": "mcx-2",
+    "kind": "data",
+    "text": "-0.95% today, moving: watching for an entry"
+   },
+   {
+    "t": "09:24:55",
+    "from": "src:github",
+    "to": "lab-2",
+    "kind": "data",
+    "text": "Testing 27 strategies: 22 built, 5 tested, 0 approved, 0 to investigate"
+   },
+   {
+    "t": "09:25:05",
+    "from": "src:indmoney",
+    "to": "scalp-2",
+    "kind": "data",
+    "text": "Keeps every stop at least one standard deviation of 10-minute noise away"
+   },
+   {
+    "t": "09:25:05",
+    "from": "src:nse",
+    "to": "swing-3",
+    "kind": "data",
+    "text": "1 open position(s): PNB"
+   },
+   {
+    "t": "09:25:05",
+    "from": "src:nse",
+    "to": "intel-0",
+    "kind": "data",
+    "text": "Overnight US, Asia, dollar, crude and gold, refreshed every half hour before the"
+   },
+   {
+    "t": "09:25:05",
+    "from": "src:nse",
+    "to": "ipo-0",
+    "kind": "data",
+    "text": "15 recent draft prospectuses filed with SEBI"
+   },
+   {
+    "t": "09:25:15",
+    "from": "src:nse",
+    "to": "fno-3",
+    "kind": "data",
+    "text": "ATM straddle 461.1 points: the market prices about \u00b11.79% to 2026-12-01"
+   },
+   {
+    "t": "09:25:48",
+    "from": "src:upstox",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "-0.93% today, in a trade"
+   },
+   {
+    "t": "09:25:48",
+    "from": "src:claude",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "05:05:52",
-    "from": "src:github",
-    "to": "lab-4",
+    "t": "09:25:58",
+    "from": "src:indmoney",
+    "to": "scalp-2",
     "kind": "data",
-    "text": "Data gaps: indmoney"
+    "text": "Keeps every stop at least one standard deviation of 10-minute noise away"
    },
    {
-    "t": "05:06:38",
-    "from": "src:github",
-    "to": "lab-4",
+    "t": "09:25:58",
+    "from": "src:nse",
+    "to": "swing-1",
     "kind": "data",
-    "text": "Data gaps: indmoney"
+    "text": "5 open position(s): LAURUSLABS, MAHABANK, PAYTM, SONACOMS"
    },
    {
-    "t": "05:07:26",
-    "from": "src:github",
-    "to": "lab-4",
+    "t": "09:25:58",
+    "from": "src:news",
+    "to": "intel-2",
     "kind": "data",
-    "text": "Data gaps: indmoney"
+    "text": "Largest call and put open interest on NIFTY and Bank Nifty"
    },
    {
-    "t": "05:08:16",
-    "from": "src:github",
-    "to": "lab-4",
+    "t": "09:25:58",
+    "from": "src:claude",
+    "to": "ipo-2",
     "kind": "data",
-    "text": "Data gaps: indmoney"
+    "text": "Headlines for 3 issue(s)"
    },
    {
-    "t": "05:08:21",
+    "t": "09:25:58",
     "from": "coo",
     "to": "ceo",
     "kind": "report",
-    "text": "Company today \u20b90"
+    "text": "Company today \u2212\u20b9118"
    },
    {
-    "t": "05:09:02",
-    "from": "src:github",
+    "t": "09:26:07",
+    "from": "src:upstox",
+    "to": "fno-2",
+    "kind": "data",
+    "text": "FIIs net -70,670 index futures, +374,199 puts"
+   },
+   {
+    "t": "09:26:38",
+    "from": "src:yahoo",
+    "to": "mcx-2",
+    "kind": "data",
+    "text": "-1.04% today, moving: watching for an entry"
+   },
+   {
+    "t": "09:26:38",
+    "from": "src:claude",
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
    },
    {
-    "t": "05:09:53",
-    "from": "src:github",
-    "to": "lab-4",
+    "t": "09:26:47",
+    "from": "src:upstox",
+    "to": "scalp-0",
     "kind": "data",
-    "text": "Data gaps: indmoney"
+    "text": "29 liquid names on 1-minute bars"
    },
    {
-    "t": "05:10:41",
-    "from": "src:github",
-    "to": "lab-4",
+    "t": "09:26:47",
+    "from": "src:upstox",
+    "to": "swing-0",
     "kind": "data",
-    "text": "Data gaps: indmoney"
+    "text": "5 open position(s): GAIL, PETRONET, PNB"
    },
    {
-    "t": "05:11:30",
-    "from": "src:github",
-    "to": "lab-4",
+    "t": "09:26:47",
+    "from": "src:nse",
+    "to": "intel-0",
     "kind": "data",
-    "text": "Data gaps: indmoney"
+    "text": "Overnight US, Asia, dollar, crude and gold, refreshed every half hour before the"
    },
    {
-    "t": "05:12:22",
-    "from": "src:github",
-    "to": "lab-4",
+    "t": "09:26:47",
+    "from": "src:claude",
+    "to": "ipo-2",
     "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:13:08",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:13:23",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u20b90"
-   },
-   {
-    "t": "05:13:57",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:14:42",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:15:34",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:16:28",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:17:18",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:18:03",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:18:26",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u20b90"
-   },
-   {
-    "t": "05:18:53",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:19:43",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:20:28",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:21:17",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:22:06",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:22:52",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:23:26",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u20b90"
-   },
-   {
-    "t": "05:23:38",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:24:25",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:25:11",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:26:01",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:26:56",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:27:42",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:28:31",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:28:31",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u20b90"
-   },
-   {
-    "t": "05:29:16",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:30:03",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:30:49",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:31:36",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:32:26",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:33:11",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:33:34",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u20b90"
-   },
-   {
-    "t": "05:33:58",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:34:47",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:35:33",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:36:24",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:37:20",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:38:06",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:38:38",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u20b90"
-   },
-   {
-    "t": "05:38:55",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "05:39:41",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
+    "text": "Headlines for 3 issue(s)"
    }
   ],
   "flow_seen": {
@@ -2920,19 +2936,24 @@
    "sig:N000011-1": "2026-11-25",
    "sig:N000011-2": "2026-11-25",
    "sig:N022109-3": "2026-11-25",
-   "sig:N050214-4": "2026-11-25"
+   "sig:N050214-4": "2026-11-25",
+   "sig:N071311-5": "2026-11-25",
+   "sig:N074330-6": "2026-11-25",
+   "sig:N091151-7": "2026-11-25",
+   "M261125-82:OPEN": "2026-11-25",
+   "sig:N092023-8": "2026-11-25"
   },
   "flow_at": {
    "crypto": 1795229124.147547,
-   "lab": 1795565381.656946,
-   "ceo": 1795565318.405659,
-   "mcx": 1795544664.74856,
-   "scalp": 1795504095.556498,
+   "lab": 1795578998.383432,
+   "ceo": 1795578958.589467,
+   "mcx": 1795578998.383432,
+   "scalp": 1795579007.28197,
    "intraday": 1795405911.526052,
-   "swing": 1795504095.556498,
-   "intel": 1795504095.556498,
-   "ipo": 1795504095.556498,
-   "fno": 1795504095.556498
+   "swing": 1795579007.28197,
+   "intel": 1795579007.28197,
+   "ipo": 1795579007.28197,
+   "fno": 1795578967.159395
   },
   "done_cmds": [
    "C261123-1"

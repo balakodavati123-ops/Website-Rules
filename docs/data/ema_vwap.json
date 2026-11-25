@@ -1,8 +1,52 @@
 {
- "updated_at": "2026-11-24T18:19:29+05:30",
+ "updated_at": "2026-11-25T09:26:43+05:30",
  "today": {
-  "note": "No F&O trading today: NSE is closed for Guru Nanak Jayanti."
+  "at": "09:26:43",
+  "fut": "NIFTY FUT 29 DEC 26",
+  "rules": {
+   "slope_bars": 3,
+   "cooldown_min": 30,
+   "stop": 0.25,
+   "first": "09:21",
+   "last": "15:00",
+   "square_off": "15:20",
+   "breach": "close"
+  },
+  "candles": 3,
+  "seeded": true,
+  "source": "Upstox 1-minute candles + live quotes after the last candle",
+  "warmup": null,
+  "last": [
+   {
+    "end": "09:18",
+    "close": 25840.0,
+    "ema9": 25570.94,
+    "vwap": 25788.75
+   },
+   {
+    "end": "09:21",
+    "close": 25817.1,
+    "ema9": 25620.17,
+    "vwap": 25798.97
+   },
+   {
+    "end": "09:24",
+    "close": 25830.0,
+    "ema9": 25662.14,
+    "vwap": 25803.33
+   }
+  ],
+  "crosses": [],
+  "now": {
+   "end": "09:24",
+   "close": 25830.0,
+   "ema9": 25662.14,
+   "vwap": 25803.33,
+   "side": "EMA9 below VWAP (puts side)",
+   "vwap_slope": null
+  }
  },
+ "paused": false,
  "books": {
   "ema_vwap": {
    "closed": 0,

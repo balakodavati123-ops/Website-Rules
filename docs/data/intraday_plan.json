@@ -1,68 +1,68 @@
 {
- "day": "2026-11-24",
- "built_at": "09:27",
+ "day": "2026-11-25",
+ "built_at": "09:14",
  "stage": 2,
  "tone": {
-  "label": "Positive",
-  "score": 3.58,
+  "label": "Weak",
+  "score": -0.79,
   "notes": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%).",
-   "Dollar-rupee 92.9 (+0.24%).",
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%).",
+   "Dollar-rupee 92.68 (-0.25%).",
    "India VIX 17.70: normal."
   ],
-  "as_of": "2026-11-23"
+  "as_of": "2026-11-24"
  },
  "nifty": {
-  "last": 25349.65,
-  "chg_pct": -1.75
+  "last": 25658.35,
+  "chg_pct": 1.22
  },
  "world": [
   {
    "name": "S&P 500",
-   "last": 7237.17,
-   "chg_pct": 4.73
+   "last": 7201.09,
+   "chg_pct": -0.5
   },
   {
    "name": "Nasdaq",
-   "last": 24089.56,
-   "chg_pct": 6.51
+   "last": 23733.54,
+   "chg_pct": -1.48
   },
   {
    "name": "Dow Jones",
-   "last": 49595.31,
-   "chg_pct": 3.01
+   "last": 50018.7,
+   "chg_pct": 0.85
   },
   {
    "name": "US fear index (VIX)",
-   "last": 26.62,
-   "chg_pct": -25.83
+   "last": 26.36,
+   "chg_pct": -0.98
   },
   {
    "name": "Nikkei 225",
-   "last": 58734.7,
-   "chg_pct": 4.07
+   "last": 56710.43,
+   "chg_pct": -3.3
   },
   {
    "name": "Hang Seng",
-   "last": 22292.35,
-   "chg_pct": -0.41
+   "last": 22329.05,
+   "chg_pct": 0.49
   },
   {
    "name": "Shanghai",
-   "last": 3555.49,
-   "chg_pct": 0.47
+   "last": 3513.26,
+   "chg_pct": -0.99
   },
   {
    "name": "FTSE 100",
-   "last": 10480.8,
-   "chg_pct": 1.3
+   "last": 10467.1,
+   "chg_pct": -0.13
   },
   {
    "name": "DAX",
-   "last": 25337.27,
-   "chg_pct": 2.15
+   "last": 25017.81,
+   "chg_pct": -1.26
   },
   {
    "name": "Nifty 50",
@@ -105,52 +105,52 @@
  ],
  "headlines": [
   {
+   "headline": "'More To Come' - IMF Managing Director warns the AI sell-off may not be over yet",
+   "category": "CRASH/SHOCK",
+   "source": "CNBC-TV18",
+   "time": "25 Nov 09:14"
+  },
+  {
+   "headline": "Gold falls further, set for worst week since March as Fed rate hike worries rise",
+   "category": "RBI-POLICY",
+   "source": "CNBC-TV18",
+   "time": "25 Nov 09:14"
+  },
+  {
+   "headline": "Nikkei, Kospi fall over 4% each; Asian markets crash as AI sell-off deepens despite record Anthropic IPO",
+   "category": "CRASH/SHOCK",
+   "source": "CNBC-TV18",
+   "time": "25 Nov 09:14"
+  },
+  {
    "headline": "Japan core inflation picks up, makes case for BoJ rate hike stronger",
    "category": "RBI-POLICY",
    "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
+   "time": "25 Nov 09:14"
   },
   {
    "headline": "Gold price crash: Yellow metal and silver slump over 4% each on MCX",
    "category": "CRASH/SHOCK",
    "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
+   "time": "25 Nov 09:14"
   },
   {
-   "headline": "Muthoot Finance heads for worst week since April 2025 as gold rout triggers sell-off",
-   "category": "CRASH/SHOCK",
-   "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
+   "headline": "Why Was China's Tech Giant Huawei Convicted Of Fraud And Money Laundering In The US? Inside The Case",
+   "category": "LEGAL/REGULATORY",
+   "source": "NDTVProfit",
+   "time": "25 Nov 09:14"
   },
   {
-   "headline": "Anthropic tumbles more than 10% in premarket trade as AI slump engulfs markets",
+   "headline": "Copper falls below $12,000 as doubts over AI spending deepen selloff",
    "category": "CRASH/SHOCK",
-   "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
+   "source": "BusinessLine",
+   "time": "25 Nov 09:14"
   },
   {
-   "headline": "Global AI Sell-off: Taiwan takes action yet again to support collapsing stock market",
+   "headline": "AI stock selloff drives investors to China, India, and overlooked Asian sectors",
    "category": "CRASH/SHOCK",
-   "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
-  },
-  {
-   "headline": "Kospi slumps nearly 4%; Asian markets fall as Wall Street sell-off deepens",
-   "category": "CRASH/SHOCK",
-   "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
-  },
-  {
-   "headline": "Gold, silver recover after sharp sell-off: Key triggers for prices this week",
-   "category": "CRASH/SHOCK",
-   "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
-  },
-  {
-   "headline": "Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues",
-   "category": "CRASH/SHOCK",
-   "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
+   "source": "Yahoo-Nifty",
+   "time": "25 Nov 09:14"
   }
  ],
  "watch": [
@@ -159,9 +159,9 @@
    "why": [
     "results filed"
    ],
-   "prev_close": 17.38,
-   "long_above": 17.73,
-   "short_below": 17.03,
+   "prev_close": 17.73,
+   "long_above": 18.08,
+   "short_below": 17.38,
    "stop_pct": 1.0,
    "bias": "either"
   }
@@ -180,113 +180,113 @@
    "note": "Pays only on a big move; the desk skips it when its cost does not fit the F&O limit"
   }
  ],
- "outlook": "Tone positive. 1 names in the news to watch; the desks act only when price confirms: a 2% move near the day's extreme (0.6% when a filing agrees) on real turnover.",
- "world_at": 1795492655.9048939,
+ "outlook": "Tone weak. 1 names in the news to watch; the desks act only when price confirms: a 2% move near the day's extreme (0.6% when a filing agrees) on real turnover.",
+ "world_at": 1795578289.816536,
  "gaps": {
   "up": [
    {
-    "symbol": "PERMAGN",
-    "price": 1335.9,
-    "chg_pct": 18.35
+    "symbol": "POLICYBZR",
+    "price": 1153.0,
+    "chg_pct": 5.87
    },
    {
-    "symbol": "HMAAGRO",
-    "price": 40.03,
-    "chg_pct": 18.05
+    "symbol": "CHOLAFIN",
+    "price": 1895.0,
+    "chg_pct": 3.5
    },
    {
-    "symbol": "WELSPLSOL",
-    "price": 47.66,
-    "chg_pct": 15.2
+    "symbol": "INFY",
+    "price": 1141.8,
+    "chg_pct": 3.48
    },
    {
-    "symbol": "HITECH",
-    "price": 85.63,
-    "chg_pct": 13.51
+    "symbol": "LAURUSLABS",
+    "price": 2450.0,
+    "chg_pct": 3.35
    },
    {
-    "symbol": "THOMASCOOK",
-    "price": 129.39,
-    "chg_pct": 12.85
+    "symbol": "NETWEB",
+    "price": 4140.0,
+    "chg_pct": 3.23
    },
    {
-    "symbol": "ITI",
-    "price": 276.21,
-    "chg_pct": 12.41
+    "symbol": "DMART",
+    "price": 3500.0,
+    "chg_pct": 2.78
    },
    {
-    "symbol": "SAMBHV",
-    "price": 176.9,
-    "chg_pct": 11.92
+    "symbol": "LENSKART",
+    "price": 732.4,
+    "chg_pct": 2.51
    },
    {
-    "symbol": "INDIAGLYCO",
-    "price": 294.85,
-    "chg_pct": 11.54
+    "symbol": "LUPIN",
+    "price": 2023.3,
+    "chg_pct": 2.41
    },
    {
-    "symbol": "SCPL",
-    "price": 707.0,
-    "chg_pct": 11.25
+    "symbol": "INDIGO",
+    "price": 5650.7,
+    "chg_pct": 2.31
    },
    {
-    "symbol": "WINDMACHIN",
-    "price": 354.0,
-    "chg_pct": 10.21
+    "symbol": "TMCV",
+    "price": 464.0,
+    "chg_pct": 2.25
    }
   ],
   "down": [
    {
     "symbol": "APLAPOLLO",
-    "price": 1670.0,
-    "chg_pct": -21.29
+    "price": 1503.0,
+    "chg_pct": -10.0
    },
    {
-    "symbol": "APOLLOPIPE",
-    "price": 489.6,
-    "chg_pct": -8.49
+    "symbol": "SGMART",
+    "price": 948.7,
+    "chg_pct": -8.5
    },
    {
-    "symbol": "TATASTEEL",
-    "price": 163.0,
-    "chg_pct": -8.43
+    "symbol": "MASPTOP50",
+    "price": 88.0,
+    "chg_pct": -4.11
    },
    {
-    "symbol": "AMANTA",
-    "price": 204.97,
-    "chg_pct": -7.82
+    "symbol": "PPLPHARMA",
+    "price": 228.0,
+    "chg_pct": -3.75
    },
    {
-    "symbol": "POKARNA",
-    "price": 655.6,
-    "chg_pct": -6.88
+    "symbol": "MAFANG",
+    "price": 211.82,
+    "chg_pct": -3.61
    },
    {
-    "symbol": "FISCHER",
-    "price": 20.8,
-    "chg_pct": -6.85
+    "symbol": "BANKNIFTY1",
+    "price": 64.9,
+    "chg_pct": -3.57
    },
    {
-    "symbol": "KMCSHIL",
-    "price": 189.94,
-    "chg_pct": -6.79
+    "symbol": "PSUBANK",
+    "price": 95.1,
+    "chg_pct": -3.42
    },
    {
-    "symbol": "EPACK",
-    "price": 154.55,
-    "chg_pct": -6.7
+    "symbol": "ABSLBANETF",
+    "price": 64.07,
+    "chg_pct": -3.42
    },
    {
-    "symbol": "SSWL",
-    "price": 490.45,
-    "chg_pct": -6.55
+    "symbol": "ABSL10BANK",
+    "price": 187.0,
+    "chg_pct": -3.41
    },
    {
-    "symbol": "V2RETAIL",
-    "price": 151.61,
-    "chg_pct": -6.45
+    "symbol": "HDFCNIFBAN",
+    "price": 64.3,
+    "chg_pct": -3.28
    }
   ],
-  "at": "09:27"
+  "at": "09:14"
  }
 }

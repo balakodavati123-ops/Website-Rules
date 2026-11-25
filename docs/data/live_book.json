@@ -1,12 +1,12 @@
 {
- "day": "2026-11-24",
+ "day": "2026-11-25",
  "trades": [],
  "seen": {
-  "MARKSANS": "conflict"
+  "AXISBANK": "conflict"
  },
  "seq": 0,
  "diag": {
-  "at": "12:38",
+  "at": "09:26",
   "effort": 2,
   "setups_on": [
    "news",
@@ -14,35 +14,48 @@
    "momentum",
    "vwap"
   ],
-  "scanned": 778,
+  "scanned": 243,
   "found": {
    "news": [
-    "AXISBANK"
+    "TECHM",
+    "POLYCAB"
    ],
    "gap": [
-    "COHANCE",
-    "RATNAVEER",
-    "HINDALCO",
-    "TECHNOCRAF",
-    "E2E"
+    "TATACONSUM",
+    "INFY",
+    "SILVERBEES",
+    "ITI",
+    "LTF",
+    "HDFCBANK",
+    "SILVER",
+    "INDIAGLYCO"
    ],
    "momentum": [
-    "EIEL",
     "TATACONSUM",
-    "PNB",
-    "SYNGENE",
-    "HINDCOPPER",
     "MEESHO",
-    "SHANTIGOLD",
-    "AVANTIFEED"
+    "SHRIRAMFIN",
+    "INFY",
+    "SILVERBEES",
+    "NAVINFLUOR",
+    "NATIONALUM",
+    "ITI"
    ],
-   "vwap": []
+   "vwap": [
+    "COFORGE",
+    "ICICILIFE",
+    "COCHINSHIP",
+    "IREDA",
+    "SILVER",
+    "PWL",
+    "PIDILITIND",
+    "THOMASCOOK"
+   ]
   },
   "taken": [],
   "skipped": {
-   "AXISBANK": "no intraday margin left"
+   "TECHM": "no intraday margin left"
   },
-  "news_names": 3,
-  "headline_names": 12
+  "news_names": 1,
+  "headline_names": 13
  }
 }

@@ -1406,7 +1406,7 @@
    "desk": "COMMODITY",
    "stage": "TESTED",
    "closed": 14,
-   "open": 0,
+   "open": 1,
    "net_rs": -1520.99,
    "win_rate": 42.9,
    "since": "2026-11-17",
@@ -1593,7 +1593,7 @@
  "ai": {
   "on": true,
   "mode": "scheduled",
-  "last": "24 Nov 16:21",
+  "last": "25 Nov 09:21",
   "next": "every hour from 09:20 to 16:20 IST on weekdays",
   "models": {
    "analyst": "Claude (your plan, scheduled)"

@@ -1,6 +1,25 @@
 {
- "updated_at": "2026-11-25T05:40:09+05:30",
- "skipped": [],
+ "updated_at": "2026-11-25T09:26:43+05:30",
+ "skipped": [
+  {
+   "desk": "COMMODITY",
+   "what": "Crude oil mini",
+   "margin": 23679,
+   "room": 10182,
+   "why": "needs more margin than the commodities limit has free",
+   "at": "09:26:43",
+   "day": "2026-11-25"
+  },
+  {
+   "desk": "COMMODITY",
+   "what": "Silver 1 kg",
+   "margin": 33432,
+   "room": 10182,
+   "why": "needs more margin than the commodities limit has free",
+   "at": "09:26:43",
+   "day": "2026-11-25"
+  }
+ ],
  "reference": [
   {
    "name": "Crude oil (100 barrels)",

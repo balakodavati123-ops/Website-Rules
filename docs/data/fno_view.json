@@ -1,0 +1,67 @@
+{
+ "at": "09:26:43",
+ "day": "2026-11-25",
+ "mode": {
+  "code": "MODE_2_VOLATILE",
+  "name": "Volatile",
+  "plain": "a normal, lively market",
+  "vix": 16.95
+ },
+ "status": "Early read: the desk watches the first 45 minutes and decides at 10:00",
+ "final": false,
+ "prediction": {
+  "direction": "UP",
+  "headline": "NIFTY is more likely to rise than fall today",
+  "confidence": "Normal",
+  "spot": 25728.25,
+  "day_range": [
+   25079,
+   25620
+  ],
+  "close_range": [
+   25458,
+   25999
+  ]
+ },
+ "why": [
+  "NIFTY is at 25,728, up 379 points (+1.49%) from yesterday's close of 25,350.",
+  "This morning it opened 309 points higher than yesterday's close and has risen 70 points since.",
+  "India VIX, the market's 'fear gauge', is 16.9 (down 4% since yesterday: traders expect smaller moves than before). That points to a normal, lively market: NIFTY could move about 271 points up or down over the whole day.",
+  "Big news for the whole market today: Tata Steel dips 7% as APL Apollo plunge on \u20b928,000 cr deal; Hindalco under pressure.",
+  "Also: our forecast team's view is neutral and the morning news brief reads the mood as mixed.",
+  "The desk follows the move since this morning's open, which is rising, so it expects more of the same today."
+ ],
+ "plan": "At 10:00 the desk buys two contracts on NIFTY for this week: a call, which makes money if NIFTY rises, and a put, which makes money if it falls. A big enough move either way pays more than the two cost together. It tilts the pair toward a rise, so a rise pays more than a fall. It takes profit at +50%, cuts the loss at -35%, and closes everything by 15:15. All trades are on paper.",
+ "trade": null,
+ "chart": {
+  "levels": [
+   {
+    "px": 25349.65,
+    "label": "Yesterday's close",
+    "kind": "ref"
+   },
+   {
+    "px": 25658.35,
+    "label": "Today's open",
+    "kind": "ref"
+   }
+  ],
+  "forecast": [
+   {
+    "t": 1795600800,
+    "px": 25998.9,
+    "label": "Likely high by close"
+   },
+   {
+    "t": 1795600800,
+    "px": 25457.6,
+    "label": "Likely low by close"
+   },
+   {
+    "t": 1795599900,
+    "px": 25863.58,
+    "label": "Desk's call: up"
+   }
+  ]
+ }
+}

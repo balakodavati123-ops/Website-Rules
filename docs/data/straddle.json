@@ -1,6 +1,126 @@
 {
- "updated_at": "2026-11-25T00:00:11+05:30",
- "today": {},
+ "updated_at": "2026-11-25T09:26:43+05:30",
+ "today": {
+  "ok": false,
+  "why": "no straddle rule beat time decay and costs in training (2592 rules tested); on the 40 days most like today the trade averaged Rs -1,716",
+  "match": true,
+  "knn": {
+   "k": 40,
+   "avg_rs": -1716.2,
+   "win_rate": 10.0,
+   "dates": [
+    "2024-08-09",
+    "2026-11-11",
+    "2025-04-11",
+    "2022-06-03",
+    "2024-08-16"
+   ]
+  },
+  "features": {
+   "vix": 17.7,
+   "vix_pct": 81.0,
+   "rv_iv": 1.0,
+   "gap": 1.22,
+   "vix_chg": -4.24,
+   "dte": 6,
+   "prev_close": 25349.65
+  },
+  "strike": 25750,
+  "expiry": "2026-12-01",
+  "entry": "10:00",
+  "target": 0.4,
+  "stop": 0.3,
+  "rule": {
+   "entry": "10:00",
+   "expiry": "this week",
+   "strike": "at the money",
+   "strike_code": "atm",
+   "target": 0.4,
+   "stop": 0.3,
+   "exit_by": "15:15",
+   "filter": "all"
+  },
+  "train": {
+   "n": 738,
+   "avg_rs": -1364.5,
+   "win_rate": 17.2,
+   "pf": 0.26
+  },
+  "test": {
+   "n": 467,
+   "avg_rs": -1669.0,
+   "win_rate": 15.6,
+   "pf": 0.21
+  },
+  "at": "09:26",
+  "mode": "ceo"
+ },
+ "conditions": {
+  "go": true,
+  "lean": 1,
+  "steps": 2,
+  "basis": "the morning's move from the open (+0.27%)",
+  "confidence": "Normal",
+  "news_support": 0,
+  "news_against": 0,
+  "reasons": [
+   "NIFTY opened +1.22%: a news-sized gap",
+   "the first 45 minutes covered 0.54% (high to low): the market is moving",
+   "market-wide news today: Tata Steel dips 7% as APL Apollo plunge on \u20b928,000 cr deal; Hindalco under pressure; Stock Market Crash: Over \u20b95 lakh crore investor wealth wiped out as Nifty falls 435 points",
+   "India VIX is in the top fifth of its year (81.0th percentile) and not rising"
+  ],
+  "go_signals": [
+   "NIFTY opened +1.22%: a news-sized gap",
+   "the first 45 minutes covered 0.54% (high to low): the market is moving",
+   "market-wide news today: Tata Steel dips 7% as APL Apollo plunge on \u20b928,000 cr deal; Hindalco under pressure; Stock Market Crash: Over \u20b95 lakh crore investor wealth wiped out as Nifty falls 435 points"
+  ],
+  "skip_signals": [
+   "India VIX is in the top fifth of its year (81.0th percentile) and not rising"
+  ],
+  "news": {
+   "strong": 0,
+   "net": 0,
+   "macro": [
+    "Tata Steel dips 7% as APL Apollo plunge on \u20b928,000 cr deal; Hindalco under pressure",
+    "Stock Market Crash: Over \u20b95 lakh crore investor wealth wiped out as Nifty falls 435 points",
+    "US Market Crash: Nasdaq enters 'bear market' - 10 things for investors to know"
+   ],
+   "mood": "mixed",
+   "fc": -0.06
+  }
+ },
+ "sheet": {},
+ "live": {
+  "n": 3,
+  "wins": 3,
+  "total_rs": 13852,
+  "trades": [
+   {
+    "id": "F261119-37",
+    "day": "2026-11-19",
+    "label": "NIFTY long straddle \u00b7 11-23",
+    "status": "WIN",
+    "pnl_rs": 4447.25,
+    "why": "time"
+   },
+   {
+    "id": "F261120-53",
+    "day": "2026-11-20",
+    "label": "NIFTY long straddle \u00b7 11-23",
+    "status": "WIN",
+    "pnl_rs": 4522.0,
+    "why": "time"
+   },
+   {
+    "id": "F261123-76",
+    "day": "2026-11-23",
+    "label": "NIFTY long straddle \u00b7 11-23",
+    "status": "WIN",
+    "pnl_rs": 4882.75,
+    "why": "target"
+   }
+  ]
+ },
  "playbook": {
   "trained_at": "2026-11-23 22:11",
   "data": {

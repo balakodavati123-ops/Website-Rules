@@ -1,4 +1,56 @@
 {
+ "M261125-82": {
+  "horizon": "intraday",
+  "headline": "Natural gas mini short",
+  "news": [
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
+  ],
+  "data": [
+   "Natural gas mini (NATGASMINI FUT 28 DEC 26) at 342.10, -1.01% on the previous close; day range 341.60 to 343.00, price is 0.15% from the day low.",
+   "Lot: 250 unit(s) \u00d7 1 lot(s); contract value \u20b985,525."
+  ],
+  "strategy": "A futures position in the direction the market is already moving hard.",
+  "why": [
+   "Used when a commodity is up or down 0.8% or more and sitting at its day extreme: strong days tend to extend into the evening session when global markets open.",
+   "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|578250)."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "342.10",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "344.15",
+    "Costs about \u20b9512"
+   ],
+   [
+    "Target (exit if right)",
+    "337.99",
+    "Earns about \u20b91,028"
+   ],
+   [
+    "Reward for the risk",
+    "2.0 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "33% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b914,818",
+    "12% of the account"
+   ]
+  ],
+  "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
+  "viability": "Needs \u20b914,818 to hold (Upstox margin calculator)."
+ },
  "M261124-81": {
   "horizon": "intraday",
   "headline": "Crude oil mini short",
@@ -2869,13 +2921,13 @@
   "horizon": "swing",
   "headline": "HAL long",
   "news": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%)."
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
   ],
   "data": [
    "Entry 4,843.00, stop 4,600.85; 1 shares worth \u20b94,843.",
-   "Market tone this morning: Positive. US markets averaged +4.75% at the 23/11 close. Asia averaged +1.83%."
+   "Market tone this morning: Weak. US markets averaged -0.38% at the 24/11 close. Asia averaged -1.40%."
   ],
   "strategy": "",
   "why": [
@@ -2895,13 +2947,13 @@
   "horizon": "swing",
   "headline": "HCLTECH long",
   "news": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%)."
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
   ],
   "data": [
    "Entry 1,380.70, stop 1,311.66; 2 shares worth \u20b92,761.",
-   "Market tone this morning: Positive. US markets averaged +4.75% at the 23/11 close. Asia averaged +1.83%."
+   "Market tone this morning: Weak. US markets averaged -0.38% at the 24/11 close. Asia averaged -1.40%."
   ],
   "strategy": "",
   "why": [
@@ -2921,13 +2973,13 @@
   "horizon": "swing",
   "headline": "KALYANKJIL long",
   "news": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%)."
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
   ],
   "data": [
    "Entry 718.00, stop 689.28, target 861.60; 11 shares worth \u20b97,898.",
-   "Market tone this morning: Positive. US markets averaged +4.75% at the 23/11 close. Asia averaged +1.83%."
+   "Market tone this morning: Weak. US markets averaged -0.38% at the 24/11 close. Asia averaged -1.40%."
   ],
   "strategy": "",
   "why": [
@@ -2952,13 +3004,13 @@
   "horizon": "swing",
   "headline": "PAYTM long",
   "news": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%)."
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
   ],
   "data": [
    "Entry 1,920.00, stop 1,843.20, target 2,304.00; 2 shares worth \u20b93,840.",
-   "Market tone this morning: Positive. US markets averaged +4.75% at the 23/11 close. Asia averaged +1.83%."
+   "Market tone this morning: Weak. US markets averaged -0.38% at the 24/11 close. Asia averaged -1.40%."
   ],
   "strategy": "",
   "why": [
@@ -2983,13 +3035,13 @@
   "horizon": "swing",
   "headline": "LAURUSLABS long",
   "news": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%)."
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
   ],
   "data": [
    "Entry 2,400.00, stop 2,304.00, target 2,880.00; 1 shares worth \u20b92,400.",
-   "Market tone this morning: Positive. US markets averaged +4.75% at the 23/11 close. Asia averaged +1.83%."
+   "Market tone this morning: Weak. US markets averaged -0.38% at the 24/11 close. Asia averaged -1.40%."
   ],
   "strategy": "",
   "why": [
@@ -3014,13 +3066,13 @@
   "horizon": "swing",
   "headline": "SONACOMS long",
   "news": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%)."
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
   ],
   "data": [
    "Entry 925.00, stop 888.00, target 1,110.00; 4 shares worth \u20b93,700.",
-   "Market tone this morning: Positive. US markets averaged +4.75% at the 23/11 close. Asia averaged +1.83%."
+   "Market tone this morning: Weak. US markets averaged -0.38% at the 24/11 close. Asia averaged -1.40%."
   ],
   "strategy": "",
   "why": [
@@ -3045,13 +3097,13 @@
   "horizon": "swing",
   "headline": "PETRONET long",
   "news": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%)."
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
   ],
   "data": [
    "Entry 332.00, stop 315.40, target 398.40; 11 shares worth \u20b93,652.",
-   "Market tone this morning: Positive. US markets averaged +4.75% at the 23/11 close. Asia averaged +1.83%."
+   "Market tone this morning: Weak. US markets averaged -0.38% at the 24/11 close. Asia averaged -1.40%."
   ],
   "strategy": "",
   "why": [
@@ -3076,13 +3128,13 @@
   "horizon": "swing",
   "headline": "PNB long",
   "news": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%)."
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
   ],
   "data": [
    "Entry 141.70, stop 134.62; 26 shares worth \u20b93,684.",
-   "Market tone this morning: Positive. US markets averaged +4.75% at the 23/11 close. Asia averaged +1.83%."
+   "Market tone this morning: Weak. US markets averaged -0.38% at the 24/11 close. Asia averaged -1.40%."
   ],
   "strategy": "",
   "why": [
@@ -3102,13 +3154,13 @@
   "horizon": "swing",
   "headline": "PETRONET long",
   "news": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%)."
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
   ],
   "data": [
    "Entry 332.00, stop 315.40; 11 shares worth \u20b93,652.",
-   "Market tone this morning: Positive. US markets averaged +4.75% at the 23/11 close. Asia averaged +1.83%."
+   "Market tone this morning: Weak. US markets averaged -0.38% at the 24/11 close. Asia averaged -1.40%."
   ],
   "strategy": "",
   "why": [
@@ -3128,13 +3180,13 @@
   "horizon": "swing",
   "headline": "SONACOMS long",
   "news": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%)."
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
   ],
   "data": [
    "Entry 925.00, stop 878.75; 3 shares worth \u20b92,775.",
-   "Market tone this morning: Positive. US markets averaged +4.75% at the 23/11 close. Asia averaged +1.83%."
+   "Market tone this morning: Weak. US markets averaged -0.38% at the 24/11 close. Asia averaged -1.40%."
   ],
   "strategy": "",
   "why": [
@@ -3154,13 +3206,13 @@
   "horizon": "swing",
   "headline": "MAHABANK long",
   "news": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%)."
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
   ],
   "data": [
    "Entry 91.30, stop 86.73; 41 shares worth \u20b93,743.",
-   "Market tone this morning: Positive. US markets averaged +4.75% at the 23/11 close. Asia averaged +1.83%."
+   "Market tone this morning: Weak. US markets averaged -0.38% at the 24/11 close. Asia averaged -1.40%."
   ],
   "strategy": "",
   "why": [
@@ -3180,13 +3232,13 @@
   "horizon": "signal",
   "headline": "PNB long",
   "news": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%)."
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
   ],
   "data": [
    "Entry 141.70, stop 136.08; 56 shares worth \u20b97,935.",
-   "Market tone this morning: Positive. US markets averaged +4.75% at the 23/11 close. Asia averaged +1.83%."
+   "Market tone this morning: Weak. US markets averaged -0.38% at the 24/11 close. Asia averaged -1.40%."
   ],
   "strategy": "",
   "why": [
@@ -3206,13 +3258,13 @@
   "horizon": "swing",
   "headline": "PNB long",
   "news": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%)."
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
   ],
   "data": [
    "Entry 138.70, stop 131.76, target 166.44; 13 shares worth \u20b91,803.",
-   "Market tone this morning: Positive. US markets averaged +4.75% at the 23/11 close. Asia averaged +1.83%."
+   "Market tone this morning: Weak. US markets averaged -0.38% at the 24/11 close. Asia averaged -1.40%."
   ],
   "strategy": "",
   "why": [
@@ -3237,13 +3289,13 @@
   "horizon": "swing",
   "headline": "GAIL long",
   "news": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%)."
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
   ],
   "data": [
    "Entry 188.99, stop 179.54, target 226.79; 9 shares worth \u20b91,701.",
-   "Market tone this morning: Positive. US markets averaged +4.75% at the 23/11 close. Asia averaged +1.83%."
+   "Market tone this morning: Weak. US markets averaged -0.38% at the 24/11 close. Asia averaged -1.40%."
   ],
   "strategy": "",
   "why": [
