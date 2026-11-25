@@ -1,12 +1,28 @@
 {
- "time": "25 Nov 09:21",
- "at": 1795578698.381691,
+ "time": "25 Nov 10:21",
+ "at": 1795582304.537729,
  "day": "2026-11-25",
  "model": "Claude (your plan, scheduled)",
  "checks": {
   "HILINFRA": {
    "verdict": "doubt",
-   "why": "Order and press release filings give no size or value; no price data yet"
+   "why": "Order and press release filings give no size or value; no price data"
+  },
+  "ZEEL": {
+   "verdict": "doubt",
+   "why": "Decline is just the mechanical ex-buyback price adjustment, not new news"
+  },
+  "NH": {
+   "verdict": "doubt",
+   "why": "HSBC upgrade is specific, but price is down, so it has not confirmed"
+  },
+  "JWL": {
+   "verdict": "confirm",
+   "why": "Specific, fresh JV news and price is up 4.5%, agreeing with the move"
+  },
+  "SHADOWFAX": {
+   "verdict": "doubt",
+   "why": "Acquisition news is positive in tone but price is falling"
   }
  }
 }

@@ -1,37 +1,37 @@
 {
- "mood": "mixed",
- "brief": "Indian markets reopen after the holiday with Sensex rallying over 1,000 points in the pre-market session and Nifty above 25,650. Overseas, Wall Street ended lower and Asian stocks slid as AI jitters resurfaced and fresh US tariff plans weighed on sentiment.",
+ "mood": "bullish",
+ "brief": "Indian shares are rallying strongly, with Sensex up about 1,300 to 1,500 points intraday and about Rs 2.2 lakh crore of wealth added as Infosys, TCS and HDFC Bank gain. Foreign inflows and lower oil prices are helping, even though US markets slid and the Nvidia rally fizzled.",
  "themes": [
-  "Pre-market rally after holiday",
-  "AI jitters resurface globally",
-  "US tariff threats",
-  "December F&O changes"
+  "Sensex rallies on foreign inflows",
+  "IT and banks gain",
+  "Lower oil prices help sentiment",
+  "Zee trades ex-buyback"
  ],
  "companies": [
   {
-   "name": "Tata Steel",
-   "tone": "neutral",
-   "why": "Among top stocks to watch today"
-  },
-  {
-   "name": "Hindalco",
-   "tone": "neutral",
-   "why": "Among top stocks to watch today"
-  },
-  {
-   "name": "Adani Enterprises",
-   "tone": "neutral",
-   "why": "Among top stocks to watch today"
-  },
-  {
    "name": "Infosys",
    "tone": "positive",
-   "why": "KR Choksey rates Accumulate, target Rs 1531"
+   "why": "Gains as Sensex jumps 1,300 points"
   },
   {
-   "name": "Wipro",
-   "tone": "negative",
-   "why": "ICICI Securities rates Reduce, target Rs 410"
+   "name": "TCS",
+   "tone": "positive",
+   "why": "Gains as Sensex jumps 1,300 points"
+  },
+  {
+   "name": "HDFC Bank",
+   "tone": "positive",
+   "why": "Gains as Sensex jumps 1,300 points"
+  },
+  {
+   "name": "Jupiter Wagons",
+   "tone": "positive",
+   "why": "Surges over 9% on JV with Woojin Industrial Systems"
+  },
+  {
+   "name": "Narayana Hrudayalaya",
+   "tone": "positive",
+   "why": "HSBC upgrades rating and raises target 29%"
   },
   {
    "name": "Zee Entertainment",
@@ -39,24 +39,29 @@
    "why": "Shares trade adjusted for buyback today"
   },
   {
-   "name": "IREDA",
-   "tone": "neutral",
-   "why": "Exits the F&O segment in the December series"
+   "name": "Shadowfax Tech",
+   "tone": "negative",
+   "why": "Shares decline on WeFast acquisition"
   },
   {
-   "name": "IEX",
-   "tone": "neutral",
-   "why": "Exits the F&O segment in the December series"
+   "name": "PB Fintech",
+   "tone": "positive",
+   "why": "Among Nifty500 stocks flashing RSI uptrend"
+  },
+  {
+   "name": "APL Apollo Tubes",
+   "tone": "negative",
+   "why": "Among stocks closing below VWAP"
   }
  ],
- "global": "The S&P 500 and Nasdaq ended lower and Asian stocks slid as the AI selloff deepened and the US prepared new tariffs on trading partners.",
+ "global": "US stocks slid after Nvidia's rally fizzled while Dow ended above 50,000, and Asian markets rebounded.",
  "risks": [
-  "AI-trade selloff may spill over to India",
-  "US tariff plans",
-  "Pre-market gains may fade"
+  "Rally may fade as US markets slide",
+  "HDFC Bank legal and leadership concerns",
+  "Brokerage earnings pressure from MTF exposure"
  ],
- "time": "25 Nov 09:21",
- "at": 1795578698.381691,
+ "time": "25 Nov 10:21",
+ "at": 1795582304.537729,
  "day": "2026-11-25",
  "model": "Claude (your plan, scheduled)",
  "n": 40
