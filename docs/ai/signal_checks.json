@@ -1,64 +1,12 @@
 {
- "time": "24 Nov 16:21",
- "at": 1795517505.423574,
- "day": "2026-11-24",
+ "time": "25 Nov 09:21",
+ "at": 1795578698.381691,
+ "day": "2026-11-25",
  "model": "Claude (your plan, scheduled)",
  "checks": {
-  "ICICIBANK": {
+  "HILINFRA": {
    "verdict": "doubt",
-   "why": "Market-wide bank sell-off story and price has not moved since"
-  },
-  "WORTHPERI": {
-   "verdict": "doubt",
-   "why": "Story is about Nvidia CEO's net worth, not this company; exchange closed"
-  },
-  "AXISCADES": {
-   "verdict": "doubt",
-   "why": "Acquisition filing gives no details and the exchange is closed today"
-  },
-  "SOUTHWEST": {
-   "verdict": "doubt",
-   "why": "Kospi story, not about this company; market-wide and exchange closed"
-  },
-  "TAKE": {
-   "verdict": "doubt",
-   "why": "Weeks-long rally already happened; no new catalyst and exchange closed"
-  },
-  "GLAND": {
-   "verdict": "doubt",
-   "why": "Vague general-updates filing; exchange is closed today"
-  },
-  "SILVERTUC": {
-   "verdict": "doubt",
-   "why": "Order filing gives no size or value; exchange is closed today"
-  },
-  "KALPATARU": {
-   "verdict": "confirm",
-   "why": "Specific, fresh regulatory approval of merger scheme; exchange shut today"
-  },
-  "TATASTEEL": {
-   "verdict": "doubt",
-   "why": "Headline is about APL's crash and is old news already priced in"
-  },
-  "BHARTIARTL": {
-   "verdict": "doubt",
-   "why": "Penalty is small for Airtel's size and not material"
-  },
-  "TURTLEMINT": {
-   "verdict": "doubt",
-   "why": "Filing gives no details of the action or amount; exchange is closed"
-  },
-  "AFFORDABLE": {
-   "verdict": "doubt",
-   "why": "Order filing gives no size or value; exchange is closed"
-  },
-  "LOKESHMACH": {
-   "verdict": "doubt",
-   "why": "Vague general-updates filing; exchange is closed"
-  },
-  "VASCONEQ": {
-   "verdict": "doubt",
-   "why": "Order filing gives no size or value; exchange was closed today"
+   "why": "Order and press release filings give no size or value; no price data yet"
   }
  }
 }

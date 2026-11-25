@@ -1,43 +1,63 @@
 {
  "mood": "mixed",
- "brief": "Indian exchanges were shut today for Guru Nanak Jayanti, so Sensex and Nifty did not trade after Monday's 1,484-point fall. Global markets rebounded on Nvidia's surge, but US tech futures are mixed as investors test the rally.",
+ "brief": "Indian markets reopen after the holiday with Sensex rallying over 1,000 points in the pre-market session and Nifty above 25,650. Overseas, Wall Street ended lower and Asian stocks slid as AI jitters resurfaced and fresh US tariff plans weighed on sentiment.",
  "themes": [
-  "Indian markets closed for holiday",
-  "Nvidia-led global rebound",
-  "Tata Motors and Hyundai price hikes",
-  "Two December IPOs lined up"
+  "Pre-market rally after holiday",
+  "AI jitters resurface globally",
+  "US tariff threats",
+  "December F&O changes"
  ],
  "companies": [
   {
-   "name": "Tata Motors",
+   "name": "Tata Steel",
    "tone": "neutral",
-   "why": "Passenger vehicle prices to rise from December 1"
+   "why": "Among top stocks to watch today"
   },
   {
-   "name": "Hyundai",
+   "name": "Hindalco",
    "tone": "neutral",
-   "why": "Car prices to rise from December 1"
+   "why": "Among top stocks to watch today"
   },
   {
-   "name": "Navneet Education",
-   "tone": "positive",
-   "why": "Prabhudas Lilladher rates Buy, target Rs 182"
+   "name": "Adani Enterprises",
+   "tone": "neutral",
+   "why": "Among top stocks to watch today"
   },
   {
-   "name": "Jindal Drilling and Industries",
+   "name": "Infosys",
    "tone": "positive",
-   "why": "Anand Rathi rates Buy, target Rs 960"
+   "why": "KR Choksey rates Accumulate, target Rs 1531"
+  },
+  {
+   "name": "Wipro",
+   "tone": "negative",
+   "why": "ICICI Securities rates Reduce, target Rs 410"
+  },
+  {
+   "name": "Zee Entertainment",
+   "tone": "neutral",
+   "why": "Shares trade adjusted for buyback today"
+  },
+  {
+   "name": "IREDA",
+   "tone": "neutral",
+   "why": "Exits the F&O segment in the December series"
+  },
+  {
+   "name": "IEX",
+   "tone": "neutral",
+   "why": "Exits the F&O segment in the December series"
   }
  ],
- "global": "Nvidia shares rose about 31% on Jensen Huang's return, lifting Asian shares and Wall Street, while the US blacklisted an Alibaba-owned company.",
+ "global": "The S&P 500 and Nasdaq ended lower and Asian stocks slid as the AI selloff deepened and the US prepared new tariffs on trading partners.",
  "risks": [
-  "Nvidia-led rally may fade",
-  "Indian banks and metals stay weak after Monday's fall",
-  "Price hikes may dampen car demand"
+  "AI-trade selloff may spill over to India",
+  "US tariff plans",
+  "Pre-market gains may fade"
  ],
- "time": "24 Nov 16:21",
- "at": 1795517505.423574,
- "day": "2026-11-24",
+ "time": "25 Nov 09:21",
+ "at": 1795578698.381691,
+ "day": "2026-11-25",
  "model": "Claude (your plan, scheduled)",
  "n": 40
 }
