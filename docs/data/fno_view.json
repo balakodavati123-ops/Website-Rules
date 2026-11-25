@@ -1,46 +1,35 @@
 {
- "at": "15:07:23",
+ "at": "15:30:48",
  "day": "2026-11-25",
  "mode": {
   "code": "MODE_2_VOLATILE",
   "name": "Volatile",
   "plain": "a normal, lively market",
-  "vix": 17.77
+  "vix": 17.71
  },
- "status": "Decided at 10:00 with NIFTY at 25,775",
- "final": true,
+ "status": "Live read",
+ "final": false,
  "prediction": {
   "direction": "UP",
   "headline": "NIFTY is more likely to rise than fall today",
   "confidence": "Normal",
-  "spot": 25775.1,
+  "spot": 25819.25,
   "day_range": [
-   25371,
-   25946
+   25372,
+   25945
   ],
-  "close_range": [
-   25704,
-   25847
-  ]
+  "close_range": null
  },
  "why": [
-  "NIFTY is at 25,775, up 425 points (+1.68%) from yesterday's close of 25,350.",
-  "This morning it opened 309 points higher than yesterday's close and has risen 117 points since.",
-  "India VIX, the market's 'fear gauge', is 17.8. That points to a normal, lively market: NIFTY could move about 287 points up or down over the whole day.",
-  "Big news for the whole market today: Nvidia shares tumble 9% after biggest rally in over two decades as AI-related concerns ret.",
+  "NIFTY is at 25,819, up 470 points (+1.85%) from yesterday's close of 25,350.",
+  "This morning it opened 309 points higher than yesterday's close and has risen 161 points since.",
+  "India VIX, the market's 'fear gauge', is 17.7. That points to a normal, lively market: NIFTY could move about 286 points up or down over the whole day.",
+  "Big news for the whole market today: Gold, silver recover after sharp sell-off: Key triggers for prices this week.",
   "Also: our forecast team's view is neutral and the morning news brief reads the mood as bullish.",
   "The desk follows the move since this morning's open, which is rising, so it expects more of the same today."
  ],
  "plan": "At 10:00 the desk buys two contracts on NIFTY for this week: a call, which makes money if NIFTY rises, and a put, which makes money if it falls. A big enough move either way pays more than the two cost together. It tilts the pair toward a rise, so a rise pays more than a fall. It takes profit at +50%, cuts the loss at -35%, and closes everything by 15:15. All trades are on paper.",
- "trade": {
-  "id": "F261125-87",
-  "label": "NIFTY long straddle \u00b7 12-01",
-  "status": "OPEN",
-  "pnl_rs": -658.5,
-  "opened": "10:00:03",
-  "closed": "",
-  "why": ""
- },
+ "trade": null,
  "chart": {
   "levels": [
    {
@@ -52,29 +41,8 @@
     "px": 25658.35,
     "label": "Today's open",
     "kind": "ref"
-   },
-   {
-    "px": 25774.7,
-    "label": "Desk decided here (10:00)",
-    "kind": "ref"
    }
   ],
-  "forecast": [
-   {
-    "t": 1795600800,
-    "px": 25846.56,
-    "label": "Likely high by close"
-   },
-   {
-    "t": 1795600800,
-    "px": 25703.64,
-    "label": "Likely low by close"
-   },
-   {
-    "t": 1795599900,
-    "px": 25810.83,
-    "label": "Desk's call: up"
-   }
-  ]
+  "forecast": []
  }
 }

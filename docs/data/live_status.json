@@ -1,36 +1,37 @@
 {
  "desks": {
-  "equity": "2773 stocks, real time",
-  "scalp": "63 names scanned, bars refreshed 39 s ago",
+  "equity": "2774 stocks, real time",
+  "scalp": "49 names scanned, bars refreshed 7 s ago",
   "paper_orders": "0 pending orders filled or expired at today's open",
   "commodities": "4 MCX futures, real time",
-  "ema_vwap": "117 candles of NIFTY FUT 29 DEC 26 from Upstox 1-minute candles + live quotes after the last candle, EMA9 seeded",
-  "fno": "NIFTY 25775.1 , expiry 2026-12-01, 1 chain(s), real time",
+  "ema_vwap": "125 candles of NIFTY FUT 29 DEC 26 from Upstox 1-minute candles, EMA9 seeded",
+  "fno": "NIFTY 25819.25 , expiry 2026-12-01, 1 chain(s), real time",
   "crypto": "6 coins from Kraken, real time",
   "gateway": "dry \u00b7 4 intents, 0 refused",
   "charts": "4 live charts",
-  "news_pulse": "0 new signal(s); 4 in the last hour from 9 feeds"
+  "news_pulse": "0 new signal(s); 2 in the last hour from 9 feeds",
+  "indices": "error: HTTP Error 504: Gateway Timeout"
  },
- "updated_at": "2026-11-25T15:07:23+05:30",
- "updated_hm": "25 Nov 15:07:23",
- "loops": 1863,
+ "updated_at": "2026-11-25T20:48:06+05:30",
+ "updated_hm": "25 Nov 20:48:06",
+ "loops": 2529,
  "sessions": {
-  "equity": true,
-  "fno": true,
+  "equity": false,
+  "fno": false,
   "mcx": true,
   "crypto": true
  },
  "note": "Real-time Upstox prices for equities, NIFTY options and MCX; Kraken for crypto. Paper trades only.",
- "open": 15,
+ "open": 13,
  "first_iteration": {
-  "equity": 3.3,
-  "fill": 3.3,
-  "mcx": 4.2,
-  "fno": 7.4,
-  "crypto": 7.6,
-  "snapshots": 7.9,
-  "plan": 7.9,
-  "slow_and_intraday": 8.3,
-  "persist": 8.3
+  "equity": 2.5,
+  "fill": 2.5,
+  "mcx": 3.1,
+  "fno": 5.5,
+  "crypto": 5.7,
+  "snapshots": 5.9,
+  "plan": 6.0,
+  "slow_and_intraday": 6.5,
+  "persist": 6.5
  }
 }

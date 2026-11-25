@@ -2,13 +2,13 @@
  {
   "desk": "COMMODITY",
   "strategy": "mcx_momentum",
-  "closed": 15,
-  "wins": 6,
-  "win_rate": 40.0,
-  "pnl_rs": -2113.75,
-  "avg_rs": -140.92,
-  "t_stat": -0.89,
-  "confidence": 18.7,
+  "closed": 17,
+  "wins": 8,
+  "win_rate": 47.1,
+  "pnl_rs": -648.4,
+  "avg_rs": -38.14,
+  "t_stat": -0.24,
+  "confidence": 40.4,
   "verdict": "COLLECTING"
  },
  {
@@ -182,13 +182,13 @@
  {
   "desk": "FNO",
   "strategy": "long_straddle",
-  "closed": 3,
+  "closed": 4,
   "wins": 3,
-  "win_rate": 100.0,
-  "pnl_rs": 13852.0,
-  "avg_rs": 4617.33,
-  "t_stat": 34.34,
-  "confidence": 100.0,
+  "win_rate": 75.0,
+  "pnl_rs": 12641.0,
+  "avg_rs": 3160.25,
+  "t_stat": 2.16,
+  "confidence": 98.5,
   "verdict": "COLLECTING"
  },
  {

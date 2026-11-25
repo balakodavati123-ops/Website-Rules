@@ -1,7 +1,7 @@
 {
- "updated_at": "2026-11-25T15:07:23+05:30",
+ "updated_at": "2026-11-25T15:30:48+05:30",
  "today": {
-  "at": "15:07:23",
+  "at": "15:30:48",
   "fut": "NIFTY FUT 29 DEC 26",
   "rules": {
    "slope_bars": 3,
@@ -12,59 +12,11 @@
    "square_off": "15:20",
    "breach": "close"
   },
-  "candles": 117,
+  "candles": 125,
   "seeded": true,
-  "source": "Upstox 1-minute candles + live quotes after the last candle",
+  "source": "Upstox 1-minute candles",
   "warmup": null,
   "last": [
-   {
-    "end": "13:09",
-    "close": 25807.1,
-    "ema9": 25869.17,
-    "vwap": 25925.18
-   },
-   {
-    "end": "13:12",
-    "close": 25810.2,
-    "ema9": 25857.37,
-    "vwap": 25924.41
-   },
-   {
-    "end": "13:15",
-    "close": 25797.3,
-    "ema9": 25845.36,
-    "vwap": 25923.78
-   },
-   {
-    "end": "13:18",
-    "close": 25780.1,
-    "ema9": 25832.31,
-    "vwap": 25922.33
-   },
-   {
-    "end": "13:21",
-    "close": 25836.5,
-    "ema9": 25833.15,
-    "vwap": 25921.28
-   },
-   {
-    "end": "13:24",
-    "close": 25822.4,
-    "ema9": 25831.0,
-    "vwap": 25920.85
-   },
-   {
-    "end": "13:27",
-    "close": 25838.0,
-    "ema9": 25832.4,
-    "vwap": 25920.48
-   },
-   {
-    "end": "13:30",
-    "close": 25865.1,
-    "ema9": 25838.94,
-    "vwap": 25919.89
-   },
    {
     "end": "13:33",
     "close": 25900.9,
@@ -256,6 +208,54 @@
     "close": 25924.0,
     "ema9": 25914.94,
     "vwap": 25917.96
+   },
+   {
+    "end": "15:09",
+    "close": 25935.0,
+    "ema9": 25918.95,
+    "vwap": 25918.01
+   },
+   {
+    "end": "15:12",
+    "close": 25945.0,
+    "ema9": 25924.16,
+    "vwap": 25918.4
+   },
+   {
+    "end": "15:15",
+    "close": 25934.0,
+    "ema9": 25926.13,
+    "vwap": 25918.47
+   },
+   {
+    "end": "15:18",
+    "close": 25925.5,
+    "ema9": 25926.0,
+    "vwap": 25918.54
+   },
+   {
+    "end": "15:21",
+    "close": 25937.0,
+    "ema9": 25928.2,
+    "vwap": 25918.59
+   },
+   {
+    "end": "15:24",
+    "close": 25930.8,
+    "ema9": 25928.72,
+    "vwap": 25918.63
+   },
+   {
+    "end": "15:27",
+    "close": 25935.0,
+    "ema9": 25929.98,
+    "vwap": 25918.73
+   },
+   {
+    "end": "15:30",
+    "close": 25935.1,
+    "ema9": 25931.0,
+    "vwap": 25918.89
    }
   ],
   "crosses": [
@@ -270,15 +270,21 @@
     "dir": "down",
     "taken": true,
     "why": ""
+   },
+   {
+    "end": "15:09",
+    "dir": "up",
+    "taken": true,
+    "why": ""
    }
   ],
   "now": {
-   "end": "15:06",
-   "close": 25924.0,
-   "ema9": 25914.94,
-   "vwap": 25917.96,
-   "side": "EMA9 below VWAP (puts side)",
-   "vwap_slope": 0.04
+   "end": "15:30",
+   "close": 25935.1,
+   "ema9": 25931.0,
+   "vwap": 25918.89,
+   "side": "EMA9 above VWAP (calls side)",
+   "vwap_slope": 0.3
   }
  },
  "paused": false,
@@ -343,17 +349,17 @@
    ]
   },
   "straddle": {
-   "closed": 3,
+   "closed": 4,
    "wins": 3,
-   "win_rate": 100.0,
-   "total_rs": 13852,
-   "avg_rs": 4617,
+   "win_rate": 75.0,
+   "total_rs": 12641,
+   "avg_rs": 3160,
    "best_rs": 4883,
-   "worst_rs": 4447,
-   "sessions": 3,
+   "worst_rs": -1211,
+   "sessions": 4,
    "since": "2026-11-19",
-   "open": 1,
-   "open_rs": -658,
+   "open": 0,
+   "open_rs": 0,
    "trades": [
     {
      "id": "F261119-37",
@@ -449,11 +455,11 @@
      "id": "F261125-87",
      "day": "2026-11-25",
      "opened": "10:00:03",
-     "closed": "",
+     "closed": "15:15:13",
      "label": "NIFTY long straddle \u00b7 12-01",
-     "status": "OPEN",
-     "pnl_rs": -658.5,
-     "why": "",
+     "status": "LOSS",
+     "pnl_rs": -1211.0,
+     "why": "time",
      "entry": -480.55,
      "exit_premium": null,
      "legs": [
@@ -462,7 +468,7 @@
        "strike": 25650.0,
        "kind": "CE",
        "entry": 317.7,
-       "last": 322.3,
+       "last": 320.4,
        "key": "NSE_FO|47821"
       },
       {
@@ -470,7 +476,7 @@
        "strike": 25650.0,
        "kind": "PE",
        "entry": 162.85,
-       "last": 149.35,
+       "last": 142.75,
        "key": "NSE_FO|47834"
       }
      ]

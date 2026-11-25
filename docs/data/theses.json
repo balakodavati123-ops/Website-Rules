@@ -1,4 +1,57 @@
 {
+ "M261125-91": {
+  "horizon": "intraday",
+  "headline": "Crude oil mini long",
+  "news": [
+   "US markets averaged -0.38% at the 24/11 close.",
+   "Asia averaged -1.40%.",
+   "Brent crude 87.64 (-1.94%)."
+  ],
+  "data": [
+   "Crude oil mini (CRUDEOILM FUT 18 DEC 26) at 7,643.00, +0.82% on the previous close; day range 7,420.00 to 7,643.00, price is 0.00% from the day high.",
+   "Lot: 10 unit(s) \u00d7 1 lot(s); contract value \u20b976,430.",
+   "Global reference: Brent crude 88.26 (-3.44% at the 11-25 close)."
+  ],
+  "strategy": "A futures position in the direction the market is already moving hard.",
+  "why": [
+   "Used when a commodity is up or down 0.8% or more and sitting at its day extreme: strong days tend to extend into the evening session when global markets open.",
+   "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|576265)."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "7,643.00",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "7,597.14",
+    "Costs about \u20b9459"
+   ],
+   [
+    "Target (exit if right)",
+    "7,734.72",
+    "Earns about \u20b9917"
+   ],
+   [
+    "Reward for the risk",
+    "2.0 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "33% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b923,694",
+    "19% of the account"
+   ]
+  ],
+  "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
+  "viability": "Needs \u20b923,694 to hold (Upstox margin calculator)."
+ },
  "F261125-90": {
   "horizon": "intraday",
   "headline": "NIFTY 25,750 PE: EMA9 crossed below VWAP at 12:57",

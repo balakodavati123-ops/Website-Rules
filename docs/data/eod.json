@@ -1,23 +1,23 @@
 {
- "day": "2026-11-24",
- "trades": 1,
- "closed": 0,
+ "day": "2026-11-25",
+ "trades": 9,
+ "closed": 8,
  "open": 1,
- "wins": 0,
- "win_rate": null,
- "pnl": 0.0,
+ "wins": 1,
+ "win_rate": 12,
+ "pnl": -110.28,
  "by_desk": {
   "EQUITY": {
-   "trades": 0,
-   "pnl": 0
+   "trades": 4,
+   "pnl": -278.77
   },
   "FNO": {
-   "trades": 1,
-   "pnl": 0.0
+   "trades": 3,
+   "pnl": 513.68
   },
   "COMMODITY": {
-   "trades": 0,
-   "pnl": 0
+   "trades": 2,
+   "pnl": -345.19
   },
   "CRYPTO": {
    "trades": 0,
@@ -26,19 +26,34 @@
  },
  "by_strategy": [
   {
+   "strategy": "ema_vwap_cross",
+   "n": 2,
+   "pnl": 1724.68
+  },
+  {
+   "strategy": "scalp_vwap_pullback",
+   "n": 4,
+   "pnl": -278.77
+  },
+  {
+   "strategy": "mcx_momentum",
+   "n": 2,
+   "pnl": -345.19
+  },
+  {
    "strategy": "long_straddle",
    "n": 1,
-   "pnl": 0.0
+   "pnl": -1211.0
   }
  ],
- "equity": 124277.03,
+ "equity": 124381.26,
  "best": {
-  "label": "NIFTY long straddle \u00b7 12-01",
-  "pnl": 0.0
+  "label": "NIFTY 25,750 PE \u00b7 EMA9/VWAP \u00b7 12-01",
+  "pnl": 1814.36
  },
  "worst": {
   "label": "NIFTY long straddle \u00b7 12-01",
-  "pnl": 0.0
+  "pnl": -1211.0
  },
  "news": {
   "n": 0,
@@ -49,6 +64,8 @@
   "pnl": 0
  },
  "notes": [
-  "1 trades: 0 won and 0 lost of 0 closed; net +0 rupees."
+  "9 trades: 1 won and 7 lost of 8 closed; net -110 rupees.",
+  "Best market: FNO (+514). Weakest: COMMODITY (-345).",
+  "Win rate under 40% today: the strategies below the line on the scoreboard are the ones to watch for a pause."
  ]
 }
