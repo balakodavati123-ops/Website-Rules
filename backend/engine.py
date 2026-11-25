@@ -44,6 +44,7 @@ import charts_feed as CF    # noqa: E402
 import news_pulse as NP     # noqa: E402
 import straddle_lab as SL   # noqa: E402
 import ema_vwap_live as EV  # noqa: E402
+import fno_view as FV       # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = Path(os.environ.get("DESK_DOCS") or ROOT / "docs" / "data")
@@ -913,6 +914,7 @@ def run() -> None:
                 ctx = {"spot": spot, "prev": prev_n, "chains": chains, "expiry": exps[0], "lot": U.lot_size(NIFTY, exps[0]), "room": rm["FNO"], "margin": M, "env": env, "vix": vixq,
                        "iv": D.atm_iv(chains.get(exps[0]) or [], spot), "acct": acct[0]}
                 ctx["straddle"] = {"ok": False, "why": "no trained playbook yet"}
+                vin_ = {"feats": {}, "cond": None, "news": None}               # what the desk sees, for the F&O tab's plain-words view
                 if playbook and spot and vixq:
                     if sdl["day"] != today:                           # once a day: the closes since training, so today's features are current
                         try:
@@ -952,6 +954,7 @@ def run() -> None:
                             if oh_.get("high") and oh_.get("low") and oh_.get("open") and pc_ else {}
                         cond = D.straddle_conditions({**fv0, **morn_, "vix_now": round(vixq, 2)}, news_) if fv0 else {"go": False, "lean": 0, "reasons": ["today's VIX and gap are not known yet"], "go_signals": [], "skip_signals": []}
                         cond["news"] = news_
+                        vin_ = {"feats": {**fv0, **morn_}, "cond": cond, "news": news_}
                         ctx["straddle"] = {"ok": True, "mode": "ceo", "quant": True, "trail": False, "expiry": exps[0], "entry": "10:00", "stop": 0.35, "target": 0.5, "conditions": cond,
                                            "rule": {"entry": "10:00, after watching the first 45 minutes", "expiry": "this week", "strike": "chosen by the quant", "filter": "movement days: VIX rising, a big gap or strong news (the CEO's rule)"},
                                            "trained": sdl.get("view"), "backtest_note": cr_.get("note", "")}
@@ -1000,6 +1003,20 @@ def run() -> None:
                     import traceback
                     traceback.print_exc()
                     info["ema_vwap"] = f"error: {str(e)[:100]}"
+                try:                                          # the F&O tab: today's call in plain words, and the live option chain with depth
+                    sh0 = xb.get("straddle_sheet") or {}
+                    st0 = next((t for t in reversed(xb["trades"]) if t["desk"] == "FNO" and t.get("strategy") == "long_straddle" and t.get("day") == today), None)
+                    if spot:
+                        pc0 = (sdl["closes"][-1][1] if sdl.get("closes") else None) or prev_n
+                        save("fno_view.json", FV.view(now, spot, pc0, n.get("ohlc") or {}, vixq, vin_["feats"], vin_["cond"], sh0 if sh0.get("day") == today and st0 else None, vin_["news"],
+                                                      {k: st0.get(k) for k in ("id", "label", "status", "pnl_rs", "opened", "closed", "why")} if st0 else None))
+                    rows0 = chains.get(exps[0]) or []
+                    if rows0 and spot:
+                        save("fno_chain.json", FV.chain_snapshot(rows0, spot, exps[0], ctx["lot"], now, U.quotes(FV.depth_keys(rows0, spot), token)))
+                except Exception as e:
+                    import traceback
+                    traceback.print_exc()
+                    info["fno_view"] = f"error: {str(e)[:100]}"
                 rows_ = chains.get(exps[0]) or []
                 if rows_ and spot:
                     atm = min((r["strike_price"] for r in rows_), key=lambda k: abs(k - spot))
