@@ -1,4 +1,92 @@
 {
+ "M261126-110": {
+  "horizon": "intraday",
+  "headline": "Crude oil mini long",
+  "news": [
+   "US markets averaged -0.18% at the 25/11 close.",
+   "Asia averaged +1.82%.",
+   "Brent crude 90.85 (-0.60%)."
+  ],
+  "data": [
+   "Crude oil mini (CRUDEOILM FUT 18 DEC 26) at 7,842.00, +1.11% on the previous close; day range 7,719.00 to 7,936.00, price is 1.18% from the day high.",
+   "Lot: 10 unit(s) \u00d7 1 lot(s); contract value \u20b978,420.",
+   "Global reference: Brent crude 90.65 (-4.19% at the 11-26 close)."
+  ],
+  "strategy": "Buy a dip inside an up day or sell a bounce inside a down day.",
+  "why": [
+   "Used after a trend day pulls back 0.4% to 1.2%: you join the trend at a better price than the chasers.",
+   "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|576265)."
+  ],
+  "numbers": [
+   [
+    "Entry",
+    "7,842.00",
+    "Price when the paper trade was opened"
+   ],
+   [
+    "Stop (exit if wrong)",
+    "7,802.79",
+    "Costs about \u20b9392"
+   ],
+   [
+    "Target (exit if right)",
+    "7,912.58",
+    "Earns about \u20b9706"
+   ],
+   [
+    "Reward for the risk",
+    "1.8 to 1",
+    "Target gain divided by stop loss"
+   ],
+   [
+    "Needs to be right",
+    "36% of the time",
+    "The win rate this reward-to-risk must beat to break even, before costs"
+   ],
+   [
+    "Capital tied up",
+    "\u20b924,248",
+    "20% of the account"
+   ]
+  ],
+  "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: The pullback becomes a reversal. The 0.5% stop caps the loss.",
+  "viability": "Needs \u20b924,248 to hold (Upstox margin calculator)."
+ },
+ "F261126-109": {
+  "horizon": "intraday",
+  "headline": "NIFTY 25,900 CE: EMA9 crossed above VWAP at 14:42",
+  "news": [],
+  "data": [
+   "Near-month NIFTY future (NIFTY FUT 29 DEC 26) 3-minute candle 14:39-14:42: close 26,020.1, EMA9 25,976.1, session VWAP 25,975.7.",
+   "VWAP moved +0.3 over the last 3 candles, the same way as the crossover; no other crossover in the 30 minutes before.",
+   "Bought the at-the-money call (2026-12-01 expiry) at the ask 186.90; bid 186.45. NIFTY 25,902.7, India VIX 17.00.",
+   "Backtest of these exact rules on real 1-minute option prices, Oct 2024 - Oct 2026 (VERIFIED_HISTORICAL): 861 trades, 30.9% won, average Rs -38 a trade after Rs 61 of charges; before charges it made Rs +20,199. It has not made money after costs: this paper book is the test."
+  ],
+  "strategy": "EMA9 / VWAP crossover (the CEO's rules, cleaner signals)",
+  "why": [
+   "A call gains if NIFTY keeps moving up after the crossover; the exits cut it the moment the 3-minute trend breaks."
+  ],
+  "numbers": [
+   [
+    "Premium",
+    "Rs 12,148"
+   ],
+   [
+    "Stop",
+    "-25% (Rs 3,037)"
+   ],
+   [
+    "Target",
+    "none: held while candles close on the right side of EMA9"
+   ],
+   [
+    "Exit",
+    "3-min close beyond EMA9, opposite cross, -25% or 15:20"
+   ]
+  ],
+  "risk": "Most crossovers fail: in the backtest about 7 in 10 lost, a few big moves paid for them. Charges are about Rs 60 a round trip.",
+  "viability": "Paper only, run beside the straddle for comparison."
+ },
  "F261126-108": {
   "horizon": "intraday",
   "headline": "NIFTY 25,800 PE: EMA9 crossed below VWAP at 13:33",
@@ -4711,7 +4799,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9139",
-    "0.11% of the account"
+    "0.12% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -4737,7 +4825,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9187",
-    "0.15% of the account"
+    "0.16% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",

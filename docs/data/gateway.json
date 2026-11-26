@@ -683,7 +683,7 @@
  "wanted": "dry",
  "blockers": [],
  "killed": false,
- "updated_at": "2026-11-26T13:49:59+05:30",
+ "updated_at": "2026-11-26T19:30:37+05:30",
  "caps": {
   "max_value": 40000.0,
   "risk": 250.0,

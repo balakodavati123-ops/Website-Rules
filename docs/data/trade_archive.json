@@ -7157,6 +7157,87 @@
   "reason": "+0.8% on the previous close and within 0.3% of the day high; stop 0.6%, target 1.2%"
  },
  {
+  "id": "M261126-92",
+  "desk": "COMMODITY",
+  "strategy": "mcx_momentum",
+  "label": "Gold 1 g long",
+  "side": "LONG",
+  "entry": 12505.0,
+  "last": 12422.0,
+  "qty": 4,
+  "status": "LOSS",
+  "pnl_rs": -357.01,
+  "exit": 12422.0,
+  "why": "stop",
+  "day": "2026-11-26",
+  "opened": "09:15:00",
+  "closed": "15:46:31",
+  "ts": 1795664705.5582037,
+  "key": "MCX_FO|578631",
+  "mult": 1.0,
+  "symbol": "GOLDPETAL FUT 31 DEC 26",
+  "stop": 12429.97,
+  "target_px": 12655.06,
+  "horizon": "intraday",
+  "risk_class": "Intraday momentum",
+  "margin_rs": 5701,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "Gold 1 g long",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%.",
+    "Brent crude 90.85 (-0.60%)."
+   ],
+   "data": [
+    "Gold 1 g (GOLDPETAL FUT 31 DEC 26) at 12,505.00, +1.41% on the previous close; day range 12,399.00 to 12,506.00, price is 0.01% from the day high.",
+    "Lot: 1 unit(s) \u00d7 4 lot(s); contract value \u20b950,020.",
+    "Global reference: Gold 3603.4 (+1.17% at the 11-25 close)."
+   ],
+   "strategy": "A futures position in the direction the market is already moving hard.",
+   "why": [
+    "Used when a commodity is up or down 0.8% or more and sitting at its day extreme: strong days tend to extend into the evening session when global markets open.",
+    "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|578631)."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "12,505.00",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "12,429.97",
+     "Costs about \u20b9300"
+    ],
+    [
+     "Target (exit if right)",
+     "12,655.06",
+     "Earns about \u20b9600"
+    ],
+    [
+     "Reward for the risk",
+     "2.0 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "33% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b95,701",
+     "5% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
+   "viability": "Needs \u20b95,701 to hold (Upstox margin calculator)."
+  },
+  "reason": "+1.4% on the previous close and within 0.3% of the day high; stop 0.6%, target 1.2%"
+ },
+ {
   "id": "K261126-93",
   "desk": "EQUITY",
   "strategy": "scalp_vwap_pullback",
@@ -7333,6 +7414,136 @@
    "viability": "Needs \u20b96,915 to hold."
   },
   "instrument_key": "NSE_EQ|INE158A01026"
+ },
+ {
+  "id": "F261126-95",
+  "desk": "FNO",
+  "strategy": "long_straddle",
+  "label": "NIFTY long straddle \u00b7 12-01",
+  "side": "LONG",
+  "entry": -422.5,
+  "last": -71.0,
+  "qty": 1,
+  "status": "LOSS",
+  "pnl_rs": -4695.0,
+  "exit": -71.0,
+  "why": "time",
+  "day": "2026-11-26",
+  "opened": "10:00:01",
+  "closed": "15:15:11",
+  "ts": 1795667405.756313,
+  "expiry": "2026-12-01",
+  "lot": 65,
+  "legs": [
+   {
+    "side": "B",
+    "strike": 25950.0,
+    "kind": "CE",
+    "entry": 151.8,
+    "last": 169.0,
+    "key": "NSE_FO|47893"
+   },
+   {
+    "side": "B",
+    "strike": 25950.0,
+    "kind": "PE",
+    "entry": 270.7,
+    "last": 182.5,
+    "key": "NSE_FO|47894"
+   }
+  ],
+  "horizon": "daily",
+  "underlying": "NIFTY",
+  "unit_base": 422.5,
+  "target_u": 211.25,
+  "stop_u": 147.88,
+  "risk_class": "High return \u00b7 high loss",
+  "max_gain_rs": null,
+  "max_loss_rs": 27462,
+  "margin_rs": 27417,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "daily",
+   "headline": "Buy 25,950 CE, Buy 25,950 PE \u00b7 NIFTY 2026-12-01",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%.",
+    "Brent crude 90.85 (-0.60%).",
+    "Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues (CNBC-TV18)",
+    "Bitcoin, Ether, Solana tumble in November as security breaches and regulatory uncertainty weigh (CNBC-TV18)",
+    "TCS gains 4% as Nvidia-led tech sell-off sparks buying in Indian IT stocks (CNBC-TV18)",
+    "6 companies filed results or hold board meetings today."
+   ],
+   "data": [
+    "NIFTY 25,836, +0.06% on the previous close. India VIX 17.5.",
+    "Implied volatility at the money 16.7% a year. Over 5 days to 2026-12-01 that prices a one-standard-deviation move of about \u00b1504 points (\u00b12.0%), so the market gives roughly a 68% chance of finishing between 25,331 and 26,340.",
+    "Option positioning: put-to-call ratio 0.88, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,800 (a floor), max pain 25,850.",
+    "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+    "Our forecast for today: Bullish (score +0.35); likely range 25,564 to 26,136.",
+    "Conditions at 10:00 (Normal confidence): the first 45 minutes covered 0.57% (high to low): the market is moving; market-wide news today: \u20b992,70,000 crore wiped out in hours as NVIDIA leads AI stock crash in US - Inshorts; Anthropic shares crash further below their IPO price amid continuing AI worries; Nasdaq fu; India VIX is in the top fifth of its year (80.6th percentile) and not rising.",
+    "Strike leans 2 strikes down with the morning's move from the open (-0.15%): the put is in the money, so a continued move pays on that leg more than the other leg loses; a sharp turn the other way still pays through the other leg. Some news points the other way (1).",
+    "The quant chose strike 25,950 from 5 strikes: cost 422.5 points, 0.82x the move the market expects; it pays beyond 26,372 up (2.08%) or 25,528 down (1.19%); calls and puts together delta -0.14; spreads up to 0.3%.",
+    "Exits (unchanged): take profit at 50% above the cost, stop at 35% below it, out by 15:15.",
+    "The historical backtest disagrees with trading this every day: replayed on 907 near-expiry days since 2022 with model prices from India VIX, this exact rule won 24.0% of days and averaged Rs -1254.3 a day (total Rs -1137647); the desk's live record decides from here.",
+    "Trained rule: buy at 10:00, after watching the first 45 minutes on this week's expiry, strike chosen by the quant, when movement days: VIX rising, a big gap or strong news (the CEO's rule).",
+    "Backtest 2022-2024 (15-minute bars, model prices from India VIX): None trades, None% won, average Rs None; out of sample 2025-2026: None trades, None% won, average Rs None.",
+    "Days like today (None most similar): None% won, average Rs None. ."
+   ],
+   "strategy": "Buy the at-the-money call and put.",
+   "why": [
+    "Used when a big move is plausible but its direction is not: either leg can pay for both. It loses if the index drifts, because time decay eats the premium."
+   ],
+   "numbers": [
+    [
+     "Net debit",
+     "422.5 points = \u20b927,462 per lot",
+     "What you receive (or pay) up front"
+    ],
+    [
+     "Most you can make",
+     "\u20b9483,770",
+     "At expiry, if everything goes right"
+    ],
+    [
+     "Most you can lose",
+     "\u20b927,345",
+     "At expiry, if everything goes wrong (fixed by the bought options)"
+    ],
+    [
+     "Break-even at expiry",
+     "25,528 and 26,372",
+     "Where the structure stops losing money"
+    ],
+    [
+     "Chance of profit at expiry",
+     "41%",
+     "From the options market's own implied volatility; not our edge, the market's odds"
+    ],
+    [
+     "Expected move to expiry",
+     "\u00b1504 points",
+     "5 days at 16.7% implied volatility"
+    ],
+    [
+     "Reward for the risk",
+     "17.69 to 1",
+     "Best case divided by worst case"
+    ],
+    [
+     "Margin the broker asks",
+     "\u20b927,417",
+     "22% of the account (Upstox margin calculator)"
+    ],
+    [
+     "Our exit levels",
+     "Take profit at \u20b913,731, cut at \u20b99,612",
+     "Rupees on one lot, before the exit rule below"
+    ]
+   ],
+   "risk": "Take profit at 50% of the debit, cut at 35%, and be flat by 15:15 whatever happens. Fails when: A quiet day. The cost of both options is the most you can lose.",
+   "viability": "One lot of 65 needs \u20b927,417 of margin, checked with the broker's calculator when the trade was booked."
+  },
+  "reason": "NIFTY 25,836 (+0.06% on the close). Debit 422.5 points; target 50% of it, stop 35% of it; out by 15:15"
  },
  {
   "id": "K261126-96",
@@ -8477,5 +8688,90 @@
   "reason": "EMA9 crossed below VWAP on the 13:33 3-minute candle (VWAP sloping the same way); bought the 25,800 PE at 168.65. Exit on a 3-minute close beyond EMA9, an opposite cross, -25%, or 15:20.",
   "exit_premium": 149.35,
   "charges_rs": 65.81
+ },
+ {
+  "id": "F261126-109",
+  "desk": "FNO",
+  "strategy": "ema_vwap_cross",
+  "label": "NIFTY 25,900 CE \u00b7 EMA9/VWAP \u00b7 12-01",
+  "side": "LONG",
+  "entry": -186.9,
+  "last": 7.3,
+  "qty": 1,
+  "status": "WIN",
+  "pnl_rs": 404.04,
+  "exit": 7.3,
+  "why": "time: square-off at 15:20",
+  "day": "2026-11-26",
+  "opened": "14:42:02",
+  "closed": "15:20:03",
+  "ts": 1795684326.3205125,
+  "expiry": "2026-12-01",
+  "lot": 65,
+  "horizon": "daily",
+  "underlying": "NIFTY",
+  "legs": [
+   {
+    "side": "B",
+    "strike": 25900.0,
+    "kind": "CE",
+    "entry": 186.9,
+    "last": 194.2,
+    "key": "NSE_FO|47855"
+   }
+  ],
+  "unit_base": 186.9,
+  "target_u": null,
+  "stop_u": 46.73,
+  "risk_class": "Intraday signal \u00b7 option buying",
+  "max_gain_rs": null,
+  "max_loss_rs": 12148,
+  "margin_rs": 12148,
+  "margin_src": "premium paid (an option buyer posts only the premium)",
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "NIFTY 25,900 CE: EMA9 crossed above VWAP at 14:42",
+   "news": [],
+   "data": [
+    "Near-month NIFTY future (NIFTY FUT 29 DEC 26) 3-minute candle 14:39-14:42: close 26,020.1, EMA9 25,976.1, session VWAP 25,975.7.",
+    "VWAP moved +0.3 over the last 3 candles, the same way as the crossover; no other crossover in the 30 minutes before.",
+    "Bought the at-the-money call (2026-12-01 expiry) at the ask 186.90; bid 186.45. NIFTY 25,902.7, India VIX 17.00.",
+    "Backtest of these exact rules on real 1-minute option prices, Oct 2024 - Oct 2026 (VERIFIED_HISTORICAL): 861 trades, 30.9% won, average Rs -38 a trade after Rs 61 of charges; before charges it made Rs +20,199. It has not made money after costs: this paper book is the test."
+   ],
+   "strategy": "EMA9 / VWAP crossover (the CEO's rules, cleaner signals)",
+   "why": [
+    "A call gains if NIFTY keeps moving up after the crossover; the exits cut it the moment the 3-minute trend breaks."
+   ],
+   "numbers": [
+    [
+     "Premium",
+     "Rs 12,148"
+    ],
+    [
+     "Stop",
+     "-25% (Rs 3,037)"
+    ],
+    [
+     "Target",
+     "none: held while candles close on the right side of EMA9"
+    ],
+    [
+     "Exit",
+     "3-min close beyond EMA9, opposite cross, -25% or 15:20"
+    ]
+   ],
+   "risk": "Most crossovers fail: in the backtest about 7 in 10 lost, a few big moves paid for them. Charges are about Rs 60 a round trip.",
+   "viability": "Paper only, run beside the straddle for comparison."
+  },
+  "book_name": "EMA9/VWAP",
+  "signal": {
+   "candle": "14:42",
+   "close": 26020.1,
+   "ema9": 25976.15,
+   "vwap": 25975.71
+  },
+  "reason": "EMA9 crossed above VWAP on the 14:42 3-minute candle (VWAP sloping the same way); bought the 25,900 CE at 186.90. Exit on a 3-minute close beyond EMA9, an opposite cross, -25%, or 15:20.",
+  "exit_premium": 194.2,
+  "charges_rs": 70.46
  }
 ]

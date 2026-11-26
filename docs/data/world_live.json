@@ -1,5 +1,5 @@
 {
- "at": 1795680109.1470208,
+ "at": 1795694715.36124,
  "rows": [
   {
    "group": "United States",
@@ -35,11 +35,11 @@
    "group": "United States",
    "name": "US fear index (VIX)",
    "symbol": "^VIX",
-   "last": 28.29,
-   "chg_pct": 7.32,
-   "as_of": "2026-11-25",
+   "last": 26.99,
+   "chg_pct": -4.6,
+   "as_of": "2026-11-26",
    "why": "Rising means global risk-off",
-   "spark": "[22.91, 25.46, 24.56, 28.44, 35.89, 26.62, 26.36, 28.29]"
+   "spark": "[25.46, 24.56, 28.44, 35.89, 26.62, 26.36, 28.29, 26.99]"
   },
   {
    "group": "Asia",
@@ -55,11 +55,11 @@
    "group": "Asia",
    "name": "Hang Seng",
    "symbol": "^HSI",
-   "last": 22276.91,
-   "chg_pct": 1.42,
+   "last": 22226.88,
+   "chg_pct": 1.19,
    "as_of": "2026-11-26",
    "why": "Asia and China risk mood",
-   "spark": "[23508.17, 23294.75, 22841.62, 22410.8, 22383.74, 22219.65, 21966.01, 22276.91]"
+   "spark": "[23508.17, 23294.75, 22841.62, 22410.8, 22383.74, 22219.65, 21966.01, 22226.88]"
   },
   {
    "group": "Asia",
@@ -75,51 +75,51 @@
    "group": "Europe",
    "name": "FTSE 100",
    "symbol": "^FTSE",
-   "last": 10426.9,
-   "chg_pct": -0.38,
-   "as_of": "2026-11-25",
+   "last": 10587.52,
+   "chg_pct": 1.54,
+   "as_of": "2026-11-26",
    "why": "Europe's close, yesterday",
-   "spark": "[10881.6, 10689.9, 10551.2, 10452.7, 10346.3, 10480.8, 10467.1, 10426.9]"
+   "spark": "[10689.9, 10551.2, 10452.7, 10346.3, 10480.8, 10467.1, 10426.9, 10587.52]"
   },
   {
    "group": "Europe",
    "name": "DAX",
    "symbol": "^GDAXI",
-   "last": 24702.13,
-   "chg_pct": -1.26,
-   "as_of": "2026-11-25",
+   "last": 25171.58,
+   "chg_pct": 1.9,
+   "as_of": "2026-11-26",
    "why": "Europe's close, yesterday",
-   "spark": "[26598.64, 26045.37, 25736.24, 25463.81, 24802.78, 25337.27, 25017.81, 24702.13]"
+   "spark": "[26045.37, 25736.24, 25463.81, 24802.78, 25337.27, 25017.81, 24702.13, 25171.58]"
   },
   {
    "group": "India",
    "name": "Nifty 50",
    "symbol": "^NSEI",
-   "last": 25840.1,
-   "chg_pct": 0.08,
+   "last": 25884.5,
+   "chg_pct": 0.25,
    "as_of": "2026-11-26",
    "why": "Yesterday's close",
-   "spark": "[25291.1, 25387.4, 25227.95, 25514.3, 25800.6, 25349.65, 25819.25, 25840.1]"
+   "spark": "[25291.1, 25387.4, 25227.95, 25514.3, 25800.6, 25349.65, 25819.25, 25884.5]"
   },
   {
    "group": "Money",
    "name": "US dollar index",
    "symbol": "DX-Y.NYB",
-   "last": 103.76,
-   "chg_pct": 0.09,
+   "last": 103.79,
+   "chg_pct": 0.12,
    "as_of": "2026-11-26",
    "why": "A strong dollar pulls money out of India",
-   "spark": "[103.49, 103.86, 103.9, 103.81, 104.32, 103.81, 103.67, 103.76]"
+   "spark": "[103.49, 103.86, 103.9, 103.81, 104.32, 103.81, 103.67, 103.79]"
   },
   {
    "group": "Money",
    "name": "Dollar in rupees",
    "symbol": "INR=X",
-   "last": 92.45,
-   "chg_pct": -0.38,
+   "last": 92.54,
+   "chg_pct": -0.29,
    "as_of": "2026-11-26",
    "why": "A weak rupee hurts importers, helps IT",
-   "spark": "[93.96, 93.47, 93.47, 93.29, 92.67, 92.92, 92.81, 92.45]"
+   "spark": "[93.96, 93.47, 93.47, 93.29, 92.67, 92.92, 92.81, 92.54]"
   },
   {
    "group": "Money",
@@ -135,31 +135,31 @@
    "group": "Commodities",
    "name": "Brent crude",
    "symbol": "BZ=F",
-   "last": 90.65,
-   "chg_pct": -4.19,
+   "last": 90.93,
+   "chg_pct": -3.89,
    "as_of": "2026-11-26",
    "why": "India imports its oil: higher is worse",
-   "spark": "[93.14, 91.95, 91.98, 92.57, 89.37, 91.4, 94.61, 90.65]"
+   "spark": "[93.14, 91.95, 91.98, 92.57, 89.37, 91.4, 94.61, 90.93]"
   },
   {
    "group": "Commodities",
    "name": "Gold",
    "symbol": "GC=F",
-   "last": 3593.7,
-   "chg_pct": 1.64,
+   "last": 3595.1,
+   "chg_pct": 1.68,
    "as_of": "2026-11-26",
    "why": "Your largest holding follows this",
-   "spark": "[3864.2, 3741.9, 3685.5, 3515.4, 3651.4, 3561.9, 3535.8, 3593.7]"
+   "spark": "[3864.2, 3741.9, 3685.5, 3515.4, 3651.4, 3561.9, 3535.8, 3595.1]"
   },
   {
    "group": "Commodities",
    "name": "Silver",
    "symbol": "SI=F",
-   "last": 41.61,
-   "chg_pct": 3.89,
+   "last": 41.76,
+   "chg_pct": 4.28,
    "as_of": "2026-11-26",
    "why": "Your second-largest holding",
-   "spark": "[47.29, 45.0, 44.32, 41.03, 43.15, 40.76, 40.05, 41.61]"
+   "spark": "[47.29, 45.0, 44.32, 41.03, 43.15, 40.76, 40.05, 41.76]"
   }
  ]
 }

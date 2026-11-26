@@ -106,7 +106,7 @@
    "desk": "COMMODITY",
    "stage": "BUILT",
    "closed": 6,
-   "open": 0,
+   "open": 1,
    "net_rs": -643.56,
    "win_rate": 33.3,
    "since": "2026-11-18",
@@ -219,11 +219,68 @@
    "team": "fno",
    "desk": "FNO",
    "stage": "BUILT",
-   "closed": 4,
-   "open": 1,
-   "net_rs": 12641.0,
-   "win_rate": 75.0,
+   "closed": 5,
+   "open": 0,
+   "net_rs": 7946.0,
+   "win_rate": 60.0,
    "since": "2026-11-19",
+   "passed": 4,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "5 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": true,
+     "value": "\u20b97,946",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": true,
+     "value": "\u20b97,546",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": true,
+     "value": "3 of 5 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 2",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
+   "strategy": "ema_vwap_cross",
+   "team": "fno",
+   "desk": "FNO",
+   "stage": "BUILT",
+   "closed": 4,
+   "open": 0,
+   "net_rs": 808.41,
+   "win_rate": 50.0,
+   "since": "2026-11-25",
    "passed": 3,
    "checks": [
     {
@@ -235,13 +292,13 @@
     {
      "name": "Profit after charges",
      "ok": true,
-     "value": "\u20b912,641",
+     "value": "\u20b9808",
      "need": "above \u20b90"
     },
     {
      "name": "Survives double costs",
      "ok": true,
-     "value": "\u20b912,321",
+     "value": "\u20b9488",
      "need": "above \u20b90 with one more round trip of charges per trade"
     },
     {
@@ -259,7 +316,7 @@
     {
      "name": "Profitable on most days",
      "ok": null,
-     "value": "3 of 4 days",
+     "value": "1 of 2 days",
      "need": "half the days or more, over 5+ days"
     },
     {
@@ -323,63 +380,6 @@
      "name": "Losing streak in limits",
      "ok": true,
      "value": "worst run 2",
-     "need": "8 losses in a row at most"
-    }
-   ],
-   "lessons": []
-  },
-  {
-   "strategy": "ema_vwap_cross",
-   "team": "fno",
-   "desk": "FNO",
-   "stage": "BUILT",
-   "closed": 3,
-   "open": 0,
-   "net_rs": 404.37,
-   "win_rate": 33.3,
-   "since": "2026-11-25",
-   "passed": 3,
-   "checks": [
-    {
-     "name": "Enough trades",
-     "ok": false,
-     "value": "3 closed",
-     "need": "30 or more"
-    },
-    {
-     "name": "Profit after charges",
-     "ok": true,
-     "value": "\u20b9404",
-     "need": "above \u20b90"
-    },
-    {
-     "name": "Survives double costs",
-     "ok": true,
-     "value": "\u20b9164",
-     "need": "above \u20b90 with one more round trip of charges per trade"
-    },
-    {
-     "name": "Out of sample",
-     "ok": null,
-     "value": "needs 10 trades",
-     "need": "the most recent 30% of trades still profitable"
-    },
-    {
-     "name": "Beats chance",
-     "ok": null,
-     "value": "needs 5 trades with a stop and target",
-     "need": "z of 1.0 or more"
-    },
-    {
-     "name": "Profitable on most days",
-     "ok": null,
-     "value": "1 of 2 days",
-     "need": "half the days or more, over 5+ days"
-    },
-    {
-     "name": "Losing streak in limits",
-     "ok": true,
-     "value": "worst run 1",
      "need": "8 losses in a row at most"
     }
    ],
@@ -1419,41 +1419,41 @@
    "team": "mcx",
    "desk": "COMMODITY",
    "stage": "TESTED",
-   "closed": 18,
-   "open": 1,
-   "net_rs": 333.99,
-   "win_rate": 50.0,
+   "closed": 19,
+   "open": 0,
+   "net_rs": -23.02,
+   "win_rate": 47.4,
    "since": "2026-11-17",
-   "passed": 4,
+   "passed": 3,
    "checks": [
     {
      "name": "Enough trades",
      "ok": false,
-     "value": "18 closed",
+     "value": "19 closed",
      "need": "30 or more"
     },
     {
      "name": "Profit after charges",
-     "ok": true,
-     "value": "\u20b9334",
+     "ok": false,
+     "value": "\u20b9-23",
      "need": "above \u20b90"
     },
     {
      "name": "Survives double costs",
      "ok": false,
-     "value": "\u20b9-386",
+     "value": "\u20b9-783",
      "need": "above \u20b90 with one more round trip of charges per trade"
     },
     {
      "name": "Out of sample",
      "ok": true,
-     "value": "\u20b92,497 on the latest 6",
+     "value": "\u20b92,481 on the latest 6",
      "need": "the most recent 30% of trades still profitable"
     },
     {
      "name": "Beats chance",
      "ok": false,
-     "value": "targets 5 vs 6.0 by chance (z -0.5)",
+     "value": "targets 5 vs 6.3 by chance (z -0.65)",
      "need": "z of 1.0 or more"
     },
     {
@@ -1470,8 +1470,8 @@
     }
    ],
    "lessons": [
-    "9 of 18 trades ended at the stop.",
-    "Average win \u20b9598 against average loss \u20b9561."
+    "10 of 19 trades ended at the stop.",
+    "Average win \u20b9598 against average loss \u20b9540."
    ]
   },
   {
