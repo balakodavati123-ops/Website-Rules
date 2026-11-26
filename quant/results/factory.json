@@ -3,27 +3,27 @@
   {
    "agent": 1,
    "strategies": 463,
-   "seconds": 6
+   "seconds": 4
   },
   {
    "agent": 2,
    "strategies": 463,
-   "seconds": 6
+   "seconds": 5
   },
   {
    "agent": 3,
    "strategies": 462,
-   "seconds": 6
+   "seconds": 4
   },
   {
    "agent": 4,
    "strategies": 462,
-   "seconds": 6
+   "seconds": 3
   },
   {
    "agent": 5,
    "strategies": 462,
-   "seconds": 6
+   "seconds": 4
   }
  ],
  "data": {
@@ -5382,7 +5382,7 @@
    }
   }
  ],
- "generatedAt": "2026-11-26T19:11:25.266Z",
+ "generatedAt": "2026-11-26T19:19:05.279Z",
  "swing": {
   "periods": {
    "train": [
