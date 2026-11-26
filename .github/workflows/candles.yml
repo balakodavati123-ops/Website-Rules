@@ -1,4 +1,5 @@
-# Daily candles for every NSE stock, saved on the `charts` branch so the page can draw any of them.
+# Daily candles for every NSE stock, and every NIFTY 50 one-minute candle since January 2022 (one SQLite database for backtesting),
+# saved on the `charts` branch so the page can draw or download them.
 # Upstox allows about 2,000 history calls per 30 minutes, so a full refresh takes several runs; each run continues
 # where the last stopped and starts the next one itself until every stock is current.
 name: candles
@@ -24,6 +25,11 @@ jobs:
         run: |
           mkdir -p /tmp/charts
           git fetch -q --depth=1 origin charts 2>/dev/null && git archive FETCH_HEAD | tar -x -C /tmp/charts || true
+      - name: NIFTY 50 one-minute database for backtesting (nifty50_1m.sqlite, only what is new)
+        continue-on-error: true            # never hold up the stock candles
+        run: python backend/nifty_db.py /tmp/charts
+        env:
+          UPSTOX_TOKEN: ${{ secrets.UPSTOX_TOKEN }}
       - run: python backend/candles.py /tmp/charts
         env:
           UPSTOX_TOKEN: ${{ secrets.UPSTOX_TOKEN }}
