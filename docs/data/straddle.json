@@ -1,19 +1,19 @@
 {
- "updated_at": "2026-11-26T13:49:52+05:30",
+ "updated_at": "2026-11-26T15:30:58+05:30",
  "today": {
   "ok": false,
-  "why": "no straddle rule beat time decay and costs in training (2592 rules tested); on the 40 days most like today the trade averaged Rs -2,268",
+  "why": "no straddle rule beat time decay and costs in training (2592 rules tested); on the 40 days most like today the trade averaged Rs -2,296",
   "match": true,
   "knn": {
    "k": 40,
-   "avg_rs": -2268.5,
+   "avg_rs": -2295.7,
    "win_rate": 5.0,
    "dates": [
-    "2022-04-08",
-    "2026-05-15",
-    "2026-10-09",
     "2026-03-18",
-    "2022-09-02"
+    "2026-10-09",
+    "2022-04-08",
+    "2026-07-09",
+    "2026-05-15"
    ]
   },
   "features": {
@@ -21,11 +21,11 @@
    "vix_pct": 80.6,
    "rv_iv": 1.19,
    "gap": 0.21,
-   "vix_chg": -2.72,
+   "vix_chg": -4.58,
    "dte": 5,
    "prev_close": 25819.25
   },
-  "strike": 25850,
+  "strike": 25900,
   "expiry": "2026-12-01",
   "entry": "10:00",
   "target": 0.4,
@@ -52,7 +52,7 @@
    "win_rate": 15.6,
    "pf": 0.21
   },
-  "at": "13:49",
+  "at": "15:30",
   "mode": "ceo"
  },
  "conditions": {
@@ -65,12 +65,12 @@
   "news_against": 0,
   "reasons": [
    "the first 45 minutes covered 0.94% (high to low): the market is moving",
-   "market-wide news today: Stock Crash: Norwegian budget carrier plunges 86% after warning finances are 'critical'; Bitcoin slips below $60,000: What's driving the sell-off and what happens next",
+   "market-wide news today: Indian bonds tumble as Brent tops $95 per barrel, RBI flags food inflation risks; Stock Crash: Norwegian budget carrier plunges 86% after warning finances are 'critical'",
    "India VIX is in the top fifth of its year (80.6th percentile) and not rising"
   ],
   "go_signals": [
    "the first 45 minutes covered 0.94% (high to low): the market is moving",
-   "market-wide news today: Stock Crash: Norwegian budget carrier plunges 86% after warning finances are 'critical'; Bitcoin slips below $60,000: What's driving the sell-off and what happens next"
+   "market-wide news today: Indian bonds tumble as Brent tops $95 per barrel, RBI flags food inflation risks; Stock Crash: Norwegian budget carrier plunges 86% after warning finances are 'critical'"
   ],
   "skip_signals": [
    "India VIX is in the top fifth of its year (80.6th percentile) and not rising"
@@ -79,9 +79,9 @@
    "strong": 0,
    "net": 0,
    "macro": [
+    "Indian bonds tumble as Brent tops $95 per barrel, RBI flags food inflation risks",
     "Stock Crash: Norwegian budget carrier plunges 86% after warning finances are 'critical'",
-    "Bitcoin slips below $60,000: What's driving the sell-off and what happens next",
-    "Gold, silver recover after sharp sell-off: Key triggers for prices this week"
+    "Bitcoin slips below $60,000: What's driving the sell-off and what happens next"
    ],
    "mood": null,
    "fc": 0.35
@@ -213,9 +213,9 @@
   }
  },
  "live": {
-  "n": 4,
+  "n": 5,
   "wins": 3,
-  "total_rs": 12641,
+  "total_rs": 7946,
   "trades": [
    {
     "id": "F261119-37",
@@ -247,6 +247,14 @@
     "label": "NIFTY long straddle \u00b7 12-01",
     "status": "LOSS",
     "pnl_rs": -1211.0,
+    "why": "time"
+   },
+   {
+    "id": "F261126-95",
+    "day": "2026-11-26",
+    "label": "NIFTY long straddle \u00b7 12-01",
+    "status": "LOSS",
+    "pnl_rs": -4695.0,
     "why": "time"
    }
   ]

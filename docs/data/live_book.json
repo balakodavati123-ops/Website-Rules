@@ -8,11 +8,13 @@
   "ACE": "conflict",
   "ZYDUSLIFE": "conflict",
   "GLAND": "conflict",
-  "DALBHARAT": "conflict"
+  "DALBHARAT": "conflict",
+  "ANGELONE": "conflict",
+  "SHILPAMED": "conflict"
  },
  "seq": 0,
  "diag": {
-  "at": "13:49",
+  "at": "15:40",
   "effort": 2,
   "setups_on": [
    "news",
@@ -20,54 +22,16 @@
    "momentum",
    "vwap"
   ],
-  "scanned": 664,
+  "scanned": 0,
   "found": {
-   "news": [
-    "TANLA",
-    "AVALON",
-    "TECHM",
-    "PANACEABIO",
-    "HDFCBANK",
-    "GRWRHITECH",
-    "WELCORP",
-    "CIPLA"
-   ],
-   "gap": [
-    "HINDCOPPER",
-    "INFY",
-    "PASHUPATI",
-    "CRYSTALCP",
-    "AVADHSUGAR",
-    "SAPPHIRE",
-    "STLNETWORK",
-    "LGEINDIA"
-   ],
-   "momentum": [
-    "TTML",
-    "TATACONSUM",
-    "SYNGENE",
-    "HINDCOPPER",
-    "MOCAPITAL",
-    "SHRIRAMFIN",
-    "TMCV",
-    "UTLSOLAR"
-   ],
-   "vwap": [
-    "SYNGENE",
-    "MOCAPITAL",
-    "SHRIRAMFIN",
-    "LLOYDSENGG",
-    "HINDPETRO",
-    "GRAPHITE",
-    "LEMONTREE",
-    "ABCAPITAL"
-   ]
+   "news": [],
+   "gap": [],
+   "momentum": [],
+   "vwap": []
   },
   "taken": [],
-  "skipped": {
-   "PANACEABIO": "no intraday margin left"
-  },
-  "news_names": 13,
-  "headline_names": 36
+  "skipped": {},
+  "news_names": 17,
+  "headline_names": 29
  }
 }

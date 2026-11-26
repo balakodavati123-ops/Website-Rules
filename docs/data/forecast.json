@@ -191,24 +191,80 @@
    "centre": 84064
   }
  },
- "scored": false,
+ "scored": true,
  "record": {
   "Nifty 50": {
-   "days": 5,
-   "direction": 0,
-   "range": 20
+   "days": 6,
+   "direction": 17,
+   "range": 33
   },
   "Bank Nifty": {
-   "days": 5,
+   "days": 6,
    "direction": 0,
-   "range": 20
+   "range": 33
   },
   "Sensex": {
-   "days": 5,
-   "direction": 0,
-   "range": 20
+   "days": 6,
+   "direction": 17,
+   "range": 33
   }
  },
  "world_as_of": "2026-11-25",
- "plan_world_at": 1795663839.9134147
+ "plan_world_at": 1795663839.9134147,
+ "result": [
+  {
+   "name": "Nifty 50",
+   "day": "2026-11-26",
+   "bias": "Bullish",
+   "score": 0.35,
+   "prev_close": 25819,
+   "lo": 25564,
+   "hi": 26136,
+   "open": 25873.2,
+   "high": 25974.95,
+   "low": 25733.5,
+   "close": 25884.5,
+   "chg_pct": 0.25,
+   "direction_right": true,
+   "close_in_range": true,
+   "high_in_range": true,
+   "low_in_range": true
+  },
+  {
+   "name": "Bank Nifty",
+   "day": "2026-11-26",
+   "bias": "Bullish",
+   "score": 0.4,
+   "prev_close": 63703,
+   "lo": 62717,
+   "hi": 64960,
+   "open": 63883.1,
+   "high": 64104.75,
+   "low": 63332.3,
+   "close": 63535.3,
+   "chg_pct": -0.26,
+   "direction_right": false,
+   "close_in_range": true,
+   "high_in_range": true,
+   "low_in_range": true
+  },
+  {
+   "name": "Sensex",
+   "day": "2026-11-26",
+   "bias": "Bullish",
+   "score": 0.5,
+   "prev_close": 83938,
+   "lo": 83149,
+   "hi": 85008,
+   "open": 84301.4,
+   "high": 84551.74,
+   "low": 83754.66,
+   "close": 84328.59,
+   "chg_pct": 0.47,
+   "direction_right": true,
+   "close_in_range": true,
+   "high_in_range": true,
+   "low_in_range": true
+  }
+ ]
 }

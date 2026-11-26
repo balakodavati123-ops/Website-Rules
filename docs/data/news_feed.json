@@ -1,358 +1,22 @@
 [
  {
-  "time": "26 Nov 13:31",
+  "time": "26 Nov 18:40",
   "source": "CNBC-TV18",
   "category": "APPROVAL",
-  "headline": "Lupin gets USFDA nod for generic drug to treat anaemia, high phosphorus in kidney patients",
+  "headline": "Gland Pharma gets USFDA clearance for Visakhapatnam facility",
   "event": "no",
   "hint": "LONG-lean headline"
  },
  {
-  "time": "26 Nov 13:31",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Stock Market Crash: Over \u20b95 lakh crore investor wealth wiped out as Nifty falls 435 points; Here\u2019s why",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:31",
-  "source": "CNBC-TV18",
-  "category": "DEAL/ORDER",
-  "headline": "Tech Mahindra fixes record date for 1:1 bonus issue: What 7 lakh retail shareholders need to know",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "26 Nov 13:31",
-  "source": "CNBC-TV18",
-  "category": "DEAL/ORDER",
-  "headline": "Brookfield Asset Management agrees to acquire PGP Glass from Blackstone for $1.7 billion",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "US monetary policy developments impact Indian financial markets, says RBI - News On AIR",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "Food inflation pressures persist in November ahead of RBI monetary policy meeting, Bulletin shows - bfsi.economictimes.indiatimes.com",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "Explained: How RBI's proposed cyber safeguards could stop fraud before money leaves your account - bfsi.economictimes.indiatimes.com",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "GoogleNews",
-  "category": "GEOPOLITICS",
-  "headline": "Sensex gives up 472 points after opening surge as US tariff risk returns - The Week",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "GoogleNews",
-  "category": "RBI-POLICY",
-  "headline": "RBI may opt for 25 bps rate hike as oil eases, inflation risks persist - The Shillong Times",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "GoogleNews",
-  "category": "CRASH/SHOCK",
-  "headline": "India bonds tumble as Brent tops $95 per barrel, RBI flags food inflation risks - The Economic Times",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "GoogleNews-Business",
-  "category": "LEADER-EXIT",
-  "headline": "Flipkart CEO Kalyan Krishnamurthy to step down next week amid IPO uncertainty - TechCrunch",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "GoogleNews-Business",
-  "category": "CRASH/SHOCK",
-  "headline": "Why APL Apollo Tubes shares crashed 15% today to plunge at 52-week low; downgrade from brokerages after Tata Steel deal - Livemint",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "GoogleNews-Business",
-  "category": "LEGAL/REGULATORY",
-  "headline": "Vance Says Nvidia's Huang Not Under Investigation: 'Don't Think People Should Lose Their Jobs...' - News18",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "GoogleNews-Business",
-  "category": "CRASH/SHOCK",
-  "headline": "\u20b992,70,000 crore wiped out in hours as NVIDIA leads AI stock crash in US - Inshorts",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "GoogleNews-Business",
-  "category": "APPROVAL",
-  "headline": "Elon Musk's SpaceX Gets Nod To Launch 1 Million Satellites For Space Data Centres - NDTV",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "GoogleNews-Business",
-  "category": "DEAL/ORDER",
-  "headline": "Mizuho and Avendus commence strategic partnership post KKR stake sale - Moneycontrol.com",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "GoogleNews-Business",
-  "category": "GEOPOLITICS",
-  "headline": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign - The Hacker News",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "BusinessLine",
-  "category": "GEOPOLITICS",
-  "headline": "Crude oil price rises on reports of Houthi attack on Saudi refinery",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "BusinessLine",
-  "category": "CRASH/SHOCK",
-  "headline": "Precious metals plunge in Indian markets on global cues, strong currencies",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "TCS gains 4% as Nvidia-led tech sell-off sparks buying in Indian IT stocks",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Bitcoin, Ether, Solana tumble in November as security breaches and regulatory uncertainty weigh",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:36",
-  "source": "CNBC-TV18",
-  "category": "DEAL/ORDER",
-  "headline": "Dalmia Bharat approves \u20b9700 crore buyback: Here's why this repurchase plan is different",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "India bonds tumble as Brent tops $95 per barrel, RBI flags food inflation risks",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "Why is Alphabet stock sliding? Key factors behind the sell-off",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "ET",
-  "category": "RBI-POLICY",
-  "headline": "RBI may opt for 25 bps rate hike as oil eases, inflation risks persist: Baroda BNP Paribas MF CIO",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "26 Nov 13:41",
+  "time": "26 Nov 18:46",
   "source": "Mint",
-  "category": "DEAL/ORDER",
-  "headline": "Multibagger small-cap stock announces 5:9 bonus issue; shares jump over 800% in 1 year | Record date, key details",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "Mint",
-  "category": "LEGAL/REGULATORY",
-  "headline": "Would-Be RadioShack Revivers Settle SEC Fraud Suit Allegations",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "Mint",
-  "category": "CRASH/SHOCK",
-  "headline": "Nasdaq 100 plunges nearly 5%, briefly enters bear-market zone as AI fears and fresh tariffs hit sentiment",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "GoogleNews",
-  "category": "LEGAL/REGULATORY",
-  "headline": "Sebi appoints auditor to probe Coffee Day Enterprises' fund diversion - Business Standard",
-  "event": "no",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "GoogleNews-Business",
-  "category": "CRASH/SHOCK",
-  "headline": "Anthropic shares crash further below their IPO price amid continuing AI worries; Nasdaq futures down 2% - Moneycontrol.com",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "GoogleNews-Business",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold and silver prices crash in India - Inshorts",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "BusinessLine",
-  "category": "CRASH/SHOCK",
-  "headline": "Nasdaq plunges 4% as AI stocks sell off and fresh US tariff fears hit Wall Street",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "BusinessLine",
-  "category": "RBI-POLICY",
-  "headline": "What is driving fall in gold, silver & crude oil? Fed rate hike fears weigh",
-  "event": "yes",
-  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "BusinessLine",
   "category": "GEOPOLITICS",
-  "headline": "Chartered Speed targets December IPO after Iran war disruption",
+  "headline": "Trump Tariff Threat impact on Indian stocks: Gokaldas Exports to Welspun Living - Shares that could face biggest heat",
   "event": "yes",
   "hint": "global risk headline; check crude, gold, rupee"
  },
  {
-  "time": "26 Nov 13:41",
-  "source": "NDTVProfit",
-  "category": "GEOPOLITICS",
-  "headline": "India Well-Placed To Navigate US Tariff Hurdles, Industry Veterans Say",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "CNBC-TV18",
-  "category": "GEOPOLITICS",
-  "headline": "US tariff worries persist, but why ICICI Securities likes textile stocks",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "CNBC-TV18",
-  "category": "GEOPOLITICS",
-  "headline": "Trump tariff threat unlikely to shake markets; AI stock valuations a concern: Richard Harris",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "CNBC-TV18",
-  "category": "EARNINGS",
-  "headline": "Siemens Energy India Q4 Results: Profit zooms 82% as new orders nearly double; declares \u20b912 dividend",
-  "event": "no",
-  "hint": "read the numbers: tone only"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "CNBC-TV18",
-  "category": "APPROVAL",
-  "headline": "Lupin gets US FDA nod for generic type 2 diabetes drug Janumet in two strengths",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "CNBC-TV18",
-  "category": "APPROVAL",
-  "headline": "Alembic Pharma receives two USFDA reports as inspection at Vadodara facility concludes",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Nasdaq futures plunge nearly 3% as AI trade comes under pressure; gold extends decline",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:41",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:46",
-  "source": "ET",
-  "category": "GEOPOLITICS",
-  "headline": "Volatility-weary US investors side swiped as tariff mayhem adds to tech pain",
-  "event": "yes",
-  "hint": "global risk headline; check crude, gold, rupee"
- },
- {
-  "time": "26 Nov 13:46",
-  "source": "ET",
-  "category": "CRASH/SHOCK",
-  "headline": "HPE shares crash 17%, stock suffers its worst-ever single-day fall. Here's why",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:46",
+  "time": "26 Nov 18:46",
   "source": "Mint",
   "category": "CRASH/SHOCK",
   "headline": "Tanla Platforms shares plunge 12% in 6 days amid SC's setback for subsidiary Karix Mobile; details about  \u20b9375 cr dispute",
@@ -360,7 +24,7 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "26 Nov 13:46",
+  "time": "26 Nov 18:46",
   "source": "Mint",
   "category": "CRASH/SHOCK",
   "headline": "With 67% returns in 2026, MCX share price gains 3% today as gold and silver prices rise after crash | Buy, sell or hold?",
@@ -368,7 +32,127 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "26 Nov 13:46",
+  "time": "26 Nov 18:46",
+  "source": "BusinessLine",
+  "category": "GEOPOLITICS",
+  "headline": "Crude oil price rises on reports of Houthi attack on Saudi refinery",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "26 Nov 18:46",
+  "source": "CNBC-TV18",
+  "category": "GEOPOLITICS",
+  "headline": "GAIL share price: UBS sees positive impact from proposed gas pipeline tariff reforms",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "26 Nov 18:51",
+  "source": "BusinessStandard",
+  "category": "DEAL/ORDER",
+  "headline": "LCC Projects hits 10% upper band on order win; but 40% below IPO price",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 18:51",
+  "source": "GoogleNews-Business",
+  "category": "LEGAL/REGULATORY",
+  "headline": "Vance Says Nvidia's Huang Not Under Investigation: 'Don't Think People Should Lose Their Jobs...' - News18",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "26 Nov 18:51",
+  "source": "CNBC-TV18",
+  "category": "APPROVAL",
+  "headline": "Lupin gets USFDA nod for generic drug to treat anaemia, high phosphorus in kidney patients",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 18:51",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Stock Market Crash: Over \u20b95 lakh crore investor wealth wiped out as Nifty falls 435 points; Here\u2019s why",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "26 Nov 18:51",
+  "source": "CNBC-TV18",
+  "category": "DEAL/ORDER",
+  "headline": "Tech Mahindra fixes record date for 1:1 bonus issue: What 7 lakh retail shareholders need to know",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 18:56",
+  "source": "BusinessStandard",
+  "category": "APPROVAL",
+  "headline": "NSE receives RBI's approval to launch corporate bond index futures",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 18:56",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "NSE receives RBI's approval to launch corporate bond index futures - Business Standard",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 18:56",
+  "source": "Yahoo-Nifty",
+  "category": "CRASH/SHOCK",
+  "headline": "AI stock selloff drives investors to China, India, and overlooked Asian sectors",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "26 Nov 18:56",
+  "source": "BusinessLine",
+  "category": "CRASH/SHOCK",
+  "headline": "Precious metals plunge in Indian markets on global cues, strong currencies",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "26 Nov 18:56",
+  "source": "BusinessLine",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq plunges 4% as AI stocks sell off and fresh US tariff fears hit Wall Street",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "26 Nov 18:56",
+  "source": "BusinessLine",
+  "category": "RBI-POLICY",
+  "headline": "What is driving fall in gold, silver & crude oil? Fed rate hike fears weigh",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "26 Nov 18:56",
+  "source": "CNBC-TV18",
+  "category": "GEOPOLITICS",
+  "headline": "India should push for 10-15% US tariff, not settle for 17%: ICRIER's Arpita Mukherjee",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "26 Nov 19:01",
+  "source": "BusinessStandard",
+  "category": "DEAL/ORDER",
+  "headline": "Order win impact: Multibagger stock Welspun Corp rises 5%, up 180% YTD",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 19:01",
   "source": "BusinessStandard",
   "category": "DEAL/ORDER",
   "headline": "Jyoti Structures shares spike 9% on \u20b9272-crore transmission line order win",
@@ -376,7 +160,23 @@
   "hint": "LONG-lean headline"
  },
  {
-  "time": "26 Nov 13:46",
+  "time": "26 Nov 19:01",
+  "source": "BusinessStandard",
+  "category": "DEAL/ORDER",
+  "headline": "LG Electronics India falls 3% as parent launches \u20b92,320-cr stake sale",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 19:01",
+  "source": "GoogleNews",
+  "category": "RBI-POLICY",
+  "headline": "India swaps, treasury bills signal possibility of outsized RBI rate hike next week - Reuters",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "26 Nov 19:01",
   "source": "GoogleNews",
   "category": "CRASH/SHOCK",
   "headline": "Pre-Market 26 November 2026: GIFT Nifty Rises as Investors Track Global Tech Sell-Off and Oil Prices - Kotak Neo",
@@ -384,7 +184,39 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "26 Nov 13:46",
+  "time": "26 Nov 19:01",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "NSE receives RBI nod for corporate bond index futures, aims to deepen debt market - ANI News",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 19:01",
+  "source": "GoogleNews-Business",
+  "category": "LEADER-EXIT",
+  "headline": "Flipkart CEO Kalyan Krishnamurthy to step down next week amid IPO uncertainty - TechCrunch",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "26 Nov 19:01",
+  "source": "CNBC-TV18",
+  "category": "DEAL/ORDER",
+  "headline": "Brookfield Asset Management agrees to acquire PGP Glass from Blackstone for $1.7 billion",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 19:06",
+  "source": "GoogleNews",
+  "category": "GEOPOLITICS",
+  "headline": "Nifty, Sensex open in green despite fresh US tariff threats; IT index jumps 2% - ChiniMandi",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "26 Nov 19:06",
   "source": "GoogleNews",
   "category": "CRASH/SHOCK",
   "headline": "Indian bonds tumble as Brent tops $95 per barrel, RBI flags food inflation risks - BusinessLine",
@@ -392,31 +224,151 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "26 Nov 13:46",
+  "time": "26 Nov 19:06",
   "source": "GoogleNews",
-  "category": "DEAL/ORDER",
-  "headline": "PNB Shares in Focus Today After Bank Signs MoU With Deutsche Bank for Acquisition Financing - Kotak Neo",
-  "event": "no",
-  "hint": "LONG-lean headline"
+  "category": "RBI-POLICY",
+  "headline": "Food inflation pressures persist in November ahead of RBI monetary policy meeting, Bulletin shows - bfsi.economictimes.indiatimes.com",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
  },
  {
-  "time": "26 Nov 13:46",
+  "time": "26 Nov 19:06",
   "source": "GoogleNews",
-  "category": "DEAL/ORDER",
-  "headline": "RBI Clears SBI MF To Acquire 9.99% Stake In South Indian Bank - TradingView",
-  "event": "no",
-  "hint": "LONG-lean headline"
+  "category": "RBI-POLICY",
+  "headline": "India swaps, treasury bills signal possibility of outsized RBI rate hike next week - TradingView",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
  },
  {
-  "time": "26 Nov 13:46",
+  "time": "26 Nov 19:06",
   "source": "GoogleNews-Business",
+  "category": "APPROVAL",
+  "headline": "Elon Musk's SpaceX Gets Nod To Launch 1 Million Satellites For Space Data Centres - NDTV",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 19:06",
+  "source": "Yahoo-Nifty",
   "category": "CRASH/SHOCK",
-  "headline": "Gold crash triggers auction notices as LTV breaches hit lenders - The Economic Times",
+  "headline": "Why India\u2019s Nifty 50 Is Holding Steady Despite Asian Market Selloff",
   "event": "yes",
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "26 Nov 13:46",
+  "time": "26 Nov 19:06",
+  "source": "CNBC-TV18",
+  "category": "RBI-POLICY",
+  "headline": "India swaps, treasury bills signal possibility of outsized RBI rate hike next week",
+  "event": "yes",
+  "hint": "bank/rate-sensitive stocks move first; direction depends on the surprise"
+ },
+ {
+  "time": "26 Nov 19:11",
+  "source": "ET",
+  "category": "CRASH/SHOCK",
+  "headline": "India bonds tumble as Brent tops $95 per barrel, RBI flags food inflation risks",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "26 Nov 19:11",
+  "source": "BusinessLine",
+  "category": "LEGAL/REGULATORY",
+  "headline": "SEBI appoints forensic auditor to probe alleged \u20b93,535-crore Coffee Day fund diversion",
+  "event": "no",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "26 Nov 19:11",
+  "source": "BusinessLine",
+  "category": "CRASH/SHOCK",
+  "headline": "Indian bonds tumble as Brent tops $95 per barrel, RBI flags food inflation risks",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "26 Nov 19:11",
+  "source": "CNBC-TV18",
+  "category": "DEAL/ORDER",
+  "headline": "Advent denies Coforge block deal speculation after stake sale report",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 19:11",
+  "source": "CNBC-TV18",
+  "category": "GEOPOLITICS",
+  "headline": "US tariff worries persist, but why ICICI Securities likes textile stocks",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "26 Nov 19:11",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "TCS gains 4% as Nvidia-led tech sell-off sparks buying in Indian IT stocks",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "26 Nov 19:16",
+  "source": "Mint",
+  "category": "CRASH/SHOCK",
+  "headline": "Gold prices crash  \u20b922,000 in a month: Is this the right time to buy to make profits when prices go up? Experts' advice",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "26 Nov 19:16",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "NSE Gets RBI Nod for Corporate Bond Index Futures - Rediff MoneyWiz",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 19:16",
+  "source": "CNBC-TV18",
+  "category": "EARNINGS",
+  "headline": "Nifty 500: Siemens Energy India jumps 7% as profit surges 82%; LG Electronics falls on block deal",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "26 Nov 19:16",
+  "source": "CNBC-TV18",
+  "category": "GEOPOLITICS",
+  "headline": "Trump tariff threat unlikely to shake markets; AI stock valuations a concern: Richard Harris",
+  "event": "yes",
+  "hint": "global risk headline; check crude, gold, rupee"
+ },
+ {
+  "time": "26 Nov 19:16",
+  "source": "CNBC-TV18",
+  "category": "EARNINGS",
+  "headline": "Siemens Energy India Q4 Results: Profit zooms 82% as new orders nearly double; declares \u20b912 dividend",
+  "event": "no",
+  "hint": "read the numbers: tone only"
+ },
+ {
+  "time": "26 Nov 19:21",
+  "source": "GoogleNews-Business",
+  "category": "CRASH/SHOCK",
+  "headline": "Anthropic shares crash further below their IPO price amid continuing AI worries; Nasdaq futures down 2% - Moneycontrol.com",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "26 Nov 19:21",
+  "source": "BusinessLine",
+  "category": "APPROVAL",
+  "headline": "NSE gets RBI nod to launch corporate bond index futures",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 19:21",
   "source": "CNBC-TV18",
   "category": "APPROVAL",
   "headline": "Lupin gets USFDA approval for single-dose dalbavancin injection to treat bacterial skin infections",
@@ -424,7 +376,31 @@
   "hint": "LONG-lean headline"
  },
  {
-  "time": "26 Nov 13:46",
+  "time": "26 Nov 19:21",
+  "source": "CNBC-TV18",
+  "category": "APPROVAL",
+  "headline": "Lupin gets US FDA nod for generic type 2 diabetes drug Janumet in two strengths",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 19:21",
+  "source": "CNBC-TV18",
+  "category": "APPROVAL",
+  "headline": "Alembic Pharma receives two USFDA reports as inspection at Vadodara facility concludes",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 19:21",
+  "source": "CNBC-TV18",
+  "category": "CRASH/SHOCK",
+  "headline": "Nasdaq futures plunge nearly 3% as AI trade comes under pressure; gold extends decline",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "26 Nov 19:21",
   "source": "CNBC-TV18",
   "category": "CRASH/SHOCK",
   "headline": "Stock Crash: Norwegian budget carrier plunges 86% after warning finances are 'critical'",
@@ -432,7 +408,47 @@
   "hint": "SHORT-lean headline"
  },
  {
-  "time": "26 Nov 13:46",
+  "time": "26 Nov 19:26",
+  "source": "Mint",
+  "category": "DEAL/ORDER",
+  "headline": "Multibagger small-cap stock announces 5:9 bonus issue; shares jump over 800% in 1 year | Record date, key details",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 19:26",
+  "source": "GoogleNews",
+  "category": "APPROVAL",
+  "headline": "NSE receives RBI nod for introduction of corporate bond index futures; what investors should know - Upstox",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 19:26",
+  "source": "GoogleNews",
+  "category": "CRASH/SHOCK",
+  "headline": "INDIA BONDS-India bonds tumble as Brent tops $95 per barrel, RBI flags food inflation risks - bfsi.economictimes.indiatimes.com",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "26 Nov 19:26",
+  "source": "GoogleNews-Business",
+  "category": "CRASH/SHOCK",
+  "headline": "Dollar boosted by safety bid as stocks tumble - Reuters",
+  "event": "yes",
+  "hint": "SHORT-lean headline"
+ },
+ {
+  "time": "26 Nov 19:26",
+  "source": "CNBC-TV18",
+  "category": "APPROVAL",
+  "headline": "NSE gets RBI nod to introduce corporate bond index futures",
+  "event": "no",
+  "hint": "LONG-lean headline"
+ },
+ {
+  "time": "26 Nov 19:26",
   "source": "CNBC-TV18",
   "category": "APPROVAL",
   "headline": "Zydus Lifesciences shares rise after USFDA issues EIRs for two facilities",
@@ -440,7 +456,7 @@
   "hint": "LONG-lean headline"
  },
  {
-  "time": "26 Nov 13:46",
+  "time": "26 Nov 19:26",
   "source": "CNBC-TV18",
   "category": "DEAL/ORDER",
   "headline": "Prosus revenue jumps 59% to $5.7 billion in first half of FY27; $5 billion buyback on track",
@@ -448,7 +464,7 @@
   "hint": "LONG-lean headline"
  },
  {
-  "time": "26 Nov 13:46",
+  "time": "26 Nov 19:26",
   "source": "CNBC-TV18",
   "category": "APPROVAL",
   "headline": "Cipla shares rise 3% after USFDA nod for asthma treatment drug",
@@ -456,26 +472,10 @@
   "hint": "LONG-lean headline"
  },
  {
-  "time": "26 Nov 13:46",
+  "time": "26 Nov 19:26",
   "source": "CNBC-TV18",
   "category": "CRASH/SHOCK",
   "headline": "Bitcoin slips below $60,000: What's driving the sell-off and what happens next",
-  "event": "yes",
-  "hint": "SHORT-lean headline"
- },
- {
-  "time": "26 Nov 13:46",
-  "source": "CNBC-TV18",
-  "category": "APPROVAL",
-  "headline": "Marksans Pharma shares fall 3% after USFDA flags six observations at Goa facility",
-  "event": "no",
-  "hint": "LONG-lean headline"
- },
- {
-  "time": "26 Nov 13:46",
-  "source": "CNBC-TV18",
-  "category": "CRASH/SHOCK",
-  "headline": "Gold, silver recover after sharp sell-off: Key triggers for prices this week",
   "event": "yes",
   "hint": "SHORT-lean headline"
  }
