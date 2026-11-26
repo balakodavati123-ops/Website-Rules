@@ -1,7 +1,8 @@
 """The CEO's inbox: instructions arrive as GitHub issues whose title starts with "CEO", opened from buttons on the dashboard.
 
 Only the repository owner's issues are obeyed (the repository is public, so anyone could open one); others are closed with a note.
-Recognised titles: CEO APPROVE <request id>, CEO REJECT <request id>, CEO PAUSE <team>, CEO RESUME <team>, CEO CLOSE <trade id>; anything else is passed to the
+Recognised titles: CEO APPROVE <request id>, CEO REJECT <request id>, CEO APPROVE STRATEGY <strategy id>, CEO REJECT STRATEGY <strategy id>,
+CEO PAUSE <team>, CEO RESUME <team>, CEO CLOSE <trade id>; anything else is passed to the
 COO as a note. The COO's reply is posted as a comment and the issue is closed.
 """
 from __future__ import annotations

@@ -9,3 +9,4 @@ dashboard/pack/
 !docs/data/
 !docs/data/*.json
 server/*_pb2.py
+quant/results/factory/

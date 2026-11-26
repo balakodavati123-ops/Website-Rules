@@ -1,0 +1,54 @@
+# Strategy research: five research agents split the strategy factory equally (each runs one shard of about 460 NIFTY strategies on the
+# 1-minute database), then a combine step picks strategies on 2022-23, checks them on 2024 and shows 2025-26 once, runs the multi-day
+# strategies, and commits docs/data/research.json for the dashboard's Backtest tab. Weekly, and on demand.
+name: research
+on:
+  schedule:
+    - cron: "17 2 * * 6"          # Saturday 07:47 IST
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: research
+  cancel-in-progress: false
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      matrix:
+        shard: [0, 1, 2, 3, 4]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - name: The 1-minute NIFTY data from the charts branch
+        run: |
+          mkdir -p /tmp/db && git fetch -q --depth=1 origin charts && git archive FETCH_HEAD | tar -x -C /tmp/db --wildcards 'nifty50_1m_*.bin.gz'
+      - name: Research agent ${{ matrix.shard }} runs its share
+        run: node quant/strategy_factory.js /tmp/db --shard ${{ matrix.shard }} --of 5 --random 200
+      - uses: actions/upload-artifact@v4
+        with: { name: "shard-${{ matrix.shard }}", path: "quant/results/factory/shard_${{ matrix.shard }}.json", retention-days: 7 }
+  combine:
+    needs: agent
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - uses: actions/download-artifact@v4
+        with: { path: /tmp/shards, pattern: "shard-*", merge-multiple: true }
+      - name: Data
+        run: |
+          mkdir -p /tmp/db && git fetch -q --depth=1 origin charts && git archive FETCH_HEAD | tar -x -C /tmp/db --wildcards 'nifty50_1m_*.bin.gz'
+      - name: Combine the agents, run the multi-day strategies
+        run: |
+          mkdir -p quant/results/factory && cp /tmp/shards/shard_*.json quant/results/factory/
+          node quant/swing_factory.js /tmp/db
+          node quant/factory_combine.js
+      - name: Commit the results
+        run: |
+          git config user.name desk-bot && git config user.email desk-bot@users.noreply.github.com
+          git add docs/data/research.json quant/results/factory.json quant/results/swing_factory.json
+          git diff --cached --quiet || { git commit -q -m "research: strategy factory results"; for i in 1 2 3; do git pull -q --rebase -X theirs && git push -q && break || sleep 5; done; }

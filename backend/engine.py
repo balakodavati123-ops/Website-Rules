@@ -45,6 +45,7 @@ import news_pulse as NP     # noqa: E402
 import straddle_lab as SL   # noqa: E402
 import ema_vwap_live as EV  # noqa: E402
 import fno_view as FV       # noqa: E402
+import broker as BR         # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = Path(os.environ.get("DESK_DOCS") or ROOT / "docs" / "data")
@@ -90,6 +91,7 @@ def OF_opens(token: str, led: list[dict]) -> dict:
     return {s: float((q.get(k, {}).get("ohlc") or {}).get("open") or 0) or None for s, k in keys.items()}
 
 
+FOCUS_OFF = [x.strip() for x in os.environ.get("DESKS_OFF", "COMMODITY,CRYPTO").split(",") if x.strip()]     # buckets that open no new trades
 HOL = {"day": None, "name": "", "closed": [], "open": {}, "at": 0.0}       # today's exchange holiday, from Upstox (refreshed once a day)
 EXCH = {"EQUITY": "NSE", "FNO": "NFO", "COMMODITY": "MCX"}
 
@@ -460,6 +462,16 @@ def run() -> None:
                 with clock:
                     CO.apply(cst, {"kind": c.get("kind", "note"), "arg": c.get("arg", ""), "text": c.get("text", "")}, at)
 
+    def strategy_approval(kind: str, sid: str, at) -> str:
+        """Record the CEO's decision on a researched strategy. Approval means paper trading on the desk; real money needs a separate
+        live approval and the execution switch (EXEC_MODE=live with its confirmation phrase)."""
+        ap = load("approvals.json", {"strategies": []})
+        ap["strategies"] = [x for x in ap["strategies"] if x.get("id") != sid] + [{"id": sid, "decision": "approved" if kind == "approve" else "rejected",
+                                                                                   "stage": "paper" if kind == "approve" else None, "at": str(at)}]
+        save("approvals.json", ap)
+        return (f"Approved for paper trading: {sid}. It trades on paper first; real orders need a separate live approval."
+                if kind == "approve" else f"Rejected: {sid}. It will not be traded.")
+
     def ceo_inbox(at) -> None:
         """Instructions from the CEO (GitHub issues titled CEO ..., owner only): apply them and answer."""
         gt, repo = os.environ.get("GITHUB_TOKEN"), os.environ.get("GITHUB_REPOSITORY")
@@ -471,6 +483,8 @@ def run() -> None:
                 continue
             if cmd["kind"] == "close":
                 text = ceo_close(cmd["arg"], at)
+            elif cmd["kind"] in ("approve", "reject") and cmd["arg"].upper().startswith("STRATEGY "):
+                text = strategy_approval(cmd["kind"], cmd["arg"][9:].strip(), at)
             else:
                 with clock:
                     text = CO.apply(cst, cmd, at)
@@ -803,6 +817,14 @@ def run() -> None:
             except Exception as e:                                    # unknown: fall back to weekdays and market hours, try again in 5 minutes
                 status["desks"]["holiday"] = f"holiday check failed: {str(e)[:80]}"
         today, hhmm, ses = now.strftime("%Y-%m-%d"), now.strftime("%H:%M"), sessions(now)
+        if time.time() - nonlocal_state.get("broker_at", 0) >= 60:          # your broker account (read-only), once a minute
+            nonlocal_state["broker_at"] = time.time()
+            try:
+                bs_ = BR.snapshot(os.environ.get("UPSTOX_EXEC_TOKEN", "").strip(), now.isoformat(timespec="seconds"))
+                save("broker.json", bs_)
+                status["desks"]["broker"] = "connected" if bs_.get("ok") else f"not connected: {bs_.get('reason')}"
+            except Exception as e:
+                status["desks"]["broker"] = f"error: {str(e)[:80]}"
         if HOL["day"] == today and (HOL["closed"] or HOL["open"]):
             status["desks"]["holiday"] = f"{HOL['name']}: closed {', '.join(HOL['closed'])}" + (f"; open in a window: {', '.join(HOL['open'])}" if HOL["open"] else "")
             gone = void_holiday_trades([xb, eq], today, now)
@@ -818,6 +840,9 @@ def run() -> None:
         rm = A.rooms(nonlocal_state.get("tick") or compose()[0])
         for tm_ in cst["paused_teams"]:                 # a team the CEO paused gets no money for new trades
             b_ = next((t["bucket"] for t in CO.TEAMS if t["id"] == tm_), None)
+            if b_ in rm:
+                rm[b_] = [0.0]
+        for b_ in FOCUS_OFF:                            # the CEO's focus is Equity and F&O: no new commodity or crypto trades
             if b_ in rm:
                 rm[b_] = [0.0]
         for t in unify_equity(eq) + xb["trades"]:       # keep every closed trade before the day's book resets

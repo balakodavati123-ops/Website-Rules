@@ -1,244 +1,168 @@
-# Trading Desk: a multi-agent daily research team
+# Balaji's Trading Desk
 
-A Python system where a team of LLM agents reviews a watchlist each day and
-produces **one** recommendation (or "stay in cash") plus a one-page PDF. It
-never places orders. Output is research, not investment advice.
+An algorithmic trading desk for **NSE Equity and NIFTY F&O**, run by AI agents on GitHub. It researches strategies, trades them on paper, shows everything on one dashboard, and sends real orders only after you approve.
 
-## The team
+**Dashboard:** https://balakodavati123-ops.github.io/Website-Rules/ (tabs open directly by link, for example `#bt` for Backtest and `#audit` for Audit).
 
-| Agent | What it does | Implementation |
+---
+
+## 1. The dashboard
+
+**At the top**
+- **Index cards:** NIFTY 50, Bank Nifty, Sensex and India VIX.
+- **Ticker:** index moves and the latest market headlines run continuously. Hover over it to pause.
+- **Status chips:** whether prices are live, and whether each market is open.
+- **⚡ Live prices on this device:** paste a read-only Upstox token to get tick-by-tick prices in your own browser. The token stays on your device.
+
+| Tab | What it shows |
+|---|---|
+| **Company floor** (front page) | The live office: every desk, its agents, the trades flowing through, the COO and your CEO desk. Below it, the research agents and the share of the strategy search each one ran. |
+| **Overview** | **Broker account**: wallet, holdings and today's positions from your Upstox account, refreshed every minute; the paper account until a broker token is connected. Also today's P/L, NIFTY today, agent ranking, open positions and **Close now** buttons. |
+| **Equity** | Equity desk P/L, open positions and trades (Open / Today / All days); top gainers, losers and most active; headlines; results filed; world markets; **Fundamentals** for any stock from TradingView (financials and a daily chart, BSE listing). |
+| **F&O** | **NIFTY today**: the mode (Quiet / Volatile / Highly volatile, from India VIX), the desk's call (up / down / no clear direction), the likely range, today's trade, the reasons in plain words. The NIFTY chart with the call drawn on it, the **live option chain** (21 strikes, best buyer and seller with quantities, volume, open contracts, a five-level order book), open trades by Today / Weekly / Monthly, and trade history per book. |
+| **Charts** | Live 1-minute charts for F&O and Equity with EMA 20/50, VWAP, opening range, entries, stops, targets, expected exits and the order book; plus a chart for any NSE stock with your trades on it. |
+| **Backtest** | The **strategy research** results and the **approval queue**; the **backtester** (any of the strategies, any years, your own settings, exits that protect profit, the search for settings, patterns by day / week / month); the **NIFTY 1-minute database** (download). |
+| **Audit** | Every Equity and F&O trade with its planned **risk** (₹ to the stop), **reward** (₹ to the target), **R:R**, capital, order route (paper / practice / live), status and P/L. Filter by desk, status, period or text; tap a row for the trade's full reasoning. |
+
+## 2. Connectors: only three are needed
+
+They are stored as GitHub secrets: repository **Settings → Secrets and variables → Actions → New repository secret**.
+
+| Secret | What it is | What it unlocks |
 |---|---|---|
-| Data agent | Prices, index levels, fundamentals, flows, news. Anything it cannot confirm is marked `UNVERIFIED`. | `trading_team/data.py` |
-| Screen | Ranks the watchlist with a transparent score so only the top few get LLM analysis. | `indicators.screen_score` |
-| Technical analyst | Trend, support/resistance, RSI(14), MACD, volatility. Indicators are computed in code. | `agents.run_analyst` |
-| Fundamentals analyst | Valuation and earnings from provider fields. | `agents.run_analyst` |
-| News/sentiment analyst | Headlines and FII/DII flows. Neutral when unverified. | `agents.run_analyst` |
-| Bull vs Bear | Two independent arguments for and against each candidate. | `agents.run_debate` |
-| Portfolio manager | Chooses at most one idea or NO_TRADE, with a proposed stop and target. Sees the track record. | `agents.run_portfolio_manager` |
-| Risk manager | Enforces the house rules. Can veto anything. | `risk.py` |
-| Ledger agent | Logs every decision, settles open trades against later prices, feeds win/loss stats into the next run. | `ledger.py` |
-| Report | One-page PDF of the day's decision. | `report.py` |
+| `UPSTOX_TOKEN` | Upstox **Analytics** token (read-only, long-lived) | All market data: prices, candles, option chains, the 1-minute database. *Already set.* |
+| `UPSTOX_EXEC_TOKEN` | Upstox **trading** access token for your own account (from the Upstox developer app; it expires daily at 03:30 IST) | Your wallet, holdings and positions on the Overview. Orders too, but only once execution is switched on (section 3). |
+| `CLAUDE_CODE_OAUTH_TOKEN` | From `claude setup-token` on your Claude plan (no API bill) | The AI market brief, the plain-words thesis and the analyst rounds. |
 
-Pipeline per run: data → screen → analysts → debate → portfolio manager →
-risk manager → ledger → PDF.
+GitHub itself is the fourth piece. It is already in place: it hosts the dashboard, runs the engine every market day, and carries your approvals. Approval buttons open a GitHub issue with the instruction already written; the engine obeys only issues opened by you.
 
-## Risk rules (`trading_team/config.py`)
+## 3. From research to real money: the gates
 
-- Stop-loss 3–5% below entry. Out-of-range proposals are clamped and the change is noted.
-- Target 15–30% above entry. Clamped the same way.
-- At most one idea per day.
-- **Stay in cash** when:
-  - India VIX is above 20 (configurable), or **unavailable** (conservative default),
-  - the stock's 20-day realised volatility is above 60%,
-  - the stock's price history is unverified.
-- The risk manager's veto is final. The portfolio manager cannot override it.
+Nothing places a real order until every step below is done, in order.
 
-Entry is the reference close of the run date. The ledger settles from the
-following session onward. If both stop and target fall in one bar, the stop
-is assumed first. A gap through a level fills at the open.
+1. **Research.** Every Saturday five quant agents split the strategy search equally (workflow `research`). A sixth runs the multi-day strategies. A risk agent runs random-entry strategies through the same rules, to measure luck.
+2. **Approval queue** (Backtest tab). Only strategies that held up in **all three periods** are listed:
+   - chosen on 2022–23,
+   - confirmed on 2024,
+   - shown once on 2025–26.
 
-## Strategy lab: what the desk is allowed to trade
+   **Approve** means paper trading. **Reject** removes the strategy.
+3. **Paper record.** An approved strategy trades on paper. Every trade appears in Audit, with its risk and reward worked out before entry.
+4. **Live.** Real orders need, together:
+   - a separate live approval;
+   - the secret `EXEC_MODE=live` plus `EXEC_LIVE_CONFIRM=I-UNDERSTAND-REAL-MONEY`;
+   - a valid `UPSTOX_EXEC_TOKEN`;
+   - a strategy verdict of READY FOR REVIEW (100+ paper trades, 98% confidence).
 
-`python backtest/strategy_lab.py` replays every entry strategy in
-`trading_team/strategies.py` over 5 years on the wide universe
-(`watchlists/nifty200_plus_etfs.txt`: 215 stocks plus gold and silver ETFs), under the
-desk's portfolio rules and after costs. Results go to `backtest/approved_strategies.json`.
+   Hard limits always apply: `EXEC_MAX_ORDER_RS`, `EXEC_MAX_DAY_LOSS_RS`, and the kill switch `EXEC_KILL=1`. `EXEC_MODE=sandbox` sends practice orders to Upstox's practice exchange first.
 
-- **APPROVED**: at least 100 trades, positive average result per trade with t-stat of 2 or
-  more, positive in both parts of the period, drawdown of 20% or less, positive return.
-  These criteria were fixed before the results were seen.
-- **PROBATION**: failed approval, but positive per trade and ahead of the Nifty. Tradable
-  only as a labelled experiment, so forward results build up in the ledger by strategy.
-- **REJECTED**: not traded.
+Commodities and crypto no longer open new trades (`DESKS_OFF`, default `COMMODITY,CRYPTO`).
 
-The daily run analyses only tickers with an entry signal from a tradable strategy whose
-stop and target fit the risk rules, and trades it with the tested stop and target. If
-nothing signals, the day is NO_TRADE and no model calls are made.
-`--no-strategy-gate` turns this off.
+## 4. What the research found (data: 3 Jan 2022 to 26 Nov 2026, real NIFTY 1-minute candles)
 
-Current verdicts (11 Nov 2021 to 11 Nov 2026), eight strategies tested: none APPROVED;
-`breakout_52w` and `trend_ride` on PROBATION (`trend_ride` has no fixed target, so it is outside the risk
-rules and is reported as watch-only); the rest REJECTED. The universe is today's index
-members, so every result is flattered by survivorship bias.
+### Intraday: 2,112 strategies
+- **How they were built:** 44 entry setups (EMA crossovers 5/13 … 20/50 on 3, 5 and 15-minute candles, RSI, VWAP, opening range, Supertrend, Bollinger, MACD, previous-day high/low, first 5-minute candle), each with 6 exit plans and 4 filters, and each also **faded** (the opposite trade, to profit where the taught version fails).
 
-## Company results and concalls
+| Priced as | Picked on 2022–23 | Held in 2024 | Profitable 2025–26 |
+|---|---|---|---|
+| ATM option buy (your instrument) | 0 | 0 | 0 |
+| Futures, NSE charges | 8 | 2 | 0 |
+| Before any costs | 457 | 311 | 253 (random entries: 11 of 200) |
 
-For each analysed candidate the desk also fetches:
+- **The edge before costs is real but small**, about 3–12 NIFTY points a trade. Costs are about 8–10 points a trade (option spread, time decay, ₹470 of futures charges), so intraday trading of these signals loses money.
+- **No setting of any strategy reached 80% wins with a profit factor of 2** in any period.
 
-- **Quarterly results** (Yahoo Finance): revenue, net profit and operating margin for the
-  latest quarter against the same quarter a year earlier, EPS against the consensus
-  estimate, and days to the next result. Growth is computed in code. If the year-ago
-  quarter is missing, growth is reported as unverified.
-- **The latest concall transcript**: located on the company's screener.in page and
-  downloaded from BSE, the official filing. A concall analyst summarises demand, margins,
-  guidance and risks. Each point must carry a verbatim quote; quotes not found in the
-  transcript are deleted, as are statements with figures the transcript does not contain.
-  With no verified quote, the concall view is set to neutral.
+### Your EMA crossover
+- **Last 5 sessions:** EMA 9/21 on 5-minute NIFTY made money, 5 trades with 60% won and +₹3,354. This matches your experience.
+- **Over 5 years:** 2,037 trades, 34% won, −₹3.67 lakh.
+- **How often it wins:** it was profitable in 11 of 59 months and 82 of 257 weeks, so a good week like yours comes about one week in three.
 
-These inputs cannot be backtested (no history of past transcripts), so their value is
-measured only going forward, in the ledger. The newest transcript can be a quarter old
-when a company has reported but not yet filed its transcript; the report states its month.
+### Multi-day: held across sessions until the opposite signal or a stop
 
-## Sudden jumps: study and live watcher
+| | Picked 2022–23 | Held 2024 | Profitable 2025–26 | Profitable in every period |
+|---|---|---|---|---|
+| 162 real strategies | 75 | 34 | **31** | 53 (33%) |
+| 100 random-entry controls | 31 | 14 | 6 | 12 (12%) |
 
-`python backtest/spike_study.py CACHE_DIR` studies every NSE EQ stock (2,108 listed today)
-over 5 years: how often 10%+ jumps happen, what was filed before them, how the day
-unfolded, whether price moved before the filing, and how often a scheduled results
-announcement ends in a jump. Results are in `backtest/spike_study_results.json`.
+The best, traded as a deep in-the-money NIFTY option (estimate: 0.8 of the index move, about 4 points of time value a day):
 
-`python -m trading_team.spike_watch` watches NSE's public announcements feed during
-market hours. For each price-sensitive filing it prints what was filed, how long ago, and
-how far the price has already moved (Yahoo one-minute prices, about 30 seconds behind).
-It reacts to public filings; it does not and cannot know about them in advance.
-No model calls are used, so it costs nothing on your subscription. It needs a computer
-that stays on during market hours (09:15 to 15:30 IST).
+| Strategy | Capital per lot | 2024–26, compounded | Worst drawdown | Won |
+|---|---|---|---|---|
+| EMA 9/21, hourly, trail 3 ATR | ₹3.5 L | ×2.15 | 20% | 42% |
+| EMA 9/26, hourly, trail 3 ATR | ₹4 L | ×1.97 | 26% | 43% |
+| MACD, 2-hourly, ATR stop | ₹4 L | ×1.80 | 23% | 44% |
+| EMA 9/21 + ADX 20+, hourly | ₹4 L | ×1.76 | 22% | 44% |
 
-## Order tickets (no orders are placed)
+- **"Capital per lot"** is 3.3 times the worst one-lot drawdown of 2022–23, so a bad streak costs about 30% of the account. One NIFTY lot swings more than ₹1 lakh in a bad streak; at ₹1 lakh per lot, accounts were wiped out in the test.
+- **Compounding:** the account adds a lot for each multiple of that capital, so profits are reinvested every day instead of sitting idle.
+- **Realistic return:** about 25–30% a year, with about a 20% drawdown. Not 70–80%.
+- **The option figures are an estimate.** They must be checked on real option prices before any money goes in.
 
-`python -m trading_team ticket --ticker BEL --entry 393 --stop 376 --target 470 --equity 102797
---live-price 396.45 --price-time 15:15:12` prints exact numbers for a manual trade: quantity,
-limit price, stop trigger and limit, target, rupees at risk and to gain, a checklist, and the
-steps to place it in the INDmoney app. No tool available to Claude can place orders, so
-the last step is always yours.
+### About "70–80% profits" on social media
+- Posts show winners and leave out the losers.
+- SEBI's study: **91% of individual F&O traders lost money in FY24**, and 93% over FY22–FY24.
+- The desk's aim is a measured edge with controlled risk, not screenshots.
 
-The ticket refuses (DO NOT TRADE) when the stop is not below the entry, reward to risk is
-under 3, the position would exceed 30% of equity or total open risk 4%, India VIX is above 20,
-the price is older than 2 minutes, or the price is at or below the stop. It shows WAITING
-when price has run more than 0.5% above the entry: the limit rests, and you do not raise it.
-The sizing reproduces the daily report's BEL numbers exactly (see `tests/test_ticket.py`).
+## 5. Strategies traders teach, where they fail, and the fix
 
-## CEO Trading Desk dashboard
+From public sources (Zerodha Varsity, Zerodha's *In The Money*, TradingView, Groww, StockCharts, and Quantsapp's public one-year NIFTY futures backtests with costs).
 
-**What the live dashboard has now (Balaji Trading Desk):**
-- **Company floor:** one pixel-art control room (`docs/floor.js`). Each team is a row of analysts with its manager (the trader) at the end of the row, and couriers carry data from the source racks to the analysts and on to the manager, the COO and the CEO desk. The CEO desk is green while you are on the page.
-  - Designations come from `backend/company.py`: Associate, Senior Associate (a profitable record of the agent's own work), Manager, COO.
-  - When the intraday desk finds more setups than its limits allow, the COO hires an Associate for the day.
-  - Hunger and injury are gone.
-- **Live charts:** `docs/candles.js`, fed by `backend/charts_feed.py` (`candles.json`, about once a minute). One chart per desk with EMA 20 and EMA 50, each strategy's levels, the chosen strategy, entry, stop and exit dots, forecast exit lines, and the order book.
-- **IPO desk:** `backend/ipo.py` reads NSE issues, SEBI draft prospectuses (DRHP) and the news. It suggests at most one minimum lot and never applies.
-- **Strategy lab:** `backend/lab.py` moves every strategy through Proposed, Built, Tested and then Approved or Investigate (or Rejected), with seven checks on the paper record. Only Approved strategies may reach the execution gateway.
-- **Claude analysts:** `backend/llm.py`, optional, no separate bill.
-  - They run Claude Code on the GitHub runner, signed in with your own Claude plan through the `CLAUDE_CODE_OAUTH_TOKEN` repository secret (made with `claude setup-token` on your computer).
-  - Haiku reads the news about every 2.5 hours on market days; Sonnet writes the IPO notes once a day and the review after the close.
-  - Usage counts against your plan, so it is capped by the repository variables `LLM_CALLS_5H` (default 4 calls per 5 hours) and `LLM_CALLS_DAY` (default 8 a day). After the plan's limit is reached the desk rests for an hour.
+| Strategy | Where it loses | What helps (to test) |
+|---|---|---|
+| First 5-minute candle break (2R) | Quiet days, gap-ups of 0.4%+; negative without its 25 best trades | Skip big gap-ups; reverse once after a failed break before 11:00 |
+| 15-min opening range breakout | Choppy days that break and swing back (−₹2.5 L); net −₹55.8k | Fade a close back inside the range within 30 minutes |
+| Long-window ORB (9:15–11:15, 3-min) | The short side; option buying in 2025 | Long-only on spot; shorts only below the previous day's low |
+| Previous day high/low break | Choppy and quiet days, gap-ups | Fade a failed break (15-min close back inside) |
+| Gap-and-go | Big gap-downs, VIX above 14.5 | Fade the gap instead: **full-gap fade was net positive (+₹47.7k)** |
+| CPR narrow / wide | Quiet days, whipsaws | Narrow CPR: trade the break; wide: fade it |
+| EMA 9/21 crossover | Sideways markets, quiet days | 15-min with an ATR buffer and the 200-SMA filter (**+₹32.4k net**); stop crossovers after 3 before noon |
+| 9 EMA × VWAP | Quiet days, weekly expiry | VWAP slope filter (needs futures volume) |
+| VWAP + RSI fade | Trend days (−₹2 L) | After two stopped fades, trade with the move |
+| Supertrend (10,3) intraday | Quiet days, expiry | The slower Heikin-Ashi version held overnight was net positive (+₹84k) |
+| 5 EMA alert candle | Trend days; the worst result reviewed (−₹3.95 L) | Reverse when stopped |
+| Inside bar / NR7 | False breaks, high VIX | Fade the failed break |
+| Bollinger squeeze / re-entry | Choppy (squeeze) and trend (re-entry) days | Wider stops; skip expanding bands |
+| MACD 1-min scalp | Costs on quiet days (−₹1.68 L) | 15-min with ADX 25+ |
+| 9:20 short straddle | Choppy days stop both legs | Move the other leg's stop to cost (the only net-positive straddle version) |
+| 3 PM breakout | No verifiable record | Only in the day's direction |
 
-**The dashboard has one fixed link: https://balakodavati123-ops.github.io/Website-Rules/** (`docs/index.html`, published by GitHub Pages; the old Claude Artifact only forwards there). `dashboard/` holds the source of the earlier artifact version. It opens on the **Live floor**:
-a desk for each of the ten agents on a ring around the CEO, with data packets moving from the sources
-(INDmoney movers and quotes, NSE filings, CoinDCX crypto, the paper ledger) to Scout and from desk to
-desk as each name is checked. The other tabs hold holdings and profit and loss from INDmoney, the 08:45
-pre-market plan with reasons, live alerts and a chart with moving averages and a projection line, the
-paper-trading lab with the real-money gate, MCX commodities and crypto (paper only), and the morning
-briefing where the Claude agents' research run replays and the CEO's ticket waits.
+**Common lessons**
+- **Quiet days kill breakouts; trend days kill fades.** No live rule reliably tells them apart in advance. The ADX "switch regimes" router lost money in its public test.
+- **Costs turn many systems negative**, so trade less often and hold for bigger moves.
+- **Validate every filter out of sample.** Most public results cover one year only.
 
-The floor desks are fixed rules running in the browser on live INDmoney prices (`dashboard/page/floor_*.js`):
-eight hard rules, a 0 to 100 screen score and paper position sizing. They make no model calls and they
-are a screen, not a forecast; the screen has not been backtested. `node dashboard/test/floor_calc_test.js`
-checks the rules on INDmoney-shaped rows. Crypto prices come from CoinDCX in rupees, cross-checked
-against Kraken (`dashboard/make_crypto.py`), because neither needs an account and both work in India.
-Page code is in `dashboard/page/`, saved data comes from `dashboard/build_seed.py`, and
-`project/DASHBOARD_PLAYBOOK.md` says how the daily session keeps it fresh.
+## 6. Risk on every trade
 
-## The morning flow
+- **Before entry,** each trade has a stop and a target. The Audit tab shows risk (₹ to the stop), reward (₹ to the target), R:R and capital.
+- **Position size** comes from the account, not from a guess: capital per lot (above), the desk's money limits, and daily loss caps.
+- **Exits protect profit:** trailing stops, breakeven moves, momentum exits and time stops, all tested in the backtester.
 
-`project/MORNING_PLAYBOOK.md` is the step-by-step for the daily Claude session: settle
-yesterday, run the analysis (writes `reports/YYYY-MM-DD.json`), read the live price from
-INDmoney, then `ticket --from-json ... --mode open --live-price ...` to get a READY, WAITING or
-DO NOT TRADE ticket. `--mode open` enters at the live price with the strategy's own stop and
-target percentages, as backtested, and refuses if the price has gapped more than 3% from the
-analysed close. `board` prints INDmoney's mover lists with tags (thin, at circuit, already up
-15%+). Movers are context only. The INDmoney connector works inside Claude sessions, not in
-the Python scripts, so the live price is passed in as an argument.
+## 7. Data and schedule
 
-## How sure are we that a strategy works?
+- **NIFTY 50 1-minute database:** every minute since 3 Jan 2022, in one SQLite file (`nifty50_1m.sqlite` on the `charts` branch), updated after every close.
+  - The view `nifty50_1m` has day, time, open, high, low and close.
+  - The table `days` has one row per session, with NSE's official close.
+- **Engine:** runs through market hours on GitHub Actions and publishes to the dashboard about every 15 seconds. It skips exchange holidays.
+- **Research:** every Saturday (workflow `research`), or on demand from GitHub → Actions → research → Run workflow.
 
-`python backtest/confidence.py` measures how likely each strategy's true average result per
-trade is above zero. "99% confidence" does not mean a 99% win rate. Results (5 years):
+## 8. Words used on the dashboard
 
-| Strategy | Trades | Avg R | Naive | Month-clustered | After correcting for 8 tries |
-|---|---|---|---|---|---|
-| breakout_52w | 289 | +0.24 | 97.3% | 97.4% | 81.0% |
-| trend_ride | 179 | +0.50 | 92.9% | 90.9% | 46.5% |
-| earnings_drift | 111 | +0.24 | 91.7% | 88.3% | 36.9% |
-| breakout_52w_trail | 174 | +0.23 | 84.2% | 83.9% | 24.6% |
-| others | | | below 70% | | below 5% |
+| Term | Meaning |
+|---|---|
+| **Profit factor (PF)** | Money won ÷ money lost; above 1 makes money. |
+| **Win rate** | Share of trades that made money. |
+| **Drawdown** | The fall from the account's high point. |
+| **R:R** | Reward ÷ risk planned at entry. |
+| **ATR** | The market's typical candle size; used to set stops. |
+| **EMA** | Exponential moving average. |
+| **VWAP** | Session average price. |
+| **ITM option** | An option already in profit at the strike: it moves almost like the index and loses less time value. |
+| **Paper** | Simulated trades with real prices, no money. |
+| **Practice (sandbox)** | Upstox's practice exchange. |
+| **Live** | Real orders. |
 
-The best strategy would need about 424 trades at its current average to reach 99%, and that
-assumes its edge is real. None is validated. They stay on probation or rejected.
+---
 
-## Guardrails against bad data and hallucination
+*Research and paper trading. Not investment advice. Past results do not promise future returns.*
 
-These run in code, after each model reply:
-
-- **Freshness:** price history whose last bar is more than 4 calendar days old is
-  treated as unverified. No trade can rest on stale prices.
-- **Grounding:** every figure quoted in an analyst summary, a bull or bear argument,
-  or the PM rationale must match a value in the data the agent was given. A figure
-  that matches nothing is removed (analysts, debate) or voids the trade (PM).
-- **Schema:** the PM reply must be valid JSON with a known action, a candidate ticker,
-  numeric stop and target, and confidence between 0 and 1. Anything else becomes NO_TRADE.
-- **Unverified fields:** every missing or unconfirmed value is labelled and listed on
-  the report.
-
-Limits: these checks catch invented numbers and malformed output. They cannot verify
-that the source data itself is correct. The data is end-of-day, not live. See
-`project/PORTFOLIO_MANAGER_INSTRUCTIONS.md` for the instructions to use with the agents.
-
-## Setup
-
-```bash
-pip install -r requirements.txt
-cp watchlist.example.txt watchlist.txt  # edit with your tickers (NSE uses .NS)
-```
-
-The agents need Claude. There are two ways to provide it:
-
-- **Claude subscription (default, no extra cost).** If the `claude` command (Claude Code)
-  is installed and logged in, the agents run through it. Calls count against your
-  subscription's usage limits. A run of five candidates is 26 calls and takes about 80 seconds.
-- **API key (pay per use).** Set `ANTHROPIC_API_KEY` and the agents use the API instead.
-
-`--llm cli` or `--llm api` forces one or the other.
-
-## Usage
-
-```bash
-python -m trading_team run --watchlist watchlist.txt   # daily run, writes reports/YYYY-MM-DD.pdf
-python -m trading_team screen --watchlist watchlist.txt  # verified prices + indicators as JSON, no API key
-python -m trading_team settle                          # check open trades against later prices
-python -m trading_team stats                           # win rate, average return, counts
-```
-
-Run `settle` before `run` each day so the portfolio manager sees current results.
-Schedule both with cron or a scheduled task.
-
-## Data honesty
-
-- Price history and fundamentals come from Yahoo Finance via `yfinance`. These are
-  free and unofficial. They can be delayed, incomplete, or change without notice.
-- **FII/DII flows have no verified free source configured.** They are always reported as
-  `Data Unverified` until you add a provider that implements `flows()`.
-- News headlines are best-effort. Missing headlines are reported as unverified.
-- Every report lists the Data Unverified items it used.
-
-## Tests
-
-```bash
-python -m pytest -q tests
-```
-
-The suite uses a synthetic data provider and a fake LLM, so it runs offline. It
-covers the indicators, data validation, each risk rule, ledger settlement (target,
-stop, gap, stop-first, still open) and the end-to-end pipeline.
-
-## Extending
-
-- Add a data source: implement the `DataProvider` protocol in `data.py`.
-- Change the team: each agent is a prompt plus a function in `agents.py`.
-  Agents are independent and easy to swap or add.
-- Change the model: `--model` on the CLI, or `Settings.model`.
-
-## Disclaimer
-
-Research output from an automated process. Not investment advice. Markets can
-move against any recommendation, and the stop-loss does not guarantee a fill
-price. Verify every figure before acting.
+Older documentation of the research-team tools: [docs/legacy-research-team.md](docs/legacy-research-team.md).

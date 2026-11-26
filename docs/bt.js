@@ -181,6 +181,33 @@
       out: function (B, X, j, side) { return side === 1 ? B.c[j] < X.es[j] : B.c[j] > X.es[j]; } }];
   STRATS.forEach(function (s) { s.params = s.params.concat(COMMON.filter(function (c) { return !(s.fixed && c.k in s.fixed); })); });
 
+  /* ---------- strategy factory: an entry family + settings + filters + exits (+ an optional fade: the opposite trade) ---------- */
+  function cached(X, key, f) { return X.K[key] || (X.K[key] = f()); }
+  function cross(a, b, i) { return a[i - 1] <= b[i - 1] && a[i] > b[i] ? 1 : a[i - 1] >= b[i - 1] && a[i] < b[i] ? -1 : 0; }
+  var FAMILIES = {
+    ema_cross: function (B, X, i, e) { var f = cached(X, 'e' + e.fast, function () { return ema(B.c, e.fast); }), s = cached(X, 'e' + e.slow, function () { return ema(B.c, e.slow); }); return cross(f, s, i); },
+    rsi_revert: function (B, X, i, e) { var r = cached(X, 'r' + e.n, function () { return rsi(B.c, e.n); }); return r[i - 1] < e.lo && r[i] >= e.lo ? 1 : r[i - 1] > 100 - e.lo && r[i] <= 100 - e.lo ? -1 : 0; },
+    rsi_momo: function (B, X, i, e) { var r = cached(X, 'r' + e.n, function () { return rsi(B.c, e.n); }); return r[i - 1] <= 50 + e.t && r[i] > 50 + e.t ? 1 : r[i - 1] >= 50 - e.t && r[i] < 50 - e.t ? -1 : 0; },
+    vwap_cross: function (B, X, i, e) { var v = X.S.vwap, d = B.c[i - 1] <= v[i - 1] && B.c[i] > v[i] ? 1 : B.c[i - 1] >= v[i - 1] && B.c[i] < v[i] ? -1 : 0;
+      if (d && e.confirm) { var f = cached(X, 'e9', function () { return ema(B.c, 9); }), s = cached(X, 'e21', function () { return ema(B.c, 21); }); if ((f[i] - s[i]) * d <= 0) return 0; } return d; },
+    orb: function (B, X, i, e) { var S = cached(X, 'or' + e.m, function () { return session(B, e.m); }); if (!S.orDone[i - 1]) return 0; var d = S.di[i], k = 'orb_' + e.m;
+      var sig = B.c[i] > S.orH[i] && B.c[i - 1] <= S.orH[i] ? 1 : B.c[i] < S.orL[i] && B.c[i - 1] >= S.orL[i] ? -1 : 0; if (!sig) return 0; X[k] = X[k] || {}; if (X[k][d]) return 0; X[k][d] = 1; return sig; },
+    st_flip: function (B, X, i, e) { var st = cached(X, 'st' + e.n + '_' + e.m, function () { return supertrend(B, e.n, e.m, atr(B, e.n)); }); return st.dir[i] !== st.dir[i - 1] ? st.dir[i] : 0; },
+    bb_break: function (B, X, i, e) { var m = cached(X, 'sma20', function () { return sma(B.c, 20); }), sd = cached(X, 'sd20', function () { return stdev(B.c, 20, m); });
+      var hi = m[i] + e.k * sd[i], lo = m[i] - e.k * sd[i], hp = m[i - 1] + e.k * sd[i - 1], lp = m[i - 1] - e.k * sd[i - 1]; return B.c[i] > hi && B.c[i - 1] <= hp ? 1 : B.c[i] < lo && B.c[i - 1] >= lp ? -1 : 0; },
+    macd_cross: function (B, X, i, e) { var m = cached(X, 'macd', function () { var a = ema(B.c, 12), b = ema(B.c, 26), l = new Float64Array(B.n); for (var j = 0; j < B.n; j++) l[j] = a[j] - b[j]; return { l: l, s: ema(l, 9) }; }); return cross(m.l, m.s, i); },
+    pdhl: function (B, X, i) { var S = X.S; if (!(S.ph[i] > 0)) return 0; return B.c[i] > S.ph[i] && B.c[i - 1] <= S.ph[i] ? 1 : B.c[i] < S.pl[i] && B.c[i - 1] >= S.pl[i] ? -1 : 0; },
+    first5: function (B, X, i) { var S = cached(X, 'or5', function () { return session(B, 5); }); if (!S.orDone[i - 1]) return 0; var d = S.di[i], k = 'f5';
+      var sig = B.c[i] > S.orH[i] && B.c[i - 1] <= S.orH[i] ? 1 : B.c[i] < S.orL[i] && B.c[i - 1] >= S.orL[i] ? -1 : 0; if (!sig) return 0; X[k] = X[k] || {}; if (X[k][d]) return 0; X[k][d] = 1; return sig; },
+    random: function (B, X, i, e) { var r = Math.sin((B.t[i] + e.seed * 7919) * 12.9898) * 43758.5453; r -= Math.floor(r); return r < e.p ? (r < e.p / 2 ? 1 : -1) : 0; } };
+  /* spec: { id, family, tf, entry: {...}, fade, filters: {adxMin, adxMax, vwapSide}, exits: {stopAtr, targetR, trail, trailAfter, be, flip}, from, to, exit, maxTrades } */
+  function compose(spec) {
+    var f = FAMILIES[spec.family], x = spec.exits || {}, fade = spec.fade ? -1 : 1;
+    return { id: spec.id, name: spec.id, tf: spec.tf || 5, params: [], fixed: { from: spec.from || '09:30', to: spec.to || '14:30', exit: spec.exit || '15:15', maxTrades: spec.maxTrades || 3 },
+      filters: spec.filters || {}, exits: { noTarget: x.targetR ? 0 : 1, trail: x.trail || 0, trailAfter: x.trailAfter || 0, be: x.be || 0, flip: x.flip || 0 },
+      entry: function (B, X, i) { if (i < 30) return null; var d = f(B, X, i, spec.entry || {}) * fade; if (!d) return null; var stp = (x.stopAtr || 1) * X.A[i]; return { side: d, stp: stp, tgt: x.targetR ? x.targetR * stp : 1e9 }; } };
+  }
+
   function defaults(s) { var P = {}; s.params.forEach(function (p) { P[p.k] = p.v; }); return Object.assign(P, s.fixed || {}); }
 
   /* ---------- money: index points, NIFTY futures, or an at-the-money option (estimate) ---------- */
@@ -200,15 +227,15 @@
   /* ---------- the engine ---------- */
   function prepare(D, strat, P, tf) {
     var C = D._bars || (D._bars = {}), B = C[tf] || (C[tf] = bars(D, tf));          // cached on this dataset only
-    var X = { A: atr(B, 14), S: session(B, 15) };
+    var K = B._x || (B._x = {}), X = { A: K.A || (K.A = atr(B, 14)), S: K.S || (K.S = session(B, 15)), K: K, B: B };
     if (strat.prep) strat.prep(B, P, X);
     if (strat.id === 'gap_fill') { X.first = B.days.map(function (d) { var i = d.a; while (i < d.b - 1 && B.m[i] + B.tf < OPEN + 15) i++; return B.c[i]; }); }
     return { B: B, X: X };
   }
   function run(D, sid, opts) {
     opts = opts || {};
-    var strat = STRATS.filter(function (s) { return s.id === sid; })[0]; if (!strat) throw new Error('unknown strategy ' + sid);
-    var P = Object.assign(defaults(strat), opts.params || {}), tf = +(opts.tf || strat.tf), F = opts.filters || {}, mode = opts.mode || 'index', E = opts.exits || {};
+    var strat = typeof sid === 'object' ? sid : STRATS.filter(function (s) { return s.id === sid; })[0]; if (!strat) throw new Error('unknown strategy ' + sid);
+    var P = Object.assign(defaults(strat), opts.params || {}), tf = +(opts.tf || strat.tf), F = Object.assign({}, strat.filters || {}, opts.filters || {}), mode = opts.mode || 'index', E = Object.assign({}, strat.exits || {}, opts.exits || {});
     var M = Object.assign({}, MODES[mode].defaults, opts.money || {}), pr = opts.pre || prepare(D, strat, P, tf), B = pr.B, X = pr.X;
     if (E.flip && !X.e9x) X.e9x = ema(B.c, 9);
     var from = toMin(P.from), to = toMin(P.to), ex = toMin(P.exit), d0 = opts.start || '0000', d1 = opts.end || '9999', trades = [], sessions = 0;
@@ -243,6 +270,7 @@
         var sig = strat.entry(B, X, i, P); if (!sig || !(sig.tgt > 0) || !(sig.stp > 0)) continue;
         if (F.vwapSide && sig.side * (B.c[i] - X.S.vwap[i]) < 0) continue;
         if (F.adxMin && (X.adxF || (X.adxF = adx(B, 14)))[i] < F.adxMin) continue;
+        if (F.adxMax && (X.adxF || (X.adxF = adx(B, 14)))[i] > F.adxMax) continue;
         if (F.skipExpiry && isExpiry(d.day, d.dow)) continue;
         if (F.onlyExpiry && !isExpiry(d.day, d.dow)) continue;
         var e = B.o[i + 1];
@@ -251,6 +279,36 @@
     });
     return { strategy: strat.id, name: strat.name, params: P, tf: tf, mode: mode, unit: MODES[mode].unit, money: M, filters: F, exits: E, sessions: sessions, trades: trades, stats: stats(trades, sessions) };
   }
+  /* ---------- multi-day (positional) mode: candles run across sessions, the trade is held overnight until its exit ----------
+     Entry at the next candle's open after the signal; exits: the opposite signal (stop and reverse), an ATR stop from entry, a trailing stop;
+     gaps between sessions fill at the open. Money: one NIFTY futures lot with NSE's charges and slippage. */
+  function runSwing(D, spec, opts) {
+    opts = opts || {}; var tf = spec.tf || 60, C = D._bars || (D._bars = {}), B = C[tf] || (C[tf] = bars(D, tf)), K = B._x || (B._x = {});
+    var X = { A: K.A || (K.A = atr(B, 14)), S: K.S || (K.S = session(B, 15)), K: K, B: B }, f = FAMILIES[spec.family], x = spec.exits || {}, fl = spec.filters || {}, M = Object.assign({}, MODES.futures.defaults, opts.money || {});
+    var dayOf = new Array(B.n); B.days.forEach(function (d) { for (var i = d.a; i < d.b; i++) dayOf[i] = d.day; });
+    var ad = fl.adxMin ? (K.adx || (K.adx = adx(B, 14))) : null, T = [], pos = null, d0 = opts.start || '0000', d1 = opts.end || '9999';
+    function close(i, px, why) { var tr = { day: pos.day, exitDay: dayOf[i], side: pos.side, entry: pos.entry, exit: px, pts: pos.side * (px - pos.entry), why: why, bars: i - pos.i, inT: hhmm(pos.m), outT: hhmm(B.m[i]), holdMin: (i - pos.i) * tf, dow: pos.dow };
+      tr.mfe = Math.max(pos.side * (pos.best - pos.entry), tr.pts, 0); tr.net = money(tr, 'futures', M); T.push(tr); pos = null; }
+    for (var i = 30; i < B.n - 1; i++) {
+      if (pos) {
+        var s = pos.side, o = B.o[i];
+        if (x.trail && s * (pos.best - pos.entry) >= (x.trailAfter || 0) * pos.atr) { var ts = pos.best - s * x.trail * pos.atr; if (s * (ts - pos.stop) > 0) pos.stop = ts; }
+        if (pos.stop != null && s * (o - pos.stop) <= 0) close(i, o, 'stop (gap)');
+        else if (pos.stop != null && (s === 1 ? B.l[i] <= pos.stop : B.h[i] >= pos.stop)) close(i, pos.stop, 'stop');
+        else { if (s === 1 ? B.h[i] > pos.best : B.l[i] < pos.best) pos.best = s === 1 ? B.h[i] : B.l[i]; }
+      }
+      var sig = f(B, X, i, spec.entry || {}) * (spec.fade ? -1 : 1);
+      if (!sig || dayOf[i] < d0 || dayOf[i] > d1) continue;
+      if (pos && pos.side === sig) continue;
+      if (pos) close(i + 1, B.o[i + 1], 'opposite signal');
+      if (ad && ad[i] < fl.adxMin) continue;
+      var e = B.o[i + 1], dd = B.days[X.S.di[i + 1]];
+      pos = { side: sig, entry: e, i: i + 1, m: B.m[i + 1], day: dayOf[i + 1], dow: dd ? dd.dow : 0, best: e, atr: X.A[i], stop: x.stopAtr ? e - sig * x.stopAtr * X.A[i] : null };
+    }
+    if (pos) close(B.n - 1, B.c[B.n - 1], 'still open');
+    return { strategy: spec.id, mode: 'futures', unit: '₹', trades: T, stats: stats(T, B.days.filter(function (d) { return d.day >= d0 && d.day <= d1; }).length) };
+  }
+
   /* NIFTY weekly expiry: Thursday until August 2025, Tuesday from September 2025 (holidays move it a day earlier; not modelled) */
   function isExpiry(day, dow) { return day < '2025-09-01' ? dow === 4 : dow === 2; }
 
@@ -329,5 +387,5 @@
   }
 
   return { decode: decode, concat: concat, bars: bars, ema: ema, rsi: rsi, atr: atr, adx: adx, supertrend: supertrend, session: session, STRATS: STRATS, MODES: MODES,
-    defaults: defaults, futFees: futFees, run: run, stats: stats, breakdown: breakdown, grid: grid, patterns: patterns, isExpiry: isExpiry, hhmm: hhmm };
+    defaults: defaults, futFees: futFees, money: money, compose: compose, runSwing: runSwing, FAMILIES: FAMILIES, run: run, stats: stats, breakdown: breakdown, grid: grid, patterns: patterns, isExpiry: isExpiry, hhmm: hhmm };
 });
