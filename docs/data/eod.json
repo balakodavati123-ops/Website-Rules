@@ -1,11 +1,11 @@
 {
  "day": "2026-11-26",
- "trades": 18,
- "closed": 17,
+ "trades": 19,
+ "closed": 18,
  "open": 1,
  "wins": 8,
- "win_rate": 47,
- "pnl": -5091.99,
+ "win_rate": 44,
+ "pnl": -5175.2,
  "by_desk": {
   "EQUITY": {
    "trades": 13,
@@ -16,8 +16,8 @@
    "pnl": -5611.27
   },
   "COMMODITY": {
-   "trades": 2,
-   "pnl": 689.38
+   "trades": 3,
+   "pnl": 606.17
   },
   "CRYPTO": {
    "trades": 0,
@@ -28,7 +28,12 @@
   {
    "strategy": "mcx_momentum",
    "n": 2,
-   "pnl": 689.38
+   "pnl": 625.38
+  },
+  {
+   "strategy": "mcx_pullback",
+   "n": 1,
+   "pnl": -19.21
   },
   {
    "strategy": "scalp_vwap_pullback",
@@ -46,7 +51,7 @@
    "pnl": -4695.0
   }
  ],
- "equity": 120507.05,
+ "equity": 120423.84,
  "best": {
   "label": "Natural gas mini short",
   "pnl": 982.39
@@ -64,7 +69,7 @@
   "pnl": 0
  },
  "notes": [
-  "18 trades: 8 won and 9 lost of 17 closed; net -5,092 rupees.",
-  "Best market: COMMODITY (+689). Weakest: FNO (-5,611)."
+  "19 trades: 8 won and 10 lost of 18 closed; net -5,175 rupees.",
+  "Best market: COMMODITY (+606). Weakest: FNO (-5,611)."
  ]
 }

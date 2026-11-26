@@ -14,13 +14,13 @@
  {
   "desk": "COMMODITY",
   "strategy": "mcx_pullback",
-  "closed": 6,
-  "wins": 2,
-  "win_rate": 33.3,
-  "pnl_rs": -643.56,
-  "avg_rs": -107.26,
-  "t_stat": -0.5,
-  "confidence": 30.8,
+  "closed": 7,
+  "wins": 3,
+  "win_rate": 42.9,
+  "pnl_rs": -472.77,
+  "avg_rs": -67.54,
+  "t_stat": -0.36,
+  "confidence": 35.8,
   "verdict": "COLLECTING"
  },
  {

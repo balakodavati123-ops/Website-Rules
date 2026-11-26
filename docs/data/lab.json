@@ -2,7 +2,7 @@
  "stages": [
   {
    "stage": "PROPOSED",
-   "n": 1
+   "n": 0
   },
   {
    "stage": "BUILT",
@@ -26,23 +26,6 @@
   }
  ],
  "strategies": [
-  {
-   "strategy": "scalp_vwap_pullback_v2",
-   "team": "scalp",
-   "desk": null,
-   "stage": "PROPOSED",
-   "closed": 0,
-   "open": 0,
-   "net_rs": 0.0,
-   "win_rate": null,
-   "since": "26 Nov 11:15",
-   "passed": 0,
-   "checks": [],
-   "lessons": [
-    "23 of 30 trades ran out of time: demand a stronger bar and set a closer target"
-   ],
-   "request": "R261126-scalp-4"
-  },
   {
    "strategy": "crypto_breakout",
    "team": "crypto",
@@ -105,29 +88,29 @@
    "team": "mcx",
    "desk": "COMMODITY",
    "stage": "BUILT",
-   "closed": 6,
-   "open": 1,
-   "net_rs": -643.56,
-   "win_rate": 33.3,
+   "closed": 7,
+   "open": 0,
+   "net_rs": -472.77,
+   "win_rate": 42.9,
    "since": "2026-11-18",
    "passed": 1,
    "checks": [
     {
      "name": "Enough trades",
      "ok": false,
-     "value": "6 closed",
+     "value": "7 closed",
      "need": "30 or more"
     },
     {
      "name": "Profit after charges",
      "ok": false,
-     "value": "\u20b9-644",
+     "value": "\u20b9-473",
      "need": "above \u20b90"
     },
     {
      "name": "Survives double costs",
      "ok": false,
-     "value": "\u20b9-884",
+     "value": "\u20b9-753",
      "need": "above \u20b90 with one more round trip of charges per trade"
     },
     {
@@ -139,13 +122,13 @@
     {
      "name": "Beats chance",
      "ok": false,
-     "value": "targets 2 vs 2.1 by chance (z -0.12)",
+     "value": "targets 2 vs 2.5 by chance (z -0.39)",
      "need": "z of 1.0 or more"
     },
     {
      "name": "Profitable on most days",
-     "ok": null,
-     "value": "1 of 4 days",
+     "ok": false,
+     "value": "2 of 5 days",
      "need": "half the days or more, over 5+ days"
     },
     {
@@ -1656,7 +1639,19 @@
   }
  ],
  "approved": [],
- "experiments": [],
+ "experiments": [
+  {
+   "team": "scalp",
+   "name": "scalp_vwap_pullback_v2",
+   "params": {
+    "vol_x": 1.5,
+    "rr": 1.2
+   },
+   "why": "23 of 30 trades ran out of time: demand a stronger bar and set a closer target",
+   "since": "2026-11-26",
+   "replaces": "scalp_vwap_pullback"
+  }
+ ],
  "rule": "Only APPROVED strategies may reach the execution gateway; passing is a prerequisite, not proof of future profit.",
  "review": {
   "day": "2026-11-24",
