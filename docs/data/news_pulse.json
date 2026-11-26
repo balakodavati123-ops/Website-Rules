@@ -1,54 +1,73 @@
 {
- "updated_at": "2026-11-26T02:20:37+05:30",
- "scans": 1731,
+ "updated_at": "2026-11-26T08:00:59+05:30",
+ "scans": 1765,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "02:20:37"
+   "at": "08:00:59"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "02:20:37"
+   "at": "08:00:59"
   },
   "Moneycontrol": {
-   "ok": false,
+   "ok": true,
    "items": 15,
-   "at": "02:20:37"
+   "at": "08:00:59"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "02:20:37"
+   "at": "08:00:59"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "02:20:37"
+   "at": "08:00:59"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "02:20:37"
+   "at": "08:00:59"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "02:20:37"
+   "at": "08:00:59"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "02:20:37"
+   "at": "08:00:59"
   },
   "Google News": {
    "ok": true,
    "items": 10,
-   "at": "02:20:37"
+   "at": "08:00:59"
   }
  },
  "signals": [
+  {
+   "id": "N080059-4",
+   "t": "08:00:59",
+   "ts": 1795660259.117304,
+   "pub": "07:58",
+   "lag_s": 156,
+   "symbol": "AVALON",
+   "tone": "positive",
+   "score": 1.95,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Avalon Tech shares can rally another 33% after nearly doubling in 2026, HSBC says",
+   "source": "CNBC-TV18",
+   "link": "https://www.cnbctv18.com/market/avalon-technologies-share-price-can-rally-after-nearly-doubling-in-2026-hsbc-target-20041633.htm",
+   "kind": "headline",
+   "status": "new"
+  },
   {
    "id": "N012029-3",
    "t": "01:20:29",
@@ -108,11 +127,11 @@
   }
  ],
  "stats": {
-  "last_hour": 0,
-  "positive": 0,
+  "last_hour": 1,
+  "positive": 1,
   "negative": 0,
-  "today": 3,
+  "today": 4,
   "median_lag_min": 107.6,
-  "new_this_scan": 0
+  "new_this_scan": 1
  }
 }
