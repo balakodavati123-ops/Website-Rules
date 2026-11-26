@@ -1,73 +1,73 @@
 {
- "day": "2026-11-24",
- "built_at": "09:27",
+ "day": "2026-11-26",
+ "built_at": "09:00",
  "stage": 2,
  "tone": {
   "label": "Positive",
-  "score": 3.58,
+  "score": 0.62,
   "notes": [
-   "US markets averaged +4.75% at the 23/11 close.",
-   "Asia averaged +1.83%.",
-   "Brent crude 86.4 (-6.67%).",
-   "Dollar-rupee 92.9 (+0.24%).",
-   "India VIX 17.70: normal."
+   "US markets averaged -0.18% at the 25/11 close.",
+   "Asia averaged +1.82%.",
+   "Brent crude 90.85 (-0.60%).",
+   "Dollar-rupee 92.81 (-0.12%).",
+   "India VIX 17.67: normal."
   ],
-  "as_of": "2026-11-23"
+  "as_of": "2026-11-25"
  },
  "nifty": {
-  "last": 25349.65,
-  "chg_pct": -1.75
+  "last": 26029.15,
+  "chg_pct": 0.81
  },
  "world": [
   {
    "name": "S&P 500",
-   "last": 7237.17,
-   "chg_pct": 4.73
+   "last": 7182.78,
+   "chg_pct": -0.25
   },
   {
    "name": "Nasdaq",
-   "last": 24089.56,
-   "chg_pct": 6.51
+   "last": 23585.8,
+   "chg_pct": -0.62
   },
   {
    "name": "Dow Jones",
-   "last": 49595.31,
-   "chg_pct": 3.01
+   "last": 50182.95,
+   "chg_pct": 0.33
   },
   {
    "name": "US fear index (VIX)",
-   "last": 26.62,
-   "chg_pct": -25.83
+   "last": 28.29,
+   "chg_pct": 7.32
   },
   {
    "name": "Nikkei 225",
-   "last": 58734.7,
-   "chg_pct": 4.07
+   "last": 57886.95,
+   "chg_pct": 1.54
   },
   {
    "name": "Hang Seng",
-   "last": 22292.35,
-   "chg_pct": -0.41
+   "last": 22428.72,
+   "chg_pct": 2.11
   },
   {
    "name": "Shanghai",
-   "last": 3555.49,
-   "chg_pct": 0.47
+   "last": 3484.75,
+   "chg_pct": 0.24
   },
   {
    "name": "FTSE 100",
-   "last": 10480.8,
-   "chg_pct": 1.3
+   "last": 10426.9,
+   "chg_pct": -0.38
   },
   {
    "name": "DAX",
-   "last": 25337.27,
-   "chg_pct": 2.15
+   "last": 24702.13,
+   "chg_pct": -1.26
   },
   {
    "name": "Nifty 50",
-   "last": 25349.65,
-   "chg_pct": -1.75
+   "last": 25819.25,
+   "chg_pct": 1.85
   }
  ],
  "events": [],
@@ -105,63 +105,74 @@
  ],
  "headlines": [
   {
-   "headline": "Japan core inflation picks up, makes case for BoJ rate hike stronger",
-   "category": "RBI-POLICY",
-   "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
-  },
-  {
-   "headline": "Gold price crash: Yellow metal and silver slump over 4% each on MCX",
-   "category": "CRASH/SHOCK",
-   "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
-  },
-  {
-   "headline": "Muthoot Finance heads for worst week since April 2025 as gold rout triggers sell-off",
-   "category": "CRASH/SHOCK",
-   "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
-  },
-  {
-   "headline": "Anthropic tumbles more than 10% in premarket trade as AI slump engulfs markets",
-   "category": "CRASH/SHOCK",
-   "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
-  },
-  {
-   "headline": "Global AI Sell-off: Taiwan takes action yet again to support collapsing stock market",
-   "category": "CRASH/SHOCK",
-   "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
-  },
-  {
-   "headline": "Kospi slumps nearly 4%; Asian markets fall as Wall Street sell-off deepens",
-   "category": "CRASH/SHOCK",
-   "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
-  },
-  {
-   "headline": "Gold, silver recover after sharp sell-off: Key triggers for prices this week",
-   "category": "CRASH/SHOCK",
-   "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
-  },
-  {
    "headline": "Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues",
    "category": "CRASH/SHOCK",
    "source": "CNBC-TV18",
-   "time": "24 Nov 09:27"
+   "time": "26 Nov 09:00"
+  },
+  {
+   "headline": "Bitcoin, Ether, Solana tumble in November as security breaches and regulatory uncertainty weigh",
+   "category": "CRASH/SHOCK",
+   "source": "CNBC-TV18",
+   "time": "26 Nov 09:00"
+  },
+  {
+   "headline": "TCS gains 4% as Nvidia-led tech sell-off sparks buying in Indian IT stocks",
+   "category": "CRASH/SHOCK",
+   "source": "CNBC-TV18",
+   "time": "26 Nov 09:00"
+  },
+  {
+   "headline": "The Man Who Called the 2008 Crash Has Turned Bullish. Here's What He's Buying",
+   "category": "CRASH/SHOCK",
+   "source": "NDTVProfit",
+   "time": "26 Nov 09:00"
+  },
+  {
+   "headline": "Trump's New Tariff List: India Faces 25% Duty, Is Pakistan Included? Check Country-Wise Rates",
+   "category": "GEOPOLITICS",
+   "source": "NDTVProfit",
+   "time": "26 Nov 09:00"
+  },
+  {
+   "headline": "BPCL, IOCL Stocks Remain Hurt By Iran War, But Backed By Jefferies And JPMorgan: Here's Why",
+   "category": "GEOPOLITICS",
+   "source": "NDTVProfit",
+   "time": "26 Nov 09:00"
+  },
+  {
+   "headline": "India stocks dip after RBI hikes rates for first time in nearly 4 yrs",
+   "category": "RBI-POLICY",
+   "source": "Yahoo-Nifty",
+   "time": "26 Nov 09:00"
+  },
+  {
+   "headline": "US monetary policy developments impact Indian financial markets, says RBI - News On AIR",
+   "category": "RBI-POLICY",
+   "source": "GoogleNews",
+   "time": "26 Nov 09:00"
   }
  ],
  "watch": [
+  {
+   "symbol": "WELCORP",
+   "why": [
+    "positive filing"
+   ],
+   "prev_close": 2117.5,
+   "long_above": 2130.2,
+   "short_below": 2075.15,
+   "stop_pct": 1.0,
+   "bias": "long"
+  },
   {
    "symbol": "SETCO",
    "why": [
     "results filed"
    ],
-   "prev_close": 17.38,
-   "long_above": 17.73,
-   "short_below": 17.03,
+   "prev_close": 17.04,
+   "long_above": 17.38,
+   "short_below": 16.7,
    "stop_pct": 1.0,
    "bias": "either"
   }
@@ -180,113 +191,113 @@
    "note": "Pays only on a big move; the desk skips it when its cost does not fit the F&O limit"
   }
  ],
- "outlook": "Tone positive. 1 names in the news to watch; the desks act only when price confirms: a 2% move near the day's extreme (0.6% when a filing agrees) on real turnover.",
- "world_at": 1795492655.9048939,
+ "outlook": "Tone positive. 2 names in the news to watch; the desks act only when price confirms: a 2% move near the day's extreme (0.6% when a filing agrees) on real turnover.",
+ "world_at": 1795663839.9134147,
  "gaps": {
   "up": [
    {
-    "symbol": "PERMAGN",
-    "price": 1335.9,
-    "chg_pct": 18.35
+    "symbol": "ENRIN",
+    "price": 3231.6,
+    "chg_pct": 8.81
    },
    {
-    "symbol": "HMAAGRO",
-    "price": 40.03,
-    "chg_pct": 18.05
+    "symbol": "JWL",
+    "price": 234.9,
+    "chg_pct": 5.59
    },
    {
-    "symbol": "WELSPLSOL",
-    "price": 47.66,
-    "chg_pct": 15.2
+    "symbol": "LOWVOLIETF",
+    "price": 22.92,
+    "chg_pct": 4.71
    },
    {
-    "symbol": "HITECH",
-    "price": 85.63,
-    "chg_pct": 13.51
+    "symbol": "FMCGIETF",
+    "price": 53.84,
+    "chg_pct": 3.88
    },
    {
-    "symbol": "THOMASCOOK",
-    "price": 129.39,
-    "chg_pct": 12.85
+    "symbol": "SILVERBEES",
+    "price": 142.8,
+    "chg_pct": 3.18
    },
    {
-    "symbol": "ITI",
-    "price": 276.21,
-    "chg_pct": 12.41
+    "symbol": "PVTBANIETF",
+    "price": 31.86,
+    "chg_pct": 2.41
    },
    {
-    "symbol": "SAMBHV",
-    "price": 176.9,
-    "chg_pct": 11.92
+    "symbol": "PVTBANK",
+    "price": 31.58,
+    "chg_pct": 2.37
    },
    {
-    "symbol": "INDIAGLYCO",
-    "price": 294.85,
-    "chg_pct": 11.54
+    "symbol": "SBIPVTBNK",
+    "price": 322.2,
+    "chg_pct": 2.24
    },
    {
-    "symbol": "SCPL",
-    "price": 707.0,
-    "chg_pct": 11.25
+    "symbol": "BANKBETA",
+    "price": 66.2,
+    "chg_pct": 2.11
    },
    {
-    "symbol": "WINDMACHIN",
-    "price": 354.0,
-    "chg_pct": 10.21
+    "symbol": "PHARMABEES",
+    "price": 29.66,
+    "chg_pct": 2.1
    }
   ],
   "down": [
    {
-    "symbol": "APLAPOLLO",
-    "price": 1670.0,
-    "chg_pct": -21.29
+    "symbol": "SGMART",
+    "price": 749.0,
+    "chg_pct": -9.7
    },
    {
-    "symbol": "APOLLOPIPE",
-    "price": 489.6,
-    "chg_pct": -8.49
+    "symbol": "SGFIN",
+    "price": 586.0,
+    "chg_pct": -7.01
    },
    {
-    "symbol": "TATASTEEL",
-    "price": 163.0,
-    "chg_pct": -8.43
+    "symbol": "LGEINDIA",
+    "price": 1771.9,
+    "chg_pct": -2.56
    },
    {
-    "symbol": "AMANTA",
-    "price": 204.97,
-    "chg_pct": -7.82
+    "symbol": "BAJFINANCE",
+    "price": 1120.1,
+    "chg_pct": -0.99
    },
    {
-    "symbol": "POKARNA",
-    "price": 655.6,
-    "chg_pct": -6.88
+    "symbol": "MON100",
+    "price": 294.03,
+    "chg_pct": -0.99
    },
    {
-    "symbol": "FISCHER",
-    "price": 20.8,
-    "chg_pct": -6.85
+    "symbol": "MOM30IETF",
+    "price": 30.0,
+    "chg_pct": -0.86
    },
    {
-    "symbol": "KMCSHIL",
-    "price": 189.94,
-    "chg_pct": -6.79
+    "symbol": "M&M",
+    "price": 3481.3,
+    "chg_pct": -0.8
    },
    {
-    "symbol": "EPACK",
-    "price": 154.55,
-    "chg_pct": -6.7
+    "symbol": "ALPHA",
+    "price": 49.8,
+    "chg_pct": -0.8
    },
    {
-    "symbol": "SSWL",
-    "price": 490.45,
-    "chg_pct": -6.55
+    "symbol": "MOMENTUM50",
+    "price": 52.59,
+    "chg_pct": -0.53
    },
    {
-    "symbol": "V2RETAIL",
-    "price": 151.61,
-    "chg_pct": -6.45
+    "symbol": "MARUTI",
+    "price": 14132.0,
+    "chg_pct": -0.48
    }
   ],
-  "at": "09:27"
+  "at": "09:12"
  }
 }

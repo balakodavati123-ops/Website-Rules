@@ -1,43 +1,63 @@
 {
- "mood": "mixed",
- "brief": "Indian exchanges were shut today for Guru Nanak Jayanti, so Sensex and Nifty did not trade after Monday's 1,484-point fall. Global markets rebounded on Nvidia's surge, but US tech futures are mixed as investors test the rally.",
+ "mood": "bullish",
+ "brief": "Indian shares are surging, with the Sensex up over 1,700 points and Nifty above 25,800 as IT stocks gain about 2%. Falling oil prices and a strong GIFT Nifty signal are helping, though Asian markets slid on an AI selloff and US tariff worries.",
  "themes": [
-  "Indian markets closed for holiday",
-  "Nvidia-led global rebound",
-  "Tata Motors and Hyundai price hikes",
-  "Two December IPOs lined up"
+  "Sensex rallies over 1,700 points",
+  "IT index up 2%",
+  "Oil prices fall on supply glut",
+  "Asian AI selloff and tariff worries"
  ],
  "companies": [
   {
-   "name": "Tata Motors",
-   "tone": "neutral",
-   "why": "Passenger vehicle prices to rise from December 1"
-  },
-  {
-   "name": "Hyundai",
-   "tone": "neutral",
-   "why": "Car prices to rise from December 1"
-  },
-  {
-   "name": "Navneet Education",
+   "name": "Infosys",
    "tone": "positive",
-   "why": "Prabhudas Lilladher rates Buy, target Rs 182"
+   "why": "KR Choksey says accumulate with Rs 1531 target"
   },
   {
-   "name": "Jindal Drilling and Industries",
+   "name": "HDFC Bank",
    "tone": "positive",
-   "why": "Anand Rathi rates Buy, target Rs 960"
+   "why": "Bank Nifty hits a record, bank gains"
+  },
+  {
+   "name": "APL Apollo",
+   "tone": "negative",
+   "why": "Plunges 20% to 52-week low on Tata Steel deal"
+  },
+  {
+   "name": "Tata Steel",
+   "tone": "neutral",
+   "why": "Rs 28,000-crore APL Apollo deal under scrutiny"
+  },
+  {
+   "name": "Hindustan Zinc",
+   "tone": "negative",
+   "why": "Falls as silver slumps to 14-month low"
+  },
+  {
+   "name": "Zee Entertainment",
+   "tone": "neutral",
+   "why": "Trades ex-buyback, adjusted decline of 5%"
+  },
+  {
+   "name": "Narayana Hrudayalaya",
+   "tone": "positive",
+   "why": "HSBC upgrade and higher target price"
+  },
+  {
+   "name": "Jupiter Wagons",
+   "tone": "positive",
+   "why": "Surges on Korean joint venture"
   }
  ],
- "global": "Nvidia shares rose about 31% on Jensen Huang's return, lifting Asian shares and Wall Street, while the US blacklisted an Alibaba-owned company.",
+ "global": "Asian stocks slid as an AI selloff deepened and US tariff threats weighed, while Dow futures fell.",
  "risks": [
-  "Nvidia-led rally may fade",
-  "Indian banks and metals stay weak after Monday's fall",
-  "Price hikes may dampen car demand"
+  "Asian AI selloff may spill into IT stocks",
+  "US tariff threats weigh on sentiment",
+  "Rally may fade after sharp intraday jump"
  ],
- "time": "24 Nov 16:21",
- "at": 1795517505.423574,
- "day": "2026-11-24",
+ "time": "25 Nov 11:21",
+ "at": 1795585913.129168,
+ "day": "2026-11-25",
  "model": "Claude (your plan, scheduled)",
  "n": 40
 }

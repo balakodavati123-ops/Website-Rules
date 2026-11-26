@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T05:38:49+05:30",
+ "updated_at": "2026-11-26T13:26:28+05:30",
  "ipos": [
   {
    "name": "Shree Siddhivinayak Greentech Industries Limited",
@@ -18,41 +18,54 @@
    "issue_size_cr": 93.66,
    "fresh_cr": 93.66,
    "ofs_cr": null,
-   "subscription": null,
+   "subscription": {
+    "qib": null,
+    "nii": null,
+    "retail": null,
+    "total": 0.93,
+    "as_of": null
+   },
    "drhp_url": null,
    "news": [
-    {
-     "title": "Shree Siddhivinayak Greentech Industries IPO GMP Today with Trend",
-     "source": "IPO Watch",
-     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE94ejFFMkZSZHRKLVphR3RCem9wNUxob0xUYWo0ZHFRU1VzenpVNTl5aVdHZVVSRjNyOGt6amd4eEtZVWVIUEhQd3dvLWhWcmZfZGlQUWxVNFlLVVNKeE51MjBmRzQ3NHMxSDY0X1IzY1MtcF9ERW5tRQ?oc=5",
-     "time": "2026-11-24T18:46:56Z"
-    },
     {
      "title": "Shree Siddhivinayak Greentech Industries IPO Date, Price Band, Issue Size",
      "source": "IPO Watch",
      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9Ea1BDZTI1cDdwWTlVYVREdFRXWklIUVRVRENTSHF3b3FMUWN4a2FZdWxMcThqeUZoRVhqNGlDQWl2emQyeU1HbndBMXV2Nl9JcEh0OC1FSXpWQlJVNmJrNUV5YnhLVlBOVVlsNHREbVktbTVQM0h5T1NyVlFWQQ?oc=5",
-     "time": "2026-11-24T18:40:57Z"
+     "time": "2026-11-25T17:27:02Z"
     },
     {
-     "title": "The IPO of Shree Siddhivinayak Greentech Industries Limited will open on November 25, 2026",
-     "source": "The Tribune",
-     "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOWk9kek5hX2E0VzJMVDlQLTJlVnlFVzNVVldaM2lUU05mQVZCblgxRWFGRlFwT2R3dHJGaTFra2ZZNVQyUkV4MGFlaEN6cVNFclhlRkFVS09xQzRWZnJlS0docFVZc0UyTjRxcXZ2bHZqZENSLVJwU2pzanAyU2JyZnc1Z1BPTEx1cks0cGJDWXEwNVRLemVjV0pLRG81WXZiWEN4RnZPWVZlTDlqSXVDdkxKSkJYVWlOZjdXOVNwQUtaeHd2djluVWpNakVVQdIB0gFBVV95cUxPaWlscjFPVmhLRFZIM285T0FvVTNFRHYzMkNNUUxlQ1Z6ZHBsT2Q2N1p5RW80dzRreldoOG1VZEttcFZaZGdGM3RoMVBsZkpmdGpNdkx1d3YyVjhkZV94VWVxTXY4cE1BNWRDY2laZXVzUGJDZGJPdDZFb0JUV2dpc2JLdXlHUzVfNF8ycXIzMzNkMmFodWhDU2QzN1QtYWM1YjdVcjNTNU5qdFg5LVZ2enFyMVVXLUtqU0ZNY3JUQ291cXJTMHBGblhDbXBJSVJpT3c?oc=5",
-     "time": "2026-11-23T12:17:46Z"
+     "title": "Shree Siddhivinayak Greentech Industries IPO GMP Today with Trend",
+     "source": "IPO Watch",
+     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE94ejFFMkZSZHRKLVphR3RCem9wNUxob0xUYWo0ZHFRU1VzenpVNTl5aVdHZVVSRjNyOGt6amd4eEtZVWVIUEhQd3dvLWhWcmZfZGlQUWxVNFlLVVNKeE51MjBmRzQ3NHMxSDY0X1IzY1MtcF9ERW5tRQ?oc=5",
+     "time": "2026-11-25T17:06:56Z"
     },
     {
-     "title": "IPO Weekly Roundup: Check IPO Dates, Prices, Issue Sizes for Foodlink, Matangi, Shree Siddhivinayak",
-     "source": "Analytics Insight",
-     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPa2NkNnVQZkFvQVk5R1RkTzhYTWktZ2d1WmIyWmo4N3RkU25GLTZJbzhnWjFaRE9Fc19BM2JmaEtQRzJCeVo5R3VucWFidnBGZ3ZMbEwwVWgxOVlJV1hZMmR3ZXpLaERndm5BclUtTmJRTl9nTUFXdE9zenpsZnN5NnFTM3ZPSlBoem0xUk9Wbllod0JtZHZOZjhoYTF2d0tJQjVNWERveWtSZy0yVzVkNzJyMld5bXhaZWJRcTFXZXRoLXFjbThfRGtWSERnRjlTRUgyR3duQjXSAdgBQVVfeXFMT2tjZDZ1UGZBb0FZOUdUZE84WE1pLWdndVpiMlpqODd0ZFNuRi02SW84Z1oxWkRPRXNfQTNiZmhLUEcyQnlaOUd1bnFhYnZwRmd2TGxMMFVoMTlZSVdYWTJkd2V6S2hEZ3ZuQXJVLU5iUU5fZ01BV3RPc3p6bGZzeTZxUzN2T0pQaHptMVJPVm5ZaHdCbWR2TmY4aGExdndLSUI1TVhEb3lrUmctMlc1ZDcycjJXeW14WmViUXExV2V0aC1xY204X0RrVkhEZ0Y5U0VIMkd3bkI1?oc=5",
-     "time": "2026-11-23T08:12:17Z"
+     "title": "Shree Siddhivinayak Greentech IPO Subscription Status Day 1",
+     "source": "HDFC Sky",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOcjlOT0JwTkt0Uy1RTWtNc0pkbHh2LThiWTV6N3gzUXBpNlhaSVMxUDZzSlU3Vnl4SmEwQlhrd3VaVkhjVlNCdV92Z0M0QldVUHJGcTBPdXdXVnVPVEh6clZNVlpwTzhaX1BUV2VoZDMxOVFHb2dQQVRZWmNWWWc5cUhTZ2FmbGdpMzJfWEJvb1Q3ajZaaVc2YkRiYw?oc=5",
+     "time": "2026-11-25T11:41:17Z"
+    },
+    {
+     "title": "Shree Siddhivinayak Greentech Industries IPO: Check Issue Date, Price Band, Review, Details",
+     "source": "Kotak Neo",
+     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBQcWFLNkdTaVplZHNHZXZscFlkdlRWMjVoWi1PcTZQakNTQVRsOUt4NldWYnhpaHpSWlVQTDhnSy1PbDAtSkgzdUcyRnVQUG1Bai1vbFdndTBwRTFIaGRjdjFwcm13QW9hb3AteWY2UERlUHdwR0ZrUGRqQmZrbUk?oc=5",
+     "time": "2026-11-25T09:52:02Z"
+    },
+    {
+     "title": "Shree Siddhivinayak Greentech IPO Allotment and IPO Subscription",
+     "source": "Kalkine India",
+     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPNi0yN21mOVpjdkF1c1IwY1Y5NFJnVm1tcXE1Qk9vZ19wY0t4Tmdya2VqcVVKbUF5RXVZREk0RUVqODhEd1ZTYVc5aFZyUXNrZzdtUWZHRlVndlY5WFVVQWxwdkRUemxQMENCemdvVVFjWWNBTVNxWFpjZzN0M2xYd1pjSW1xbGZNUlVpM3RfanR2WTQ1aHZsVzZ4R0hoR3Z2ckhsbl9ZSlRVVFJNeGdxU3ZxeDhlV2ZoMTNtTV82OGJmRjMw?oc=5",
+     "time": "2026-11-25T07:31:00Z"
     }
    ],
-   "thesis": null,
+   "thesis": "This SME issue opens today and closes 27 Nov at Rs 130-142 per share, with no subscription data yet, so demand is unknown. All Rs 94 crore is fresh capital for the company. SME stocks have large lots, thin trading and big price swings, and no matching DRHP was found in SEBI's recent listing. One lot of 1,000 shares costs about Rs 1.42 lakh, too large for a small bet; wait for demand data before deciding.",
    "analysis": {
-    "score": null,
+    "score": 10,
     "verdict": "Watch",
     "reasons": [
      "Fresh issue is Rs 94 cr of Rs 94 cr, money that goes to the company.",
-     "No subscription data yet: demand is the main signal and it appears only once bidding opens."
+     "Subscription: overall 0.93x (NSE gave no category split).",
+     "Bidding is still open; institutions usually bid on the last day, so an early low multiple says little. Re-check on the final day."
     ],
     "risks": [
      "SME board: lots are large, trading is thin and prices swing far more than on the mainboard. Higher risk.",
@@ -61,18 +74,18 @@
     "listing_view": {
      "low_pct": null,
      "high_pct": null,
-     "basis": "unknown until bidding opens"
+     "basis": "too early to read: overall 0.93x (NSE gave no category split); the final-day demand is not visible yet"
     },
     "listing_px": null,
     "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 142.00. No target range yet: it needs subscription numbers. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot. SME shares are thinly traded, so a sell order may not fill at the price you want.",
-    "method": "rules"
+    "method": "rules+claude"
    }
   },
   {
    "name": "Foodlink F&B Holdings (India) Limited",
    "symbol": "FOODLINK",
    "board": "Mainboard",
-   "status": "upcoming",
+   "status": "open",
    "open_date": "2026-11-26",
    "close_date": "2026-11-30",
    "listing_date": null,
@@ -85,46 +98,341 @@
    "issue_size_cr": 360.76,
    "fresh_cr": 192.0,
    "ofs_cr": 168.76,
-   "subscription": null,
+   "subscription": {
+    "qib": 0.0,
+    "nii": 0.23,
+    "retail": 1.67,
+    "total": 0.37,
+    "as_of": "26-Nov-2026 13:21:00"
+   },
    "drhp_url": null,
    "news": [
+    {
+     "title": "Foodlink F&B Holdings (India) IPO Opens Today: Issue subscribed 18% so far, 9 key things to know",
+     "source": "Zee Business",
+     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPWkM1VVlmWlljMFpnUnFtLXBYVnFBdjVmbWZBZ1JSWFRBSFkxSnh3c3BvaEVLYWtBNmlGRUdrb2dsS0ItYmlqWnBZeUlJRTFsbFJCRHFHUVJjN1lpel9JX3FwTnhNRWM4NHVwNG9ucVIzdGd3YjlJQW85X21oRExjNGh6QkVlYTJLbVZCcmFyMkQ4ejItbXZrM1JCVWJSM3N2NFUxbFZBUlFDY2tLNGoxRTZROGFWTFA5cVFCLVlqb0drYjM0VVVDczkwc3hsMU96LVNN?oc=5",
+     "time": "2026-11-26T05:47:08Z"
+    },
+    {
+     "title": "Foodlink F&B Holdings IPO: Check price band, issue size and listing date",
+     "source": "The Financial Express",
+     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdW4yTFlTOFRvMzZYN2NxOUVFQTFuWjYtczFfTWlGYVUwR01uZGRNQjhfTS1jZUhlUDRwQ2ppamo5M0hkMEl1Tm1xNk9IZWx6NmpTVS1saXVPWm14dDV2UGhHTXdDODlNa1R4QVE5SWhsTXNKdk13QXFGdS1pS3BQYU80SzRqTUh6T2NKcGRiVU55VmMyU1NRNlRaZU9ueWJhWHpLcFlrWFRZSlJzVjhPVUpwUlpJb2xGOGFfQVdZMUnSAccBQVVfeXFMTUxzRnJWZU9Sb2xTOGF1bFQ3MjFBZW51anFYUmwtMHVjcVF1S0c0M3Y1Q3dKMEFOX3l4WURWaUE4WHpiVFRyUExlanRTbWd5ckNRT1dYSTdoM3A1dTVDTlJPRGxhdXJVX0d1c2pHRldaeEZOVzViRUFLRklEYm9KdFB5QS1meWVmUDQ0ZUsxd1dhRF9TSDhSbnBPMTBwOEZNRktleEFhdFE4d1dvd3pBT1BNS0wzR1FNN294X1MzYlBDM2ZyWENCRQ?oc=5",
+     "time": "2026-11-26T05:15:49Z"
+    },
+    {
+     "title": "Foodlink F&B Holdings IPO opens for subscription today, GMP and other details investors should know",
+     "source": "India TV News",
+     "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPMVBMQ1RBd2x5b2t3NXdlLVMtbEZpc3lJUXlzRGYtTHZxdFZrb25BRC12MGtuaUx4TVB6QTA2bXNOaHVZRTQ5b0FnVnJIRU9kU21aVWJSOThLaHI3dG8tbVoyT1ZnejJ4NXVVY1VOem9Fcno4RTRJR3QwNzM4UjhkeVktaUNUVk1td1VoOUVSZEpmUE83S2wzcjhOMGpQVU14Rzk1eVBUSGlhZlVxNnFNWUZCVDhwMjFKLTRpSHlvc3RxLTVyM2xzajMtMHkwX25KQ2NCUmhJMjdXakxabndqNlZkb2otNnBWU1V6WHI5SG1FZ9IB9wFBVV95cUxNaU1Bclk3ZWtad0gwS01wUVdXNWE3VmRKaGFFOWtKendvUDE5MXB1OGZoUmIxa21UZnhWcjF2ZTJYb0pxS2xXTmNKUl9oYU4wWXlIYWUzdmFpSkJhaHdjYTBNOEpBVFp3eTBxY2ZybXRQLVlKQzBWV2tiQWZjUkpWY1NTa1ZOZm84T1ROY25kYWxLTmhhQndrR2p5RWVHc0hWTnBOb3hRVEZFd2h0Y2lWSVc5UnhIWHQzTXhSS2xabXlRNUhPREdTTTZ4M0pyelpHNHVMUmJYX1ZkWWQwM00ta1RhaTNzYkkxcllaZlMxdHAySkI0dGtv?oc=5",
+     "time": "2026-11-26T03:29:46Z"
+    },
     {
      "title": "Foodlink F&B Holdings IPO Date, Price Band, Issue Size",
      "source": "IPO Watch",
      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1lalE2aEc4a3VTcG1xOXFVemRYazJhWXBXbzBYTGVGSjNGMmJzbGt5V2FQMldfOE0wdjVFTzJqUnRlZ3RldWdQbnFMRHpsbTZUVWZmMnNaNDlDVWhkQ2l6dlRwOA?oc=5",
-     "time": "2026-11-24T17:04:32Z"
-    },
-    {
-     "title": "Foodlink F&B Holdings plans INR 361 crore IPO, subscription to open on November 26",
-     "source": "Prop News Time",
-     "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxObVhwbzhyUHh1NXlSekR1RzZpSjhrVkVCeGdEcGxCNFItcVNpU2VXQndIZlNYR0p2WHFTS3pyNmVSUk9kS0FOZzVIUnhQQ3kySjIwZUw3NnVZX2hzQ09VRmFZT2tOVmxoMmZ5ZnIwMXFhaTl1NTQyN2ZtcDdrZGx6Z3JoZmd6amtiMW9tT1lhbFZKU0EySFVPRU95VUhmOU5LVE83UGkzTFNrWVNPWEZkZFpJYVVSX2lja1QzMGkycW02TlcyZFktX1pianFOZw?oc=5",
-     "time": "2026-11-24T16:00:59Z"
+     "time": "2026-11-25T17:06:56Z"
     },
     {
      "title": "Foodlink F&B Holdings IPO GMP Today with Trend",
      "source": "IPO Watch",
      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8yc3g2MzhQY1pKQWtaNXVOQzlqZlBiZ1V0MUxnUWFseU9fVkcwYkNBTUt2Zzlham56QlBHSlRnOEV6WUNtdTBJMXVJOTlOclFOM196eGFwMHhLSFBQdUE?oc=5",
-     "time": "2026-11-24T15:48:20Z"
-    },
-    {
-     "title": "Foodlink F&B Holdings (India) IPO to Open on November 26: Price band, lot size, issue size & other key things to know",
-     "source": "Zee Business",
-     "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNdUt5UEI5VFozd0V6N3phb1FEd1FzcVROd1ZPdjFqQ0FEZmJnay1jU1Y0RzVwY3BFNEZScHVtUXBvV1JLZmhRaXVQcGlOd2YxV0duMnQxUmdWSEVadkxYbTdmVHAtWUhPRVRPd0hNVnlwZnZVSkNBR01mNWFjTEs3ckpHeEFRV1J6WWY2LThMcjVwTzN2dXBvZEM5VmVIRkhOdzg5N29pMURUOFo5YW5vdGVhTFVkOUVSMklGdUhVOTVtZVM2bkRKM2JYYTc3Mm1KWHIyWjdWWkRCckRMVnJQR0FNOVZnRjBZS3Y3RQ?oc=5",
-     "time": "2026-11-24T08:30:32Z"
-    },
-    {
-     "title": "Foodlink F&B Holdings India's Rs 361 Crore IPO From Nov.26",
-     "source": "Deccan Chronicle",
-     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOazBBU3VRWDhCWXR0YVA3US1laG5XZWl2RTJhZndRX1RnS2o5N1dobzBDNFJzMHdqT0lwNE8zQnQxWGIxLVNWeXVwZWhzVjYzVVF5MHVGZlFjbk1wYzhwS2F5S3E4alFhY2JlWXhyODZfNl9wZzg3aThtUlBsTkJtdjRaR0dOSmJ2WVN4QUdYaGhUcmMwdXZQTUx2TmRLZjUxMTBmNzFuRzY2cTVzUUtjVdIBtgFBVV95cUxQSG9OVWl0YzZid1VNQWNmTmNVNGRoZFRydjRrcGJjS2xxMW9vb1dRVG92TmEtWmZocEdlamZGRDhzRGxZUEg0MFpoQU1QVU9wbGxUelJSTkthMmVJcGx6TWtwVGFKd0lwN2pvR1BiMm4xeGVPLVh3U0NOSHZsSEJLaGtyUkdTZkVaYmlLVERoMHlTVDVibVVtSjlaOE5rZV8tczdpM053aEZpR0NMMWZ5aHQzd0hmUQ?oc=5",
-     "time": "2026-11-24T07:21:57Z"
+     "time": "2026-11-25T15:58:30Z"
     }
    ],
-   "thesis": "The Rs 361 crore mainboard issue opens 26 Nov and closes 30 Nov at Rs 181-191 per share; there is no subscription data yet, so demand is unknown. About Rs 192 crore is fresh money for the company and Rs 169 crore is an offer for sale. No matching DRHP was found in SEBI's recent listing. One lot of 78 shares costs about Rs 14,898; a small bet is only reasonable after seeing demand on the final day.",
+   "thesis": null,
+   "analysis": {
+    "score": 25,
+    "verdict": "Watch",
+    "reasons": [
+     "Fresh issue is Rs 192 cr of Rs 361 cr, money that goes to the company.",
+     "Subscription: QIB 0.00x*0.5, NII 0.23x*0.3, RETAIL 1.67x*0.2 -> weighted 0.40x.",
+     "Bidding is still open; institutions usually bid on the last day, so an early low multiple says little. Re-check on the final day."
+    ],
+    "risks": [
+     "No matching DRHP found in SEBI's recent listing (older filings are not searched)."
+    ],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "too early to read: QIB 0.00x*0.5, NII 0.23x*0.3, RETAIL 1.67x*0.2 -> weighted 0.40x; the final-day demand is not visible yet"
+    },
+    "listing_px": null,
+    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 191.00. No target range yet: it needs subscription numbers. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot.",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "Airpro Technology India Limited",
+   "symbol": "AIRPRO",
+   "board": "SME",
+   "status": "upcoming",
+   "open_date": "2026-11-27",
+   "close_date": "2026-12-01",
+   "listing_date": null,
+   "price_band": [
+    99.0,
+    99.0
+   ],
+   "lot_size": 1200,
+   "min_invest_rs": 118800.0,
+   "issue_size_cr": 35.64,
+   "fresh_cr": 28.91,
+   "ofs_cr": 6.73,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [
+    {
+     "title": "Airpro Technology IPO Date, Price Band, Issue Size",
+     "source": "IPO Watch",
+     "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5wTUdodFRhU2V4cloydUk5YWE2UzJ3T1RhRzE1S1hobDlUbGlveXZvYUJTd1FuMDVDQXQzRmplQTBPZ0ZJRDlIUGVpY1ZxaDdsSHFmQ0tDSGRER0ppQUNz?oc=5",
+     "time": "2026-11-26T07:06:36Z"
+    },
+    {
+     "title": "Airpro Technology India Ltd IPO Date: Check Issue Date, Price, Lot size, Subscription, News and Details - Moneycontrol",
+     "source": "Moneycontrol.com",
+     "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNY0pZWWE3ZVdLdXpyMEpRMEJ2ZDg0aVN5TTJHTGhFdFRBdjBFZGtnSWR6ckcwa295ektlTXdJTTZhWXhycmVJNkVHU29mb1ZyLVRkUERUT3BfbThrTktNZDBuMmtGT1hXUlNvRjR5TFF1ZHRnNFpwOGZEd0tQR3FmMWdB?oc=5",
+     "time": "2026-11-25T09:58:35Z"
+    },
+    {
+     "title": "Airpro Technology India Limited Jaipur plan is unappraised",
+     "source": "Multibagg AI",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNUGMxYTlLOWZSb0VFdDNHdTloZkp2R0E0cnktN01aa0YteG1GbVB2bWZwQnVYSktNOW40X3JkdjgtNUdYOUxFT1BocEZvbnR1bExoWXVuVDAzME5Md1dzRUdjbk1MeGZXMUlTYnZNcHpYemJ1aTh3X0I4OXFYTTloRWJsUWotWktrXzd1X05fcWI5aWVxVi1uVEhJNmZVRW5Yd2hqLV9XVHlfeEYyMnFqOFIwNTNaanNhc0k4VTh3dGNBdw?oc=5",
+     "time": "2026-11-25T05:13:06Z"
+    },
+    {
+     "title": "Airpro Technology India rebuilt IPO governance during 2026",
+     "source": "Multibagg AI",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPQnBFY3ZXOVVyUmZweXJ1VDdSS2VFbVk2LUs0M3plSXA3UkxtZWRneGhOOHJ5MEVmTDNKTjdMdmhQVDRWbzM1eVZoMk80QVZOaUgtSmRWV0Z0S1dpRnZfOFhOQU1JZzdxOW14OHV6dVZ0OXV6bUdHYUdIMXdRbjBBTU8ybmUxZHExNExxdHdWajVNZldkYncxZGZjUmhUWFJ2aXhqRTBONXVwVE5RcXdOMFZEMWtuc25LdTdVS2p0WXgtWkJHX2c?oc=5",
+     "time": "2026-11-25T05:11:44Z"
+    },
+    {
+     "title": "Airpro Technology India Reports No Group Companies Under Policy",
+     "source": "Multibagg AI",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNeWJDWS1oU0hNdWIydWhSdDR2d05VMmpuVkJLRmp3dVZxMHhJOGhINFg1bzh6VzU1NDFMajM5d0RTbkpjTjAzLTl4b2JKekNoMGhPQUNxOHR3ckZncGtHUDc1Vy1NN21KdHA0N1dPdWhZMFdnUTRBcHhLSzR4TXNSeEtXUWhGc2RBREE3bVQ1RERNdjRwWTF3SE5ReExxZTBHamdRTFdkTHpwZVR1dWJXY1hzYVMta3lKWGpsX25YUTlRU2tiNVE?oc=5",
+     "time": "2026-11-25T05:06:59Z"
+    }
+   ],
+   "thesis": null,
    "analysis": {
     "score": null,
     "verdict": "Watch",
     "reasons": [
-     "Fresh issue is Rs 192 cr of Rs 361 cr, money that goes to the company.",
+     "Fresh issue is Rs 29 cr of Rs 36 cr, money that goes to the company.",
+     "No subscription data yet: demand is the main signal and it appears only once bidding opens."
+    ],
+    "risks": [
+     "SME board: lots are large, trading is thin and prices swing far more than on the mainboard. Higher risk.",
+     "No matching DRHP found in SEBI's recent listing (older filings are not searched)."
+    ],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "unknown until bidding opens"
+    },
+    "listing_px": null,
+    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 99.00. No target range yet: it needs subscription numbers. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot. SME shares are thinly traded, so a sell order may not fill at the price you want.",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "Matangi Rubber Limited",
+   "symbol": "MATANGI",
+   "board": "Mainboard",
+   "status": "upcoming",
+   "open_date": "2026-12-01",
+   "close_date": "2026-12-03",
+   "listing_date": null,
+   "price_band": [
+    163.0,
+    172.0
+   ],
+   "lot_size": 87,
+   "min_invest_rs": 14964.0,
+   "issue_size_cr": 125.16,
+   "fresh_cr": 99.1,
+   "ofs_cr": 26.06,
+   "subscription": null,
+   "drhp_url": "https://www.sebi.gov.in/filings/public-issues/oct-2026/matangi-rubber-limited-addendum-to-the-drhp_105143.html",
+   "news": [
+    {
+     "title": "Matangi Rubber IPO Date, Price Band, Issue Size",
+     "source": "IPO Watch",
+     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5Ca29DRDdWc0pWN0Y5VW9wVk9ZZEZveTBsSXg4c05DeDY0WXFLR21YVTVNY0ZxZlFtYWE0Q1lzUkQ2WmNnZDZQTzBUM0lGYnpxRFYzY3pmSTBRUlU?oc=5",
+     "time": "2026-11-26T07:14:36Z"
+    },
+    {
+     "title": "Matangi Rubber Limited Takes Its Next Leap For Growth with Rs 125.16 Crore IPO; Will Expand into Solid Tyres and Rubber Recycling",
+     "source": "First India",
+     "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPcy1icUJKRVAtd0Joc2Q4Y0hmSEpGb3dOcWk1MS1HcUFZLTI2SDY4Q3Z1UFNMU2FHTWtITFpHVWVEQmJfa2xMeEppLUtiOGN5em9PYVprOHRaN3R1ZlB1Q1psQ180MS1fSnhwX1RfMVZDbW5OM1NaUS16Z2gzeE5RYVVSbHlDMm91YlpqRXNhWVdUNm5YcUlzcGxiRkJiaFBRejNhRndNN1Y5bktBdVRrU3RiT0Mxb0pVLVNBNmFNZzV6aDhpd1BHY2R6MC00Z1l6VWVFdm1aRU1iYnRRRi1JTkNVUjVxQUExdThabDRTclJreXM5UlpPOUtSUm5vNUk3TXZ3QmVPTVcxOVhMVW5RZQ?oc=5",
+     "time": "2026-11-26T07:04:49Z"
+    },
+    {
+     "title": "Matangi Rubber IPO GMP Today with Trend",
+     "source": "IPO Watch",
+     "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBBUEtFaXRZT2ZoT2JqUmF2M2o2SjdWc0V4REVQT25EdnRnLU50cmtQelphajc1cVAzaEhqMXdRZ2lJNzhZOTI3VzczMTFSNTlIYkZ5Vml3?oc=5",
+     "time": "2026-11-26T06:12:22Z"
+    },
+    {
+     "title": "Matangi Rubber IPO GMP Today, Expected Listing Gain & Price Band",
+     "source": "IndiaIPO",
+     "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9OVjk4QmxzUzYtQkozTHNaSWtzZnRqNGdZTV92aDRQRHJ4Y2hKeTVVTjllZGtNRklVZkFmOERnQjZfM0E5LVJ5QzBDalp1eF8zM3hkTGltVWVMNEdlSFY5cUNOMS1VRldzZHdJRDFn?oc=5",
+     "time": "2026-11-25T18:50:55Z"
+    },
+    {
+     "title": "Matangi Rubber Limited IPO Opens on Tuesday, December 1, 2026",
+     "source": "First India",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNVhpOVBVOEVGTkFuV3BnaDZ5elpnOFBHUzh3bDFTaG5hNzNzazRBTEdJSWFON2poazQ5eG5UdktlX3M4Q0Zqd29fdldMOEJpNmRPaWRONHFHaE01Z0JDVGJtbXRkYXBuRE1kLWM1c19ScTd0Z2Nvel9BT090am5VaUhHR0w4cG9nVFVrTnh3eC1UVlc0aTdBZmZPRXpZUEZyaU9odkVzMExVeG54RnF3eU8wVjRSQQ?oc=5",
+     "time": "2026-11-25T10:12:45Z"
+    }
+   ],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Fresh issue is Rs 99 cr of Rs 125 cr, money that goes to the company.",
+     "No subscription data yet: demand is the main signal and it appears only once bidding opens."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "unknown until bidding opens"
+    },
+    "listing_px": null,
+    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 172.00. No target range yet: it needs subscription numbers. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot.",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "A J Packaging Limited",
+   "symbol": "AJPACK",
+   "board": "SME",
+   "status": "upcoming",
+   "open_date": "2026-12-01",
+   "close_date": "2026-12-03",
+   "listing_date": null,
+   "price_band": [
+    175.0,
+    180.0
+   ],
+   "lot_size": 800,
+   "min_invest_rs": 144000.0,
+   "issue_size_cr": 54.0,
+   "fresh_cr": 49.5,
+   "ofs_cr": 4.5,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [
+    {
+     "title": "A J Packaging Ltd IPO Date: Check Issue Date, Price, Lot size, Subscription, News and Details - Moneycontrol",
+     "source": "Moneycontrol.com",
+     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1EYW1TUzdwb3dYdjdDRjVubmtpaXVKQWsteU91d1ZaSE9MbWdEZkFneXpPZldvMnl5NDU4T1lSNnpSZndmb1NmNTUxNE1tQzRVMm8zMGhCT2hQR25hSnVQbzAwUzdtM2ZtdzBTMnlGcE5qWms?oc=5",
+     "time": "2026-11-23T09:48:54Z"
+    },
+    {
+     "title": "A J Packaging IPO: Dates, Price Band, Details & Review",
+     "source": "IndiaIPO",
+     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA5Q3NRa2JJRWo5WVBfZHFsT00zdV9iOUhHMWRXaWRnamgya1JEanF6MFA0TzJDQ1hoTkFSSTVxMG84R0RzTXNnckFCalZSOVFMSVVTRzdkWWhCZ3dKc0cwag?oc=5",
+     "time": "2026-11-23T07:11:46Z"
+    },
+    {
+     "title": "A J Packaging Limited brings AJ Cans operations in-house",
+     "source": "Multibagg AI",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOR2FGejBDN1JibnNlQXJram9xZ0d2QnNPVkpkRVQwblZiQmpmX2U0bWdtWHZ6LWdIaEhxTkZPM1kzZElxM0NWaGZQOGNlamNsY3dhdlY0N2dGaDVzbVJMQ0Uybm4wbDFrTFNZa3owRDVvNmhvNGo3WGl0RjdvRGozN3dyT1FLYlo2RjR5UWltSW9kdjBhSGs0R2RZcXljTG1xUGU2bHZfZ2psYUVQc1h1XzB3?oc=5",
+     "time": "2026-11-23T06:05:58Z"
+    },
+    {
+     "title": "A J Packaging IPO RHP Analysis: Revenue Rs 223.04 Crore",
+     "source": "Multibagg AI",
+     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZTItMHYzYW9YTkstZFhwNVJEVGxWRFBCN3ZpMGtMNFE1Yzd5NDlQbmFuSm1MUDNoeUVHb054Nzg5enJTbGx3Z2dIcndjTC1GWTEwVGpmN3ZUWWN5dml4UFZ6VEpYdWdPM1N0NVFpQm0zbkFyNDJ3WGZWRXM3bjFIbVB6bVB0Tll2aGFJLTZTYzBQenMwTFNIVm5BZF8yY1RSc1Q5TFdmZVhJUQ?oc=5",
+     "time": "2026-11-23T05:59:08Z"
+    },
+    {
+     "title": "A J Packaging Ltd. IPO: \u20b954 Crore SME Issue, Price Band, Dates and Financials",
+     "source": "Multibagg AI",
+     "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOc3ppT2s4aVZ4aUFPWmF0RU41TldoTlVDdXFKSHNwcEt2ZW1odFNwV1l1eERLQTJkeERNdTdpUFdaVHNWS1liWjBuV1RFNVhfMlExUVZacFFqLUlWOVRzS2piUlNWRTF2QUtYVGNMckVlY3JIYm5mMkVIQU41OHlGMGhZT0toaXFhRGJPU3I5dE5vcGtaazRoUDVR?oc=5",
+     "time": "2026-11-23T05:51:25Z"
+    }
+   ],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Fresh issue is Rs 50 cr of Rs 54 cr, money that goes to the company.",
+     "No subscription data yet: demand is the main signal and it appears only once bidding opens."
+    ],
+    "risks": [
+     "SME board: lots are large, trading is thin and prices swing far more than on the mainboard. Higher risk.",
+     "No matching DRHP found in SEBI's recent listing (older filings are not searched)."
+    ],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "unknown until bidding opens"
+    },
+    "listing_px": null,
+    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 180.00. No target range yet: it needs subscription numbers. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot. SME shares are thinly traded, so a sell order may not fill at the price you want.",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "Monomark Engineering (India) Limited",
+   "symbol": "MONOMARK",
+   "board": "Mainboard",
+   "status": "upcoming",
+   "open_date": "2026-12-02",
+   "close_date": "2026-12-04",
+   "listing_date": null,
+   "price_band": [
+    60.0,
+    65.0
+   ],
+   "lot_size": 225,
+   "min_invest_rs": 14625.0,
+   "issue_size_cr": 175.5,
+   "fresh_cr": 175.5,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [
+    {
+     "title": "Monomark Engineering IPO GMP Today with Trend",
+     "source": "IPO Watch",
+     "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBRa08wTEFTb1NfS2gyQ2JPNHVfeHR4UlB6cTZTaGcwZXBHWXpjdlN6VmFZMGFFdXhDWm4tZU1jRmREakQ2am9VVi1MZzFuU2RYSWhJb1N3bHRKNFFzckE?oc=5",
+     "time": "2026-11-25T18:33:13Z"
+    },
+    {
+     "title": "Monomark Engineering (India) Limited has Rs 175.50 crore IPO",
+     "source": "The Financial World",
+     "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPRlRYSDN0eVo0QmZYakp1ODBNTGlSMEFydkR4eUFrdktvbDhOVEJzdDBicmVmcHpYRzY1NGlBeWQyVzVqRTF6UjBGNHB3ZXJYM09BWkR2YWJFRFdSSnhrSFY2NDI3d2JlczhIeUJfYXE4QVRQbWtsTnRtV1JCU295MGhFNnl3Z3dRdC1ZUFQ0UFc1OXV1WS11YQ?oc=5",
+     "time": "2026-11-25T13:14:37Z"
+    },
+    {
+     "title": "Monomark Engineering IPO: Price Band Rs 60-65, Opens 2 Dec",
+     "source": "Univest",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOMDhRUXU0OXNmMUlmeWxEaGUtXzcxaWc2WGpMTjBkNXFLWnFOa0FBbURNVVpmaERTeDl4X0FEWFJKRzJReUh2ZUVqYWd3NkFoX2xFSjVIWFNGM0tOWlQ1SDhCVGpMVmY1N2l2ajhVNFc4U29CZi1tSEhlMjB2WXRBLXVKbkVETklLNlREcFBBU1FMcC1EMlFxcUJzYw?oc=5",
+     "time": "2026-11-25T08:57:18Z"
+    },
+    {
+     "title": "Monomark Engineering IPO Fixes \u20b960-65 Price Band; IPO Opens on 2 December With \u20b9175.5 Crore Issue",
+     "source": "Kotak Neo",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQeVBVQXBmV2s3WEVsWU8zZ2staHF4UXBVQmlheVZraVkzVXZISmdSMjR1UlFLZmxzTTRIRDNZZTFSYXU4WHpoMS1GWDFpYi1EN2pJa3FaSDlFb3hlcGhMbjZkNjgzR1lWUm1qVXFuRVd0VVNIZ0h5aDQxdl9KZ05KWVZlNDR5N2pibkpGdi1talVOclN6ZkVZUkM2WHZoVThTNDlGOGVwVlp6Y3ppODRVa1lEaWFNSEdKeDNn?oc=5",
+     "time": "2026-11-25T06:40:24Z"
+    },
+    {
+     "title": "Monomark Engineering IPO price band set at \u20b960 to \u20b965 per share; check lot size and key dates",
+     "source": "Upstox",
+     "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNS1JZWlN3VGYzR1VoVzVrUWNGVnBXYlhRSXZ5R1dpcnE0TXBBNjktd1Y0aVZBVmhNWEhlRzlzZkJQRWFXc3RuN1dFY1RTQ0ZneGswWHY4by1sb1FHM0YwejlvSHBmYi1vRzFxbUU2cm9nT0JjVGwzekQxMDY5bks2QnhPSkZpTWw4ZW9jaHhybnFJUmpyZFZVSzgwMnl3LWk0RXk0VERuV1BmMkx0eTVtRGI1VThUM2RBVnlmQUtydkxtTGg1cDFKSG5ZZXh2YjlhSjRXM19ZbzBSOWJpS1FV?oc=5",
+     "time": "2026-11-25T05:18:15Z"
+    }
+   ],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Fresh issue is Rs 176 cr of Rs 176 cr, money that goes to the company.",
      "No subscription data yet: demand is the main signal and it appears only once bidding opens."
     ],
     "risks": [
@@ -136,8 +444,8 @@
      "basis": "unknown until bidding opens"
     },
     "listing_px": null,
-    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 191.00. No target range yet: it needs subscription numbers. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot.",
-    "method": "rules+claude"
+    "after_listing": "If allotted (retail allotment can be a lottery, so you may get nothing): on listing day place a sell order for half at your target, and sell everything if it lists below the issue price of Rs 65.00. No target range yet: it needs subscription numbers. Keep the rest only with a stop at the issue price and move it up as the price rises. Risk is limited to the one lot.",
+    "method": "rules"
    }
   },
   {
@@ -242,63 +550,6 @@
    "ofs_cr": null,
    "subscription": null,
    "drhp_url": null,
-   "news": [
-    {
-     "title": "EAAA India Alternatives IPO subscribed 11% on Day 1: Check price band, lot size and key dates",
-     "source": "Upstox",
-     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPNFJXTFFzZFI1ZUNydE1kMmpFdTJQNF93dTBuajRDUHQ0THRrSkFvcUlxSnQxa2V2Z2llWEl3RDd4WUhKQzhwVURCbkdsZjdXYXRUSnFPeFpfWTlGU1JaYl9fdDFjaDhtRXVsdnVPdVhxVUNDaVcyd3Bqc3I0OTVFTm0yWFNoWWxsS3pGUkoxR0hKM1pCQVBwNVJPMDNjMjgwakgzWW5FSW5YQi1zX214VXBjVTU0NG1SaUNPRG1kMkhkY25OMlc4RTFLeEVWMWdEZ0FxcGNvNkRSbTdNSGNTczVpTQ?oc=5",
-     "time": "2026-10-26T07:00:00Z"
-    },
-    {
-     "title": "EAAA India Alternatives Sets INR 1,585\u20131,665 Price Band for INR 1,200 Crore IPO",
-     "source": "Energetica India Magazine",
-     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMnc3THUxUFpJU3loM3dXb3Z2X3gxMUpxcFlvbTRZd2FOTUZsT0RCeG83Z1p0eHA1cVp1QUVkMGR4ZWpBU21BR3cyU3J2MDZEZVplVkNUUUZsLXZ1WVhjZ2hva2RZRFVIMjhEd19Yd1dNT0tva0VKQkV2U1ZmTEUyQ2E1N3FoNGJ6dm9xVXVvZEtIcE1EQ0FmdjNNVVhpSkhJQ0tYRHlaa3hqYl9pOS1mN3hYXzA?oc=5",
-     "time": "2026-10-23T07:00:00Z"
-    },
-    {
-     "title": "EAAA India Alternatives IPO: Price Band Fixed At \u20b91,585-1,665; Subscription Opens On 26 October With OFS Of Up To \u20b91,200 Crore",
-     "source": "Kotak Neo",
-     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBfMDVuVTE1NG5lamVBLXIzTWJETldDX2QzWEhXcmNhbkZ5YUxKZ1lrRS03b09hcTBLTmJVS3djZ05qQ0xIWGRxajV2bTd4NUFMV05LemZjTzBLeF9HWVVxSkw4b2tkVUlrVUdOQjBfSFdYeHczZHpMaldXV1FSQQ?oc=5",
-     "time": "2026-10-21T07:00:00Z"
-    }
-   ],
-   "thesis": null,
-   "analysis": {
-    "score": null,
-    "verdict": "Watch",
-    "reasons": [
-     "Already listed on NSE: nothing to apply for."
-    ],
-    "risks": [],
-    "listing_view": {
-     "low_pct": null,
-     "high_pct": null,
-     "basis": "already listed"
-    },
-    "listing_px": null,
-    "after_listing": "",
-    "method": "rules"
-   }
-  },
-  {
-   "name": "BLS Polymers Limited",
-   "symbol": "BLSPOLY",
-   "board": "Mainboard",
-   "status": "listed",
-   "open_date": "2026-10-27",
-   "close_date": "2026-10-29",
-   "listing_date": "2026-11-03",
-   "price_band": [
-    150.0,
-    150.0
-   ],
-   "lot_size": null,
-   "min_invest_rs": null,
-   "issue_size_cr": null,
-   "fresh_cr": null,
-   "ofs_cr": null,
-   "subscription": null,
-   "drhp_url": null,
    "news": [],
    "thesis": null,
    "analysis": {
@@ -329,6 +580,44 @@
    "price_band": [
     330.0,
     330.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
+  },
+  {
+   "name": "BLS Polymers Limited",
+   "symbol": "BLSPOLY",
+   "board": "Mainboard",
+   "status": "listed",
+   "open_date": "2026-10-27",
+   "close_date": "2026-10-29",
+   "listing_date": "2026-11-03",
+   "price_band": [
+    150.0,
+    150.0
    ],
    "lot_size": null,
    "min_invest_rs": null,
@@ -433,16 +722,16 @@
    }
   },
   {
-   "name": "HGS (India) Limited",
-   "symbol": "HGSINDIALT",
+   "name": "Maxwell Engineering Solutions Limited",
+   "symbol": "MAXENGS",
    "board": "SME",
    "status": "listed",
    "open_date": "2026-10-30",
    "close_date": "2026-11-03",
    "listing_date": "2026-11-06",
    "price_band": [
-    120.0,
-    120.0
+    158.0,
+    158.0
    ],
    "lot_size": null,
    "min_invest_rs": null,
@@ -471,16 +760,16 @@
    }
   },
   {
-   "name": "Maxwell Engineering Solutions Limited",
-   "symbol": "MAXENGS",
+   "name": "HGS (India) Limited",
+   "symbol": "HGSINDIALT",
    "board": "SME",
    "status": "listed",
    "open_date": "2026-10-30",
    "close_date": "2026-11-03",
    "listing_date": "2026-11-06",
    "price_band": [
-    158.0,
-    158.0
+    120.0,
+    120.0
    ],
    "lot_size": null,
    "min_invest_rs": null,
@@ -489,7 +778,14 @@
    "ofs_cr": null,
    "subscription": null,
    "drhp_url": null,
-   "news": [],
+   "news": [
+    {
+     "title": "HGS India IPO: Check Issue Date, Price Band, Review, Details",
+     "source": "Kotak Neo",
+     "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBaRzhHVlptT0RIeWJjVGhKMlVWMDUzNV9oSnJEQjdRdHdQVlRISDlfTmdKZHhXS3lXc3BZUUUwbHFjR0puRWFaUGZuVktYdThvUm5WWWRR?oc=5",
+     "time": "2026-11-03T08:00:00Z"
+    }
+   ],
    "thesis": null,
    "analysis": {
     "score": null,
@@ -545,9 +841,52 @@
     "after_listing": "",
     "method": "rules"
    }
+  },
+  {
+   "name": "Crystal Crop Protection Limited",
+   "symbol": "CRYSTALCP",
+   "board": "Mainboard",
+   "status": "listed",
+   "open_date": "2026-11-18",
+   "close_date": "2026-11-20",
+   "listing_date": "2026-11-26",
+   "price_band": [
+    272.0,
+    272.0
+   ],
+   "lot_size": null,
+   "min_invest_rs": null,
+   "issue_size_cr": null,
+   "fresh_cr": null,
+   "ofs_cr": null,
+   "subscription": null,
+   "drhp_url": null,
+   "news": [],
+   "thesis": null,
+   "analysis": {
+    "score": null,
+    "verdict": "Watch",
+    "reasons": [
+     "Already listed on NSE: nothing to apply for."
+    ],
+    "risks": [],
+    "listing_view": {
+     "low_pct": null,
+     "high_pct": null,
+     "basis": "already listed"
+    },
+    "listing_px": null,
+    "after_listing": "",
+    "method": "rules"
+   }
   }
  ],
  "drhp_recent": [
+  {
+   "date": "2026-11-25",
+   "company": "NLC India Renewables Limited",
+   "url": "https://www.sebi.gov.in/filings/public-issues/nov-2026/nlc-india-renewables-limited-drhp_97166.html"
+  },
   {
    "date": "2026-11-23",
    "company": "Pride Hotels Limited",
@@ -617,11 +956,6 @@
    "date": "2026-10-26",
    "company": "Oravel Stays Limited",
    "url": "https://www.sebi.gov.in/filings/public-issues/oct-2026/oravel-stays-limited-addendum-to-drhp_105418.html"
-  },
-  {
-   "date": "2026-10-26",
-   "company": "Integris Medtech Limited",
-   "url": "https://www.sebi.gov.in/filings/public-issues/oct-2026/integris-medtech-limited-addendum-to-drhp_105416.html"
   }
  ],
  "sources": {
@@ -629,5 +963,5 @@
   "sebi": "ok",
   "news": "ok"
  },
- "at": 1795565337.3996007
+ "at": 1795679810.058366
 }

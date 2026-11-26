@@ -6257,5 +6257,2225 @@
    "viability": "Needs \u20b923,650 to hold (Upstox margin calculator)."
   },
   "reason": "-0.6% on the day and pulled back 1.2% from its low: buying the dip in an up day, selling the bounce in a down day; stop 0.5%, target 0.9%"
+ },
+ {
+  "id": "M261125-82",
+  "desk": "COMMODITY",
+  "strategy": "mcx_momentum",
+  "label": "Natural gas mini short",
+  "side": "SHORT",
+  "entry": 342.1,
+  "last": 344.3,
+  "qty": 1,
+  "status": "LOSS",
+  "pnl_rs": -592.76,
+  "exit": 344.3,
+  "why": "stop",
+  "day": "2026-11-25",
+  "opened": "09:15:09",
+  "closed": "09:45:58",
+  "ts": 1795578312.3364542,
+  "key": "MCX_FO|578250",
+  "mult": 250.0,
+  "symbol": "NATGASMINI FUT 28 DEC 26",
+  "stop": 344.15,
+  "target_px": 337.99,
+  "horizon": "intraday",
+  "risk_class": "Intraday momentum",
+  "margin_rs": 14818,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "Natural gas mini short",
+   "news": [
+    "US markets averaged -0.38% at the 24/11 close.",
+    "Asia averaged -1.40%.",
+    "Brent crude 87.64 (-1.94%)."
+   ],
+   "data": [
+    "Natural gas mini (NATGASMINI FUT 28 DEC 26) at 342.10, -1.01% on the previous close; day range 341.60 to 343.00, price is 0.15% from the day low.",
+    "Lot: 250 unit(s) \u00d7 1 lot(s); contract value \u20b985,525."
+   ],
+   "strategy": "A futures position in the direction the market is already moving hard.",
+   "why": [
+    "Used when a commodity is up or down 0.8% or more and sitting at its day extreme: strong days tend to extend into the evening session when global markets open.",
+    "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|578250)."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "342.10",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "344.15",
+     "Costs about \u20b9512"
+    ],
+    [
+     "Target (exit if right)",
+     "337.99",
+     "Earns about \u20b91,028"
+    ],
+    [
+     "Reward for the risk",
+     "2.0 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "33% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b914,818",
+     "12% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
+   "viability": "Needs \u20b914,818 to hold (Upstox margin calculator)."
+  },
+  "reason": "-1.0% on the previous close and within 0.3% of the day low; stop 0.6%, target 1.2%"
+ },
+ {
+  "id": "M261125-83",
+  "desk": "COMMODITY",
+  "strategy": "mcx_momentum",
+  "label": "Gold 1 g short",
+  "side": "SHORT",
+  "entry": 12215.0,
+  "last": 12068.0,
+  "qty": 4,
+  "status": "WIN",
+  "pnl_rs": 563.57,
+  "exit": 12068.0,
+  "why": "target",
+  "day": "2026-11-25",
+  "opened": "09:37:25",
+  "closed": "17:07:06",
+  "ts": 1795579648.4770532,
+  "key": "MCX_FO|574841",
+  "mult": 1.0,
+  "symbol": "GOLDPETAL FUT 30 NOV 26",
+  "stop": 12288.29,
+  "target_px": 12068.42,
+  "horizon": "intraday",
+  "risk_class": "Intraday momentum",
+  "margin_rs": 5867,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "Gold 1 g short",
+   "news": [
+    "US markets averaged -0.38% at the 24/11 close.",
+    "Asia averaged -1.40%.",
+    "Brent crude 87.64 (-1.94%)."
+   ],
+   "data": [
+    "Gold 1 g (GOLDPETAL FUT 30 NOV 26) at 12,215.00, -0.81% on the previous close; day range 12,215.00 to 12,314.00, price is 0.00% from the day low.",
+    "Lot: 1 unit(s) \u00d7 4 lot(s); contract value \u20b948,860.",
+    "Global reference: Gold 3552.0 (-2.72% at the 11-24 close)."
+   ],
+   "strategy": "A futures position in the direction the market is already moving hard.",
+   "why": [
+    "Used when a commodity is up or down 0.8% or more and sitting at its day extreme: strong days tend to extend into the evening session when global markets open.",
+    "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|574841)."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "12,215.00",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "12,288.29",
+     "Costs about \u20b9293"
+    ],
+    [
+     "Target (exit if right)",
+     "12,068.42",
+     "Earns about \u20b9586"
+    ],
+    [
+     "Reward for the risk",
+     "2.0 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "33% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b95,867",
+     "5% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
+   "viability": "Needs \u20b95,867 to hold (Upstox margin calculator)."
+  },
+  "reason": "-0.8% on the previous close and within 0.3% of the day low; stop 0.6%, target 1.2%"
+ },
+ {
+  "id": "K261125-84",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "EICHERMOT long",
+  "side": "LONG",
+  "entry": 8228.6454,
+  "last": 8236.3524,
+  "qty": 4,
+  "status": "LOSS",
+  "pnl_rs": -4.38,
+  "exit": 8236.3524,
+  "why": "time",
+  "day": "2026-11-25",
+  "opened": "09:43:04",
+  "closed": "09:53:11",
+  "ts": 1795579987.367049,
+  "symbol": "EICHERMOT",
+  "stop": 8200.3,
+  "target_px": 8271.15,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 6583,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "long pullback to the 9-bar average on the 1-minute chart at 09:41: price above VWAP (8,226.19), averages stacked up, a strong bar on 2.0 times the usual volume. Stop 8,200.30, target 8,271.15, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.34%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "EICHERMOT long",
+   "news": [
+    "US markets averaged -0.38% at the 24/11 close.",
+    "Asia averaged -1.40%."
+   ],
+   "data": [
+    "EICHERMOT at 8,228.65; 1-minute bars: close 8,235.50, VWAP 8,226.19, 9-bar average 8,220.46, 21-bar average 8,216.49, volume 2.0 times the 20-bar average.",
+    "Size 4 shares = Rs 32,915 of stock on about Rs 6,583 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "8,228.65",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "8,200.30",
+     "Costs about \u20b9113"
+    ],
+    [
+     "Target (exit if right)",
+     "8,271.15",
+     "Earns about \u20b9170"
+    ],
+    [
+     "Reward for the risk",
+     "1.5 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "40% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b96,583",
+     "5% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 35",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "4.8 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b96,583 to hold."
+  },
+  "instrument_key": "NSE_EQ|INE066A01021"
+ },
+ {
+  "id": "F261125-85",
+  "desk": "FNO",
+  "strategy": "ema_vwap_cross",
+  "label": "NIFTY 25,750 CE \u00b7 EMA9/VWAP \u00b7 12-01",
+  "side": "LONG",
+  "entry": -244.15,
+  "last": -0.2,
+  "qty": 1,
+  "status": "LOSS",
+  "pnl_rs": -89.68,
+  "exit": -0.2,
+  "why": "EMA9 breach: the 10:06 3-minute candle closed at 25,878.9, below EMA9 25,882.1",
+  "day": "2026-11-25",
+  "opened": "09:45:04",
+  "closed": "10:06:12",
+  "ts": 1795580107.6270564,
+  "expiry": "2026-12-01",
+  "lot": 65,
+  "horizon": "daily",
+  "underlying": "NIFTY",
+  "legs": [
+   {
+    "side": "B",
+    "strike": 25750.0,
+    "kind": "CE",
+    "entry": 244.15,
+    "last": 243.95,
+    "key": "NSE_FO|47837"
+   }
+  ],
+  "unit_base": 244.15,
+  "target_u": null,
+  "stop_u": 61.04,
+  "risk_class": "Intraday signal \u00b7 option buying",
+  "max_gain_rs": null,
+  "max_loss_rs": 15870,
+  "margin_rs": 15870,
+  "margin_src": "premium paid (an option buyer posts only the premium)",
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "NIFTY 25,750 CE: EMA9 crossed above VWAP at 09:45",
+   "news": [],
+   "data": [
+    "Near-month NIFTY future (NIFTY FUT 29 DEC 26) 3-minute candle 09:42-09:45: close 25,865.0, EMA9 25,836.2, session VWAP 25,833.4.",
+    "VWAP moved +8.5 over the last 3 candles, the same way as the crossover; no other crossover in the 30 minutes before.",
+    "Bought the at-the-money call (2026-12-01 expiry) at the ask 244.15; bid 244.10. NIFTY 25,745.0, India VIX 17.11.",
+    "Backtest of these exact rules on real 1-minute option prices, Oct 2024 - Oct 2026 (VERIFIED_HISTORICAL): 861 trades, 30.9% won, average Rs -38 a trade after Rs 61 of charges; before charges it made Rs +20,199. It has not made money after costs: this paper book is the test."
+   ],
+   "strategy": "EMA9 / VWAP crossover (the CEO's rules, cleaner signals)",
+   "why": [
+    "A call gains if NIFTY keeps moving up after the crossover; the exits cut it the moment the 3-minute trend breaks."
+   ],
+   "numbers": [
+    [
+     "Premium",
+     "Rs 15,870"
+    ],
+    [
+     "Stop",
+     "-25% (Rs 3,967)"
+    ],
+    [
+     "Target",
+     "none: held while candles close on the right side of EMA9"
+    ],
+    [
+     "Exit",
+     "3-min close beyond EMA9, opposite cross, -25% or 15:20"
+    ]
+   ],
+   "risk": "Most crossovers fail: in the backtest about 7 in 10 lost, a few big moves paid for them. Charges are about Rs 60 a round trip.",
+   "viability": "Paper only, run beside the straddle for comparison."
+  },
+  "book_name": "EMA9/VWAP",
+  "signal": {
+   "candle": "09:45",
+   "close": 25865.0,
+   "ema9": 25836.15,
+   "vwap": 25833.4
+  },
+  "reason": "EMA9 crossed above VWAP on the 09:45 3-minute candle (VWAP sloping the same way); bought the 25,750 CE at 244.15. Exit on a 3-minute close beyond EMA9, an opposite cross, -25%, or 15:20.",
+  "exit_premium": 243.95,
+  "charges_rs": 76.68
+ },
+ {
+  "id": "K261125-86",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "JPL long",
+  "side": "LONG",
+  "entry": 1366.1732,
+  "last": 1362.5274,
+  "qty": 29,
+  "status": "LOSS",
+  "pnl_rs": -143.26,
+  "exit": 1362.5274,
+  "why": "stop",
+  "day": "2026-11-25",
+  "opened": "09:47:22",
+  "closed": "09:54:18",
+  "ts": 1795580245.0913706,
+  "symbol": "JPL",
+  "stop": 1362.9,
+  "target_px": 1371.05,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 7924,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "long pullback to the 9-bar average on the 1-minute chart at 09:45: price above VWAP (1,362.33), averages stacked up, a strong bar on 1.6 times the usual volume. Stop 1,362.90, target 1,371.05, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.24%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "JPL long",
+   "news": [
+    "US markets averaged -0.38% at the 24/11 close.",
+    "Asia averaged -1.40%."
+   ],
+   "data": [
+    "JPL at 1,366.17; 1-minute bars: close 1,366.60, VWAP 1,362.33, 9-bar average 1,364.97, 21-bar average 1,363.93, volume 1.6 times the 20-bar average.",
+    "Size 29 shares = Rs 39,619 of stock on about Rs 7,924 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "1,366.17",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "1,362.90",
+     "Costs about \u20b995"
+    ],
+    [
+     "Target (exit if right)",
+     "1,371.05",
+     "Earns about \u20b9141"
+    ],
+    [
+     "Reward for the risk",
+     "1.5 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "40% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b97,924",
+     "6% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 38",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "3.8 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b97,924 to hold."
+  },
+  "instrument_key": "NSE_EQ|INE0BJO01010"
+ },
+ {
+  "id": "F261125-87",
+  "desk": "FNO",
+  "strategy": "long_straddle",
+  "label": "NIFTY long straddle \u00b7 12-01",
+  "side": "LONG",
+  "entry": -480.55,
+  "last": -17.4,
+  "qty": 1,
+  "status": "LOSS",
+  "pnl_rs": -1211.0,
+  "exit": -17.4,
+  "why": "time",
+  "day": "2026-11-25",
+  "opened": "10:00:03",
+  "closed": "15:15:13",
+  "ts": 1795581006.4751692,
+  "expiry": "2026-12-01",
+  "lot": 65,
+  "legs": [
+   {
+    "side": "B",
+    "strike": 25650.0,
+    "kind": "CE",
+    "entry": 317.7,
+    "last": 320.4,
+    "key": "NSE_FO|47821"
+   },
+   {
+    "side": "B",
+    "strike": 25650.0,
+    "kind": "PE",
+    "entry": 162.85,
+    "last": 142.75,
+    "key": "NSE_FO|47834"
+   }
+  ],
+  "horizon": "daily",
+  "underlying": "NIFTY",
+  "unit_base": 480.54999999999995,
+  "target_u": 240.27,
+  "stop_u": 168.19,
+  "risk_class": "High return \u00b7 high loss",
+  "max_gain_rs": null,
+  "max_loss_rs": 31236,
+  "margin_rs": 31246,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "daily",
+   "headline": "Buy 25,650 CE, Buy 25,650 PE \u00b7 NIFTY 2026-12-01",
+   "news": [
+    "US markets averaged -0.38% at the 24/11 close.",
+    "Asia averaged -1.40%.",
+    "Brent crude 87.64 (-1.94%).",
+    "'More To Come' - IMF Managing Director warns the AI sell-off may not be over yet (CNBC-TV18)",
+    "Gold falls further, set for worst week since March as Fed rate hike worries rise (CNBC-TV18)",
+    "Nikkei, Kospi fall over 4% each; Asian markets crash as AI sell-off deepens despite record Anthropic IPO (CNBC-TV18)",
+    "6 companies filed results or hold board meetings today."
+   ],
+   "data": [
+    "NIFTY 25,775, +1.68% on the previous close. India VIX 17.6.",
+    "Implied volatility at the money 17.3% a year. Over 6 days to 2026-12-01 that prices a one-standard-deviation move of about \u00b1571 points (\u00b12.2%), so the market gives roughly a 68% chance of finishing between 25,203 and 26,346.",
+    "Option positioning: put-to-call ratio 0.89, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,500 (a floor), max pain 25,750.",
+    "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+    "Our forecast for today: Sideways (score -0.06); likely range 25,073 to 25,616.",
+    "Conditions at 10:00 (Normal confidence): NIFTY opened +1.22%: a news-sized gap; the first 45 minutes covered 0.70% (high to low): the market is moving; NIFTY is +0.45% from its open by 10:00; market-wide news today: Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues; Gold falls further, set for worst week since March as Fed rate hike worries rise; India VIX is in the top fifth of its year (81.0th percentile) and not rising.",
+    "Strike leans 2 strikes up with the morning's move from the open (+0.45%): the call is in the money, so a continued move pays on that leg more than the other leg loses; a sharp turn the other way still pays through the other leg.",
+    "The quant chose strike 25,650 from 5 strikes: cost 480.55 points, 0.83x the move the market expects; it pays beyond 26,131 up (1.38%) or 25,169 down (2.35%); calls and puts together delta 0.21; spreads up to 0.3%.",
+    "Exits (unchanged): take profit at 50% above the cost, stop at 35% below it, out by 15:15.",
+    "The historical backtest disagrees with trading this every day: replayed on 907 near-expiry days since 2022 with model prices from India VIX, this exact rule won 24.0% of days and averaged Rs -1254.3 a day (total Rs -1137647); the desk's live record decides from here.",
+    "Trained rule: buy at 10:00, after watching the first 45 minutes on this week's expiry, strike chosen by the quant, when movement days: VIX rising, a big gap or strong news (the CEO's rule).",
+    "Backtest 2022-2024 (15-minute bars, model prices from India VIX): None trades, None% won, average Rs None; out of sample 2025-2026: None trades, None% won, average Rs None.",
+    "Days like today (None most similar): None% won, average Rs None. ."
+   ],
+   "strategy": "Buy the at-the-money call and put.",
+   "why": [
+    "Used when a big move is plausible but its direction is not: either leg can pay for both. It loses if the index drifts, because time decay eats the premium."
+   ],
+   "numbers": [
+    [
+     "Net debit",
+     "480.5 points = \u20b931,236 per lot",
+     "What you receive (or pay) up front"
+    ],
+    [
+     "Most you can make",
+     "\u20b9479,476",
+     "At expiry, if everything goes right"
+    ],
+    [
+     "Most you can lose",
+     "\u20b930,964",
+     "At expiry, if everything goes wrong (fixed by the bought options)"
+    ],
+    [
+     "Break-even at expiry",
+     "25,169 and 26,131",
+     "Where the structure stops losing money"
+    ],
+    [
+     "Chance of profit at expiry",
+     "41%",
+     "From the options market's own implied volatility; not our edge, the market's odds"
+    ],
+    [
+     "Expected move to expiry",
+     "\u00b1571 points",
+     "6 days at 17.3% implied volatility"
+    ],
+    [
+     "Reward for the risk",
+     "15.48 to 1",
+     "Best case divided by worst case"
+    ],
+    [
+     "Margin the broker asks",
+     "\u20b931,246",
+     "25% of the account (Upstox margin calculator)"
+    ],
+    [
+     "Our exit levels",
+     "Take profit at \u20b915,618, cut at \u20b910,933",
+     "Rupees on one lot, before the exit rule below"
+    ]
+   ],
+   "risk": "Take profit at 50% of the debit, cut at 35%, and be flat by 15:15 whatever happens. Fails when: A quiet day. The cost of both options is the most you can lose.",
+   "viability": "One lot of 65 needs \u20b931,246 of margin, checked with the broker's calculator when the trade was booked."
+  },
+  "reason": "NIFTY 25,775 (+1.68% on the close). Debit 480.5 points; target 50% of it, stop 35% of it; out by 15:15"
+ },
+ {
+  "id": "K261125-88",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "DIVISLAB long",
+  "side": "LONG",
+  "entry": 11357.271,
+  "last": 11355.2285,
+  "qty": 3,
+  "status": "LOSS",
+  "pnl_rs": -41.74,
+  "exit": 11355.2285,
+  "why": "time",
+  "day": "2026-11-25",
+  "opened": "10:01:28",
+  "closed": "10:11:39",
+  "ts": 1795581090.7899008,
+  "symbol": "DIVISLAB",
+  "stop": 11312.95,
+  "target_px": 11423.75,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 6814,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "long pullback to the 9-bar average on the 1-minute chart at 09:59: price above VWAP (11,277.76), averages stacked up, a strong bar on 1.4 times the usual volume. Stop 11,312.95, target 11,423.75, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.35%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "DIVISLAB long",
+   "news": [
+    "US markets averaged -0.38% at the 24/11 close.",
+    "Asia averaged -1.40%."
+   ],
+   "data": [
+    "DIVISLAB at 11,357.27; 1-minute bars: close 11,336.00, VWAP 11,277.76, 9-bar average 11,318.78, 21-bar average 11,306.20, volume 1.4 times the 20-bar average.",
+    "Size 3 shares = Rs 34,072 of stock on about Rs 6,814 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "11,357.27",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "11,312.95",
+     "Costs about \u20b9133"
+    ],
+    [
+     "Target (exit if right)",
+     "11,423.75",
+     "Earns about \u20b9199"
+    ],
+    [
+     "Reward for the risk",
+     "1.5 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "40% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b96,814",
+     "6% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 36",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "5.6 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b96,814 to hold."
+  },
+  "instrument_key": "NSE_EQ|INE361B01024"
+ },
+ {
+  "id": "K261125-89",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "GOLDBEES short",
+  "side": "SHORT",
+  "entry": 100.6199,
+  "last": 100.7501,
+  "qty": 397,
+  "status": "LOSS",
+  "pnl_rs": -89.39,
+  "exit": 100.7501,
+  "why": "time",
+  "day": "2026-11-25",
+  "opened": "10:09:12",
+  "closed": "10:19:18",
+  "ts": 1795581555.2241259,
+  "symbol": "GOLDBEES",
+  "stop": 100.85,
+  "target_px": 100.3,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 7989,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "short pullback to the 9-bar average on the 1-minute chart at 10:07: price below VWAP (100.91), averages stacked down, a strong bar on 1.2 times the usual volume. Stop 100.85, target 100.30, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.22%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "GOLDBEES short",
+   "news": [
+    "US markets averaged -0.38% at the 24/11 close.",
+    "Asia averaged -1.40%."
+   ],
+   "data": [
+    "GOLDBEES at 100.62; 1-minute bars: close 100.63, VWAP 100.91, 9-bar average 100.67, 21-bar average 100.70, volume 1.2 times the 20-bar average.",
+    "Size 397 shares = Rs 39,946 of stock on about Rs 7,989 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "100.62",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "100.85",
+     "Costs about \u20b991"
+    ],
+    [
+     "Target (exit if right)",
+     "100.30",
+     "Earns about \u20b9127"
+    ],
+    [
+     "Reward for the risk",
+     "1.4 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "42% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b97,989",
+     "7% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 38",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "3.4 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b97,989 to hold."
+  },
+  "instrument_key": "NSE_EQ|INF204KB17I5"
+ },
+ {
+  "id": "F261125-90",
+  "desk": "FNO",
+  "strategy": "ema_vwap_cross",
+  "label": "NIFTY 25,750 PE \u00b7 EMA9/VWAP \u00b7 12-01",
+  "side": "LONG",
+  "entry": -225.65,
+  "last": 29.1,
+  "qty": 1,
+  "status": "WIN",
+  "pnl_rs": 1814.36,
+  "exit": 29.1,
+  "why": "EMA9 breach: the 13:27 3-minute candle closed at 25,832.0, above EMA9 25,831.2",
+  "day": "2026-11-25",
+  "opened": "12:57:02",
+  "closed": "13:27:10",
+  "ts": 1795591625.3114276,
+  "expiry": "2026-12-01",
+  "lot": 65,
+  "horizon": "daily",
+  "underlying": "NIFTY",
+  "legs": [
+   {
+    "side": "B",
+    "strike": 25750.0,
+    "kind": "PE",
+    "entry": 225.65,
+    "last": 254.75,
+    "key": "NSE_FO|47838"
+   }
+  ],
+  "unit_base": 225.65,
+  "target_u": null,
+  "stop_u": 56.41,
+  "risk_class": "Intraday signal \u00b7 option buying",
+  "max_gain_rs": null,
+  "max_loss_rs": 14667,
+  "margin_rs": 14667,
+  "margin_src": "premium paid (an option buyer posts only the premium)",
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "NIFTY 25,750 PE: EMA9 crossed below VWAP at 12:57",
+   "news": [],
+   "data": [
+    "Near-month NIFTY future (NIFTY FUT 29 DEC 26) 3-minute candle 12:54-12:57: close 25,887.0, EMA9 25,927.2, session VWAP 25,929.5.",
+    "VWAP moved -0.6 over the last 3 candles, the same way as the crossover; no other crossover in the 30 minutes before.",
+    "Bought the at-the-money put (2026-12-01 expiry) at the ask 225.65; bid 225.15. NIFTY 25,745.3, India VIX 17.96.",
+    "Backtest of these exact rules on real 1-minute option prices, Oct 2024 - Oct 2026 (VERIFIED_HISTORICAL): 861 trades, 30.9% won, average Rs -38 a trade after Rs 61 of charges; before charges it made Rs +20,199. It has not made money after costs: this paper book is the test."
+   ],
+   "strategy": "EMA9 / VWAP crossover (the CEO's rules, cleaner signals)",
+   "why": [
+    "A put gains if NIFTY keeps moving down after the crossover; the exits cut it the moment the 3-minute trend breaks."
+   ],
+   "numbers": [
+    [
+     "Premium",
+     "Rs 14,667"
+    ],
+    [
+     "Stop",
+     "-25% (Rs 3,667)"
+    ],
+    [
+     "Target",
+     "none: held while candles close on the right side of EMA9"
+    ],
+    [
+     "Exit",
+     "3-min close beyond EMA9, opposite cross, -25% or 15:20"
+    ]
+   ],
+   "risk": "Most crossovers fail: in the backtest about 7 in 10 lost, a few big moves paid for them. Charges are about Rs 60 a round trip.",
+   "viability": "Paper only, run beside the straddle for comparison."
+  },
+  "book_name": "EMA9/VWAP",
+  "signal": {
+   "candle": "12:57",
+   "close": 25887.0,
+   "ema9": 25927.22,
+   "vwap": 25929.55
+  },
+  "reason": "EMA9 crossed below VWAP on the 12:57 3-minute candle (VWAP sloping the same way); bought the 25,750 PE at 225.65. Exit on a 3-minute close beyond EMA9, an opposite cross, -25%, or 15:20.",
+  "exit_premium": 254.75,
+  "charges_rs": 77.14
+ },
+ {
+  "id": "M261125-91",
+  "desk": "COMMODITY",
+  "strategy": "mcx_momentum",
+  "label": "Crude oil mini long",
+  "side": "LONG",
+  "entry": 7643.0,
+  "last": 7737.0,
+  "qty": 1,
+  "status": "WIN",
+  "pnl_rs": 901.78,
+  "exit": 7737.0,
+  "why": "target",
+  "day": "2026-11-25",
+  "opened": "17:50:45",
+  "closed": "20:30:58",
+  "ts": 1795609246.8905494,
+  "key": "MCX_FO|576265",
+  "mult": 10.0,
+  "symbol": "CRUDEOILM FUT 18 DEC 26",
+  "stop": 7597.14,
+  "target_px": 7734.72,
+  "horizon": "intraday",
+  "risk_class": "Intraday momentum",
+  "margin_rs": 23694,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "Crude oil mini long",
+   "news": [
+    "US markets averaged -0.38% at the 24/11 close.",
+    "Asia averaged -1.40%.",
+    "Brent crude 87.64 (-1.94%)."
+   ],
+   "data": [
+    "Crude oil mini (CRUDEOILM FUT 18 DEC 26) at 7,643.00, +0.82% on the previous close; day range 7,420.00 to 7,643.00, price is 0.00% from the day high.",
+    "Lot: 10 unit(s) \u00d7 1 lot(s); contract value \u20b976,430.",
+    "Global reference: Brent crude 88.26 (-3.44% at the 11-25 close)."
+   ],
+   "strategy": "A futures position in the direction the market is already moving hard.",
+   "why": [
+    "Used when a commodity is up or down 0.8% or more and sitting at its day extreme: strong days tend to extend into the evening session when global markets open.",
+    "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|576265)."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "7,643.00",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "7,597.14",
+     "Costs about \u20b9459"
+    ],
+    [
+     "Target (exit if right)",
+     "7,734.72",
+     "Earns about \u20b9917"
+    ],
+    [
+     "Reward for the risk",
+     "2.0 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "33% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b923,694",
+     "19% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
+   "viability": "Needs \u20b923,694 to hold (Upstox margin calculator)."
+  },
+  "reason": "+0.8% on the previous close and within 0.3% of the day high; stop 0.6%, target 1.2%"
+ },
+ {
+  "id": "K261126-93",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "GOLDBEES long",
+  "side": "LONG",
+  "entry": 101.8804,
+  "last": 102.1196,
+  "qty": 392,
+  "status": "WIN",
+  "pnl_rs": 56.06,
+  "exit": 102.1196,
+  "why": "time",
+  "day": "2026-11-26",
+  "opened": "09:56:40",
+  "closed": "10:06:48",
+  "ts": 1795667205.300343,
+  "symbol": "GOLDBEES",
+  "stop": 101.65,
+  "target_px": 102.2,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 7987,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "long pullback to the 9-bar average on the 1-minute chart at 09:54: price above VWAP (101.66), averages stacked up, a strong bar on 1.2 times the usual volume. Stop 101.65, target 102.20, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.19%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "GOLDBEES long",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%."
+   ],
+   "data": [
+    "GOLDBEES at 101.88; 1-minute bars: close 101.88, VWAP 101.66, 9-bar average 101.74, 21-bar average 101.68, volume 1.2 times the 20-bar average.",
+    "Size 392 shares = Rs 39,937 of stock on about Rs 7,987 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "101.88",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "101.65",
+     "Costs about \u20b990"
+    ],
+    [
+     "Target (exit if right)",
+     "102.20",
+     "Earns about \u20b9125"
+    ],
+    [
+     "Reward for the risk",
+     "1.4 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "42% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b97,987",
+     "6% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 38",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "3.3 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b97,987 to hold."
+  },
+  "instrument_key": "NSE_EQ|INF204KB17I5"
+ },
+ {
+  "id": "K261126-94",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "HEROMOTOCO short",
+  "side": "SHORT",
+  "entry": 5762.3473,
+  "last": 5746.149,
+  "qty": 6,
+  "status": "WIN",
+  "pnl_rs": 61.41,
+  "exit": 5746.149,
+  "why": "time",
+  "day": "2026-11-26",
+  "opened": "09:57:56",
+  "closed": "10:08:01",
+  "ts": 1795667279.7137,
+  "symbol": "HEROMOTOCO",
+  "stop": 5785.4,
+  "target_px": 5727.8,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 6915,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "short pullback to the 9-bar average on the 1-minute chart at 09:55: price below VWAP (5,793.55), averages stacked down, a strong bar on 1.2 times the usual volume. Stop 5,785.40, target 5,727.80, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.40%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "HEROMOTOCO short",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%."
+   ],
+   "data": [
+    "HEROMOTOCO at 5,762.35; 1-minute bars: close 5,748.00, VWAP 5,793.55, 9-bar average 5,767.11, 21-bar average 5,779.98, volume 1.2 times the 20-bar average.",
+    "Size 6 shares = Rs 34,574 of stock on about Rs 6,915 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "5,762.35",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "5,785.40",
+     "Costs about \u20b9138"
+    ],
+    [
+     "Target (exit if right)",
+     "5,727.80",
+     "Earns about \u20b9207"
+    ],
+    [
+     "Reward for the risk",
+     "1.5 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "40% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b96,915",
+     "5% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 36",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "5.8 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b96,915 to hold."
+  },
+  "instrument_key": "NSE_EQ|INE158A01026"
+ },
+ {
+  "id": "K261126-96",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "M&M long",
+  "side": "LONG",
+  "entry": 3491.1981,
+  "last": 3492.9013,
+  "qty": 11,
+  "status": "LOSS",
+  "pnl_rs": -18.41,
+  "exit": 3492.9013,
+  "why": "time",
+  "day": "2026-11-26",
+  "opened": "10:18:48",
+  "closed": "10:29:09",
+  "ts": 1795668532.1250308,
+  "symbol": "M&M",
+  "stop": 3479.55,
+  "target_px": 3508.65,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 7681,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "long pullback to the 9-bar average on the 1-minute chart at 10:16: price above VWAP (3,480.39), averages stacked up, a strong bar on 2.4 times the usual volume. Stop 3,479.55, target 3,508.65, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.33%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "M&M long",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%."
+   ],
+   "data": [
+    "M&M at 3,491.20; 1-minute bars: close 3,491.40, VWAP 3,480.39, 9-bar average 3,487.29, 21-bar average 3,484.70, volume 2.4 times the 20-bar average.",
+    "Size 11 shares = Rs 38,403 of stock on about Rs 7,681 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "3,491.20",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "3,479.55",
+     "Costs about \u20b9128"
+    ],
+    [
+     "Target (exit if right)",
+     "3,508.65",
+     "Earns about \u20b9192"
+    ],
+    [
+     "Reward for the risk",
+     "1.5 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "40% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b97,681",
+     "6% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 37",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "5.2 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b97,681 to hold."
+  },
+  "instrument_key": "NSE_EQ|INE101A01026"
+ },
+ {
+  "id": "K261126-97",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "HINDUNILVR long",
+  "side": "LONG",
+  "entry": 2143.1285,
+  "last": 2145.8707,
+  "qty": 18,
+  "status": "WIN",
+  "pnl_rs": 12.15,
+  "exit": 2145.8707,
+  "why": "time",
+  "day": "2026-11-26",
+  "opened": "10:20:53",
+  "closed": "10:30:59",
+  "ts": 1795668656.3497088,
+  "symbol": "HINDUNILVR",
+  "stop": 2134.65,
+  "target_px": 2155.8,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 7715,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "long pullback to the 9-bar average on the 1-minute chart at 10:18: price above VWAP (2,134.92), averages stacked up, a strong bar on 4.2 times the usual volume. Stop 2,134.65, target 2,155.80, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.35%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "HINDUNILVR long",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%."
+   ],
+   "data": [
+    "HINDUNILVR at 2,143.13; 1-minute bars: close 2,143.00, VWAP 2,134.92, 9-bar average 2,138.26, 21-bar average 2,135.95, volume 4.2 times the 20-bar average.",
+    "Size 18 shares = Rs 38,576 of stock on about Rs 7,715 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "2,143.13",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "2,134.65",
+     "Costs about \u20b9153"
+    ],
+    [
+     "Target (exit if right)",
+     "2,155.80",
+     "Earns about \u20b9228"
+    ],
+    [
+     "Reward for the risk",
+     "1.5 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "40% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b97,715",
+     "6% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 37",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "6.1 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b97,715 to hold."
+  },
+  "instrument_key": "NSE_EQ|INE030A01027"
+ },
+ {
+  "id": "K261126-98",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "INFY long",
+  "side": "LONG",
+  "entry": 1165.7331,
+  "last": 1166.4667,
+  "qty": 34,
+  "status": "LOSS",
+  "pnl_rs": -12.64,
+  "exit": 1166.4667,
+  "why": "time",
+  "day": "2026-11-26",
+  "opened": "10:30:37",
+  "closed": "10:40:57",
+  "ts": 1795669240.5339718,
+  "symbol": "INFY",
+  "stop": 1161.65,
+  "target_px": 1171.85,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 7927,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "long pullback to the 9-bar average on the 1-minute chart at 10:28: price above VWAP (1,161.23), averages stacked up, a strong bar on 2.3 times the usual volume. Stop 1,161.65, target 1,171.85, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.35%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "INFY long",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%."
+   ],
+   "data": [
+    "INFY at 1,165.73; 1-minute bars: close 1,166.60, VWAP 1,161.23, 9-bar average 1,165.64, 21-bar average 1,164.58, volume 2.3 times the 20-bar average.",
+    "Size 34 shares = Rs 39,635 of stock on about Rs 7,927 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "1,165.73",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "1,161.65",
+     "Costs about \u20b9139"
+    ],
+    [
+     "Target (exit if right)",
+     "1,171.85",
+     "Earns about \u20b9208"
+    ],
+    [
+     "Reward for the risk",
+     "1.5 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "40% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b97,927",
+     "6% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 38",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "5.5 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b97,927 to hold."
+  },
+  "instrument_key": "NSE_EQ|INE009A01021"
+ },
+ {
+  "id": "K261126-99",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "MARUTI long",
+  "side": "LONG",
+  "entry": 14045.8086,
+  "last": 13997.2,
+  "qty": 2,
+  "status": "LOSS",
+  "pnl_rs": -130.69,
+  "exit": 13997.2,
+  "why": "stop",
+  "day": "2026-11-26",
+  "opened": "10:32:47",
+  "closed": "10:38:16",
+  "ts": 1795669370.4726412,
+  "symbol": "MARUTI",
+  "stop": 14001.15,
+  "target_px": 14112.75,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 5618,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "long pullback to the 9-bar average on the 1-minute chart at 10:30: price above VWAP (14,018.61), averages stacked up, a strong bar on 2.4 times the usual volume. Stop 14,001.15, target 14,112.75, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.32%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "MARUTI long",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%."
+   ],
+   "data": [
+    "MARUTI at 14,045.81; 1-minute bars: close 14,042.00, VWAP 14,018.61, 9-bar average 14,010.01, 21-bar average 13,992.51, volume 2.4 times the 20-bar average.",
+    "Size 2 shares = Rs 28,092 of stock on about Rs 5,618 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "14,045.81",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "14,001.15",
+     "Costs about \u20b989"
+    ],
+    [
+     "Target (exit if right)",
+     "14,112.75",
+     "Earns about \u20b9134"
+    ],
+    [
+     "Reward for the risk",
+     "1.5 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "40% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b95,618",
+     "4% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 34",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "4.0 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b95,618 to hold."
+  },
+  "instrument_key": "NSE_EQ|INE585B01010"
+ },
+ {
+  "id": "K261126-100",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "RELIANCE long",
+  "side": "LONG",
+  "entry": 1375.375,
+  "last": 1379.624,
+  "qty": 29,
+  "status": "WIN",
+  "pnl_rs": 85.53,
+  "exit": 1379.624,
+  "why": "time",
+  "day": "2026-11-26",
+  "opened": "10:39:11",
+  "closed": "10:49:21",
+  "ts": 1795669754.6340303,
+  "symbol": "RELIANCE",
+  "stop": 1371.7,
+  "target_px": 1380.85,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 7977,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "long pullback to the 9-bar average on the 1-minute chart at 10:37: price above VWAP (1,368.28), averages stacked up, a strong bar on 3.1 times the usual volume. Stop 1,371.70, target 1,380.85, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.27%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "RELIANCE long",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%."
+   ],
+   "data": [
+    "RELIANCE at 1,375.38; 1-minute bars: close 1,376.70, VWAP 1,368.28, 9-bar average 1,373.69, 21-bar average 1,371.96, volume 3.1 times the 20-bar average.",
+    "Size 29 shares = Rs 39,886 of stock on about Rs 7,977 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "1,375.38",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "1,371.70",
+     "Costs about \u20b9107"
+    ],
+    [
+     "Target (exit if right)",
+     "1,380.85",
+     "Earns about \u20b9159"
+    ],
+    [
+     "Reward for the risk",
+     "1.5 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "40% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b97,977",
+     "6% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 38",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "4.2 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b97,977 to hold."
+  },
+  "instrument_key": "NSE_EQ|INE002A01018"
+ },
+ {
+  "id": "K261126-101",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "ADANIENT long",
+  "side": "LONG",
+  "entry": 2672.4344,
+  "last": 2686.1627,
+  "qty": 14,
+  "status": "WIN",
+  "pnl_rs": 155.36,
+  "exit": 2686.1627,
+  "why": "target",
+  "day": "2026-11-26",
+  "opened": "10:41:20",
+  "closed": "10:43:39",
+  "ts": 1795669883.430557,
+  "symbol": "ADANIENT",
+  "stop": 2663.25,
+  "target_px": 2686.2,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 7483,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "long pullback to the 9-bar average on the 1-minute chart at 10:38: price above VWAP (2,656.96), averages stacked up, a strong bar on 1.3 times the usual volume. Stop 2,663.25, target 2,686.20, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.33%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "ADANIENT long",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%."
+   ],
+   "data": [
+    "ADANIENT at 2,672.43; 1-minute bars: close 2,676.60, VWAP 2,656.96, 9-bar average 2,667.30, 21-bar average 2,662.08, volume 1.3 times the 20-bar average.",
+    "Size 14 shares = Rs 37,414 of stock on about Rs 7,483 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "2,672.43",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "2,663.25",
+     "Costs about \u20b9129"
+    ],
+    [
+     "Target (exit if right)",
+     "2,686.20",
+     "Earns about \u20b9193"
+    ],
+    [
+     "Reward for the risk",
+     "1.5 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "40% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b97,483",
+     "6% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 37",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "5.2 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b97,483 to hold."
+  },
+  "instrument_key": "NSE_EQ|INE423A01024"
+ },
+ {
+  "id": "K261126-102",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "BHARTIARTL long",
+  "side": "LONG",
+  "entry": 2114.9229,
+  "last": 2118.0763,
+  "qty": 18,
+  "status": "WIN",
+  "pnl_rs": 19.73,
+  "exit": 2118.0763,
+  "why": "time",
+  "day": "2026-11-26",
+  "opened": "10:44:36",
+  "closed": "10:54:48",
+  "ts": 1795670080.949664,
+  "symbol": "BHARTIARTL",
+  "stop": 2106.95,
+  "target_px": 2126.85,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 7614,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "long pullback to the 9-bar average on the 1-minute chart at 10:42: price above VWAP (2,111.47), averages stacked up, a strong bar on 2.3 times the usual volume. Stop 2,106.95, target 2,126.85, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.21%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "BHARTIARTL long",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%."
+   ],
+   "data": [
+    "BHARTIARTL at 2,114.92; 1-minute bars: close 2,113.20, VWAP 2,111.47, 9-bar average 2,109.59, 21-bar average 2,108.74, volume 2.3 times the 20-bar average.",
+    "Size 18 shares = Rs 38,069 of stock on about Rs 7,614 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "2,114.92",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "2,106.95",
+     "Costs about \u20b9144"
+    ],
+    [
+     "Target (exit if right)",
+     "2,126.85",
+     "Earns about \u20b9215"
+    ],
+    [
+     "Reward for the risk",
+     "1.5 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "40% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b97,614",
+     "6% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 37",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "5.8 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b97,614 to hold."
+  },
+  "instrument_key": "NSE_EQ|INE397D01024"
+ },
+ {
+  "id": "K261126-103",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "ITC short",
+  "side": "SHORT",
+  "entry": 308.4883,
+  "last": 308.9118,
+  "qty": 129,
+  "status": "LOSS",
+  "pnl_rs": -92.26,
+  "exit": 308.9118,
+  "why": "time",
+  "day": "2026-11-26",
+  "opened": "10:50:03",
+  "closed": "11:00:17",
+  "ts": 1795670407.251111,
+  "symbol": "ITC",
+  "stop": 309.25,
+  "target_px": 307.35,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 7959,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "short pullback to the 9-bar average on the 1-minute chart at 10:48: price below VWAP (309.20), averages stacked down, a strong bar on 1.2 times the usual volume. Stop 309.25, target 307.35, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.23%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "ITC short",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%."
+   ],
+   "data": [
+    "ITC at 308.49; 1-minute bars: close 308.55, VWAP 309.20, 9-bar average 309.05, 21-bar average 309.27, volume 1.2 times the 20-bar average.",
+    "Size 129 shares = Rs 39,795 of stock on about Rs 7,959 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "308.49",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "309.25",
+     "Costs about \u20b998"
+    ],
+    [
+     "Target (exit if right)",
+     "307.35",
+     "Earns about \u20b9147"
+    ],
+    [
+     "Reward for the risk",
+     "1.5 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "40% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b97,959",
+     "6% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 38",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "3.9 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b97,959 to hold."
+  },
+  "instrument_key": "NSE_EQ|INE154A01025"
+ },
+ {
+  "id": "K261126-104",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "BAJFINANCE long",
+  "side": "LONG",
+  "entry": 1119.2238,
+  "last": 1117.2765,
+  "qty": 35,
+  "status": "LOSS",
+  "pnl_rs": -105.55,
+  "exit": 1117.2765,
+  "why": "time",
+  "day": "2026-11-26",
+  "opened": "10:56:36",
+  "closed": "11:06:43",
+  "ts": 1795670799.9848435,
+  "symbol": "BAJFINANCE",
+  "stop": 1116.35,
+  "target_px": 1123.5,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 7835,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "long pullback to the 9-bar average on the 1-minute chart at 10:54: price above VWAP (1,112.14), averages stacked up, a strong bar on 1.3 times the usual volume. Stop 1,116.35, target 1,123.50, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.26%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "BAJFINANCE long",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%."
+   ],
+   "data": [
+    "BAJFINANCE at 1,119.22; 1-minute bars: close 1,120.40, VWAP 1,112.14, 9-bar average 1,118.76, 21-bar average 1,116.79, volume 1.3 times the 20-bar average.",
+    "Size 35 shares = Rs 39,173 of stock on about Rs 7,835 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "1,119.22",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "1,116.35",
+     "Costs about \u20b9101"
+    ],
+    [
+     "Target (exit if right)",
+     "1,123.50",
+     "Earns about \u20b9150"
+    ],
+    [
+     "Reward for the risk",
+     "1.5 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "40% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b97,835",
+     "6% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 37",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "4.0 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b97,835 to hold."
+  },
+  "instrument_key": "NSE_EQ|INE296A01032"
+ },
+ {
+  "id": "K261126-105",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "JPL long",
+  "side": "LONG",
+  "entry": 1406.3812,
+  "last": 1406.4187,
+  "qty": 28,
+  "status": "LOSS",
+  "pnl_rs": -36.43,
+  "exit": 1406.4187,
+  "why": "time",
+  "day": "2026-11-26",
+  "opened": "11:00:57",
+  "closed": "11:11:03",
+  "ts": 1795671061.289031,
+  "symbol": "JPL",
+  "stop": 1403.45,
+  "target_px": 1410.75,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 7876,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "long pullback to the 9-bar average on the 1-minute chart at 10:58: price above VWAP (1,399.29), averages stacked up, a strong bar on 1.4 times the usual volume. Stop 1,403.45, target 1,410.75, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.21%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "JPL long",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%."
+   ],
+   "data": [
+    "JPL at 1,406.38; 1-minute bars: close 1,405.40, VWAP 1,399.29, 9-bar average 1,404.68, 21-bar average 1,404.23, volume 1.4 times the 20-bar average.",
+    "Size 28 shares = Rs 39,379 of stock on about Rs 7,876 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "1,406.38",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "1,403.45",
+     "Costs about \u20b982"
+    ],
+    [
+     "Target (exit if right)",
+     "1,410.75",
+     "Earns about \u20b9122"
+    ],
+    [
+     "Reward for the risk",
+     "1.5 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "40% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b97,876",
+     "6% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 38",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "3.3 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b97,876 to hold."
+  },
+  "instrument_key": "NSE_EQ|INE0BJO01010"
+ },
+ {
+  "id": "K261126-106",
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback",
+  "label": "APLAPOLLO long",
+  "side": "LONG",
+  "entry": 1483.1966,
+  "last": 1478.3043,
+  "qty": 26,
+  "status": "LOSS",
+  "pnl_rs": -164.36,
+  "exit": 1478.3043,
+  "why": "stop",
+  "day": "2026-11-26",
+  "opened": "11:09:57",
+  "closed": "11:15:34",
+  "ts": 1795671600.2939641,
+  "symbol": "APLAPOLLO",
+  "stop": 1478.75,
+  "target_px": 1489.85,
+  "hold_min": 10,
+  "leverage": 5.0,
+  "margin_rs": 7713,
+  "horizon": "scalp",
+  "risk_class": "Scalp (1-minute bars)",
+  "reason": "long pullback to the 9-bar average on the 1-minute chart at 11:07: price above VWAP (1,479.47), averages stacked up, a strong bar on 1.4 times the usual volume. Stop 1,478.75, target 1,489.85, out after 10 minutes; the quant set the stop at least one standard deviation of 10-minute noise (0.30%) away",
+  "thesis": {
+   "horizon": "scalp",
+   "headline": "APLAPOLLO long",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%."
+   ],
+   "data": [
+    "APLAPOLLO at 1,483.20; 1-minute bars: close 1,484.40, VWAP 1,479.47, 9-bar average 1,482.08, 21-bar average 1,480.29, volume 1.4 times the 20-bar average.",
+    "Size 26 shares = Rs 38,563 of stock on about Rs 7,713 of margin (5 times intraday leverage assumed unless the broker's master says otherwise)."
+   ],
+   "strategy": "A short intraday position taken in the direction a stock is already trending, on a shallow pullback, with the stop just beyond the pullback and the target 1.5 times as far.",
+   "why": [
+    "Used when price is on the right side of VWAP, the 9-bar average is stacked over the 21-bar average, and a strong bar on above-average volume ends a pullback to the 9-bar average: joining the trend after a dip gives a tight, well-defined stop.",
+    "The gateway checks the same stop-loss, risk, charges and margin rules before any real order."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "1,483.20",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "1,478.75",
+     "Costs about \u20b9116"
+    ],
+    [
+     "Target (exit if right)",
+     "1,489.85",
+     "Earns about \u20b9173"
+    ],
+    [
+     "Reward for the risk",
+     "1.5 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "40% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b97,713",
+     "6% of the account"
+    ],
+    [
+     "Round-trip charges",
+     "about Rs 37",
+     "Brokerage, STT, exchange fees, stamp duty and GST on one entry and one exit"
+    ],
+    [
+     "Target against charges",
+     "4.6 times",
+     "The desk needs at least 3 times"
+    ]
+   ],
+   "risk": "Out at the stop, the target, after 10 minutes, or by 15:10. Fails when: The pullback becomes a reversal, or the move stalls inside the 10-minute window. Charges (flat Rs 10 an order plus STT and fees) are a real drag on small trades.",
+   "viability": "Needs \u20b97,713 to hold."
+  },
+  "instrument_key": "NSE_EQ|INE702C01027"
+ },
+ {
+  "id": "M261126-107",
+  "desk": "COMMODITY",
+  "strategy": "mcx_momentum",
+  "label": "Natural gas mini short",
+  "side": "SHORT",
+  "entry": 340.9,
+  "last": 336.8,
+  "qty": 1,
+  "status": "WIN",
+  "pnl_rs": 982.39,
+  "exit": 336.8,
+  "why": "target",
+  "day": "2026-11-26",
+  "opened": "11:19:49",
+  "closed": "11:58:12",
+  "ts": 1795672193.6283967,
+  "key": "MCX_FO|578250",
+  "mult": 250.0,
+  "symbol": "NATGASMINI FUT 28 DEC 26",
+  "stop": 342.95,
+  "target_px": 336.81,
+  "horizon": "intraday",
+  "risk_class": "Intraday momentum",
+  "margin_rs": 14315,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "Natural gas mini short",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +1.82%.",
+    "Brent crude 90.85 (-0.60%)."
+   ],
+   "data": [
+    "Natural gas mini (NATGASMINI FUT 28 DEC 26) at 340.90, -0.84% on the previous close; day range 340.90 to 343.60, price is 0.00% from the day low.",
+    "Lot: 250 unit(s) \u00d7 1 lot(s); contract value \u20b985,225."
+   ],
+   "strategy": "A futures position in the direction the market is already moving hard.",
+   "why": [
+    "Used when a commodity is up or down 0.8% or more and sitting at its day extreme: strong days tend to extend into the evening session when global markets open.",
+    "MCX does not allow API orders at the moment, so a real trade would be keyed in by hand in the Upstox app (instrument key MCX_FO|578250)."
+   ],
+   "numbers": [
+    [
+     "Entry",
+     "340.90",
+     "Price when the paper trade was opened"
+    ],
+    [
+     "Stop (exit if wrong)",
+     "342.95",
+     "Costs about \u20b9513"
+    ],
+    [
+     "Target (exit if right)",
+     "336.81",
+     "Earns about \u20b91,022"
+    ],
+    [
+     "Reward for the risk",
+     "2.0 to 1",
+     "Target gain divided by stop loss"
+    ],
+    [
+     "Needs to be right",
+     "33% of the time",
+     "The win rate this reward-to-risk must beat to break even, before costs"
+    ],
+    [
+     "Capital tied up",
+     "\u20b914,315",
+     "12% of the account"
+    ]
+   ],
+   "risk": "Out at the stop, the target, or 23:15, whichever comes first. Fails when: A reversal from the extreme. The 0.6% stop caps the loss.",
+   "viability": "Needs \u20b914,315 to hold (Upstox margin calculator)."
+  },
+  "reason": "-0.8% on the previous close and within 0.3% of the day low; stop 0.6%, target 1.2%"
+ },
+ {
+  "id": "F261126-108",
+  "desk": "FNO",
+  "strategy": "ema_vwap_cross",
+  "label": "NIFTY 25,800 PE \u00b7 EMA9/VWAP \u00b7 12-01",
+  "side": "LONG",
+  "entry": -168.65,
+  "last": -19.3,
+  "qty": 1,
+  "status": "LOSS",
+  "pnl_rs": -1320.31,
+  "exit": -19.3,
+  "why": "EMA9 breach: the 13:45 3-minute candle closed at 25,973.0, above EMA9 25,962.5",
+  "day": "2026-11-26",
+  "opened": "13:33:07",
+  "closed": "13:45:04",
+  "ts": 1795680191.654672,
+  "expiry": "2026-12-01",
+  "lot": 65,
+  "horizon": "daily",
+  "underlying": "NIFTY",
+  "legs": [
+   {
+    "side": "B",
+    "strike": 25800.0,
+    "kind": "PE",
+    "entry": 168.65,
+    "last": 149.35,
+    "key": "NSE_FO|47846"
+   }
+  ],
+  "unit_base": 168.65,
+  "target_u": null,
+  "stop_u": 42.16,
+  "risk_class": "Intraday signal \u00b7 option buying",
+  "max_gain_rs": null,
+  "max_loss_rs": 10962,
+  "margin_rs": 10962,
+  "margin_src": "premium paid (an option buyer posts only the premium)",
+  "thesis": {
+   "horizon": "intraday",
+   "headline": "NIFTY 25,800 PE: EMA9 crossed below VWAP at 13:33",
+   "news": [],
+   "data": [
+    "Near-month NIFTY future (NIFTY FUT 29 DEC 26) 3-minute candle 13:30-13:33: close 25,937.0, EMA9 25,974.6, session VWAP 25,981.0.",
+    "VWAP moved -0.3 over the last 3 candles, the same way as the crossover; no other crossover in the 30 minutes before.",
+    "Bought the at-the-money put (2026-12-01 expiry) at the ask 168.65; bid 168.35. NIFTY 25,824.6, India VIX 17.20.",
+    "Backtest of these exact rules on real 1-minute option prices, Oct 2024 - Oct 2026 (VERIFIED_HISTORICAL): 861 trades, 30.9% won, average Rs -38 a trade after Rs 61 of charges; before charges it made Rs +20,199. It has not made money after costs: this paper book is the test."
+   ],
+   "strategy": "EMA9 / VWAP crossover (the CEO's rules, cleaner signals)",
+   "why": [
+    "A put gains if NIFTY keeps moving down after the crossover; the exits cut it the moment the 3-minute trend breaks."
+   ],
+   "numbers": [
+    [
+     "Premium",
+     "Rs 10,962"
+    ],
+    [
+     "Stop",
+     "-25% (Rs 2,741)"
+    ],
+    [
+     "Target",
+     "none: held while candles close on the right side of EMA9"
+    ],
+    [
+     "Exit",
+     "3-min close beyond EMA9, opposite cross, -25% or 15:20"
+    ]
+   ],
+   "risk": "Most crossovers fail: in the backtest about 7 in 10 lost, a few big moves paid for them. Charges are about Rs 60 a round trip.",
+   "viability": "Paper only, run beside the straddle for comparison."
+  },
+  "book_name": "EMA9/VWAP",
+  "signal": {
+   "candle": "13:33",
+   "close": 25937.0,
+   "ema9": 25974.59,
+   "vwap": 25980.96
+  },
+  "reason": "EMA9 crossed below VWAP on the 13:33 3-minute candle (VWAP sloping the same way); bought the 25,800 PE at 168.65. Exit on a 3-minute close beyond EMA9, an opposite cross, -25%, or 15:20.",
+  "exit_premium": 149.35,
+  "charges_rs": 65.81
  }
 ]

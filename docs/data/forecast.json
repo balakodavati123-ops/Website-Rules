@@ -1,270 +1,214 @@
 {
- "day": "2026-11-24",
- "built_at": "09:27",
+ "day": "2026-11-26",
+ "built_at": "09:16",
  "stage": 2,
  "views": {
   "Nifty 50": {
    "name": "Nifty 50",
    "bias": "Bullish",
-   "score": 0.32,
+   "score": 0.35,
    "confidence": "Moderate",
-   "prev_close": 25350,
-   "centre": 25376,
-   "lo": 25094,
-   "hi": 25659,
-   "lo2": 24811,
-   "hi2": 25942,
-   "sigma_pts": 283,
+   "prev_close": 25819,
+   "centre": 25850,
+   "lo": 25564,
+   "hi": 26136,
+   "lo2": 25278,
+   "hi2": 26421,
+   "sigma_pts": 286,
    "sigma_pct": 1.11,
    "pivots": {
-    "P": 25562,
-    "R1": 25780,
-    "S1": 25131,
-    "R2": 26211,
-    "S2": 24913
+    "P": 25797,
+    "R1": 25974,
+    "S1": 25642,
+    "R2": 26129,
+    "S2": 25464
    },
    "resistance": [
-    25780,
+    25974,
     26000
    ],
    "support": [
-    24000,
-    25131
+    25500,
+    25642
    ],
    "parts": {
-    "world": 1.0,
-    "trend": 0.54,
-    "range": -0.98,
-    "gap": 1.0,
-    "options": -0.24,
+    "world": 0.77,
+    "trend": 0.78,
+    "range": 0.2,
+    "gap": 0.35,
+    "options": -0.25,
     "fii": -0.36,
-    "vix": -0.44
+    "vix": 0.1
    },
    "reasons": [
-    "World tone is positive: US and Asia weighted average +3.58% at the 23/11 close; Brent crude 86.4 (-6.67%).",
-    "It opened at 25,929, +2.29% from the previous close.",
-    "Nifty 50 closed at 25,350, +3.4% from its 20-day average (24,526) and +0.2% over five sessions: the trend is up.",
-    "Yesterday it closed in the lower third of its 25,344 to 25,993 range, so buyers or sellers held the close.",
+    "World tone is positive: US and Asia weighted average +0.62% at the 25/11 close; Brent crude 90.85 (-0.60%).",
+    "Nifty 50 closed at 25,819, +4.6% from its 20-day average (24,679) and +1.7% over five sessions: the trend is up.",
+    "It opened at 25,873, +0.21% from the previous close.",
+    "Options: put-to-call ratio 0.91 (balanced), most call open interest at 26,000 (ceiling), most put open interest at 25,500 (floor), max pain 25,800.",
     "Foreign institutions are net short 70,670 index futures, little changed (-257 over 5 sessions): a persistent bearish tilt.",
-    "Options: put-to-call ratio 0.7 (call writers dominate), most call open interest at 26,000 (ceiling), most put open interest at 24,000 (floor), max pain 26,000.",
-    "India VIX 17.7 (+2.2%): fear is rising."
+    "Yesterday it closed in the middle third of its 25,619 to 25,952 range, so buyers or sellers did not win the day.",
+    "India VIX 17.6 (-0.5%): steady."
    ],
-   "playbook": "Above 25,780 the day favours buyers (next stop 26,211); below 25,131 sellers take over (next 24,913). Between them expect a range day: the edges 25,094 and 25,659 are where moves have usually run out of fuel.",
+   "playbook": "Above 25,974 the day favours buyers (next stop 26,129); below 25,642 sellers take over (next 25,464). Between them expect a range day: the edges 25,564 and 26,136 are where moves have usually run out of fuel.",
    "headlines": [
-    "Japan core inflation picks up, makes case for BoJ rate hike stronger",
-    "Gold price crash: Yellow metal and silver slump over 4% each on MCX",
-    "Muthoot Finance heads for worst week since April 2025 as gold rout triggers sell-off"
+    "Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues",
+    "Bitcoin, Ether, Solana tumble in November as security breaches and regulatory uncertainty weigh",
+    "TCS gains 4% as Nvidia-led tech sell-off sparks buying in Indian IT stocks"
    ],
-   "rv": 14.5,
+   "rv": 16.8,
    "stage": 2,
-   "day": "2026-11-24"
+   "day": "2026-11-26"
   },
   "Bank Nifty": {
    "name": "Bank Nifty",
    "bias": "Bullish",
-   "score": 0.29,
+   "score": 0.4,
    "confidence": "Moderate",
-   "prev_close": 62585,
-   "centre": 62682,
-   "lo": 61566,
-   "hi": 63799,
-   "lo2": 60449,
-   "hi2": 64915,
-   "sigma_pts": 1117,
-   "sigma_pct": 1.78,
+   "prev_close": 63703,
+   "centre": 63839,
+   "lo": 62717,
+   "hi": 64960,
+   "lo2": 61596,
+   "hi2": 66081,
+   "sigma_pts": 1121,
+   "sigma_pct": 1.76,
    "pivots": {
-    "P": 63442,
-    "R1": 64337,
-    "S1": 61690,
-    "R2": 66089,
-    "S2": 60794
+    "P": 63695,
+    "R1": 64142,
+    "S1": 63256,
+    "R2": 64581,
+    "S2": 62809
    },
    "resistance": [
-    64337,
+    64142,
     66000
    ],
    "support": [
-    61690,
+    63256,
     65000
    ],
    "parts": {
-    "world": 1.0,
-    "trend": 0.77,
-    "range": -0.97,
-    "gap": 1.0,
-    "options": -0.74,
+    "world": 0.77,
+    "trend": 0.88,
+    "range": 0.03,
+    "gap": 0.47,
+    "options": -0.07,
     "fii": -0.36,
-    "vix": -0.44
+    "vix": 0.1
    },
    "reasons": [
-    "World tone is positive: US and Asia weighted average +3.58% at the 23/11 close; Brent crude 86.4 (-6.67%).",
-    "Bank Nifty closed at 62,585, +6.1% from its 20-day average (58,963) and +1.6% over five sessions: the trend is up.",
-    "It opened at 65,012, +3.88% from the previous close.",
-    "Options: put-to-call ratio 0.81 (balanced), most call open interest at 66,000 (ceiling), most put open interest at 65,000 (floor), max pain 64,000.",
-    "Yesterday it closed in the lower third of its 62,546 to 65,193 range, so buyers or sellers held the close.",
+    "World tone is positive: US and Asia weighted average +0.62% at the 25/11 close; Brent crude 90.85 (-0.60%).",
+    "Bank Nifty closed at 63,703, +7.2% from its 20-day average (59,450) and +2.3% over five sessions: the trend is up.",
+    "It opened at 63,883, +0.28% from the previous close.",
     "Foreign institutions are net short 70,670 index futures, little changed (-257 over 5 sessions): a persistent bearish tilt.",
-    "India VIX 17.7 (+2.2%): fear is rising."
+    "Options: put-to-call ratio 0.87 (balanced), most call open interest at 66,000 (ceiling), most put open interest at 65,000 (floor), max pain 64,000.",
+    "India VIX 17.6 (-0.5%): steady.",
+    "Yesterday it closed in the middle third of its 63,248 to 64,134 range, so buyers or sellers did not win the day."
    ],
-   "playbook": "Above 64,337 the day favours buyers (next stop 66,089); below 61,690 sellers take over (next 60,794). Between them expect a range day: the edges 61,566 and 63,799 are where moves have usually run out of fuel.",
+   "playbook": "Above 64,142 the day favours buyers (next stop 64,581); below 63,256 sellers take over (next 62,809). Between them expect a range day: the edges 62,717 and 64,960 are where moves have usually run out of fuel.",
    "headlines": [
-    "Japan core inflation picks up, makes case for BoJ rate hike stronger",
-    "Gold price crash: Yellow metal and silver slump over 4% each on MCX",
-    "Muthoot Finance heads for worst week since April 2025 as gold rout triggers sell-off"
+    "Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues",
+    "Bitcoin, Ether, Solana tumble in November as security breaches and regulatory uncertainty weigh",
+    "TCS gains 4% as Nvidia-led tech sell-off sparks buying in Indian IT stocks"
    ],
-   "rv": 26.4,
+   "rv": 26.7,
    "stage": 2,
-   "day": "2026-11-24"
+   "day": "2026-11-26"
   },
   "Sensex": {
    "name": "Sensex",
    "bias": "Bullish",
-   "score": 0.42,
-   "confidence": "Moderate",
-   "prev_close": 82436,
-   "centre": 82553,
-   "lo": 81628,
-   "hi": 83479,
-   "lo2": 80702,
-   "hi2": 84405,
-   "sigma_pts": 926,
-   "sigma_pct": 1.12,
+   "score": 0.5,
+   "confidence": "Higher",
+   "prev_close": 83938,
+   "centre": 84079,
+   "lo": 83149,
+   "hi": 85008,
+   "lo2": 82219,
+   "hi2": 85938,
+   "sigma_pts": 930,
+   "sigma_pct": 1.11,
    "pivots": {
-    "P": 83165,
-    "R1": 83934,
-    "S1": 81667,
-    "R2": 85432,
-    "S2": 80898
+    "P": 83939,
+    "R1": 84497,
+    "S1": 83380,
+    "R2": 85057,
+    "S2": 82822
    },
    "resistance": [
-    83934
+    84497
    ],
    "support": [
-    81667
+    83380
    ],
    "parts": {
-    "world": 1.0,
-    "trend": 0.57,
-    "range": -0.96,
-    "gap": 1.0,
+    "world": 0.77,
+    "trend": 0.78,
+    "range": -0.0,
+    "gap": 0.72,
     "fii": -0.36,
-    "vix": -0.44
+    "vix": 0.1
    },
    "reasons": [
-    "World tone is positive: US and Asia weighted average +3.58% at the 23/11 close; Brent crude 86.4 (-6.67%).",
-    "It opened at 84,422, +2.41% from the previous close.",
-    "Sensex closed at 82,436, +3.7% from its 20-day average (79,462) and +0.4% over five sessions: the trend is up.",
-    "Yesterday it closed in the lower third of its 82,396 to 84,663 range, so buyers or sellers held the close.",
+    "World tone is positive: US and Asia weighted average +0.62% at the 25/11 close; Brent crude 90.85 (-0.60%).",
+    "Sensex closed at 83,938, +5.0% from its 20-day average (79,979) and +1.7% over five sessions: the trend is up.",
+    "It opened at 84,301, +0.43% from the previous close.",
     "Foreign institutions are net short 70,670 index futures, little changed (-257 over 5 sessions): a persistent bearish tilt.",
-    "India VIX 17.7 (+2.2%): fear is rising."
+    "India VIX 17.6 (-0.5%): steady.",
+    "Yesterday it closed in the middle third of its 83,381 to 84,498 range, so buyers or sellers did not win the day."
    ],
-   "playbook": "Above 83,934 the day favours buyers (next stop 85,432); below 81,667 sellers take over (next 80,898). Between them expect a range day: the edges 81,628 and 83,479 are where moves have usually run out of fuel.",
+   "playbook": "Above 84,497 the day favours buyers (next stop 85,057); below 83,380 sellers take over (next 82,822). Between them expect a range day: the edges 83,149 and 85,008 are where moves have usually run out of fuel.",
    "headlines": [
-    "Japan core inflation picks up, makes case for BoJ rate hike stronger",
-    "Gold price crash: Yellow metal and silver slump over 4% each on MCX",
-    "Muthoot Finance heads for worst week since April 2025 as gold rout triggers sell-off"
+    "Polycab share price target cut 11% by ICICI Securities; Copper sell-off continues",
+    "Bitcoin, Ether, Solana tumble in November as security breaches and regulatory uncertainty weigh",
+    "TCS gains 4% as Nvidia-led tech sell-off sparks buying in Indian IT stocks"
    ],
-   "rv": 14.6,
+   "rv": 16.7,
    "stage": 2,
-   "day": "2026-11-24"
+   "day": "2026-11-26"
   }
  },
  "pre": {
   "Nifty 50": {
    "bias": "Bullish",
-   "score": 0.26,
-   "lo": 25089,
-   "hi": 25654,
-   "centre": 25372
+   "score": 0.37,
+   "lo": 25564,
+   "hi": 26139,
+   "centre": 25852
   },
   "Bank Nifty": {
    "bias": "Bullish",
-   "score": 0.34,
-   "lo": 61583,
-   "hi": 63816,
-   "centre": 62699
+   "score": 0.41,
+   "lo": 62714,
+   "hi": 64968,
+   "centre": 63841
   },
   "Sensex": {
    "bias": "Bullish",
-   "score": 0.3,
-   "lo": 81593,
-   "hi": 83445,
-   "centre": 82519
+   "score": 0.45,
+   "lo": 83130,
+   "hi": 84999,
+   "centre": 84064
   }
  },
- "scored": true,
+ "scored": false,
  "record": {
   "Nifty 50": {
-   "days": 4,
+   "days": 5,
    "direction": 0,
-   "range": 25
+   "range": 20
   },
   "Bank Nifty": {
-   "days": 4,
+   "days": 5,
    "direction": 0,
-   "range": 25
+   "range": 20
   },
   "Sensex": {
-   "days": 4,
+   "days": 5,
    "direction": 0,
-   "range": 25
+   "range": 20
   }
  },
- "world_as_of": "2026-11-23",
- "plan_world_at": 1795492655.9048939,
- "result": [
-  {
-   "name": "Nifty 50",
-   "day": "2026-11-24",
-   "bias": "Bullish",
-   "score": 0.32,
-   "prev_close": 25350,
-   "lo": 25094,
-   "hi": 25659,
-   "open": 25929.15,
-   "high": 25992.6,
-   "low": 25343.85,
-   "close": 25349.65,
-   "chg_pct": -0.0,
-   "direction_right": false,
-   "close_in_range": true,
-   "high_in_range": false,
-   "low_in_range": true
-  },
-  {
-   "name": "Bank Nifty",
-   "day": "2026-11-24",
-   "bias": "Bullish",
-   "score": 0.29,
-   "prev_close": 62585,
-   "lo": 61566,
-   "hi": 63799,
-   "open": 65012.05,
-   "high": 65193.4,
-   "low": 62546.2,
-   "close": 62585.35,
-   "chg_pct": 0.0,
-   "direction_right": false,
-   "close_in_range": true,
-   "high_in_range": false,
-   "low_in_range": true
-  },
-  {
-   "name": "Sensex",
-   "day": "2026-11-24",
-   "bias": "Bullish",
-   "score": 0.42,
-   "prev_close": 82436,
-   "lo": 81628,
-   "hi": 83479,
-   "open": 84421.97,
-   "high": 84662.96,
-   "low": 82395.88,
-   "close": 82435.99,
-   "chg_pct": -0.0,
-   "direction_right": false,
-   "close_in_range": true,
-   "high_in_range": false,
-   "low_in_range": true
-  }
- ]
+ "world_as_of": "2026-11-25",
+ "plan_world_at": 1795663839.9134147
 }

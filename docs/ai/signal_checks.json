@@ -1,12 +1,48 @@
 {
- "time": "25 Nov 09:21",
- "at": 1795578698.381691,
+ "time": "25 Nov 11:21",
+ "at": 1795585913.129168,
  "day": "2026-11-25",
  "model": "Claude (your plan, scheduled)",
  "checks": {
   "HILINFRA": {
    "verdict": "doubt",
-   "why": "Order and press release filings give no size or value; no price data yet"
+   "why": "Order and press release filings give no size or value; no price data"
+  },
+  "ZEEL": {
+   "verdict": "doubt",
+   "why": "Decline is only buyback adjustment, not real news."
+  },
+  "NH": {
+   "verdict": "doubt",
+   "why": "HSBC upgrade is positive but price is down, not confirming."
+  },
+  "JWL": {
+   "verdict": "confirm",
+   "why": "Specific joint venture news and price up about 4.5% agrees."
+  },
+  "SHADOWFAX": {
+   "verdict": "doubt",
+   "why": "Acquisition news is positive in tone but price is falling"
+  },
+  "LTF": {
+   "verdict": "doubt",
+   "why": "Jump already happened; price move is small against the headline."
+  },
+  "CANHLIFE": {
+   "verdict": "doubt",
+   "why": "Routine resignation filing; price has not confirmed and impact unclear."
+  },
+  "HDFCBANK": {
+   "verdict": "doubt",
+   "why": "Headlines conflict on gain size; sector-wide bank rally, already priced in."
+  },
+  "HINDZINC": {
+   "verdict": "doubt",
+   "why": "Commodity-driven story, price has not moved down to confirm."
+  },
+  "ANGELONE": {
+   "verdict": "doubt",
+   "why": "Resignation filing with no detail; price moved up, not down."
   }
  }
 }
