@@ -117,7 +117,7 @@
     { k: 'from', label: 'First entry', v: '09:45', type: 'time' }, { k: 'to', label: 'Last entry', v: '14:30', type: 'time' },
     { k: 'exit', label: 'Exit by', v: '15:15', type: 'time' }, { k: 'maxTrades', label: 'Trades a day (max)', v: 2, min: 1, max: 10, step: 1 }];
   var STRATS = [
-    { id: 'trend_pullback', grid: ['tgt', [0.3, 0.5, 0.75, 1, 1.5, 2, 3], 'stp', [0.5, 1, 1.5, 2, 3, 4]], name: 'Trend pullback', tf: 5,
+    { id: 'trend_pullback', entryText: "EMA 20 above EMA 50, price above VWAP, RSI dipped under the dip line in the last 4 candles and now closes back above 50: buy at the next candle's open (shorts: the mirror).", exitText: 'Stop: entry minus the stop in ATRs. Target: entry plus the target in ATRs.', grid: ['tgt', [0.3, 0.5, 0.75, 1, 1.5, 2, 3], 'stp', [0.5, 1, 1.5, 2, 3, 4]], name: 'Trend pullback', tf: 5,
       about: 'Buy dips in an up-trend, sell rallies in a down-trend. Trend: EMA 20 above EMA 50 and price above VWAP (or both below). Entry: RSI(14) pulls back under the dip line within the last few candles, then crosses back above 50 (mirror for shorts). Target and stop are set in ATRs, the market\'s typical bar size.',
       params: [{ k: 'fast', label: 'EMA fast', v: 20, min: 3, max: 100, step: 1 }, { k: 'slow', label: 'EMA slow', v: 50, min: 5, max: 200, step: 1 },
         { k: 'rsiLow', label: 'RSI dip below', v: 45, min: 10, max: 50, step: 1 }, { k: 'tgt', label: 'Target (ATR)', v: 1.0, min: 0.2, max: 6, step: 0.1 }, { k: 'stp', label: 'Stop (ATR)', v: 1.5, min: 0.2, max: 6, step: 0.1 }],
@@ -129,7 +129,7 @@
         if (dn && hi > 100 - P.rsiLow && X.r[i - 1] > 50 && X.r[i] <= 50) return { side: -1, tgt: P.tgt * a, stp: P.stp * a };
         return null;
       } },
-    { id: 'orb_trend', grid: ['tgt', [0.25, 0.5, 0.75, 1, 1.5, 2], 'stpFrac', [0.25, 0.5, 0.75, 1, 1.5]], name: 'Opening-range breakout', tf: 5,
+    { id: 'orb_trend', entryText: "After 09:30, the first candle that closes above the first 15 minutes' high, with EMA 9 above EMA 21 and ADX at least the set level: buy at the next candle's open (below the low: sell). One trade a day.", exitText: "Stop: inside the opening range by the set fraction of its height. Target: the range's height times the target multiple.", grid: ['tgt', [0.25, 0.5, 0.75, 1, 1.5, 2], 'stpFrac', [0.25, 0.5, 0.75, 1, 1.5]], name: 'Opening-range breakout', tf: 5,
       about: 'The first 15 minutes set a range. Buy the first candle that closes above its high when EMA 9 is above EMA 21 and ADX(14) shows a trend (or sell the first close below its low, mirror). Stop at the middle of the range, target a multiple of the range.',
       params: [{ k: 'orMin', label: 'Opening range (min)', v: 15, min: 5, max: 60, step: 5 }, { k: 'adxMin', label: 'ADX at least', v: 20, min: 0, max: 50, step: 1 },
         { k: 'tgt', label: 'Target (x range)', v: 1.0, min: 0.2, max: 4, step: 0.1 }, { k: 'stpFrac', label: 'Stop (fraction of range from the edge)', v: 0.5, min: 0.1, max: 1.5, step: 0.05 }],
@@ -141,7 +141,7 @@
         if (B.c[i] < S.orL[i] && B.c[i - 1] >= S.orL[i] && X.e9[i] < X.e21[i] && X.ad[i] >= P.adxMin) return { side: -1, tgt: P.tgt * r, stp: (S.orL[i] - B.c[i]) + P.stpFrac * r };
         return null;
       } },
-    { id: 'vwap_snapback', grid: ['tgtFrac', [0.3, 0.5, 0.75, 1], 'stp', [0.5, 1, 1.5, 2, 3, 4]], name: 'VWAP snap-back', tf: 5,
+    { id: 'vwap_snapback', entryText: 'ADX at most the set level (a quiet day), a candle closes below the lower Bollinger band with RSI under the line and at least 0.3 ATR under VWAP: buy at the next open (above the upper band: sell).', exitText: 'Target: the set share of the way back to VWAP. Stop: the set number of ATRs.', grid: ['tgtFrac', [0.3, 0.5, 0.75, 1], 'stp', [0.5, 1, 1.5, 2, 3, 4]], name: 'VWAP snap-back', tf: 5,
       about: 'On a quiet, range-bound day (ADX low), a stretch outside the Bollinger band with RSI at an extreme tends to snap back towards VWAP. Buy below the lower band with RSI under the low line (sell above the upper band, mirror); target VWAP, stop in ATRs.',
       params: [{ k: 'bbN', label: 'Bollinger length', v: 20, min: 5, max: 60, step: 1 }, { k: 'bbK', label: 'Bollinger width (SD)', v: 2.0, min: 1, max: 4, step: 0.1 },
         { k: 'rsiLow', label: 'RSI below', v: 30, min: 5, max: 45, step: 1 }, { k: 'adxMax', label: 'ADX at most', v: 25, min: 5, max: 60, step: 1 },
@@ -154,7 +154,7 @@
         if (c > hi && X.r[i] > 100 - P.rsiLow && c - v > 0.3 * a) return { side: -1, tgt: P.tgtFrac * (c - v), stp: P.stp * a };
         return null;
       } },
-    { id: 'gap_fill', grid: ['fill', [0.2, 0.35, 0.5, 0.75, 1], 'buf', [0, 0.25, 0.5, 1, 2]], name: 'Gap fill', tf: 5,
+    { id: 'gap_fill', entryText: '09:30 to 11:00, gap of at least the set size; gap up with a red first 15 minutes and price below VWAP: sell at the next open (gap down: mirror). One trade a day.', exitText: "Target: price back by the set share of the gap. Stop: the day's high so far (low for buys) plus the buffer.", grid: ['fill', [0.2, 0.35, 0.5, 0.75, 1], 'buf', [0, 0.25, 0.5, 1, 2]], name: 'Gap fill', tf: 5,
       about: 'When NIFTY opens with a gap and the first 15 minutes move against the gap, trade back towards yesterday\'s close. Gap up + red first 15 minutes + price below VWAP: sell (gap down: mirror). Target: part of the gap, stop above the day\'s high (below the low) plus a buffer.',
       params: [{ k: 'gapMin', label: 'Gap at least (%)', v: 0.3, min: 0.1, max: 2, step: 0.05 }, { k: 'fill', label: 'Target (share of the gap)', v: 0.5, min: 0.1, max: 1.2, step: 0.05 },
         { k: 'buf', label: 'Stop buffer (ATR)', v: 0.5, min: 0, max: 3, step: 0.1 }],
@@ -166,7 +166,7 @@
         if (gap <= -P.gapMin && first > op && c > S.vwap[i] && c < pc) return { side: 1, tgt: P.fill * (pc - op) - (c - op), stp: c - S.lo[i] + P.buf * a };
         return null;
       } },
-    { id: 'ema_st_adx', grid: ['tgt', [0.5, 1, 1.5, 2, 3, 4], 'stp', [0.5, 0.75, 1, 1.5, 2, 3]], name: 'EMA crossover + Supertrend', tf: 5,
+    { id: 'ema_st_adx', entryText: 'EMA fast crosses EMA slow, Supertrend(10, 3) points the same way, ADX at least the set level, price on that side of VWAP: buy (or sell) at the next open.', exitText: 'Stop and target in ATRs; also out when a candle closes back across the slow EMA (trend broke).', grid: ['tgt', [0.5, 1, 1.5, 2, 3, 4], 'stp', [0.5, 0.75, 1, 1.5, 2, 3]], name: 'EMA crossover + Supertrend', tf: 5,
       about: 'Trend following with three checks: EMA fast crosses EMA slow, Supertrend(10, 3) points the same way, ADX(14) confirms a trend, and price is on the right side of VWAP. Target and stop in ATRs; also out when price closes back across the slow EMA.',
       params: [{ k: 'fast', label: 'EMA fast', v: 9, min: 2, max: 50, step: 1 }, { k: 'slow', label: 'EMA slow', v: 21, min: 5, max: 100, step: 1 },
         { k: 'adxMin', label: 'ADX at least', v: 20, min: 0, max: 50, step: 1 }, { k: 'tgt', label: 'Target (ATR)', v: 2.0, min: 0.2, max: 8, step: 0.1 }, { k: 'stp', label: 'Stop (ATR)', v: 1.0, min: 0.2, max: 6, step: 0.1 }],
@@ -208,8 +208,9 @@
   function run(D, sid, opts) {
     opts = opts || {};
     var strat = STRATS.filter(function (s) { return s.id === sid; })[0]; if (!strat) throw new Error('unknown strategy ' + sid);
-    var P = Object.assign(defaults(strat), opts.params || {}), tf = +(opts.tf || strat.tf), F = opts.filters || {}, mode = opts.mode || 'index';
+    var P = Object.assign(defaults(strat), opts.params || {}), tf = +(opts.tf || strat.tf), F = opts.filters || {}, mode = opts.mode || 'index', E = opts.exits || {};
     var M = Object.assign({}, MODES[mode].defaults, opts.money || {}), pr = opts.pre || prepare(D, strat, P, tf), B = pr.B, X = pr.X;
+    if (E.flip && !X.e9x) X.e9x = ema(B.c, 9);
     var from = toMin(P.from), to = toMin(P.to), ex = toMin(P.exit), d0 = opts.start || '0000', d1 = opts.end || '9999', trades = [], sessions = 0;
     B.days.forEach(function (d) {
       if (d.day < d0 || d.day > d1) return;
@@ -218,18 +219,23 @@
       var pos = null, n = 0;
       for (var i = Math.max(d.a, 4); i < d.b; i++) {
         if (pos) {
-          var s = pos.side, o = B.o[i], hit = null, px;
-          if (s * (o - pos.stop) <= 0) { hit = 'stop'; px = o; } else if (s * (o - pos.tgt) >= 0) { hit = 'target'; px = o; }
-          else if (s === 1 ? B.l[i] <= pos.stop : B.h[i] >= pos.stop) { hit = 'stop'; px = pos.stop; }
+          var s = pos.side, o = B.o[i], hit = null, px, gain = s * (pos.best - pos.entry);
+          /* profit protection, from candles already closed: breakeven, then a stop trailing the best price */
+          if (E.be && gain >= E.be * pos.atr && s * (pos.entry - pos.stop) > 0) { pos.stop = pos.entry; pos.kind = 'breakeven'; }
+          if (E.trail && gain >= (E.trailAfter || 0) * pos.atr) { var ts = pos.best - s * E.trail * pos.atr; if (s * (ts - pos.stop) > 0) { pos.stop = ts; pos.kind = 'trailing stop'; } }
+          if (s * (o - pos.stop) <= 0) { hit = pos.kind; px = o; } else if (s * (o - pos.tgt) >= 0) { hit = 'target'; px = o; }
+          else if (s === 1 ? B.l[i] <= pos.stop : B.h[i] >= pos.stop) { hit = pos.kind; px = pos.stop; }
           else if (s === 1 ? B.h[i] >= pos.tgt : B.l[i] <= pos.tgt) { hit = 'target'; px = pos.tgt; }
           else if (B.m[i] + B.tf >= ex) { hit = 'time'; px = B.c[i]; }
           else if (strat.out && strat.out(B, X, i, s)) { hit = 'trend broke'; px = B.c[i]; }
+          else if (E.flip && s * (B.c[i] - X.e9x[i]) < 0 && gain > 0) { hit = 'momentum faded'; px = B.c[i]; }
           else if (i === d.b - 1) { hit = 'close'; px = B.c[i]; }
           if (hit) {
-            var tr = { day: d.day, dow: d.dow, side: s, inT: hhmm(pos.m), outT: hhmm(Math.min(B.m[i] + (hit === 'stop' || hit === 'target' ? 0 : B.tf), 930)), entry: pos.entry, exit: px,
-              pts: s * (px - pos.entry), why: hit, holdMin: Math.max(1, B.m[i] + B.tf - pos.m) };
+            var intra = hit === 'target' || px !== B.c[i], tr = { day: d.day, dow: d.dow, side: s, inT: hhmm(pos.m), outT: hhmm(Math.min(B.m[i] + (intra ? 0 : B.tf), 930)), entry: pos.entry, exit: px,
+              pts: s * (px - pos.entry), why: hit, holdMin: Math.max(1, B.m[i] + (intra ? 0 : B.tf) - pos.m) };
+            tr.mfe = Math.max(gain, tr.pts, 0); tr.mae = Math.min(s * (pos.worst - pos.entry), tr.pts, 0); tr.gaveBack = tr.mfe - tr.pts;     // best and worst while open (points)
             tr.net = money(tr, mode, M); trades.push(tr); pos = null;
-          }
+          } else { if (s === 1) { if (B.h[i] > pos.best) pos.best = B.h[i]; if (B.l[i] < pos.worst) pos.worst = B.l[i]; } else { if (B.l[i] < pos.best) pos.best = B.l[i]; if (B.h[i] > pos.worst) pos.worst = B.h[i]; } }
           continue;
         }
         if (n >= P.maxTrades || i >= d.b - 1) continue;
@@ -240,10 +246,10 @@
         if (F.skipExpiry && isExpiry(d.day, d.dow)) continue;
         if (F.onlyExpiry && !isExpiry(d.day, d.dow)) continue;
         var e = B.o[i + 1];
-        pos = { side: sig.side, entry: e, m: B.m[i + 1], tgt: e + sig.side * sig.tgt, stop: e - sig.side * sig.stp }; n++;
+        pos = { side: sig.side, entry: e, m: B.m[i + 1], tgt: E.noTarget ? sig.side * Infinity : e + sig.side * sig.tgt, stop: e - sig.side * sig.stp, best: e, worst: e, atr: X.A[i], kind: 'stop' }; n++;
       }
     });
-    return { strategy: strat.id, name: strat.name, params: P, tf: tf, mode: mode, unit: MODES[mode].unit, money: M, filters: F, sessions: sessions, trades: trades, stats: stats(trades, sessions) };
+    return { strategy: strat.id, name: strat.name, params: P, tf: tf, mode: mode, unit: MODES[mode].unit, money: M, filters: F, exits: E, sessions: sessions, trades: trades, stats: stats(trades, sessions) };
   }
   /* NIFTY weekly expiry: Thursday until August 2025, Tuesday from September 2025 (holidays move it a day earlier; not modelled) */
   function isExpiry(day, dow) { return day < '2025-09-01' ? dow === 4 : dow === 2; }
@@ -256,7 +262,10 @@
     return { trades: n, wins: w.length, winRate: n ? 100 * w.length / n : null, profitFactor: gl ? gp / gl : (gp ? Infinity : null), net: gp - gl, avgWin: w.length ? gp / w.length : null,
       avgLoss: L.length ? -gl / L.length : null, payoff: w.length && L.length ? (gp / w.length) / (gl / L.length) : null, expectancy: mean, maxDD: dd, tStat: sd ? mean / (sd / Math.sqrt(n)) : null,
       sessions: sessions, signalDays: Object.keys(days).length, signalDayPct: sessions ? 100 * Object.keys(days).length / sessions : null, perWeek: sessions ? n / (sessions / 5) : null,
-      avgHold: n ? T.reduce(function (s, t) { return s + t.holdMin; }, 0) / n : null };
+      avgHold: n ? T.reduce(function (s, t) { return s + t.holdMin; }, 0) / n : null,
+      avgBestPts: n ? T.reduce(function (s, t) { return s + (t.mfe || 0); }, 0) / n : null, avgPts: n ? T.reduce(function (s, t) { return s + t.pts; }, 0) / n : null,
+      avgGaveBack: n ? T.reduce(function (s, t) { return s + (t.gaveBack || 0); }, 0) / n : null,
+      wentGreen: n ? 100 * T.filter(function (t) { return (t.mfe || 0) >= 5; }).length / n : null, greenThenLost: n ? 100 * T.filter(function (t) { return (t.mfe || 0) >= 5 && t.pts < 0; }).length / n : null };
   }
   function group(T, key) { var g = {}; T.forEach(function (t) { var k = key(t); (g[k] = g[k] || []).push(t); }); var out = {}; Object.keys(g).sort().forEach(function (k) { out[k] = stats(g[k], 0); }); return out; }
   function breakdown(R) {
@@ -310,6 +319,12 @@
       otherBigMovePct: pct(nx.filter(function (r) { return (r.H - r.L) / r.o >= 0.01; }).length, nx.length) };
     var tom = D2.filter(function (r) { return r.dom <= 5; }), mid = D2.filter(function (r) { return r.dom > 5 && r.dom <= 24; }), eom = D2.filter(function (r) { return r.dom > 24; }), mv = function (a) { return a.length ? { days: a.length, upPct: pct(a.filter(function (r) { return r.c > r.pc; }).length, a.length), avgMovePct: +avg(a.map(function (r) { return (r.c / r.pc - 1) * 100; })).toFixed(3) } : null; };
     res.month = { firstFiveDays: mv(tom), middle: mv(mid), lastDays: mv(eom) };
+    res.intoClose = [[14 * 60 + 30, 'From 14:30'], [15 * 60, 'From 15:00']].map(function (q) {
+      var mvs = [];
+      B.days.forEach(function (d) { for (var i = d.a; i < d.b; i++) if (B.m[i] === q[0]) { mvs.push({ m: (B.c[d.b - 1] / B.o[i] - 1) * 100, up: B.o[i] >= B.o[d.a] }); break; } });
+      var f = function (a) { return a.length ? { days: a.length, downPct: pct(a.filter(function (x) { return x.m < 0; }).length, a.length), avgMovePct: +avg(a.map(function (x) { return x.m; })).toFixed(3) } : null; };
+      return { from: q[1], all: f(mvs), upSoFar: f(mvs.filter(function (x) { return x.up; })), downSoFar: f(mvs.filter(function (x) { return !x.up; })) };
+    });
     return res;
   }
 

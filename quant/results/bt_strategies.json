@@ -68,22 +68,22 @@
      "train": {
       "trades": 329,
       "winRate": 34.95,
-      "profitFactor": 0.67,
-      "net": -82969,
-      "expectancy": -252.18,
-      "avgWin": 1455.74,
-      "avgLoss": -1170,
-      "maxDD": 94056
+      "profitFactor": 0.68,
+      "net": -78328,
+      "expectancy": -238.08,
+      "avgWin": 1469.31,
+      "avgLoss": -1155.6,
+      "maxDD": 90082
      },
      "test": {
       "trades": 209,
       "winRate": 36.36,
-      "profitFactor": 0.79,
-      "net": -37554,
-      "expectancy": -179.69,
-      "avgWin": 1809.14,
-      "avgLoss": -1316.16,
-      "maxDD": 51046
+      "profitFactor": 0.8,
+      "net": -34577,
+      "expectancy": -165.44,
+      "avgWin": 1824.06,
+      "avgLoss": -1302.3,
+      "maxDD": 48183
      }
     }
    },
@@ -136,23 +136,23 @@
     "option": {
      "train": {
       "trades": 328,
-      "winRate": 71.34,
-      "profitFactor": 0.38,
-      "net": -118710,
-      "expectancy": -361.92,
-      "avgWin": 307.17,
-      "avgLoss": -2027.54,
-      "maxDD": 121523
+      "winRate": 71.65,
+      "profitFactor": 0.4,
+      "net": -114017,
+      "expectancy": -347.61,
+      "avgWin": 321.09,
+      "avgLoss": -2037.35,
+      "maxDD": 116931
      },
      "test": {
       "trades": 207,
-      "winRate": 78.74,
-      "profitFactor": 0.52,
-      "net": -55983,
-      "expectancy": -270.45,
-      "avgWin": 372.71,
-      "avgLoss": -2653.06,
-      "maxDD": 60278
+      "winRate": 79.23,
+      "profitFactor": 0.54,
+      "net": -53010,
+      "expectancy": -256.09,
+      "avgWin": 385.78,
+      "avgLoss": -2704.12,
+      "maxDD": 57555
      }
     }
    },
@@ -619,23 +619,23 @@
      "option": {
       "train": {
        "trades": 328,
-       "winRate": 71.34,
-       "profitFactor": 0.38,
-       "net": -118710,
-       "expectancy": -361.92,
-       "avgWin": 307.17,
-       "avgLoss": -2027.54,
-       "maxDD": 121523
+       "winRate": 71.65,
+       "profitFactor": 0.4,
+       "net": -114017,
+       "expectancy": -347.61,
+       "avgWin": 321.09,
+       "avgLoss": -2037.35,
+       "maxDD": 116931
       },
       "test": {
        "trades": 207,
-       "winRate": 78.74,
-       "profitFactor": 0.52,
-       "net": -55983,
-       "expectancy": -270.45,
-       "avgWin": 372.71,
-       "avgLoss": -2653.06,
-       "maxDD": 60278
+       "winRate": 79.23,
+       "profitFactor": 0.54,
+       "net": -53010,
+       "expectancy": -256.09,
+       "avgWin": 385.78,
+       "avgLoss": -2704.12,
+       "maxDD": 57555
       }
      }
     },
@@ -1168,22 +1168,22 @@
       "train": {
        "trades": 329,
        "winRate": 34.95,
-       "profitFactor": 0.67,
-       "net": -82969,
-       "expectancy": -252.18,
-       "avgWin": 1455.74,
-       "avgLoss": -1170,
-       "maxDD": 94056
+       "profitFactor": 0.68,
+       "net": -78328,
+       "expectancy": -238.08,
+       "avgWin": 1469.31,
+       "avgLoss": -1155.6,
+       "maxDD": 90082
       },
       "test": {
        "trades": 209,
        "winRate": 36.36,
-       "profitFactor": 0.79,
-       "net": -37554,
-       "expectancy": -179.69,
-       "avgWin": 1809.14,
-       "avgLoss": -1316.16,
-       "maxDD": 51046
+       "profitFactor": 0.8,
+       "net": -34577,
+       "expectancy": -165.44,
+       "avgWin": 1824.06,
+       "avgLoss": -1302.3,
+       "maxDD": 48183
       }
      }
     },
@@ -1318,22 +1318,22 @@
      "train": {
       "trades": 443,
       "winRate": 29.57,
-      "profitFactor": 0.61,
-      "net": -207689,
-      "expectancy": -468.83,
-      "avgWin": 2512.77,
-      "avgLoss": -1720.71,
-      "maxDD": 207689
+      "profitFactor": 0.62,
+      "net": -202324,
+      "expectancy": -456.71,
+      "avgWin": 2520.96,
+      "avgLoss": -1706.95,
+      "maxDD": 202324
      },
      "test": {
       "trades": 311,
       "winRate": 31.51,
       "profitFactor": 0.55,
-      "net": -208887,
-      "expectancy": -671.66,
-      "avgWin": 2604.19,
-      "avgLoss": -2178.86,
-      "maxDD": 229333
+      "net": -205641,
+      "expectancy": -661.22,
+      "avgWin": 2608.33,
+      "avgLoss": -2165.53,
+      "maxDD": 226427
      }
     }
    },
@@ -1386,23 +1386,23 @@
     "option": {
      "train": {
       "trades": 443,
-      "winRate": 75.17,
-      "profitFactor": 0.47,
-      "net": -145575,
-      "expectancy": -328.61,
-      "avgWin": 393.23,
-      "avgLoss": -2513.83,
-      "maxDD": 149735
+      "winRate": 75.85,
+      "profitFactor": 0.49,
+      "net": -139261,
+      "expectancy": -314.36,
+      "avgWin": 404.89,
+      "avgLoss": -2572.94,
+      "maxDD": 143955
      },
      "test": {
       "trades": 311,
-      "winRate": 77.49,
-      "profitFactor": 0.61,
-      "net": -87022,
-      "expectancy": -279.81,
-      "avgWin": 573.64,
-      "avgLoss": -3218.12,
-      "maxDD": 95809
+      "winRate": 78.14,
+      "profitFactor": 0.63,
+      "net": -82670,
+      "expectancy": -265.82,
+      "avgWin": 584.43,
+      "avgLoss": -3304.23,
+      "maxDD": 92436
      }
     }
    },
@@ -1456,23 +1456,23 @@
      "option": {
       "train": {
        "trades": 443,
-       "winRate": 75.17,
-       "profitFactor": 0.47,
-       "net": -145575,
-       "expectancy": -328.61,
-       "avgWin": 393.23,
-       "avgLoss": -2513.83,
-       "maxDD": 149735
+       "winRate": 75.85,
+       "profitFactor": 0.49,
+       "net": -139261,
+       "expectancy": -314.36,
+       "avgWin": 404.89,
+       "avgLoss": -2572.94,
+       "maxDD": 143955
       },
       "test": {
        "trades": 311,
-       "winRate": 77.49,
-       "profitFactor": 0.61,
-       "net": -87022,
-       "expectancy": -279.81,
-       "avgWin": 573.64,
-       "avgLoss": -3218.12,
-       "maxDD": 95809
+       "winRate": 78.14,
+       "profitFactor": 0.63,
+       "net": -82670,
+       "expectancy": -265.82,
+       "avgWin": 584.43,
+       "avgLoss": -3304.23,
+       "maxDD": 92436
       }
      }
     }
@@ -1624,23 +1624,23 @@
      "option": {
       "train": {
        "trades": 443,
-       "winRate": 75.17,
-       "profitFactor": 0.47,
-       "net": -145575,
-       "expectancy": -328.61,
-       "avgWin": 393.23,
-       "avgLoss": -2513.83,
-       "maxDD": 149735
+       "winRate": 75.85,
+       "profitFactor": 0.49,
+       "net": -139261,
+       "expectancy": -314.36,
+       "avgWin": 404.89,
+       "avgLoss": -2572.94,
+       "maxDD": 143955
       },
       "test": {
        "trades": 311,
-       "winRate": 77.49,
-       "profitFactor": 0.61,
-       "net": -87022,
-       "expectancy": -279.81,
-       "avgWin": 573.64,
-       "avgLoss": -3218.12,
-       "maxDD": 95809
+       "winRate": 78.14,
+       "profitFactor": 0.63,
+       "net": -82670,
+       "expectancy": -265.82,
+       "avgWin": 584.43,
+       "avgLoss": -3304.23,
+       "maxDD": 92436
       }
      }
     },
@@ -2197,22 +2197,22 @@
       "train": {
        "trades": 443,
        "winRate": 29.57,
-       "profitFactor": 0.61,
-       "net": -207689,
-       "expectancy": -468.83,
-       "avgWin": 2512.77,
-       "avgLoss": -1720.71,
-       "maxDD": 207689
+       "profitFactor": 0.62,
+       "net": -202324,
+       "expectancy": -456.71,
+       "avgWin": 2520.96,
+       "avgLoss": -1706.95,
+       "maxDD": 202324
       },
       "test": {
        "trades": 311,
        "winRate": 31.51,
        "profitFactor": 0.55,
-       "net": -208887,
-       "expectancy": -671.66,
-       "avgWin": 2604.19,
-       "avgLoss": -2178.86,
-       "maxDD": 229333
+       "net": -205641,
+       "expectancy": -661.22,
+       "avgWin": 2608.33,
+       "avgLoss": -2165.53,
+       "maxDD": 226427
       }
      }
     },
@@ -2347,22 +2347,22 @@
      "train": {
       "trades": 193,
       "winRate": 44.04,
-      "profitFactor": 0.41,
-      "net": -137258,
-      "expectancy": -711.18,
-      "avgWin": 1129.17,
-      "avgLoss": -2159.61,
-      "maxDD": 140974
+      "profitFactor": 0.42,
+      "net": -134651,
+      "expectancy": -697.68,
+      "avgWin": 1143.78,
+      "avgLoss": -2146.97,
+      "maxDD": 138514
      },
      "test": {
       "trades": 108,
       "winRate": 46.3,
-      "profitFactor": 0.52,
-      "net": -60179,
-      "expectancy": -557.22,
-      "avgWin": 1289.04,
-      "avgLoss": -2148.82,
-      "maxDD": 71170
+      "profitFactor": 0.53,
+      "net": -58837,
+      "expectancy": -544.79,
+      "avgWin": 1302.23,
+      "avgLoss": -2137.05,
+      "maxDD": 69925
      }
     }
    },
@@ -2415,23 +2415,23 @@
     "option": {
      "train": {
       "trades": 199,
-      "winRate": 66.33,
-      "profitFactor": 0.37,
-      "net": -106910,
-      "expectancy": -537.24,
-      "avgWin": 475.21,
-      "avgLoss": -2531.91,
-      "maxDD": 109235
+      "winRate": 66.83,
+      "profitFactor": 0.38,
+      "net": -104047,
+      "expectancy": -522.85,
+      "avgWin": 487.15,
+      "avgLoss": -2558.14,
+      "maxDD": 106450
      },
      "test": {
       "trades": 108,
       "winRate": 66.67,
-      "profitFactor": 0.37,
-      "net": -64057,
-      "expectancy": -593.12,
-      "avgWin": 514.66,
-      "avgLoss": -2808.68,
-      "maxDD": 69912
+      "profitFactor": 0.38,
+      "net": -62517,
+      "expectancy": -578.86,
+      "avgWin": 530.18,
+      "avgLoss": -2796.94,
+      "maxDD": 68530
      }
     }
    },
@@ -2610,23 +2610,23 @@
      "option": {
       "train": {
        "trades": 199,
-       "winRate": 66.33,
-       "profitFactor": 0.37,
-       "net": -106910,
-       "expectancy": -537.24,
-       "avgWin": 475.21,
-       "avgLoss": -2531.91,
-       "maxDD": 109235
+       "winRate": 66.83,
+       "profitFactor": 0.38,
+       "net": -104047,
+       "expectancy": -522.85,
+       "avgWin": 487.15,
+       "avgLoss": -2558.14,
+       "maxDD": 106450
       },
       "test": {
        "trades": 108,
        "winRate": 66.67,
-       "profitFactor": 0.37,
-       "net": -64057,
-       "expectancy": -593.12,
-       "avgWin": 514.66,
-       "avgLoss": -2808.68,
-       "maxDD": 69912
+       "profitFactor": 0.38,
+       "net": -62517,
+       "expectancy": -578.86,
+       "avgWin": 530.18,
+       "avgLoss": -2796.94,
+       "maxDD": 68530
       }
      }
     },
@@ -2919,22 +2919,22 @@
       "train": {
        "trades": 193,
        "winRate": 44.04,
-       "profitFactor": 0.41,
-       "net": -137258,
-       "expectancy": -711.18,
-       "avgWin": 1129.17,
-       "avgLoss": -2159.61,
-       "maxDD": 140974
+       "profitFactor": 0.42,
+       "net": -134651,
+       "expectancy": -697.68,
+       "avgWin": 1143.78,
+       "avgLoss": -2146.97,
+       "maxDD": 138514
       },
       "test": {
        "trades": 108,
        "winRate": 46.3,
-       "profitFactor": 0.52,
-       "net": -60179,
-       "expectancy": -557.22,
-       "avgWin": 1289.04,
-       "avgLoss": -2148.82,
-       "maxDD": 71170
+       "profitFactor": 0.53,
+       "net": -58837,
+       "expectancy": -544.79,
+       "avgWin": 1302.23,
+       "avgLoss": -2137.05,
+       "maxDD": 69925
       }
      }
     },
@@ -3165,22 +3165,22 @@
      "train": {
       "trades": 185,
       "winRate": 56.76,
-      "profitFactor": 0.59,
-      "net": -94376,
-      "expectancy": -510.14,
-      "avgWin": 1297.97,
-      "avgLoss": -2883.29,
-      "maxDD": 102590
+      "profitFactor": 0.6,
+      "net": -92345,
+      "expectancy": -499.16,
+      "avgWin": 1311.65,
+      "avgLoss": -2875.85,
+      "maxDD": 100809
      },
      "test": {
       "trades": 90,
       "winRate": 51.11,
       "profitFactor": 0.47,
-      "net": -92421,
-      "expectancy": -1026.9,
-      "avgWin": 1779.61,
-      "avgLoss": -3960.97,
-      "maxDD": 95631
+      "net": -91475,
+      "expectancy": -1016.39,
+      "avgWin": 1792.04,
+      "avgLoss": -3952.48,
+      "maxDD": 95004
      }
     }
    },
@@ -3233,23 +3233,23 @@
     "option": {
      "train": {
       "trades": 141,
-      "winRate": 61.7,
-      "profitFactor": 0.5,
-      "net": -60662,
-      "expectancy": -430.23,
-      "avgWin": 707.51,
-      "avgLoss": -2263.26,
-      "maxDD": 64892
+      "winRate": 63.83,
+      "profitFactor": 0.52,
+      "net": -58774,
+      "expectancy": -416.84,
+      "avgWin": 698.52,
+      "avgLoss": -2385.12,
+      "maxDD": 63137
      },
      "test": {
       "trades": 73,
       "winRate": 68.49,
-      "profitFactor": 0.85,
-      "net": -10843,
-      "expectancy": -148.53,
-      "avgWin": 1200.64,
-      "avgLoss": -3081.52,
-      "maxDD": 30636
+      "profitFactor": 0.86,
+      "net": -9865,
+      "expectancy": -135.13,
+      "avgWin": 1215.27,
+      "avgLoss": -3070.78,
+      "maxDD": 30408
      }
     }
    },
@@ -3644,23 +3644,23 @@
      "option": {
       "train": {
        "trades": 141,
-       "winRate": 61.7,
-       "profitFactor": 0.5,
-       "net": -60662,
-       "expectancy": -430.23,
-       "avgWin": 707.51,
-       "avgLoss": -2263.26,
-       "maxDD": 64892
+       "winRate": 63.83,
+       "profitFactor": 0.52,
+       "net": -58774,
+       "expectancy": -416.84,
+       "avgWin": 698.52,
+       "avgLoss": -2385.12,
+       "maxDD": 63137
       },
       "test": {
        "trades": 73,
        "winRate": 68.49,
-       "profitFactor": 0.85,
-       "net": -10843,
-       "expectancy": -148.53,
-       "avgWin": 1200.64,
-       "avgLoss": -3081.52,
-       "maxDD": 30636
+       "profitFactor": 0.86,
+       "net": -9865,
+       "expectancy": -135.13,
+       "avgWin": 1215.27,
+       "avgLoss": -3070.78,
+       "maxDD": 30408
       }
      }
     },
@@ -3929,22 +3929,22 @@
       "train": {
        "trades": 185,
        "winRate": 56.76,
-       "profitFactor": 0.59,
-       "net": -94376,
-       "expectancy": -510.14,
-       "avgWin": 1297.97,
-       "avgLoss": -2883.29,
-       "maxDD": 102590
+       "profitFactor": 0.6,
+       "net": -92345,
+       "expectancy": -499.16,
+       "avgWin": 1311.65,
+       "avgLoss": -2875.85,
+       "maxDD": 100809
       },
       "test": {
        "trades": 90,
        "winRate": 51.11,
        "profitFactor": 0.47,
-       "net": -92421,
-       "expectancy": -1026.9,
-       "avgWin": 1779.61,
-       "avgLoss": -3960.97,
-       "maxDD": 95631
+       "net": -91475,
+       "expectancy": -1016.39,
+       "avgWin": 1792.04,
+       "avgLoss": -3952.48,
+       "maxDD": 95004
       }
      }
     }
@@ -4007,22 +4007,22 @@
      "train": {
       "trades": 329,
       "winRate": 21.88,
-      "profitFactor": 0.67,
-      "net": -68372,
-      "expectancy": -207.82,
-      "avgWin": 1914.42,
-      "avgLoss": -802.38,
-      "maxDD": 101097
+      "profitFactor": 0.68,
+      "net": -65012,
+      "expectancy": -197.6,
+      "avgWin": 1925.43,
+      "avgLoss": -792.39,
+      "maxDD": 98243
      },
      "test": {
       "trades": 226,
       "winRate": 25.66,
-      "profitFactor": 0.83,
-      "net": -25748,
-      "expectancy": -113.93,
-      "avgWin": 2127.49,
-      "avgLoss": -887.75,
-      "maxDD": 39145
+      "profitFactor": 0.84,
+      "net": -23379,
+      "expectancy": -103.45,
+      "avgWin": 2137.58,
+      "avgLoss": -877.13,
+      "maxDD": 37481
      }
     }
    },
@@ -4075,23 +4075,23 @@
     "option": {
      "train": {
       "trades": 329,
-      "winRate": 71.73,
-      "profitFactor": 0.43,
-      "net": -64782,
-      "expectancy": -196.9,
-      "avgWin": 209.82,
-      "avgLoss": -1229.03,
-      "maxDD": 65318
+      "winRate": 72.04,
+      "profitFactor": 0.46,
+      "net": -61171,
+      "expectancy": -185.93,
+      "avgWin": 223.33,
+      "avgLoss": -1240.21,
+      "maxDD": 61753
      },
      "test": {
       "trades": 226,
-      "winRate": 70.8,
-      "profitFactor": 0.47,
-      "net": -48787,
-      "expectancy": -215.87,
-      "avgWin": 267.32,
-      "avgLoss": -1387.26,
-      "maxDD": 51716
+      "winRate": 71.68,
+      "profitFactor": 0.49,
+      "net": -46438,
+      "expectancy": -205.48,
+      "avgWin": 278.22,
+      "avgLoss": -1429.84,
+      "maxDD": 49509
      }
     }
    },
@@ -4270,23 +4270,23 @@
      "option": {
       "train": {
        "trades": 329,
-       "winRate": 71.73,
-       "profitFactor": 0.43,
-       "net": -64782,
-       "expectancy": -196.9,
-       "avgWin": 209.82,
-       "avgLoss": -1229.03,
-       "maxDD": 65318
+       "winRate": 72.04,
+       "profitFactor": 0.46,
+       "net": -61171,
+       "expectancy": -185.93,
+       "avgWin": 223.33,
+       "avgLoss": -1240.21,
+       "maxDD": 61753
       },
       "test": {
        "trades": 226,
-       "winRate": 70.8,
-       "profitFactor": 0.47,
-       "net": -48787,
-       "expectancy": -215.87,
-       "avgWin": 267.32,
-       "avgLoss": -1387.26,
-       "maxDD": 51716
+       "winRate": 71.68,
+       "profitFactor": 0.49,
+       "net": -46438,
+       "expectancy": -205.48,
+       "avgWin": 278.22,
+       "avgLoss": -1429.84,
+       "maxDD": 49509
       }
      }
     },
@@ -4963,22 +4963,22 @@
       "train": {
        "trades": 329,
        "winRate": 21.88,
-       "profitFactor": 0.67,
-       "net": -68372,
-       "expectancy": -207.82,
-       "avgWin": 1914.42,
-       "avgLoss": -802.38,
-       "maxDD": 101097
+       "profitFactor": 0.68,
+       "net": -65012,
+       "expectancy": -197.6,
+       "avgWin": 1925.43,
+       "avgLoss": -792.39,
+       "maxDD": 98243
       },
       "test": {
        "trades": 226,
        "winRate": 25.66,
-       "profitFactor": 0.83,
-       "net": -25748,
-       "expectancy": -113.93,
-       "avgWin": 2127.49,
-       "avgLoss": -887.75,
-       "maxDD": 39145
+       "profitFactor": 0.84,
+       "net": -23379,
+       "expectancy": -103.45,
+       "avgWin": 2137.58,
+       "avgLoss": -877.13,
+       "maxDD": 37481
       }
      }
     },
@@ -5153,6 +5153,44 @@
     "upPct": 54.7,
     "avgMovePct": 0.113
    }
-  }
+  },
+  "intoClose": [
+   {
+    "from": "From 14:30",
+    "all": {
+     "days": 1208,
+     "downPct": 47.4,
+     "avgMovePct": 0.01
+    },
+    "upSoFar": {
+     "days": 574,
+     "downPct": 45.1,
+     "avgMovePct": 0.026
+    },
+    "downSoFar": {
+     "days": 634,
+     "downPct": 49.5,
+     "avgMovePct": -0.005
+    }
+   },
+   {
+    "from": "From 15:00",
+    "all": {
+     "days": 1208,
+     "downPct": 47.2,
+     "avgMovePct": 0.007
+    },
+    "upSoFar": {
+     "days": 574,
+     "downPct": 44.6,
+     "avgMovePct": 0.017
+    },
+    "downSoFar": {
+     "days": 634,
+     "downPct": 49.5,
+     "avgMovePct": -0.001
+    }
+   }
+  ]
  }
 }

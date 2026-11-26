@@ -1,0 +1,2403 @@
+{
+ "split": "2025-01-01",
+ "intoTheClose": {
+  "from 14:30": {
+   "days": 1208,
+   "avgMovePct": 0.0098,
+   "downDaysPct": 47.43,
+   "avgAbsMovePct": 0.1923,
+   "upDays": {
+    "days": 574,
+    "avgMovePct": 0.0263,
+    "downPct": 45.12
+   },
+   "downDays": {
+    "days": 634,
+    "avgMovePct": -0.0052,
+    "upPct": 50.47
+   }
+  },
+  "from 15:00": {
+   "days": 1208,
+   "avgMovePct": 0.0070999999999999995,
+   "downDaysPct": 47.19,
+   "avgAbsMovePct": 0.14400000000000002,
+   "upDays": {
+    "days": 574,
+    "avgMovePct": 0.0165,
+    "downPct": 44.6
+   },
+   "downDays": {
+    "days": 634,
+    "avgMovePct": -0.0014000000000000002,
+    "upPct": 50.47
+   }
+  },
+  "from 15:15": {
+   "days": 1208,
+   "avgMovePct": 0.008,
+   "downDaysPct": 49.42,
+   "avgAbsMovePct": 0.0795,
+   "upDays": {
+    "days": 587,
+    "avgMovePct": 0.0088,
+    "downPct": 48.89
+   },
+   "downDays": {
+    "days": 621,
+    "avgMovePct": 0.0072,
+    "upPct": 50.08
+   }
+  }
+ },
+ "strategies": {
+  "trend_pullback": {
+   "name": "Trend pullback",
+   "variants": {
+    "as designed (target, stop, out 15:15)": {
+     "futures": {
+      "train": {
+       "trades": 343,
+       "winRate": 55.39,
+       "profitFactor": 0.47,
+       "avg": -545.96
+      },
+      "test": {
+       "trades": 219,
+       "winRate": 61.64,
+       "profitFactor": 0.58,
+       "avg": -447.3
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 343,
+       "winRate": 54.81,
+       "profitFactor": 0.52,
+       "avg": -246.52
+      },
+      "test": {
+       "trades": 219,
+       "winRate": 61.64,
+       "profitFactor": 0.71,
+       "avg": -145.27
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 343,
+       "winRate": 55.69,
+       "profitFactor": 0.82,
+       "avg": -2.41
+      },
+      "test": {
+       "trades": 219,
+       "winRate": 61.64,
+       "profitFactor": 1.02,
+       "avg": 0.29
+      }
+     },
+     "profit": {
+      "avgBestPts": 16.28,
+      "avgKeptPts": -0.36,
+      "avgGaveBackPts": 16.64,
+      "wentGreenPct": 82.74,
+      "greenThenLostPct": 24.73
+     },
+     "exits": {
+      "stop": {
+       "share": 40.93,
+       "avgPts": -32.2
+      },
+      "target": {
+       "share": 57.83,
+       "avgPts": 20.67
+      },
+      "time": {
+       "share": 1.25,
+       "avgPts": -10.58
+      }
+     }
+    },
+    "same, but out by 14:30": {
+     "futures": {
+      "train": {
+       "trades": 343,
+       "winRate": 51.9,
+       "profitFactor": 0.48,
+       "avg": -508.6
+      },
+      "test": {
+       "trades": 219,
+       "winRate": 58.9,
+       "profitFactor": 0.6,
+       "avg": -394.96
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 343,
+       "winRate": 51.6,
+       "profitFactor": 0.53,
+       "avg": -221.16
+      },
+      "test": {
+       "trades": 219,
+       "winRate": 60.27,
+       "profitFactor": 0.75,
+       "avg": -113.98
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 343,
+       "winRate": 54.52,
+       "profitFactor": 0.85,
+       "avg": -1.83
+      },
+      "test": {
+       "trades": 219,
+       "winRate": 61.19,
+       "profitFactor": 1.09,
+       "avg": 1.1
+      }
+     },
+     "profit": {
+      "avgBestPts": 15.39,
+      "avgKeptPts": 0.31,
+      "avgGaveBackPts": 15.09,
+      "wentGreenPct": 78.83,
+      "greenThenLostPct": 22.24
+     },
+     "exits": {
+      "stop": {
+       "share": 34.34,
+       "avgPts": -32.91
+      },
+      "target": {
+       "share": 53.02,
+       "avgPts": 21.04
+      },
+      "time": {
+       "share": 12.63,
+       "avgPts": -4.33
+      }
+     }
+    },
+    "breakeven after +1 ATR": {
+     "futures": {
+      "train": {
+       "trades": 343,
+       "winRate": 55.39,
+       "profitFactor": 0.47,
+       "avg": -545.96
+      },
+      "test": {
+       "trades": 219,
+       "winRate": 61.64,
+       "profitFactor": 0.58,
+       "avg": -447.3
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 343,
+       "winRate": 54.81,
+       "profitFactor": 0.52,
+       "avg": -246.52
+      },
+      "test": {
+       "trades": 219,
+       "winRate": 61.64,
+       "profitFactor": 0.71,
+       "avg": -145.27
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 343,
+       "winRate": 55.69,
+       "profitFactor": 0.82,
+       "avg": -2.41
+      },
+      "test": {
+       "trades": 219,
+       "winRate": 61.64,
+       "profitFactor": 1.02,
+       "avg": 0.29
+      }
+     },
+     "profit": {
+      "avgBestPts": 16.28,
+      "avgKeptPts": -0.36,
+      "avgGaveBackPts": 16.64,
+      "wentGreenPct": 82.74,
+      "greenThenLostPct": 24.73
+     },
+     "exits": {
+      "stop": {
+       "share": 40.93,
+       "avgPts": -32.2
+      },
+      "target": {
+       "share": 57.83,
+       "avgPts": 20.67
+      },
+      "time": {
+       "share": 1.25,
+       "avgPts": -10.58
+      }
+     }
+    },
+    "target + trailing stop 1 ATR after +1 ATR": {
+     "futures": {
+      "train": {
+       "trades": 343,
+       "winRate": 55.39,
+       "profitFactor": 0.47,
+       "avg": -545.96
+      },
+      "test": {
+       "trades": 219,
+       "winRate": 61.64,
+       "profitFactor": 0.58,
+       "avg": -447.3
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 343,
+       "winRate": 54.81,
+       "profitFactor": 0.52,
+       "avg": -246.52
+      },
+      "test": {
+       "trades": 219,
+       "winRate": 61.64,
+       "profitFactor": 0.71,
+       "avg": -145.27
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 343,
+       "winRate": 55.69,
+       "profitFactor": 0.82,
+       "avg": -2.41
+      },
+      "test": {
+       "trades": 219,
+       "winRate": 61.64,
+       "profitFactor": 1.02,
+       "avg": 0.29
+      }
+     },
+     "profit": {
+      "avgBestPts": 16.28,
+      "avgKeptPts": -0.36,
+      "avgGaveBackPts": 16.64,
+      "wentGreenPct": 82.74,
+      "greenThenLostPct": 24.73
+     },
+     "exits": {
+      "stop": {
+       "share": 40.93,
+       "avgPts": -32.2
+      },
+      "target": {
+       "share": 57.83,
+       "avgPts": 20.67
+      },
+      "time": {
+       "share": 1.25,
+       "avgPts": -10.58
+      }
+     }
+    },
+    "no target, trailing stop 1.5 ATR after +1 ATR": {
+     "futures": {
+      "train": {
+       "trades": 343,
+       "winRate": 35.57,
+       "profitFactor": 0.79,
+       "avg": -240.69
+      },
+      "test": {
+       "trades": 219,
+       "winRate": 35.16,
+       "profitFactor": 0.73,
+       "avg": -338.51
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 343,
+       "winRate": 33.24,
+       "profitFactor": 0.73,
+       "avg": -159.14
+      },
+      "test": {
+       "trades": 219,
+       "winRate": 34.7,
+       "profitFactor": 0.73,
+       "avg": -159.85
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 343,
+       "winRate": 42.27,
+       "profitFactor": 1.16,
+       "avg": 2.29
+      },
+      "test": {
+       "trades": 219,
+       "winRate": 41.55,
+       "profitFactor": 1.13,
+       "avg": 1.97
+      }
+     },
+     "profit": {
+      "avgBestPts": 37.74,
+      "avgKeptPts": 3.16,
+      "avgGaveBackPts": 34.57,
+      "wentGreenPct": 82.74,
+      "greenThenLostPct": 38.61
+     },
+     "exits": {
+      "stop": {
+       "share": 40.93,
+       "avgPts": -32.2
+      },
+      "time": {
+       "share": 5.34,
+       "avgPts": 63.48
+      },
+      "trailing stop": {
+       "share": 53.74,
+       "avgPts": 22.24
+      }
+     }
+    },
+    "no target, out when momentum fades (EMA 9)": {
+     "futures": {
+      "train": {
+       "trades": 358,
+       "winRate": 26.82,
+       "profitFactor": 0.66,
+       "avg": -340.5
+      },
+      "test": {
+       "trades": 223,
+       "winRate": 28.25,
+       "profitFactor": 0.64,
+       "avg": -406.33
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 358,
+       "winRate": 25.98,
+       "profitFactor": 0.64,
+       "avg": -167.58
+      },
+      "test": {
+       "trades": 223,
+       "winRate": 27.8,
+       "profitFactor": 0.67,
+       "avg": -168.23
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 358,
+       "winRate": 32.96,
+       "profitFactor": 1.07,
+       "avg": 0.77
+      },
+      "test": {
+       "trades": 223,
+       "winRate": 33.18,
+       "profitFactor": 1.08,
+       "avg": 0.93
+      }
+     },
+     "profit": {
+      "avgBestPts": 31.17,
+      "avgKeptPts": 1.83,
+      "avgGaveBackPts": 29.34,
+      "wentGreenPct": 76.42,
+      "greenThenLostPct": 42.17
+     },
+     "exits": {
+      "momentum faded": {
+       "share": 81.07,
+       "avgPts": 2.04
+      },
+      "stop": {
+       "share": 13.77,
+       "avgPts": -33.44
+      },
+      "time": {
+       "share": 5.16,
+       "avgPts": 73.09
+      }
+     }
+    },
+    "no target, trail 1 ATR after +0.5 + momentum exit": {
+     "futures": {
+      "train": {
+       "trades": 358,
+       "winRate": 24.3,
+       "profitFactor": 0.43,
+       "avg": -492.3
+      },
+      "test": {
+       "trades": 223,
+       "winRate": 29.15,
+       "profitFactor": 0.62,
+       "avg": -344.27
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 358,
+       "winRate": 27.65,
+       "profitFactor": 0.49,
+       "avg": -196.16
+      },
+      "test": {
+       "trades": 223,
+       "winRate": 31.84,
+       "profitFactor": 0.78,
+       "avg": -87.71
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 358,
+       "winRate": 34.36,
+       "profitFactor": 0.83,
+       "avg": -1.57
+      },
+      "test": {
+       "trades": 223,
+       "winRate": 41.26,
+       "profitFactor": 1.2,
+       "avg": 1.88
+      }
+     },
+     "profit": {
+      "avgBestPts": 23.31,
+      "avgKeptPts": 0.75,
+      "avgGaveBackPts": 22.56,
+      "wentGreenPct": 76.42,
+      "greenThenLostPct": 37.87
+     },
+     "exits": {
+      "momentum faded": {
+       "share": 28.06,
+       "avgPts": -14.48
+      },
+      "stop": {
+       "share": 10.84,
+       "avgPts": -32.07
+      },
+      "time": {
+       "share": 0.34,
+       "avgPts": 59.98
+      },
+      "trailing stop": {
+       "share": 60.76,
+       "avgPts": 11.67
+      }
+     }
+    }
+   }
+  },
+  "orb_trend": {
+   "name": "Opening-range breakout",
+   "variants": {
+    "as designed (target, stop, out 15:15)": {
+     "futures": {
+      "train": {
+       "trades": 443,
+       "winRate": 42.44,
+       "profitFactor": 0.92,
+       "avg": -150.6
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 41.48,
+       "profitFactor": 0.82,
+       "avg": -439.87
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 443,
+       "winRate": 39.95,
+       "profitFactor": 0.69,
+       "avg": -322.44
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 38.59,
+       "profitFactor": 0.63,
+       "avg": -503.53
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 443,
+       "winRate": 42.44,
+       "profitFactor": 1.14,
+       "avg": 3.6
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 42.77,
+       "profitFactor": 1.01,
+       "avg": 0.38
+      }
+     },
+     "profit": {
+      "avgBestPts": 49.1,
+      "avgKeptPts": 3.27,
+      "avgGaveBackPts": 45.83,
+      "wentGreenPct": 92.31,
+      "greenThenLostPct": 49.73
+     },
+     "exits": {
+      "stop": {
+       "share": 53.32,
+       "avgPts": -51.81
+      },
+      "target": {
+       "share": 33.82,
+       "avgPts": 78.59
+      },
+      "time": {
+       "share": 12.86,
+       "avgPts": 25.81
+      }
+     }
+    },
+    "same, but out by 14:30": {
+     "futures": {
+      "train": {
+       "trades": 443,
+       "winRate": 43.12,
+       "profitFactor": 0.92,
+       "avg": -147.74
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 44.05,
+       "profitFactor": 0.82,
+       "avg": -422.67
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 443,
+       "winRate": 39.5,
+       "profitFactor": 0.69,
+       "avg": -302.79
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 39.55,
+       "profitFactor": 0.63,
+       "avg": -467.08
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 443,
+       "winRate": 44.24,
+       "profitFactor": 1.15,
+       "avg": 3.65
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 46.3,
+       "profitFactor": 1.02,
+       "avg": 0.65
+      }
+     },
+     "profit": {
+      "avgBestPts": 47.39,
+      "avgKeptPts": 3.41,
+      "avgGaveBackPts": 43.98,
+      "wentGreenPct": 92.31,
+      "greenThenLostPct": 47.21
+     },
+     "exits": {
+      "stop": {
+       "share": 51.33,
+       "avgPts": -51.89
+      },
+      "target": {
+       "share": 30.9,
+       "avgPts": 78.46
+      },
+      "time": {
+       "share": 17.77,
+       "avgPts": 26.98
+      }
+     }
+    },
+    "breakeven after +1 ATR": {
+     "futures": {
+      "train": {
+       "trades": 443,
+       "winRate": 25.51,
+       "profitFactor": 0.79,
+       "avg": -263.78
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 20.26,
+       "profitFactor": 0.63,
+       "avg": -632.43
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 443,
+       "winRate": 24.6,
+       "profitFactor": 0.66,
+       "avg": -236.02
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 20.26,
+       "profitFactor": 0.54,
+       "avg": -408.55
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 443,
+       "winRate": 25.51,
+       "profitFactor": 1.12,
+       "avg": 1.86
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 20.58,
+       "profitFactor": 0.87,
+       "avg": -2.58
+      }
+     },
+     "profit": {
+      "avgBestPts": 40.22,
+      "avgKeptPts": 1.03,
+      "avgGaveBackPts": 39.19,
+      "wentGreenPct": 92.31,
+      "greenThenLostPct": 26.92
+     },
+     "exits": {
+      "breakeven": {
+       "share": 43.63,
+       "avgPts": -1.32
+      },
+      "stop": {
+       "share": 32.63,
+       "avgPts": -50.8
+      },
+      "target": {
+       "share": 21.09,
+       "avgPts": 76
+      },
+      "time": {
+       "share": 2.65,
+       "avgPts": 43.51
+      }
+     }
+    },
+    "target + trailing stop 1 ATR after +1 ATR": {
+     "futures": {
+      "train": {
+       "trades": 443,
+       "winRate": 46.73,
+       "profitFactor": 0.64,
+       "avg": -402.67
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 48.23,
+       "profitFactor": 0.56,
+       "avg": -669.04
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 443,
+       "winRate": 45.15,
+       "profitFactor": 0.57,
+       "avg": -251.04
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 47.59,
+       "profitFactor": 0.53,
+       "avg": -359
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 443,
+       "winRate": 62.53,
+       "profitFactor": 0.98,
+       "avg": -0.28
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 61.41,
+       "profitFactor": 0.84,
+       "avg": -3.14
+      }
+     },
+     "profit": {
+      "avgBestPts": 34.88,
+      "avgKeptPts": -0.46,
+      "avgGaveBackPts": 35.34,
+      "wentGreenPct": 92.31,
+      "greenThenLostPct": 26.79
+     },
+     "exits": {
+      "stop": {
+       "share": 32.63,
+       "avgPts": -50.8
+      },
+      "target": {
+       "share": 9.81,
+       "avgPts": 61.66
+      },
+      "time": {
+       "share": 0.53,
+       "avgPts": 16.95
+      },
+      "trailing stop": {
+       "share": 57.03,
+       "avgPts": 15.74
+      }
+     }
+    },
+    "no target, trailing stop 1.5 ATR after +1 ATR": {
+     "futures": {
+      "train": {
+       "trades": 443,
+       "winRate": 38.15,
+       "profitFactor": 0.78,
+       "avg": -273.98
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 37.94,
+       "profitFactor": 0.62,
+       "avg": -625.26
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 443,
+       "winRate": 34.31,
+       "profitFactor": 0.6,
+       "avg": -270.57
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 35.37,
+       "profitFactor": 0.52,
+       "avg": -412.9
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 443,
+       "winRate": 46.73,
+       "profitFactor": 1.11,
+       "avg": 1.7
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 48.23,
+       "profitFactor": 0.88,
+       "avg": -2.47
+      }
+     },
+     "profit": {
+      "avgBestPts": 46.59,
+      "avgKeptPts": 0.98,
+      "avgGaveBackPts": 45.61,
+      "wentGreenPct": 92.31,
+      "greenThenLostPct": 44.03
+     },
+     "exits": {
+      "stop": {
+       "share": 32.63,
+       "avgPts": -50.8
+      },
+      "time": {
+       "share": 2.25,
+       "avgPts": 114.93
+      },
+      "trailing stop": {
+       "share": 65.12,
+       "avgPts": 21.45
+      }
+     }
+    },
+    "no target, out when momentum fades (EMA 9)": {
+     "futures": {
+      "train": {
+       "trades": 443,
+       "winRate": 33.63,
+       "profitFactor": 0.72,
+       "avg": -343.91
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 32.15,
+       "profitFactor": 0.52,
+       "avg": -700.19
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 443,
+       "winRate": 29.8,
+       "profitFactor": 0.62,
+       "avg": -234.68
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 31.19,
+       "profitFactor": 0.48,
+       "avg": -365.41
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 443,
+       "winRate": 39.95,
+       "profitFactor": 1.04,
+       "avg": 0.63
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 40.51,
+       "profitFactor": 0.8,
+       "avg": -3.62
+      }
+     },
+     "profit": {
+      "avgBestPts": 41.3,
+      "avgKeptPts": -0.13,
+      "avgGaveBackPts": 41.42,
+      "wentGreenPct": 90.19,
+      "greenThenLostPct": 49.34
+     },
+     "exits": {
+      "momentum faded": {
+       "share": 87.8,
+       "avgPts": 4.31
+      },
+      "stop": {
+       "share": 11.94,
+       "avgPts": -45.9
+      },
+      "time": {
+       "share": 0.27,
+       "avgPts": 216.25
+      }
+     }
+    },
+    "no target, trail 1 ATR after +0.5 + momentum exit": {
+     "futures": {
+      "train": {
+       "trades": 443,
+       "winRate": 31.6,
+       "profitFactor": 0.57,
+       "avg": -397.89
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 31.51,
+       "profitFactor": 0.5,
+       "avg": -564.97
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 443,
+       "winRate": 33.18,
+       "profitFactor": 0.59,
+       "avg": -180.38
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 33.12,
+       "profitFactor": 0.57,
+       "avg": -217.33
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 443,
+       "winRate": 43.34,
+       "profitFactor": 0.98,
+       "avg": -0.2
+      },
+      "test": {
+       "trades": 311,
+       "winRate": 41.48,
+       "profitFactor": 0.88,
+       "avg": -1.54
+      }
+     },
+     "profit": {
+      "avgBestPts": 30.37,
+      "avgKeptPts": 0.24,
+      "avgGaveBackPts": 30.12,
+      "wentGreenPct": 90.19,
+      "greenThenLostPct": 45.62
+     },
+     "exits": {
+      "momentum faded": {
+       "share": 19.5,
+       "avgPts": -21.03
+      },
+      "stop": {
+       "share": 8.49,
+       "avgPts": -48.39
+      },
+      "trailing stop": {
+       "share": 72.02,
+       "avgPts": 10.35
+      }
+     }
+    }
+   }
+  },
+  "vwap_snapback": {
+   "name": "VWAP snap-back",
+   "variants": {
+    "as designed (target, stop, out 15:15)": {
+     "futures": {
+      "train": {
+       "trades": 199,
+       "winRate": 31.16,
+       "profitFactor": 0.44,
+       "avg": -1161.19
+      },
+      "test": {
+       "trades": 109,
+       "winRate": 36.7,
+       "profitFactor": 0.66,
+       "avg": -682.86
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 199,
+       "winRate": 30.15,
+       "profitFactor": 0.38,
+       "avg": -672.96
+      },
+      "test": {
+       "trades": 109,
+       "winRate": 36.7,
+       "profitFactor": 0.63,
+       "avg": -372.08
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 199,
+       "winRate": 31.66,
+       "profitFactor": 0.57,
+       "avg": -11.86
+      },
+      "test": {
+       "trades": 109,
+       "winRate": 40.37,
+       "profitFactor": 0.87,
+       "avg": -3.39
+      }
+     },
+     "profit": {
+      "avgBestPts": 34.17,
+      "avgKeptPts": -7.86,
+      "avgGaveBackPts": 42.03,
+      "wentGreenPct": 84.09,
+      "greenThenLostPct": 49.03
+     },
+     "exits": {
+      "stop": {
+       "share": 58.12,
+       "avgPts": -44.83
+      },
+      "target": {
+       "share": 24.03,
+       "avgPts": 60.71
+      },
+      "time": {
+       "share": 17.86,
+       "avgPts": 14.59
+      }
+     }
+    },
+    "same, but out by 14:30": {
+     "futures": {
+      "train": {
+       "trades": 199,
+       "winRate": 34.17,
+       "profitFactor": 0.51,
+       "avg": -826.55
+      },
+      "test": {
+       "trades": 109,
+       "winRate": 38.53,
+       "profitFactor": 0.54,
+       "avg": -813.92
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 199,
+       "winRate": 31.66,
+       "profitFactor": 0.46,
+       "avg": -473.86
+      },
+      "test": {
+       "trades": 109,
+       "winRate": 38.53,
+       "profitFactor": 0.55,
+       "avg": -397.67
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 199,
+       "winRate": 40.2,
+       "profitFactor": 0.7,
+       "avg": -6.71
+      },
+      "test": {
+       "trades": 109,
+       "winRate": 41.28,
+       "profitFactor": 0.77,
+       "avg": -5.41
+      }
+     },
+     "profit": {
+      "avgBestPts": 29.11,
+      "avgKeptPts": -5.25,
+      "avgGaveBackPts": 34.36,
+      "wentGreenPct": 80.19,
+      "greenThenLostPct": 39.61
+     },
+     "exits": {
+      "stop": {
+       "share": 45.45,
+       "avgPts": -45.11
+      },
+      "target": {
+       "share": 19.48,
+       "avgPts": 61.74
+      },
+      "time": {
+       "share": 35.06,
+       "avgPts": 6.35
+      }
+     }
+    },
+    "breakeven after +1 ATR": {
+     "futures": {
+      "train": {
+       "trades": 203,
+       "winRate": 19.21,
+       "profitFactor": 0.44,
+       "avg": -814.6
+      },
+      "test": {
+       "trades": 110,
+       "winRate": 22.73,
+       "profitFactor": 0.45,
+       "avg": -957.33
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 203,
+       "winRate": 19.21,
+       "profitFactor": 0.42,
+       "avg": -423.42
+      },
+      "test": {
+       "trades": 110,
+       "winRate": 22.73,
+       "profitFactor": 0.46,
+       "avg": -455.63
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 203,
+       "winRate": 19.21,
+       "profitFactor": 0.63,
+       "avg": -6.54
+      },
+      "test": {
+       "trades": 110,
+       "winRate": 23.64,
+       "profitFactor": 0.64,
+       "avg": -7.62
+      }
+     },
+     "profit": {
+      "avgBestPts": 29.59,
+      "avgKeptPts": -5.92,
+      "avgGaveBackPts": 35.51,
+      "wentGreenPct": 84.35,
+      "greenThenLostPct": 26.84
+     },
+     "exits": {
+      "breakeven": {
+       "share": 38.34,
+       "avgPts": -1.16
+      },
+      "stop": {
+       "share": 40.26,
+       "avgPts": -45.65
+      },
+      "target": {
+       "share": 17.25,
+       "avgPts": 60.32
+      },
+      "time": {
+       "share": 4.15,
+       "avgPts": 36.12
+      }
+     }
+    },
+    "target + trailing stop 1 ATR after +1 ATR": {
+     "futures": {
+      "train": {
+       "trades": 203,
+       "winRate": 37.44,
+       "profitFactor": 0.44,
+       "avg": -754.62
+      },
+      "test": {
+       "trades": 110,
+       "winRate": 38.18,
+       "profitFactor": 0.35,
+       "avg": -1051.84
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 203,
+       "winRate": 38.42,
+       "profitFactor": 0.44,
+       "avg": -367.17
+      },
+      "test": {
+       "trades": 110,
+       "winRate": 41.82,
+       "profitFactor": 0.38,
+       "avg": -476.74
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 203,
+       "winRate": 53.69,
+       "profitFactor": 0.68,
+       "avg": -5.61
+      },
+      "test": {
+       "trades": 110,
+       "winRate": 53.64,
+       "profitFactor": 0.57,
+       "avg": -9.07
+      }
+     },
+     "profit": {
+      "avgBestPts": 26.81,
+      "avgKeptPts": -5.83,
+      "avgGaveBackPts": 32.64,
+      "wentGreenPct": 84.35,
+      "greenThenLostPct": 26.84
+     },
+     "exits": {
+      "stop": {
+       "share": 40.26,
+       "avgPts": -45.65
+      },
+      "target": {
+       "share": 8.31,
+       "avgPts": 56.71
+      },
+      "time": {
+       "share": 0.64,
+       "avgPts": -19.12
+      },
+      "trailing stop": {
+       "share": 50.8,
+       "avgPts": 13.7
+      }
+     }
+    },
+    "no target, trailing stop 1.5 ATR after +1 ATR": {
+     "futures": {
+      "train": {
+       "trades": 202,
+       "winRate": 33.66,
+       "profitFactor": 0.49,
+       "avg": -738.59
+      },
+      "test": {
+       "trades": 109,
+       "winRate": 32.11,
+       "profitFactor": 0.41,
+       "avg": -998.36
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 202,
+       "winRate": 31.19,
+       "profitFactor": 0.45,
+       "avg": -390.09
+      },
+      "test": {
+       "trades": 109,
+       "winRate": 35.78,
+       "profitFactor": 0.41,
+       "avg": -474.23
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 202,
+       "winRate": 38.12,
+       "profitFactor": 0.71,
+       "avg": -5.36
+      },
+      "test": {
+       "trades": 109,
+       "winRate": 43.12,
+       "profitFactor": 0.62,
+       "avg": -8.24
+      }
+     },
+     "profit": {
+      "avgBestPts": 34.16,
+      "avgKeptPts": -5.37,
+      "avgGaveBackPts": 39.53,
+      "wentGreenPct": 84.57,
+      "greenThenLostPct": 42.77
+     },
+     "exits": {
+      "stop": {
+       "share": 39.87,
+       "avgPts": -45.3
+      },
+      "time": {
+       "share": 2.89,
+       "avgPts": 56.34
+      },
+      "trailing stop": {
+       "share": 57.23,
+       "avgPts": 17.58
+      }
+     }
+    },
+    "no target, out when momentum fades (EMA 9)": {
+     "futures": {
+      "train": {
+       "trades": 213,
+       "winRate": 30.05,
+       "profitFactor": 0.3,
+       "avg": -603.21
+      },
+      "test": {
+       "trades": 115,
+       "winRate": 34.78,
+       "profitFactor": 0.2,
+       "avg": -962.66
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 213,
+       "winRate": 34.74,
+       "profitFactor": 0.38,
+       "avg": -236.97
+      },
+      "test": {
+       "trades": 115,
+       "winRate": 41.74,
+       "profitFactor": 0.3,
+       "avg": -372.8
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 213,
+       "winRate": 46.95,
+       "profitFactor": 0.66,
+       "avg": -3.29
+      },
+      "test": {
+       "trades": 115,
+       "winRate": 46.96,
+       "profitFactor": 0.46,
+       "avg": -7.7
+      }
+     },
+     "profit": {
+      "avgBestPts": 14.44,
+      "avgKeptPts": -3.84,
+      "avgGaveBackPts": 18.28,
+      "wentGreenPct": 74.09,
+      "greenThenLostPct": 26.83
+     },
+     "exits": {
+      "momentum faded": {
+       "share": 88.41,
+       "avgPts": 0.57
+      },
+      "stop": {
+       "share": 11.59,
+       "avgPts": -46.11
+      }
+     }
+    },
+    "no target, trail 1 ATR after +0.5 + momentum exit": {
+     "futures": {
+      "train": {
+       "trades": 213,
+       "winRate": 26.29,
+       "profitFactor": 0.31,
+       "avg": -569.64
+      },
+      "test": {
+       "trades": 115,
+       "winRate": 34.78,
+       "profitFactor": 0.25,
+       "avg": -813.61
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 213,
+       "winRate": 30.52,
+       "profitFactor": 0.4,
+       "avg": -213.85
+      },
+      "test": {
+       "trades": 115,
+       "winRate": 41.74,
+       "profitFactor": 0.38,
+       "avg": -295.86
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 213,
+       "winRate": 43.19,
+       "profitFactor": 0.68,
+       "avg": -2.78
+      },
+      "test": {
+       "trades": 115,
+       "winRate": 46.96,
+       "profitFactor": 0.57,
+       "avg": -5.4
+      }
+     },
+     "profit": {
+      "avgBestPts": 14.09,
+      "avgKeptPts": -2.7,
+      "avgGaveBackPts": 16.79,
+      "wentGreenPct": 74.09,
+      "greenThenLostPct": 29.27
+     },
+     "exits": {
+      "momentum faded": {
+       "share": 65.85,
+       "avgPts": 1.42
+      },
+      "stop": {
+       "share": 9.76,
+       "avgPts": -46.75
+      },
+      "trailing stop": {
+       "share": 24.39,
+       "avgPts": -0.28
+      }
+     }
+    }
+   }
+  },
+  "gap_fill": {
+   "name": "Gap fill",
+   "variants": {
+    "as designed (target, stop, out 15:15)": {
+     "futures": {
+      "train": {
+       "trades": 141,
+       "winRate": 56.74,
+       "profitFactor": 0.64,
+       "avg": -487.66
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 65.75,
+       "profitFactor": 1.31,
+       "avg": 408.1
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 141,
+       "winRate": 60.28,
+       "profitFactor": 0.53,
+       "avg": -346.05
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 67.12,
+       "profitFactor": 1.12,
+       "avg": 86.8
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 141,
+       "winRate": 70.21,
+       "profitFactor": 0.91,
+       "avg": -1.66
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 75.34,
+       "profitFactor": 1.74,
+       "avg": 13.34
+      }
+     },
+     "profit": {
+      "avgBestPts": 29.18,
+      "avgKeptPts": 4.46,
+      "avgGaveBackPts": 24.72,
+      "wentGreenPct": 83.18,
+      "greenThenLostPct": 19.63
+     },
+     "exits": {
+      "stop": {
+       "share": 23.83,
+       "avgPts": -72.48
+      },
+      "target": {
+       "share": 71.03,
+       "avgPts": 28.32
+      },
+      "time": {
+       "share": 5.14,
+       "avgPts": 11.94
+      }
+     }
+    },
+    "same, but out by 14:30": {
+     "futures": {
+      "train": {
+       "trades": 141,
+       "winRate": 56.74,
+       "profitFactor": 0.64,
+       "avg": -468.42
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 64.38,
+       "profitFactor": 1.17,
+       "avg": 224.81
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 141,
+       "winRate": 58.87,
+       "profitFactor": 0.55,
+       "avg": -329.4
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 65.75,
+       "profitFactor": 1.01,
+       "avg": 5.83
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 141,
+       "winRate": 70.21,
+       "profitFactor": 0.92,
+       "avg": -1.36
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 73.97,
+       "profitFactor": 1.59,
+       "avg": 10.52
+      }
+     },
+     "profit": {
+      "avgBestPts": 28.92,
+      "avgKeptPts": 3.69,
+      "avgGaveBackPts": 25.22,
+      "wentGreenPct": 83.18,
+      "greenThenLostPct": 20.09
+     },
+     "exits": {
+      "stop": {
+       "share": 22.9,
+       "avgPts": -72.74
+      },
+      "target": {
+       "share": 70.09,
+       "avgPts": 28.05
+      },
+      "time": {
+       "share": 7.01,
+       "avgPts": -4.46
+      }
+     }
+    },
+    "breakeven after +1 ATR": {
+     "futures": {
+      "train": {
+       "trades": 141,
+       "winRate": 51.06,
+       "profitFactor": 0.57,
+       "avg": -524.38
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 58.9,
+       "profitFactor": 1.19,
+       "avg": 214.99
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 141,
+       "winRate": 55.32,
+       "profitFactor": 0.51,
+       "avg": -320.05
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 60.27,
+       "profitFactor": 1.08,
+       "avg": 49
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 141,
+       "winRate": 63.83,
+       "profitFactor": 0.86,
+       "avg": -2.23
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 68.49,
+       "profitFactor": 1.7,
+       "avg": 10.37
+      }
+     },
+     "profit": {
+      "avgBestPts": 27.82,
+      "avgKeptPts": 3.07,
+      "avgGaveBackPts": 24.74,
+      "wentGreenPct": 83.18,
+      "greenThenLostPct": 14.49
+     },
+     "exits": {
+      "breakeven": {
+       "share": 12.15,
+       "avgPts": -1.09
+      },
+      "stop": {
+       "share": 18.69,
+       "avgPts": -77.48
+      },
+      "target": {
+       "share": 66.36,
+       "avgPts": 25.44
+      },
+      "time": {
+       "share": 2.8,
+       "avgPts": -6.98
+      }
+     }
+    },
+    "target + trailing stop 1 ATR after +1 ATR": {
+     "futures": {
+      "train": {
+       "trades": 141,
+       "winRate": 56.03,
+       "profitFactor": 0.55,
+       "avg": -532.25
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 65.75,
+       "profitFactor": 1.17,
+       "avg": 180.18
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 141,
+       "winRate": 60.28,
+       "profitFactor": 0.51,
+       "avg": -306.24
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 65.75,
+       "profitFactor": 1.08,
+       "avg": 44.74
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 141,
+       "winRate": 73.76,
+       "profitFactor": 0.85,
+       "avg": -2.35
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 80.82,
+       "profitFactor": 1.67,
+       "avg": 9.84
+      }
+     },
+     "profit": {
+      "avgBestPts": 26.98,
+      "avgKeptPts": 2.81,
+      "avgGaveBackPts": 24.17,
+      "wentGreenPct": 83.18,
+      "greenThenLostPct": 14.49
+     },
+     "exits": {
+      "stop": {
+       "share": 18.69,
+       "avgPts": -77.48
+      },
+      "target": {
+       "share": 62.15,
+       "avgPts": 22.67
+      },
+      "time": {
+       "share": 1.87,
+       "avgPts": -48.68
+      },
+      "trailing stop": {
+       "share": 17.29,
+       "avgPts": 18.01
+      }
+     }
+    },
+    "no target, trailing stop 1.5 ATR after +1 ATR": {
+     "futures": {
+      "train": {
+       "trades": 141,
+       "winRate": 44.68,
+       "profitFactor": 0.83,
+       "avg": -276.97
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 49.32,
+       "profitFactor": 0.84,
+       "avg": -264.49
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 141,
+       "winRate": 41.84,
+       "profitFactor": 0.61,
+       "avg": -358.18
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 45.21,
+       "profitFactor": 0.62,
+       "avg": -342.61
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 141,
+       "winRate": 51.77,
+       "profitFactor": 1.07,
+       "avg": 1.58
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 57.53,
+       "profitFactor": 1.14,
+       "avg": 3
+      }
+     },
+     "profit": {
+      "avgBestPts": 60.56,
+      "avgKeptPts": 3.06,
+      "avgGaveBackPts": 57.5,
+      "wentGreenPct": 93.46,
+      "greenThenLostPct": 39.25
+     },
+     "exits": {
+      "stop": {
+       "share": 24.77,
+       "avgPts": -75.93
+      },
+      "time": {
+       "share": 4.21,
+       "avgPts": -5.31
+      },
+      "trailing stop": {
+       "share": 71.03,
+       "avgPts": 29.7
+      }
+     }
+    },
+    "no target, out when momentum fades (EMA 9)": {
+     "futures": {
+      "train": {
+       "trades": 141,
+       "winRate": 43.97,
+       "profitFactor": 0.59,
+       "avg": -385.76
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 39.73,
+       "profitFactor": 0.61,
+       "avg": -464.05
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 141,
+       "winRate": 46.1,
+       "profitFactor": 0.65,
+       "avg": -156.13
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 42.47,
+       "profitFactor": 0.73,
+       "avg": -142.74
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 141,
+       "winRate": 48.94,
+       "profitFactor": 0.99,
+       "avg": -0.09
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 47.95,
+       "profitFactor": 0.99,
+       "avg": -0.07
+      }
+     },
+     "profit": {
+      "avgBestPts": 25.95,
+      "avgKeptPts": 0.91,
+      "avgGaveBackPts": 25.04,
+      "wentGreenPct": 80.37,
+      "greenThenLostPct": 31.78
+     },
+     "exits": {
+      "momentum faded": {
+       "share": 96.73,
+       "avgPts": 3.01
+      },
+      "stop": {
+       "share": 3.27,
+       "avgPts": -91.52
+      }
+     }
+    },
+    "no target, trail 1 ATR after +0.5 + momentum exit": {
+     "futures": {
+      "train": {
+       "trades": 141,
+       "winRate": 41.13,
+       "profitFactor": 0.43,
+       "avg": -518.67
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 39.73,
+       "profitFactor": 0.65,
+       "avg": -396.1
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 141,
+       "winRate": 43.97,
+       "profitFactor": 0.52,
+       "avg": -203.69
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 42.47,
+       "profitFactor": 0.8,
+       "avg": -100.32
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 141,
+       "winRate": 47.52,
+       "profitFactor": 0.8,
+       "avg": -2.14
+      },
+      "test": {
+       "trades": 73,
+       "winRate": 47.95,
+       "profitFactor": 1.07,
+       "avg": 0.97
+      }
+     },
+     "profit": {
+      "avgBestPts": 22.76,
+      "avgKeptPts": -0.08,
+      "avgGaveBackPts": 22.83,
+      "wentGreenPct": 80.37,
+      "greenThenLostPct": 31.78
+     },
+     "exits": {
+      "momentum faded": {
+       "share": 69.16,
+       "avgPts": -1.22
+      },
+      "stop": {
+       "share": 3.27,
+       "avgPts": -91.52
+      },
+      "trailing stop": {
+       "share": 27.57,
+       "avgPts": 10.01
+      }
+     }
+    }
+   }
+  },
+  "ema_st_adx": {
+   "name": "EMA crossover + Supertrend",
+   "variants": {
+    "as designed (target, stop, out 15:15)": {
+     "futures": {
+      "train": {
+       "trades": 329,
+       "winRate": 31.61,
+       "profitFactor": 0.62,
+       "avg": -449.24
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 37.61,
+       "profitFactor": 0.86,
+       "avg": -175.18
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 329,
+       "winRate": 31.61,
+       "profitFactor": 0.64,
+       "avg": -203.13
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 37.61,
+       "profitFactor": 0.97,
+       "avg": -19.01
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 329,
+       "winRate": 31.61,
+       "profitFactor": 0.93,
+       "avg": -0.99
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 37.61,
+       "profitFactor": 1.3,
+       "avg": 4.45
+      }
+     },
+     "profit": {
+      "avgBestPts": 25.6,
+      "avgKeptPts": 2.23,
+      "avgGaveBackPts": 23.37,
+      "wentGreenPct": 77.84,
+      "greenThenLostPct": 43.78
+     },
+     "exits": {
+      "stop": {
+       "share": 47.57,
+       "avgPts": -25.05
+      },
+      "target": {
+       "share": 33.51,
+       "avgPts": 46.5
+      },
+      "time": {
+       "share": 0.54,
+       "avgPts": 21.08
+      },
+      "trend broke": {
+       "share": 18.38,
+       "avgPts": -13.91
+      }
+     }
+    },
+    "same, but out by 14:30": {
+     "futures": {
+      "train": {
+       "trades": 329,
+       "winRate": 31,
+       "profitFactor": 0.59,
+       "avg": -477.16
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 37.61,
+       "profitFactor": 0.87,
+       "avg": -153.62
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 329,
+       "winRate": 31,
+       "profitFactor": 0.62,
+       "avg": -214.62
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 38.94,
+       "profitFactor": 0.99,
+       "avg": -5.13
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 329,
+       "winRate": 31.91,
+       "profitFactor": 0.9,
+       "avg": -1.42
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 39.82,
+       "profitFactor": 1.33,
+       "avg": 4.78
+      }
+     },
+     "profit": {
+      "avgBestPts": 24.76,
+      "avgKeptPts": 2.11,
+      "avgGaveBackPts": 22.66,
+      "wentGreenPct": 76.4,
+      "greenThenLostPct": 41.44
+     },
+     "exits": {
+      "stop": {
+       "share": 45.05,
+       "avgPts": -25.37
+      },
+      "target": {
+       "share": 30.45,
+       "avgPts": 47.58
+      },
+      "time": {
+       "share": 7.21,
+       "avgPts": 6.7
+      },
+      "trend broke": {
+       "share": 17.3,
+       "avgPts": -14.09
+      }
+     }
+    },
+    "breakeven after +1 ATR": {
+     "futures": {
+      "train": {
+       "trades": 329,
+       "winRate": 23.71,
+       "profitFactor": 0.54,
+       "avg": -483.69
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 28.32,
+       "profitFactor": 0.67,
+       "avg": -389.1
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 329,
+       "winRate": 23.71,
+       "profitFactor": 0.59,
+       "avg": -201.64
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 28.32,
+       "profitFactor": 0.79,
+       "avg": -111.01
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 329,
+       "winRate": 23.71,
+       "profitFactor": 0.87,
+       "avg": -1.52
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 28.32,
+       "profitFactor": 1.09,
+       "avg": 1.16
+      }
+     },
+     "profit": {
+      "avgBestPts": 24.05,
+      "avgKeptPts": 0.57,
+      "avgGaveBackPts": 23.47,
+      "wentGreenPct": 77.84,
+      "greenThenLostPct": 30.45
+     },
+     "exits": {
+      "breakeven": {
+       "share": 23.24,
+       "avgPts": -1.33
+      },
+      "stop": {
+       "share": 40.72,
+       "avgPts": -25.39
+      },
+      "target": {
+       "share": 25.59,
+       "avgPts": 46.42
+      },
+      "trend broke": {
+       "share": 10.45,
+       "avgPts": -15.87
+      }
+     }
+    },
+    "target + trailing stop 1 ATR after +1 ATR": {
+     "futures": {
+      "train": {
+       "trades": 329,
+       "winRate": 31.91,
+       "profitFactor": 0.48,
+       "avg": -516
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 36.73,
+       "profitFactor": 0.64,
+       "avg": -411.32
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 329,
+       "winRate": 34.04,
+       "profitFactor": 0.54,
+       "avg": -210.73
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 37.17,
+       "profitFactor": 0.77,
+       "avg": -115.37
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 329,
+       "winRate": 44.38,
+       "profitFactor": 0.82,
+       "avg": -2.02
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 43.81,
+       "profitFactor": 1.06,
+       "avg": 0.82
+      }
+     },
+     "profit": {
+      "avgBestPts": 23.3,
+      "avgKeptPts": 0.14,
+      "avgGaveBackPts": 23.16,
+      "wentGreenPct": 77.84,
+      "greenThenLostPct": 30.45
+     },
+     "exits": {
+      "stop": {
+       "share": 40.72,
+       "avgPts": -25.39
+      },
+      "target": {
+       "share": 20,
+       "avgPts": 45.28
+      },
+      "trailing stop": {
+       "share": 28.83,
+       "avgPts": 7.21
+      },
+      "trend broke": {
+       "share": 10.45,
+       "avgPts": -15.87
+      }
+     }
+    },
+    "no target, trailing stop 1.5 ATR after +1 ATR": {
+     "futures": {
+      "train": {
+       "trades": 329,
+       "winRate": 28.27,
+       "profitFactor": 0.63,
+       "avg": -393.64
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 32.3,
+       "profitFactor": 0.8,
+       "avg": -244.3
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 329,
+       "winRate": 28.27,
+       "profitFactor": 0.63,
+       "avg": -186.28
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 32.74,
+       "profitFactor": 0.86,
+       "avg": -74.11
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 329,
+       "winRate": 33.74,
+       "profitFactor": 0.99,
+       "avg": -0.13
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 35.84,
+       "profitFactor": 1.24,
+       "avg": 3.39
+      }
+     },
+     "profit": {
+      "avgBestPts": 35.57,
+      "avgKeptPts": 2.3,
+      "avgGaveBackPts": 33.27,
+      "wentGreenPct": 77.84,
+      "greenThenLostPct": 42.34
+     },
+     "exits": {
+      "stop": {
+       "share": 40.72,
+       "avgPts": -25.39
+      },
+      "time": {
+       "share": 1.26,
+       "avgPts": 73.11
+      },
+      "trailing stop": {
+       "share": 46.67,
+       "avgPts": 26.21
+      },
+      "trend broke": {
+       "share": 11.35,
+       "avgPts": -13.32
+      }
+     }
+    },
+    "no target, out when momentum fades (EMA 9)": {
+     "futures": {
+      "train": {
+       "trades": 329,
+       "winRate": 25.84,
+       "profitFactor": 0.73,
+       "avg": -298.67
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 28.32,
+       "profitFactor": 0.75,
+       "avg": -320.65
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 329,
+       "winRate": 24.92,
+       "profitFactor": 0.69,
+       "avg": -159.2
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 28.32,
+       "profitFactor": 0.77,
+       "avg": -134.14
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 329,
+       "winRate": 31,
+       "profitFactor": 1.11,
+       "avg": 1.33
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 33.19,
+       "profitFactor": 1.15,
+       "avg": 2.21
+      }
+     },
+     "profit": {
+      "avgBestPts": 39.12,
+      "avgKeptPts": 2.69,
+      "avgGaveBackPts": 36.43,
+      "wentGreenPct": 77.66,
+      "greenThenLostPct": 45.05
+     },
+     "exits": {
+      "momentum faded": {
+       "share": 43.78,
+       "avgPts": 25.47
+      },
+      "stop": {
+       "share": 41.44,
+       "avgPts": -24.84
+      },
+      "time": {
+       "share": 2.34,
+       "avgPts": 88.72
+      },
+      "trend broke": {
+       "share": 12.43,
+       "avgPts": -10.05
+      }
+     }
+    },
+    "no target, trail 1 ATR after +0.5 + momentum exit": {
+     "futures": {
+      "train": {
+       "trades": 329,
+       "winRate": 26.75,
+       "profitFactor": 0.43,
+       "avg": -491.48
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 30.53,
+       "profitFactor": 0.65,
+       "avg": -360.05
+      }
+     },
+     "option": {
+      "train": {
+       "trades": 329,
+       "winRate": 28.88,
+       "profitFactor": 0.51,
+       "avg": -190.57
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 30.97,
+       "profitFactor": 0.8,
+       "avg": -88.99
+      }
+     },
+     "index": {
+      "train": {
+       "trades": 329,
+       "winRate": 37.69,
+       "profitFactor": 0.82,
+       "avg": -1.64
+      },
+      "test": {
+       "trades": 226,
+       "winRate": 36.73,
+       "profitFactor": 1.15,
+       "avg": 1.61
+      }
+     },
+     "profit": {
+      "avgBestPts": 26.1,
+      "avgKeptPts": 0.68,
+      "avgGaveBackPts": 25.42,
+      "wentGreenPct": 77.66,
+      "greenThenLostPct": 37.3
+     },
+     "exits": {
+      "momentum faded": {
+       "share": 3.96,
+       "avgPts": -6.78
+      },
+      "stop": {
+       "share": 26.31,
+       "avgPts": -26.06
+      },
+      "trailing stop": {
+       "share": 64.14,
+       "avgPts": 11.87
+      },
+      "trend broke": {
+       "share": 5.59,
+       "avgPts": -14.51
+      }
+     }
+    }
+   }
+  }
+ }
+}
