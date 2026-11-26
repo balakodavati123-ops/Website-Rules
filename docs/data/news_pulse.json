@@ -1,54 +1,668 @@
 {
- "updated_at": "2026-11-26T08:00:59+05:30",
- "scans": 1765,
+ "updated_at": "2026-11-26T13:49:16+05:30",
+ "scans": 2059,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "08:00:59"
+   "at": "13:49:16"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "08:00:59"
+   "at": "13:49:16"
   },
   "Moneycontrol": {
    "ok": true,
    "items": 15,
-   "at": "08:00:59"
+   "at": "13:49:16"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "08:00:59"
+   "at": "13:49:16"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "08:00:59"
+   "at": "13:49:16"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "08:00:59"
+   "at": "13:49:16"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "08:00:59"
+   "at": "13:49:16"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "08:00:59"
+   "at": "13:49:16"
   },
   "Google News": {
    "ok": true,
-   "items": 10,
-   "at": "08:00:59"
+   "items": 14,
+   "at": "13:49:16"
   }
  },
  "signals": [
+  {
+   "id": "N132648-32",
+   "t": "13:26:48",
+   "ts": 1795679808.141047,
+   "pub": "13:21",
+   "lag_s": 297,
+   "symbol": "TANLA",
+   "tone": "negative",
+   "score": -3.25,
+   "emotion": "Fear",
+   "why": [
+    "plunge"
+   ],
+   "headline": "Tanla Platforms shares plunge 12% in 6 days amid SC's setback for subsidiary Karix Mobile; details about  \u20b9375 cr dispute",
+   "source": "Mint",
+   "link": "https://www.livemint.com/market/stock-market-news/tanla-platforms-shares-plunge-12-in-6-days-amid-scs-setback-for-subsidiary-karix-mobile-details-about-375-cr-dispute-11795678641223.html",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 623.0,
+   "px": 630.65,
+   "move_pct": 1.23
+  },
+  {
+   "id": "N131015-31",
+   "t": "13:10:15",
+   "ts": 1795678815.30096,
+   "pub": "13:02",
+   "lag_s": 479,
+   "symbol": "GREAVESCOT",
+   "tone": "positive",
+   "score": 2.6,
+   "emotion": "Optimism",
+   "why": [
+    "record high"
+   ],
+   "headline": "Greaves Cotton hits record high on heavy volume; stock up 82% in four weeks",
+   "source": "Business Standard",
+   "link": "https://www.business-standard.com/markets/news/greaves-cotton-hits-record-high-on-heavy-volume-stock-up-82-in-four-weeks-126112600531_1.html",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 323.74,
+   "px": 323.84,
+   "move_pct": 0.03
+  },
+  {
+   "id": "N130655-30",
+   "t": "13:06:55",
+   "ts": 1795678615.181637,
+   "pub": "13:05",
+   "lag_s": 87,
+   "symbol": "PANACEABIO",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "PANACEABIO: Granting/withdrawal/surrender/cancellation/suspension of key licenses/ regulatory approvals",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/PANACEABIO_26112026130307_IntimationforwithdrawalofnoncompliancereportbyNCPHP.pdf",
+   "kind": "filing",
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 357.1,
+   "px": 359.1,
+   "move_pct": 0.56
+  },
+  {
+   "id": "N125647-29",
+   "t": "12:56:47",
+   "ts": 1795678007.191652,
+   "pub": "11:55",
+   "lag_s": 3697,
+   "symbol": "SGMART",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Multibagger stock to buy: SG Mart shares rise 4% despite 5800% rally in 5 years | Check stock returns",
+   "source": "Mint",
+   "link": "https://www.livemint.com/market/stock-market-news/multibagger-stock-to-buy-sg-mart-shares-rise-4-despite-5800-rally-in-5-years-buy-sell-or-hold-experts-explain-11795671736935.html",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 886.3,
+   "px": 885.2,
+   "move_pct": -0.12
+  },
+  {
+   "id": "N124005-28",
+   "t": "12:40:05",
+   "ts": 1795677005.898331,
+   "pub": "12:02",
+   "lag_s": 2239,
+   "symbol": "VALUE",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "NSE Shares Extend Rally as Market Value Nears \u20b96 Lakh Crore and Exchange Moves to Third Place Globally - Kotak Neo",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPcGc5ejFyN0J5SENpcUk2eFd6X0I1QjZwSEh1QkNkYzJGcmY5SVFmZENmek9BM3JUUE5Mdi1fRkM1eUlNNFBzVF9LSGdqY2l0dk1uaTFPRXFaMGtYUnM0ZVE1bnNtZHJxS2dBYjk1MzQxVHdCZmxQOG9HcW1xMDJuS3VkTFUzcDNoRDQ5YUl3TmwwckUzcnhOY1RDYmhQTlpfQndRWS1YaENQUQ?oc=5",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 15.79,
+   "px": 15.75,
+   "move_pct": -0.25
+  },
+  {
+   "id": "N123645-27",
+   "t": "12:36:45",
+   "ts": 1795676805.00629,
+   "pub": "12:36",
+   "lag_s": 32,
+   "symbol": "GINNIFILA",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "GINNIFILA: Disclosure under SEBI Takeover Regulations",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/team_jfutak_25112026111050_Dis11.pdf",
+   "kind": "filing",
+   "status": "watching: price has not confirmed yet",
+   "px0": 37.84,
+   "px": 37.16,
+   "move_pct": -1.8
+  },
+  {
+   "id": "N123645-26",
+   "t": "12:36:45",
+   "ts": 1795676805.00629,
+   "pub": "12:34",
+   "lag_s": 148,
+   "symbol": "THOMASCOOK",
+   "tone": "negative",
+   "score": -3.9,
+   "emotion": "Fear",
+   "why": [
+    "lower circuit"
+   ],
+   "headline": "Why are Thomas Cook shares locked at the 10% lower circuit today? Explained - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOM1Yyb3RrZVNBZHJXSWVmMU1ZbmRwWVJaUGcxSkU5T0FYMFFzdGl1VnBtU2MyMzEyaDVYMVdaUl94LVNrRHVYZGVrb1pmaE44S0NuelpRT0E2akF2akxPUThRd1Jub2lxc1VjQWo0WVI2SkN0RjFLV2lmbm1STmtBRmhxNlJOanFUeGFoY1V4Q1dMaUF4NlMyekE4VDZTSndxZHIxMUNhbFpteVZWdklYWi1HQ0ZuY2ppUWpOV3JUU05JSXZt?oc=5",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 134.64,
+   "px": 134.64,
+   "move_pct": 0.0
+  },
+  {
+   "id": "N123645-25",
+   "t": "12:36:45",
+   "ts": 1795676805.00629,
+   "pub": "12:34",
+   "lag_s": 148,
+   "symbol": "AVALON",
+   "tone": "positive",
+   "score": 1.95,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Why did Avalon Technologies shares rally over 6% today? Here's what's driving the stock - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNTmUzWjdLQmdfQVZTRE5KZ2NhU1FqSUV5TEFpTGJsZGI3OW5LV2h6UUtwSm8xVDEyaUd4RWZXSXFqRHY1QXBXMm1UTTkza3RpOWZ6ZUlObmg4alJlcW9uVjN0SXZOVnprVkktV19mUXFBWHRITkI5VnpvYkNfWDFUTXdXQlRTVG1jTUVJaHZtSU8zd05oQWh5LWZ2N2pta3ZCNVA5TmtrdkVFc3FaTzRN?oc=5",
+   "kind": "headline",
+   "status": "not taken: no intraday margin left",
+   "px0": 1763.1,
+   "px": 1810.2,
+   "move_pct": 2.67
+  },
+  {
+   "id": "N122649-24",
+   "t": "12:26:49",
+   "ts": 1795676209.289118,
+   "pub": "12:26",
+   "lag_s": 33,
+   "symbol": "PVSL",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "PVSL: Resignation of Director/KMP/SMP",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/PVSL_ROID_105253_KMP_Doc.zip",
+   "kind": "filing",
+   "status": "watching: price has not confirmed yet",
+   "px0": 87.97,
+   "px": 87.89,
+   "move_pct": -0.09
+  },
+  {
+   "id": "N121433-23",
+   "t": "12:14:33",
+   "ts": 1795675473.379727,
+   "pub": "11:42",
+   "lag_s": 1943,
+   "symbol": "BALUFORGE",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "approval"
+   ],
+   "headline": "Balu Forge Industries Secures NSE, BSE FCCB Approval - Multibagg AI",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQY1JNdUhHUG9LVWdfeS1fY2E2azZkbFlUSDdIZGZESWhoYzNuU0MteHR5THVfdmRPcnlZYlhFc0F0d1lncXJ0bjNTU20yRzZyY2I5LVBic3Y4OTdRd2YwTG1mdzZjLUFZVGZiakVzbXFrZm01OE9UYXBEaWgwQ0NlQ25qOVAxNVRGelBZcUhydXpYLXNqc0dGMUZLWE1wdw?oc=5",
+   "kind": "headline",
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 512.25,
+   "px": 517.1,
+   "move_pct": 0.95
+  },
+  {
+   "id": "N120748-22",
+   "t": "12:07:48",
+   "ts": 1795675068.040608,
+   "pub": "12:06",
+   "lag_s": 61,
+   "symbol": "SRM",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "SRM: Bagging/Receiving of orders/contracts",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/SRMCONTRACT_26112026120413_26-11-2026_order_intimation.pdf",
+   "kind": "filing",
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 431.8,
+   "px": 436.05,
+   "move_pct": 0.98
+  },
+  {
+   "id": "N120321-21",
+   "t": "12:03:21",
+   "ts": 1795674801.09359,
+   "pub": "12:01",
+   "lag_s": 93,
+   "symbol": "SHILPAMED",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "SHILPAMED: General Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/SHILPAMED_26112026120131_Intimationonusfda.pdf",
+   "kind": "filing",
+   "status": "watching: price has not confirmed yet",
+   "px0": 847.5,
+   "px": 843.9,
+   "move_pct": -0.42
+  },
+  {
+   "id": "N120107-20",
+   "t": "12:01:07",
+   "ts": 1795674667.541519,
+   "pub": "11:55",
+   "lag_s": 358,
+   "symbol": "SGMART",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Multibagger stock to buy: SG Mart shares rise 4% despite 5800% rally in 5 years | Buy, sell or hold? Experts explain - Livemint",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPakNKa1Z2Zi1SZzREWVItMmRDNUl2QW5SaV9sUzVVLUphNmVOWnJmR2k3SG0ycThsTFFaZW5WZ1NDblY5VWRjWXgxOEJxX3E5dTltMDcwNXpobmF6UTVzOGN5ZXlyRWMwSGN2aG01RnpKMjBuN2FUMm1XUU4zNlBhTkNVR2V6X045TGNKbl9QeFJydFl1TW9LUW9YYXBNZkFHVk9LUTZKNzBSMjJBVkpLcm1oSHhmeU92bTNiVk85UzhNR01hZ1kwa2FXSktlcVkwc3Q4bmNVLUl5TzdwdDJCVkVSdjJ3akFMTmJnODBGSnZ3MHFYY0VJZUUwUnRqUTZKRUNIZW1PLUdJcTDSAZACQVVfeXFMTzBPa2Rpd2VaQVN6WEFlV0RnSlBoa0FWQ0U2QXhRbUR3V3gzWGtNTjNUMEZtbWQtS1FMT0QyUXlCek1YLWdVSlc4SmNsTUpuamtiSFFveWExc2pBaE5DYlRDcjVidzhEaUZEcHpzQWJGZGFvaGhuVEhsMFpjZ0RzdUpNRE90LXJkNEVoNENoLVhORTZFUTh6ZjNmRFlPa0VQdEpzbW5rOGpiZHZEUVp2eXB3bUlBQS1KeUNobnlUUFgtdVJ2SUV0SUVWVGo5NmxSaGhOLTQ2WV9SRnhubEFOZjVkRklxVnlfbGdwZThhYzBSd2ZyaU5CbEFLejRUUVZBN1dvclV5cHdLUlZ3WlhXWm0?oc=5",
+   "kind": "headline",
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 871.8,
+   "px": 885.2,
+   "move_pct": 1.54
+  },
+  {
+   "id": "N120003-19",
+   "t": "12:00:03",
+   "ts": 1795674603.389196,
+   "pub": "11:55",
+   "lag_s": 293,
+   "symbol": "SGMART",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Multibagger stock to buy: SG Mart shares rise 4% despite 5800% rally in 5 years | Buy, sell or hold? Experts explain",
+   "source": "Mint",
+   "link": "https://www.livemint.com/market/stock-market-news/multibagger-stock-to-buy-sg-mart-shares-rise-4-despite-5800-rally-in-5-years-buy-sell-or-hold-experts-explain-11795671736935.html",
+   "kind": "headline",
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 867.2,
+   "px": 885.2,
+   "move_pct": 2.08
+  },
+  {
+   "id": "N115218-18",
+   "t": "11:52:18",
+   "ts": 1795674138.168122,
+   "pub": "11:51",
+   "lag_s": 64,
+   "symbol": "LCCPROJECT",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "LCCPROJECT: Bagging/Receiving of orders/contracts",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/LCCPROJECTS_26112026115104_Regulation30Intimation26112026SIGNED.pdf",
+   "kind": "filing",
+   "status": "watching: price has not confirmed yet",
+   "px0": 132.39,
+   "px": 130.3,
+   "move_pct": -1.58
+  },
+  {
+   "id": "N114538-17",
+   "t": "11:45:38",
+   "ts": 1795673738.553589,
+   "pub": "11:44",
+   "lag_s": 92,
+   "symbol": "DOLATALGO",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "penalty"
+   ],
+   "headline": "Dolat Algotech pays \u20b91.18 lakh penalty to NSE Clearing for limit breach - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZURCcmowU3NHay12bjRVRDhJaUVaem5iWEt5ZktrSUh3YjVpZnlXb3NwWldZOVVLN0tHN0xBLVprYnVBVFYyTldXNFd6VXlCOENoYzM4aDE1X1JxMnZtSmtNdUpIcDFBRnZlSVFPckl6aDhDbkNfQVNISlVqdjgzeHlid254Yy12SUJUNllJNkp4bGdTZF93bHNmSXhFU1JOYm5sS0tEZHl3MHVlWDA5cTJwTDV0TUhWTGlfNQ?oc=5",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 68.54,
+   "px": 68.43,
+   "move_pct": -0.16
+  },
+  {
+   "id": "N114111-16",
+   "t": "11:41:11",
+   "ts": 1795673471.307981,
+   "pub": "11:40",
+   "lag_s": 18,
+   "symbol": "BALUFORGE",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "BALUFORGE: General Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/BALUFORGE_26112026114043_submission.pdf",
+   "kind": "filing",
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 512.0,
+   "px": 517.1,
+   "move_pct": 1.0
+  },
+  {
+   "id": "N114002-15",
+   "t": "11:40:02",
+   "ts": 1795673402.919021,
+   "pub": "11:38",
+   "lag_s": 81,
+   "symbol": "GRWRHITECH",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "filing: negative"
+   ],
+   "headline": "GRWRHITECH: Cessation",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/GRWRHITECH_26112026113708_GHFL_Changes_in_Management_Sign.pdf",
+   "kind": "filing",
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 7403.5,
+   "px": 7379.5,
+   "move_pct": -0.32
+  },
+  {
+   "id": "N113532-14",
+   "t": "11:35:32",
+   "ts": 1795673132.009525,
+   "pub": "11:34",
+   "lag_s": 47,
+   "symbol": "HITECHGEAR",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "filing: negative"
+   ],
+   "headline": "HITECHGEAR: Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/HITECHGEAR_26112026113431_Final_Intimation_SD.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N112854-13",
+   "t": "11:28:54",
+   "ts": 1795672734.546059,
+   "pub": "11:28",
+   "lag_s": 48,
+   "symbol": "ANGELONE",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "ANGELONE: Resignation of Director/KMP/SMP",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/ANGELONE_ROID_105245_KMP_Doc.zip",
+   "kind": "filing",
+   "status": "watching: price has not confirmed yet",
+   "px0": 353.65,
+   "px": 354.6,
+   "move_pct": 0.27
+  },
+  {
+   "id": "N112320-12",
+   "t": "11:23:20",
+   "ts": 1795672400.404302,
+   "pub": "11:22",
+   "lag_s": 62,
+   "symbol": "HDFCBANK",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "approves"
+   ],
+   "headline": "HDFC Bank shares rise 2.5% as board approves key Director re-appointment",
+   "source": "BusinessLine",
+   "link": "https://www.thehindubusinessline.com/markets/stock-markets/hdfc-bank-shares-rise-25-as-board-approves-key-director-re-appointment/article71745377.ece",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 866.85,
+   "px": 864.1,
+   "move_pct": -0.32
+  },
+  {
+   "id": "N105953-11",
+   "t": "10:59:53",
+   "ts": 1795670993.674553,
+   "pub": "10:54",
+   "lag_s": 353,
+   "symbol": "CESC",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "outperform"
+   ],
+   "headline": "CLSA stays Outperform on CESC with Rs 195 target - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZnFSYkk0MW9ZUzNLMGNJam94N05RUVVyYms1M3JYaVRRcFVqZzFyTnktelowajg3V2h5VnE4Y3Y1YXhSQlZsWDJSWWRLLXJUTWM5N0xHR0NGRGRLT2NUeWJXZEE0eDlvbmJ5NVJjMFNJR1pIWEl6YnpPcEdXQkhvWDQ5R0ZPMzhSVzRCdzNSWG9WMi1ITEFxRC1ReU5HNHNWREJlWEFFUlJVSnVIaFZxSzFpNkpodVdTREhfWHVlOTFfVzdFODMw?oc=5",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 127.34,
+   "px": 127.06,
+   "move_pct": -0.22
+  },
+  {
+   "id": "N105636-10",
+   "t": "10:56:36",
+   "ts": 1795670796.460654,
+   "pub": "09:43",
+   "lag_s": 4380,
+   "symbol": "INVPRECQ",
+   "tone": "positive",
+   "score": 4.5,
+   "emotion": "Euphoria",
+   "why": [
+    "jumps",
+    "zooms"
+   ],
+   "headline": "Gold, Silver rates today LIVE: MCX gold jumps over  \u20b92500, silver zooms  \u20b95500; outlook, investment tip by experts",
+   "source": "Mint",
+   "link": "https://www.livemint.com/market/commodities/gold-silver-rates-today-live-26-november-2026-why-prices-rising-on-mcx-us-fed-rate-meeting-in-focus-outlook-targets-11795664993084.html",
+   "kind": "headline",
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 1298.5,
+   "px": 1328.3,
+   "move_pct": 2.29
+  },
+  {
+   "id": "N105532-9",
+   "t": "10:55:32",
+   "ts": 1795670732.568461,
+   "pub": "10:54",
+   "lag_s": 92,
+   "symbol": "NHPC",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "outperform"
+   ],
+   "headline": "CLSA: High Conviction Outperform on NHPC, target Rs 117 - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQcE9WWGRLMU9GcU1xeVR4eUVEZlFVQTM3Q2I0X3pDM0xTLS1EMllsWTVhcjYweDRsUldHYnFQODFsQ0ttd2xQYU04Q1VTb3JrZHhndVVsXzVKbEs3QUdwNnVOSHNGWXNhaTRnQV9ZSlltMlVLNG96ZGkydmpiNkRqdmdGU192UzMxX19GcGZVUmVMaWRDMTZkNTVGd0VOOGZ1ZlZCcXI0bFN5cGxwRWlJNFk1SXF4SDdzbWNQZm13QXIwaHNGU0JfWEc4bmdBRmtKRDNJbERES2dSR1JNeURpRlpYZ2g?oc=5",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 75.96,
+   "px": 75.71,
+   "move_pct": -0.33
+  },
+  {
+   "id": "N102516-8",
+   "t": "10:25:16",
+   "ts": 1795668916.202796,
+   "pub": "10:24",
+   "lag_s": 31,
+   "symbol": "GKENERGY",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "acquisition"
+   ],
+   "headline": "GKENERGY: Acquisition",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/GKENERGY_26112026102348_WOS_intimation_sd.pdf",
+   "kind": "filing",
+   "status": "watching: price has not confirmed yet",
+   "px0": 94.54,
+   "px": 94.51,
+   "move_pct": -0.03
+  },
+  {
+   "id": "N102410-7",
+   "t": "10:24:10",
+   "ts": 1795668850.531459,
+   "pub": "10:07",
+   "lag_s": 1026,
+   "symbol": "JYOTISTRUC",
+   "tone": "positive",
+   "score": 3.9,
+   "emotion": "Optimism",
+   "why": [
+    "order win"
+   ],
+   "headline": "Jyoti Structures shares spike 9% on \u20b9272-crore transmission line order win",
+   "source": "Business Standard",
+   "link": "https://www.business-standard.com/markets/news/jyoti-structures-shares-spike-9-on-272-crore-transmission-line-order-win-126112600163_1.html",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 11.95,
+   "px": 11.76,
+   "move_pct": -1.59
+  },
+  {
+   "id": "N092449-6",
+   "t": "09:24:49",
+   "ts": 1795665289.468491,
+   "pub": "09:24",
+   "lag_s": 36,
+   "symbol": "JYOTISTRUC",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "JYOTISTRUC: Bagging/Receiving of orders/contracts",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/JYOTISTRUC_26112026092403_Sterlite_version.pdf",
+   "kind": "filing",
+   "status": "watching: price has not confirmed yet",
+   "px0": 12.06,
+   "px": 11.76,
+   "move_pct": -2.49
+  },
+  {
+   "id": "N083316-5",
+   "t": "08:33:16",
+   "ts": 1795662196.685921,
+   "pub": "08:32",
+   "lag_s": 73,
+   "symbol": "WELCORP",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "WELCORP: Bagging/Receiving of orders/contracts",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/WELCORP_26112026083153_SEsigned.pdf",
+   "kind": "filing",
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 2127.0,
+   "px": 2236.0,
+   "move_pct": 5.12
+  },
   {
    "id": "N080059-4",
    "t": "08:00:59",
@@ -66,7 +680,10 @@
    "source": "CNBC-TV18",
    "link": "https://www.cnbctv18.com/market/avalon-technologies-share-price-can-rally-after-nearly-doubling-in-2026-hsbc-target-20041633.htm",
    "kind": "headline",
-   "status": "new"
+   "status": "not taken: no intraday margin left",
+   "px0": 1710.5,
+   "px": 1810.2,
+   "move_pct": 5.83
   },
   {
    "id": "N012029-3",
@@ -85,7 +702,10 @@
    "source": "Google News",
    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPb1JoOWNXcFdKR05oX04ySFg2M0JYUXZTLS1DR05CUTl4ZjVBNEZnVERZT19WSmlUdDF2aHg1RW5Md2ptMWM2QXpYMVk3TFNJRl9HMklEc3l6OXgyR3UtazR5OU1aamhpTEdSMF9zZm5tTkIzVkhZWTJraFR1UE5PUERTYmduNUJuY1RiTWEwemhlVWNOb0Q0NS1OM09oUWVfOGY0TVJ2OGJGUQ?oc=5",
    "kind": "headline",
-   "status": "new"
+   "status": "watching: price has not confirmed yet",
+   "px0": 1120.1,
+   "px": 1112.2,
+   "move_pct": -0.71
   },
   {
    "id": "N000004-2",
@@ -104,7 +724,10 @@
    "source": "NSE filing",
    "link": "https://nsearchives.nseindia.in/corporate/Lupin2_25112026213124_SELetterPressRelease.pdf",
    "kind": "filing",
-   "status": "new"
+   "status": "watching: price has not confirmed yet",
+   "px0": 2020.0,
+   "px": 2003.1,
+   "move_pct": -0.84
   },
   {
    "id": "N000004-1",
@@ -123,15 +746,18 @@
    "source": "CNBC-TV18",
    "link": "https://www.cnbctv18.com/market/stocks/lupin-share-price-gets-usfda-approval-for-single-dose-dalbavancin-injection-to-treat-bacterial-skin-infections-20041559.htm",
    "kind": "headline",
-   "status": "new"
+   "status": "watching: price has not confirmed yet",
+   "px0": 2020.0,
+   "px": 2003.1,
+   "move_pct": -0.84
   }
  ],
  "stats": {
-  "last_hour": 1,
-  "positive": 1,
-  "negative": 0,
-  "today": 4,
-  "median_lag_min": 107.6,
-  "new_this_scan": 1
+  "last_hour": 4,
+  "positive": 3,
+  "negative": 1,
+  "today": 32,
+  "median_lag_min": 2.5,
+  "new_this_scan": 0
  }
 }

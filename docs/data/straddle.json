@@ -1,6 +1,256 @@
 {
- "updated_at": "2026-11-26T02:29:26+05:30",
- "today": {},
+ "updated_at": "2026-11-26T13:49:52+05:30",
+ "today": {
+  "ok": false,
+  "why": "no straddle rule beat time decay and costs in training (2592 rules tested); on the 40 days most like today the trade averaged Rs -2,268",
+  "match": true,
+  "knn": {
+   "k": 40,
+   "avg_rs": -2268.5,
+   "win_rate": 5.0,
+   "dates": [
+    "2022-04-08",
+    "2026-05-15",
+    "2026-10-09",
+    "2026-03-18",
+    "2022-09-02"
+   ]
+  },
+  "features": {
+   "vix": 17.67,
+   "vix_pct": 80.6,
+   "rv_iv": 1.19,
+   "gap": 0.21,
+   "vix_chg": -2.72,
+   "dte": 5,
+   "prev_close": 25819.25
+  },
+  "strike": 25850,
+  "expiry": "2026-12-01",
+  "entry": "10:00",
+  "target": 0.4,
+  "stop": 0.3,
+  "rule": {
+   "entry": "10:00",
+   "expiry": "this week",
+   "strike": "at the money",
+   "strike_code": "atm",
+   "target": 0.4,
+   "stop": 0.3,
+   "exit_by": "15:15",
+   "filter": "all"
+  },
+  "train": {
+   "n": 738,
+   "avg_rs": -1364.5,
+   "win_rate": 17.2,
+   "pf": 0.26
+  },
+  "test": {
+   "n": 467,
+   "avg_rs": -1669.0,
+   "win_rate": 15.6,
+   "pf": 0.21
+  },
+  "at": "13:49",
+  "mode": "ceo"
+ },
+ "conditions": {
+  "go": true,
+  "lean": 0,
+  "steps": 0,
+  "basis": "a flat market: at the money",
+  "confidence": "Normal",
+  "news_support": 0,
+  "news_against": 0,
+  "reasons": [
+   "the first 45 minutes covered 0.94% (high to low): the market is moving",
+   "market-wide news today: Stock Crash: Norwegian budget carrier plunges 86% after warning finances are 'critical'; Bitcoin slips below $60,000: What's driving the sell-off and what happens next",
+   "India VIX is in the top fifth of its year (80.6th percentile) and not rising"
+  ],
+  "go_signals": [
+   "the first 45 minutes covered 0.94% (high to low): the market is moving",
+   "market-wide news today: Stock Crash: Norwegian budget carrier plunges 86% after warning finances are 'critical'; Bitcoin slips below $60,000: What's driving the sell-off and what happens next"
+  ],
+  "skip_signals": [
+   "India VIX is in the top fifth of its year (80.6th percentile) and not rising"
+  ],
+  "news": {
+   "strong": 0,
+   "net": 0,
+   "macro": [
+    "Stock Crash: Norwegian budget carrier plunges 86% after warning finances are 'critical'",
+    "Bitcoin slips below $60,000: What's driving the sell-off and what happens next",
+    "Gold, silver recover after sharp sell-off: Key triggers for prices this week"
+   ],
+   "mood": null,
+   "fc": 0.35
+  }
+ },
+ "sheet": {
+  "day": "2026-11-26",
+  "at": "10:00",
+  "expiry": "2026-12-01",
+  "spot": 25835.55,
+  "sheet": [
+   {
+    "strike": 25750.0,
+    "cost": 418.2,
+    "call": 249.6,
+    "put": 168.6,
+    "be_up": 26168,
+    "be_dn": 25332,
+    "need_up_pct": 1.29,
+    "need_dn_pct": 1.95,
+    "net_delta": 0.17,
+    "spread_pct": 0.2,
+    "oi": 2161120,
+    "pop_expiry": 42.1,
+    "cost_vs_move": 0.82,
+    "score": 1.884,
+    "chosen": false
+   },
+   {
+    "strike": 25800.0,
+    "cost": 413.4,
+    "call": 222.3,
+    "put": 191.1,
+    "be_up": 26213,
+    "be_dn": 25387,
+    "need_up_pct": 1.46,
+    "need_dn_pct": 1.74,
+    "net_delta": 0.09,
+    "spread_pct": 0.2,
+    "oi": 7473635,
+    "pop_expiry": 42.1,
+    "cost_vs_move": 0.81,
+    "score": 1.839,
+    "chosen": false
+   },
+   {
+    "strike": 25850.0,
+    "cost": 412.65,
+    "call": 196.95,
+    "put": 215.7,
+    "be_up": 26263,
+    "be_dn": 25437,
+    "need_up_pct": 1.65,
+    "need_dn_pct": 1.54,
+    "net_delta": 0.01,
+    "spread_pct": 0.3,
+    "oi": 2186145,
+    "pop_expiry": 42.1,
+    "cost_vs_move": 0.8,
+    "score": 1.823,
+    "chosen": false
+   },
+   {
+    "strike": 25900.0,
+    "cost": 415.4,
+    "call": 173.4,
+    "put": 242.0,
+    "be_up": 26315,
+    "be_dn": 25485,
+    "need_up_pct": 1.86,
+    "need_dn_pct": 1.36,
+    "net_delta": -0.06,
+    "spread_pct": 0.2,
+    "oi": 3627455,
+    "pop_expiry": 42.2,
+    "cost_vs_move": 0.81,
+    "score": 0.863,
+    "chosen": false
+   },
+   {
+    "strike": 25950.0,
+    "cost": 422.5,
+    "call": 151.8,
+    "put": 270.7,
+    "be_up": 26372,
+    "be_dn": 25528,
+    "need_up_pct": 2.08,
+    "need_dn_pct": 1.19,
+    "net_delta": -0.14,
+    "spread_pct": 0.3,
+    "oi": 609830,
+    "pop_expiry": 42.2,
+    "cost_vs_move": 0.82,
+    "score": 0.913,
+    "chosen": true
+   }
+  ],
+  "conditions": {
+   "go": true,
+   "lean": -1,
+   "steps": 2,
+   "basis": "the morning's move from the open (-0.15%)",
+   "confidence": "Normal",
+   "news_support": 0,
+   "news_against": 1,
+   "reasons": [
+    "the first 45 minutes covered 0.57% (high to low): the market is moving",
+    "market-wide news today: \u20b992,70,000 crore wiped out in hours as NVIDIA leads AI stock crash in US - Inshorts; Anthropic shares crash further below their IPO price amid continuing AI worries; Nasdaq fu",
+    "India VIX is in the top fifth of its year (80.6th percentile) and not rising"
+   ],
+   "go_signals": [
+    "the first 45 minutes covered 0.57% (high to low): the market is moving",
+    "market-wide news today: \u20b992,70,000 crore wiped out in hours as NVIDIA leads AI stock crash in US - Inshorts; Anthropic shares crash further below their IPO price amid continuing AI worries; Nasdaq fu"
+   ],
+   "skip_signals": [
+    "India VIX is in the top fifth of its year (80.6th percentile) and not rising"
+   ],
+   "news": {
+    "strong": 0,
+    "net": 0,
+    "macro": [
+     "\u20b992,70,000 crore wiped out in hours as NVIDIA leads AI stock crash in US - Inshorts",
+     "Anthropic shares crash further below their IPO price amid continuing AI worries; Nasdaq fu",
+     "Crude oil price rises on reports of Houthi attack on Saudi refinery"
+    ],
+    "mood": null,
+    "fc": 0.35
+   }
+  }
+ },
+ "live": {
+  "n": 4,
+  "wins": 3,
+  "total_rs": 12641,
+  "trades": [
+   {
+    "id": "F261119-37",
+    "day": "2026-11-19",
+    "label": "NIFTY long straddle \u00b7 11-23",
+    "status": "WIN",
+    "pnl_rs": 4447.25,
+    "why": "time"
+   },
+   {
+    "id": "F261120-53",
+    "day": "2026-11-20",
+    "label": "NIFTY long straddle \u00b7 11-23",
+    "status": "WIN",
+    "pnl_rs": 4522.0,
+    "why": "time"
+   },
+   {
+    "id": "F261123-76",
+    "day": "2026-11-23",
+    "label": "NIFTY long straddle \u00b7 11-23",
+    "status": "WIN",
+    "pnl_rs": 4882.75,
+    "why": "target"
+   },
+   {
+    "id": "F261125-87",
+    "day": "2026-11-25",
+    "label": "NIFTY long straddle \u00b7 12-01",
+    "status": "LOSS",
+    "pnl_rs": -1211.0,
+    "why": "time"
+   }
+  ]
+ },
  "playbook": {
   "trained_at": "2026-11-23 22:11",
   "data": {

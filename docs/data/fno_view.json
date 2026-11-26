@@ -1,48 +1,80 @@
 {
- "at": "15:30:48",
- "day": "2026-11-25",
+ "at": "13:49:52",
+ "day": "2026-11-26",
  "mode": {
   "code": "MODE_2_VOLATILE",
   "name": "Volatile",
   "plain": "a normal, lively market",
-  "vix": 17.71
+  "vix": 17.19
  },
- "status": "Live read",
- "final": false,
+ "status": "Decided at 10:00 with NIFTY at 25,836",
+ "final": true,
  "prediction": {
-  "direction": "UP",
-  "headline": "NIFTY is more likely to rise than fall today",
+  "direction": "DOWN",
+  "headline": "NIFTY is more likely to fall than rise today",
   "confidence": "Normal",
-  "spot": 25819.25,
+  "spot": 25838.2,
   "day_range": [
-   25372,
-   25945
+   25593,
+   26153
   ],
-  "close_range": null
+  "close_range": [
+   25693,
+   25983
+  ]
  },
  "why": [
-  "NIFTY is at 25,819, up 470 points (+1.85%) from yesterday's close of 25,350.",
-  "This morning it opened 309 points higher than yesterday's close and has risen 161 points since.",
-  "India VIX, the market's 'fear gauge', is 17.7. That points to a normal, lively market: NIFTY could move about 286 points up or down over the whole day.",
-  "Big news for the whole market today: Gold, silver recover after sharp sell-off: Key triggers for prices this week.",
-  "Also: our forecast team's view is neutral and the morning news brief reads the mood as bullish.",
-  "The desk follows the move since this morning's open, which is rising, so it expects more of the same today."
+  "NIFTY is at 25,838, up 19 points (+0.07%) from yesterday's close of 25,819.",
+  "This morning it opened 54 points higher than yesterday's close and has fallen 35 points since.",
+  "India VIX, the market's 'fear gauge', is 17.2 (down 3% since yesterday: traders expect smaller moves than before). That points to a normal, lively market: NIFTY could move about 280 points up or down over the whole day.",
+  "Big news for the whole market today: Stock Crash: Norwegian budget carrier plunges 86% after warning finances are 'critical'.",
+  "Also: our forecast team's view is positive.",
+  "The desk follows the move since this morning's open, which is falling, so it expects more of the same today. Some of the news points the other way."
  ],
- "plan": "At 10:00 the desk buys two contracts on NIFTY for this week: a call, which makes money if NIFTY rises, and a put, which makes money if it falls. A big enough move either way pays more than the two cost together. It tilts the pair toward a rise, so a rise pays more than a fall. It takes profit at +50%, cuts the loss at -35%, and closes everything by 15:15. All trades are on paper.",
- "trade": null,
+ "plan": "At 10:00 the desk buys two contracts on NIFTY for this week: a call, which makes money if NIFTY rises, and a put, which makes money if it falls. A big enough move either way pays more than the two cost together. It tilts the pair toward a fall, so a fall pays more than a rise. It takes profit at +50%, cuts the loss at -35%, and closes everything by 15:15. All trades are on paper.",
+ "trade": {
+  "id": "F261126-95",
+  "label": "NIFTY long straddle \u00b7 12-01",
+  "status": "OPEN",
+  "pnl_rs": -2884.75,
+  "opened": "10:00:01",
+  "closed": "",
+  "why": ""
+ },
  "chart": {
   "levels": [
    {
-    "px": 25349.65,
+    "px": 25819.25,
     "label": "Yesterday's close",
     "kind": "ref"
    },
    {
-    "px": 25658.35,
+    "px": 25873.2,
     "label": "Today's open",
+    "kind": "ref"
+   },
+   {
+    "px": 25835.55,
+    "label": "Desk decided here (10:00)",
     "kind": "ref"
    }
   ],
-  "forecast": []
+  "forecast": [
+   {
+    "t": 1795687200,
+    "px": 25983.41,
+    "label": "Likely high by close"
+   },
+   {
+    "t": 1795687200,
+    "px": 25692.99,
+    "label": "Likely low by close"
+   },
+   {
+    "t": 1795686300,
+    "px": 25765.6,
+    "label": "Desk's call: down"
+   }
+  ]
  }
 }

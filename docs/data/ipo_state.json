@@ -175,6 +175,41 @@
       "time": "2026-11-25T05:18:15Z"
      }
     ]
+   },
+   "MATANGI": {
+    "d": "2026-11-26",
+    "items": [
+     {
+      "title": "Matangi Rubber IPO Date, Price Band, Issue Size",
+      "source": "IPO Watch",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5Ca29DRDdWc0pWN0Y5VW9wVk9ZZEZveTBsSXg4c05DeDY0WXFLR21YVTVNY0ZxZlFtYWE0Q1lzUkQ2WmNnZDZQTzBUM0lGYnpxRFYzY3pmSTBRUlU?oc=5",
+      "time": "2026-11-26T07:14:36Z"
+     },
+     {
+      "title": "Matangi Rubber Limited Takes Its Next Leap For Growth with Rs 125.16 Crore IPO; Will Expand into Solid Tyres and Rubber Recycling",
+      "source": "First India",
+      "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPcy1icUJKRVAtd0Joc2Q4Y0hmSEpGb3dOcWk1MS1HcUFZLTI2SDY4Q3Z1UFNMU2FHTWtITFpHVWVEQmJfa2xMeEppLUtiOGN5em9PYVprOHRaN3R1ZlB1Q1psQ180MS1fSnhwX1RfMVZDbW5OM1NaUS16Z2gzeE5RYVVSbHlDMm91YlpqRXNhWVdUNm5YcUlzcGxiRkJiaFBRejNhRndNN1Y5bktBdVRrU3RiT0Mxb0pVLVNBNmFNZzV6aDhpd1BHY2R6MC00Z1l6VWVFdm1aRU1iYnRRRi1JTkNVUjVxQUExdThabDRTclJreXM5UlpPOUtSUm5vNUk3TXZ3QmVPTVcxOVhMVW5RZQ?oc=5",
+      "time": "2026-11-26T07:04:49Z"
+     },
+     {
+      "title": "Matangi Rubber IPO GMP Today with Trend",
+      "source": "IPO Watch",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBBUEtFaXRZT2ZoT2JqUmF2M2o2SjdWc0V4REVQT25EdnRnLU50cmtQelphajc1cVAzaEhqMXdRZ2lJNzhZOTI3VzczMTFSNTlIYkZ5Vml3?oc=5",
+      "time": "2026-11-26T06:12:22Z"
+     },
+     {
+      "title": "Matangi Rubber IPO GMP Today, Expected Listing Gain & Price Band",
+      "source": "IndiaIPO",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9OVjk4QmxzUzYtQkozTHNaSWtzZnRqNGdZTV92aDRQRHJ4Y2hKeTVVTjllZGtNRklVZkFmOERnQjZfM0E5LVJ5QzBDalp1eF8zM3hkTGltVWVMNEdlSFY5cUNOMS1VRldzZHdJRDFn?oc=5",
+      "time": "2026-11-25T18:50:55Z"
+     },
+     {
+      "title": "Matangi Rubber Limited IPO Opens on Tuesday, December 1, 2026",
+      "source": "First India",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNVhpOVBVOEVGTkFuV3BnaDZ5elpnOFBHUzh3bDFTaG5hNzNzazRBTEdJSWFON2poazQ5eG5UdktlX3M4Q0Zqd29fdldMOEJpNmRPaWRONHFHaE01Z0JDVGJtbXRkYXBuRE1kLWM1c19ScTd0Z2Nvel9BT090am5VaUhHR0w4cG9nVFVrTnh3eC1UVlc0aTdBZmZPRXpZUEZyaU9odkVzMExVeG54RnF3eU8wVjRSQQ?oc=5",
+      "time": "2026-11-25T10:12:45Z"
+     }
+    ]
    }
   },
   "thesis": {},
@@ -213,6 +248,13 @@
     "fresh_cr": 175.5,
     "ofs_cr": null,
     "issue_size_cr": 175.5
+   },
+   "MATANGI|172.0": {
+    "lot_size": 87.0,
+    "issue_text": "Initial Public Offering comprising of Fresh Issue up to 57,61,831 Equity shares and Offer for Sale upto 15,15,150 Equity Shares.",
+    "fresh_cr": 99.1,
+    "ofs_cr": 26.06,
+    "issue_size_cr": 125.16
    }
   }
  },

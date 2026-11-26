@@ -1,18 +1,18 @@
 {
- "day": "2026-11-25",
+ "day": "2026-11-26",
  "trades": [],
  "seen": {
-  "AXISBANK": "conflict",
-  "SHADOWFAX": "conflict",
-  "NATCOPHARM": "conflict",
+  "KALYANKJIL": "conflict",
+  "POLYCAB": "conflict",
   "ZEEL": "conflict",
-  "ANGELONE": "conflict",
-  "CANHLIFE": "conflict",
-  "TATASTEEL": "conflict"
+  "ACE": "conflict",
+  "ZYDUSLIFE": "conflict",
+  "GLAND": "conflict",
+  "DALBHARAT": "conflict"
  },
  "seq": 0,
  "diag": {
-  "at": "15:40",
+  "at": "13:49",
   "effort": 2,
   "setups_on": [
    "news",
@@ -20,16 +20,54 @@
    "momentum",
    "vwap"
   ],
-  "scanned": 0,
+  "scanned": 664,
   "found": {
-   "news": [],
-   "gap": [],
-   "momentum": [],
-   "vwap": []
+   "news": [
+    "TANLA",
+    "AVALON",
+    "TECHM",
+    "PANACEABIO",
+    "HDFCBANK",
+    "GRWRHITECH",
+    "WELCORP",
+    "CIPLA"
+   ],
+   "gap": [
+    "HINDCOPPER",
+    "INFY",
+    "PASHUPATI",
+    "CRYSTALCP",
+    "AVADHSUGAR",
+    "SAPPHIRE",
+    "STLNETWORK",
+    "LGEINDIA"
+   ],
+   "momentum": [
+    "TTML",
+    "TATACONSUM",
+    "SYNGENE",
+    "HINDCOPPER",
+    "MOCAPITAL",
+    "SHRIRAMFIN",
+    "TMCV",
+    "UTLSOLAR"
+   ],
+   "vwap": [
+    "SYNGENE",
+    "MOCAPITAL",
+    "SHRIRAMFIN",
+    "LLOYDSENGG",
+    "HINDPETRO",
+    "GRAPHITE",
+    "LEMONTREE",
+    "ABCAPITAL"
+   ]
   },
   "taken": [],
-  "skipped": {},
-  "news_names": 11,
-  "headline_names": 19
+  "skipped": {
+   "PANACEABIO": "no intraday margin left"
+  },
+  "news_names": 13,
+  "headline_names": 36
  }
 }
