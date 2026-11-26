@@ -14,6 +14,8 @@ Tables and views
               complete (1 = all 375 minutes 09:15-15:29), official_close (NSE's closing value, from Upstox's daily candle; NSE sets it
               from the last 30 minutes of trading, so it can differ from the 15:29 price), close_diff (close - official_close)
   meta        key TEXT PRIMARY KEY, value TEXT (JSON)
+For the dashboard's backtester it also writes one small file a year, nifty50_1m_YYYY.bin.gz: gzip of little-endian int32 values, five per
+candle (Unix seconds, open, high, low, close in paise), oldest first. Only years with new candles are rewritten.
 Checks: every candle must have low <= open, close <= high (others are dropped and counted); every session in Upstox's daily NIFTY candles
 must be present (missing ones are listed); short sessions (Muhurat trading, special sessions, minutes Upstox lacks) are listed.
 """
@@ -99,6 +101,27 @@ def summarise_days(con: sqlite3.Connection, days: list[str], official: dict) -> 
                     (d, first[1], r[2], r[3], last[1], r[4], first[0], last[0], int(n_reg == 375), oc, round(last[1] - oc, 2) if oc else None))
 
 
+def export_years(con: sqlite3.Connection, out_dir: Path, years: set[str] | None = None) -> dict:
+    """nifty50_1m_YYYY.bin.gz for the browser; returns {year: {file, candles, bytes}} for every year on disk."""
+    import array
+    import gzip
+    allyears = [r[0] for r in con.execute("SELECT DISTINCT substr(day, 1, 4) FROM days ORDER BY 1")]
+    out = {}
+    for y in allyears:
+        f = out_dir / f"nifty50_1m_{y}.bin.gz"
+        if years is None or y in years or not f.exists():
+            a, b = day_span(f"{y}-01-01")[0], day_span(f"{int(y) + 1}-01-01")[0]
+            arr = array.array("i")
+            for ts, o, h, l, c in con.execute("SELECT ts, open, high, low, close FROM candles WHERE ts >= ? AND ts < ? ORDER BY ts", (a, b)):
+                arr.extend((ts, round(o * 100), round(h * 100), round(l * 100), round(c * 100)))
+            if sys.byteorder != "little":
+                arr.byteswap()
+            f.write_bytes(gzip.compress(arr.tobytes(), compresslevel=9, mtime=0))
+        n = con.execute("SELECT SUM(candles) FROM days WHERE substr(day, 1, 4) = ?", (y,)).fetchone()[0]
+        out[y] = {"file": f.name, "candles": n, "bytes": f.stat().st_size}
+    return out
+
+
 def build(out_dir: Path, token: str, now: datetime | None = None, get=U._get, log=print) -> dict:
     now = now or datetime.now(IST)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -156,6 +179,7 @@ def build(out_dir: Path, token: str, now: datetime | None = None, get=U._get, lo
     con.executemany("INSERT OR REPLACE INTO meta VALUES (?, ?)", [(k, json.dumps(v)) for k, v in meta.items()])
     con.commit()
     con.execute("VACUUM")
+    meta["browser_files"] = export_years(con, out_dir, {d[:4] for d in touched})
     con.close()
     meta["size_mb"] = round((out_dir / DB).stat().st_size / 1e6, 1)
     (out_dir / COVER).write_text(json.dumps(meta, indent=1))

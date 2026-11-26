@@ -1,8 +1,8 @@
-# Publishes the page itself (docs/index.html with docs/floor.js and docs/candles.js). The live numbers do not go through here: the page reads them from the data branch.
+# Publishes the page itself (docs/index.html with docs/floor.js, docs/candles.js and docs/bt.js). The live numbers do not go through here: the page reads them from the data branch.
 name: pages
 on:
   push:
-    paths: ["docs/index.html", "docs/floor.js", "docs/candles.js", ".github/workflows/pages.yml"]
+    paths: ["docs/index.html", "docs/floor.js", "docs/candles.js", "docs/bt.js", ".github/workflows/pages.yml"]
   workflow_dispatch:
 permissions:
   contents: read
@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
-      - run: mkdir -p site && cp docs/index.html site/index.html && cp docs/floor.js docs/candles.js site/
+      - run: mkdir -p site && cp docs/index.html site/index.html && cp docs/floor.js docs/candles.js docs/bt.js site/
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
       - run: sleep 8          # the uploaded artifact can take a few seconds to become visible to the deploy step
