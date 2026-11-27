@@ -1,63 +1,73 @@
 {
  "mood": "bullish",
- "brief": "Indian shares are surging, with the Sensex up over 1,700 points and Nifty above 25,800 as IT stocks gain about 2%. Falling oil prices and a strong GIFT Nifty signal are helping, though Asian markets slid on an AI selloff and US tariff worries.",
+ "brief": "Indian shares opened higher, with the Sensex up nearly 400 points on IT gains and the Nifty just below 25,900. Foreign inflows of about $8.9 billion are in focus, but US AI chip curbs on Asia and Nvidia shipment pauses add some global caution.",
  "themes": [
-  "Sensex rallies over 1,700 points",
-  "IT index up 2%",
-  "Oil prices fall on supply glut",
-  "Asian AI selloff and tariff worries"
+  "Sensex gains on IT rally",
+  "Foreign rally faces December test",
+  "US AI chip curbs hit Asia",
+  "Tariff threat may speed India-US trade deal"
  ],
  "companies": [
   {
-   "name": "Infosys",
+   "name": "Urban Company",
    "tone": "positive",
-   "why": "KR Choksey says accumulate with Rs 1531 target"
+   "why": "Starts pre-booking for new residential ACs"
   },
   {
-   "name": "HDFC Bank",
+   "name": "Dabur",
    "tone": "positive",
-   "why": "Bank Nifty hits a record, bank gains"
+   "why": "FMCG stocks had a good week"
   },
   {
-   "name": "APL Apollo",
-   "tone": "negative",
-   "why": "Plunges 20% to 52-week low on Tata Steel deal"
-  },
-  {
-   "name": "Tata Steel",
-   "tone": "neutral",
-   "why": "Rs 28,000-crore APL Apollo deal under scrutiny"
-  },
-  {
-   "name": "Hindustan Zinc",
-   "tone": "negative",
-   "why": "Falls as silver slumps to 14-month low"
-  },
-  {
-   "name": "Zee Entertainment",
-   "tone": "neutral",
-   "why": "Trades ex-buyback, adjusted decline of 5%"
-  },
-  {
-   "name": "Narayana Hrudayalaya",
+   "name": "Hindustan Unilever",
    "tone": "positive",
-   "why": "HSBC upgrade and higher target price"
+   "why": "FMCG stocks had a good week"
   },
   {
-   "name": "Jupiter Wagons",
+   "name": "ITC",
    "tone": "positive",
-   "why": "Surges on Korean joint venture"
+   "why": "FMCG stocks had a good week"
+  },
+  {
+   "name": "Britannia",
+   "tone": "positive",
+   "why": "FMCG stocks had a good week"
+  },
+  {
+   "name": "Bharti Airtel",
+   "tone": "positive",
+   "why": "Named in Motilal Oswal stock ideas"
+  },
+  {
+   "name": "Laurus Labs",
+   "tone": "positive",
+   "why": "Named in Motilal Oswal stock ideas"
+  },
+  {
+   "name": "ICICI Bank",
+   "tone": "positive",
+   "why": "Jefferies includes it among 10 buys"
+  },
+  {
+   "name": "Reliance Industries",
+   "tone": "positive",
+   "why": "Jefferies includes it among 10 buys"
+  },
+  {
+   "name": "State Bank of India",
+   "tone": "positive",
+   "why": "Jefferies includes it among 10 buys"
   }
  ],
- "global": "Asian stocks slid as an AI selloff deepened and US tariff threats weighed, while Dow futures fell.",
+ "global": "Nvidia reportedly told partners to pause shipments to Southeast Asia, and US AI chip curbs have stalled Asian data center deals.",
  "risks": [
-  "Asian AI selloff may spill into IT stocks",
-  "US tariff threats weigh on sentiment",
-  "Rally may fade after sharp intraday jump"
+  "Foreign inflows may slow in December",
+  "US AI chip curbs could hurt tech sentiment",
+  "Sensex near 10-month high may invite profit-taking"
  ],
- "time": "25 Nov 11:21",
- "at": 1795585913.129168,
- "day": "2026-11-25",
+ "time": "27 Nov 09:21",
+ "at": 1795751506.425563,
+ "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "n": 40
 }
