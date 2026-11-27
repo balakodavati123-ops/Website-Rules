@@ -1,54 +1,112 @@
 {
- "updated_at": "2026-11-27T00:44:15+05:30",
- "scans": 2213,
+ "updated_at": "2026-11-27T06:21:12+05:30",
+ "scans": 2247,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "00:44:15"
+   "at": "06:21:12"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "00:44:15"
+   "at": "06:21:12"
   },
   "Moneycontrol": {
    "ok": false,
    "items": 15,
-   "at": "00:44:15"
+   "at": "06:21:12"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "00:44:15"
+   "at": "06:21:12"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "00:44:15"
+   "at": "06:21:12"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "00:44:15"
+   "at": "06:21:12"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "00:44:15"
+   "at": "06:21:12"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "00:44:15"
+   "at": "06:21:12"
   },
   "Google News": {
-   "ok": false,
-   "items": 11,
-   "at": "00:44:15"
+   "ok": true,
+   "items": 8,
+   "at": "06:21:12"
   }
  },
  "signals": [
+  {
+   "id": "N062112-5",
+   "t": "06:21:12",
+   "ts": 1795740672.320203,
+   "pub": "05:59",
+   "lag_s": 1296,
+   "symbol": "SWARAJENG",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "nod"
+   ],
+   "headline": "Swaraj Suiting Limited Gets In-Principle Nod for Rs 174.20 Crore - Multibagg AI",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNXlvSkUwTzQxVnoxaUFPZkx1cGRlVzFESnAwcEFtbTlhbkpWaFVLMmd4Y2V6bDZrRUNXNlIxYzNhcG1MMkM4d2s1TjZqZE5mdmlhYkw3aWV2UXpIMnp2UW9xMEdyaUxJbDczcVVOVFVYb1lfbGxCTjMwNEppcGEzUG5kYWg2OFplV3IwVVhxWHlEY0x3UnhuZk9QYkFBN1NrM19jaGdlQ2k0LTNobzJZYUZhZ2h0QQ?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N061105-4",
+   "t": "06:11:05",
+   "ts": 1795740065.533821,
+   "pub": "06:08",
+   "lag_s": 154,
+   "symbol": "GOPAL",
+   "tone": "positive",
+   "score": 5.2,
+   "emotion": "Euphoria",
+   "why": [
+    "revenue jumps",
+    "surges"
+   ],
+   "headline": "Gopal Snacks Ltd (NSE:GOPAL) (Q2 2027) Earnings Call Highlights: Revenue Jumps 22.9% as EBITDA Surges 72% - GuruFocus",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPTW8zRlpjOFVPVG9CUVJVekM4ZVFhUV80MHJlSVpLcUwzWDdtTUptQU5pcUREekVlRjlsY2k3R04wb2ptUUxtUWVLR1BlQ0RSdWZtSWhiT2dKRk9XckFPc0lUVkI0SmZkWThfOFJWdG1iV3lfakFWSm9RUlFIMmFFNGlGNjNBZS1PZ0RTbGx5cXA0TzZiXzR4LW9jcElkMTJhLThET0JfQW9UUjMxTERxRzFqN05BSGdwNlBqV3FRUjdIVHU4VkxMS3hRbm0wUGN0?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N004920-3",
+   "t": "00:49:20",
+   "ts": 1795720760.689299,
+   "pub": "00:47",
+   "lag_s": 114,
+   "symbol": "SWARAJENG",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "approval"
+   ],
+   "headline": "Swaraj Suiting gets in-principle approval for preferential issue of securities - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNFhnU0xERHZsTExNZThaOW5EaV9valMwUldNNm1yWUNuVExxZnk3aXVjWjVscjlUUTlYVmN2WDlZeXRjVUNBMFQwOWRrZTE3UXFZWEpUS2pIZF90b09FOXNLTVJUMHRpYnpZZXJvaHJPVm9PZzhBSi0wdndZa1Zaem9IUERyRnFqR0lQZ211MGg1bUZNaEcwaGNVSEJZTDJBYjZGZnMwNWdoMy0tYzdwMjdpcElPaHJ6OGM0TDczM2ZzWVk?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
   {
    "id": "N000400-2",
    "t": "00:04:00",
@@ -92,8 +150,8 @@
   "last_hour": 2,
   "positive": 2,
   "negative": 0,
-  "today": 2,
-  "median_lag_min": 79.7,
-  "new_this_scan": 0
+  "today": 5,
+  "median_lag_min": 21.6,
+  "new_this_scan": 1
  }
 }
