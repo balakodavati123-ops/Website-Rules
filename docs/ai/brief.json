@@ -1,72 +1,62 @@
 {
- "mood": "bullish",
- "brief": "Indian shares opened higher, with the Sensex up nearly 400 points on IT gains and the Nifty just below 25,900. Foreign inflows of about $8.9 billion are in focus, but US AI chip curbs on Asia and Nvidia shipment pauses add some global caution.",
+ "mood": "mixed",
+ "brief": "Indian shares are mixed, with the Sensex slipping and the Nifty flat as IT stocks fall, while metals and Titan gain. The Sensex fell about 500 points from its day's high, and Deutsche Bank sees a possible RBI rate hike in December.",
  "themes": [
-  "Sensex gains on IT rally",
-  "Foreign rally faces December test",
-  "US AI chip curbs hit Asia",
-  "Tariff threat may speed India-US trade deal"
+  "IT stocks fall",
+  "Sensex pares early gains",
+  "Possible RBI December rate hike",
+  "Nvidia halts Southeast Asia sales"
  ],
  "companies": [
   {
+   "name": "Tata Consultancy Services",
+   "tone": "negative",
+   "why": "Tumbles as IT stocks fall"
+  },
+  {
+   "name": "HCLTech",
+   "tone": "negative",
+   "why": "Tumbles as IT stocks fall"
+  },
+  {
+   "name": "Infosys",
+   "tone": "negative",
+   "why": "Fresh short positions as futures decline"
+  },
+  {
+   "name": "Wipro",
+   "tone": "negative",
+   "why": "Fresh short positions as futures decline"
+  },
+  {
+   "name": "Titan",
+   "tone": "positive",
+   "why": "Top gainer in the market today"
+  },
+  {
+   "name": "Kalyan Jewellers",
+   "tone": "positive",
+   "why": "Gains up to 3% among jewellery stocks"
+  },
+  {
+   "name": "Senco Gold",
+   "tone": "negative",
+   "why": "Falls while other jewellery stocks gain"
+  },
+  {
    "name": "Urban Company",
-   "tone": "positive",
-   "why": "Starts pre-booking for new residential ACs"
-  },
-  {
-   "name": "Dabur",
-   "tone": "positive",
-   "why": "FMCG stocks had a good week"
-  },
-  {
-   "name": "Hindustan Unilever",
-   "tone": "positive",
-   "why": "FMCG stocks had a good week"
-  },
-  {
-   "name": "ITC",
-   "tone": "positive",
-   "why": "FMCG stocks had a good week"
-  },
-  {
-   "name": "Britannia",
-   "tone": "positive",
-   "why": "FMCG stocks had a good week"
-  },
-  {
-   "name": "Bharti Airtel",
-   "tone": "positive",
-   "why": "Named in Motilal Oswal stock ideas"
-  },
-  {
-   "name": "Laurus Labs",
-   "tone": "positive",
-   "why": "Named in Motilal Oswal stock ideas"
-  },
-  {
-   "name": "ICICI Bank",
-   "tone": "positive",
-   "why": "Jefferies includes it among 10 buys"
-  },
-  {
-   "name": "Reliance Industries",
-   "tone": "positive",
-   "why": "Jefferies includes it among 10 buys"
-  },
-  {
-   "name": "State Bank of India",
-   "tone": "positive",
-   "why": "Jefferies includes it among 10 buys"
+   "tone": "neutral",
+   "why": "Listed among stocks to watch today"
   }
  ],
- "global": "Nvidia reportedly told partners to pause shipments to Southeast Asia, and US AI chip curbs have stalled Asian data center deals.",
+ "global": "Nvidia halted sales to Southeast Asia as the US tightened China restrictions, though Asian stocks rose and US futures jumped.",
  "risks": [
-  "Foreign inflows may slow in December",
-  "US AI chip curbs could hurt tech sentiment",
-  "Sensex near 10-month high may invite profit-taking"
+  "Possible RBI rate hike in December",
+  "New Iran sanctions and Brent near month high",
+  "IT selling may drag the index"
  ],
- "time": "27 Nov 09:21",
- "at": 1795751506.425563,
+ "time": "27 Nov 10:21",
+ "at": 1795755076.620758,
  "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "n": 40

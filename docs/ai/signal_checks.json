@@ -1,12 +1,12 @@
 {
- "time": "27 Nov 09:21",
- "at": 1795751506.425563,
+ "time": "27 Nov 10:21",
+ "at": 1795755076.620758,
  "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "checks": {
   "MCX": {
    "verdict": "doubt",
-   "why": "Commodity-price story, not MCX-specific; price is down, not confirming."
+   "why": "Commodity price story, not MCX-specific; already doubted earlier."
   },
   "URBANCO": {
    "verdict": "doubt",
@@ -15,6 +15,22 @@
   "BIOCON": {
    "verdict": "doubt",
    "why": "Press release has no detail, so materiality is unknown."
+  },
+  "LCCPROJECT": {
+   "verdict": "doubt",
+   "why": "Order size not stated and price is down, not confirming."
+  },
+  "SWARAJENG": {
+   "verdict": "doubt",
+   "why": "Headline names Swaraj Suiting, a different company; price barely moved."
+  },
+  "UTLSOLAR": {
+   "verdict": "doubt",
+   "why": "Headline is about Fujiyama Power, and rally already happened."
+  },
+  "DHARAN": {
+   "verdict": "confirm",
+   "why": "Fresh, specific insolvency process filing is material negative news."
   }
  }
 }
