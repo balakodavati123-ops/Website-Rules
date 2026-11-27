@@ -1,0 +1,148 @@
+{
+ "source": "Upstox v3 historical candles, NSE_INDEX|Nifty 50, 1 minute (VERIFIED_HISTORICAL)",
+ "updated_at": "2026-11-28T02:03:25+05:30",
+ "sessions": 1215,
+ "candles": 453737,
+ "first_day": "2022-01-03",
+ "last_day": "2026-11-26",
+ "complete_sessions": 1203,
+ "short_sessions": [
+  {
+   "day": "2022-03-07",
+   "candles": 372,
+   "first": "09:15",
+   "last": "15:29"
+  },
+  {
+   "day": "2022-10-24",
+   "candles": 60,
+   "first": "18:15",
+   "last": "19:14"
+  },
+  {
+   "day": "2023-11-12",
+   "candles": 60,
+   "first": "18:15",
+   "last": "19:14"
+  },
+  {
+   "day": "2024-03-02",
+   "candles": 105,
+   "first": "09:15",
+   "last": "12:29"
+  },
+  {
+   "day": "2024-05-18",
+   "candles": 105,
+   "first": "09:15",
+   "last": "12:29"
+  },
+  {
+   "day": "2024-11-01",
+   "candles": 60,
+   "first": "18:00",
+   "last": "18:59"
+  },
+  {
+   "day": "2024-12-12",
+   "candles": 374,
+   "first": "09:15",
+   "last": "15:29"
+  },
+  {
+   "day": "2025-03-25",
+   "candles": 374,
+   "first": "09:15",
+   "last": "15:29"
+  },
+  {
+   "day": "2025-04-04",
+   "candles": 374,
+   "first": "09:15",
+   "last": "15:29"
+  },
+  {
+   "day": "2025-04-23",
+   "candles": 374,
+   "first": "09:15",
+   "last": "15:29"
+  },
+  {
+   "day": "2025-10-21",
+   "candles": 60,
+   "first": "13:45",
+   "last": "14:44"
+  },
+  {
+   "day": "2026-11-08",
+   "candles": 70,
+   "first": "14:20",
+   "last": "15:29"
+  }
+ ],
+ "missing_sessions": [],
+ "dropped_bad_candles_this_run": 0,
+ "written_this_run": 375,
+ "api_calls_this_run": 2,
+ "close_vs_official": {
+  "days": 1215,
+  "median_abs_points": 7.65,
+  "max_abs_points": 111.95,
+  "note": "NSE sets the official close from the last 30 minutes, so it can differ from the 15:29 candle"
+ },
+ "by_year": {
+  "2022": {
+   "sessions": 248,
+   "candles": 92896
+  },
+  "2023": {
+   "sessions": 246,
+   "candles": 91935
+  },
+  "2024": {
+   "sessions": 249,
+   "candles": 92519
+  },
+  "2025": {
+   "sessions": 249,
+   "candles": 93067
+  },
+  "2026": {
+   "sessions": 223,
+   "candles": 83320
+  }
+ },
+ "tables": {
+  "nifty50_1m (view)": "ts, day, time, open, high, low, close",
+  "candles": "ts, open, high, low, close",
+  "days": "day, open, high, low, close, candles, first, last, complete, official_close, close_diff"
+ },
+ "browser_files": {
+  "2022": {
+   "file": "nifty50_1m_2022.bin.gz",
+   "candles": 92896,
+   "bytes": 1002092
+  },
+  "2023": {
+   "file": "nifty50_1m_2023.bin.gz",
+   "candles": 91935,
+   "bytes": 977561
+  },
+  "2024": {
+   "file": "nifty50_1m_2024.bin.gz",
+   "candles": 92519,
+   "bytes": 1025384
+  },
+  "2025": {
+   "file": "nifty50_1m_2025.bin.gz",
+   "candles": 93067,
+   "bytes": 1027030
+  },
+  "2026": {
+   "file": "nifty50_1m_2026.bin.gz",
+   "candles": 83320,
+   "bytes": 923567
+  }
+ },
+ "size_mb": 20.7
+}
