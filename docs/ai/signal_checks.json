@@ -1,6 +1,6 @@
 {
- "time": "27 Nov 12:21",
- "at": 1795762282.027541,
+ "time": "27 Nov 13:21",
+ "at": 1795765892.829101,
  "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "checks": {
@@ -38,7 +38,7 @@
   },
   "WAAREERTL": {
    "verdict": "doubt",
-   "why": "Order win jump of 14% is already priced in."
+   "why": "Order win already priced into the earlier rally; price now flat."
   },
   "IDFCFIRSTB": {
    "verdict": "doubt",
@@ -46,7 +46,7 @@
   },
   "JWL": {
    "verdict": "doubt",
-   "why": "Headlines report a fall after a surge; price barely moved, no fresh news."
+   "why": "Old report of a fall after a surge; no fresh news, price down."
   },
   "SUPRIYA": {
    "verdict": "doubt",
@@ -71,6 +71,26 @@
   "AVALON": {
    "verdict": "doubt",
    "why": "Explainer after the rally; price moved down, not confirming."
+  },
+  "ZAGGLE": {
+   "verdict": "doubt",
+   "why": "Order filing gives no size or detail, so materiality is unknown."
+  },
+  "INOXINDIA": {
+   "verdict": "doubt",
+   "why": "ESOP share listing approval is routine; price is down slightly."
+  },
+  "BOSCHLTD": {
+   "verdict": "doubt",
+   "why": "Record date is routine; price is down, not confirming."
+  },
+  "HDFCBANK": {
+   "verdict": "doubt",
+   "why": "Rally is losing steam and price is flat; no new company news."
+  },
+  "DONEAR": {
+   "verdict": "doubt",
+   "why": "Acquisition filing has no details on size or terms."
   }
  }
 }

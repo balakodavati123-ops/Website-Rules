@@ -1,72 +1,72 @@
 {
- "mood": "bearish",
- "brief": "Indian shares are weak, with the Sensex down about 700 points as Middle East tensions persist and Nifty expiry looms. Global tech worries, a strong dollar near a 22-month peak and a hawkish Fed outlook add pressure.",
+ "mood": "mixed",
+ "brief": "Indian shares are mixed, with HDFC Bank treading water as its rally loses steam and Tata Steel's APL Apollo deal drawing investor backlash. Global stocks climbed after volatile US trading over AI risks, and gold and silver rose sharply on MCX.",
  "themes": [
-  "Sensex falls on Middle East tensions",
-  "Tech and AI worries deepen",
-  "Dollar near 22-month peak",
-  "Mahanadi Coalfields lists at a discount"
+  "HDFC Bank rally loses steam",
+  "Tata Steel-APL Apollo deal backlash",
+  "Gold and silver rally on MCX",
+  "Global stocks climb after AI-risk volatility"
  ],
  "companies": [
   {
-   "name": "Mahanadi Coalfields",
-   "tone": "negative",
-   "why": "Lists at 2% discount to IPO price"
-  },
-  {
-   "name": "Coal India",
-   "tone": "neutral",
-   "why": "Parent of Mahanadi Coalfields, which listed weak"
-  },
-  {
-   "name": "Waaree Renewable",
-   "tone": "positive",
-   "why": "Stock in focus after 14% jump on order"
-  },
-  {
-   "name": "Jupiter Wagons",
-   "tone": "negative",
-   "why": "Falls 7.5% after 29% two-day surge"
-  },
-  {
-   "name": "Supriya Lifescience",
-   "tone": "positive",
-   "why": "Soars 9% as firm mulls first buyback"
-  },
-  {
-   "name": "HEG",
-   "tone": "negative",
-   "why": "Hits lower circuit after demerger listing"
-  },
-  {
-   "name": "Swiggy",
-   "tone": "negative",
-   "why": "Instamart to lay off 340 employees"
-  },
-  {
    "name": "HDFC Bank",
-   "tone": "positive",
-   "why": "JPMorgan bullish on it for 2027"
+   "tone": "neutral",
+   "why": "Shares tread water; ICICI Securities targets Rs 1,850"
   },
   {
-   "name": "State Bank of India",
-   "tone": "positive",
-   "why": "JPMorgan bullish on it for 2027"
+   "name": "Tata Steel",
+   "tone": "negative",
+   "why": "APL Apollo deal draws investor backlash"
   },
   {
-   "name": "Sun TV Network",
+   "name": "APL Apollo",
+   "tone": "negative",
+   "why": "Shares slide on deal backlash"
+  },
+  {
+   "name": "Bajaj Finance",
    "tone": "positive",
-   "why": "Among stocks closing above VWAP"
+   "why": "Emkay says buy with target of Rs 9000"
+  },
+  {
+   "name": "Tejas Networks",
+   "tone": "positive",
+   "why": "Emkay says buy with target of Rs 1100"
+  },
+  {
+   "name": "Persistent Systems",
+   "tone": "negative",
+   "why": "Emkay says reduce with target of Rs 3700"
+  },
+  {
+   "name": "Aditya Birla Fashion and Retail",
+   "tone": "negative",
+   "why": "Emkay says reduce with target of Rs 230"
+  },
+  {
+   "name": "Waaree Renewable Technologies",
+   "tone": "positive",
+   "why": "Stock surges after 120 MWp EPC order"
+  },
+  {
+   "name": "ICICI Bank",
+   "tone": "positive",
+   "why": "Jefferies includes it among 10 buys"
+  },
+  {
+   "name": "Reliance Industries",
+   "tone": "positive",
+   "why": "Jefferies includes it among 10 buys"
   }
  ],
- "global": "Tech stocks are set for their worst month in four years, and the dollar lingers near a 22-month peak as AI worries simmer.",
+ "global": "Global stocks climbed after volatile US trading over AI risks, and Chinese shares rebounded from one-year lows after Beijing pledged more support.",
  "risks": [
-  "Middle East tensions and oil moves",
-  "Hawkish Fed poised to raise rates",
-  "Global tech sell-off spreading to Indian IT"
+  "Nvidia shipment pause to Southeast Asia",
+  "HDFC Bank rally losing steam",
+  "Investor backlash over Tata Steel-APL Apollo deal"
  ],
- "time": "27 Nov 12:21",
- "at": 1795762282.027541,
+ "time": "27 Nov 13:21",
+ "at": 1795765892.829101,
  "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "n": 40
