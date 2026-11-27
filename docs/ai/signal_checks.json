@@ -1,12 +1,12 @@
 {
- "time": "27 Nov 11:21",
- "at": 1795758691.009659,
+ "time": "27 Nov 16:21",
+ "at": 1795776680.239108,
  "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "checks": {
   "MCX": {
    "verdict": "doubt",
-   "why": "Commodity price story, not MCX-specific; already doubted earlier."
+   "why": "Commodity price story, not MCX-specific; doubted in earlier rounds."
   },
   "URBANCO": {
    "verdict": "doubt",
@@ -34,15 +34,107 @@
   },
   "SHYAMMETL": {
    "verdict": "doubt",
-   "why": "General update with no detail; price has not moved."
+   "why": "General update with no detail; materiality unknown."
   },
   "WAAREERTL": {
    "verdict": "doubt",
-   "why": "Order win is specific, but the 14% jump is priced in and price is flat."
+   "why": "Order win already priced into the earlier rally; price now flat."
   },
   "IDFCFIRSTB": {
    "verdict": "doubt",
    "why": "Move already happened; price is down, not confirming."
+  },
+  "JWL": {
+   "verdict": "doubt",
+   "why": "Old report of a fall after a surge; no fresh news, price down."
+  },
+  "SUPRIYA": {
+   "verdict": "doubt",
+   "why": "Buyback only being mulled, rally already happened and price is down."
+  },
+  "GRAPHITE": {
+   "verdict": "doubt",
+   "why": "Demerger listing mechanics, not a clear company signal; price barely moved."
+  },
+  "DIXON": {
+   "verdict": "doubt",
+   "why": "Explainer on a rally that already happened; price flat."
+  },
+  "SOLARINDS": {
+   "verdict": "doubt",
+   "why": "Explainer after a 6% rally; move already priced in."
+  },
+  "COFORGE": {
+   "verdict": "doubt",
+   "why": "Explainer after the rally; price has barely moved since."
+  },
+  "AVALON": {
+   "verdict": "doubt",
+   "why": "Explainer after the rally; price moved down, not confirming."
+  },
+  "ZAGGLE": {
+   "verdict": "doubt",
+   "why": "Order filing gives no size or detail, so materiality is unknown."
+  },
+  "INOXINDIA": {
+   "verdict": "doubt",
+   "why": "ESOP share listing approval is routine; price is down slightly."
+  },
+  "BOSCHLTD": {
+   "verdict": "doubt",
+   "why": "Record date is routine; price is down, not confirming."
+  },
+  "HDFCBANK": {
+   "verdict": "doubt",
+   "why": "Old story that the rally lost steam; price is flat."
+  },
+  "DONEAR": {
+   "verdict": "doubt",
+   "why": "Acquisition filing has no details on size or terms."
+  },
+  "MAHACOAL": {
+   "verdict": "doubt",
+   "why": "Analyst rating on listing day; price is flat, not confirming."
+  },
+  "FLAIR": {
+   "verdict": "doubt",
+   "why": "Generic updates filing with no detail on what changed."
+  },
+  "BRITANNIA": {
+   "verdict": "doubt",
+   "why": "Marketing officer exit is modest news; price move is small."
+  },
+  "BEML": {
+   "verdict": "doubt",
+   "why": "17% jump already happened and is priced in at the high."
+  },
+  "DEFENCE": {
+   "verdict": "doubt",
+   "why": "Sector-wide story, not one company; price has not confirmed."
+  },
+  "JAIBALAJI": {
+   "verdict": "doubt",
+   "why": "Resignation filing without detail; price is up, not confirming."
+  },
+  "PROZONER": {
+   "verdict": "doubt",
+   "why": "Acquisition filing has no size or terms; price has not moved."
+  },
+  "KEI": {
+   "verdict": "doubt",
+   "why": "Routine stock option grant; price is down, not confirming."
+  },
+  "AFIL": {
+   "verdict": "doubt",
+   "why": "Filing gives no detail on the action; price has not moved."
+  },
+  "SEPC": {
+   "verdict": "doubt",
+   "why": "Independent director resigned for professional commitments; price flat, modest impact."
+  },
+  "PERSISTENT": {
+   "verdict": "doubt",
+   "why": "Routine ESOP trust share purchase, not a material business event."
   }
  }
 }

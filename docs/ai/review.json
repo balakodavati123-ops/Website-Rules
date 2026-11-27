@@ -1,7 +1,7 @@
 {
- "time": "24 Nov 16:21",
- "at": 1795517505.423574,
- "day": "2026-11-24",
+ "time": "27 Nov 16:21",
+ "at": 1795776680.239108,
+ "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
- "text": "What worked: Nothing could be tested today. The company paper result was Rs 0 because NSE and BSE were shut for Guru Nanak Jayanti.\n\nWhat did not: The one trade, a NIFTY long straddle for 1 Dec, was marked VOID because NFO was closed and it was priced on the last session's frozen quotes, so it could never have filled. The COO notes still flag no edge so far for the Scalping and Crypto desks, though paper results are not proof of an edge.\n\nWhat I am changing tomorrow: Trust no signal or trade created on a holiday, and treat today's filings as unconfirmed until prices move on a trading day.\n\nWatch tomorrow: How Indian banks and metals open after Monday's sharp fall, whether the Nvidia-led rebound carries into Indian shares, and Tata Sons' board meeting on November 30."
+ "text": "What worked\nThe F&O desk made Rs 1,451.35 net. The NIFTY long straddle returned Rs 2,988 on a time exit, while the NIFTY 25,800 PE lost Rs 1,536.65 after an EMA9 breach. Company P&L was Rs 906.64.\n\nWhat did not\nThe scalping desk lost Rs 544.71 over 4 trades with no wins: JPL and KEI shorts hit stops, INDIGO and VEDL timed out. The COO notes its targets hit 2 times against 13.9 expected by chance, so no edge so far. The crypto desk shows a similar pattern. The gateway refused 4 scalping orders on weak reward to risk, and 3 trades were skipped on margin.\n\nWhat I am changing tomorrow\nI will keep doubting signals that lack specific news or price confirmation, such as vague filings and routine resignations. Dev (Quant) is reviewing stop and size rules. Paper results are not proof of an edge.\n\nWatch tomorrow\nSebi's review of the Tata Steel-APL Apollo deal, IT stocks after the 764-point Sensex fall, the Nifty near 25,700, and the 13 open swing positions."
 }

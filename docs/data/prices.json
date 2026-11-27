@@ -1,53 +1,282 @@
 {
- "updated_at": "2026-11-27T06:29:15+05:30",
+ "updated_at": "2026-11-27T17:50:37+05:30",
+ "fno": {
+  "spot": 25607.2,
+  "expiry": "2026-12-01",
+  "lot": 65,
+  "atm": 25600.0,
+  "straddle": 296.2,
+  "vix": 16.55
+ },
  "crypto": [
   {
    "name": "BTC",
-   "last": 60593.2,
-   "chg_pct": 0.15736057390327574,
-   "high": 61037.5,
+   "last": 61589.9,
+   "chg_pct": 1.8048530529934936,
+   "high": 62139.1,
    "low": 59850.0,
    "unit": "$"
   },
   {
    "name": "ETH",
-   "last": 1698.98,
-   "chg_pct": 0.6695582100872066,
-   "high": 1709.86,
+   "last": 1719.79,
+   "chg_pct": 1.9026118695487204,
+   "high": 1752.33,
    "low": 1666.02,
    "unit": "$"
   },
   {
    "name": "SOL",
-   "last": 71.14,
-   "chg_pct": 0.28192839018890137,
-   "high": 71.74,
+   "last": 73.08,
+   "chg_pct": 3.016633775021149,
+   "high": 73.83,
    "low": 69.72,
    "unit": "$"
   },
   {
    "name": "XRP",
-   "last": 0.94522,
-   "chg_pct": 0.26199946963669785,
-   "high": 0.96264,
+   "last": 0.97408,
+   "chg_pct": 3.323256430654986,
+   "high": 0.98594,
    "low": 0.93276,
    "unit": "$"
   },
   {
    "name": "DOGE",
-   "last": 0.0565132,
-   "chg_pct": 0.2460332242414598,
-   "high": 0.0572103,
+   "last": 0.0587829,
+   "chg_pct": 4.272144320570459,
+   "high": 0.0588868,
    "low": 0.0557584,
    "unit": "$"
   },
   {
    "name": "ADA",
-   "last": 0.149305,
-   "chg_pct": 0.5691768826619814,
-   "high": 0.151264,
+   "last": 0.153047,
+   "chg_pct": 3.0897211370065847,
+   "high": 0.153652,
    "low": 0.145762,
    "unit": "$"
   }
- ]
+ ],
+ "indices": {
+  "Bank Nifty": {
+   "name": "Bank Nifty",
+   "last": 63040.9,
+   "chg_pct": -0.7781500992361726,
+   "high": 63931.65,
+   "low": 62957.7
+  },
+  "Nifty 50": {
+   "name": "Nifty 50",
+   "last": 25607.2,
+   "chg_pct": -1.0712974946396492,
+   "high": 25909.15,
+   "low": 25565.9
+  },
+  "India VIX": {
+   "name": "India VIX",
+   "last": 16.55,
+   "chg_pct": -1.72209026128266,
+   "high": 16.86,
+   "low": 15.17
+  },
+  "Sensex": {
+   "name": "Sensex",
+   "last": 83339.26,
+   "chg_pct": -1.1731845629103963,
+   "high": 84286.18,
+   "low": 83208.33
+  }
+ },
+ "mcx": [
+  {
+   "key": "MCX_FO|578631",
+   "name": "Gold 1 g",
+   "last": 12768.0,
+   "chg_pct": 2.669668703763268,
+   "high": 12840.0,
+   "low": 12534.0,
+   "unit": "\u20b9"
+  },
+  {
+   "key": "MCX_FO|578250",
+   "name": "Natural gas mini",
+   "last": 330.2,
+   "chg_pct": -1.4622500746045959,
+   "high": 339.4,
+   "low": 330.2,
+   "unit": "\u20b9"
+  },
+  {
+   "key": "MCX_FO|576265",
+   "name": "Crude oil mini",
+   "last": 7942.0,
+   "chg_pct": 0.8764130572843898,
+   "high": 8058.0,
+   "low": 7899.0,
+   "unit": "\u20b9"
+  },
+  {
+   "key": "MCX_FO|574843",
+   "name": "Silver 1 kg",
+   "last": 158980.0,
+   "chg_pct": 4.91651818121824,
+   "high": 160777.0,
+   "low": 152167.0,
+   "unit": "\u20b9"
+  }
+ ],
+ "movers": {
+  "gainers": [
+   {
+    "symbol": "SOLARWORLD",
+    "price": 121.56,
+    "chg_pct": 20.0,
+    "turnover_cr": 248.3
+   },
+   {
+    "symbol": "JLHL",
+    "price": 357.6,
+    "chg_pct": 20.0,
+    "turnover_cr": 244.1
+   },
+   {
+    "symbol": "WAAREERTL",
+    "price": 825.7,
+    "chg_pct": 20.0,
+    "turnover_cr": 1817.7
+   },
+   {
+    "symbol": "BEML",
+    "price": 2319.0,
+    "chg_pct": 13.67,
+    "turnover_cr": 2325.1
+   },
+   {
+    "symbol": "GEOJITFSL",
+    "price": 78.12,
+    "chg_pct": 13.07,
+    "turnover_cr": 345.8
+   },
+   {
+    "symbol": "DHAMPURSUG",
+    "price": 201.46,
+    "chg_pct": 11.92,
+    "turnover_cr": 322.3
+   },
+   {
+    "symbol": "PRAJIND",
+    "price": 251.8,
+    "chg_pct": 11.72,
+    "turnover_cr": 834.6
+   },
+   {
+    "symbol": "DODLA",
+    "price": 1065.0,
+    "chg_pct": 9.81,
+    "turnover_cr": 441.0
+   }
+  ],
+  "losers": [
+   {
+    "symbol": "HMAAGRO",
+    "price": 41.52,
+    "chg_pct": -9.99,
+    "turnover_cr": 250.5
+   },
+   {
+    "symbol": "JWL",
+    "price": 224.0,
+    "chg_pct": -6.15,
+    "turnover_cr": 575.5
+   },
+   {
+    "symbol": "CRYSTALCP",
+    "price": 261.9,
+    "chg_pct": -5.74,
+    "turnover_cr": 52.7
+   },
+   {
+    "symbol": "THOMASCOOK",
+    "price": 127.3,
+    "chg_pct": -5.45,
+    "turnover_cr": 79.7
+   },
+   {
+    "symbol": "HYUNDAI",
+    "price": 2006.0,
+    "chg_pct": -4.67,
+    "turnover_cr": 416.7
+   },
+   {
+    "symbol": "JISLJALEQS",
+    "price": 26.47,
+    "chg_pct": -4.34,
+    "turnover_cr": 19.3
+   },
+   {
+    "symbol": "ENDURANCE",
+    "price": 2583.0,
+    "chg_pct": -4.22,
+    "turnover_cr": 79.1
+   },
+   {
+    "symbol": "SHRIRAMFIN",
+    "price": 923.5,
+    "chg_pct": -3.99,
+    "turnover_cr": 1938.1
+   }
+  ],
+  "active": [
+   {
+    "symbol": "HDFCBANK",
+    "price": 857.25,
+    "chg_pct": -0.55,
+    "turnover_cr": 2824.2
+   },
+   {
+    "symbol": "BEML",
+    "price": 2319.0,
+    "chg_pct": 13.67,
+    "turnover_cr": 2325.1
+   },
+   {
+    "symbol": "SHRIRAMFIN",
+    "price": 923.5,
+    "chg_pct": -3.99,
+    "turnover_cr": 1938.1
+   },
+   {
+    "symbol": "BSE",
+    "price": 3945.0,
+    "chg_pct": -1.14,
+    "turnover_cr": 1903.5
+   },
+   {
+    "symbol": "MAHACOAL",
+    "price": 132.77,
+    "chg_pct": -2.38,
+    "turnover_cr": 1835.8
+   },
+   {
+    "symbol": "WAAREERTL",
+    "price": 825.7,
+    "chg_pct": 20.0,
+    "turnover_cr": 1817.7
+   },
+   {
+    "symbol": "APLAPOLLO",
+    "price": 1509.5,
+    "chg_pct": 1.89,
+    "turnover_cr": 1692.4
+   },
+   {
+    "symbol": "RELIANCE",
+    "price": 1382.6,
+    "chg_pct": -0.97,
+    "turnover_cr": 1682.8
+   }
+  ],
+  "count": 2783
+ }
 }

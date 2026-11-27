@@ -1,16 +1,11 @@
 {
- "day": "2026-11-26",
+ "day": "2026-11-27",
  "trades": [],
  "seen": {
   "KALYANKJIL": "conflict",
-  "POLYCAB": "conflict",
-  "ZEEL": "conflict",
-  "ACE": "conflict",
   "ZYDUSLIFE": "conflict",
-  "GLAND": "conflict",
-  "DALBHARAT": "conflict",
-  "ANGELONE": "conflict",
-  "SHILPAMED": "conflict"
+  "INOXINDIA": "conflict",
+  "MAHACOAL": "conflict"
  },
  "seq": 0,
  "diag": {
@@ -31,7 +26,7 @@
   },
   "taken": [],
   "skipped": {},
-  "news_names": 17,
-  "headline_names": 29
+  "news_names": 12,
+  "headline_names": 9
  }
 }

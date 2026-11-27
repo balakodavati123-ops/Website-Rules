@@ -1,23 +1,23 @@
 {
- "day": "2026-11-26",
- "trades": 19,
- "closed": 18,
- "open": 1,
- "wins": 8,
- "win_rate": 44,
- "pnl": -5175.2,
+ "day": "2026-11-27",
+ "trades": 6,
+ "closed": 6,
+ "open": 0,
+ "wins": 1,
+ "win_rate": 17,
+ "pnl": 906.64,
  "by_desk": {
   "EQUITY": {
-   "trades": 13,
-   "pnl": -170.1
+   "trades": 4,
+   "pnl": -544.71
   },
   "FNO": {
-   "trades": 3,
-   "pnl": -5611.27
+   "trades": 2,
+   "pnl": 1451.35
   },
   "COMMODITY": {
-   "trades": 3,
-   "pnl": 606.17
+   "trades": 0,
+   "pnl": 0
   },
   "CRYPTO": {
    "trades": 0,
@@ -26,39 +26,29 @@
  },
  "by_strategy": [
   {
-   "strategy": "mcx_momentum",
-   "n": 2,
-   "pnl": 625.38
-  },
-  {
-   "strategy": "mcx_pullback",
+   "strategy": "long_straddle",
    "n": 1,
-   "pnl": -19.21
+   "pnl": 2988.0
   },
   {
-   "strategy": "scalp_vwap_pullback",
-   "n": 13,
-   "pnl": -170.1
+   "strategy": "scalp_vwap_pullback_v2",
+   "n": 4,
+   "pnl": -544.71
   },
   {
    "strategy": "ema_vwap_cross",
-   "n": 2,
-   "pnl": -916.27
-  },
-  {
-   "strategy": "long_straddle",
    "n": 1,
-   "pnl": -4695.0
+   "pnl": -1536.65
   }
  ],
- "equity": 120423.84,
+ "equity": 121520.48,
  "best": {
-  "label": "Natural gas mini short",
-  "pnl": 982.39
+  "label": "NIFTY long straddle \u00b7 12-01",
+  "pnl": 2988.0
  },
  "worst": {
-  "label": "NIFTY long straddle \u00b7 12-01",
-  "pnl": -4695.0
+  "label": "NIFTY 25,800 PE \u00b7 EMA9/VWAP \u00b7 12-01",
+  "pnl": -1536.65
  },
  "news": {
   "n": 0,
@@ -69,7 +59,8 @@
   "pnl": 0
  },
  "notes": [
-  "19 trades: 8 won and 10 lost of 18 closed; net -5,175 rupees.",
-  "Best market: COMMODITY (+606). Weakest: FNO (-5,611)."
+  "6 trades: 1 won and 5 lost of 6 closed; net +907 rupees.",
+  "Best market: FNO (+1,451). Weakest: EQUITY (-545).",
+  "Win rate under 40% today: the strategies below the line on the scoreboard are the ones to watch for a pause."
  ]
 }

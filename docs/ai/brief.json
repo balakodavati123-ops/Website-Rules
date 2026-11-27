@@ -1,67 +1,57 @@
 {
- "mood": "mixed",
- "brief": "Indian shares are subdued, with the Sensex slipping and the Nifty flat as IT stocks fall while metals and Titan gain. Concerns include elevated oil prices weighing on Indian bonds and scrutiny of the Tata Steel and APL Apollo deal.",
+ "mood": "bearish",
+ "brief": "Indian shares fell, with the Sensex down 764 points and the Nifty below 25,700 as IT stocks and financials dragged. Sebi summoned APL Apollo officials over the Tata Steel deal, while defence stocks surged up to 15%.",
  "themes": [
-  "IT stocks fall, metals gain",
-  "Tata Steel-APL Apollo deal under scrutiny",
-  "Oil prices weigh on bonds",
-  "Global tech rout and Nvidia worries"
+  "Sensex falls 764 points on IT and financials",
+  "Sebi examines Tata Steel-APL Apollo deal",
+  "Defence stocks surge up to 15%",
+  "SAP weighs 10,000 job cuts"
  ],
  "companies": [
   {
-   "name": "Titan",
-   "tone": "positive",
-   "why": "Gains while the broader market is subdued"
+   "name": "Infosys",
+   "tone": "negative",
+   "why": "Tumbles as IT stocks drag the Sensex"
+  },
+  {
+   "name": "TCS",
+   "tone": "negative",
+   "why": "Tumbles as IT stocks drag the Sensex"
+  },
+  {
+   "name": "HCLTech",
+   "tone": "negative",
+   "why": "Tumbles as IT stocks drag the Sensex"
   },
   {
    "name": "Tata Steel",
    "tone": "negative",
-   "why": "APL Apollo deal called ugly; Sebi may scrutinise"
+   "why": "Sebi examines APL Apollo deal over related-party rules"
   },
   {
    "name": "APL Apollo",
    "tone": "negative",
-   "why": "Deal faces scrutiny over related-party and shareholder worries"
-  },
-  {
-   "name": "Waaree Renewable",
-   "tone": "positive",
-   "why": "Rises 14% after 120-MWp EPC order"
+   "why": "Sebi summons officials; investor backlash on deal"
   },
   {
    "name": "HDFC Bank",
-   "tone": "negative",
-   "why": "Slips to 2.5-year low on legal, leadership woes"
+   "tone": "neutral",
+   "why": "Shares tread water as rally loses steam"
   },
   {
-   "name": "Zydus Lifesciences",
-   "tone": "negative",
-   "why": "Dips 3% on USFDA complete response letter"
-  },
-  {
-   "name": "BEML",
+   "name": "Bosch",
    "tone": "positive",
-   "why": "Jumps 7% in the Nifty 500"
-  },
-  {
-   "name": "Jupiter Wagons",
-   "tone": "negative",
-   "why": "Falls 5.7% after two-day rally"
-  },
-  {
-   "name": "IDFC First Bank",
-   "tone": "positive",
-   "why": "Gains 3% and nears 52-week high"
+   "why": "Announces record date for stock split and bonus"
   }
  ],
- "global": "Nvidia has fallen about 35% from its record high and the Nasdaq is in a correction, weighing on global tech sentiment.",
+ "global": "Nvidia's CEO drew continued Trump support, while SAP reportedly weighs at least 10,000 job cuts in an AI push.",
  "risks": [
-  "IT selling may drag the index",
-  "Elevated oil prices fan inflation worries",
-  "Global tech rout could spill into Indian markets"
+  "Sebi action on Tata Steel-APL Apollo deal",
+  "IT selling and tech layoffs",
+  "Possible US Fed rate hike in December"
  ],
- "time": "27 Nov 11:21",
- "at": 1795758691.009659,
+ "time": "27 Nov 16:21",
+ "at": 1795776680.239108,
  "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "n": 40
