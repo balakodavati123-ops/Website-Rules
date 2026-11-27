@@ -258,8 +258,9 @@
           else if (E.flip && s * (B.c[i] - X.e9x[i]) < 0 && gain > 0) { hit = 'momentum faded'; px = B.c[i]; }
           else if (i === d.b - 1) { hit = 'close'; px = B.c[i]; }
           if (hit) {
-            var intra = hit === 'target' || px !== B.c[i], tr = { day: d.day, dow: d.dow, side: s, inT: hhmm(pos.m), outT: hhmm(Math.min(B.m[i] + (intra ? 0 : B.tf), 930)), entry: pos.entry, exit: px,
-              pts: s * (px - pos.entry), why: hit, holdMin: Math.max(1, B.m[i] + (intra ? 0 : B.tf) - pos.m) };
+            var intra = hit === 'target' || px !== B.c[i], atOpen = px === o, mx = intra && !atOpen ? hitMin(D, B.t[i], B.t[i] + B.tf * 60, px, hit === 'target' ? s !== 1 : s === 1) : null,
+              mOut = Math.min(mx || B.m[i] + (intra ? 0 : B.tf), 930), tr = { day: d.day, dow: d.dow, side: s, inT: hhmm(pos.m), outT: hhmm(mOut), entry: pos.entry, exit: px,
+              pts: s * (px - pos.entry), why: hit, holdMin: Math.max(1, mOut - pos.m) };
             tr.mfe = Math.max(gain, tr.pts, 0); tr.mae = Math.min(s * (pos.worst - pos.entry), tr.pts, 0); tr.gaveBack = tr.mfe - tr.pts;     // best and worst while open (points)
             tr.net = money(tr, mode, M); trades.push(tr); pos = null;
           } else { if (s === 1) { if (B.h[i] > pos.best) pos.best = B.h[i]; if (B.l[i] < pos.worst) pos.worst = B.l[i]; } else { if (B.l[i] < pos.best) pos.best = B.l[i]; if (B.h[i] > pos.worst) pos.worst = B.h[i]; } }
@@ -279,6 +280,13 @@
     });
     return { strategy: strat.id, name: strat.name, params: P, tf: tf, mode: mode, unit: MODES[mode].unit, money: M, filters: F, exits: E, sessions: sessions, trades: trades, stats: stats(trades, sessions) };
   }
+  /* the first 1-minute candle inside [t0, t1) that crosses lvl (below: low <= lvl; above: high >= lvl); returns minute of day + 1 (when it is known) */
+  function hitMin(D, t0, t1, lvl, below) {
+    var lo = 0, hi = D.n; while (lo < hi) { var md = (lo + hi) >> 1; if (D.ts[md] < t0) lo = md + 1; else hi = md; }
+    for (var j = lo; j < D.n && D.ts[j] < t1; j++) if (below ? D.l[j] <= lvl : D.h[j] >= lvl) return minOf(D.ts[j]) + 1;
+    return null;
+  }
+
   /* ---------- multi-day (positional) mode: candles run across sessions, the trade is held overnight until its exit ----------
      Entry at the next candle's open after the signal; exits: the opposite signal (stop and reverse), an ATR stop from entry, a trailing stop;
      gaps between sessions fill at the open. Money: one NIFTY futures lot with NSE's charges and slippage. */
@@ -287,14 +295,14 @@
     var X = { A: K.A || (K.A = atr(B, 14)), S: K.S || (K.S = session(B, 15)), K: K, B: B }, f = FAMILIES[spec.family], x = spec.exits || {}, fl = spec.filters || {}, M = Object.assign({}, MODES.futures.defaults, opts.money || {});
     var dayOf = new Array(B.n); B.days.forEach(function (d) { for (var i = d.a; i < d.b; i++) dayOf[i] = d.day; });
     var ad = fl.adxMin ? (K.adx || (K.adx = adx(B, 14))) : null, T = [], pos = null, d0 = opts.start || '0000', d1 = opts.end || '9999';
-    function close(i, px, why) { var tr = { day: pos.day, exitDay: dayOf[i], side: pos.side, entry: pos.entry, exit: px, pts: pos.side * (px - pos.entry), why: why, bars: i - pos.i, inT: hhmm(pos.m), outT: hhmm(B.m[i]), holdMin: (i - pos.i) * tf, dow: pos.dow };
+    function close(i, px, why, mExact) { var tr = { day: pos.day, exitDay: dayOf[i], side: pos.side, entry: pos.entry, exit: px, pts: pos.side * (px - pos.entry), why: why, bars: i - pos.i, inT: hhmm(pos.m), outT: hhmm(mExact || B.m[i]), holdMin: (i - pos.i) * tf, dow: pos.dow };
       tr.mfe = Math.max(pos.side * (pos.best - pos.entry), tr.pts, 0); tr.net = money(tr, 'futures', M); T.push(tr); pos = null; }
     for (var i = 30; i < B.n - 1; i++) {
       if (pos) {
         var s = pos.side, o = B.o[i];
         if (x.trail && s * (pos.best - pos.entry) >= (x.trailAfter || 0) * pos.atr) { var ts = pos.best - s * x.trail * pos.atr; if (s * (ts - pos.stop) > 0) pos.stop = ts; }
         if (pos.stop != null && s * (o - pos.stop) <= 0) close(i, o, 'stop (gap)');
-        else if (pos.stop != null && (s === 1 ? B.l[i] <= pos.stop : B.h[i] >= pos.stop)) close(i, pos.stop, 'stop');
+        else if (pos.stop != null && (s === 1 ? B.l[i] <= pos.stop : B.h[i] >= pos.stop)) close(i, pos.stop, 'stop', hitMin(D, B.t[i], B.t[i] + tf * 60, pos.stop, s === 1) || B.m[i] + tf);
         else { if (s === 1 ? B.h[i] > pos.best : B.l[i] < pos.best) pos.best = s === 1 ? B.h[i] : B.l[i]; }
       }
       var sig = f(B, X, i, spec.entry || {}) * (spec.fade ? -1 : 1);
