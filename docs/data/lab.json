@@ -6,7 +6,7 @@
   },
   {
    "stage": "BUILT",
-   "n": 23
+   "n": 24
   },
   {
    "stage": "TESTED",
@@ -141,6 +141,63 @@
    "lessons": []
   },
   {
+   "strategy": "ema_vwap_cross",
+   "team": "fno",
+   "desk": "FNO",
+   "stage": "BUILT",
+   "closed": 5,
+   "open": 0,
+   "net_rs": -728.24,
+   "win_rate": 40.0,
+   "since": "2026-11-25",
+   "passed": 1,
+   "checks": [
+    {
+     "name": "Enough trades",
+     "ok": false,
+     "value": "5 closed",
+     "need": "30 or more"
+    },
+    {
+     "name": "Profit after charges",
+     "ok": false,
+     "value": "\u20b9-728",
+     "need": "above \u20b90"
+    },
+    {
+     "name": "Survives double costs",
+     "ok": false,
+     "value": "\u20b9-1,128",
+     "need": "above \u20b90 with one more round trip of charges per trade"
+    },
+    {
+     "name": "Out of sample",
+     "ok": null,
+     "value": "needs 10 trades",
+     "need": "the most recent 30% of trades still profitable"
+    },
+    {
+     "name": "Beats chance",
+     "ok": null,
+     "value": "needs 5 trades with a stop and target",
+     "need": "z of 1.0 or more"
+    },
+    {
+     "name": "Profitable on most days",
+     "ok": null,
+     "value": "1 of 3 days",
+     "need": "half the days or more, over 5+ days"
+    },
+    {
+     "name": "Losing streak in limits",
+     "ok": true,
+     "value": "worst run 1",
+     "need": "8 losses in a row at most"
+    }
+   ],
+   "lessons": []
+  },
+  {
    "strategy": "long_breakout",
    "team": "fno",
    "desk": "FNO",
@@ -203,7 +260,7 @@
    "desk": "FNO",
    "stage": "BUILT",
    "closed": 5,
-   "open": 0,
+   "open": 1,
    "net_rs": 7946.0,
    "win_rate": 60.0,
    "since": "2026-11-19",
@@ -255,16 +312,16 @@
    "lessons": []
   },
   {
-   "strategy": "ema_vwap_cross",
-   "team": "fno",
-   "desk": "FNO",
+   "strategy": "scalp_vwap_pullback_v2",
+   "team": "scalp",
+   "desk": "EQUITY",
    "stage": "BUILT",
    "closed": 4,
    "open": 0,
-   "net_rs": 808.41,
-   "win_rate": 50.0,
-   "since": "2026-11-25",
-   "passed": 3,
+   "net_rs": -544.71,
+   "win_rate": 0.0,
+   "since": "2026-11-27",
+   "passed": 1,
    "checks": [
     {
      "name": "Enough trades",
@@ -274,14 +331,14 @@
     },
     {
      "name": "Profit after charges",
-     "ok": true,
-     "value": "\u20b9808",
+     "ok": false,
+     "value": "\u20b9-545",
      "need": "above \u20b90"
     },
     {
      "name": "Survives double costs",
-     "ok": true,
-     "value": "\u20b9488",
+     "ok": false,
+     "value": "\u20b9-625",
      "need": "above \u20b90 with one more round trip of charges per trade"
     },
     {
@@ -299,13 +356,13 @@
     {
      "name": "Profitable on most days",
      "ok": null,
-     "value": "1 of 2 days",
+     "value": "0 of 1 days",
      "need": "half the days or more, over 5+ days"
     },
     {
      "name": "Losing streak in limits",
      "ok": true,
-     "value": "worst run 1",
+     "value": "worst run 4",
      "need": "8 losses in a row at most"
     }
    ],
@@ -1662,7 +1719,7 @@
  "ai": {
   "on": true,
   "mode": "scheduled",
-  "last": "25 Nov 11:21",
+  "last": "27 Nov 11:21",
   "next": "every hour from 09:20 to 16:20 IST on weekdays",
   "models": {
    "analyst": "Claude (your plan, scheduled)"

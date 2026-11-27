@@ -1,6 +1,43 @@
 {
- "updated_at": "2026-11-27T06:29:15+05:30",
- "skipped": [],
+ "updated_at": "2026-11-27T12:09:54+05:30",
+ "skipped": [
+  {
+   "desk": "COMMODITY",
+   "what": "Gold 1 g",
+   "margin": 1406,
+   "room": 0,
+   "why": "needs more margin than the commodities limit has free",
+   "at": "12:09:54",
+   "day": "2026-11-27"
+  },
+  {
+   "desk": "COMMODITY",
+   "what": "Crude oil mini",
+   "margin": 24621,
+   "room": 0,
+   "why": "needs more margin than the commodities limit has free",
+   "at": "12:09:54",
+   "day": "2026-11-27"
+  },
+  {
+   "desk": "COMMODITY",
+   "what": "Silver 1 kg",
+   "margin": 33356,
+   "room": 0,
+   "why": "needs more margin than the commodities limit has free",
+   "at": "12:09:20",
+   "day": "2026-11-27"
+  },
+  {
+   "desk": "COMMODITY",
+   "what": "Natural gas mini",
+   "margin": 14053,
+   "room": 0,
+   "why": "needs more margin than the commodities limit has free",
+   "at": "12:09:02",
+   "day": "2026-11-27"
+  }
+ ],
  "reference": [
   {
    "name": "Crude oil (100 barrels)",

@@ -1,20 +1,13 @@
 {
- "day": "2026-11-26",
+ "day": "2026-11-27",
  "trades": [],
  "seen": {
   "KALYANKJIL": "conflict",
-  "POLYCAB": "conflict",
-  "ZEEL": "conflict",
-  "ACE": "conflict",
-  "ZYDUSLIFE": "conflict",
-  "GLAND": "conflict",
-  "DALBHARAT": "conflict",
-  "ANGELONE": "conflict",
-  "SHILPAMED": "conflict"
+  "ZYDUSLIFE": "conflict"
  },
  "seq": 0,
  "diag": {
-  "at": "15:40",
+  "at": "12:09",
   "effort": 2,
   "setups_on": [
    "news",
@@ -22,16 +15,53 @@
    "momentum",
    "vwap"
   ],
-  "scanned": 0,
+  "scanned": 549,
   "found": {
-   "news": [],
-   "gap": [],
-   "momentum": [],
-   "vwap": []
+   "news": [
+    "ZEEL",
+    "COFORGE",
+    "LUPIN",
+    "WELCORP",
+    "SHYAMMETL",
+    "DIXON",
+    "SOLARINDS"
+   ],
+   "gap": [
+    "SILVERBEES",
+    "MANAPPURAM",
+    "GOLD1",
+    "HINDZINC",
+    "PASHUPATI",
+    "VAML",
+    "MAFANG",
+    "APLAPOLLO"
+   ],
+   "momentum": [
+    "MEESHO",
+    "MODEFENCE",
+    "SHRIRAMFIN",
+    "BANKBARODA",
+    "UTLSOLAR",
+    "INFY",
+    "SILVERBEES",
+    "PRECWIRE"
+   ],
+   "vwap": [
+    "ASTERDM",
+    "SHRIRAMFIN",
+    "MARUTI",
+    "LALITHAA",
+    "BAJAJHLDNG",
+    "AGIIL",
+    "LLOYDSENGG",
+    "TATACAP"
+   ]
   },
   "taken": [],
-  "skipped": {},
-  "news_names": 17,
-  "headline_names": 29
+  "skipped": {
+   "DIXON": "no intraday margin left"
+  },
+  "news_names": 4,
+  "headline_names": 17
  }
 }

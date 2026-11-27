@@ -1,54 +1,591 @@
 {
- "updated_at": "2026-11-27T06:21:12+05:30",
- "scans": 2247,
+ "updated_at": "2026-11-27T12:09:44+05:30",
+ "scans": 2461,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "06:21:12"
+   "at": "12:09:44"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "06:21:12"
+   "at": "12:09:44"
   },
   "Moneycontrol": {
-   "ok": false,
+   "ok": true,
    "items": 15,
-   "at": "06:21:12"
+   "at": "12:09:44"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "06:21:12"
+   "at": "12:09:44"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "06:21:12"
+   "at": "12:09:44"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "06:21:12"
+   "at": "12:09:44"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "06:21:12"
+   "at": "12:09:44"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "06:21:12"
+   "at": "12:09:44"
   },
   "Google News": {
    "ok": true,
-   "items": 8,
-   "at": "06:21:12"
+   "items": 13,
+   "at": "12:09:44"
   }
  },
  "signals": [
+  {
+   "id": "N120213-27",
+   "t": "12:02:13",
+   "ts": 1795761133.042911,
+   "pub": "10:27",
+   "lag_s": 5665,
+   "symbol": "JWL",
+   "tone": "positive",
+   "score": 1.95,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Jupiter Wagons Shares Fall After Two-Day Rally; Stock Down Over 5%",
+   "source": "NDTV Profit",
+   "link": "https://www.ndtvprofit.com/markets/jupiter-wagons-shares-fall-after-two-day-rally-stock-down-over-5-12383069#publisher=newsstand",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 226.57,
+   "px": 226.04,
+   "move_pct": -0.23
+  },
+  {
+   "id": "N115339-26",
+   "t": "11:53:39",
+   "ts": 1795760619.391331,
+   "pub": "11:45",
+   "lag_s": 489,
+   "symbol": "SUPRIYA",
+   "tone": "positive",
+   "score": 3.9,
+   "emotion": "Optimism",
+   "why": [
+    "buyback"
+   ],
+   "headline": "Supriya Lifescience shares soar 9% as firm to mull first-ever buyback",
+   "source": "Business Standard",
+   "link": "https://www.business-standard.com/markets/news/supriya-lifescience-share-price-soar-9-as-firm-to-mull-first-ever-buyback-126112700350_1.html",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 648.65,
+   "px": 646.4,
+   "move_pct": -0.35
+  },
+  {
+   "id": "N114255-25",
+   "t": "11:42:55",
+   "ts": 1795759975.871733,
+   "pub": "11:27",
+   "lag_s": 956,
+   "symbol": "GRAPHITE",
+   "tone": "negative",
+   "score": -3.9,
+   "emotion": "Fear",
+   "why": [
+    "lower circuit"
+   ],
+   "headline": "HEG shares list at 25% premium after demerger of graphite electrode business; stock hits 5% lower circuit - TradingView",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNOEFramJqWFpYaThvbGxSSzhSWmlCSmltazN6dlFWNzJ4cjgtY2JUSU9Pb01jdVdsMl9tM3FFWThzTWpQSXhaQmxWRS1GWHZCS0w5cGRMeVN5MzZvU1daeXR0TUk4ZUNxeFJEZm5CVW5IamVSMFJGZ1RTRVFXRUtPbTJBOU9SUEVWZ3I1aXMyX1NDOC13SXJTUVpXS05CUTlEcDB5RDF6OC01WWkzeEFCTHllVE82V2NEQnBNeVlRTHpDczlQeUNUa1RKbVBkTTc2bDg4TU11aXQ2Mzd3Z3h6RXplLWszNjh4ald5c2VoN0l4dEt1TnNkRw?oc=5",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 792.25,
+   "px": 795.1,
+   "move_pct": 0.36
+  },
+  {
+   "id": "N113524-24",
+   "t": "11:35:24",
+   "ts": 1795759524.93111,
+   "pub": "11:27",
+   "lag_s": 494,
+   "symbol": "GRAPHITE",
+   "tone": "negative",
+   "score": -3.9,
+   "emotion": "Fear",
+   "why": [
+    "lower circuit"
+   ],
+   "headline": "HEG shares list at 25% premium after demerger of graphite electrode business; stock hits 5% lower circuit - Moneycontrol.com",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPMDVPTFB2Y0dfZXBRMWlTbXJDVzlITmFXOE1NM1BUejlOODA1YVRMTHpXcndWenhJOVFPYU1aVzQ3M3NEVE82aGM5Zm1TTnlQNW9pZTRib1BRMjBDbDZucEdGY2FsbmFNc3FldW42a19sWnBOZUhUbXhUOW9IbjZROVRmdUkzRVFLNnF4SHVzM242MFpvLVRoOThaVncyUDFzYXppUWZhcFVBRS1CYzZ0cmRETXhILTBXU05LejNzbnlaMW5wZFZ6OWk2eG1XRURNMVdBODNfOVEwRVh6Z3MzY2Jfbmx5a3Q4b1pVUmJtOWRSUW9hdHc1am5xQdIBgAJBVV95cUxPX1Ewb1FfOUlJb3RYUnFPeDl2UmVPQ29iM05Eb2lEb0FwSkc1RTZCNzM0WnJocG9JRl92LVZ1UTZkUldzMEJ3MFFLQ01LQ3AtM2FldUFpZGJDa0JWT0VxT3lfM1lTR2lHRmMwS3JmY2ZCdW5OVXpMQWRkNExVYUtYUXRTYmUwcURIT3JtdW8yV0FFb203UDZkVGlxeHVWU3NtWDVYUmUxZXM2RFMxTVpXYkJWUmFFOUtTaUR3MmxXeTAtcXRqWWhhaXRnNDk0WU42bXlDQzdYNUpyZEZwSW03bmJtb19CNTVRV1B4WHdMWEtBQTJwcnF3OXhSQTliYW4t?oc=5",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 792.15,
+   "px": 795.1,
+   "move_pct": 0.37
+  },
+  {
+   "id": "N113524-23",
+   "t": "11:35:24",
+   "ts": 1795759524.93111,
+   "pub": "08:59",
+   "lag_s": 9355,
+   "symbol": "MCX",
+   "tone": "positive",
+   "score": 4,
+   "emotion": "Euphoria",
+   "why": [
+    "surges",
+    "jumps"
+   ],
+   "headline": "Gold jumps 2%, silver surges 5% as bullion rebounds from multi-month lows: Gold Silver Rates Live Updates",
+   "source": "ET Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/live-blog/live-updates-gold-rate-today-27th-november-24k-22k-20k-18-carat-mcx-gold-silver-price-in-delhi-hyderabad-chennai-bengaluru-citywise/liveblog/136208041.cms",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 3889.1,
+   "px": 3917.7,
+   "move_pct": 0.74,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Commodity price story, not MCX-specific; already doubted earlier."
+   }
+  },
+  {
+   "id": "N112228-22",
+   "t": "11:22:28",
+   "ts": 1795758748.198098,
+   "pub": "11:21",
+   "lag_s": 78,
+   "symbol": "DIXON",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Why did Dixon Technologies shares rally over 4% today? Here's what's driving the stock - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxONUlONzBobnM5V3BkbHVxMm1aVGNGTFVhSnFsZmJXd0laSnFpYTdoYkR6YmlkcWdqbXFOWWxvVllVNlZOSTJvNUpVR3lLSF8tTWJwdC1mOTRjUFRhbzYxbHFpVjRsRVU4Z3NySE96aTQwYzJhTmt6RmI0VEdGYTRVNlFEQURzTFFpemVlNmZJUTVvSVZSbFV0QmhIOWQyZjFINHJaQnNWeEU4TW1POS1UeW1HSFVheHdwZ2MxcXlzWkVNa0tEU1hR?oc=5",
+   "kind": "headline",
+   "status": "not taken: no intraday margin left",
+   "px0": 13212.0,
+   "px": 13176.0,
+   "move_pct": -0.27
+  },
+  {
+   "id": "N112228-21",
+   "t": "11:22:28",
+   "ts": 1795758748.198098,
+   "pub": "11:21",
+   "lag_s": 53,
+   "symbol": "SOLARINDS",
+   "tone": "positive",
+   "score": 1.95,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Why did Solar Industries shares rally over 6% today? Here's what's driving the stock - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQ1VuMFVPS1ViTmlWNWVLV2E4eFBha1lxaWZ0bE5RZUt6cFZzdjh0ZWJ0Z0NkUU5CV3NzWHE4eEtNQTAydU5haWtSMk1fMnBZVWcxV3BZalNSSE1jT1NLbUhHVE5XRVJ2SWxjdWxiOGdtaU5pMm14RzM4cnVoNVpna2dPUnNzQTczUXpCYkpBSzRqMW5EMUVzX1hEcDdRQV9UcTdaVEJqemkwTERoV1RUMkp2ODEwTU5RdFZVNzZyZDVXdw?oc=5",
+   "kind": "headline",
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 19244.0,
+   "px": 19422.0,
+   "move_pct": 0.92
+  },
+  {
+   "id": "N112228-20",
+   "t": "11:22:28",
+   "ts": 1795758748.198098,
+   "pub": "11:21",
+   "lag_s": 78,
+   "symbol": "COFORGE",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Why did Coforge shares rally over 4% today? Here's what's driving the stock - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPdzVUd0VhR2NhTXFVaHAybzB5UHY2OExVY0FlM0ZaTjNORVprdWpuZkRja3VZcTU3T0c2d296Qk1fc0NJdmJmQ0lIR2RKcm9QWXI4bFUtdEg5ajhqdlNsTTQtY1F3UFQtb3B1bExDQkwtSFpkYzlGR0hOTWx6ZEZya0c5ZDQwcjNMblRTTnNxNjJHS243VGp4UFp5R2JGUzNaNTlkVklQZllOMkVxNGwyM0szLXNUOFk?oc=5",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 2064.2,
+   "px": 2064.3,
+   "move_pct": 0.0
+  },
+  {
+   "id": "N112228-19",
+   "t": "11:22:28",
+   "ts": 1795758748.198098,
+   "pub": "11:21",
+   "lag_s": 78,
+   "symbol": "AVALON",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Why did Avalon Technologies shares rally over 4% today? Here's what's driving the stock - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPeUs2Wm1DQWNHY3JTcDQwWDRRdWpPbFFBc3BGcy1iQkNFdzNqSWxYdnBVVEhhRWVLZFZHaDd6eHlHS0t0Zm1fMXNBOThhOUt3ZTlkdWNQcXVlUU5OT19scDh2bmJQSmZ0VXM0M1BDSy02MDJVNDhvT0FmRl9JMkhXaDVEd2ZQM3hlUXFLVkJIX2ExQXcyZWJyTXc5bDZLQU82RERqNTNjZUU2amdHZHh6aHh4WXJqZGtaRUhEbUFyeHNId3VVcWZSVkxxb3E?oc=5",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 1868.8,
+   "px": 1863.8,
+   "move_pct": -0.27
+  },
+  {
+   "id": "N111354-18",
+   "t": "11:13:54",
+   "ts": 1795758234.427064,
+   "pub": "11:12",
+   "lag_s": 77,
+   "symbol": "SHYAMMETL",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "SHYAMMETL: General Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/SHYAMMETL_27112026111226_SMELAcquisitionofStakebySSPL27112026.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 1303.0,
+   "px": 1304.6,
+   "move_pct": 0.12,
+   "ai": {
+    "verdict": "doubt",
+    "why": "General update with no detail; price has not moved."
+   }
+  },
+  {
+   "id": "N111250-17",
+   "t": "11:12:50",
+   "ts": 1795758170.273816,
+   "pub": "11:09",
+   "lag_s": 203,
+   "symbol": "WAAREERTL",
+   "tone": "positive",
+   "score": 6.5,
+   "emotion": "Euphoria",
+   "why": [
+    "52-week high",
+    "order win"
+   ],
+   "headline": "Small-cap, big jump! Waaree Renewable shares rise 14% on this order win; energy stock still 35% below 52-week high",
+   "source": "Mint",
+   "link": "https://www.livemint.com/market/stock-market-news/smallcap-big-jump-waaree-renewable-shares-rise-14-on-this-order-win-energy-stock-still-35-below-52-week-high-11795756038934.html",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 751.5,
+   "px": 764.05,
+   "move_pct": 1.67,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Order win is specific, but the 14% jump is priced in and price is flat."
+   }
+  },
+  {
+   "id": "N110828-16",
+   "t": "11:08:28",
+   "ts": 1795757908.276164,
+   "pub": "10:52",
+   "lag_s": 976,
+   "symbol": "WAAREERTL",
+   "tone": "positive",
+   "score": 1.95,
+   "emotion": "Optimism",
+   "why": [
+    "rallies"
+   ],
+   "headline": "Waaree Renewable share price rallies 14% after securing 120-MWp EPC order",
+   "source": "Business Standard",
+   "link": "https://www.business-standard.com/markets/news/waaree-renewable-share-price-rallies-14-after-securing-120-mwp-epc-order-126112700290_1.html",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 754.7,
+   "px": 764.05,
+   "move_pct": 1.24,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Order win is specific, but the 14% jump is priced in and price is flat."
+   }
+  },
+  {
+   "id": "N110155-15",
+   "t": "11:01:55",
+   "ts": 1795757515.776972,
+   "pub": "10:52",
+   "lag_s": 584,
+   "symbol": "WAAREERTL",
+   "tone": "positive",
+   "score": 1.95,
+   "emotion": "Optimism",
+   "why": [
+    "rallies"
+   ],
+   "headline": "Waaree Renewable share price rallies 14% after securing 120-MWp EPC order - Business Standard",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNM3NBS3ZvMkNGdDhFVUlQdEFrVjhQRjdILUptUVhMVnpsbFh1TXVqY2k4cHNlblkzdmhNanVGN3ozY1JQVGZvYUdxYjd4a1FoVHBvRDV4M0FOVmUtRU04TnRLSC04T2dZZWRieHdfSkozbkttVmJWeHNpM1ppRjFNVExTdTRpUXFqZHluM2IyN2VIVmdlM2k4ajdNSC1uNUNRbVVUekpNRkthMnJZOTJJMWhoc0RaU0FpSlNNRmtzb1JVRk1wRTFQUDJZWmRBZ0lremNJWmFB0gHbAUFVX3lxTFBVSkc5clFqSTRQanZRS0g2eU1EdlVwT0VnOGRwR2dBTmtqNHp5dzlnLTl5c2g3RU04dzdOOFZRaGE5Vk5mNWd6ZU1oZnAzZmVQSXdacldjMk1fRkxLR1dLNE1vTTNfSWg1R2l3T0FWdHZvdjRPdHRINjJnRGxRSE5iZ2JNOGpjMXVtbWxJTmVzUVdvZVZGT0VLSUd3b1NFUzhNcFZIUmVreU1GWXRGTDY0Q25OYU1JM2VCQ3BranptR0NIaVNVaWFLWnQ4NDZWc04tc3VjZS1MOEVuRQ?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 755.45,
+   "px": 764.05,
+   "move_pct": 1.14,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Order win is specific, but the 14% jump is priced in and price is flat."
+   }
+  },
+  {
+   "id": "N102246-14",
+   "t": "10:22:46",
+   "ts": 1795755166.783936,
+   "pub": "10:09",
+   "lag_s": 822,
+   "symbol": "IDFCFIRSTB",
+   "tone": "positive",
+   "score": 3,
+   "emotion": "Optimism",
+   "why": [
+    "52-week high",
+    "gains"
+   ],
+   "headline": "IDFC First Bank gains 3% in subdued market; nears 52-week high",
+   "source": "Business Standard",
+   "link": "https://www.business-standard.com/markets/news/idfc-first-bank-gains-3-in-subdued-market-nears-52-week-high-126112700216_1.html",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 87.97,
+   "px": 87.06,
+   "move_pct": -1.03,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Move already happened; price is down, not confirming."
+   }
+  },
+  {
+   "id": "N100325-13",
+   "t": "10:03:25",
+   "ts": 1795754005.243138,
+   "pub": "10:02",
+   "lag_s": 53,
+   "symbol": "LCCPROJECT",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "LCCPROJECT: Bagging/Receiving of orders/contracts",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/LCCPROJECTS_27112026100222_Regulation_30_Intimation.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 136.19,
+   "px": 130.56,
+   "move_pct": -4.13,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Order size not stated and price is down, not confirming."
+   }
+  },
+  {
+   "id": "N094739-12",
+   "t": "09:47:39",
+   "ts": 1795753059.698636,
+   "pub": "09:46",
+   "lag_s": 86,
+   "symbol": "SWARAJENG",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "nod"
+   ],
+   "headline": "Swaraj Suiting Share Price Up 4.86%: NSE Nod for Pref Issue - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQR0dhbXNEeFZ6UERuZk41WHQ1Sk5VWDFSN2N4RjNRRW15NFRmcGVRY043UHEweEZFOTR6c1ZmMXJkY3NZQ1JwcEdFWmswejJzM0ZKZzA3bnV4OFdaT1I0MGFDaW5iQ19mTXM1SUtkTUxuWUVVakpBdVhzSHV4dmpud01hYzBPamYzbVdwTHNvckZrWFRud1FWX21NZW94cHVLWnk3ampsa2t2bHBBdEtZYUVCUGdLdk1wbV9jRWlCemVzVS0tSVVyWENkV0doSzQ5cWYxZThmOGpEa0d0TG1lNi03UmlZQ0NnSkQ0?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 3446.9,
+   "px": 3451.1,
+   "move_pct": 0.12,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Headline names Swaraj Suiting, a different company; price barely moved."
+   }
+  },
+  {
+   "id": "N093147-11",
+   "t": "09:31:47",
+   "ts": 1795752107.312944,
+   "pub": "09:31",
+   "lag_s": 36,
+   "symbol": "UTLSOLAR",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Why did Fujiyama Power shares rally over 4% today? Circuit filter tightened to 5% - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxObXQ2NmdrTWw5NG9DYktRc0c2TVFuUnNkSURNTVRWYlF0WVJKckhrcmQxdmQ2TE4wSl9sTlR1V3VlRGttYXE4bHd3U2RLdzYwU0oxZkJXU0RJbWJkMlpnVWFvM1p2YzVhejQ5SXY4NFFkcWd6MjNwNjRPVFFENGhsZTg0UVlIbGtOb1hKRUFWT3R5SHJRbmpoXzBQMElZSnZqUVJrc3hEaTBUUl9LZ2tQaWx4SGcya3RENGhBRg?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 277.95,
+   "px": 286.0,
+   "move_pct": 2.9,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Headline is about Fujiyama Power, and rally already happened."
+   }
+  },
+  {
+   "id": "N093037-10",
+   "t": "09:30:37",
+   "ts": 1795752037.750378,
+   "pub": "09:29",
+   "lag_s": 71,
+   "symbol": "DHARAN",
+   "tone": "negative",
+   "score": -3.5,
+   "emotion": "Fear",
+   "why": [
+    "insolvency"
+   ],
+   "headline": "DHARAN: Corporate Insolvency Resolution Process",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/KBCGLOBAL_27112026092852_Outcome_of_1st_CoC_Meeting.pdf",
+   "kind": "filing",
+   "status": "new",
+   "ai": {
+    "verdict": "confirm",
+    "why": "Fresh, specific insolvency process filing is material negative news."
+   }
+  },
+  {
+   "id": "N091225-9",
+   "t": "09:12:25",
+   "ts": 1795750945.322209,
+   "pub": "08:59",
+   "lag_s": 775,
+   "symbol": "MCX",
+   "tone": "positive",
+   "score": 4,
+   "emotion": "Euphoria",
+   "why": [
+    "surges",
+    "jumps"
+   ],
+   "headline": "Gold jumps 1.5%, silver surges 4.5% as bullion rebounds from multi-month lows: Gold Silver Rates Live Updates",
+   "source": "ET Stocks",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/live-blog/live-updates-gold-rate-today-27th-november-24k-22k-20k-18-carat-mcx-gold-silver-price-in-delhi-hyderabad-chennai-bengaluru-citywise/liveblog/136208041.cms",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 3870.0,
+   "px": 3917.7,
+   "move_pct": 1.23,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Commodity price story, not MCX-specific; already doubted earlier."
+   }
+  },
+  {
+   "id": "N083420-8",
+   "t": "08:34:20",
+   "ts": 1795748660.255728,
+   "pub": "08:30",
+   "lag_s": 209,
+   "symbol": "URBANCO",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "overweight"
+   ],
+   "headline": "Urban Company shares: Morgan Stanley stays Overweight and sizes up the air conditioner bet - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQOU5kLUFSUEhrZnRMdXlYSTJBZ1FXcDc4ZndzckhLMTJQRGlNRTE2UGJ4eXdLLXhmTlpkYzBGRWNJaTlzMVZlcUNVbFVUWE0zRXROZGxFYlpzY1hzXzZXWmY4dkNhMlBEclY5S0lpV01JOG5PQ3VkS2Z3MWVNb2c4WWJSMTlEN25Wbi03SERPVC1heWdoZEc0SXBDY001ZmV1bGZSTW1fM3JlMzhRSDFNdU8yMERiN0hjamJPSlJobzVFd3R4V29Ha1d6NUNXQ0pJd0NQelNQcGFjX2dfcm82ZEs5VQ?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 172.43,
+   "px": 170.72,
+   "move_pct": -0.99,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Analyst view already known; price flat and no margin left."
+   }
+  },
+  {
+   "id": "N083004-7",
+   "t": "08:30:04",
+   "ts": 1795748404.971469,
+   "pub": "08:27",
+   "lag_s": 154,
+   "symbol": "BIOCON",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "BIOCON: Press Release",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/BIOCON_27112026082717_Pressrelease27112026-Signed.pdf",
+   "kind": "filing",
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 364.0,
+   "px": 363.7,
+   "move_pct": -0.08,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Press release has no detail, so materiality is unknown."
+   }
+  },
+  {
+   "id": "N072020-6",
+   "t": "07:20:20",
+   "ts": 1795744220.184942,
+   "pub": "06:22",
+   "lag_s": 3456,
+   "symbol": "BFSI",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "nod"
+   ],
+   "headline": "NSE receives RBI nod for corporate bond index futures, aims to deepen debt market - bfsi.economictimes.indiatimes.com",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNS1cwT1F2X1B6NGo5TGdJdjItR1RUS1pmQ3l1ZXBlai0tRUU1dl9oeVlGMWdEdnc0aG4wV2ZucmI1RkQ5ZFUtbVZEelZRcmtDVTNDSkZvYjJ2bUhjMzdRWm9fa2VZTmxWY0RZSGJfQkNuVWxBRHhvLWg3R0NwTUFYaWRFMlItbC1hSGdtS3hpdVY5cHFpeHRFSGdOdDkzVHdoSXVUdXhJa0RpMndxLXBIMHh2WEdGV05hdWd4R0lTVVNwN1lmaGxvNVBjdHQydFctMHFiQ1VJc0hEYUVTdVHSAd4BQVVfeXFMTUtXME9Rdl9QejRqOUxnSXYyLUdUVEtaZkN5dWVwZWotLUVFNXZfaHlZRjFnRHZ3NGhuMFdmbnJiNUZEOWRVLW1WRHpWUXJrQ1UzQ0pGb2Iydm1IYzM3UVpvX2tlWU5sVmNEWUhiX0JDblVsQUR4by1oN0dDcE1BWGlkRTJSLWwtYUhnbUt4aXVWOXBxaXh0RUhnTnQ5M1R3aEl1VHV4SWtEaTJ3cS1wSDB4dlhHRldOYXVneEdJU1VTcDdZZmhsbzVQY3R0MnRXLTBxYkNVSXNIRGFFU3VR?oc=5",
+   "kind": "headline",
+   "status": "watching: price has not confirmed yet",
+   "px0": 29.94,
+   "px": 29.68,
+   "move_pct": -0.87
+  },
   {
    "id": "N062112-5",
    "t": "06:21:12",
@@ -66,7 +603,14 @@
    "source": "Google News",
    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNXlvSkUwTzQxVnoxaUFPZkx1cGRlVzFESnAwcEFtbTlhbkpWaFVLMmd4Y2V6bDZrRUNXNlIxYzNhcG1MMkM4d2s1TjZqZE5mdmlhYkw3aWV2UXpIMnp2UW9xMEdyaUxJbDczcVVOVFVYb1lfbGxCTjMwNEppcGEzUG5kYWg2OFplV3IwVVhxWHlEY0x3UnhuZk9QYkFBN1NrM19jaGdlQ2k0LTNobzJZYUZhZ2h0QQ?oc=5",
    "kind": "headline",
-   "status": "new"
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 3434.7,
+   "px": 3451.1,
+   "move_pct": 0.48,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Headline names Swaraj Suiting, a different company; price barely moved."
+   }
   },
   {
    "id": "N061105-4",
@@ -86,7 +630,10 @@
    "source": "Google News",
    "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPTW8zRlpjOFVPVG9CUVJVekM4ZVFhUV80MHJlSVpLcUwzWDdtTUptQU5pcUREekVlRjlsY2k3R04wb2ptUUxtUWVLR1BlQ0RSdWZtSWhiT2dKRk9XckFPc0lUVkI0SmZkWThfOFJWdG1iV3lfakFWSm9RUlFIMmFFNGlGNjNBZS1PZ0RTbGx5cXA0TzZiXzR4LW9jcElkMTJhLThET0JfQW9UUjMxTERxRzFqN05BSGdwNlBqV3FRUjdIVHU4VkxMS3hRbm0wUGN0?oc=5",
    "kind": "headline",
-   "status": "new"
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 267.05,
+   "px": 270.73,
+   "move_pct": 1.38
   },
   {
    "id": "N004920-3",
@@ -105,7 +652,14 @@
    "source": "Google News",
    "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNFhnU0xERHZsTExNZThaOW5EaV9valMwUldNNm1yWUNuVExxZnk3aXVjWjVscjlUUTlYVmN2WDlZeXRjVUNBMFQwOWRrZTE3UXFZWEpUS2pIZF90b09FOXNLTVJUMHRpYnpZZXJvaHJPVm9PZzhBSi0wdndZa1Zaem9IUERyRnFqR0lQZ211MGg1bUZNaEcwaGNVSEJZTDJBYjZGZnMwNWdoMy0tYzdwMjdpcElPaHJ6OGM0TDczM2ZzWVk?oc=5",
    "kind": "headline",
-   "status": "new"
+   "status": "skipped: the AI analyst doubted it",
+   "px0": 3434.7,
+   "px": 3451.1,
+   "move_pct": 0.48,
+   "ai": {
+    "verdict": "doubt",
+    "why": "Headline names Swaraj Suiting, a different company; price barely moved."
+   }
   },
   {
    "id": "N000400-2",
@@ -124,7 +678,10 @@
    "source": "NSE filing",
    "link": "https://nsearchives.nseindia.in/corporate/CEINSYSTECH_26112026224025_SEintimationofJVExtension26112026.pdf",
    "kind": "filing",
-   "status": "new"
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 630.0,
+   "px": 653.55,
+   "move_pct": 3.74
   },
   {
    "id": "N000400-1",
@@ -143,15 +700,18 @@
    "source": "Mint",
    "link": "https://www.livemint.com/market/stock-market-news/buyback-alert-supriya-lifescience-sets-december-2-board-meeting-to-consider-share-buyback-details-here-11795714356991.html",
    "kind": "headline",
-   "status": "new"
+   "status": "price agrees: hunters checking the entry rule",
+   "px0": 633.55,
+   "px": 646.4,
+   "move_pct": 2.03
   }
  ],
  "stats": {
-  "last_hour": 2,
-  "positive": 2,
-  "negative": 0,
-  "today": 5,
-  "median_lag_min": 21.6,
-  "new_this_scan": 1
+  "last_hour": 11,
+  "positive": 9,
+  "negative": 2,
+  "today": 27,
+  "median_lag_min": 3.5,
+  "new_this_scan": 0
  }
 }

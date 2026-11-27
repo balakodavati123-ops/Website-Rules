@@ -120,6 +120,18 @@
   "verdict": "PAUSED"
  },
  {
+  "desk": "EQUITY",
+  "strategy": "scalp_vwap_pullback_v2",
+  "closed": 4,
+  "wins": 0,
+  "win_rate": 0.0,
+  "pnl_rs": -544.71,
+  "avg_rs": -136.18,
+  "t_stat": -3.37,
+  "confidence": 0.0,
+  "verdict": "COLLECTING"
+ },
+ {
   "desk": "FNO",
   "strategy": "credit_spread",
   "closed": 2,
@@ -146,13 +158,13 @@
  {
   "desk": "FNO",
   "strategy": "ema_vwap_cross",
-  "closed": 4,
+  "closed": 5,
   "wins": 2,
-  "win_rate": 50.0,
-  "pnl_rs": 808.41,
-  "avg_rs": 202.1,
-  "t_stat": 0.31,
-  "confidence": 62.2,
+  "win_rate": 40.0,
+  "pnl_rs": -728.24,
+  "avg_rs": -145.65,
+  "t_stat": -0.24,
+  "confidence": 40.6,
   "verdict": "COLLECTING"
  },
  {

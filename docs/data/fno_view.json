@@ -1,48 +1,76 @@
 {
- "at": "15:30:58",
- "day": "2026-11-26",
+ "at": "12:09:54",
+ "day": "2026-11-27",
  "mode": {
   "code": "MODE_2_VOLATILE",
   "name": "Volatile",
   "plain": "a normal, lively market",
-  "vix": 16.86
+  "vix": 16.67
  },
- "status": "Live read",
- "final": false,
+ "status": "Decided at 10:00 with NIFTY at 25,849",
+ "final": true,
  "prediction": {
   "direction": "SIDEWAYS",
   "headline": "No clear direction yet: the desk expects movement but cannot tell which way",
   "confidence": "Normal",
-  "spot": 25884.5,
+  "spot": 25709.35,
   "day_range": [
-   25598,
-   26148
+   25568,
+   26111
   ],
-  "close_range": null
+  "close_range": [
+   25512,
+   25907
+  ]
  },
  "why": [
-  "NIFTY is at 25,884, up 65 points (+0.25%) from yesterday's close of 25,819.",
-  "This morning it opened 54 points higher than yesterday's close and has hardly moved since.",
-  "India VIX, the market's 'fear gauge', is 16.9 (down 5% since yesterday: traders expect smaller moves than before). That points to a normal, lively market: NIFTY could move about 275 points up or down over the whole day.",
-  "Big news for the whole market today: Indian bonds tumble as Brent tops $95 per barrel, RBI flags food inflation risks.",
-  "Also: our forecast team's view is positive.",
+  "NIFTY is at 25,709, down 175 points (-0.68%) from yesterday's close of 25,884.",
+  "This morning it opened 45 points lower than yesterday's close and has fallen 130 points since.",
+  "India VIX, the market's 'fear gauge', is 16.7. That points to a normal, lively market: NIFTY could move about 271 points up or down over the whole day.",
+  "In the last hour our news readers found 2 strong headlines: 2 good and 0 bad for the market.",
+  "Big news for the whole market today: Crude oil price rises on reports of Houthi attack on Saudi refinery.",
+  "Also: our forecast team's view is positive and the morning news brief reads the mood as mixed.",
   "NIFTY has not moved enough this morning (less than about 0.15%) to pick a side."
  ],
  "plan": "At 10:00 the desk buys two contracts on NIFTY for this week: a call, which makes money if NIFTY rises, and a put, which makes money if it falls. A big enough move either way pays more than the two cost together. It does not tilt the pair either way. It takes profit at +50%, cuts the loss at -35%, and closes everything by 15:15. All trades are on paper.",
- "trade": null,
+ "trade": {
+  "id": "F261127-112",
+  "label": "NIFTY long straddle \u00b7 12-01",
+  "status": "OPEN",
+  "pnl_rs": 1103.0,
+  "opened": "10:00:06",
+  "closed": "",
+  "why": ""
+ },
  "chart": {
   "levels": [
    {
-    "px": 25819.25,
+    "px": 25884.5,
     "label": "Yesterday's close",
     "kind": "ref"
    },
    {
-    "px": 25873.2,
+    "px": 25839.25,
     "label": "Today's open",
+    "kind": "ref"
+   },
+   {
+    "px": 25848.75,
+    "label": "Desk decided here (10:00)",
     "kind": "ref"
    }
   ],
-  "forecast": []
+  "forecast": [
+   {
+    "t": 1795773600,
+    "px": 25907.01,
+    "label": "Likely high by close"
+   },
+   {
+    "t": 1795773600,
+    "px": 25511.69,
+    "label": "Likely low by close"
+   }
+  ]
  }
 }
