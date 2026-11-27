@@ -34,6 +34,13 @@ try { const sw = JSON.parse(fs.readFileSync('quant/results/swing_factory.json'))
     top: (sw.top || []).map((r) => ({ id: r.id, label: r.label, spec: r.spec, m: r.m, compound: r.compound && { capitalPerLot: r.compound.capitalPerLot, sizingRule: r.compound.sizingRule,
       oneLotFromOneLakh: r.compound.oneLotFromOneLakh, compounded2024on: { ...r.compound.compounded2024on, path: (r.compound.compounded2024on.path || []).filter((x, i, a) => i % 2 === 0 || i === a.length - 1) } } })) };
 } catch (e) { out.swing = null; }
+// the CEO's structures on real option prices (quant/run_option_structures.py): the approval queue
+try { const os = JSON.parse(fs.readFileSync('quant/results/option_structures.json'));
+  out.options = { period: os.period, status: os.status, fallbacks: os.exit_price_fallbacks,
+    rows: os.directional.map((r) => ({ id: r.signal + ' · ' + r.structure + ' · ' + r.exits, signal: r.signal, kind: r.kind, structure: r.structure, exits: r.exits, stats: r.stats,
+      byYear: Object.fromEntries(Object.entries(r.byYear || {}).map(([y, v]) => [y, { trades: v.trades, profitFactor: v.profitFactor, net: v.net }])) })),
+    omni: os.omni };
+} catch (e) { out.options = null; }
 out.sources = { note: 'Open-source strategies reviewed (rules, failure modes, fixes): see README', base_rate: 'SEBI FY22-FY24 study: 91.1% of individual F&O traders lost money in FY24' };
 fs.writeFileSync('quant/results/factory.json', JSON.stringify(out, null, 1));
 fs.mkdirSync('docs/data', { recursive: true });

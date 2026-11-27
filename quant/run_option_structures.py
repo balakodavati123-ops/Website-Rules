@@ -38,7 +38,7 @@ def main() -> None:
     args = sys.argv[1:]
     only = int(args[args.index("--only") + 1]) if "--only" in args else None
     t0 = time.time()
-    bt = Backtester(UpstoxClient(), Config(start=date(2024, 10, 1), end=datetime.now(IST).date()), log=lambda *a: None)
+    bt = Backtester(UpstoxClient(min_interval=float(next((a.split("=")[1] for a in sys.argv if a.startswith("--rate=")), "0.12"))), Config(start=date(2024, 10, 1), end=datetime.now(IST).date()), log=lambda *a: None)
     bt.load()
     P = OS.Pricer(bt)
     sig = json.loads(Path("quant/results/signals.json").read_text())

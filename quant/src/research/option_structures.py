@@ -186,4 +186,19 @@ def stats(rows: list[dict], start_cash: float = 100000.0) -> dict:
     return {"trades": len(xs), "winRate": round(100 * len(w) / len(xs), 1), "profitFactor": round(gp / gl, 2) if gl else None, "net": round(gp - gl),
             "avg": round((gp - gl) / len(xs)), "worst": round(min(xs)), "best": round(max(xs)), "maxDrawdown": round(dd), "lowestEquity": round(low),
             "endEquity": round(eq), "avgOutlay": round(sum(r["outlay"] for r in rows) / len(rows)), "maxOutlay": round(max(r["outlay"] for r in rows)),
-            "charges": round(sum(r["charges"] for r in rows)), "rolls": sum(r["rolls"] for r in rows)}
+            "charges": round(sum(r["charges"] for r in rows)), "rolls": sum(r["rolls"] for r in rows), **_shape(rows, gp - gl)}
+
+
+def _shape(rows: list[dict], net: float) -> dict:
+    """How the profit is made: the share from the five best trades, the longest losing run, months that made money."""
+    xs = [r["net"] for r in rows]
+    top5 = sum(sorted(xs, reverse=True)[:5])
+    run = cur = 0
+    for x in xs:
+        cur = cur + 1 if x <= 0 else 0
+        run = max(run, cur)
+    mon: dict = {}
+    for r in rows:
+        mon[r["day"][:7]] = mon.get(r["day"][:7], 0) + r["net"]
+    return {"top5": round(top5), "top5SharePct": round(100 * top5 / net) if net > 0 else None, "withoutTop5": round(net - top5), "longestLosingRun": run,
+            "monthsUp": sum(1 for v in mon.values() if v > 0), "months": len(mon)}
