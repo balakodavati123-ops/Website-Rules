@@ -1,72 +1,57 @@
 {
  "mood": "mixed",
- "brief": "Indian shares are mixed, with HDFC Bank treading water as its rally loses steam and Tata Steel's APL Apollo deal drawing investor backlash. Global stocks climbed after volatile US trading over AI risks, and gold and silver rose sharply on MCX.",
+ "brief": "Indian shares are mixed, with the Sensex and Nifty 50 trading lower while defence stocks surge up to 15% and BEML hits a 52-week high. Titan and jewellery stocks gain as gold rebounds, while Tata Steel's APL Apollo deal faces possible Sebi scrutiny.",
  "themes": [
-  "HDFC Bank rally loses steam",
-  "Tata Steel-APL Apollo deal backlash",
-  "Gold and silver rally on MCX",
-  "Global stocks climb after AI-risk volatility"
+  "Defence stocks surge up to 15%",
+  "Sensex and Nifty trade lower",
+  "Jewellery stocks gain as gold rebounds",
+  "Sebi may scrutinise Tata Steel-APL Apollo deal"
  ],
  "companies": [
   {
-   "name": "HDFC Bank",
-   "tone": "neutral",
-   "why": "Shares tread water; ICICI Securities targets Rs 1,850"
+   "name": "BEML",
+   "tone": "positive",
+   "why": "Hits 52-week high after 17% jump"
+  },
+  {
+   "name": "Titan",
+   "tone": "positive",
+   "why": "Gains 1.4% as gold rebounds"
   },
   {
    "name": "Tata Steel",
    "tone": "negative",
-   "why": "APL Apollo deal draws investor backlash"
+   "why": "APL Apollo deal may face Sebi scrutiny"
   },
   {
-   "name": "APL Apollo",
+   "name": "Jupiter Wagons",
    "tone": "negative",
-   "why": "Shares slide on deal backlash"
+   "why": "Falls 7.5% after 29% two-day surge"
   },
   {
-   "name": "Bajaj Finance",
+   "name": "Mahanadi Coalfields",
    "tone": "positive",
-   "why": "Emkay says buy with target of Rs 9000"
+   "why": "Gets Buy rating from Anand Rathi on listing day"
   },
   {
-   "name": "Tejas Networks",
-   "tone": "positive",
-   "why": "Emkay says buy with target of Rs 1100"
-  },
-  {
-   "name": "Persistent Systems",
+   "name": "Britannia",
    "tone": "negative",
-   "why": "Emkay says reduce with target of Rs 3700"
+   "why": "Chief Marketing Officer resigns"
   },
   {
-   "name": "Aditya Birla Fashion and Retail",
-   "tone": "negative",
-   "why": "Emkay says reduce with target of Rs 230"
-  },
-  {
-   "name": "Waaree Renewable Technologies",
-   "tone": "positive",
-   "why": "Stock surges after 120 MWp EPC order"
-  },
-  {
-   "name": "ICICI Bank",
-   "tone": "positive",
-   "why": "Jefferies includes it among 10 buys"
-  },
-  {
-   "name": "Reliance Industries",
-   "tone": "positive",
-   "why": "Jefferies includes it among 10 buys"
+   "name": "Tech Mahindra",
+   "tone": "neutral",
+   "why": "Last day to buy for bonus eligibility"
   }
  ],
- "global": "Global stocks climbed after volatile US trading over AI risks, and Chinese shares rebounded from one-year lows after Beijing pledged more support.",
+ "global": "Nvidia halted sales to Southeast Asia as the US tightened China restrictions, while Asian and European stocks mostly rose as sentiment stabilised.",
  "risks": [
-  "Nvidia shipment pause to Southeast Asia",
-  "HDFC Bank rally losing steam",
-  "Investor backlash over Tata Steel-APL Apollo deal"
+  "Sebi scrutiny of Tata Steel-APL Apollo deal",
+  "Nvidia chip curbs weighing on tech sentiment",
+  "Sharp defence rally may reverse"
  ],
- "time": "27 Nov 13:21",
- "at": 1795765892.829101,
+ "time": "27 Nov 14:21",
+ "at": 1795769494.06679,
  "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "n": 40

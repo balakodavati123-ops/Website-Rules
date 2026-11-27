@@ -1,6 +1,6 @@
 {
- "time": "27 Nov 13:21",
- "at": 1795765892.829101,
+ "time": "27 Nov 14:21",
+ "at": 1795769494.06679,
  "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "checks": {
@@ -86,11 +86,31 @@
   },
   "HDFCBANK": {
    "verdict": "doubt",
-   "why": "Rally is losing steam and price is flat; no new company news."
+   "why": "Old story that the rally lost steam; price is flat."
   },
   "DONEAR": {
    "verdict": "doubt",
    "why": "Acquisition filing has no details on size or terms."
+  },
+  "MAHACOAL": {
+   "verdict": "doubt",
+   "why": "Analyst rating on listing day; price is flat, not confirming."
+  },
+  "FLAIR": {
+   "verdict": "doubt",
+   "why": "Generic updates filing with no detail on what changed."
+  },
+  "BRITANNIA": {
+   "verdict": "doubt",
+   "why": "Marketing officer exit is modest news; price move is small."
+  },
+  "BEML": {
+   "verdict": "doubt",
+   "why": "17% jump already happened and is priced in at the high."
+  },
+  "DEFENCE": {
+   "verdict": "doubt",
+   "why": "Sector-wide story, not one company; price has not confirmed."
   }
  }
 }
