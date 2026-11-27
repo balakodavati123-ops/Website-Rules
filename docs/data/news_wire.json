@@ -1,137 +1,5 @@
 [
 {
-"time": "27 Nov 22:49",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Sebi may scrutinise Tata Steel-APL Apollo deal over RPT, shareholder worry - Business Standard"
-},
-{
-"time": "27 Nov 22:49",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "Indian shares open lower as Middle East tensions persist, Nifty expiry looms"
-},
-{
-"time": "27 Nov 22:49",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "India's HDFC Bank slips to 2-1/2-year low as legal, leadership woes linger"
-},
-{
-"time": "27 Nov 22:49",
-"source": "Yahoo-Nifty",
-"region": "India",
-"headline": "India Overtakes Taiwan to Become World\u2019s 5th Largest Stock Market Again"
-},
-{
-"time": "27 Nov 22:49",
-"source": "BusinessLine",
-"region": "India",
-"headline": "Broker\u2019s call: Tata Communications (Buy)"
-},
-{
-"time": "27 Nov 22:49",
-"source": "BusinessLine",
-"region": "India",
-"headline": "Mahanadi Coalfields shares make muted debut on stock exchanges"
-},
-{
-"time": "27 Nov 22:49",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "SEBI extends deadline for Tata Steel's 26% open offer statement in APL Apollo to December 8"
-},
-{
-"time": "27 Nov 22:49",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "FIIs infuse nearly \u20b917,630 crore in 4 days even as Nifty snaps four-week rally"
-},
-{
-"time": "27 Nov 22:49",
-"source": "CNBC-TV18",
-"region": "India",
-"headline": "Balaji Amines gets FDA approval to manufacture Propylene Glycol for pharma industry"
-},
-{
-"time": "27 Nov 22:49",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Holiday Deals Are Tempting. Here\u2019s How to Avoid Buyer\u2019s Remorse. - The New York Times"
-},
-{
-"time": "27 Nov 22:49",
-"source": "GoogleNews-World",
-"region": "World",
-"headline": "Why does Elon Musk want to put a million satellite data centres in space? - Al Jazeera"
-},
-{
-"time": "27 Nov 22:49",
-"source": "Yahoo-S&P500",
-"region": "World",
-"headline": "Broader Weakness and Rise in Interest Rates Pulled Back Fervo Energy Company (FRVO) in Q3"
-},
-{
-"time": "27 Nov 22:54",
-"source": "Moneycontrol",
-"region": "India",
-"headline": "Reduce Aditya Birla Fashion and Retail; target of Rs 230: Emkay Global Financial"
-},
-{
-"time": "27 Nov 22:54",
-"source": "Moneycontrol",
-"region": "India",
-"headline": "Reduce Wipro; target of Rs 410: ICICI Securities"
-},
-{
-"time": "27 Nov 22:54",
-"source": "Moneycontrol",
-"region": "India",
-"headline": "Buy HDFC Life Insurance Company; target of Rs 739: ICICI Securities"
-},
-{
-"time": "27 Nov 22:54",
-"source": "Mint",
-"region": "India",
-"headline": "MCX gold prices rebound over  \u20b98,300 in two sessions, set to snap 2-week losing streak; what lifted sentiment?"
-},
-{
-"time": "27 Nov 22:54",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Sebi clarifies no change proposed to managing director age limit at MIIs"
-},
-{
-"time": "27 Nov 22:54",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "IIFCL, UCO Bank eye debut dollar debt before RBI window shuts, say bankers"
-},
-{
-"time": "27 Nov 22:54",
-"source": "BusinessStandard",
-"region": "India",
-"headline": "Glenmark Pharma hits new high, up 5th straight day; gains 35% from Oct low"
-},
-{
-"time": "27 Nov 22:54",
-"source": "GoogleNews",
-"region": "India",
-"headline": "RBI reduces minimum daily CRR maintenance requirement to 90% from December 1 - DD News"
-},
-{
-"time": "27 Nov 22:54",
-"source": "GoogleNews",
-"region": "India",
-"headline": "Nifty 50 Support and Resistance: 4 Steps to Read the Levels Correctly - Value Research"
-},
-{
-"time": "27 Nov 22:54",
-"source": "GoogleNews-Business",
-"region": "India",
-"headline": "Global markets rally as end of bruising month approaches - Reuters"
-},
-{
 "time": "27 Nov 22:54",
 "source": "Yahoo-Nifty",
 "region": "India",
@@ -1198,5 +1066,137 @@
 "source": "MarketWatch",
 "region": "World",
 "headline": "I\u2019ve been married for 58 years. It\u2019s \u2018our\u2019 money, not \u2018his\u2019 and \u2018hers.\u2019 Why do so many couples keep their finances separate?"
+},
+{
+"time": "27 Nov 23:31",
+"source": "ET",
+"region": "India",
+"headline": "India bonds decline ahead of fresh debt sale as elevated oil prices fan inflation worries"
+},
+{
+"time": "27 Nov 23:31",
+"source": "ET",
+"region": "India",
+"headline": "Nvidia stock plunges 35% from record high: Is it a buying opportunity?"
+},
+{
+"time": "27 Nov 23:31",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Buy HDFC Bank; target of Rs 1,850: ICICI Securities"
+},
+{
+"time": "27 Nov 23:31",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Buy Tejas Networks; target of Rs 1100: Emkay Global Financial"
+},
+{
+"time": "27 Nov 23:31",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Buy Bajaj Finance; target of Rs 9000: Emkay Global Financial"
+},
+{
+"time": "27 Nov 23:31",
+"source": "Moneycontrol",
+"region": "India",
+"headline": "Reduce Persistent Systems; target of Rs 3700: Emkay Global Financial"
+},
+{
+"time": "27 Nov 23:31",
+"source": "Mint",
+"region": "India",
+"headline": "Pulse of the Street: Profit booking snaps four-week rally; markets brace consolidation?"
+},
+{
+"time": "27 Nov 23:31",
+"source": "Mint",
+"region": "India",
+"headline": "South Korea's Kospi crashes 48% from record high: How the AI trade unwind is hitting investors and pension funds"
+},
+{
+"time": "27 Nov 23:31",
+"source": "BusinessStandard",
+"region": "India",
+"headline": "Sebi grants Tata Steel extension till Dec 8 for APL Apollo Tubes open offer"
+},
+{
+"time": "27 Nov 23:31",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "AI chip curbs, Musk\u2019s giveaway and oil risks - what\u2019s moving markets - Investing.com"
+},
+{
+"time": "27 Nov 23:31",
+"source": "GoogleNews-Business",
+"region": "India",
+"headline": "Coal India unit Mahanadi valued at $9.7 billion after subdued debut - Reuters"
+},
+{
+"time": "27 Nov 23:31",
+"source": "CNBC-TV18",
+"region": "India",
+"headline": "GAIL, GNFC to jointly evaluate downstream petrochemical project opportunities"
+},
+{
+"time": "27 Nov 23:31",
+"source": "MarketWatch",
+"region": "World",
+"headline": "My friends play \u2018credit-card roulette\u2019 to see who pays for dinner \u2014 but one \u2018winner\u2019 still Venmoed me afterward. Should I say something?"
+},
+{
+"time": "27 Nov 23:31",
+"source": "MarketWatch",
+"region": "World",
+"headline": "Artificial intelligence usage is exploding, yet spending is stalling. Why a foundational rule of economics is breaking."
+},
+{
+"time": "27 Nov 23:31",
+"source": "MarketWatch",
+"region": "World",
+"headline": "How much more are richest Americans spending on the holidays compared to everyone else?"
+},
+{
+"time": "27 Nov 23:31",
+"source": "BBC-Business",
+"region": "World",
+"headline": "Why is there a shortage of 'wizard' elevator mechanics?"
+},
+{
+"time": "27 Nov 23:31",
+"source": "NYT-Business",
+"region": "World",
+"headline": "Holiday Deals Are Tempting. Here\u2019s How to Avoid Buyer\u2019s Remorse."
+},
+{
+"time": "27 Nov 23:31",
+"source": "NYT-Business",
+"region": "World",
+"headline": "How to Live Calmly, Despite Stock Market Whiplash"
+},
+{
+"time": "27 Nov 23:31",
+"source": "NYT-Business",
+"region": "World",
+"headline": "As Prices Rise, Americans Are Making Trade-Offs Rather Than Cutting Back"
+},
+{
+"time": "27 Nov 23:31",
+"source": "NYT-Business",
+"region": "World",
+"headline": "2 TV Shows Take on Sam Bankman-Fried and FTX"
+},
+{
+"time": "27 Nov 23:31",
+"source": "NYT-Business",
+"region": "World",
+"headline": "48 Hours in Tokyo With an Airline Pilot"
+},
+{
+"time": "27 Nov 23:31",
+"source": "FT-Markets",
+"region": "World",
+"headline": "Venezuelan oil magnate defends contentious deal with Trump"
 }
 ]

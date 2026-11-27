@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-27T23:31:19+05:30",
+ "updated_at": "2026-11-27T23:34:19+05:30",
  "ceo": {
   "name": "Balaji",
   "title": "CEO"
@@ -28,11 +28,6 @@
     "team": "scalp",
     "level": "info",
     "text": "The gateway refused 4 scalping orders today: target is less than 1.2 times the risk. Dev (Quant) is reviewing the stop and size rules."
-   },
-   {
-    "team": "fno",
-    "level": "info",
-    "text": "4 trades were skipped today because the broker's margin did not fit the account: the desks only trade what is viable."
    }
   ],
   "requests": [
@@ -96,48 +91,6 @@
   "equity_rs": 121520.48
  },
  "flows": [
-  {
-   "t": "23:07:49",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "23:08:43",
-   "from": "src:upstox",
-   "to": "mcx-2",
-   "kind": "data",
-   "text": "-2.01% today, moving: watching for an entry"
-  },
-  {
-   "t": "23:08:43",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "23:09:31",
-   "from": "src:upstox",
-   "to": "mcx-0",
-   "kind": "data",
-   "text": "+1.86% today, moving: watching for an entry"
-  },
-  {
-   "t": "23:09:31",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "23:10:20",
-   "from": "src:yahoo",
-   "to": "mcx-3",
-   "kind": "data",
-   "text": "-1.97% today, moving: watching for an entry"
-  },
   {
    "t": "23:10:20",
    "from": "src:github",
@@ -511,6 +464,48 @@
   },
   {
    "t": "23:31:07",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:31:57",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney, claude"
+  },
+  {
+   "t": "23:32:11",
+   "from": "src:news",
+   "to": "intraday-1",
+   "kind": "data",
+   "text": "Fear \u00b7 GROWW: Rs 12.7 Lakh To Rs 84,508: Bengaluru Woman's Groww Portfolio Crashes Mid-Wit"
+  },
+  {
+   "t": "23:32:45",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:33:14",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today +\u20b9907; 1 request(s) for you"
+  },
+  {
+   "t": "23:33:32",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:34:19",
    "from": "src:github",
    "to": "lab-4",
    "kind": "data",
@@ -1293,7 +1288,7 @@
      "role": "Gold 1 g",
      "kind": "research",
      "status": "idle",
-     "doing": "Market closed: +2.12% today, moving: watching for an entry",
+     "doing": "Market closed: no price yet",
      "record": {
       "trades": 7,
       "wins": 4,
@@ -1308,7 +1303,7 @@
      "role": "Silver 1 kg",
      "kind": "research",
      "status": "idle",
-     "doing": "Market closed: +4.27% today, moving: watching for an entry",
+     "doing": "Market closed: no price yet",
      "record": {
       "trades": 2,
       "wins": 1,
@@ -1323,7 +1318,7 @@
      "role": "Crude oil mini",
      "kind": "research",
      "status": "idle",
-     "doing": "Market closed: -1.85% today, moving: watching for an entry",
+     "doing": "Market closed: no price yet",
      "record": {
       "trades": 9,
       "wins": 4,
@@ -1338,7 +1333,7 @@
      "role": "Natural gas mini",
      "kind": "research",
      "status": "idle",
-     "doing": "Market closed: -2.12% today, moving: watching for an entry",
+     "doing": "Market closed: no price yet",
      "record": {
       "trades": 8,
       "wins": 3,
@@ -1456,7 +1451,7 @@
      "role": "BTC",
      "kind": "research",
      "status": "vacant",
-     "doing": "-1.18% today, moving: watching for an entry",
+     "doing": "-1.27% today, moving: watching for an entry",
      "record": {
       "trades": 3,
       "wins": 1,
@@ -1471,7 +1466,7 @@
      "role": "ETH",
      "kind": "research",
      "status": "vacant",
-     "doing": "-1.08% today, moving: watching for an entry",
+     "doing": "-1.23% today, moving: watching for an entry",
      "record": {
       "trades": 4,
       "wins": 1,
@@ -1486,7 +1481,7 @@
      "role": "SOL",
      "kind": "research",
      "status": "vacant",
-     "doing": "+1.40% today, moving: watching for an entry",
+     "doing": "+1.18% today, moving: watching for an entry",
      "record": {
       "trades": 6,
       "wins": 2,
@@ -1501,7 +1496,7 @@
      "role": "XRP",
      "kind": "research",
      "status": "vacant",
-     "doing": "+0.50% today",
+     "doing": "+0.33% today",
      "record": {
       "trades": 6,
       "wins": 2,
@@ -1516,7 +1511,7 @@
      "role": "DOGE",
      "kind": "research",
      "status": "vacant",
-     "doing": "+2.40% today, moving: watching for an entry",
+     "doing": "+2.26% today, moving: watching for an entry",
      "record": {
       "trades": 4,
       "wins": 1,
@@ -1531,7 +1526,7 @@
      "role": "ADA",
      "kind": "research",
      "status": "vacant",
-     "doing": "+0.59% today",
+     "doing": "+0.36% today",
      "record": {
       "trades": 5,
       "wins": 1,
@@ -2030,8 +2025,8 @@
   {
    "id": "upstox",
    "name": "Upstox",
-   "status": "ok",
-   "detail": "4 MCX futures, real time"
+   "status": "idle",
+   "detail": "market closed: quotes resume at 09:00"
   },
   {
    "id": "indmoney",
@@ -2049,13 +2044,13 @@
    "id": "yahoo",
    "name": "Yahoo Finance",
    "status": "ok",
-   "detail": "world markets refreshed 139 min ago"
+   "detail": "world markets refreshed 142 min ago"
   },
   {
    "id": "news",
    "name": "News feeds",
    "status": "ok",
-   "detail": "news pulse: 9 feeds read every minute in market hours, 97 signals today; 0 with the hunters now"
+   "detail": "news pulse: 9 feeds read every minute in market hours, 98 signals today; 0 with the hunters now"
   },
   {
    "id": "claude",
@@ -2216,7 +2211,7 @@
  ],
  "company": {
   "pnl_today": 906.64,
-  "nifty_chg": -1.0712974946396492,
+  "nifty_chg": null,
   "equity": 121520.48,
   "sessions": {
    "equity": false,
@@ -2662,48 +2657,6 @@
    "ipo-m": "Manager"
   },
   "flows": [
-   {
-    "t": "23:00:26",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "23:01:14",
-    "from": "src:yahoo",
-    "to": "mcx-3",
-    "kind": "data",
-    "text": "-1.97% today, moving: watching for an entry"
-   },
-   {
-    "t": "23:01:14",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "23:02:02",
-    "from": "src:upstox",
-    "to": "mcx-2",
-    "kind": "data",
-    "text": "-2.03% today, moving: watching for an entry"
-   },
-   {
-    "t": "23:02:02",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "23:02:30",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today +\u20b9907; 1 request(s) for you"
-   },
    {
     "t": "23:02:50",
     "from": "src:upstox",
@@ -3221,6 +3174,48 @@
     "to": "lab-4",
     "kind": "data",
     "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:31:57",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney, claude"
+   },
+   {
+    "t": "23:32:11",
+    "from": "src:news",
+    "to": "intraday-1",
+    "kind": "data",
+    "text": "Fear \u00b7 GROWW: Rs 12.7 Lakh To Rs 84,508: Bengaluru Woman's Groww Portfolio Crashes Mid-Wit"
+   },
+   {
+    "t": "23:32:45",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:33:14",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today +\u20b9907; 1 request(s) for you"
+   },
+   {
+    "t": "23:33:32",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:34:19",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
    }
   ],
   "flow_seen": {
@@ -3352,12 +3347,13 @@
    "sig:N215314-94": "2026-11-27",
    "sig:N224333-95": "2026-11-27",
    "sig:N225344-96": "2026-11-27",
-   "sig:N225344-97": "2026-11-27"
+   "sig:N225344-97": "2026-11-27",
+   "sig:N233157-98": "2026-11-27"
   },
   "flow_at": {
    "crypto": 1795229124.147547,
-   "lab": 1795802467.034991,
-   "ceo": 1795802284.046343,
+   "lab": 1795802659.656196,
+   "ceo": 1795802594.939574,
    "mcx": 1795802419.829008,
    "scalp": 1795774263.123947,
    "intraday": 1795405911.526052,
