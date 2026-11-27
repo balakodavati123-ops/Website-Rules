@@ -10,16 +10,16 @@ An algorithmic trading desk for **NSE Equity and NIFTY F&O**, run by AI agents o
 
 **At the top**
 - **Index cards:** NIFTY 50, Bank Nifty, Sensex and India VIX.
-- **Ticker:** index moves and the latest market headlines run continuously. Hover over it to pause.
+- **Ticker:** index moves, Brent crude, USD/INR, the dollar index, S&P 500 futures, the US 10-year yield, gold and the latest market headlines run continuously. Hover over it to pause. For crude, the rupee, the dollar and US yields, red means the move is bad for Indian shares.
 - **Status chips:** whether prices are live, and whether each market is open.
 - **⚡ Live prices on this device:** paste a read-only Upstox token to get tick-by-tick prices in your own browser. The token stays on your device.
 
 | Tab | What it shows |
 |---|---|
 | **Company floor** (front page) | The live office: every desk, its agents, the trades flowing through, the COO and your CEO desk. Below it, the research agents and the share of the strategy search each one ran. |
-| **Overview** | **Broker account**: wallet, holdings and today's positions from your Upstox account, refreshed every minute; the paper account until a broker token is connected. Also today's P/L, NIFTY today, agent ranking, open positions and **Close now** buttons. |
+| **Overview** | **Broker account**: wallet, holdings and today's positions from your Upstox account, refreshed every minute; the paper account until a broker token is connected. **NIFTY right now · all factors**: the live call and the main reasons (see section 4b). Also today's P/L, NIFTY today, agent ranking, open positions and **Close now** buttons. |
 | **Equity** | Equity desk P/L, open positions and trades (Open / Today / All days); top gainers, losers and most active; headlines; results filed; world markets; **Fundamentals** for any stock from TradingView (financials and a daily chart, BSE listing). |
-| **F&O** | **NIFTY today**: the mode (Quiet / Volatile / Highly volatile, from India VIX), the desk's call (up / down / no clear direction), the likely range, today's trade, the reasons in plain words. The NIFTY chart with the call drawn on it, the **live option chain** (21 strikes, best buyer and seller with quantities, volume, open contracts, a five-level order book), open trades by Today / Weekly / Monthly, and trade history per book. |
+| **F&O** | **What's moving NIFTY and Sensex now** (section 4b): the live call, what world markets point to in NIFTY points, each factor's move and effect, breadth, heavyweights, sectors, India VIX, Bank Nifty, today's headline themes and alerts. **NIFTY today**: the mode (Quiet / Volatile / Highly volatile, from India VIX), the live all-factor call, the desk's own 10:00 trade tilt, the likely range, today's trade, the reasons in plain words. The NIFTY chart with the call drawn on it, the **live option chain** (21 strikes, best buyer and seller with quantities, volume, open contracts, a five-level order book), open trades by Today / Weekly / Monthly, and trade history per book. |
 | **Charts** | Live 1-minute charts for F&O and Equity with EMA 20/50, VWAP, opening range, entries, stops, targets, expected exits and the order book; plus a chart for any NSE stock with your trades on it. |
 | **Backtest** | The **strategy research** results and the **approval queue**; the **backtester** (any of the strategies, any years, your own settings, exits that protect profit, the search for settings, patterns by day / week / month); the **NIFTY 1-minute database** (download). |
 | **Audit** | Every Equity and F&O trade with its planned **risk** (₹ to the stop), **reward** (₹ to the target), **R:R**, capital, order route (paper / practice / live), status and P/L. Filter by desk, status, period or text; tap a row for the trade's full reasoning. |
@@ -146,6 +146,57 @@ Each trade buys at most 2 lots: calls on up signals, puts on down signals. Each 
 - SEBI's study: **91% of individual F&O traders lost money in FY24**, and 93% over FY22–FY24.
 - The desk's aim is a measured edge with controlled risk, not screenshots.
 
+## 4b. The live macro read: what is moving NIFTY and Sensex
+
+Before 27 Nov 2026 the F&O call was only the morning's move from the open, decided at 10:00. It ignored crude, the rupee and world markets. On 27 Nov it said **Up**; NIFTY closed **−1.07%** (Sensex −1.17%). That day crude jumped after a Houthi attack on a Saudi refinery, the rupee fell to 92.62–92.98, and bets on a large RBI rate hike lifted bond yields. The call is now rebuilt **every minute, all day**, from every factor below.
+
+**What it watches**
+- **World, about every 2 minutes (Yahoo Finance):** USD/INR, Brent and WTI crude, the US dollar index, S&P 500 and Nasdaq futures, Nikkei, Hang Seng, Shanghai, Euro Stoxx, gold, the US 10-year yield and US VIX.
+- **India, real time (Upstox):** NIFTY, Sensex, Bank Nifty, India VIX, how many NIFTY 50 stocks are up or down, the heavyweights' share of the move, and sector groups that react to crude, the rupee and rates (oil marketers, oil producers, paints and airlines, IT, big banks, autos, metals, consumer staples, pharma). Also MCX crude live: it stands in for Brent when Yahoo's Brent stops updating, as it did on 27 Nov (a US holiday).
+- **News:** today's headlines grouped into crude, the rupee, RBI and rates, the Fed and US markets, war and sanctions, fund flows and India's economy, with how many read as bad or good.
+
+**How factors are weighted (measured on 888 days, Jan 2022 – Nov 2026; `quant/run_macro_research.py`)**
+
+| Factor (same day) | NIFTY move per 1% move in it | Strength |
+|---|---|---|
+| Dollar in rupees (rupee weaker) | −0.35% | strong |
+| US dollar index | −0.17% | medium |
+| S&P 500 (previous night) | +0.16% | weak |
+| Nikkei 225 | +0.14% | strong |
+| Hang Seng | +0.09% | strong |
+| Gold | −0.06% | medium |
+| Brent crude | −0.01% | not significant |
+
+- Together, world markets explain about **a fifth** of NIFTY's daily moves. The rest is India's own news and money flows.
+- **Crude on its own has been a weak guide.** On the 155 days since 2022 when Brent rose 2% or more, NIFTY fell on 54% of them (average −0.10%). Crude hurts mostly through the rupee and through RBI's response.
+- **Big days in other factors:**
+
+  | Big move | Days | NIFTY fell on |
+  |---|---|---|
+  | Nikkei down 2%+ | 55 | 82% |
+  | S&P 500 down 1.5%+ the night before | 65 | 74% |
+  | Hang Seng down 2%+ | 64 | 72% |
+  | Rupee weaker by 0.35%+ | 91 | 55% (average −0.23%) |
+  | Rupee stronger by 0.35%+ | 72 | 39% (average +0.49%) |
+
+**The call and how often it is right** (tested; `quant/run_macro_intraday.py`, 481 days)
+- **Before 09:15:** the pre-open model (last night's US close and US VIX, yesterday's crude, rupee, dollar and yields). Fitted on 2022–24 and tested on 2025–26, it got the day's direction right **55 times in 100**, and **61 in 100** when it expected a move of 0.3% or more. It says nothing useful about the move after the open (47 in 100).
+- **09:15–15:30:** world markets' pointed move plus NIFTY's own move so far.
+  - **When they agree, the call is that direction.** Right about the rest of the day 50 / 56 / 58 / 56 times in 100 at 10:15 / 11:15 / 12:15 / 13:15.
+  - **When they disagree, there is no call.** No edge was found.
+  - **When only one is strong:** right 53–56 times in 100.
+- **Every call shows its measured rate.** These are small edges. No set of factors calls NIFTY's direction reliably, and anyone claiming 80%+ is not measuring.
+- **On 27 Nov the new read would not have said Up.**
+  - Asia was up about 2%, so world prices alone pointed to about +80 points.
+  - NIFTY was falling and the rupee was weak, so the call was **No clear direction**.
+  - The panel listed India's own bad news on crude, RBI and war (8 bad and 2 good headlines) and showed that world markets explained none of the fall.
+- **Alerts (to the phone, 07:00–15:45):** each fires once per level per day.
+  - Brent or WTI moves 2%+ (or 4%, ...); USD/INR moves 0.35%+; the dollar index moves 0.6%+; S&P futures move 1%+; Nikkei or Hang Seng moves 2%+; US VIX moves 10%+.
+  - The rupee hits a record low.
+  - World markets point to a NIFTY move of 0.5%+.
+  - The live call turns Up or Down.
+- **The desk's 10:00 trade is unchanged.** It still follows its own tested rule. The dashboard shows its tilt next to the live call. Changing what the desk trades on would need its own backtest and your approval.
+
 ## 5. Strategies traders teach, where they fail, and the fix
 
 From public sources (Zerodha Varsity, Zerodha's *In The Money*, TradingView, Groww, StockCharts, and Quantsapp's public one-year NIFTY futures backtests with costs).
@@ -186,6 +237,7 @@ From public sources (Zerodha Varsity, Zerodha's *In The Money*, TradingView, Gro
   - The view `nifty50_1m` has day, time, open, high, low and close.
   - The table `days` has one row per session, with NSE's official close.
 - **Engine:** runs through market hours on GitHub Actions and publishes to the dashboard about every 15 seconds. It skips exchange holidays.
+- **Macro read:** `macro.json` every minute (world prices about every 2 minutes from Yahoo Finance, India from Upstox). The weights and tested rates are in `docs/models/macro_model.json` and `docs/models/macro_intraday.json`. Re-measure with `python quant/run_macro_research.py` and `python quant/run_macro_intraday.py <nifty50_1m.sqlite> docs/models/macro_intraday.json`.
 - **Research:** every Saturday (workflow `research`), or on demand from GitHub → Actions → research → Run workflow.
 
 ## 8. Words used on the dashboard

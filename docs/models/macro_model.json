@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T17:42:47",
+ "generated": "2026-11-27T17:48:40",
  "days": 888,
  "from": "2022-01-04",
  "to": "2026-11-25",
@@ -91,6 +91,142 @@
    "ndx_overnight": -0.047,
    "vix_overnight": 0.0003
   }
+ },
+ "shocks": {
+  "brent": {
+   "threshold_pct": 2.0,
+   "up": {
+    "days": 155,
+    "nifty_avg_pct": -0.1,
+    "nifty_fell_pct": 54.2
+   },
+   "down": {
+    "days": 135,
+    "nifty_avg_pct": -0.02,
+    "nifty_fell_pct": 57.8
+   }
+  },
+  "usdinr": {
+   "threshold_pct": 0.35,
+   "up": {
+    "days": 91,
+    "nifty_avg_pct": -0.23,
+    "nifty_fell_pct": 54.9
+   },
+   "down": {
+    "days": 72,
+    "nifty_avg_pct": 0.49,
+    "nifty_fell_pct": 38.9
+   }
+  },
+  "dxy": {
+   "threshold_pct": 0.6,
+   "up": {
+    "days": 66,
+    "nifty_avg_pct": -0.13,
+    "nifty_fell_pct": 56.1
+   },
+   "down": {
+    "days": 77,
+    "nifty_avg_pct": 0.2,
+    "nifty_fell_pct": 41.6
+   }
+  },
+  "us10y": {
+   "threshold_pct": 3.0,
+   "up": {
+    "days": 34,
+    "nifty_avg_pct": -0.02,
+    "nifty_fell_pct": 55.9
+   },
+   "down": {
+    "days": 31,
+    "nifty_avg_pct": -0.28,
+    "nifty_fell_pct": 61.3
+   }
+  },
+  "n225": {
+   "threshold_pct": 2.0,
+   "up": {
+    "days": 60,
+    "nifty_avg_pct": 0.56,
+    "nifty_fell_pct": 25.0
+   },
+   "down": {
+    "days": 55,
+    "nifty_avg_pct": -0.78,
+    "nifty_fell_pct": 81.8
+   }
+  },
+  "hsi": {
+   "threshold_pct": 2.0,
+   "up": {
+    "days": 77,
+    "nifty_avg_pct": 0.48,
+    "nifty_fell_pct": 31.2
+   },
+   "down": {
+    "days": 64,
+    "nifty_avg_pct": -0.73,
+    "nifty_fell_pct": 71.9
+   }
+  },
+  "gold": {
+   "threshold_pct": 1.5,
+   "up": {
+    "days": 79,
+    "nifty_avg_pct": 0.1,
+    "nifty_fell_pct": 49.4
+   },
+   "down": {
+    "days": 73,
+    "nifty_avg_pct": 0.13,
+    "nifty_fell_pct": 49.3
+   }
+  },
+  "spx_overnight": {
+   "threshold_pct": 1.5,
+   "up": {
+    "days": 51,
+    "nifty_avg_pct": 0.4,
+    "nifty_fell_pct": 35.3
+   },
+   "down": {
+    "days": 65,
+    "nifty_avg_pct": -0.7,
+    "nifty_fell_pct": 73.8
+   }
+  },
+  "ndx_overnight": {
+   "threshold_pct": 2.0,
+   "up": {
+    "days": 55,
+    "nifty_avg_pct": 0.39,
+    "nifty_fell_pct": 36.4
+   },
+   "down": {
+    "days": 71,
+    "nifty_avg_pct": -0.63,
+    "nifty_fell_pct": 71.8
+   }
+  },
+  "vix_overnight": {
+   "threshold_pct": 10.0,
+   "up": {
+    "days": 84,
+    "nifty_avg_pct": -0.45,
+    "nifty_fell_pct": 65.5
+   },
+   "down": {
+    "days": 39,
+    "nifty_avg_pct": 0.41,
+    "nifty_fell_pct": 25.6
+   }
+  }
+ },
+ "usdinr_record": {
+  "value": 96.877,
+  "day": "2026-07-23"
  },
  "pre_open": {
   "factors": {

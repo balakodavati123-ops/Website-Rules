@@ -3,7 +3,8 @@
 view(): the day's mode (from India VIX), the desk's call (up, down or no clear direction), the range NIFTY is likely to stay inside, and the
 reasons in plain words. The call is the desk's own decision rule (desks.straddle_conditions): the direction of the morning's move from the open
 (0.15%+), else the move since yesterday's close (0.3%+), else the opening gap (0.3%+); otherwise no direction. Until 10:00 it is an early
-read; at 10:00 the desk decides and the call is frozen for the day. The likely range is one standard deviation of the move India VIX implies
+read; at 10:00 the desk decides and its trade tilt is frozen for the day. Given today's macro read (backend/macro.py), the headline call
+is instead the live all-factor call, updated every minute, and the desk's tilt is kept as its own line. The likely range is one standard deviation of the move India VIX implies
 (VIX / sqrt(252) for a full day, scaled by the square root of the time left): about two days in three NIFTY stays inside it.
 
 chain_snapshot(): strikes around the index for one expiry, each side's last price, best bid and ask with quantities, volume, open interest and
@@ -46,9 +47,11 @@ def _epoch(now: datetime, hhmm: str) -> int:
 
 
 def view(now: datetime, spot: float, prev: float | None, ohlc: dict, vix: float | None, feats: dict, cond: dict | None, decided: dict | None,
-         news: dict | None, trade: dict | None = None) -> dict:
+         news: dict | None, trade: dict | None = None, macro: dict | None = None) -> dict:
     """feats: vix (yesterday), vix_chg %, gap %, move_open_pct, range_pct. cond: desks.straddle_conditions now. decided: the desk's straddle sheet
-    once booked today ({at, spot, conditions}). news: {strong, net, macro, mood, fc}. trade: today's straddle (id, label, status, legs...)."""
+    once booked today ({at, spot, conditions}). news: {strong, net, macro, mood, fc}. trade: today's straddle (id, label, status, legs...).
+    macro: today's backend/macro.py read. With it, the headline call is the live all-factor call (world markets, crude, the rupee, NIFTY's own
+    move; updated every minute, with its measured hit rate) and the desk's 10:00 trade rule is shown as its own line."""
     news, feats = news or {}, feats or {}
     c = (decided or {}).get("conditions") or cond or {}
     lean = int(c.get("lean") or 0)
@@ -100,11 +103,22 @@ def view(now: datetime, spot: float, prev: float | None, ohlc: dict, vix: float 
                 direction, "It does not tilt the pair either way.") + " It takes profit at +50%, cuts the loss at -35%, and closes everything by 15:15. All trades are on paper.")
     status = (f"Decided at {decided.get('at')} with NIFTY at {float(decided.get('spot') or 0):,.0f}" if final else
               "Early read: the desk watches the first 45 minutes and decides at 10:00" if now.strftime("%H:%M") < "10:00" else "Live read")
+    pred = {"direction": direction, "headline": head, "confidence": c.get("confidence"), "spot": round(spot, 2),
+            "day_range": [round(base - day_sd), round(base + day_sd)] if day_sd else None,
+            "close_range": [round(spot - rem_sd), round(spot + rem_sd)] if rem_sd and left else None}
+    mc = (macro or {}).get("call")
+    if mc:
+        tilt = {"UP": "toward a rise", "DOWN": "toward a fall"}.get(direction, "neither way")
+        pred.update(direction=mc["direction"], headline=mc["headline"], confidence=mc.get("confidence"), basis=mc.get("basis"), measured=mc.get("measured"),
+                    hit=mc.get("hit"), source="all factors", desk_lean=direction)
+        direction = mc["direction"]
+        lean = {"UP": 1, "DOWN": -1}.get(direction, 0)
+        extra = [r for r in (macro.get("reasons") or [])[1:] if not r.startswith("Today's headlines")][:5]
+        why = why[:1] + [f"Live call, all factors: {mc['headline'].lower()}. {mc.get('basis', '')}. {mc.get('measured', '')}"] + extra + why[1:]
+        why = [w for w in why if not w.startswith("The desk follows ") and not w.startswith("NIFTY has not moved enough")]
+        why.append(f"The desk's 10:00 trade uses its own rule (the morning's move from the open): it tilts {tilt}.")
     out = {"at": now.strftime("%H:%M:%S"), "day": now.strftime("%Y-%m-%d"), "mode": md, "status": status, "final": final,
-           "prediction": {"direction": direction, "headline": head, "confidence": c.get("confidence"), "spot": round(spot, 2),
-                          "day_range": [round(base - day_sd), round(base + day_sd)] if day_sd else None,
-                          "close_range": [round(spot - rem_sd), round(spot + rem_sd)] if rem_sd and left else None},
-           "why": why, "plan": plan, "trade": trade}
+           "prediction": pred, "why": why, "plan": plan, "trade": trade}
     lv = [{"px": round(prev, 2), "label": "Yesterday's close", "kind": "ref"}] if prev else []
     if op:
         lv.append({"px": round(op, 2), "label": "Today's open", "kind": "ref"})
@@ -115,7 +129,7 @@ def view(now: datetime, spot: float, prev: float | None, ohlc: dict, vix: float 
         fc = [{"t": _epoch(now, "15:30"), "px": round(spot + rem_sd, 2), "label": "Likely high by close"},
               {"t": _epoch(now, "15:30"), "px": round(spot - rem_sd, 2), "label": "Likely low by close"}]
         if lean:
-            fc.append({"t": _epoch(now, "15:15"), "px": round(spot + lean * 0.5 * rem_sd, 2), "label": f"Desk's call: {direction.lower()}"})
+            fc.append({"t": _epoch(now, "15:15"), "px": round(spot + lean * 0.5 * rem_sd, 2), "label": f"{'Live' if mc else 'Desk' + chr(39) + 's'} call: {direction.lower()}"})
     out["chart"] = {"levels": lv, "forecast": fc}
     return out
 

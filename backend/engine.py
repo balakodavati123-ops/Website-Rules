@@ -46,6 +46,7 @@ import straddle_lab as SL   # noqa: E402
 import ema_vwap_live as EV  # noqa: E402
 import fno_view as FV       # noqa: E402
 import broker as BR         # noqa: E402
+import macro as MAC         # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = Path(os.environ.get("DESK_DOCS") or ROOT / "docs" / "data")
@@ -296,6 +297,8 @@ def run() -> None:
     for k_, v_ in NP.new_state().items():
         pulse.setdefault(k_, v_)
     pulse_at, pulse_thread, px_now = [0.0], [None], {}
+    macro_at, macro_thread = [0.0], [None]                              # world markets, crude, the rupee, breadth, news themes: the live all-factor call
+    mac = {"world": None, "daily": None, "model": MAC.load_models(ROOT / "docs" / "models"), "state": load("macro_state.json", {}), "india": {}, "last": {}}
     inbox_at, inbox_thread = [0.0], [None]
     try:                                                              # the straddle desk's trained playbook (backend/straddle_lab.py, retrained weekly)
         playbook = json.loads((ROOT / "docs" / "models" / "straddle_playbook.json").read_text())
@@ -645,6 +648,39 @@ def run() -> None:
         except Exception as e:
             status["desks"]["news_pulse"] = f"error: {str(e)[:100]}"
 
+    def macro_scan(now) -> None:
+        """What is moving NIFTY and Sensex now (backend/macro.py): world prices about every two minutes, the call and reasons every minute."""
+        try:
+            wk, hm = now.weekday() < 5, now.strftime("%H:%M")
+            busy = wk and "06:00" <= hm <= "16:00"
+            w = mac["world"]
+            if not w or time.time() - w["at"] >= (110 if busy else 900):
+                w2 = MAC.fetch_world()
+                if len(w2["series"]) >= 8 or not w:                      # a half-empty download never replaces a good one
+                    mac["world"] = w2
+            d = mac["daily"]
+            if not d or time.time() - d["at"] >= (1800 if wk and "05:00" <= hm <= "09:15" else 3 * 3600):
+                d2 = MAC.fetch_daily()
+                if len(d2["closes"]) >= 6 or not d:
+                    mac["daily"] = d2
+            model, intr = mac["model"]
+            ind_ = dict(mac["india"])
+            out = MAC.build(now, mac["world"], mac["daily"], ind_, load("news_feed.json", []), model, intr, mac["state"])
+            mac["last"] = out
+            save("macro.json", out)
+            new_ = MAC.pop_new(mac["state"])
+            if wk and "07:00" <= hm <= "15:45":                          # big moves reach the phone in and around market hours only
+                for a_ in new_[:4]:
+                    N.push(a_["title"], a_["body"], 3, "globe_with_meridians")
+            save("macro_state.json", mac["state"])
+            c_ = out.get("call") or {}
+            status["desks"]["macro"] = (f"{len((mac['world'] or {}).get('series') or {})} world prices, world markets imply {(out.get('implied') or {}).get('nifty_pts')} NIFTY points; "
+                                        f"call {c_.get('direction', 'none')} ({c_.get('basis', 'outside market hours')})")
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            status["desks"]["macro"] = f"error: {str(e)[:100]}"
+
     def build_charts(now) -> None:
         """candles.json: one live chart per desk with the strategies' lines, the trade's marks and the order book."""
         try:
@@ -878,6 +914,13 @@ def run() -> None:
                 info["equity"] = f"error: {e}"
         elif ses["equity"]:
             info["equity"] = "no token: Yahoo fallback runs in intraday.py"
+        for nm_, k_ in (("nifty", IDX["nifty"]), ("sensex", IDX["sensex"]), ("banknifty", IDX["banknifty"]), ("vix", IDX["vix"])):     # India, real time, for the macro read
+            qq_ = q_idx.get(k_) or {}
+            if qq_.get("last_price") and qq_.get("net_change") is not None:
+                mac["india"][nm_] = {"last": qq_["last_price"], "prev": qq_["last_price"] - qq_["net_change"], "open": (qq_.get("ohlc") or {}).get("open")}
+                mac["india"]["day"] = today
+        if rows_now:
+            mac["india"]["qs"] = dict(qs)
         T["equity"] = round(time.time() - it0, 1)
         if token and ses["equity"] and rows_now:                         # the scalping desk: 1-minute bars for the most liquid names, fetched once a minute off the price loop
             try:
@@ -919,7 +962,12 @@ def run() -> None:
         if token and ses["mcx"]:
             try:
                 mcx_c = mcx_c or D.mcx_contracts(U.instruments("MCX"), now.date())
-                D.mcx_step(xb, now, U.quotes([c["key"] for c in mcx_c], token), mcx_c, paused, rm["COMMODITY"], {"margin": M, "env": make_env(), "acct": acct[0]})
+                qm_ = U.quotes([c["key"] for c in mcx_c], token)
+                D.mcx_step(xb, now, qm_, mcx_c, paused, rm["COMMODITY"], {"margin": M, "env": make_env(), "acct": acct[0]})
+                cr_ = next((c for c in mcx_c if c["symbol"].startswith("CRUDEOIL")), None)
+                qc_ = (qm_.get(cr_["key"]) or {}) if cr_ else {}
+                if qc_.get("last_price") and qc_.get("net_change") is not None:          # live crude for the macro read (Yahoo's can stall)
+                    mac["india"]["mcx_crude"] = {"last": qc_["last_price"], "prev": qc_["last_price"] - qc_["net_change"], "symbol": cr_["symbol"]}
                 info["commodities"] = f"{len(mcx_c)} MCX futures, real time"
             except Exception as e:
                 info["commodities"] = f"error: {e}"
@@ -1034,7 +1082,8 @@ def run() -> None:
                     if spot:
                         pc0 = (sdl["closes"][-1][1] if sdl.get("closes") else None) or prev_n
                         save("fno_view.json", FV.view(now, spot, pc0, n.get("ohlc") or {}, vixq, vin_["feats"], vin_["cond"], sh0 if sh0.get("day") == today and st0 else None, vin_["news"],
-                                                      {k: st0.get(k) for k in ("id", "label", "status", "pnl_rs", "opened", "closed", "why")} if st0 else None))
+                                                      {k: st0.get(k) for k in ("id", "label", "status", "pnl_rs", "opened", "closed", "why")} if st0 else None,
+                                                      mac["last"] if (mac["last"] or {}).get("day") == today else None))
                     rows0 = chains.get(exps[0]) or []
                     if rows0 and spot:
                         save("fno_chain.json", FV.chain_snapshot(rows0, spot, exps[0], ctx["lot"], now, U.quotes(FV.depth_keys(rows0, spot), token)))
@@ -1206,6 +1255,10 @@ def run() -> None:
             pulse_at[0] = time.time()
             pulse_thread[0] = threading.Thread(target=pulse_scan, args=(now,), daemon=True)
             pulse_thread[0].start()
+        if time.time() - macro_at[0] >= 60 and not (macro_thread[0] and macro_thread[0].is_alive()):
+            macro_at[0] = time.time()
+            macro_thread[0] = threading.Thread(target=macro_scan, args=(now,), daemon=True)
+            macro_thread[0].start()
         if time.time() - charts_at[0] >= 60 and not (charts_thread[0] and charts_thread[0].is_alive()):
             charts_at[0] = time.time()
             charts_thread[0] = threading.Thread(target=build_charts, args=(now,), daemon=True)

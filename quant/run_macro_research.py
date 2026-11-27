@@ -3,7 +3,9 @@
 1. Same day: NIFTY's close-to-close move against the same day's moves in crude, the rupee, the dollar, US yields, Asian markets and gold, and
    the previous night's US close (it is known before India opens). Ordinary least squares on all factors together -> each factor's effect
    (NIFTY % per 1% factor move), its t-statistic and how much of NIFTY's daily move they explain together (R squared).
-2. Before the open: only what is known by 09:15 (last night's US close and US VIX, yesterday's crude, rupee, dollar and yields). Fitted on
+2. Big moves: on days when one factor moved a lot (crude 2%+, the rupee 0.35%+, ...), how NIFTY did: how many days, its average move,
+   how often it fell. A small average effect can hide a large one on big days.
+3. Before the open: only what is known by 09:15 (last night's US close and US VIX, yesterday's crude, rupee, dollar and yields). Fitted on
    2022-2024, tested on 2025-2026: how often its sign gets the day's direction right (close to close, and open to close).
 Writes docs/models/macro_model.json for the live engine (backend/macro.py). Research only.
 """
@@ -90,6 +92,22 @@ def main() -> None:
     bs, ses, r2s = ols(np.array([r["same"] for r in rs]), np.array([r["sx"] for r in rs]))
     out["same_day"]["sensex_r2"] = round(float(r2s), 3)
     out["same_day"]["sensex_betas"] = {n: round(float(bs[i + 1]), 4) for i, n in enumerate(names)}
+    # big moves: what NIFTY did on the days one factor moved a lot
+    TH = {"brent": 2.0, "usdinr": 0.35, "dxy": 0.6, "us10y": 3.0, "n225": 2.0, "hsi": 2.0, "gold": 1.5, "spx_overnight": 1.5, "ndx_overnight": 2.0, "vix_overnight": 10.0}
+    out["shocks"] = {}
+    for i, n in enumerate(names):
+        if n not in TH:
+            continue
+        th, col = TH[n], X[:, i]
+        res = {"threshold_pct": th}
+        for side, m in (("up", col >= th), ("down", col <= -th)):
+            ys = Y[m]
+            res[side] = {"days": int(m.sum()), "nifty_avg_pct": round(float(ys.mean()), 2) if len(ys) else None,
+                         "nifty_fell_pct": round(100 * float((ys < 0).mean()), 1) if len(ys) else None}
+        out["shocks"][n] = res
+    ui = S["usdinr"]
+    rk = max(ui, key=lambda k: ui[k])
+    out["usdinr_record"] = {"value": round(ui[rk], 3), "day": str(rk)}
     # before the open: fit on 2022-2024, test on 2025-2026
     pn = ["spx_lastnight", "ndx_lastnight", "vix_lastnight", "brent_yday", "usdinr_yday", "dxy_yday", "us10y_yday"]
     tr, te = [r for r in rows if r["d"] < SPLIT], [r for r in rows if r["d"] >= SPLIT]
@@ -107,6 +125,7 @@ def main() -> None:
     print(f"same-day model: {out['days']} days {out['from']} to {out['to']}, R2 {out['same_day']['r2']} (Sensex {out['same_day']['sensex_r2']})")
     for n, f in out["same_day"]["factors"].items():
         print(f"  {f['label']:28s} beta {f['beta']:+.4f}  t {f['t']:+.1f}  corr {f['corr']:+.3f}")
+    print("big moves:", json.dumps(out["shocks"]))
     print("pre-open:", json.dumps(out["pre_open"]))
 
 

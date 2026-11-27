@@ -111,6 +111,7 @@ body{font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;background:rad
 .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:0 1px 0 rgba(255,255,255,.03) inset,0 12px 32px rgba(0,0,0,.35);backdrop-filter:blur(10px)}
 .card h2{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#cfe0ff;font-weight:600}
 .card p.rc,.card h2 em:not([id]){display:none}
+.mx .q{font-size:11px;color:var(--mut);margin-top:2px;white-space:normal;line-height:1.4}.mx tr.mx-st td{opacity:.5}.mx-th{padding:7px 0;border-bottom:1px solid var(--line)}.mx-th b{font-weight:600}.mx-th span{font-size:11.5px;margin-left:6px}.mx td{vertical-align:top}
 header h1{background:linear-gradient(90deg,#fff,#9cc2ff 60%,#c9b6ff);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700;letter-spacing:.2px}
 header small{color:var(--mut);letter-spacing:.6px;text-transform:uppercase;font-size:10.5px}
 .nav{gap:4px;padding:4px;background:rgba(12,19,34,.6);border:1px solid var(--line);border-radius:12px;width:max-content;max-width:100%}
@@ -167,6 +168,7 @@ table th{letter-spacing:.8px;text-transform:uppercase;font-size:10.5px;color:var
 <div class="card" id="brk-card"><h2>Broker account <em id="brk-note">—</em></h2><div class="kpis" id="brk-k"></div>
  <div class="g2o" style="margin-top:8px"><div><h3 class="co-h">Holdings</h3><div class="tw"><table id="brk-h"><thead><tr><th>Stock</th><th class="r">Qty</th><th class="r">Avg</th><th class="r">Last</th><th class="r">Value</th><th class="r">P/L</th></tr></thead><tbody></tbody></table></div></div>
  <div><h3 class="co-h">Positions today</h3><div class="tw"><table id="brk-p"><thead><tr><th>Instrument</th><th class="r">Qty</th><th class="r">Avg</th><th class="r">Last</th><th class="r">P/L</th></tr></thead><tbody></tbody></table></div></div></div></div>
+<div class="card mx" id="mx-over"><h2>NIFTY right now · all factors <em id="mxo-note">—</em></h2><div class="kpis fv-k" id="mxo-k"></div><ul class="fv-why" id="mxo-why"></ul></div>
 <div class="card" hidden><h2>Today's forecast for our indexes <em id="fc-over-note">built before the open</em></h2><div class="fcg" id="fc-over-g"><div class="empty">The forecast is built at 08:45 IST on trading days.</div></div></div>
 <div class="kpis" id="kpis" style="margin:0 0 12px"></div>
 <div class="g2o"><div class="card"><h2>Top performing agents <em>each strategy is run by its own desk; ranked by profit, closed and open</em></h2>
@@ -286,6 +288,15 @@ table th{letter-spacing:.8px;text-transform:uppercase;font-size:10.5px;color:var
  <div class="tv-2"><div class="tv-box" id="tv-fin"></div><div class="tv-box" id="tv-ch"></div></div></div>
 </section>
 <section id="t-fno" hidden>
+<div class="card mx" id="mx-card"><h2>What's moving NIFTY and Sensex now <em id="mx-note">—</em></h2>
+ <div class="kpis fv-k" id="mx-k"></div>
+ <ul class="fv-why" id="mx-why"></ul>
+ <div class="bt-2" style="margin-top:8px">
+  <div><h3 class="co-h">World markets · since NIFTY's last close</h3><div class="tw"><table id="mx-f"><thead><tr><th>Factor</th><th class="r">Price</th><th class="r">Move</th><th class="r">NIFTY points</th></tr></thead><tbody></tbody></table></div></div>
+  <div><h3 class="co-h">Inside India's market</h3><div class="tw"><table id="mx-s"><thead><tr><th>Group</th><th class="r">Move</th><th>Why it matters</th></tr></thead><tbody></tbody></table></div></div></div>
+ <div class="bt-2" style="margin-top:8px">
+  <div><h3 class="co-h">Today's headline themes</h3><div id="mx-t"></div></div>
+  <div><h3 class="co-h">Alerts today</h3><div id="mx-a"></div></div></div></div>
 <div class="card" id="fv-card"><h2>NIFTY today · the F&amp;O desk's view <em id="fv-note">—</em></h2>
  <div class="kpis fv-k" id="fv-k"></div>
  <h3 class="co-h">Why, in plain words</h3><ul class="fv-why" id="fv-why"></ul>
@@ -812,12 +823,13 @@ function exitTxt(t){const u=(+t.lot||0)*(+t.qty||1);if(t.strategy==='ema_vwap_cr
 function drawFV(){const V=FV;if(!V)return;const old=V.day!==today(),M=V.mode||{},P=V.prediction||{};
  $('fv-note').textContent=(old?`from ${V.day} · today's view starts after 09:15 on market days · `:'')+(V.status||'')+' · updated '+String(V.at||'').slice(0,5);
  const dc={UP:['▲ Up','up'],DOWN:['▼ Down','down'],SIDEWAYS:['◆ No clear direction','']}[P.direction]||['—',''],mn=M.code?'Mode '+M.code.slice(5,6)+' · '+M.name:(M.name||'—'),T=V.trade;
- $('fv-k').replaceChildren(kv2('Mode today',mn,M.vix?`India VIX ${M.vix}: ${M.plain}`:(M.plain||'')),kv2("Desk's call",dc[0],(P.headline||'')+(P.confidence?` · confidence ${P.confidence.toLowerCase()}`:''),dc[1]),
+ $('fv-k').replaceChildren(kv2('Mode today',mn,M.vix?`India VIX ${M.vix}: ${M.plain}`:(M.plain||'')),kv2(P.source?'Live call · all factors':"Desk's call",dc[0],(P.headline||'')+(P.measured?' · '+P.measured:P.confidence?` · confidence ${P.confidence.toLowerCase()}`:''),dc[1]),
+  ...(P.desk_lean?[kv2("Desk's 10:00 trade tilt",{UP:'Toward a rise',DOWN:'Toward a fall'}[P.desk_lean]||'Neither way','its own rule: the morning move from the open')]:[]),
   kv2('Likely range today',P.day_range?`${fnum(P.day_range[0])} – ${fnum(P.day_range[1])}`:'—',P.close_range?`by the close: ${fnum(P.close_range[0])} – ${fnum(P.close_range[1])} · now ${fnum(P.spot)}`:'about two days in three NIFTY stays inside'),
   kv2("Today's trade",T?(T.status==='OPEN'?'Open':T.status==='VOID'?'Void':T.status==='WIN'?'Closed in profit':'Closed at a loss'):'Not yet',T?`${T.label} · ${sg(Math.round(T.pnl_rs||0))}`:'the desk buys at 10:00 on market days',T?cl(T.pnl_rs||0):''));
  $('fv-why').replaceChildren(...(V.why||[]).map((w)=>E('li','',w)));$('fv-plan').textContent=V.plan||''}
 function drawFC(){if(!window.LiveCharts||!S.lc)return;const c=(S.lc.charts||[]).find((x)=>x.id==='fno');if(!c)return;const V=FV&&FV.day===today()?FV:null,P=(V&&V.prediction)||{},X=(V&&V.chart)||{};
- const ch=Object.assign({},c,{id:'fnoP',label:'NIFTY 50'+(V?" · desk's call: "+(P.direction==='SIDEWAYS'?'no clear direction':String(P.direction||'').toLowerCase()):''),levels:[...(c.levels||[]),...(X.levels||[])],
+ const ch=Object.assign({},c,{id:'fnoP',label:'NIFTY 50'+(V?(P.source?' · live call: ':" · desk's call: ")+(P.direction==='SIDEWAYS'?'no clear direction':String(P.direction||'').toLowerCase()):''),levels:[...(c.levels||[]),...(X.levels||[])],
   trade:Object.assign({},c.trade||{},{forecast:[...((c.trade&&c.trade.forecast)||[]),...(X.forecast||[])]})}),data={updated_at:S.lc.updated_at,charts:[ch]};
  if(!FCH)FCH=window.LiveCharts.mount($('fc-box'),{initial:'fnoP',data});else FCH.update(data);$('fc-note').textContent='1-minute candles · updated '+String(S.lc.updated_at||'').slice(11,16)+' IST'}
 function ocSide(o){const f=o&&o.key&&FULL[o.key],x=Object.assign({},o||{});if(f){if(f.ltp)x.ltp=f.ltp;if(f.b&&f.b[0]){x.bq=f.b[0][0];x.bid=f.b[0][1]}if(f.a&&f.a[0]){x.aq=f.a[0][0];x.ask=f.a[0][1]}if(f.vtt)x.vol=f.vtt;if(f.oi){if(x.oi!=null&&x.doi!=null)x.doi=x.doi+(f.oi-x.oi);x.oi=f.oi}}return x}
@@ -944,13 +956,40 @@ DT.eq={desk:'EQUITY',m:'today',b:'intraday'};
 document.querySelectorAll('#eq-ctl button').forEach((b)=>b.onclick=()=>{DT.eq.m=b.dataset.m;document.querySelectorAll('#eq-ctl button').forEach((x)=>x.classList.toggle('on',x===b));drawDeskTab('eq')});
 const _deskMarket=deskMarket;deskMarket=function(id){if(id!=='eq'){_deskMarket(id);return}const ix=(S.prices&&S.prices.indices)||{},box=$('eq-m');[['Nifty 50','n'],['Bank Nifty','b'],['Sensex','s'],['India VIX','v']].forEach(([k,c])=>{const x=ix[k];if(x&&x.last!=null)mcard(box,c,k,num(x.last,2),x.last,x.chg_pct!=null?pc(x.chg_pct):'',x.chg_pct)})};
 /* ticker: index moves (updated in place) and the latest headlines (rebuilt only when they change) */
-const TKI={},TKX=['Nifty 50','Bank Nifty','Sensex','India VIX'];
+const TKI={},TKX=['Nifty 50','Bank Nifty','Sensex','India VIX'],TKM=[['brent','Brent crude'],['usdinr','USD/INR'],['dxy','Dollar index'],['es','S&P 500 fut'],['us10y','US 10Y yield'],['gold','Gold']],TKBAD=new Set(['brent','usdinr','dxy','us10y']);
 function tkIndex(k){const d=E('span','ti');d.append(E('b','',k),E('span','num','—'),E('span','num','')) ;return d}
-function drawTicker(){const box=$('tkr');if(!box)return;const news=(S.news||[]).slice(-14).reverse(),sig=news.map((n)=>n.headline).join('|');
- if(box._s!==sig){box._s=sig;const seq=[];TKX.forEach((k)=>{const a=tkIndex(k);(TKI[k]=[a]);seq.push(a,E('span','sep'))});
+function drawTicker(){const box=$('tkr');if(!box)return;const news=(S.news||[]).slice(-14).reverse(),sig=news.map((n)=>n.headline).join('|'),keys=[...TKX,...TKM.map((m)=>'m:'+m[0])],lab=(k)=>k.startsWith('m:')?TKM.find((m)=>'m:'+m[0]===k)[1]:k;
+ if(box._s!==sig){box._s=sig;const seq=[];keys.forEach((k)=>{const a=tkIndex(lab(k));(TKI[k]=[a]);seq.push(a,E('span','sep'))});
   news.forEach((n)=>{const c=String(n.category||'news'),h=String(n.hint||''),neg=/CRASH|SHOCK/i.test(c)||/SHORT/i.test(h),pos=/LONG/i.test(h),d=E('span','tn');d.append(E('i',neg?'neg':pos?'pos':'',c.replace(/[-_/]+/g,' ').toLowerCase()),document.createTextNode(String(n.headline||'').replace(/ - [^-]{2,40}$/,'')));seq.push(d,E('span','sep'))});
-  const twin=seq.map((x)=>x.cloneNode(true));TKX.forEach((k,i)=>TKI[k].push(twin[i*2]));box.replaceChildren(...seq,...twin);box.style.setProperty('--tkr-d',Math.max(70,seq.length*5)+'s')}
- const ix=(S.prices&&S.prices.indices)||{};TKX.forEach((k)=>{const x=ix[k];if(!x||!TKI[k])return;TKI[k].forEach((el)=>{el.children[1].textContent=num(x.last,2);el.children[2].textContent=x.chg_pct==null?'':pc(x.chg_pct);el.children[2].className='num '+cl(x.chg_pct||0)})})}
+  const twin=seq.map((x)=>x.cloneNode(true));keys.forEach((k,i)=>TKI[k].push(twin[i*2]));box.replaceChildren(...seq,...twin);box.style.setProperty('--tkr-d',Math.max(70,seq.length*5)+'s')}
+ const ix=(S.prices&&S.prices.indices)||{};TKX.forEach((k)=>{const x=ix[k];if(!x||!TKI[k])return;TKI[k].forEach((el)=>{el.children[1].textContent=num(x.last,2);el.children[2].textContent=x.chg_pct==null?'':pc(x.chg_pct);el.children[2].className='num '+cl(x.chg_pct||0)})});
+ const mf={};((S.macro&&S.macro.factors)||[]).forEach((f)=>{mf[f.key]=f});TKM.forEach(([k])=>{const f=mf[k],els=TKI['m:'+k];if(!f||!els||f.last==null)return;
+  els.forEach((el)=>{el.children[1].textContent=fnum(f.last,2);el.children[2].textContent=f.chg_pct==null?'':pc(f.chg_pct);el.children[2].className='num '+cl((TKBAD.has(k)?-1:1)*(f.chg_pct||0))})})}
+/* the live macro read (backend/macro.py): world markets, crude, the rupee, India's own market and the day's headline themes */
+let MACRO=null;
+async function mvLoad(){const m=await get('macro');if(m){MACRO=m;S.macro=m;drawMV();drawTicker()}}
+function mvKpis(M){const c=M.call,d={UP:['▲ Up','up'],DOWN:['▼ Down','down'],SIDEWAYS:['◆ No clear direction','']}[c&&c.direction]||['—',''],I=M.implied||{},N=M.nifty||{},X=M.sensex||{},pts=(v)=>v==null?'—':(v>0?'+':'')+fnum(v)+' pts';
+ return [kv2(M.session==='pre-open'?'Before the open':'Live call · all factors',c?d[0]:'Market closed',c?c.headline+' · '+(c.measured||''):'The next call starts before 09:15 on market days',c?d[1]:''),
+  kv2('World markets point to',pts(I.nifty_pts),I.nifty_pct==null?'':`NIFTY ${pc(I.nifty_pct)} · Sensex ${pts(I.sensex_pts)}`,cl(I.nifty_pts||0)),
+  kv2('NIFTY 50',N.last?fnum(N.last):'—',N.chg_pct==null?'':`${pts(N.chg_pts)} (${pc(N.chg_pct)}) · ${M.session==='open'?'so far today':'last session'}`,cl(N.chg_pct||0)),
+  kv2('Sensex',X.last?fnum(X.last):'—',X.chg_pct==null?'':`${pts(X.chg_pts)} (${pc(X.chg_pct)})`,cl(X.chg_pct||0))]}
+function drawMV(){const M=MACRO;if(!M)return;const note=(M.day!==today()?`from ${M.day} · `:'')+(M.ref?M.ref.label:'')+' · updated '+String(M.at||'').slice(0,5)+' IST';
+ if(!$('t-over').hidden){$('mxo-note').textContent=note;$('mxo-k').replaceChildren(...mvKpis(M));$('mxo-why').replaceChildren(...(M.reasons||[]).slice(1,5).map((w)=>E('li','',w)))}
+ if($('t-fno').hidden)return;$('mx-note').textContent=note;$('mx-k').replaceChildren(...mvKpis(M));$('mx-why').replaceChildren(...(M.reasons||[]).map((w)=>E('li','',w)));
+ const one=(msg,n)=>{const r=E('tr'),c=E('td','empty',msg);c.colSpan=n;r.appendChild(c);return r};
+ const fr=(M.factors||[]).map((f)=>{const r=E('tr',f.stale?'mx-st':''),n=E('td','');n.append(E('div','',f.name),E('div','q',f.note||f.why||''));
+  r.append(n,E('td','r num',f.last==null?'—':fnum(f.last,f.last<1000?2:0)),E('td','r num '+cl((TKBAD.has(f.key)?-1:1)*(f.chg_pct||0)),f.chg_pct==null?'—':pc(f.chg_pct)),
+   E('td','r num '+cl(f.effect_pts||0),f.effect_pts==null?(f.weighted?'—':'watched'):Math.abs(f.effect_pts)<0.5?'0':(f.effect_pts>0?'+':'')+fnum(f.effect_pts)));return r});
+ $('mx-f').tBodies[0].replaceChildren(...(fr.length?fr:[one('World prices load in a minute',4)]));
+ const I=M.india,sr=[],row=(a,b,bc,c)=>{const r=E('tr');r.append(E('td','',a),E('td','r num '+(bc||''),b),E('td','',c));return r};
+ if(I){const b=I.breadth||{};if(b.seen)sr.push(row('NIFTY 50 stocks',`${b.up} up · ${b.down} down`,cl(b.up-b.down),`of the ${b.seen} we can see`));
+  (I.heavy||[]).slice(0,6).forEach((h)=>sr.push(row(h.name,pc(h.chg_pct),cl(h.chg_pct),h.pts==null?'':`about ${h.pts>0?'+':''}${fnum(h.pts)} NIFTY points (weight about ${h.weight}%)`)));
+  (I.sectors||[]).forEach((x)=>sr.push(row(x.name,pc(x.chg_pct),cl(x.chg_pct),x.why)))}
+ if(M.vix&&M.vix.last&&M.vix.prev){const v=(M.vix.last/M.vix.prev-1)*100;sr.push(row('India VIX (fear gauge)',fnum(M.vix.last,2)+' ('+pc(v)+')',cl(-v),'higher means bigger moves expected'))}
+ if(M.banknifty&&M.banknifty.last&&M.banknifty.prev){const v=(M.banknifty.last/M.banknifty.prev-1)*100;sr.push(row('Bank Nifty',pc(v),cl(v),'banks react first to rates and the rupee'))}
+ $('mx-s').tBodies[0].replaceChildren(...(sr.length?sr:[one('Shown in market hours',3)]));
+ $('mx-t').replaceChildren(...((M.themes||[]).length?M.themes.map((t)=>{const d=E('div','mx-th');d.append(E('b','',`${t.label[0].toUpperCase()+t.label.slice(1)} · ${t.count}`),E('span',t.neg>t.pos?'down':t.pos>t.neg?'up':'mut',t.neg||t.pos?`${t.neg} bad · ${t.pos} good`:''),E('div','q',t.latest.headline+(t.latest.source?' · '+t.latest.source:'')));return d}):[E('div','empty','No headlines on these themes today yet.')]));
+ $('mx-a').replaceChildren(...((M.alerts||[]).length?M.alerts.slice(0,10).map((a)=>{const d=E('div','mx-th');d.append(E('b','',a.at+' · '+a.title),E('div','q',a.body));return d}):[E('div','empty','No big moves today.')]))}
 /* broker account: the real one when connected, the paper one otherwise */
 async function brLoad(){const [b,a]=await Promise.all([get('broker'),get('account')]);if(b)S.broker=b;if(a)S.account=a;drawBroker()}
 function drawBroker(){const k=$('brk-k');if(!k||$('t-over').hidden)return;const B=S.broker,A=S.account||{},rows=(id,R)=>$(id).tBodies[0].replaceChildren(...(R.length?R:[(()=>{const r=E('tr'),c=E('td','empty','—');c.colSpan=6;r.appendChild(c);return r})()]));
@@ -999,7 +1038,7 @@ const AUo={};function drawAudit(){if($('t-audit').hidden)return;const dk=$('au-d
    E('td','',o.length?(o[o.length-1].status||o[o.length-1].state||'sent'):'paper'),E('td','',t.status==='OPEN'?'open':t.status==='VOID'?'void':(t.status==='WIN'?'won':'lost')+' · '+(t.why||'')),E('td','r num '+cl(p),t.status==='VOID'?'0':sg(Math.round(p))));
   const d=E('tr','au-d'),c=E('td','');c.colSpan=11;d.appendChild(c);d.hidden=!AUo[t.id];if(AUo[t.id])c.append(E('div','lg',`${t.id} · ${t.reason||''}`),thEl(t));r.onclick=()=>{AUo[t.id]=!AUo[t.id];drawAudit()};return [r,d]}))}
 ['au-d','au-s','au-p'].forEach((id)=>$(id).onchange=drawAudit);$('au-q').oninput=drawAudit;
-function setTab(t){document.querySelectorAll('#nav button').forEach((b)=>b.classList.toggle('on',b.dataset.t===t));['over','co','lc','ipo','lab','bt','view','summary','intra','exec','today','fno','comm','crypto','chart','ledger','eq','audit'].forEach((k)=>{$('t-'+k).hidden=k!==t});if(t==='over')drawBroker();if(t==='audit')drawAudit();if(t==='bt')rsLoad();if(t==='co')drawAgents();if(t==='chart')lcLoad();if(t==='eq'&&!TVinit){TVinit=true;tvLoad()}if(t==='co'){floorStart();drawCompany();if(innerHeight<500)setTimeout(()=>$('co-card').scrollIntoView({block:'start'}),300)}if(t==='lc'){lcLoad();if(innerHeight<500)setTimeout(()=>$('lc-card').scrollIntoView({block:'start'}),300)}if(t==='ipo')drawIPO();if(t==='lab'){drawLab();drawNDB()}if(t==='bt')btInit();if(t==='exec')drawExec();if(t==='view'){drawForecast();Object.values(FCN).forEach((x)=>{x.cv._sig=''});fcLive();drawSmart();drawVia()}if(t==='summary')drawSummary();if(t==='intra'){drawIntra();drawPulse()}if(t==='chart')drawChart();if(t==='today')drawToday();if(DT[t])drawDeskTab(t);if(t==='fno'){fnoLoad(true);drawOT();drawTH()}if(location.hash!=='#'+t)history.replaceState(null,'','#'+t)}
+function setTab(t){document.querySelectorAll('#nav button').forEach((b)=>b.classList.toggle('on',b.dataset.t===t));['over','co','lc','ipo','lab','bt','view','summary','intra','exec','today','fno','comm','crypto','chart','ledger','eq','audit'].forEach((k)=>{$('t-'+k).hidden=k!==t});if(t==='over')drawBroker();if(t==='audit')drawAudit();if(t==='bt')rsLoad();if(t==='co')drawAgents();if(t==='chart')lcLoad();if(t==='eq'&&!TVinit){TVinit=true;tvLoad()}if(t==='co'){floorStart();drawCompany();if(innerHeight<500)setTimeout(()=>$('co-card').scrollIntoView({block:'start'}),300)}if(t==='lc'){lcLoad();if(innerHeight<500)setTimeout(()=>$('lc-card').scrollIntoView({block:'start'}),300)}if(t==='ipo')drawIPO();if(t==='lab'){drawLab();drawNDB()}if(t==='bt')btInit();if(t==='exec')drawExec();if(t==='view'){drawForecast();Object.values(FCN).forEach((x)=>{x.cv._sig=''});fcLive();drawSmart();drawVia()}if(t==='summary')drawSummary();if(t==='intra'){drawIntra();drawPulse()}if(t==='chart')drawChart();if(t==='today')drawToday();if(DT[t])drawDeskTab(t);if(t==='fno'){fnoLoad(true);drawOT();drawTH()}if(t==='fno'||t==='over')drawMV();if(location.hash!=='#'+t)history.replaceState(null,'','#'+t)}
 document.querySelectorAll('#nav button').forEach((b)=>b.onclick=()=>setTab(b.dataset.t));
 document.querySelectorAll('#t-today .ctl button[data-m]').forEach((b)=>b.onclick=()=>{TM=b.dataset.m;document.querySelectorAll('#t-today .ctl button[data-m]').forEach((x)=>x.classList.toggle('on',x===b));drawToday()});
 let busy=false,tick2=0;
@@ -1008,7 +1047,7 @@ async function mid(){const ex=await get('executions');if(ex)S.exec=ex;const gj=a
 async function fast(){if(!$('t-fno').hidden)fnoLoad(false);const p=await get('prices');drawPrices(p);drawTicker();fcLive();lcTick(p);if(p){const n=(p.indices||{})['Nifty 50'];if(n){const b=$('nf-k');mcard(b,'n','Now',num(n.last,2),n.last,pc(n.chg_pct),n.chg_pct);mcard(b,'h','Day high',num(n.high,2),n.high,'',null);mcard(b,'l','Day low',num(n.low,2),n.low,'',null)}Object.keys(DT).forEach((k)=>{if(!$('t-'+k).hidden)deskMarket(k)})}}
 $('f-day').onchange=(e)=>{S.day=e.target.value;drawLedger()};$('f-st').onchange=drawLedger;$('f-q').oninput=drawLedger;
 const fd=$('f-desk');['ALL',...Object.keys(DESK)].forEach((k)=>{const b=E('button',k==='ALL'?'on':'',k==='ALL'?'All markets':DESK[k]);b.onclick=()=>{S.desk=k;[...fd.children].forEach((x)=>x.classList.toggle('on',x===b));drawLedger()};fd.appendChild(b)});fd.style.display='contents';
-loadSyms();startStream();fast();core();mid();slow();setInterval(fast,4000);setInterval(brLoad,30000);brLoad();rsLoad();setInterval(core,8000);setInterval(mid,15000);setInterval(slow,120000);setInterval(drawStatus,1000);
+loadSyms();startStream();fast();core();mid();slow();setInterval(fast,4000);setInterval(brLoad,30000);brLoad();setInterval(mvLoad,30000);mvLoad();rsLoad();setInterval(core,8000);setInterval(mid,15000);setInterval(slow,120000);setInterval(drawStatus,1000);
 const h0=(location.hash||'').slice(1),H0={lc:'chart',today:'audit',ledger:'audit',intra:'eq',summary:'over',exec:'audit',lab:'bt',view:'over'}[h0]||h0;setTab(['co','over','eq','fno','chart','bt','audit'].includes(H0)?H0:'co');
 document.addEventListener('visibilitychange',()=>{if(!document.hidden){lastAct=Date.now();fast();core();mid()}if(FLOOR)FLOOR.setLive(ceoLive())});
 </script></body></html>
