@@ -1,0 +1,122 @@
+{
+ "generated": "2026-11-27T17:42:47",
+ "days": 888,
+ "from": "2022-01-04",
+ "to": "2026-11-25",
+ "same_day": {
+  "r2": 0.201,
+  "intercept": 0.0207,
+  "factors": {
+   "brent": {
+    "label": "Brent crude",
+    "beta": -0.0138,
+    "t": -1.2,
+    "corr": -0.011,
+    "symbol": "BZ=F"
+   },
+   "usdinr": {
+    "label": "USD/INR (rupee)",
+    "beta": -0.3471,
+    "t": -4.1,
+    "corr": -0.189,
+    "symbol": "INR=X"
+   },
+   "dxy": {
+    "label": "Dollar index",
+    "beta": -0.1694,
+    "t": -2.6,
+    "corr": -0.083,
+    "symbol": "DX-Y.NYB"
+   },
+   "us10y": {
+    "label": "US 10-year yield",
+    "beta": 0.0269,
+    "t": 1.7,
+    "corr": 0.014,
+    "symbol": "^TNX"
+   },
+   "n225": {
+    "label": "Nikkei 225",
+    "beta": 0.1359,
+    "t": 6.7,
+    "corr": 0.354,
+    "symbol": "^N225"
+   },
+   "hsi": {
+    "label": "Hang Seng",
+    "beta": 0.0949,
+    "t": 5.3,
+    "corr": 0.3,
+    "symbol": "^HSI"
+   },
+   "gold": {
+    "label": "Gold",
+    "beta": -0.0587,
+    "t": -2.5,
+    "corr": -0.017,
+    "symbol": "GC=F"
+   },
+   "spx_overnight": {
+    "label": "S&P 500 (last night)",
+    "beta": 0.1578,
+    "t": 1.6,
+    "corr": 0.281,
+    "symbol": "^GSPC"
+   },
+   "ndx_overnight": {
+    "label": "Nasdaq (last night)",
+    "beta": -0.047,
+    "t": -0.7,
+    "corr": 0.265,
+    "symbol": "^IXIC"
+   },
+   "vix_overnight": {
+    "label": "US VIX (last night)",
+    "beta": -0.0001,
+    "t": -0.0,
+    "corr": -0.231,
+    "symbol": "^VIX"
+   }
+  },
+  "sensex_r2": 0.193,
+  "sensex_betas": {
+   "brent": -0.0147,
+   "usdinr": -0.3482,
+   "dxy": -0.1653,
+   "us10y": 0.0252,
+   "n225": 0.1369,
+   "hsi": 0.0916,
+   "gold": -0.0539,
+   "spx_overnight": 0.1544,
+   "ndx_overnight": -0.047,
+   "vix_overnight": 0.0003
+  }
+ },
+ "pre_open": {
+  "factors": {
+   "spx_lastnight": 0.1907,
+   "ndx_lastnight": 0.0333,
+   "vix_lastnight": -0.0069,
+   "brent_yday": -0.0046,
+   "usdinr_yday": -0.0146,
+   "dxy_yday": -0.1315,
+   "us10y_yday": 0.0167
+  },
+  "intercept": 0.0243,
+  "r2_train": 0.121,
+  "train": {
+   "days": 550,
+   "close_to_close_hit": 59.8,
+   "open_to_close_hit": 48.5
+  },
+  "test": {
+   "days": 338,
+   "close_to_close_hit": 54.7,
+   "open_to_close_hit": 47.0,
+   "base_rate_up": 47.9,
+   "strong_days": 75,
+   "strong_close_to_close_hit": 61.3,
+   "strong_open_to_close_hit": 37.3
+  }
+ }
+}
