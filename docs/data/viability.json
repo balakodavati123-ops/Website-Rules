@@ -1,40 +1,40 @@
 {
- "updated_at": "2026-11-27T17:50:37+05:30",
+ "updated_at": "2026-11-27T23:31:17+05:30",
  "skipped": [
   {
    "desk": "COMMODITY",
-   "what": "Gold 1 g",
-   "margin": 1407,
+   "what": "Crude oil mini",
+   "margin": 24586,
    "room": 0,
    "why": "needs more margin than the commodities limit has free",
-   "at": "17:50:37",
-   "day": "2026-11-27"
-  },
-  {
-   "desk": "COMMODITY",
-   "what": "Silver 1 kg",
-   "margin": 33348,
-   "room": 0,
-   "why": "needs more margin than the commodities limit has free",
-   "at": "17:50:37",
+   "at": "22:29:52",
    "day": "2026-11-27"
   },
   {
    "desk": "COMMODITY",
    "what": "Natural gas mini",
-   "margin": 14037,
+   "margin": 14021,
    "room": 0,
    "why": "needs more margin than the commodities limit has free",
-   "at": "17:50:37",
+   "at": "21:47:42",
    "day": "2026-11-27"
   },
   {
    "desk": "COMMODITY",
-   "what": "Crude oil mini",
-   "margin": 24616,
+   "what": "Gold 1 g",
+   "margin": 1405,
    "room": 0,
    "why": "needs more margin than the commodities limit has free",
-   "at": "17:06:27",
+   "at": "20:26:47",
+   "day": "2026-11-27"
+  },
+  {
+   "desk": "COMMODITY",
+   "what": "Silver 1 kg",
+   "margin": 33353,
+   "room": 0,
+   "why": "needs more margin than the commodities limit has free",
+   "at": "18:47:08",
    "day": "2026-11-27"
   }
  ],
