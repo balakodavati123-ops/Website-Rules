@@ -1,48 +1,48 @@
 {
- "time": "25 Nov 11:21",
- "at": 1795585913.129168,
- "day": "2026-11-25",
+ "time": "27 Nov 11:21",
+ "at": 1795758691.009659,
+ "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "checks": {
-  "HILINFRA": {
+  "MCX": {
    "verdict": "doubt",
-   "why": "Order and press release filings give no size or value; no price data"
+   "why": "Commodity price story, not MCX-specific; already doubted earlier."
   },
-  "ZEEL": {
+  "URBANCO": {
    "verdict": "doubt",
-   "why": "Decline is only buyback adjustment, not real news."
+   "why": "Analyst view already known; price flat and no margin left."
   },
-  "NH": {
+  "BIOCON": {
    "verdict": "doubt",
-   "why": "HSBC upgrade is positive but price is down, not confirming."
+   "why": "Press release has no detail, so materiality is unknown."
   },
-  "JWL": {
+  "LCCPROJECT": {
+   "verdict": "doubt",
+   "why": "Order size not stated and price is down, not confirming."
+  },
+  "SWARAJENG": {
+   "verdict": "doubt",
+   "why": "Headline names Swaraj Suiting, a different company; price barely moved."
+  },
+  "UTLSOLAR": {
+   "verdict": "doubt",
+   "why": "Headline is about Fujiyama Power, and rally already happened."
+  },
+  "DHARAN": {
    "verdict": "confirm",
-   "why": "Specific joint venture news and price up about 4.5% agrees."
+   "why": "Fresh, specific insolvency process filing is material negative news."
   },
-  "SHADOWFAX": {
+  "SHYAMMETL": {
    "verdict": "doubt",
-   "why": "Acquisition news is positive in tone but price is falling"
+   "why": "General update with no detail; price has not moved."
   },
-  "LTF": {
+  "WAAREERTL": {
    "verdict": "doubt",
-   "why": "Jump already happened; price move is small against the headline."
+   "why": "Order win is specific, but the 14% jump is priced in and price is flat."
   },
-  "CANHLIFE": {
+  "IDFCFIRSTB": {
    "verdict": "doubt",
-   "why": "Routine resignation filing; price has not confirmed and impact unclear."
-  },
-  "HDFCBANK": {
-   "verdict": "doubt",
-   "why": "Headlines conflict on gain size; sector-wide bank rally, already priced in."
-  },
-  "HINDZINC": {
-   "verdict": "doubt",
-   "why": "Commodity-driven story, price has not moved down to confirm."
-  },
-  "ANGELONE": {
-   "verdict": "doubt",
-   "why": "Resignation filing with no detail; price moved up, not down."
+   "why": "Move already happened; price is down, not confirming."
   }
  }
 }

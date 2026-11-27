@@ -1,63 +1,68 @@
 {
- "mood": "bullish",
- "brief": "Indian shares are surging, with the Sensex up over 1,700 points and Nifty above 25,800 as IT stocks gain about 2%. Falling oil prices and a strong GIFT Nifty signal are helping, though Asian markets slid on an AI selloff and US tariff worries.",
+ "mood": "mixed",
+ "brief": "Indian shares are subdued, with the Sensex slipping and the Nifty flat as IT stocks fall while metals and Titan gain. Concerns include elevated oil prices weighing on Indian bonds and scrutiny of the Tata Steel and APL Apollo deal.",
  "themes": [
-  "Sensex rallies over 1,700 points",
-  "IT index up 2%",
-  "Oil prices fall on supply glut",
-  "Asian AI selloff and tariff worries"
+  "IT stocks fall, metals gain",
+  "Tata Steel-APL Apollo deal under scrutiny",
+  "Oil prices weigh on bonds",
+  "Global tech rout and Nvidia worries"
  ],
  "companies": [
   {
-   "name": "Infosys",
+   "name": "Titan",
    "tone": "positive",
-   "why": "KR Choksey says accumulate with Rs 1531 target"
+   "why": "Gains while the broader market is subdued"
   },
   {
-   "name": "HDFC Bank",
-   "tone": "positive",
-   "why": "Bank Nifty hits a record, bank gains"
+   "name": "Tata Steel",
+   "tone": "negative",
+   "why": "APL Apollo deal called ugly; Sebi may scrutinise"
   },
   {
    "name": "APL Apollo",
    "tone": "negative",
-   "why": "Plunges 20% to 52-week low on Tata Steel deal"
+   "why": "Deal faces scrutiny over related-party and shareholder worries"
   },
   {
-   "name": "Tata Steel",
-   "tone": "neutral",
-   "why": "Rs 28,000-crore APL Apollo deal under scrutiny"
-  },
-  {
-   "name": "Hindustan Zinc",
-   "tone": "negative",
-   "why": "Falls as silver slumps to 14-month low"
-  },
-  {
-   "name": "Zee Entertainment",
-   "tone": "neutral",
-   "why": "Trades ex-buyback, adjusted decline of 5%"
-  },
-  {
-   "name": "Narayana Hrudayalaya",
+   "name": "Waaree Renewable",
    "tone": "positive",
-   "why": "HSBC upgrade and higher target price"
+   "why": "Rises 14% after 120-MWp EPC order"
+  },
+  {
+   "name": "HDFC Bank",
+   "tone": "negative",
+   "why": "Slips to 2.5-year low on legal, leadership woes"
+  },
+  {
+   "name": "Zydus Lifesciences",
+   "tone": "negative",
+   "why": "Dips 3% on USFDA complete response letter"
+  },
+  {
+   "name": "BEML",
+   "tone": "positive",
+   "why": "Jumps 7% in the Nifty 500"
   },
   {
    "name": "Jupiter Wagons",
+   "tone": "negative",
+   "why": "Falls 5.7% after two-day rally"
+  },
+  {
+   "name": "IDFC First Bank",
    "tone": "positive",
-   "why": "Surges on Korean joint venture"
+   "why": "Gains 3% and nears 52-week high"
   }
  ],
- "global": "Asian stocks slid as an AI selloff deepened and US tariff threats weighed, while Dow futures fell.",
+ "global": "Nvidia has fallen about 35% from its record high and the Nasdaq is in a correction, weighing on global tech sentiment.",
  "risks": [
-  "Asian AI selloff may spill into IT stocks",
-  "US tariff threats weigh on sentiment",
-  "Rally may fade after sharp intraday jump"
+  "IT selling may drag the index",
+  "Elevated oil prices fan inflation worries",
+  "Global tech rout could spill into Indian markets"
  ],
- "time": "25 Nov 11:21",
- "at": 1795585913.129168,
- "day": "2026-11-25",
+ "time": "27 Nov 11:21",
+ "at": 1795758691.009659,
+ "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "n": 40
 }
