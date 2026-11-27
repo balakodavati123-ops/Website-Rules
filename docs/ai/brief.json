@@ -1,57 +1,62 @@
 {
- "mood": "mixed",
- "brief": "Indian shares are mixed, with the Sensex and Nifty 50 trading lower while defence stocks surge up to 15% and BEML hits a 52-week high. Titan and jewellery stocks gain as gold rebounds, while Tata Steel's APL Apollo deal faces possible Sebi scrutiny.",
+ "mood": "bearish",
+ "brief": "Indian shares are weak, with the Sensex down over 750 points and the Nifty below 25,700, dragged by IT stocks and financials. Caution ahead of new Iran sanctions and elevated oil prices weighing on bonds add to the pressure.",
  "themes": [
-  "Defence stocks surge up to 15%",
-  "Sensex and Nifty trade lower",
-  "Jewellery stocks gain as gold rebounds",
-  "Sebi may scrutinise Tata Steel-APL Apollo deal"
+  "Sensex falls over 750 points",
+  "IT and financials drag",
+  "Tata Steel-APL Apollo deal caution",
+  "JP Morgan sees Nifty at 29,000 by 2027-end"
  ],
  "companies": [
   {
-   "name": "BEML",
-   "tone": "positive",
-   "why": "Hits 52-week high after 17% jump"
+   "name": "Blue Star",
+   "tone": "negative",
+   "why": "Shares fall up to 3.5% on Friday"
   },
   {
-   "name": "Titan",
-   "tone": "positive",
-   "why": "Gains 1.4% as gold rebounds"
+   "name": "Voltas",
+   "tone": "negative",
+   "why": "Shares fall up to 3.5% on Friday"
   },
   {
    "name": "Tata Steel",
    "tone": "negative",
-   "why": "APL Apollo deal may face Sebi scrutiny"
+   "why": "Investor avoids stock until APL Apollo deal clarity"
   },
   {
-   "name": "Jupiter Wagons",
+   "name": "APL Apollo",
    "tone": "negative",
-   "why": "Falls 7.5% after 29% two-day surge"
+   "why": "Investor avoids stock until deal clarity"
   },
   {
-   "name": "Mahanadi Coalfields",
+   "name": "Titan",
    "tone": "positive",
-   "why": "Gets Buy rating from Anand Rathi on listing day"
+   "why": "Gains while the Sensex slips"
   },
   {
-   "name": "Britannia",
+   "name": "Swiggy",
    "tone": "negative",
-   "why": "Chief Marketing Officer resigns"
+   "why": "Instamart to lay off 340 employees"
   },
   {
-   "name": "Tech Mahindra",
+   "name": "Waaree Renewable",
    "tone": "neutral",
-   "why": "Last day to buy for bonus eligibility"
+   "why": "Listed among stocks in focus today"
+  },
+  {
+   "name": "Asahi India Glass",
+   "tone": "positive",
+   "why": "Seen as likely to keep sparkling"
   }
  ],
- "global": "Nvidia halted sales to Southeast Asia as the US tightened China restrictions, while Asian and European stocks mostly rose as sentiment stabilised.",
+ "global": "Nvidia's Southeast Asia pause and the Nasdaq correction weigh on tech, while Rheinmetall, Fincantieri and Exosens shares rose on defence orders.",
  "risks": [
-  "Sebi scrutiny of Tata Steel-APL Apollo deal",
-  "Nvidia chip curbs weighing on tech sentiment",
-  "Sharp defence rally may reverse"
+  "New Iran sanctions and elevated oil prices",
+  "IT and financial stocks dragging the index",
+  "Unclear Tata Steel-APL Apollo deal"
  ],
- "time": "27 Nov 14:21",
- "at": 1795769494.06679,
+ "time": "27 Nov 15:20",
+ "at": 1795773048.626953,
  "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "n": 40

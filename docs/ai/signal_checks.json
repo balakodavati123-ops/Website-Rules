@@ -1,6 +1,6 @@
 {
- "time": "27 Nov 14:21",
- "at": 1795769494.06679,
+ "time": "27 Nov 15:20",
+ "at": 1795773048.626953,
  "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "checks": {
@@ -111,6 +111,18 @@
   "DEFENCE": {
    "verdict": "doubt",
    "why": "Sector-wide story, not one company; price has not confirmed."
+  },
+  "JAIBALAJI": {
+   "verdict": "doubt",
+   "why": "Resignation filing gives no detail on who left; price is up."
+  },
+  "PROZONER": {
+   "verdict": "doubt",
+   "why": "Acquisition filing has no size or terms; price has not moved."
+  },
+  "KEI": {
+   "verdict": "doubt",
+   "why": "Routine stock option grant; price is down, not confirming."
   }
  }
 }
