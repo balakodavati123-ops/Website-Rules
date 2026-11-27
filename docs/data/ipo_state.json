@@ -24,6 +24,41 @@
    "MONOMARK": {
     "d": "2026-11-27",
     "items": []
+   },
+   "SWARA": {
+    "d": "2026-11-27",
+    "items": [
+     {
+      "title": "Swara Baby Products IPO Date, Price Band, Issue Size",
+      "source": "IPO Watch",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5KOWh3aUhFSG1EZ0t2d0NhNmFnRXRSdVUzT2NxdTVCUFJKdGtsUGRDWTdjRDhlY053S05jeWRROGZhZGRXRmJfbzEwZ1M3WmFqVlE2RUhCWC1aaDVfTklmM3NB?oc=5",
+      "time": "2026-11-27T12:26:42Z"
+     },
+     {
+      "title": "Swara Baby Products IPO bidding and listing timetable",
+      "source": "Kalkine India",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPX2gyQ2hzRGlQYzhSMGQ0QVQyTk5HdFJMcklaY2RLQVpyWGJxVC1VcWZxM2F2U2tyYU9ZTF9CTDdMLWVmeVVFckJDNVU5ekdLR2NuempHRFZtb2otSENqeEtMVUctMm1tUEZVS20xNmluMldCRlA0RFdEcHg0NmhvVE11ODlaY1M0clQwSFY0SExzaGg2S25FT3Z4ZVBzSEJ3WkpOT3NCVXJJN29NeGt3X2NKbC1LMzl5aXNWSVlB?oc=5",
+      "time": "2026-11-27T11:25:00Z"
+     },
+     {
+      "title": "Swara Baby Products sets Rs 800 crore IPO for 2 December",
+      "source": "Indian Television Dot Com",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOTk1oYXRaMmlZZ2J1eFpjdkpUSUFtRm9xZnJWd0lTUUlCczFlY2E5d3VNQm1sYjd2UnZBSS0tbVE1MWswZTdrdU1oSXg1aFdaMGtNVGpaRDRERHo0dVY3VTczNlBQV19oNm1UTXdtT01LUjJ3WVc5dzdudk1wZy1VNXhJcllhRkZDakNJZTZjT205NTd4?oc=5",
+      "time": "2026-11-27T11:15:00Z"
+     },
+     {
+      "title": "FirstCry Halves Stake Sale To \u20b9150 Cr In Swara Baby IPO",
+      "source": "Inc42",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQQmhRSVBGbUJZS0ptOEZmbGNuQ1hJTnRlNzFDalZmbnRhREVMWVpqT19tRlZnZW9RMFA5XzlHZUprRUNNQkpRSnVhM0dab0pVMFJmd3RjaUVPSGtnUDhGcGExZEU2dGNNQXA3b0l1WGJKbF9rR0xQVGVTTFpYUDZYc1pYVWxVMFUxTTRGd3dtN0o?oc=5",
+      "time": "2026-11-27T10:43:48Z"
+     },
+     {
+      "title": "Swara Baby Products' Rs 800-cr IPO to open on Dec 2; price band fixed at Rs 105-111",
+      "source": "ET Retail",
+      "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNSWRZRWI3aEh3SVJSbTZDR2I1emdDTndLUUJZa19XM1FiRlYtaUtpamZNM3hNRXdZYnBGejBSWE1SYVNmVERxSDZRZTVKMUtSOUZzWnVZa3ZPbTkxbHB6Mk1BNUFWbGo4aWFHNHNqOFRDaC02Rkk4eUZuVWFIS0NqLUFqRnlsbm5vZmI1R093aU5PR0FSbUVlWXJpZTBWOXdmZkxRZzdKSmVLbklrMWlmdGIwNVg2UG4tU2lIa2Ytc3ZiX2lqQ0ZxdDlKUGJkdUVsa29sTFpDZWhIaTJBcm5zM0szQm5VY1RKelhxTGhDZG0xcUFTbEHSAfYBQVVfeXFMTUlkWUViN2hId0lSUm02Q0diNXpnQ053S1FCWWtfVzNRYkZWLWlLaWpmTTN4TUV3WWJwRnowUlhNUmFTZlREcUg2UWU1SjFLUjlGc1p1WWt2T205MWxwejJNQTVBVmxqOGlhRzRzajhUQ2gtNkZJOHlGblVhSEtDai1BakZ5bG5ub2ZiNUdPd2lOT0dBUm1FZVlyaWUwVjl3ZmZMUWc3SkplS25JazFpZnRiMDVYNlBuLVNpSGtmLXN2Yl9pakNGcXQ5SlBiZHVFbGtvbExaQ2VoSGkyQXJuczNLM0JuVWNUSnpYcUxoQ2RtMXFBU2xB?oc=5",
+      "time": "2026-11-27T10:22:06Z"
+     }
+    ]
    }
   },
   "thesis": {},
@@ -69,6 +104,13 @@
     "fresh_cr": 99.1,
     "ofs_cr": 26.06,
     "issue_size_cr": 125.16
+   },
+   "SWARA|111.0": {
+    "lot_size": 135.0,
+    "issue_text": "Initial Public offer comprising of Fresh issue aggregating up to Rs. 5,000 million and Offer for Sale of up to Rs. 3,000 million (Including Eligible Employee Reservation portion aggregating up to Rs. 12.50 million)",
+    "fresh_cr": 500.0,
+    "ofs_cr": 300.0,
+    "issue_size_cr": 800.0
    }
   }
  },

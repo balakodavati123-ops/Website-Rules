@@ -1,54 +1,742 @@
 {
- "updated_at": "2026-11-27T17:46:35+05:30",
- "scans": 2666,
+ "updated_at": "2026-11-27T23:23:53+05:30",
+ "scans": 2700,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "17:46:35"
+   "at": "23:23:53"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "17:46:35"
+   "at": "23:23:53"
   },
   "Moneycontrol": {
    "ok": true,
    "items": 15,
-   "at": "17:46:35"
+   "at": "23:23:53"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "17:46:35"
+   "at": "23:23:53"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "17:46:35"
+   "at": "23:23:53"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "17:46:35"
+   "at": "23:23:53"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "17:46:35"
+   "at": "23:23:53"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "17:46:35"
+   "at": "23:23:53"
   },
   "Google News": {
    "ok": true,
-   "items": 9,
-   "at": "17:46:35"
+   "items": 7,
+   "at": "23:23:53"
   }
  },
  "signals": [
+  {
+   "id": "N225344-97",
+   "t": "22:53:44",
+   "ts": 1795800224.931303,
+   "pub": "22:44",
+   "lag_s": 557,
+   "symbol": "GODIGIT",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "GODIGIT: Resignation of Director/KMP/SMP",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/GODIGIT_ROID_105315_KMP_Doc.zip",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N225344-96",
+   "t": "22:53:44",
+   "ts": 1795800224.931303,
+   "pub": "22:51",
+   "lag_s": 119,
+   "symbol": "GODIGIT",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "filing: negative"
+   ],
+   "headline": "GODIGIT: Cessation",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/GODIGITGI_27112026225135_GDGIL_Reg_30_Disclosure_Resignation_of_SMP.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N224333-95",
+   "t": "22:43:33",
+   "ts": 1795799613.108949,
+   "pub": "22:40",
+   "lag_s": 175,
+   "symbol": "ZEEL",
+   "tone": "positive",
+   "score": 3,
+   "emotion": "Optimism",
+   "why": [
+    "buyback"
+   ],
+   "headline": "Zee Entertainment  \u20b9600 crore buyback opens on December 1; what eligible shareholders need to know",
+   "source": "Mint",
+   "link": "https://www.livemint.com/market/stock-market-news/zee-entertainment-rs-600-crore-buyback-opens-on-december-1-what-eligible-shareholders-need-to-know-11795797877733.html",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N215314-94",
+   "t": "21:53:14",
+   "ts": 1795796594.289086,
+   "pub": "21:46",
+   "lag_s": 430,
+   "symbol": "PATELENG",
+   "tone": "positive",
+   "score": 1.95,
+   "emotion": "Optimism",
+   "why": [
+    "rally"
+   ],
+   "headline": "Patel Engineering board to mull fundraiser via NCD issue; shares rally 11% over a month - Dailyhunt",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOZVQ1THZQN2pFVUpLN0JkMEViN3UwVXZIRTNlUklOMUg5aWhrZmgyYmg1MHRUNll4MFF0Z0gyc1AzS3BGTktjcVFtZ3FYNV9YcmVCMWtTSTBYRHV0NmFmYTl5cEJXRlRVYTBaajFiVk9rMmJmZHVMc1hOQ3Zld3RLdXhrYm0xWDFLSTNXUjBZaldyTFRNV3RQSURjYjRSRGVWRFRfN0p0V2tzZTNWMGdGSEZzbVpYcWlDNU5mNjRDOW5ybFZOU3JZR0U2cTFzYkdXMnNuUF9BdDhIVFJSa1RaQnZDOE5QX0JVNGVVcWs1cEpZd3I2bW5HR1VR?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N214313-93",
+   "t": "21:43:13",
+   "ts": 1795795993.850595,
+   "pub": "21:22",
+   "lag_s": 1219,
+   "symbol": "DEVYANI",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "Devyani International announces resignation of Head of Human Resources - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPOG9MaUg1anhXdEt5bURiNFJFYk0tcENtVkNNZTlSYzI5THRPOWtJc1R6eGtaMXNxR3VvU2swWkZFa0tkaE1fQk8yX0lYQmpvcGhZN3pUU2hFeXNCQ19yM2JVckw2UHVPTUtMRHlMRlhGU05QRlBWNkg4M1gyejByS0VkTlp6XzR5akhrQ2ZKRVFIY1gtTTJtOXlhS2kwemhvaEl0NWlCSGoyWjQ?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N213309-92",
+   "t": "21:33:09",
+   "ts": 1795795389.141627,
+   "pub": "21:26",
+   "lag_s": 383,
+   "symbol": "EROSMEDIA",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "EROSMEDIA: Resignation of Director/KMP/SMP",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/EROSMEDIA_ROID_105312_KMP_Doc.zip",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N213309-91",
+   "t": "21:33:09",
+   "ts": 1795795389.141627,
+   "pub": "21:20",
+   "lag_s": 778,
+   "symbol": "UJJIVANSFB",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "nod"
+   ],
+   "headline": "Ujjivan SFB gets RBI nod for 3-month extension of Carol Furtado as interim CEO",
+   "source": "CNBC-TV18",
+   "link": "https://www.cnbctv18.com/market/stocks/ujjivan-small-finance-bank-share-price-gets-rbi-nod-for-3-month-extension-of-carol-furtado-as-interim-ceo-20043387.htm",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N212305-90",
+   "t": "21:23:05",
+   "ts": 1795794785.985963,
+   "pub": "21:20",
+   "lag_s": 137,
+   "symbol": "DEVYANI",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "DEVYANI: Resignation of Director/KMP/SMP",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/DEVYANI_ROID_105310_KMP_Doc.zip",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N211302-89",
+   "t": "21:13:02",
+   "ts": 1795794182.26174,
+   "pub": "20:57",
+   "lag_s": 905,
+   "symbol": "INDIANB",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "approves"
+   ],
+   "headline": "Indian Bank approves raising up to \u20b92,500 crore through Basel III-compliant AT1 Bonds",
+   "source": "CNBC-TV18",
+   "link": "https://www.cnbctv18.com/market/stocks/indian-bank-share-price-approves-raising-up-to-rs-2500-crore-through-basel-iii-compliant-at1-bonds-20043374.htm",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N205255-88",
+   "t": "20:52:55",
+   "ts": 1795792975.649973,
+   "pub": "20:49",
+   "lag_s": 199,
+   "symbol": "APLAPOLLO",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "APLAPOLLO: Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/kavasare_27112026204319_QW27112026190710_APLAPOLLO.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N205255-87",
+   "t": "20:52:55",
+   "ts": 1795792975.649973,
+   "pub": "20:42",
+   "lag_s": 616,
+   "symbol": "INDIANB",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "approves"
+   ],
+   "headline": "Indian Bank approves Rs.2500 crore capital raise through AT1 bonds - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQVkZrYUpXRm90eHJuVkh0dURXYmJEV01rTGpEYmIyOHhEYkhZQnN2ZmtCYlNoR2t4Sk1jR05fRDFrTi1RUXM2enFBWFNyU1hjQTA1Z3paZ3dZUG1wajMza09zemM5eTJBM29IWXlvTGJwZ1pBSEJPQU5Vb28tcjVYa2RFUkktcjY2MlNmdE94R1EzUWhLRHVoc2t0WmY5Vy1oRk54dU1n?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N205255-86",
+   "t": "20:52:55",
+   "ts": 1795792975.649973,
+   "pub": "20:46",
+   "lag_s": 384,
+   "symbol": "DALBHARAT",
+   "tone": "positive",
+   "score": 3,
+   "emotion": "Optimism",
+   "why": [
+    "buyback"
+   ],
+   "headline": "Dalmia Bharat sets December 2 for \u20b9700 crore share buyback",
+   "source": "CNBC-TV18",
+   "link": "https://www.cnbctv18.com/business/companies/dalmia-bharat-to-buy-back-shares-worth-rs700-crore-sets-rs1850-price-ceiling-20043361.htm",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N204248-85",
+   "t": "20:42:48",
+   "ts": 1795792368.771219,
+   "pub": "20:35",
+   "lag_s": 427,
+   "symbol": "UJJIVANSFB",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "UJJIVANSFB: General Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/UJJIVANBANK_27112026203533_123_Intimation_RBI_approval_extension_of_Interim_CEO_27112026.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N204248-84",
+   "t": "20:42:48",
+   "ts": 1795792368.771219,
+   "pub": "20:40",
+   "lag_s": 151,
+   "symbol": "ASTERDM",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "acquisition"
+   ],
+   "headline": "ASTERDM: Acquisition",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/ASTERDM2_27112026203310_SEIntimationAMPLs.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N204248-83",
+   "t": "20:42:48",
+   "ts": 1795792368.771219,
+   "pub": "20:29",
+   "lag_s": 796,
+   "symbol": "ZEEL",
+   "tone": "positive",
+   "score": 3,
+   "emotion": "Optimism",
+   "why": [
+    "buyback"
+   ],
+   "headline": "Zee Entertainment buyback to open on Dec 1, set to close on Dec 7",
+   "source": "Business Standard",
+   "link": "https://www.business-standard.com/companies/news/zee-entertainment-buyback-to-open-on-dec-1-set-to-close-on-dec-7-126112701272_1.html",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N203233-82",
+   "t": "20:32:33",
+   "ts": 1795791753.91003,
+   "pub": "20:23",
+   "lag_s": 557,
+   "symbol": "ADVENZYMES",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "acquisition"
+   ],
+   "headline": "ADVENZYMES: Acquisition",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/AETL_27112026202307_Intimation__3_.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N202232-81",
+   "t": "20:22:32",
+   "ts": 1795791152.336131,
+   "pub": "20:18",
+   "lag_s": 257,
+   "symbol": "ZEEL",
+   "tone": "positive",
+   "score": 3,
+   "emotion": "Optimism",
+   "why": [
+    "buyback"
+   ],
+   "headline": "Zee Entertainment\u2019s \u20b9600 crore share buyback to open on December 1",
+   "source": "CNBC-TV18",
+   "link": "https://www.cnbctv18.com/market/zee-entertainment-rs-600-crore-share-buyback-to-open-on-december-1-20043355.htm",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N201230-80",
+   "t": "20:12:30",
+   "ts": 1795790550.001889,
+   "pub": "20:07",
+   "lag_s": 303,
+   "symbol": "CHOICEIN",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "CHOICEIN: Diversification/Disinvestment",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/CHOICE_27112026200713_Upload.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N195218-79",
+   "t": "19:52:18",
+   "ts": 1795789338.886083,
+   "pub": "19:49",
+   "lag_s": 184,
+   "symbol": "LUPIN",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "LUPIN: Press Release",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/Lupin2_27112026193936_SELetterPressRelease.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N194214-78",
+   "t": "19:42:14",
+   "ts": 1795788734.864323,
+   "pub": "19:35",
+   "lag_s": 409,
+   "symbol": "SYNGENE",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "SYNGENE: Sale or disposal",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/SYNGENE2_27112026193419_SEintimationO2Disinvestment.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N193204-77",
+   "t": "19:32:04",
+   "ts": 1795788124.271257,
+   "pub": "19:25",
+   "lag_s": 370,
+   "symbol": "EROSMEDIA",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "filing: negative"
+   ],
+   "headline": "EROSMEDIA: Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/EROSMEDIA_27112026192511_Resignation.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N192208-76",
+   "t": "19:22:08",
+   "ts": 1795787528.706925,
+   "pub": "19:20",
+   "lag_s": 113,
+   "symbol": "TEGA",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "approval"
+   ],
+   "headline": "Tega Industries secures trading approval for 4.78 lakh preferential shares - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOVU9yWmZQUzJwUjVVR3dzVkppcDhoYnMyWGFVRUlyeVgyeEh0OHdyeGhPR1c4alNFcTRfNFNZOHh1U01xREJIVnpoQ2JrajFaVmNQZnlDSEJVM1hNYWdHclVldExMQUFqcm1ncUNPOFM1RlVyT3RyeVNTdHN4OWNhTlFhbk81cWpaYWdPajRnQzFPTjByS0RjY3kyTDRva1I1bGxwV1N0NlhaOHE5UVdYUXJ1ZGd3aXpMamYxWGw5cldtVWFkSnc?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N191203-75",
+   "t": "19:12:03",
+   "ts": 1795786923.402547,
+   "pub": "19:01",
+   "lag_s": 605,
+   "symbol": "ZEEL",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "ZEEL: General Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/ZEEL_27112026190149_SEIntimationLOFsigned.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N191203-74",
+   "t": "19:12:03",
+   "ts": 1795786923.402547,
+   "pub": "19:05",
+   "lag_s": 373,
+   "symbol": "DALBHARAT",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "DALBHARAT: General Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/DALBHARAT_27112026190526_SEemail271126651.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N190151-73",
+   "t": "19:01:51",
+   "ts": 1795786311.890488,
+   "pub": "18:51",
+   "lag_s": 618,
+   "symbol": "EROSMEDIA",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "EROSMEDIA: Resignation",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/EROSMEDIA_27112026185033_ResignationofCEOandDirector.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N190151-72",
+   "t": "19:01:51",
+   "ts": 1795786311.890488,
+   "pub": "18:51",
+   "lag_s": 610,
+   "symbol": "ALIVUS",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "ALIVUS: General Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/GLS_27112026185035_BSE_NSE_Closing2_Signed.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N190151-71",
+   "t": "19:01:51",
+   "ts": 1795786311.890488,
+   "pub": "18:57",
+   "lag_s": 248,
+   "symbol": "TEGA",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "TEGA: General Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/TEGA_27112026185732_Intimation_of_receipt_of_Trading_Approval_sd.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N190151-70",
+   "t": "19:01:51",
+   "ts": 1795786311.890488,
+   "pub": "17:47",
+   "lag_s": 4490,
+   "symbol": "NOIDATOLL",
+   "tone": "negative",
+   "score": -4,
+   "emotion": "Panic",
+   "why": [
+    "scam"
+   ],
+   "headline": "Noida Job Scam: 164 Indonesians And Malaysians Rescued From Alleged Cyberfraud Racket",
+   "source": "NDTV Profit",
+   "link": "https://www.ndtvprofit.com/india/noida-job-scam-164-indonesians-and-malaysians-rescued-from-alleged-cyberfraud-racket-12385256#publisher=newsstand",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N184143-69",
+   "t": "18:41:43",
+   "ts": 1795785103.847588,
+   "pub": "18:32",
+   "lag_s": 581,
+   "symbol": "CPPLUS",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "acquisition"
+   ],
+   "headline": "Aditya Infotech completes strategic \u20b945,38,85,993.60 acquisition of KGraph AI Solutions - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQeDFuVUxvNWJCVTJhT2FQLWdWZmhhV1BvdGE2VDZVQkcwYndPTGtqVGVDN3Q0bzVSSWctcnZ3cUM4d19fRDJyWkZrU1JjVGE4WF95YTJERlZhcFhZOHJNWGt3Zm1peW1FcmRpYlZpbnBSOEtNa1hRVGMyRDRUbno2eVlUcV9DRjJpWFhwQ3EtREtaWkRDTWdodjJrd002eUM5b2hrRTJMc0d0bTVJRHY4Nng0NnBYRlQ3bUkwRkxHRVFOWDBha3RUOQ?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N183140-68",
+   "t": "18:31:40",
+   "ts": 1795784500.547125,
+   "pub": "18:22",
+   "lag_s": 524,
+   "symbol": "GENESYS",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "GENESYS: Resignation of Director/KMP/SMP",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/GENESYS_ROID_105297_KMP_Doc.zip",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N183140-67",
+   "t": "18:31:40",
+   "ts": 1795784500.547125,
+   "pub": "18:23",
+   "lag_s": 464,
+   "symbol": "CPPLUS",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "acquisition"
+   ],
+   "headline": "CPPLUS: Acquisition",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/CPPLUS_27112026182333_seintimation.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N183140-66",
+   "t": "18:31:40",
+   "ts": 1795784500.547125,
+   "pub": "18:28",
+   "lag_s": 178,
+   "symbol": "ZICOM",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "filing: negative"
+   ],
+   "headline": "ZICOM: Cessation",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/ZICOM_27112026182827_Outcome_of_Board_Meeting.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N183140-65",
+   "t": "18:31:40",
+   "ts": 1795784500.547125,
+   "pub": "17:56",
+   "lag_s": 2105,
+   "symbol": "SUPRIYA",
+   "tone": "positive",
+   "score": 3.9,
+   "emotion": "Optimism",
+   "why": [
+    "buyback"
+   ],
+   "headline": "Supriya Lifescience shares settle 7% higher as pharma company considers first-ever buyback; board meet next week - Moneycontrol.com",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQbHpTSjlmNTQwS084aU83NHQxM04wS3owLVNQLWlvNW5mb0VCMmZMMTg1RkZvQmRrNE5xdWhSZ1NBQnM0cUxEanVNeWI2aTlSVV9VRVJIOTVtdnkzQmFsWnk5SUZtSkh3bVpZYTRnSFIzeV9maDk0YzAtMFpVYWdWUUxTRl9jWko3RnM3MGs5WUpfTTFacEV6cWhkT3k1ZTF6RlBOMENrNWljR0NPaGtGamI2R3VaMURFeDdCSHVmVnV3dEloWkwwa0NaR2tKMVh5Wmc2WUM2WDg4SFZUNnN3SW92S19YeV80WFBCWDhvdUx3U3ZheDBxWDhYRkpyQnVob2dEUnJ3?oc=5",
+   "kind": "headline",
+   "status": "skipped: the AI analyst doubted it",
+   "ai": {
+    "verdict": "doubt",
+    "why": "Buyback only being mulled, rally already happened and price is down."
+   }
+  },
+  {
+   "id": "N182137-64",
+   "t": "18:21:37",
+   "ts": 1795783897.193522,
+   "pub": "18:15",
+   "lag_s": 352,
+   "symbol": "BALAMINES",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "BALAMINES: Granting/withdrawal/surrender/cancellation/suspension of key licenses/ regulatory approvals",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/BALAMINES_27112026181531_Intimation_Signed.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N182137-63",
+   "t": "18:21:37",
+   "ts": 1795783897.193522,
+   "pub": "18:20",
+   "lag_s": 64,
+   "symbol": "GENESYS",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "GENESYS: Resignation",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/GENESYS_27112026181952_Upload.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N181130-62",
+   "t": "18:11:30",
+   "ts": 1795783290.743243,
+   "pub": "18:05",
+   "lag_s": 357,
+   "symbol": "ANUHPHR",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "ANUHPHR: Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/ANUHNSE_27112026180524_Disclosure_for_Approval_of_Waiver_Application_NewLH.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
   {
    "id": "N174635-61",
    "t": "17:46:35",
@@ -1159,445 +1847,14 @@
     "verdict": "doubt",
     "why": "General update with no detail; materiality unknown."
    }
-  },
-  {
-   "id": "N111250-17",
-   "t": "11:12:50",
-   "ts": 1795758170.273816,
-   "pub": "11:09",
-   "lag_s": 203,
-   "symbol": "WAAREERTL",
-   "tone": "positive",
-   "score": 6.5,
-   "emotion": "Euphoria",
-   "why": [
-    "52-week high",
-    "order win"
-   ],
-   "headline": "Small-cap, big jump! Waaree Renewable shares rise 14% on this order win; energy stock still 35% below 52-week high",
-   "source": "Mint",
-   "link": "https://www.livemint.com/market/stock-market-news/smallcap-big-jump-waaree-renewable-shares-rise-14-on-this-order-win-energy-stock-still-35-below-52-week-high-11795756038934.html",
-   "kind": "headline",
-   "status": "skipped: the AI analyst doubted it",
-   "px0": 751.5,
-   "px": 825.7,
-   "move_pct": 9.87,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Order win already priced into the earlier rally; price now flat."
-   }
-  },
-  {
-   "id": "N110828-16",
-   "t": "11:08:28",
-   "ts": 1795757908.276164,
-   "pub": "10:52",
-   "lag_s": 976,
-   "symbol": "WAAREERTL",
-   "tone": "positive",
-   "score": 1.95,
-   "emotion": "Optimism",
-   "why": [
-    "rallies"
-   ],
-   "headline": "Waaree Renewable share price rallies 14% after securing 120-MWp EPC order",
-   "source": "Business Standard",
-   "link": "https://www.business-standard.com/markets/news/waaree-renewable-share-price-rallies-14-after-securing-120-mwp-epc-order-126112700290_1.html",
-   "kind": "headline",
-   "status": "skipped: the AI analyst doubted it",
-   "px0": 754.7,
-   "px": 825.7,
-   "move_pct": 9.41,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Order win already priced into the earlier rally; price now flat."
-   }
-  },
-  {
-   "id": "N110155-15",
-   "t": "11:01:55",
-   "ts": 1795757515.776972,
-   "pub": "10:52",
-   "lag_s": 584,
-   "symbol": "WAAREERTL",
-   "tone": "positive",
-   "score": 1.95,
-   "emotion": "Optimism",
-   "why": [
-    "rallies"
-   ],
-   "headline": "Waaree Renewable share price rallies 14% after securing 120-MWp EPC order - Business Standard",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNM3NBS3ZvMkNGdDhFVUlQdEFrVjhQRjdILUptUVhMVnpsbFh1TXVqY2k4cHNlblkzdmhNanVGN3ozY1JQVGZvYUdxYjd4a1FoVHBvRDV4M0FOVmUtRU04TnRLSC04T2dZZWRieHdfSkozbkttVmJWeHNpM1ppRjFNVExTdTRpUXFqZHluM2IyN2VIVmdlM2k4ajdNSC1uNUNRbVVUekpNRkthMnJZOTJJMWhoc0RaU0FpSlNNRmtzb1JVRk1wRTFQUDJZWmRBZ0lremNJWmFB0gHbAUFVX3lxTFBVSkc5clFqSTRQanZRS0g2eU1EdlVwT0VnOGRwR2dBTmtqNHp5dzlnLTl5c2g3RU04dzdOOFZRaGE5Vk5mNWd6ZU1oZnAzZmVQSXdacldjMk1fRkxLR1dLNE1vTTNfSWg1R2l3T0FWdHZvdjRPdHRINjJnRGxRSE5iZ2JNOGpjMXVtbWxJTmVzUVdvZVZGT0VLSUd3b1NFUzhNcFZIUmVreU1GWXRGTDY0Q25OYU1JM2VCQ3BranptR0NIaVNVaWFLWnQ4NDZWc04tc3VjZS1MOEVuRQ?oc=5",
-   "kind": "headline",
-   "status": "skipped: the AI analyst doubted it",
-   "px0": 755.45,
-   "px": 825.7,
-   "move_pct": 9.3,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Order win already priced into the earlier rally; price now flat."
-   }
-  },
-  {
-   "id": "N102246-14",
-   "t": "10:22:46",
-   "ts": 1795755166.783936,
-   "pub": "10:09",
-   "lag_s": 822,
-   "symbol": "IDFCFIRSTB",
-   "tone": "positive",
-   "score": 3,
-   "emotion": "Optimism",
-   "why": [
-    "52-week high",
-    "gains"
-   ],
-   "headline": "IDFC First Bank gains 3% in subdued market; nears 52-week high",
-   "source": "Business Standard",
-   "link": "https://www.business-standard.com/markets/news/idfc-first-bank-gains-3-in-subdued-market-nears-52-week-high-126112700216_1.html",
-   "kind": "headline",
-   "status": "skipped: the AI analyst doubted it",
-   "px0": 87.97,
-   "px": 86.8,
-   "move_pct": -1.33,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Move already happened; price is down, not confirming."
-   }
-  },
-  {
-   "id": "N100325-13",
-   "t": "10:03:25",
-   "ts": 1795754005.243138,
-   "pub": "10:02",
-   "lag_s": 53,
-   "symbol": "LCCPROJECT",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "LCCPROJECT: Bagging/Receiving of orders/contracts",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/LCCPROJECTS_27112026100222_Regulation_30_Intimation.pdf",
-   "kind": "filing",
-   "status": "skipped: the AI analyst doubted it",
-   "px0": 136.19,
-   "px": 130.0,
-   "move_pct": -4.55,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Order size not stated and price is down, not confirming."
-   }
-  },
-  {
-   "id": "N094739-12",
-   "t": "09:47:39",
-   "ts": 1795753059.698636,
-   "pub": "09:46",
-   "lag_s": 86,
-   "symbol": "SWARAJENG",
-   "tone": "positive",
-   "score": 1.5,
-   "emotion": "Optimism",
-   "why": [
-    "nod"
-   ],
-   "headline": "Swaraj Suiting Share Price Up 4.86%: NSE Nod for Pref Issue - Business Upturn",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQR0dhbXNEeFZ6UERuZk41WHQ1Sk5VWDFSN2N4RjNRRW15NFRmcGVRY043UHEweEZFOTR6c1ZmMXJkY3NZQ1JwcEdFWmswejJzM0ZKZzA3bnV4OFdaT1I0MGFDaW5iQ19mTXM1SUtkTUxuWUVVakpBdVhzSHV4dmpud01hYzBPamYzbVdwTHNvckZrWFRud1FWX21NZW94cHVLWnk3ampsa2t2bHBBdEtZYUVCUGdLdk1wbV9jRWlCemVzVS0tSVVyWENkV0doSzQ5cWYxZThmOGpEa0d0TG1lNi03UmlZQ0NnSkQ0?oc=5",
-   "kind": "headline",
-   "status": "skipped: the AI analyst doubted it",
-   "px0": 3446.9,
-   "px": 3465.5,
-   "move_pct": 0.54,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Headline names Swaraj Suiting, a different company; price barely moved."
-   }
-  },
-  {
-   "id": "N093147-11",
-   "t": "09:31:47",
-   "ts": 1795752107.312944,
-   "pub": "09:31",
-   "lag_s": 36,
-   "symbol": "UTLSOLAR",
-   "tone": "positive",
-   "score": 1.5,
-   "emotion": "Optimism",
-   "why": [
-    "rally"
-   ],
-   "headline": "Why did Fujiyama Power shares rally over 4% today? Circuit filter tightened to 5% - Business Upturn",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxObXQ2NmdrTWw5NG9DYktRc0c2TVFuUnNkSURNTVRWYlF0WVJKckhrcmQxdmQ2TE4wSl9sTlR1V3VlRGttYXE4bHd3U2RLdzYwU0oxZkJXU0RJbWJkMlpnVWFvM1p2YzVhejQ5SXY4NFFkcWd6MjNwNjRPVFFENGhsZTg0UVlIbGtOb1hKRUFWT3R5SHJRbmpoXzBQMElZSnZqUVJrc3hEaTBUUl9LZ2tQaWx4SGcya3RENGhBRg?oc=5",
-   "kind": "headline",
-   "status": "skipped: the AI analyst doubted it",
-   "px0": 277.95,
-   "px": 283.0,
-   "move_pct": 1.82,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Headline is about Fujiyama Power, and rally already happened."
-   }
-  },
-  {
-   "id": "N093037-10",
-   "t": "09:30:37",
-   "ts": 1795752037.750378,
-   "pub": "09:29",
-   "lag_s": 71,
-   "symbol": "DHARAN",
-   "tone": "negative",
-   "score": -3.5,
-   "emotion": "Fear",
-   "why": [
-    "insolvency"
-   ],
-   "headline": "DHARAN: Corporate Insolvency Resolution Process",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/KBCGLOBAL_27112026092852_Outcome_of_1st_CoC_Meeting.pdf",
-   "kind": "filing",
-   "status": "new",
-   "ai": {
-    "verdict": "confirm",
-    "why": "Fresh, specific insolvency process filing is material negative news."
-   }
-  },
-  {
-   "id": "N091225-9",
-   "t": "09:12:25",
-   "ts": 1795750945.322209,
-   "pub": "08:59",
-   "lag_s": 775,
-   "symbol": "MCX",
-   "tone": "positive",
-   "score": 4,
-   "emotion": "Euphoria",
-   "why": [
-    "surges",
-    "jumps"
-   ],
-   "headline": "Gold jumps 1.5%, silver surges 4.5% as bullion rebounds from multi-month lows: Gold Silver Rates Live Updates",
-   "source": "ET Stocks",
-   "link": "https://economictimes.indiatimes.com/markets/stocks/live-blog/live-updates-gold-rate-today-27th-november-24k-22k-20k-18-carat-mcx-gold-silver-price-in-delhi-hyderabad-chennai-bengaluru-citywise/liveblog/136208041.cms",
-   "kind": "headline",
-   "status": "skipped: the AI analyst doubted it",
-   "px0": 3870.0,
-   "px": 3900.0,
-   "move_pct": 0.78,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Commodity price story, not MCX-specific; doubted in earlier rounds."
-   }
-  },
-  {
-   "id": "N083420-8",
-   "t": "08:34:20",
-   "ts": 1795748660.255728,
-   "pub": "08:30",
-   "lag_s": 209,
-   "symbol": "URBANCO",
-   "tone": "positive",
-   "score": 1.5,
-   "emotion": "Optimism",
-   "why": [
-    "overweight"
-   ],
-   "headline": "Urban Company shares: Morgan Stanley stays Overweight and sizes up the air conditioner bet - Business Upturn",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQOU5kLUFSUEhrZnRMdXlYSTJBZ1FXcDc4ZndzckhLMTJQRGlNRTE2UGJ4eXdLLXhmTlpkYzBGRWNJaTlzMVZlcUNVbFVUWE0zRXROZGxFYlpzY1hzXzZXWmY4dkNhMlBEclY5S0lpV01JOG5PQ3VkS2Z3MWVNb2c4WWJSMTlEN25Wbi03SERPVC1heWdoZEc0SXBDY001ZmV1bGZSTW1fM3JlMzhRSDFNdU8yMERiN0hjamJPSlJobzVFd3R4V29Ha1d6NUNXQ0pJd0NQelNQcGFjX2dfcm82ZEs5VQ?oc=5",
-   "kind": "headline",
-   "status": "skipped: the AI analyst doubted it",
-   "px0": 172.43,
-   "px": 175.29,
-   "move_pct": 1.66,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Analyst view already known; price flat and no margin left."
-   }
-  },
-  {
-   "id": "N083004-7",
-   "t": "08:30:04",
-   "ts": 1795748404.971469,
-   "pub": "08:27",
-   "lag_s": 154,
-   "symbol": "BIOCON",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "BIOCON: Press Release",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/BIOCON_27112026082717_Pressrelease27112026-Signed.pdf",
-   "kind": "filing",
-   "status": "skipped: the AI analyst doubted it",
-   "px0": 364.0,
-   "px": 362.0,
-   "move_pct": -0.55,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Press release has no detail, so materiality is unknown."
-   }
-  },
-  {
-   "id": "N072020-6",
-   "t": "07:20:20",
-   "ts": 1795744220.184942,
-   "pub": "06:22",
-   "lag_s": 3456,
-   "symbol": "BFSI",
-   "tone": "positive",
-   "score": 1.5,
-   "emotion": "Optimism",
-   "why": [
-    "nod"
-   ],
-   "headline": "NSE receives RBI nod for corporate bond index futures, aims to deepen debt market - bfsi.economictimes.indiatimes.com",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNS1cwT1F2X1B6NGo5TGdJdjItR1RUS1pmQ3l1ZXBlai0tRUU1dl9oeVlGMWdEdnc0aG4wV2ZucmI1RkQ5ZFUtbVZEelZRcmtDVTNDSkZvYjJ2bUhjMzdRWm9fa2VZTmxWY0RZSGJfQkNuVWxBRHhvLWg3R0NwTUFYaWRFMlItbC1hSGdtS3hpdVY5cHFpeHRFSGdOdDkzVHdoSXVUdXhJa0RpMndxLXBIMHh2WEdGV05hdWd4R0lTVVNwN1lmaGxvNVBjdHQydFctMHFiQ1VJc0hEYUVTdVHSAd4BQVVfeXFMTUtXME9Rdl9QejRqOUxnSXYyLUdUVEtaZkN5dWVwZWotLUVFNXZfaHlZRjFnRHZ3NGhuMFdmbnJiNUZEOWRVLW1WRHpWUXJrQ1UzQ0pGb2Iydm1IYzM3UVpvX2tlWU5sVmNEWUhiX0JDblVsQUR4by1oN0dDcE1BWGlkRTJSLWwtYUhnbUt4aXVWOXBxaXh0RUhnTnQ5M1R3aEl1VHV4SWtEaTJ3cS1wSDB4dlhHRldOYXVneEdJU1VTcDdZZmhsbzVQY3R0MnRXLTBxYkNVSXNIRGFFU3VR?oc=5",
-   "kind": "headline",
-   "status": "watching: price has not confirmed yet",
-   "px0": 29.94,
-   "px": 29.54,
-   "move_pct": -1.34
-  },
-  {
-   "id": "N062112-5",
-   "t": "06:21:12",
-   "ts": 1795740672.320203,
-   "pub": "05:59",
-   "lag_s": 1296,
-   "symbol": "SWARAJENG",
-   "tone": "positive",
-   "score": 1.5,
-   "emotion": "Optimism",
-   "why": [
-    "nod"
-   ],
-   "headline": "Swaraj Suiting Limited Gets In-Principle Nod for Rs 174.20 Crore - Multibagg AI",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNXlvSkUwTzQxVnoxaUFPZkx1cGRlVzFESnAwcEFtbTlhbkpWaFVLMmd4Y2V6bDZrRUNXNlIxYzNhcG1MMkM4d2s1TjZqZE5mdmlhYkw3aWV2UXpIMnp2UW9xMEdyaUxJbDczcVVOVFVYb1lfbGxCTjMwNEppcGEzUG5kYWg2OFplV3IwVVhxWHlEY0x3UnhuZk9QYkFBN1NrM19jaGdlQ2k0LTNobzJZYUZhZ2h0QQ?oc=5",
-   "kind": "headline",
-   "status": "skipped: the AI analyst doubted it",
-   "px0": 3434.7,
-   "px": 3465.5,
-   "move_pct": 0.9,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Headline names Swaraj Suiting, a different company; price barely moved."
-   }
-  },
-  {
-   "id": "N061105-4",
-   "t": "06:11:05",
-   "ts": 1795740065.533821,
-   "pub": "06:08",
-   "lag_s": 154,
-   "symbol": "GOPAL",
-   "tone": "positive",
-   "score": 5.2,
-   "emotion": "Euphoria",
-   "why": [
-    "revenue jumps",
-    "surges"
-   ],
-   "headline": "Gopal Snacks Ltd (NSE:GOPAL) (Q2 2027) Earnings Call Highlights: Revenue Jumps 22.9% as EBITDA Surges 72% - GuruFocus",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPTW8zRlpjOFVPVG9CUVJVekM4ZVFhUV80MHJlSVpLcUwzWDdtTUptQU5pcUREekVlRjlsY2k3R04wb2ptUUxtUWVLR1BlQ0RSdWZtSWhiT2dKRk9XckFPc0lUVkI0SmZkWThfOFJWdG1iV3lfakFWSm9RUlFIMmFFNGlGNjNBZS1PZ0RTbGx5cXA0TzZiXzR4LW9jcElkMTJhLThET0JfQW9UUjMxTERxRzFqN05BSGdwNlBqV3FRUjdIVHU4VkxMS3hRbm0wUGN0?oc=5",
-   "kind": "headline",
-   "status": "price agrees: hunters checking the entry rule",
-   "px0": 267.05,
-   "px": 271.5,
-   "move_pct": 1.67
-  },
-  {
-   "id": "N004920-3",
-   "t": "00:49:20",
-   "ts": 1795720760.689299,
-   "pub": "00:47",
-   "lag_s": 114,
-   "symbol": "SWARAJENG",
-   "tone": "positive",
-   "score": 2,
-   "emotion": "Optimism",
-   "why": [
-    "approval"
-   ],
-   "headline": "Swaraj Suiting gets in-principle approval for preferential issue of securities - scanx.trade",
-   "source": "Google News",
-   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNFhnU0xERHZsTExNZThaOW5EaV9valMwUldNNm1yWUNuVExxZnk3aXVjWjVscjlUUTlYVmN2WDlZeXRjVUNBMFQwOWRrZTE3UXFZWEpUS2pIZF90b09FOXNLTVJUMHRpYnpZZXJvaHJPVm9PZzhBSi0wdndZa1Zaem9IUERyRnFqR0lQZ211MGg1bUZNaEcwaGNVSEJZTDJBYjZGZnMwNWdoMy0tYzdwMjdpcElPaHJ6OGM0TDczM2ZzWVk?oc=5",
-   "kind": "headline",
-   "status": "skipped: the AI analyst doubted it",
-   "px0": 3434.7,
-   "px": 3465.5,
-   "move_pct": 0.9,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Headline names Swaraj Suiting, a different company; price barely moved."
-   }
-  },
-  {
-   "id": "N000400-2",
-   "t": "00:04:00",
-   "ts": 1795718040.587464,
-   "pub": "22:44",
-   "lag_s": 4782,
-   "symbol": "CEINSYS",
-   "tone": "positive",
-   "score": 2.5,
-   "emotion": "Optimism",
-   "why": [
-    "filing: positive"
-   ],
-   "headline": "CEINSYS: Amendment(s)",
-   "source": "NSE filing",
-   "link": "https://nsearchives.nseindia.in/corporate/CEINSYSTECH_26112026224025_SEintimationofJVExtension26112026.pdf",
-   "kind": "filing",
-   "status": "price agrees: hunters checking the entry rule",
-   "px0": 630.0,
-   "px": 673.0,
-   "move_pct": 6.83
-  },
-  {
-   "id": "N000400-1",
-   "t": "00:04:00",
-   "ts": 1795718040.587464,
-   "pub": "23:09",
-   "lag_s": 3292,
-   "symbol": "SUPRIYA",
-   "tone": "positive",
-   "score": 3,
-   "emotion": "Optimism",
-   "why": [
-    "buyback"
-   ],
-   "headline": "Buyback alert! Supriya Lifescience sets December 2 board meeting to consider share buyback; details here",
-   "source": "Mint",
-   "link": "https://www.livemint.com/market/stock-market-news/buyback-alert-supriya-lifescience-sets-december-2-board-meeting-to-consider-share-buyback-details-here-11795714356991.html",
-   "kind": "headline",
-   "status": "skipped: the AI analyst doubted it",
-   "px0": 633.55,
-   "px": 650.0,
-   "move_pct": 2.6,
-   "ai": {
-    "verdict": "doubt",
-    "why": "Buyback only being mulled, rally already happened and price is down."
-   }
   }
  ],
  "stats": {
-  "last_hour": 5,
-  "positive": 5,
-  "negative": 0,
-  "today": 61,
+  "last_hour": 3,
+  "positive": 1,
+  "negative": 2,
+  "today": 97,
   "median_lag_min": 6.8,
-  "new_this_scan": 1
+  "new_this_scan": 0
  }
 }
