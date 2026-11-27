@@ -1,67 +1,72 @@
 {
- "mood": "mixed",
- "brief": "Indian shares are subdued, with the Sensex slipping and the Nifty flat as IT stocks fall while metals and Titan gain. Concerns include elevated oil prices weighing on Indian bonds and scrutiny of the Tata Steel and APL Apollo deal.",
+ "mood": "bearish",
+ "brief": "Indian shares are weak, with the Sensex down about 700 points as Middle East tensions persist and Nifty expiry looms. Global tech worries, a strong dollar near a 22-month peak and a hawkish Fed outlook add pressure.",
  "themes": [
-  "IT stocks fall, metals gain",
-  "Tata Steel-APL Apollo deal under scrutiny",
-  "Oil prices weigh on bonds",
-  "Global tech rout and Nvidia worries"
+  "Sensex falls on Middle East tensions",
+  "Tech and AI worries deepen",
+  "Dollar near 22-month peak",
+  "Mahanadi Coalfields lists at a discount"
  ],
  "companies": [
   {
-   "name": "Titan",
-   "tone": "positive",
-   "why": "Gains while the broader market is subdued"
+   "name": "Mahanadi Coalfields",
+   "tone": "negative",
+   "why": "Lists at 2% discount to IPO price"
   },
   {
-   "name": "Tata Steel",
-   "tone": "negative",
-   "why": "APL Apollo deal called ugly; Sebi may scrutinise"
-  },
-  {
-   "name": "APL Apollo",
-   "tone": "negative",
-   "why": "Deal faces scrutiny over related-party and shareholder worries"
+   "name": "Coal India",
+   "tone": "neutral",
+   "why": "Parent of Mahanadi Coalfields, which listed weak"
   },
   {
    "name": "Waaree Renewable",
    "tone": "positive",
-   "why": "Rises 14% after 120-MWp EPC order"
-  },
-  {
-   "name": "HDFC Bank",
-   "tone": "negative",
-   "why": "Slips to 2.5-year low on legal, leadership woes"
-  },
-  {
-   "name": "Zydus Lifesciences",
-   "tone": "negative",
-   "why": "Dips 3% on USFDA complete response letter"
-  },
-  {
-   "name": "BEML",
-   "tone": "positive",
-   "why": "Jumps 7% in the Nifty 500"
+   "why": "Stock in focus after 14% jump on order"
   },
   {
    "name": "Jupiter Wagons",
    "tone": "negative",
-   "why": "Falls 5.7% after two-day rally"
+   "why": "Falls 7.5% after 29% two-day surge"
   },
   {
-   "name": "IDFC First Bank",
+   "name": "Supriya Lifescience",
    "tone": "positive",
-   "why": "Gains 3% and nears 52-week high"
+   "why": "Soars 9% as firm mulls first buyback"
+  },
+  {
+   "name": "HEG",
+   "tone": "negative",
+   "why": "Hits lower circuit after demerger listing"
+  },
+  {
+   "name": "Swiggy",
+   "tone": "negative",
+   "why": "Instamart to lay off 340 employees"
+  },
+  {
+   "name": "HDFC Bank",
+   "tone": "positive",
+   "why": "JPMorgan bullish on it for 2027"
+  },
+  {
+   "name": "State Bank of India",
+   "tone": "positive",
+   "why": "JPMorgan bullish on it for 2027"
+  },
+  {
+   "name": "Sun TV Network",
+   "tone": "positive",
+   "why": "Among stocks closing above VWAP"
   }
  ],
- "global": "Nvidia has fallen about 35% from its record high and the Nasdaq is in a correction, weighing on global tech sentiment.",
+ "global": "Tech stocks are set for their worst month in four years, and the dollar lingers near a 22-month peak as AI worries simmer.",
  "risks": [
-  "IT selling may drag the index",
-  "Elevated oil prices fan inflation worries",
-  "Global tech rout could spill into Indian markets"
+  "Middle East tensions and oil moves",
+  "Hawkish Fed poised to raise rates",
+  "Global tech sell-off spreading to Indian IT"
  ],
- "time": "27 Nov 11:21",
- "at": 1795758691.009659,
+ "time": "27 Nov 12:21",
+ "at": 1795762282.027541,
  "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "n": 40

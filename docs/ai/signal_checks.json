@@ -1,12 +1,12 @@
 {
- "time": "27 Nov 11:21",
- "at": 1795758691.009659,
+ "time": "27 Nov 12:21",
+ "at": 1795762282.027541,
  "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "checks": {
   "MCX": {
    "verdict": "doubt",
-   "why": "Commodity price story, not MCX-specific; already doubted earlier."
+   "why": "Commodity price story, not MCX-specific; doubted in earlier rounds."
   },
   "URBANCO": {
    "verdict": "doubt",
@@ -34,15 +34,43 @@
   },
   "SHYAMMETL": {
    "verdict": "doubt",
-   "why": "General update with no detail; price has not moved."
+   "why": "General update with no detail; materiality unknown."
   },
   "WAAREERTL": {
    "verdict": "doubt",
-   "why": "Order win is specific, but the 14% jump is priced in and price is flat."
+   "why": "Order win jump of 14% is already priced in."
   },
   "IDFCFIRSTB": {
    "verdict": "doubt",
    "why": "Move already happened; price is down, not confirming."
+  },
+  "JWL": {
+   "verdict": "doubt",
+   "why": "Headlines report a fall after a surge; price barely moved, no fresh news."
+  },
+  "SUPRIYA": {
+   "verdict": "doubt",
+   "why": "Buyback only being mulled, rally already happened and price is down."
+  },
+  "GRAPHITE": {
+   "verdict": "doubt",
+   "why": "Demerger listing mechanics, not a clear company signal; price barely moved."
+  },
+  "DIXON": {
+   "verdict": "doubt",
+   "why": "Explainer on a rally that already happened; price flat."
+  },
+  "SOLARINDS": {
+   "verdict": "doubt",
+   "why": "Explainer after a 6% rally; move already priced in."
+  },
+  "COFORGE": {
+   "verdict": "doubt",
+   "why": "Explainer after the rally; price has barely moved since."
+  },
+  "AVALON": {
+   "verdict": "doubt",
+   "why": "Explainer after the rally; price moved down, not confirming."
   }
  }
 }
