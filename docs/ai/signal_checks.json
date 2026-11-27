@@ -1,6 +1,6 @@
 {
- "time": "27 Nov 15:20",
- "at": 1795773048.626953,
+ "time": "27 Nov 16:21",
+ "at": 1795776680.239108,
  "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "checks": {
@@ -114,7 +114,7 @@
   },
   "JAIBALAJI": {
    "verdict": "doubt",
-   "why": "Resignation filing gives no detail on who left; price is up."
+   "why": "Resignation filing without detail; price is up, not confirming."
   },
   "PROZONER": {
    "verdict": "doubt",
@@ -123,6 +123,18 @@
   "KEI": {
    "verdict": "doubt",
    "why": "Routine stock option grant; price is down, not confirming."
+  },
+  "AFIL": {
+   "verdict": "doubt",
+   "why": "Filing gives no detail on the action; price has not moved."
+  },
+  "SEPC": {
+   "verdict": "doubt",
+   "why": "Independent director resigned for professional commitments; price flat, modest impact."
+  },
+  "PERSISTENT": {
+   "verdict": "doubt",
+   "why": "Routine ESOP trust share purchase, not a material business event."
   }
  }
 }
