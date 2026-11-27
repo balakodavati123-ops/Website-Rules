@@ -98,6 +98,33 @@ The best, traded as a deep in-the-money NIFTY option (estimate: 0.8 of the index
 - **Realistic return:** about 25–30% a year, with about a 20% drawdown. Not 70–80%.
 - **The option figures are an estimate.** They must be checked on real option prices before any money goes in.
 
+### Real option prices with your 2-lot rule (Oct 2024 to Nov 2026, every NIFTY weekly option, 1-minute candles)
+
+Each trade buys at most 2 lots: calls on up signals, puts on down signals. Each trade uses the nearest weekly expiry with 3 or more trading days left, rolled before expiry day. The figures include slippage and full charges, and the account starts at ₹1,00,000.
+
+| Strategy · structure | Trades | Won | PF | Net | Without the 5 best trades | Worst drawdown | Lowest account |
+|---|---|---|---|---|---|---|---|
+| MACD 2-hourly · **debit spread** (buy 1, sell 1 lot 200 out) | 103 | 38% | 1.58 | +₹92k | **+₹8.5k** | ₹23k | ₹88.8k |
+| EMA 13/34 hourly · **debit spread** | 95 | 41% | 1.34 | +₹46k | −₹11k | ₹38k | ₹98.6k |
+| EMA 9/21 + ADX hourly · **debit spread** | 90 | 38% | 1.35 | +₹44k | −₹17k | ₹26k | ₹93.8k |
+| EMA 13/34 hourly · **1 lot + 1 opposite lot 200 out** (hedged pair) | 95 | 35% | 1.71 | +₹2.15 L | −₹98k | ₹69k | ₹64k |
+| EMA 9/26 hourly · **2 lots at the money** | 132 | 34% | 1.68 | +₹6.18 L | −₹1.37 L | ₹1.87 L | ₹95k |
+| EMA 13/34 hourly · **2 lots at the money** | 95 | 37% | 1.84 | +₹5.77 L | −₹1.54 L | ₹1.61 L | ₹87k |
+
+- **Debit spreads fit ₹1 lakh.** About ₹5,500 is at risk per trade (at most ₹9,500), and the worst drawdown was ₹23–38k. The edge is modest: roughly ₹20–45k a year.
+- **2 lots of bought options made the most**, ₹4–7 lakh in two years. But the drawdowns (₹1.6–2.2 lakh) exceed a ₹1 lakh account, and the profit came from a handful of big trend moves. Without the 5 best trades, every one of them loses. With ₹1 lakh, use 1 lot or a spread.
+- **Your intraday EMA crossover on real prices** (5- and 15-minute, every structure): profit factor 0.36–0.98. It lost money in every version.
+- **Both directions (1 call + 1 put):**
+
+  | Entered | Profit factor |
+  |---|---|
+  | Every day | 0.52–0.63 |
+  | After a narrowest-range day | 0.67–1.00 |
+  | After a quiet first hour | 0.54–0.61 |
+
+  There is no edge: time decay wins unless a big move is known in advance.
+- **Hedging pays on multi-day trends, not intraday.** The opposite protective option helped the multi-day trades (smaller drawdowns), but made intraday trades much worse (profit factor 0.48–0.65), because over a few hours the protection only costs time value.
+
 ### About "70–80% profits" on social media
 - Posts show winners and leave out the losers.
 - SEBI's study: **91% of individual F&O traders lost money in FY24**, and 93% over FY22–FY24.

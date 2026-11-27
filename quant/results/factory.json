@@ -3,27 +3,27 @@
   {
    "agent": 1,
    "strategies": 463,
-   "seconds": 4
+   "seconds": 6
   },
   {
    "agent": 2,
    "strategies": 463,
-   "seconds": 5
+   "seconds": 6
   },
   {
    "agent": 3,
    "strategies": 462,
-   "seconds": 4
+   "seconds": 6
   },
   {
    "agent": 4,
    "strategies": 462,
-   "seconds": 3
+   "seconds": 6
   },
   {
    "agent": 5,
    "strategies": 462,
-   "seconds": 4
+   "seconds": 6
   }
  ],
  "data": {
@@ -5382,7 +5382,7 @@
    }
   }
  ],
- "generatedAt": "2026-11-26T19:19:05.279Z",
+ "generatedAt": "2026-11-27T03:44:42.763Z",
  "swing": {
   "periods": {
    "train": [
@@ -9126,6 +9126,4411 @@
       ]
      }
     }
+   }
+  ]
+ },
+ "options": {
+  "period": "2024-10-03 to 2026-11-23 (expired weekly options)",
+  "status": "VERIFIED_HISTORICAL: Upstox expired NIFTY weekly option 1-minute candles; index signals from the NIFTY 1-minute database",
+  "fallbacks": 0,
+  "rows": [
+   {
+    "id": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, at the money · signal exits",
+    "signal": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 132,
+     "winRate": 34.1,
+     "profitFactor": 1.68,
+     "net": 618320,
+     "avg": 4684,
+     "worst": -33569,
+     "best": 250534,
+     "maxDrawdown": 187053,
+     "lowestEquity": 95116,
+     "endEquity": 718320,
+     "avgOutlay": 24718,
+     "maxOutlay": 61257,
+     "charges": 15826,
+     "rolls": 30,
+     "top5": 755117,
+     "top5SharePct": 122,
+     "withoutTop5": -136797,
+     "longestLosingRun": 10,
+     "monthsUp": 15,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 2.06,
+      "net": 29498
+     },
+     "2025": {
+      "trades": 63,
+      "profitFactor": 1.88,
+      "net": 344983
+     },
+     "2026": {
+      "trades": 56,
+      "profitFactor": 1.49,
+      "net": 243839
+     }
+    }
+   },
+   {
+    "id": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, at the money · signal exits + 40% premium stop",
+    "signal": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 132,
+     "winRate": 31.1,
+     "profitFactor": 1.68,
+     "net": 578616,
+     "avg": 4383,
+     "worst": -29467,
+     "best": 234893,
+     "maxDrawdown": 189194,
+     "lowestEquity": 60163,
+     "endEquity": 678616,
+     "avgOutlay": 24646,
+     "maxOutlay": 61257,
+     "charges": 14839,
+     "rolls": 20,
+     "top5": 749949,
+     "top5SharePct": 130,
+     "withoutTop5": -171333,
+     "longestLosingRun": 10,
+     "monthsUp": 14,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 1.69,
+      "net": 16322
+     },
+     "2025": {
+      "trades": 63,
+      "profitFactor": 1.9,
+      "net": 333850
+     },
+     "2026": {
+      "trades": 56,
+      "profitFactor": 1.5,
+      "net": 228445
+     }
+    }
+   },
+   {
+    "id": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, 100 in the money · signal exits",
+    "signal": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 132,
+     "winRate": 36.4,
+     "profitFactor": 1.64,
+     "net": 667802,
+     "avg": 5059,
+     "worst": -35196,
+     "best": 266056,
+     "maxDrawdown": 224790,
+     "lowestEquity": 91767,
+     "endEquity": 767802,
+     "avgOutlay": 31758,
+     "maxOutlay": 67490,
+     "charges": 18032,
+     "rolls": 30,
+     "top5": 794680,
+     "top5SharePct": 119,
+     "withoutTop5": -126879,
+     "longestLosingRun": 9,
+     "monthsUp": 16,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 1.92,
+      "net": 35191
+     },
+     "2025": {
+      "trades": 63,
+      "profitFactor": 1.94,
+      "net": 404865
+     },
+     "2026": {
+      "trades": 56,
+      "profitFactor": 1.39,
+      "net": 227746
+     }
+    }
+   },
+   {
+    "id": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, 100 in the money · signal exits + 40% premium stop",
+    "signal": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 132,
+     "winRate": 32.6,
+     "profitFactor": 1.51,
+     "net": 541037,
+     "avg": 4099,
+     "worst": -35196,
+     "best": 246824,
+     "maxDrawdown": 263640,
+     "lowestEquity": 51176,
+     "endEquity": 641037,
+     "avgOutlay": 31713,
+     "maxOutlay": 67490,
+     "charges": 16900,
+     "rolls": 21,
+     "top5": 788452,
+     "top5SharePct": 146,
+     "withoutTop5": -247415,
+     "longestLosingRun": 10,
+     "monthsUp": 14,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 1.55,
+      "net": 19015
+     },
+     "2025": {
+      "trades": 63,
+      "profitFactor": 1.74,
+      "net": 338271
+     },
+     "2026": {
+      "trades": 56,
+      "profitFactor": 1.33,
+      "net": 183752
+     }
+    }
+   },
+   {
+    "id": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 1 lot + 1 opposite lot 200 out (hedge) · signal exits",
+    "signal": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 132,
+     "winRate": 30.3,
+     "profitFactor": 1.57,
+     "net": 222048,
+     "avg": 1682,
+     "worst": -23767,
+     "best": 105523,
+     "maxDrawdown": 103986,
+     "lowestEquity": 67033,
+     "endEquity": 322048,
+     "avgOutlay": 19519,
+     "maxOutlay": 55051,
+     "charges": 21361,
+     "rolls": 30,
+     "top5": 335738,
+     "top5SharePct": 151,
+     "withoutTop5": -113690,
+     "longestLosingRun": 10,
+     "monthsUp": 15,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 1.25,
+      "net": 2599
+     },
+     "2025": {
+      "trades": 63,
+      "profitFactor": 1.24,
+      "net": 53270
+     },
+     "2026": {
+      "trades": 56,
+      "profitFactor": 2.04,
+      "net": 166180
+     }
+    }
+   },
+   {
+    "id": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 1 lot + 1 opposite lot 200 out (hedge) · signal exits + 40% premium stop",
+    "signal": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 132,
+     "winRate": 28,
+     "profitFactor": 1.58,
+     "net": 219733,
+     "avg": 1665,
+     "worst": -15775,
+     "best": 105523,
+     "maxDrawdown": 86384,
+     "lowestEquity": 49927,
+     "endEquity": 319733,
+     "avgOutlay": 19454,
+     "maxOutlay": 55051,
+     "charges": 20328,
+     "rolls": 22,
+     "top5": 335738,
+     "top5SharePct": 153,
+     "withoutTop5": -116006,
+     "longestLosingRun": 10,
+     "monthsUp": 14,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 0.59,
+      "net": -4802
+     },
+     "2025": {
+      "trades": 63,
+      "profitFactor": 1.29,
+      "net": 61167
+     },
+     "2026": {
+      "trades": 56,
+      "profitFactor": 2.07,
+      "net": 163368
+     }
+    }
+   },
+   {
+    "id": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · debit spread, 200 wide · signal exits",
+    "signal": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 131,
+     "winRate": 41.2,
+     "profitFactor": 1.24,
+     "net": 38946,
+     "avg": 297,
+     "worst": -5234,
+     "best": 13039,
+     "maxDrawdown": 34940,
+     "lowestEquity": 98409,
+     "endEquity": 138946,
+     "avgOutlay": 5350,
+     "maxOutlay": 9459,
+     "charges": 21254,
+     "rolls": 29,
+     "top5": 57485,
+     "top5SharePct": 148,
+     "withoutTop5": -18539,
+     "longestLosingRun": 7,
+     "monthsUp": 15,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 1.37,
+      "net": 2507
+     },
+     "2025": {
+      "trades": 62,
+      "profitFactor": 1.47,
+      "net": 34029
+     },
+     "2026": {
+      "trades": 56,
+      "profitFactor": 1.03,
+      "net": 2410
+     }
+    }
+   },
+   {
+    "id": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · debit spread, 200 wide · signal exits + 40% premium stop",
+    "signal": "EMA 9/26, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 131,
+     "winRate": 35.9,
+     "profitFactor": 1.06,
+     "net": 10389,
+     "avg": 79,
+     "worst": -5018,
+     "best": 13039,
+     "maxDrawdown": 44076,
+     "lowestEquity": 86414,
+     "endEquity": 110389,
+     "avgOutlay": 5344,
+     "maxOutlay": 9459,
+     "charges": 20114,
+     "rolls": 21,
+     "top5": 59125,
+     "top5SharePct": 569,
+     "withoutTop5": -48736,
+     "longestLosingRun": 7,
+     "monthsUp": 13,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 1.14,
+      "net": 913
+     },
+     "2025": {
+      "trades": 62,
+      "profitFactor": 1.2,
+      "net": 15849
+     },
+     "2026": {
+      "trades": 56,
+      "profitFactor": 0.93,
+      "net": -6373
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+ · 2 lots, at the money · signal exits",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 90,
+     "winRate": 32.2,
+     "profitFactor": 1.64,
+     "net": 438530,
+     "avg": 4873,
+     "worst": -25721,
+     "best": 237003,
+     "maxDrawdown": 176607,
+     "lowestEquity": 71271,
+     "endEquity": 538530,
+     "avgOutlay": 25397,
+     "maxOutlay": 60964,
+     "charges": 11232,
+     "rolls": 24,
+     "top5": 657182,
+     "top5SharePct": 150,
+     "withoutTop5": -218652,
+     "longestLosingRun": 10,
+     "monthsUp": 10,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 10,
+      "profitFactor": 0.54,
+      "net": -19873
+     },
+     "2025": {
+      "trades": 44,
+      "profitFactor": 2.13,
+      "net": 322031
+     },
+     "2026": {
+      "trades": 36,
+      "profitFactor": 1.39,
+      "net": 136373
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+ · 2 lots, at the money · signal exits + 40% premium stop",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 90,
+     "winRate": 27.8,
+     "profitFactor": 1.63,
+     "net": 399491,
+     "avg": 4439,
+     "worst": -25721,
+     "best": 233334,
+     "maxDrawdown": 180674,
+     "lowestEquity": 40788,
+     "endEquity": 499491,
+     "avgOutlay": 25323,
+     "maxOutlay": 60964,
+     "charges": 10556,
+     "rolls": 17,
+     "top5": 661861,
+     "top5SharePct": 166,
+     "withoutTop5": -262371,
+     "longestLosingRun": 10,
+     "monthsUp": 9,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 10,
+      "profitFactor": 0.46,
+      "net": -22325
+     },
+     "2025": {
+      "trades": 44,
+      "profitFactor": 2.08,
+      "net": 296661
+     },
+     "2026": {
+      "trades": 36,
+      "profitFactor": 1.39,
+      "net": 125155
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+ · 2 lots, 100 in the money · signal exits",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 90,
+     "winRate": 33.3,
+     "profitFactor": 1.67,
+     "net": 516618,
+     "avg": 5740,
+     "worst": -28964,
+     "best": 252141,
+     "maxDrawdown": 196974,
+     "lowestEquity": 71103,
+     "endEquity": 616618,
+     "avgOutlay": 32511,
+     "maxOutlay": 68344,
+     "charges": 12870,
+     "rolls": 24,
+     "top5": 705776,
+     "top5SharePct": 137,
+     "withoutTop5": -189158,
+     "longestLosingRun": 10,
+     "monthsUp": 10,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 10,
+      "profitFactor": 0.55,
+      "net": -22336
+     },
+     "2025": {
+      "trades": 44,
+      "profitFactor": 2.18,
+      "net": 381234
+     },
+     "2026": {
+      "trades": 36,
+      "profitFactor": 1.4,
+      "net": 157719
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+ · 2 lots, 100 in the money · signal exits + 40% premium stop",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 90,
+     "winRate": 30,
+     "profitFactor": 1.55,
+     "net": 419670,
+     "avg": 4663,
+     "worst": -28964,
+     "best": 244906,
+     "maxDrawdown": 210904,
+     "lowestEquity": 36047,
+     "endEquity": 519670,
+     "avgOutlay": 32496,
+     "maxOutlay": 68344,
+     "charges": 12215,
+     "rolls": 19,
+     "top5": 709308,
+     "top5SharePct": 169,
+     "withoutTop5": -289638,
+     "longestLosingRun": 10,
+     "monthsUp": 9,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 10,
+      "profitFactor": 0.6,
+      "net": -18324
+     },
+     "2025": {
+      "trades": 44,
+      "profitFactor": 1.98,
+      "net": 324972
+     },
+     "2026": {
+      "trades": 36,
+      "profitFactor": 1.3,
+      "net": 113022
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+ · 1 lot + 1 opposite lot 200 out (hedge) · signal exits",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 90,
+     "winRate": 27.8,
+     "profitFactor": 1.55,
+     "net": 145839,
+     "avg": 1620,
+     "worst": -22141,
+     "best": 96645,
+     "maxDrawdown": 82497,
+     "lowestEquity": 82267,
+     "endEquity": 245839,
+     "avgOutlay": 19992,
+     "maxOutlay": 55253,
+     "charges": 15070,
+     "rolls": 24,
+     "top5": 280444,
+     "top5SharePct": 192,
+     "withoutTop5": -134605,
+     "longestLosingRun": 9,
+     "monthsUp": 9,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 10,
+      "profitFactor": 0.36,
+      "net": -10874
+     },
+     "2025": {
+      "trades": 44,
+      "profitFactor": 1.64,
+      "net": 84404
+     },
+     "2026": {
+      "trades": 36,
+      "profitFactor": 1.62,
+      "net": 72309
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+ · 1 lot + 1 opposite lot 200 out (hedge) · signal exits + 40% premium stop",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 90,
+     "winRate": 25.6,
+     "profitFactor": 1.5,
+     "net": 134478,
+     "avg": 1494,
+     "worst": -16265,
+     "best": 97881,
+     "maxDrawdown": 87000,
+     "lowestEquity": 74172,
+     "endEquity": 234478,
+     "avgOutlay": 19901,
+     "maxOutlay": 55253,
+     "charges": 14141,
+     "rolls": 17,
+     "top5": 281681,
+     "top5SharePct": 209,
+     "withoutTop5": -147203,
+     "longestLosingRun": 9,
+     "monthsUp": 8,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 10,
+      "profitFactor": 0.36,
+      "net": -10874
+     },
+     "2025": {
+      "trades": 44,
+      "profitFactor": 1.6,
+      "net": 81444
+     },
+     "2026": {
+      "trades": 36,
+      "profitFactor": 1.55,
+      "net": 63908
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+ · debit spread, 200 wide · signal exits",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 90,
+     "winRate": 37.8,
+     "profitFactor": 1.35,
+     "net": 43830,
+     "avg": 487,
+     "worst": -4356,
+     "best": 15711,
+     "maxDrawdown": 26382,
+     "lowestEquity": 93784,
+     "endEquity": 143830,
+     "avgOutlay": 5532,
+     "maxOutlay": 8522,
+     "charges": 15207,
+     "rolls": 24,
+     "top5": 61134,
+     "top5SharePct": 139,
+     "withoutTop5": -17304,
+     "longestLosingRun": 8,
+     "monthsUp": 12,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 10,
+      "profitFactor": 0.34,
+      "net": -5837
+     },
+     "2025": {
+      "trades": 44,
+      "profitFactor": 1.84,
+      "net": 46765
+     },
+     "2026": {
+      "trades": 36,
+      "profitFactor": 1.05,
+      "net": 2903
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+ · debit spread, 200 wide · signal exits + 40% premium stop",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · ADX 20+",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 90,
+     "winRate": 33.3,
+     "profitFactor": 1.22,
+     "net": 27474,
+     "avg": 305,
+     "worst": -3550,
+     "best": 15711,
+     "maxDrawdown": 29368,
+     "lowestEquity": 94486,
+     "endEquity": 127474,
+     "avgOutlay": 5532,
+     "maxOutlay": 8522,
+     "charges": 14797,
+     "rolls": 21,
+     "top5": 62771,
+     "top5SharePct": 228,
+     "withoutTop5": -35297,
+     "longestLosingRun": 8,
+     "monthsUp": 11,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 10,
+      "profitFactor": 0.36,
+      "net": -5463
+     },
+     "2025": {
+      "trades": 44,
+      "profitFactor": 1.69,
+      "net": 38635
+     },
+     "2026": {
+      "trades": 36,
+      "profitFactor": 0.9,
+      "net": -5699
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, at the money · signal exits",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 153,
+     "winRate": 30.7,
+     "profitFactor": 1.5,
+     "net": 543312,
+     "avg": 3551,
+     "worst": -29467,
+     "best": 237003,
+     "maxDrawdown": 168397,
+     "lowestEquity": 24503,
+     "endEquity": 643312,
+     "avgOutlay": 25035,
+     "maxOutlay": 60964,
+     "charges": 18070,
+     "rolls": 33,
+     "top5": 771340,
+     "top5SharePct": 142,
+     "withoutTop5": -228028,
+     "longestLosingRun": 10,
+     "monthsUp": 10,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.44,
+      "net": -44248
+     },
+     "2025": {
+      "trades": 73,
+      "profitFactor": 1.72,
+      "net": 332931
+     },
+     "2026": {
+      "trades": 63,
+      "profitFactor": 1.47,
+      "net": 254629
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, at the money · signal exits + 40% premium stop",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 153,
+     "winRate": 28.1,
+     "profitFactor": 1.53,
+     "net": 533757,
+     "avg": 3489,
+     "worst": -29467,
+     "best": 233334,
+     "maxDrawdown": 184480,
+     "lowestEquity": 3965,
+     "endEquity": 633757,
+     "avgOutlay": 24944,
+     "maxOutlay": 60964,
+     "charges": 17124,
+     "rolls": 23,
+     "top5": 769063,
+     "top5SharePct": 144,
+     "withoutTop5": -235306,
+     "longestLosingRun": 10,
+     "monthsUp": 12,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.43,
+      "net": -39537
+     },
+     "2025": {
+      "trades": 73,
+      "profitFactor": 1.76,
+      "net": 328402
+     },
+     "2026": {
+      "trades": 63,
+      "profitFactor": 1.49,
+      "net": 244891
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, 100 in the money · signal exits",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 153,
+     "winRate": 33.3,
+     "profitFactor": 1.53,
+     "net": 643395,
+     "avg": 4205,
+     "worst": -35196,
+     "best": 252141,
+     "maxDrawdown": 185558,
+     "lowestEquity": 15137,
+     "endEquity": 743395,
+     "avgOutlay": 32149,
+     "maxOutlay": 68344,
+     "charges": 20707,
+     "rolls": 33,
+     "top5": 815976,
+     "top5SharePct": 127,
+     "withoutTop5": -172582,
+     "longestLosingRun": 8,
+     "monthsUp": 11,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.42,
+      "net": -56439
+     },
+     "2025": {
+      "trades": 73,
+      "profitFactor": 1.81,
+      "net": 412025
+     },
+     "2026": {
+      "trades": 63,
+      "profitFactor": 1.47,
+      "net": 287809
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, 100 in the money · signal exits + 40% premium stop",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 153,
+     "winRate": 30.7,
+     "profitFactor": 1.46,
+     "net": 547557,
+     "avg": 3579,
+     "worst": -35196,
+     "best": 244906,
+     "maxDrawdown": 209334,
+     "lowestEquity": -9879,
+     "endEquity": 647557,
+     "avgOutlay": 32112,
+     "maxOutlay": 68344,
+     "charges": 19812,
+     "rolls": 26,
+     "top5": 807644,
+     "top5SharePct": 147,
+     "withoutTop5": -260087,
+     "longestLosingRun": 8,
+     "monthsUp": 12,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.48,
+      "net": -44463
+     },
+     "2025": {
+      "trades": 73,
+      "profitFactor": 1.71,
+      "net": 361086
+     },
+     "2026": {
+      "trades": 63,
+      "profitFactor": 1.38,
+      "net": 230933
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 1 lot + 1 opposite lot 200 out (hedge) · signal exits",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 153,
+     "winRate": 29.4,
+     "profitFactor": 1.37,
+     "net": 163928,
+     "avg": 1071,
+     "worst": -22141,
+     "best": 96645,
+     "maxDrawdown": 117768,
+     "lowestEquity": 52193,
+     "endEquity": 263928,
+     "avgOutlay": 19619,
+     "maxOutlay": 55253,
+     "charges": 24453,
+     "rolls": 33,
+     "top5": 334741,
+     "top5SharePct": 204,
+     "withoutTop5": -170813,
+     "longestLosingRun": 10,
+     "monthsUp": 12,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.51,
+      "net": -10456
+     },
+     "2025": {
+      "trades": 73,
+      "profitFactor": 1.19,
+      "net": 45582
+     },
+     "2026": {
+      "trades": 63,
+      "profitFactor": 1.71,
+      "net": 128802
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 1 lot + 1 opposite lot 200 out (hedge) · signal exits + 40% premium stop",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 153,
+     "winRate": 28.1,
+     "profitFactor": 1.38,
+     "net": 167708,
+     "avg": 1096,
+     "worst": -16265,
+     "best": 97881,
+     "maxDrawdown": 107037,
+     "lowestEquity": 44634,
+     "endEquity": 267708,
+     "avgOutlay": 19551,
+     "maxOutlay": 55253,
+     "charges": 23262,
+     "rolls": 24,
+     "top5": 335977,
+     "top5SharePct": 200,
+     "withoutTop5": -168269,
+     "longestLosingRun": 10,
+     "monthsUp": 11,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.52,
+      "net": -9919
+     },
+     "2025": {
+      "trades": 73,
+      "profitFactor": 1.2,
+      "net": 48218
+     },
+     "2026": {
+      "trades": 63,
+      "profitFactor": 1.71,
+      "net": 129410
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · debit spread, 200 wide · signal exits",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 153,
+     "winRate": 35.9,
+     "profitFactor": 1.18,
+     "net": 36401,
+     "avg": 238,
+     "worst": -5018,
+     "best": 15711,
+     "maxDrawdown": 31847,
+     "lowestEquity": 80918,
+     "endEquity": 136401,
+     "avgOutlay": 5497,
+     "maxOutlay": 8522,
+     "charges": 24653,
+     "rolls": 33,
+     "top5": 64276,
+     "top5SharePct": 177,
+     "withoutTop5": -27875,
+     "longestLosingRun": 7,
+     "monthsUp": 11,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.24,
+      "net": -14791
+     },
+     "2025": {
+      "trades": 73,
+      "profitFactor": 1.52,
+      "net": 47059
+     },
+     "2026": {
+      "trades": 63,
+      "profitFactor": 1.04,
+      "net": 4134
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · debit spread, 200 wide · signal exits + 40% premium stop",
+    "signal": "EMA 9/21, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 153,
+     "winRate": 32.7,
+     "profitFactor": 1.08,
+     "net": 15334,
+     "avg": 100,
+     "worst": -5018,
+     "best": 15711,
+     "maxDrawdown": 45147,
+     "lowestEquity": 83947,
+     "endEquity": 115334,
+     "avgOutlay": 5495,
+     "maxOutlay": 8522,
+     "charges": 23954,
+     "rolls": 28,
+     "top5": 65913,
+     "top5SharePct": 430,
+     "withoutTop5": -50579,
+     "longestLosingRun": 7,
+     "monthsUp": 9,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.28,
+      "net": -12452
+     },
+     "2025": {
+      "trades": 73,
+      "profitFactor": 1.44,
+      "net": 39392
+     },
+     "2026": {
+      "trades": 63,
+      "profitFactor": 0.88,
+      "net": -11606
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, at the money · signal exits",
+    "signal": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 40,
+     "winRate": 27.5,
+     "profitFactor": 0.49,
+     "net": -318917,
+     "avg": -7973,
+     "worst": -89457,
+     "best": 82131,
+     "maxDrawdown": 406443,
+     "lowestEquity": -218917,
+     "endEquity": -218917,
+     "avgOutlay": 25670,
+     "maxOutlay": 50386,
+     "charges": 6979,
+     "rolls": 39,
+     "top5": 257065,
+     "top5SharePct": null,
+     "withoutTop5": -575982,
+     "longestLosingRun": 7,
+     "monthsUp": 8,
+     "months": 21
+    },
+    "byYear": {
+     "2024": {
+      "trades": 2,
+      "profitFactor": 0.62,
+      "net": -2644
+     },
+     "2025": {
+      "trades": 21,
+      "profitFactor": 0.54,
+      "net": -168347
+     },
+     "2026": {
+      "trades": 17,
+      "profitFactor": 0.42,
+      "net": -147926
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, at the money · signal exits + 40% premium stop",
+    "signal": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 41,
+     "winRate": 19.5,
+     "profitFactor": 1.41,
+     "net": 136274,
+     "avg": 3324,
+     "worst": -19789,
+     "best": 219876,
+     "maxDrawdown": 216928,
+     "lowestEquity": 16398,
+     "endEquity": 236274,
+     "avgOutlay": 24757,
+     "maxOutlay": 50386,
+     "charges": 4923,
+     "rolls": 10,
+     "top5": 448726,
+     "top5SharePct": 329,
+     "withoutTop5": -312452,
+     "longestLosingRun": 8,
+     "monthsUp": 6,
+     "months": 21
+    },
+    "byYear": {
+     "2024": {
+      "trades": 2,
+      "profitFactor": 0.86,
+      "net": -672
+     },
+     "2025": {
+      "trades": 21,
+      "profitFactor": 0.96,
+      "net": -7772
+     },
+     "2026": {
+      "trades": 18,
+      "profitFactor": 2.13,
+      "net": 144718
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, 100 in the money · signal exits",
+    "signal": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 39,
+     "winRate": 28.2,
+     "profitFactor": 0.56,
+     "net": -305427,
+     "avg": -7831,
+     "worst": -101754,
+     "best": 87378,
+     "maxDrawdown": 442828,
+     "lowestEquity": -205427,
+     "endEquity": -205427,
+     "avgOutlay": 32709,
+     "maxOutlay": 54674,
+     "charges": 7979,
+     "rolls": 39,
+     "top5": 310402,
+     "top5SharePct": null,
+     "withoutTop5": -615828,
+     "longestLosingRun": 7,
+     "monthsUp": 9,
+     "months": 21
+    },
+    "byYear": {
+     "2024": {
+      "trades": 2,
+      "profitFactor": 0.9,
+      "net": -591
+     },
+     "2025": {
+      "trades": 20,
+      "profitFactor": 0.63,
+      "net": -143433
+     },
+     "2026": {
+      "trades": 17,
+      "profitFactor": 0.45,
+      "net": -161403
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, 100 in the money · signal exits + 40% premium stop",
+    "signal": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 40,
+     "winRate": 20,
+     "profitFactor": 1.52,
+     "net": 195456,
+     "avg": 4886,
+     "worst": -23532,
+     "best": 230691,
+     "maxDrawdown": 180065,
+     "lowestEquity": 52188,
+     "endEquity": 295456,
+     "avgOutlay": 31869,
+     "maxOutlay": 54674,
+     "charges": 5792,
+     "rolls": 12,
+     "top5": 526138,
+     "top5SharePct": 269,
+     "withoutTop5": -330682,
+     "longestLosingRun": 8,
+     "monthsUp": 7,
+     "months": 21
+    },
+    "byYear": {
+     "2024": {
+      "trades": 2,
+      "profitFactor": 0,
+      "net": -10076
+     },
+     "2025": {
+      "trades": 20,
+      "profitFactor": 0.91,
+      "net": -20209
+     },
+     "2026": {
+      "trades": 18,
+      "profitFactor": 2.57,
+      "net": 225741
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter · 1 lot + 1 opposite lot 200 out (hedge) · signal exits",
+    "signal": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 38,
+     "winRate": 28.9,
+     "profitFactor": 0.25,
+     "net": -262139,
+     "avg": -6898,
+     "worst": -75305,
+     "best": 34130,
+     "maxDrawdown": 282126,
+     "lowestEquity": -162139,
+     "endEquity": -162139,
+     "avgOutlay": 19932,
+     "maxOutlay": 39640,
+     "charges": 9414,
+     "rolls": 37,
+     "top5": 76344,
+     "top5SharePct": null,
+     "withoutTop5": -338483,
+     "longestLosingRun": 8,
+     "monthsUp": 5,
+     "months": 21
+    },
+    "byYear": {
+     "2024": {
+      "trades": 2,
+      "profitFactor": 0,
+      "net": -5093
+     },
+     "2025": {
+      "trades": 19,
+      "profitFactor": 0.29,
+      "net": -139216
+     },
+     "2026": {
+      "trades": 17,
+      "profitFactor": 0.22,
+      "net": -117830
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter · 1 lot + 1 opposite lot 200 out (hedge) · signal exits + 40% premium stop",
+    "signal": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 39,
+     "winRate": 20.5,
+     "profitFactor": 0.85,
+     "net": -32928,
+     "avg": -844,
+     "worst": -16164,
+     "best": 92981,
+     "maxDrawdown": 168867,
+     "lowestEquity": -25909,
+     "endEquity": 67072,
+     "avgOutlay": 19006,
+     "maxOutlay": 39640,
+     "charges": 5663,
+     "rolls": 5,
+     "top5": 177965,
+     "top5SharePct": null,
+     "withoutTop5": -210893,
+     "longestLosingRun": 13,
+     "monthsUp": 4,
+     "months": 21
+    },
+    "byYear": {
+     "2024": {
+      "trades": 2,
+      "profitFactor": 0,
+      "net": -4399
+     },
+     "2025": {
+      "trades": 19,
+      "profitFactor": 0.61,
+      "net": -46022
+     },
+     "2026": {
+      "trades": 18,
+      "profitFactor": 1.19,
+      "net": 17494
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter · debit spread, 200 wide · signal exits",
+    "signal": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 40,
+     "winRate": 30,
+     "profitFactor": 0.54,
+     "net": -52180,
+     "avg": -1305,
+     "worst": -11816,
+     "best": 15258,
+     "maxDrawdown": 69785,
+     "lowestEquity": 47820,
+     "endEquity": 47820,
+     "avgOutlay": 5724,
+     "maxOutlay": 10290,
+     "charges": 10032,
+     "rolls": 39,
+     "top5": 45052,
+     "top5SharePct": null,
+     "withoutTop5": -97232,
+     "longestLosingRun": 6,
+     "monthsUp": 9,
+     "months": 21
+    },
+    "byYear": {
+     "2024": {
+      "trades": 2,
+      "profitFactor": null,
+      "net": 1767
+     },
+     "2025": {
+      "trades": 21,
+      "profitFactor": 0.5,
+      "net": -37670
+     },
+     "2026": {
+      "trades": 17,
+      "profitFactor": 0.58,
+      "net": -16277
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter · debit spread, 200 wide · signal exits + 40% premium stop",
+    "signal": "EMA 13/34, 125-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 41,
+     "winRate": 22,
+     "profitFactor": 0.73,
+     "net": -19436,
+     "avg": -474,
+     "worst": -11283,
+     "best": 12692,
+     "maxDrawdown": 36310,
+     "lowestEquity": 63690,
+     "endEquity": 80564,
+     "avgOutlay": 5617,
+     "maxOutlay": 10290,
+     "charges": 7130,
+     "rolls": 13,
+     "top5": 41403,
+     "top5SharePct": null,
+     "withoutTop5": -60839,
+     "longestLosingRun": 8,
+     "monthsUp": 6,
+     "months": 21
+    },
+    "byYear": {
+     "2024": {
+      "trades": 2,
+      "profitFactor": 0,
+      "net": -1781
+     },
+     "2025": {
+      "trades": 21,
+      "profitFactor": 0.35,
+      "net": -32905
+     },
+     "2026": {
+      "trades": 18,
+      "profitFactor": 1.73,
+      "net": 15249
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, at the money · signal exits",
+    "signal": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 95,
+     "winRate": 36.8,
+     "profitFactor": 1.84,
+     "net": 576628,
+     "avg": 6070,
+     "worst": -37777,
+     "best": 242044,
+     "maxDrawdown": 161418,
+     "lowestEquity": 87243,
+     "endEquity": 676628,
+     "avgOutlay": 25004,
+     "maxOutlay": 61961,
+     "charges": 11940,
+     "rolls": 25,
+     "top5": 730276,
+     "top5SharePct": 127,
+     "withoutTop5": -153648,
+     "longestLosingRun": 11,
+     "monthsUp": 14,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 6,
+      "profitFactor": 2.77,
+      "net": 24533
+     },
+     "2025": {
+      "trades": 45,
+      "profitFactor": 2.2,
+      "net": 325520
+     },
+     "2026": {
+      "trades": 44,
+      "profitFactor": 1.57,
+      "net": 226575
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, at the money · signal exits + 40% premium stop",
+    "signal": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 95,
+     "winRate": 30.5,
+     "profitFactor": 1.78,
+     "net": 493676,
+     "avg": 5197,
+     "worst": -37777,
+     "best": 225574,
+     "maxDrawdown": 145708,
+     "lowestEquity": 49727,
+     "endEquity": 593676,
+     "avgOutlay": 24807,
+     "maxOutlay": 61961,
+     "charges": 10916,
+     "rolls": 15,
+     "top5": 719690,
+     "top5SharePct": 146,
+     "withoutTop5": -226014,
+     "longestLosingRun": 11,
+     "monthsUp": 13,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 6,
+      "profitFactor": 1.82,
+      "net": 9483
+     },
+     "2025": {
+      "trades": 45,
+      "profitFactor": 1.91,
+      "net": 261190
+     },
+     "2026": {
+      "trades": 44,
+      "profitFactor": 1.67,
+      "net": 223003
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, 100 in the money · signal exits",
+    "signal": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 95,
+     "winRate": 35.8,
+     "profitFactor": 1.79,
+     "net": 622619,
+     "avg": 6554,
+     "worst": -41793,
+     "best": 256865,
+     "maxDrawdown": 194723,
+     "lowestEquity": 92724,
+     "endEquity": 722619,
+     "avgOutlay": 32135,
+     "maxOutlay": 68174,
+     "charges": 13613,
+     "rolls": 25,
+     "top5": 780937,
+     "top5SharePct": 125,
+     "withoutTop5": -158318,
+     "longestLosingRun": 11,
+     "monthsUp": 15,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 6,
+      "profitFactor": 2.55,
+      "net": 26772
+     },
+     "2025": {
+      "trades": 45,
+      "profitFactor": 2.31,
+      "net": 385527
+     },
+     "2026": {
+      "trades": 44,
+      "profitFactor": 1.44,
+      "net": 210319
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, 100 in the money · signal exits + 40% premium stop",
+    "signal": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 95,
+     "winRate": 29.5,
+     "profitFactor": 1.6,
+     "net": 467599,
+     "avg": 4922,
+     "worst": -41793,
+     "best": 236610,
+     "maxDrawdown": 188399,
+     "lowestEquity": 50201,
+     "endEquity": 567599,
+     "avgOutlay": 31969,
+     "maxOutlay": 68174,
+     "charges": 12462,
+     "rolls": 16,
+     "top5": 768095,
+     "top5SharePct": 164,
+     "withoutTop5": -300496,
+     "longestLosingRun": 11,
+     "monthsUp": 13,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 6,
+      "profitFactor": 1.67,
+      "net": 9831
+     },
+     "2025": {
+      "trades": 45,
+      "profitFactor": 1.87,
+      "net": 286713
+     },
+     "2026": {
+      "trades": 44,
+      "profitFactor": 1.39,
+      "net": 171054
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 1 lot + 1 opposite lot 200 out (hedge) · signal exits",
+    "signal": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 95,
+     "winRate": 34.7,
+     "profitFactor": 1.71,
+     "net": 215020,
+     "avg": 2263,
+     "worst": -21764,
+     "best": 101904,
+     "maxDrawdown": 68614,
+     "lowestEquity": 64358,
+     "endEquity": 315020,
+     "avgOutlay": 19823,
+     "maxOutlay": 55429,
+     "charges": 15932,
+     "rolls": 25,
+     "top5": 313020,
+     "top5SharePct": 146,
+     "withoutTop5": -98000,
+     "longestLosingRun": 12,
+     "monthsUp": 14,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 6,
+      "profitFactor": 10.72,
+      "net": 12003
+     },
+     "2025": {
+      "trades": 45,
+      "profitFactor": 1.41,
+      "net": 64262
+     },
+     "2026": {
+      "trades": 44,
+      "profitFactor": 1.96,
+      "net": 138755
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 1 lot + 1 opposite lot 200 out (hedge) · signal exits + 40% premium stop",
+    "signal": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 95,
+     "winRate": 32.6,
+     "profitFactor": 1.7,
+     "net": 207065,
+     "avg": 2180,
+     "worst": -17278,
+     "best": 101904,
+     "maxDrawdown": 65663,
+     "lowestEquity": 55772,
+     "endEquity": 307065,
+     "avgOutlay": 19667,
+     "maxOutlay": 55429,
+     "charges": 14898,
+     "rolls": 17,
+     "top5": 313020,
+     "top5SharePct": 151,
+     "withoutTop5": -105955,
+     "longestLosingRun": 12,
+     "monthsUp": 13,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 6,
+      "profitFactor": 2.08,
+      "net": 3823
+     },
+     "2025": {
+      "trades": 45,
+      "profitFactor": 1.44,
+      "net": 67486
+     },
+     "2026": {
+      "trades": 44,
+      "profitFactor": 1.98,
+      "net": 135756
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · debit spread, 200 wide · signal exits",
+    "signal": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 95,
+     "winRate": 41.1,
+     "profitFactor": 1.34,
+     "net": 45902,
+     "avg": 483,
+     "worst": -6497,
+     "best": 13720,
+     "maxDrawdown": 38224,
+     "lowestEquity": 98570,
+     "endEquity": 145902,
+     "avgOutlay": 5444,
+     "maxOutlay": 7967,
+     "charges": 16085,
+     "rolls": 25,
+     "top5": 57303,
+     "top5SharePct": 125,
+     "withoutTop5": -11401,
+     "longestLosingRun": 8,
+     "monthsUp": 15,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 6,
+      "profitFactor": 1.41,
+      "net": 1376
+     },
+     "2025": {
+      "trades": 45,
+      "profitFactor": 1.79,
+      "net": 41604
+     },
+     "2026": {
+      "trades": 44,
+      "profitFactor": 1.04,
+      "net": 2922
+     }
+    }
+   },
+   {
+    "id": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter · debit spread, 200 wide · signal exits + 40% premium stop",
+    "signal": "EMA 13/34, 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 95,
+     "winRate": 33.7,
+     "profitFactor": 1.18,
+     "net": 23824,
+     "avg": 251,
+     "worst": -5018,
+     "best": 13720,
+     "maxDrawdown": 34864,
+     "lowestEquity": 91838,
+     "endEquity": 123824,
+     "avgOutlay": 5415,
+     "maxOutlay": 7967,
+     "charges": 14864,
+     "rolls": 16,
+     "top5": 58309,
+     "top5SharePct": 245,
+     "withoutTop5": -34485,
+     "longestLosingRun": 9,
+     "monthsUp": 13,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 6,
+      "profitFactor": 0.9,
+      "net": -313
+     },
+     "2025": {
+      "trades": 45,
+      "profitFactor": 1.38,
+      "net": 21924
+     },
+     "2026": {
+      "trades": 44,
+      "profitFactor": 1.03,
+      "net": 2213
+     }
+    }
+   },
+   {
+    "id": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, at the money · signal exits",
+    "signal": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 129,
+     "winRate": 33.3,
+     "profitFactor": 1.23,
+     "net": 277785,
+     "avg": 2153,
+     "worst": -37777,
+     "best": 242044,
+     "maxDrawdown": 433343,
+     "lowestEquity": 19600,
+     "endEquity": 377785,
+     "avgOutlay": 26116,
+     "maxOutlay": 61961,
+     "charges": 15557,
+     "rolls": 32,
+     "top5": 797451,
+     "top5SharePct": 287,
+     "withoutTop5": -519667,
+     "longestLosingRun": 10,
+     "monthsUp": 11,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.26,
+      "net": -68779
+     },
+     "2025": {
+      "trades": 59,
+      "profitFactor": 1.45,
+      "net": 231418
+     },
+     "2026": {
+      "trades": 53,
+      "profitFactor": 1.2,
+      "net": 115146
+     }
+    }
+   },
+   {
+    "id": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, at the money · signal exits + 40% premium stop",
+    "signal": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 129,
+     "winRate": 25.6,
+     "profitFactor": 1.08,
+     "net": 85290,
+     "avg": 661,
+     "worst": -37777,
+     "best": 225574,
+     "maxDrawdown": 409070,
+     "lowestEquity": -70537,
+     "endEquity": 185290,
+     "avgOutlay": 25742,
+     "maxOutlay": 61961,
+     "charges": 13627,
+     "rolls": 14,
+     "top5": 658915,
+     "top5SharePct": 773,
+     "withoutTop5": -573625,
+     "longestLosingRun": 11,
+     "monthsUp": 9,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.42,
+      "net": -34703
+     },
+     "2025": {
+      "trades": 59,
+      "profitFactor": 1.02,
+      "net": 10440
+     },
+     "2026": {
+      "trades": 53,
+      "profitFactor": 1.22,
+      "net": 109553
+     }
+    }
+   },
+   {
+    "id": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, 100 in the money · signal exits",
+    "signal": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 129,
+     "winRate": 34.1,
+     "profitFactor": 1.21,
+     "net": 280360,
+     "avg": 2173,
+     "worst": -41793,
+     "best": 256865,
+     "maxDrawdown": 471268,
+     "lowestEquity": 11555,
+     "endEquity": 380360,
+     "avgOutlay": 33243,
+     "maxOutlay": 68174,
+     "charges": 17707,
+     "rolls": 32,
+     "top5": 835919,
+     "top5SharePct": 298,
+     "withoutTop5": -555559,
+     "longestLosingRun": 10,
+     "monthsUp": 10,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.25,
+      "net": -82299
+     },
+     "2025": {
+      "trades": 59,
+      "profitFactor": 1.42,
+      "net": 250112
+     },
+     "2026": {
+      "trades": 53,
+      "profitFactor": 1.17,
+      "net": 112547
+     }
+    }
+   },
+   {
+    "id": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 2 lots, 100 in the money · signal exits + 40% premium stop",
+    "signal": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 129,
+     "winRate": 27.9,
+     "profitFactor": 1.2,
+     "net": 245562,
+     "avg": 1904,
+     "worst": -41793,
+     "best": 236610,
+     "maxDrawdown": 494369,
+     "lowestEquity": 48864,
+     "endEquity": 345562,
+     "avgOutlay": 32916,
+     "maxOutlay": 68174,
+     "charges": 16080,
+     "rolls": 17,
+     "top5": 822563,
+     "top5SharePct": 335,
+     "withoutTop5": -577001,
+     "longestLosingRun": 11,
+     "monthsUp": 9,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.36,
+      "net": -49555
+     },
+     "2025": {
+      "trades": 59,
+      "profitFactor": 1.41,
+      "net": 224311
+     },
+     "2026": {
+      "trades": 53,
+      "profitFactor": 1.12,
+      "net": 70805
+     }
+    }
+   },
+   {
+    "id": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 1 lot + 1 opposite lot 200 out (hedge) · signal exits",
+    "signal": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 129,
+     "winRate": 31,
+     "profitFactor": 1.13,
+     "net": 68482,
+     "avg": 531,
+     "worst": -18851,
+     "best": 101904,
+     "maxDrawdown": 201928,
+     "lowestEquity": 50146,
+     "endEquity": 168482,
+     "avgOutlay": 20736,
+     "maxOutlay": 55429,
+     "charges": 21284,
+     "rolls": 32,
+     "top5": 331303,
+     "top5SharePct": 484,
+     "withoutTop5": -262821,
+     "longestLosingRun": 11,
+     "monthsUp": 10,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.29,
+      "net": -22059
+     },
+     "2025": {
+      "trades": 59,
+      "profitFactor": 1.11,
+      "net": 27629
+     },
+     "2026": {
+      "trades": 53,
+      "profitFactor": 1.26,
+      "net": 62912
+     }
+    }
+   },
+   {
+    "id": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter · 1 lot + 1 opposite lot 200 out (hedge) · signal exits + 40% premium stop",
+    "signal": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 129,
+     "winRate": 27.1,
+     "profitFactor": 0.99,
+     "net": -2931,
+     "avg": -23,
+     "worst": -16125,
+     "best": 101904,
+     "maxDrawdown": 177858,
+     "lowestEquity": -21266,
+     "endEquity": 97069,
+     "avgOutlay": 20402,
+     "maxOutlay": 55429,
+     "charges": 18981,
+     "rolls": 15,
+     "top5": 292790,
+     "top5SharePct": null,
+     "withoutTop5": -295721,
+     "longestLosingRun": 11,
+     "monthsUp": 10,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.28,
+      "net": -23166
+     },
+     "2025": {
+      "trades": 59,
+      "profitFactor": 0.75,
+      "net": -64032
+     },
+     "2026": {
+      "trades": 53,
+      "profitFactor": 1.4,
+      "net": 84267
+     }
+    }
+   },
+   {
+    "id": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter · debit spread, 200 wide · signal exits",
+    "signal": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 128,
+     "winRate": 36.7,
+     "profitFactor": 0.93,
+     "net": -13835,
+     "avg": -108,
+     "worst": -6497,
+     "best": 16016,
+     "maxDrawdown": 55022,
+     "lowestEquity": 67279,
+     "endEquity": 86165,
+     "avgOutlay": 5496,
+     "maxOutlay": 9459,
+     "charges": 21213,
+     "rolls": 32,
+     "top5": 60486,
+     "top5SharePct": null,
+     "withoutTop5": -74320,
+     "longestLosingRun": 9,
+     "monthsUp": 10,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.14,
+      "net": -16790
+     },
+     "2025": {
+      "trades": 59,
+      "profitFactor": 1.11,
+      "net": 10839
+     },
+     "2026": {
+      "trades": 52,
+      "profitFactor": 0.91,
+      "net": -7883
+     }
+    }
+   },
+   {
+    "id": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter · debit spread, 200 wide · signal exits + 40% premium stop",
+    "signal": "Supertrend(10,3), 60-min · trailing 3 ATR after +2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 128,
+     "winRate": 29.7,
+     "profitFactor": 0.82,
+     "net": -35428,
+     "avg": -277,
+     "worst": -5439,
+     "best": 16016,
+     "maxDrawdown": 77372,
+     "lowestEquity": 54291,
+     "endEquity": 64572,
+     "avgOutlay": 5466,
+     "maxOutlay": 9459,
+     "charges": 19545,
+     "rolls": 19,
+     "top5": 61114,
+     "top5SharePct": null,
+     "withoutTop5": -96543,
+     "longestLosingRun": 11,
+     "monthsUp": 10,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 17,
+      "profitFactor": 0.18,
+      "net": -12312
+     },
+     "2025": {
+      "trades": 59,
+      "profitFactor": 0.97,
+      "net": -2576
+     },
+     "2026": {
+      "trades": 52,
+      "profitFactor": 0.78,
+      "net": -20540
+     }
+    }
+   },
+   {
+    "id": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter · 2 lots, at the money · signal exits",
+    "signal": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 103,
+     "winRate": 29.1,
+     "profitFactor": 1.57,
+     "net": 566124,
+     "avg": 5496,
+     "worst": -35258,
+     "best": 230175,
+     "maxDrawdown": 175900,
+     "lowestEquity": 54128,
+     "endEquity": 666124,
+     "avgOutlay": 26603,
+     "maxOutlay": 62594,
+     "charges": 15994,
+     "rolls": 58,
+     "top5": 766368,
+     "top5SharePct": 135,
+     "withoutTop5": -200243,
+     "longestLosingRun": 12,
+     "monthsUp": 15,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 12,
+      "profitFactor": 0.5,
+      "net": -37195
+     },
+     "2025": {
+      "trades": 49,
+      "profitFactor": 1.9,
+      "net": 321909
+     },
+     "2026": {
+      "trades": 42,
+      "profitFactor": 1.5,
+      "net": 281410
+     }
+    }
+   },
+   {
+    "id": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter · 2 lots, at the money · signal exits + 40% premium stop",
+    "signal": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 104,
+     "winRate": 23.1,
+     "profitFactor": 1.24,
+     "net": 201717,
+     "avg": 1940,
+     "worst": -30076,
+     "best": 220267,
+     "maxDrawdown": 261471,
+     "lowestEquity": 29852,
+     "endEquity": 301717,
+     "avgOutlay": 25666,
+     "maxOutlay": 62594,
+     "charges": 12632,
+     "rolls": 28,
+     "top5": 580926,
+     "top5SharePct": 288,
+     "withoutTop5": -379209,
+     "longestLosingRun": 13,
+     "monthsUp": 12,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 0.66,
+      "net": -16069
+     },
+     "2025": {
+      "trades": 49,
+      "profitFactor": 1.32,
+      "net": 112143
+     },
+     "2026": {
+      "trades": 42,
+      "profitFactor": 1.25,
+      "net": 105642
+     }
+    }
+   },
+   {
+    "id": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter · 2 lots, 100 in the money · signal exits",
+    "signal": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 103,
+     "winRate": 33,
+     "profitFactor": 1.61,
+     "net": 692533,
+     "avg": 6724,
+     "worst": -47676,
+     "best": 246267,
+     "maxDrawdown": 211137,
+     "lowestEquity": 51024,
+     "endEquity": 792533,
+     "avgOutlay": 33585,
+     "maxOutlay": 73481,
+     "charges": 18287,
+     "rolls": 58,
+     "top5": 835511,
+     "top5SharePct": 121,
+     "withoutTop5": -142978,
+     "longestLosingRun": 10,
+     "monthsUp": 16,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 12,
+      "profitFactor": 0.5,
+      "net": -45413
+     },
+     "2025": {
+      "trades": 49,
+      "profitFactor": 2.05,
+      "net": 425816
+     },
+     "2026": {
+      "trades": 42,
+      "profitFactor": 1.49,
+      "net": 312130
+     }
+    }
+   },
+   {
+    "id": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter · 2 lots, 100 in the money · signal exits + 40% premium stop",
+    "signal": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 104,
+     "winRate": 29.8,
+     "profitFactor": 1.42,
+     "net": 398053,
+     "avg": 3827,
+     "worst": -47676,
+     "best": 231447,
+     "maxDrawdown": 324705,
+     "lowestEquity": 71956,
+     "endEquity": 498053,
+     "avgOutlay": 32800,
+     "maxOutlay": 73481,
+     "charges": 15750,
+     "rolls": 38,
+     "top5": 670169,
+     "top5SharePct": 168,
+     "withoutTop5": -272116,
+     "longestLosingRun": 12,
+     "monthsUp": 14,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 0.59,
+      "net": -25298
+     },
+     "2025": {
+      "trades": 49,
+      "profitFactor": 1.79,
+      "net": 306383
+     },
+     "2026": {
+      "trades": 42,
+      "profitFactor": 1.23,
+      "net": 116968
+     }
+    }
+   },
+   {
+    "id": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter · 1 lot + 1 opposite lot 200 out (hedge) · signal exits",
+    "signal": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 103,
+     "winRate": 32,
+     "profitFactor": 1.26,
+     "net": 110075,
+     "avg": 1069,
+     "worst": -25864,
+     "best": 92699,
+     "maxDrawdown": 103851,
+     "lowestEquity": 68091,
+     "endEquity": 210075,
+     "avgOutlay": 21539,
+     "maxOutlay": 54324,
+     "charges": 21440,
+     "rolls": 58,
+     "top5": 283250,
+     "top5SharePct": 257,
+     "withoutTop5": -173175,
+     "longestLosingRun": 12,
+     "monthsUp": 10,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 12,
+      "profitFactor": 0.35,
+      "net": -16627
+     },
+     "2025": {
+      "trades": 49,
+      "profitFactor": 1.02,
+      "net": 4175
+     },
+     "2026": {
+      "trades": 42,
+      "profitFactor": 1.63,
+      "net": 122527
+     }
+    }
+   },
+   {
+    "id": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter · 1 lot + 1 opposite lot 200 out (hedge) · signal exits + 40% premium stop",
+    "signal": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 104,
+     "winRate": 27.9,
+     "profitFactor": 1.03,
+     "net": 11998,
+     "avg": 115,
+     "worst": -21477,
+     "best": 92414,
+     "maxDrawdown": 99955,
+     "lowestEquity": 45,
+     "endEquity": 111998,
+     "avgOutlay": 20673,
+     "maxOutlay": 54324,
+     "charges": 17502,
+     "rolls": 29,
+     "top5": 249216,
+     "top5SharePct": 2077,
+     "withoutTop5": -237218,
+     "longestLosingRun": 12,
+     "monthsUp": 9,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 0.34,
+      "net": -17465
+     },
+     "2025": {
+      "trades": 49,
+      "profitFactor": 0.67,
+      "net": -78028
+     },
+     "2026": {
+      "trades": 42,
+      "profitFactor": 1.69,
+      "net": 107492
+     }
+    }
+   },
+   {
+    "id": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter · debit spread, 200 wide · signal exits",
+    "signal": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 103,
+     "winRate": 37.9,
+     "profitFactor": 1.58,
+     "net": 92368,
+     "avg": 897,
+     "worst": -5937,
+     "best": 25696,
+     "maxDrawdown": 23123,
+     "lowestEquity": 88790,
+     "endEquity": 192368,
+     "avgOutlay": 5419,
+     "maxOutlay": 9459,
+     "charges": 21649,
+     "rolls": 58,
+     "top5": 83827,
+     "top5SharePct": 91,
+     "withoutTop5": 8541,
+     "longestLosingRun": 7,
+     "monthsUp": 15,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 12,
+      "profitFactor": 0.4,
+      "net": -9998
+     },
+     "2025": {
+      "trades": 49,
+      "profitFactor": 2.15,
+      "net": 72022
+     },
+     "2026": {
+      "trades": 42,
+      "profitFactor": 1.37,
+      "net": 30344
+     }
+    }
+   },
+   {
+    "id": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter · debit spread, 200 wide · signal exits + 40% premium stop",
+    "signal": "MACD(12,26,9), 125-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 104,
+     "winRate": 30.8,
+     "profitFactor": 1.19,
+     "net": 29082,
+     "avg": 280,
+     "worst": -4471,
+     "best": 17403,
+     "maxDrawdown": 46967,
+     "lowestEquity": 92075,
+     "endEquity": 129082,
+     "avgOutlay": 5363,
+     "maxOutlay": 9459,
+     "charges": 18526,
+     "rolls": 36,
+     "top5": 69638,
+     "top5SharePct": 239,
+     "withoutTop5": -40555,
+     "longestLosingRun": 9,
+     "monthsUp": 11,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 0.35,
+      "net": -7925
+     },
+     "2025": {
+      "trades": 49,
+      "profitFactor": 1.56,
+      "net": 38459
+     },
+     "2026": {
+      "trades": 42,
+      "profitFactor": 0.98,
+      "net": -1451
+     }
+    }
+   },
+   {
+    "id": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter · 2 lots, at the money · signal exits",
+    "signal": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 131,
+     "winRate": 23.7,
+     "profitFactor": 0.94,
+     "net": -70774,
+     "avg": -540,
+     "worst": -35006,
+     "best": 141800,
+     "maxDrawdown": 362274,
+     "lowestEquity": -37890,
+     "endEquity": 29226,
+     "avgOutlay": 25596,
+     "maxOutlay": 61257,
+     "charges": 17751,
+     "rolls": 62,
+     "top5": 508949,
+     "top5SharePct": null,
+     "withoutTop5": -579723,
+     "longestLosingRun": 16,
+     "monthsUp": 14,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 1.4,
+      "net": 12699
+     },
+     "2025": {
+      "trades": 63,
+      "profitFactor": 0.86,
+      "net": -79947
+     },
+     "2026": {
+      "trades": 55,
+      "profitFactor": 0.99,
+      "net": -3526
+     }
+    }
+   },
+   {
+    "id": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter · 2 lots, at the money · signal exits + 40% premium stop",
+    "signal": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 131,
+     "winRate": 20.6,
+     "profitFactor": 0.86,
+     "net": -145454,
+     "avg": -1110,
+     "worst": -29467,
+     "best": 129609,
+     "maxDrawdown": 408481,
+     "lowestEquity": -151221,
+     "endEquity": -45454,
+     "avgOutlay": 24992,
+     "maxOutlay": 61257,
+     "charges": 15396,
+     "rolls": 39,
+     "top5": 410689,
+     "top5SharePct": null,
+     "withoutTop5": -556144,
+     "longestLosingRun": 16,
+     "monthsUp": 13,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 1.01,
+      "net": 317
+     },
+     "2025": {
+      "trades": 63,
+      "profitFactor": 0.91,
+      "net": -39879
+     },
+     "2026": {
+      "trades": 55,
+      "profitFactor": 0.8,
+      "net": -105893
+     }
+    }
+   },
+   {
+    "id": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter · 2 lots, 100 in the money · signal exits",
+    "signal": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 131,
+     "winRate": 26.7,
+     "profitFactor": 1,
+     "net": 2986,
+     "avg": 23,
+     "worst": -35196,
+     "best": 157125,
+     "maxDrawdown": 350669,
+     "lowestEquity": 10613,
+     "endEquity": 102986,
+     "avgOutlay": 32640,
+     "maxOutlay": 67490,
+     "charges": 20383,
+     "rolls": 62,
+     "top5": 573833,
+     "top5SharePct": 19220,
+     "withoutTop5": -570848,
+     "longestLosingRun": 16,
+     "monthsUp": 13,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 1.5,
+      "net": 18318
+     },
+     "2025": {
+      "trades": 63,
+      "profitFactor": 0.95,
+      "net": -30013
+     },
+     "2026": {
+      "trades": 55,
+      "profitFactor": 1.02,
+      "net": 14680
+     }
+    }
+   },
+   {
+    "id": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter · 2 lots, 100 in the money · signal exits + 40% premium stop",
+    "signal": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 131,
+     "winRate": 23.7,
+     "profitFactor": 0.81,
+     "net": -233773,
+     "avg": -1785,
+     "worst": -35196,
+     "best": 137564,
+     "maxDrawdown": 504181,
+     "lowestEquity": -246424,
+     "endEquity": -133773,
+     "avgOutlay": 32074,
+     "maxOutlay": 67490,
+     "charges": 17733,
+     "rolls": 41,
+     "top5": 437279,
+     "top5SharePct": null,
+     "withoutTop5": -671051,
+     "longestLosingRun": 16,
+     "monthsUp": 12,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 1.03,
+      "net": 987
+     },
+     "2025": {
+      "trades": 63,
+      "profitFactor": 0.85,
+      "net": -84493
+     },
+     "2026": {
+      "trades": 55,
+      "profitFactor": 0.76,
+      "net": -150267
+     }
+    }
+   },
+   {
+    "id": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter · 1 lot + 1 opposite lot 200 out (hedge) · signal exits",
+    "signal": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 131,
+     "winRate": 26,
+     "profitFactor": 0.68,
+     "net": -180164,
+     "avg": -1375,
+     "worst": -35713,
+     "best": 50315,
+     "maxDrawdown": 243905,
+     "lowestEquity": -95292,
+     "endEquity": -80164,
+     "avgOutlay": 20288,
+     "maxOutlay": 55051,
+     "charges": 24884,
+     "rolls": 62,
+     "top5": 187362,
+     "top5SharePct": null,
+     "withoutTop5": -367526,
+     "longestLosingRun": 12,
+     "monthsUp": 11,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 0.94,
+      "net": -1021
+     },
+     "2025": {
+      "trades": 63,
+      "profitFactor": 0.45,
+      "net": -175812
+     },
+     "2026": {
+      "trades": 55,
+      "profitFactor": 0.99,
+      "net": -3331
+     }
+    }
+   },
+   {
+    "id": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter · 1 lot + 1 opposite lot 200 out (hedge) · signal exits + 40% premium stop",
+    "signal": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 131,
+     "winRate": 22.1,
+     "profitFactor": 0.68,
+     "net": -159614,
+     "avg": -1218,
+     "worst": -22431,
+     "best": 50315,
+     "maxDrawdown": 191237,
+     "lowestEquity": -72095,
+     "endEquity": -59614,
+     "avgOutlay": 19655,
+     "maxOutlay": 55051,
+     "charges": 21033,
+     "rolls": 33,
+     "top5": 178517,
+     "top5SharePct": null,
+     "withoutTop5": -338130,
+     "longestLosingRun": 12,
+     "monthsUp": 12,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 0.5,
+      "net": -8329
+     },
+     "2025": {
+      "trades": 63,
+      "profitFactor": 0.51,
+      "net": -138365
+     },
+     "2026": {
+      "trades": 55,
+      "profitFactor": 0.94,
+      "net": -12920
+     }
+    }
+   },
+   {
+    "id": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter · debit spread, 200 wide · signal exits",
+    "signal": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 130,
+     "winRate": 29.2,
+     "profitFactor": 1.04,
+     "net": 8619,
+     "avg": 66,
+     "worst": -5234,
+     "best": 24920,
+     "maxDrawdown": 45040,
+     "lowestEquity": 90430,
+     "endEquity": 108619,
+     "avgOutlay": 5408,
+     "maxOutlay": 9459,
+     "charges": 24697,
+     "rolls": 61,
+     "top5": 86996,
+     "top5SharePct": 1009,
+     "withoutTop5": -78377,
+     "longestLosingRun": 12,
+     "monthsUp": 12,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 1.24,
+      "net": 1617
+     },
+     "2025": {
+      "trades": 62,
+      "profitFactor": 1.05,
+      "net": 4552
+     },
+     "2026": {
+      "trades": 55,
+      "profitFactor": 1.03,
+      "net": 2450
+     }
+    }
+   },
+   {
+    "id": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter · debit spread, 200 wide · signal exits + 40% premium stop",
+    "signal": "EMA 9/26, 60-min · ATR stop 2 + opposite signal · no filter",
+    "kind": "multi-day",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 130,
+     "winRate": 24.6,
+     "profitFactor": 0.76,
+     "net": -46183,
+     "avg": -355,
+     "worst": -5018,
+     "best": 18004,
+     "maxDrawdown": 70967,
+     "lowestEquity": 37463,
+     "endEquity": 53817,
+     "avgOutlay": 5379,
+     "maxOutlay": 9459,
+     "charges": 22101,
+     "rolls": 43,
+     "top5": 65975,
+     "top5SharePct": null,
+     "withoutTop5": -112158,
+     "longestLosingRun": 12,
+     "monthsUp": 11,
+     "months": 25
+    },
+    "byYear": {
+     "2024": {
+      "trades": 13,
+      "profitFactor": 0.95,
+      "net": -350
+     },
+     "2025": {
+      "trades": 62,
+      "profitFactor": 0.71,
+      "net": -27583
+     },
+     "2026": {
+      "trades": 55,
+      "profitFactor": 0.8,
+      "net": -18250
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R) · 2 lots, at the money · signal exits",
+    "signal": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R)",
+    "kind": "intraday",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 856,
+     "winRate": 36.8,
+     "profitFactor": 0.98,
+     "net": -23243,
+     "avg": -27,
+     "worst": -6419,
+     "best": 9224,
+     "maxDrawdown": 90250,
+     "lowestEquity": 17829,
+     "endEquity": 76757,
+     "avgOutlay": 23830,
+     "maxOutlay": 66995,
+     "charges": 78404,
+     "rolls": 0,
+     "top5": 41121,
+     "top5SharePct": null,
+     "withoutTop5": -64364,
+     "longestLosingRun": 16,
+     "monthsUp": 13,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 94,
+      "profitFactor": 0.91,
+      "net": -6053
+     },
+     "2025": {
+      "trades": 421,
+      "profitFactor": 0.94,
+      "net": -33632
+     },
+     "2026": {
+      "trades": 341,
+      "profitFactor": 1.04,
+      "net": 16442
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R) · 2 lots, at the money · signal exits + 40% premium stop",
+    "signal": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R)",
+    "kind": "intraday",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 856,
+     "winRate": 36.8,
+     "profitFactor": 0.98,
+     "net": -23243,
+     "avg": -27,
+     "worst": -6419,
+     "best": 9224,
+     "maxDrawdown": 90250,
+     "lowestEquity": 17829,
+     "endEquity": 76757,
+     "avgOutlay": 23830,
+     "maxOutlay": 66995,
+     "charges": 78404,
+     "rolls": 0,
+     "top5": 41121,
+     "top5SharePct": null,
+     "withoutTop5": -64364,
+     "longestLosingRun": 16,
+     "monthsUp": 13,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 94,
+      "profitFactor": 0.91,
+      "net": -6053
+     },
+     "2025": {
+      "trades": 421,
+      "profitFactor": 0.94,
+      "net": -33632
+     },
+     "2026": {
+      "trades": 341,
+      "profitFactor": 1.04,
+      "net": 16442
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R) · 2 lots, 100 in the money · signal exits",
+    "signal": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R)",
+    "kind": "intraday",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 856,
+     "winRate": 36.6,
+     "profitFactor": 0.98,
+     "net": -28740,
+     "avg": -34,
+     "worst": -7245,
+     "best": 10375,
+     "maxDrawdown": 106832,
+     "lowestEquity": 3719,
+     "endEquity": 71260,
+     "avgOutlay": 31021,
+     "maxOutlay": 76775,
+     "charges": 89856,
+     "rolls": 0,
+     "top5": 46528,
+     "top5SharePct": null,
+     "withoutTop5": -75268,
+     "longestLosingRun": 16,
+     "monthsUp": 13,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 94,
+      "profitFactor": 0.95,
+      "net": -4407
+     },
+     "2025": {
+      "trades": 421,
+      "profitFactor": 0.94,
+      "net": -40207
+     },
+     "2026": {
+      "trades": 341,
+      "profitFactor": 1.03,
+      "net": 15874
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R) · 2 lots, 100 in the money · signal exits + 40% premium stop",
+    "signal": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R)",
+    "kind": "intraday",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 856,
+     "winRate": 36.6,
+     "profitFactor": 0.98,
+     "net": -28740,
+     "avg": -34,
+     "worst": -7245,
+     "best": 10375,
+     "maxDrawdown": 106832,
+     "lowestEquity": 3719,
+     "endEquity": 71260,
+     "avgOutlay": 31021,
+     "maxOutlay": 76775,
+     "charges": 89856,
+     "rolls": 0,
+     "top5": 46528,
+     "top5SharePct": null,
+     "withoutTop5": -75268,
+     "longestLosingRun": 16,
+     "monthsUp": 13,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 94,
+      "profitFactor": 0.95,
+      "net": -4407
+     },
+     "2025": {
+      "trades": 421,
+      "profitFactor": 0.94,
+      "net": -40207
+     },
+     "2026": {
+      "trades": 341,
+      "profitFactor": 1.03,
+      "net": 15874
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R) · 1 lot + 1 opposite lot 200 out (hedge) · signal exits",
+    "signal": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R)",
+    "kind": "intraday",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 856,
+     "winRate": 30.8,
+     "profitFactor": 0.48,
+     "net": -209467,
+     "avg": -245,
+     "worst": -2589,
+     "best": 3049,
+     "maxDrawdown": 209823,
+     "lowestEquity": -109467,
+     "endEquity": -109467,
+     "avgOutlay": 18552,
+     "maxOutlay": 56836,
+     "charges": 110189,
+     "rolls": 0,
+     "top5": 12586,
+     "top5SharePct": null,
+     "withoutTop5": -222053,
+     "longestLosingRun": 16,
+     "monthsUp": 0,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 94,
+      "profitFactor": 0.35,
+      "net": -18396
+     },
+     "2025": {
+      "trades": 421,
+      "profitFactor": 0.46,
+      "net": -117857
+     },
+     "2026": {
+      "trades": 341,
+      "profitFactor": 0.53,
+      "net": -73214
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R) · 1 lot + 1 opposite lot 200 out (hedge) · signal exits + 40% premium stop",
+    "signal": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R)",
+    "kind": "intraday",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 856,
+     "winRate": 30.8,
+     "profitFactor": 0.48,
+     "net": -209467,
+     "avg": -245,
+     "worst": -2589,
+     "best": 3049,
+     "maxDrawdown": 209823,
+     "lowestEquity": -109467,
+     "endEquity": -109467,
+     "avgOutlay": 18552,
+     "maxOutlay": 56836,
+     "charges": 110189,
+     "rolls": 0,
+     "top5": 12586,
+     "top5SharePct": null,
+     "withoutTop5": -222053,
+     "longestLosingRun": 16,
+     "monthsUp": 0,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 94,
+      "profitFactor": 0.35,
+      "net": -18396
+     },
+     "2025": {
+      "trades": 421,
+      "profitFactor": 0.46,
+      "net": -117857
+     },
+     "2026": {
+      "trades": 341,
+      "profitFactor": 0.53,
+      "net": -73214
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R) · debit spread, 200 wide · signal exits",
+    "signal": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R)",
+    "kind": "intraday",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 856,
+     "winRate": 33.6,
+     "profitFactor": 0.4,
+     "net": -174662,
+     "avg": -204,
+     "worst": -1370,
+     "best": 1322,
+     "maxDrawdown": 174809,
+     "lowestEquity": -74662,
+     "endEquity": -74662,
+     "avgOutlay": 5304,
+     "maxOutlay": 8904,
+     "charges": 110368,
+     "rolls": 0,
+     "top5": 6146,
+     "top5SharePct": null,
+     "withoutTop5": -180808,
+     "longestLosingRun": 16,
+     "monthsUp": 0,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 94,
+      "profitFactor": 0.32,
+      "net": -14070
+     },
+     "2025": {
+      "trades": 421,
+      "profitFactor": 0.42,
+      "net": -89407
+     },
+     "2026": {
+      "trades": 341,
+      "profitFactor": 0.39,
+      "net": -71185
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R) · debit spread, 200 wide · signal exits + 40% premium stop",
+    "signal": "EMA 9/21 crossover, 5-min, intraday (stop 1 ATR, target 2R)",
+    "kind": "intraday",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 856,
+     "winRate": 33.6,
+     "profitFactor": 0.4,
+     "net": -174662,
+     "avg": -204,
+     "worst": -1370,
+     "best": 1322,
+     "maxDrawdown": 174809,
+     "lowestEquity": -74662,
+     "endEquity": -74662,
+     "avgOutlay": 5304,
+     "maxOutlay": 8904,
+     "charges": 110368,
+     "rolls": 0,
+     "top5": 6146,
+     "top5SharePct": null,
+     "withoutTop5": -180808,
+     "longestLosingRun": 16,
+     "monthsUp": 0,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 94,
+      "profitFactor": 0.32,
+      "net": -14070
+     },
+     "2025": {
+      "trades": 421,
+      "profitFactor": 0.42,
+      "net": -89407
+     },
+     "2026": {
+      "trades": 341,
+      "profitFactor": 0.39,
+      "net": -71185
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR) · 2 lots, at the money · signal exits",
+    "signal": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 379,
+     "winRate": 46.2,
+     "profitFactor": 0.96,
+     "net": -24682,
+     "avg": -65,
+     "worst": -9678,
+     "best": 42008,
+     "maxDrawdown": 72561,
+     "lowestEquity": 40833,
+     "endEquity": 75318,
+     "avgOutlay": 24660,
+     "maxOutlay": 61016,
+     "charges": 35279,
+     "rolls": 0,
+     "top5": 114192,
+     "top5SharePct": null,
+     "withoutTop5": -138874,
+     "longestLosingRun": 10,
+     "monthsUp": 12,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 46,
+      "profitFactor": 1.24,
+      "net": 8407
+     },
+     "2025": {
+      "trades": 177,
+      "profitFactor": 0.88,
+      "net": -37736
+     },
+     "2026": {
+      "trades": 156,
+      "profitFactor": 1.02,
+      "net": 4646
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR) · 2 lots, at the money · signal exits + 40% premium stop",
+    "signal": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 379,
+     "winRate": 46.2,
+     "profitFactor": 0.96,
+     "net": -24682,
+     "avg": -65,
+     "worst": -9678,
+     "best": 42008,
+     "maxDrawdown": 72561,
+     "lowestEquity": 40833,
+     "endEquity": 75318,
+     "avgOutlay": 24660,
+     "maxOutlay": 61016,
+     "charges": 35279,
+     "rolls": 0,
+     "top5": 114192,
+     "top5SharePct": null,
+     "withoutTop5": -138874,
+     "longestLosingRun": 10,
+     "monthsUp": 12,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 46,
+      "profitFactor": 1.24,
+      "net": 8407
+     },
+     "2025": {
+      "trades": 177,
+      "profitFactor": 0.88,
+      "net": -37736
+     },
+     "2026": {
+      "trades": 156,
+      "profitFactor": 1.02,
+      "net": 4646
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR) · 2 lots, 100 in the money · signal exits",
+    "signal": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 379,
+     "winRate": 45.4,
+     "profitFactor": 0.97,
+     "net": -18863,
+     "avg": -50,
+     "worst": -10764,
+     "best": 45554,
+     "maxDrawdown": 82944,
+     "lowestEquity": 35406,
+     "endEquity": 81137,
+     "avgOutlay": 31937,
+     "maxOutlay": 67496,
+     "charges": 40421,
+     "rolls": 0,
+     "top5": 127117,
+     "top5SharePct": null,
+     "withoutTop5": -145980,
+     "longestLosingRun": 10,
+     "monthsUp": 13,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 46,
+      "profitFactor": 1.32,
+      "net": 12718
+     },
+     "2025": {
+      "trades": 177,
+      "profitFactor": 0.89,
+      "net": -41796
+     },
+     "2026": {
+      "trades": 156,
+      "profitFactor": 1.03,
+      "net": 10216
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR) · 2 lots, 100 in the money · signal exits + 40% premium stop",
+    "signal": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 379,
+     "winRate": 45.4,
+     "profitFactor": 0.97,
+     "net": -18863,
+     "avg": -50,
+     "worst": -10764,
+     "best": 45554,
+     "maxDrawdown": 82944,
+     "lowestEquity": 35406,
+     "endEquity": 81137,
+     "avgOutlay": 31937,
+     "maxOutlay": 67496,
+     "charges": 40421,
+     "rolls": 0,
+     "top5": 127117,
+     "top5SharePct": null,
+     "withoutTop5": -145980,
+     "longestLosingRun": 10,
+     "monthsUp": 13,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 46,
+      "profitFactor": 1.32,
+      "net": 12718
+     },
+     "2025": {
+      "trades": 177,
+      "profitFactor": 0.89,
+      "net": -41796
+     },
+     "2026": {
+      "trades": 156,
+      "profitFactor": 1.03,
+      "net": 10216
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR) · 1 lot + 1 opposite lot 200 out (hedge) · signal exits",
+    "signal": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 378,
+     "winRate": 31,
+     "profitFactor": 0.65,
+     "net": -82546,
+     "avg": -218,
+     "worst": -2986,
+     "best": 19756,
+     "maxDrawdown": 82546,
+     "lowestEquity": 17454,
+     "endEquity": 17454,
+     "avgOutlay": 19190,
+     "maxOutlay": 54545,
+     "charges": 49121,
+     "rolls": 0,
+     "top5": 45391,
+     "top5SharePct": null,
+     "withoutTop5": -127936,
+     "longestLosingRun": 15,
+     "monthsUp": 4,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 46,
+      "profitFactor": 0.41,
+      "net": -8753
+     },
+     "2025": {
+      "trades": 176,
+      "profitFactor": 0.68,
+      "net": -38172
+     },
+     "2026": {
+      "trades": 156,
+      "profitFactor": 0.64,
+      "net": -35621
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR) · 1 lot + 1 opposite lot 200 out (hedge) · signal exits + 40% premium stop",
+    "signal": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 378,
+     "winRate": 31,
+     "profitFactor": 0.65,
+     "net": -82546,
+     "avg": -218,
+     "worst": -2986,
+     "best": 19756,
+     "maxDrawdown": 82546,
+     "lowestEquity": 17454,
+     "endEquity": 17454,
+     "avgOutlay": 19190,
+     "maxOutlay": 54545,
+     "charges": 49121,
+     "rolls": 0,
+     "top5": 45391,
+     "top5SharePct": null,
+     "withoutTop5": -127936,
+     "longestLosingRun": 15,
+     "monthsUp": 4,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 46,
+      "profitFactor": 0.41,
+      "net": -8753
+     },
+     "2025": {
+      "trades": 176,
+      "profitFactor": 0.68,
+      "net": -38172
+     },
+     "2026": {
+      "trades": 156,
+      "profitFactor": 0.64,
+      "net": -35621
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR) · debit spread, 200 wide · signal exits",
+    "signal": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 379,
+     "winRate": 35.1,
+     "profitFactor": 0.5,
+     "net": -75389,
+     "avg": -199,
+     "worst": -1916,
+     "best": 4725,
+     "maxDrawdown": 75468,
+     "lowestEquity": 24557,
+     "endEquity": 24611,
+     "avgOutlay": 5455,
+     "maxOutlay": 8124,
+     "charges": 49331,
+     "rolls": 0,
+     "top5": 13272,
+     "top5SharePct": null,
+     "withoutTop5": -88661,
+     "longestLosingRun": 11,
+     "monthsUp": 2,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 46,
+      "profitFactor": 0.59,
+      "net": -3580
+     },
+     "2025": {
+      "trades": 177,
+      "profitFactor": 0.49,
+      "net": -40933
+     },
+     "2026": {
+      "trades": 156,
+      "profitFactor": 0.5,
+      "net": -30877
+     }
+    }
+   },
+   {
+    "id": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR) · debit spread, 200 wide · signal exits + 40% premium stop",
+    "signal": "EMA 9/21 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 379,
+     "winRate": 35.1,
+     "profitFactor": 0.5,
+     "net": -75389,
+     "avg": -199,
+     "worst": -1916,
+     "best": 4725,
+     "maxDrawdown": 75468,
+     "lowestEquity": 24557,
+     "endEquity": 24611,
+     "avgOutlay": 5455,
+     "maxOutlay": 8124,
+     "charges": 49331,
+     "rolls": 0,
+     "top5": 13272,
+     "top5SharePct": null,
+     "withoutTop5": -88661,
+     "longestLosingRun": 11,
+     "monthsUp": 2,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 46,
+      "profitFactor": 0.59,
+      "net": -3580
+     },
+     "2025": {
+      "trades": 177,
+      "profitFactor": 0.49,
+      "net": -40933
+     },
+     "2026": {
+      "trades": 156,
+      "profitFactor": 0.5,
+      "net": -30877
+     }
+    }
+   },
+   {
+    "id": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR) · 2 lots, at the money · signal exits",
+    "signal": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 210,
+     "winRate": 39,
+     "profitFactor": 0.82,
+     "net": -72604,
+     "avg": -346,
+     "worst": -7956,
+     "best": 28020,
+     "maxDrawdown": 115850,
+     "lowestEquity": 4948,
+     "endEquity": 27396,
+     "avgOutlay": 24203,
+     "maxOutlay": 60814,
+     "charges": 19285,
+     "rolls": 0,
+     "top5": 113759,
+     "top5SharePct": null,
+     "withoutTop5": -186364,
+     "longestLosingRun": 8,
+     "monthsUp": 11,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 26,
+      "profitFactor": 0.79,
+      "net": -4173
+     },
+     "2025": {
+      "trades": 94,
+      "profitFactor": 0.75,
+      "net": -44430
+     },
+     "2026": {
+      "trades": 90,
+      "profitFactor": 0.88,
+      "net": -24001
+     }
+    }
+   },
+   {
+    "id": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR) · 2 lots, at the money · signal exits + 40% premium stop",
+    "signal": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "2 lots, at the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 210,
+     "winRate": 39,
+     "profitFactor": 0.82,
+     "net": -72604,
+     "avg": -346,
+     "worst": -7956,
+     "best": 28020,
+     "maxDrawdown": 115850,
+     "lowestEquity": 4948,
+     "endEquity": 27396,
+     "avgOutlay": 24203,
+     "maxOutlay": 60814,
+     "charges": 19285,
+     "rolls": 0,
+     "top5": 113759,
+     "top5SharePct": null,
+     "withoutTop5": -186364,
+     "longestLosingRun": 8,
+     "monthsUp": 11,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 26,
+      "profitFactor": 0.79,
+      "net": -4173
+     },
+     "2025": {
+      "trades": 94,
+      "profitFactor": 0.75,
+      "net": -44430
+     },
+     "2026": {
+      "trades": 90,
+      "profitFactor": 0.88,
+      "net": -24001
+     }
+    }
+   },
+   {
+    "id": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR) · 2 lots, 100 in the money · signal exits",
+    "signal": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 210,
+     "winRate": 39.5,
+     "profitFactor": 0.81,
+     "net": -87838,
+     "avg": -418,
+     "worst": -9112,
+     "best": 29440,
+     "maxDrawdown": 136479,
+     "lowestEquity": -13158,
+     "endEquity": 12162,
+     "avgOutlay": 31396,
+     "maxOutlay": 66831,
+     "charges": 22076,
+     "rolls": 0,
+     "top5": 124667,
+     "top5SharePct": null,
+     "withoutTop5": -212505,
+     "longestLosingRun": 8,
+     "monthsUp": 11,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 26,
+      "profitFactor": 0.81,
+      "net": -4458
+     },
+     "2025": {
+      "trades": 94,
+      "profitFactor": 0.76,
+      "net": -51284
+     },
+     "2026": {
+      "trades": 90,
+      "profitFactor": 0.86,
+      "net": -32097
+     }
+    }
+   },
+   {
+    "id": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR) · 2 lots, 100 in the money · signal exits + 40% premium stop",
+    "signal": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "2 lots, 100 in the money",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 210,
+     "winRate": 39.5,
+     "profitFactor": 0.81,
+     "net": -87838,
+     "avg": -418,
+     "worst": -9112,
+     "best": 29440,
+     "maxDrawdown": 136479,
+     "lowestEquity": -13158,
+     "endEquity": 12162,
+     "avgOutlay": 31396,
+     "maxOutlay": 66831,
+     "charges": 22076,
+     "rolls": 0,
+     "top5": 124667,
+     "top5SharePct": null,
+     "withoutTop5": -212505,
+     "longestLosingRun": 8,
+     "monthsUp": 11,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 26,
+      "profitFactor": 0.81,
+      "net": -4458
+     },
+     "2025": {
+      "trades": 94,
+      "profitFactor": 0.76,
+      "net": -51284
+     },
+     "2026": {
+      "trades": 90,
+      "profitFactor": 0.86,
+      "net": -32097
+     }
+    }
+   },
+   {
+    "id": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR) · 1 lot + 1 opposite lot 200 out (hedge) · signal exits",
+    "signal": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 210,
+     "winRate": 26.2,
+     "profitFactor": 0.63,
+     "net": -54646,
+     "avg": -260,
+     "worst": -7661,
+     "best": 11422,
+     "maxDrawdown": 60346,
+     "lowestEquity": 44059,
+     "endEquity": 45354,
+     "avgOutlay": 18885,
+     "maxOutlay": 55354,
+     "charges": 27158,
+     "rolls": 0,
+     "top5": 36844,
+     "top5SharePct": null,
+     "withoutTop5": -91490,
+     "longestLosingRun": 9,
+     "monthsUp": 5,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 26,
+      "profitFactor": 0.33,
+      "net": -6431
+     },
+     "2025": {
+      "trades": 94,
+      "profitFactor": 0.73,
+      "net": -16880
+     },
+     "2026": {
+      "trades": 90,
+      "profitFactor": 0.59,
+      "net": -31335
+     }
+    }
+   },
+   {
+    "id": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR) · 1 lot + 1 opposite lot 200 out (hedge) · signal exits + 40% premium stop",
+    "signal": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "1 lot + 1 opposite lot 200 out (hedge)",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 210,
+     "winRate": 26.2,
+     "profitFactor": 0.63,
+     "net": -54646,
+     "avg": -260,
+     "worst": -7661,
+     "best": 11422,
+     "maxDrawdown": 60346,
+     "lowestEquity": 44059,
+     "endEquity": 45354,
+     "avgOutlay": 18885,
+     "maxOutlay": 55354,
+     "charges": 27158,
+     "rolls": 0,
+     "top5": 36844,
+     "top5SharePct": null,
+     "withoutTop5": -91490,
+     "longestLosingRun": 9,
+     "monthsUp": 5,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 26,
+      "profitFactor": 0.33,
+      "net": -6431
+     },
+     "2025": {
+      "trades": 94,
+      "profitFactor": 0.73,
+      "net": -16880
+     },
+     "2026": {
+      "trades": 90,
+      "profitFactor": 0.59,
+      "net": -31335
+     }
+    }
+   },
+   {
+    "id": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR) · debit spread, 200 wide · signal exits",
+    "signal": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits",
+    "stats": {
+     "trades": 210,
+     "winRate": 28.6,
+     "profitFactor": 0.36,
+     "net": -61726,
+     "avg": -294,
+     "worst": -1717,
+     "best": 3435,
+     "maxDrawdown": 62988,
+     "lowestEquity": 37168,
+     "endEquity": 38274,
+     "avgOutlay": 5370,
+     "maxOutlay": 8146,
+     "charges": 27142,
+     "rolls": 0,
+     "top5": 11798,
+     "top5SharePct": null,
+     "withoutTop5": -73524,
+     "longestLosingRun": 12,
+     "monthsUp": 1,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 26,
+      "profitFactor": 0.23,
+      "net": -4356
+     },
+     "2025": {
+      "trades": 94,
+      "profitFactor": 0.39,
+      "net": -27517
+     },
+     "2026": {
+      "trades": 90,
+      "profitFactor": 0.36,
+      "net": -29852
+     }
+    }
+   },
+   {
+    "id": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR) · debit spread, 200 wide · signal exits + 40% premium stop",
+    "signal": "EMA 20/50 crossover, 15-min, intraday (trail 1 ATR)",
+    "kind": "intraday",
+    "structure": "debit spread, 200 wide",
+    "exits": "signal exits + 40% premium stop",
+    "stats": {
+     "trades": 210,
+     "winRate": 28.6,
+     "profitFactor": 0.36,
+     "net": -61726,
+     "avg": -294,
+     "worst": -1717,
+     "best": 3435,
+     "maxDrawdown": 62988,
+     "lowestEquity": 37168,
+     "endEquity": 38274,
+     "avgOutlay": 5370,
+     "maxOutlay": 8146,
+     "charges": 27142,
+     "rolls": 0,
+     "top5": 11798,
+     "top5SharePct": null,
+     "withoutTop5": -73524,
+     "longestLosingRun": 12,
+     "monthsUp": 1,
+     "months": 26
+    },
+    "byYear": {
+     "2024": {
+      "trades": 26,
+      "profitFactor": 0.23,
+      "net": -4356
+     },
+     "2025": {
+      "trades": 94,
+      "profitFactor": 0.39,
+      "net": -27517
+     },
+     "2026": {
+      "trades": 90,
+      "profitFactor": 0.36,
+      "net": -29852
+     }
+    }
+   }
+  ],
+  "omni": [
+   {
+    "signal": "Every day 10:00, out 15:15 (control)",
+    "structure": "1 call + 1 put at the money",
+    "exits": "time exit",
+    "stats": {
+     "trades": 515,
+     "winRate": 28.2,
+     "profitFactor": 0.52,
+     "net": -295672,
+     "avg": -574,
+     "worst": -13550,
+     "best": 14933,
+     "maxDrawdown": 296510,
+     "lowestEquity": -195672,
+     "endEquity": -195672,
+     "avgOutlay": 24711,
+     "maxOutlay": 63057,
+     "charges": 71958,
+     "rolls": 0,
+     "top5": 61536,
+     "top5SharePct": null,
+     "withoutTop5": -357208,
+     "longestLosingRun": 13,
+     "monthsUp": 1,
+     "months": 26
+    },
+    "signals": 534,
+    "skipped": 19
+   },
+   {
+    "signal": "Every day 10:00, out 15:15 (control)",
+    "structure": "1 call + 1 put at the money",
+    "exits": "+40% target / -30% stop",
+    "stats": {
+     "trades": 522,
+     "winRate": 28.5,
+     "profitFactor": 0.55,
+     "net": -280839,
+     "avg": -538,
+     "worst": -10990,
+     "best": 14479,
+     "maxDrawdown": 284785,
+     "lowestEquity": -180839,
+     "endEquity": -180839,
+     "avgOutlay": 24511,
+     "maxOutlay": 63057,
+     "charges": 72768,
+     "rolls": 0,
+     "top5": 62666,
+     "top5SharePct": null,
+     "withoutTop5": -343505,
+     "longestLosingRun": 13,
+     "monthsUp": 3,
+     "months": 26
+    },
+    "signals": 534,
+    "skipped": 12
+   },
+   {
+    "signal": "Every day 10:00, out 15:15 (control)",
+    "structure": "1 call + 1 put, 200 out",
+    "exits": "time exit",
+    "stats": {
+     "trades": 522,
+     "winRate": 30.3,
+     "profitFactor": 0.58,
+     "net": -219148,
+     "avg": -420,
+     "worst": -12244,
+     "best": 13413,
+     "maxDrawdown": 221674,
+     "lowestEquity": -119148,
+     "endEquity": -119148,
+     "avgOutlay": 13891,
+     "maxOutlay": 50790,
+     "charges": 62536,
+     "rolls": 0,
+     "top5": 57959,
+     "top5SharePct": null,
+     "withoutTop5": -277107,
+     "longestLosingRun": 13,
+     "monthsUp": 3,
+     "months": 26
+    },
+    "signals": 534,
+    "skipped": 12
+   },
+   {
+    "signal": "Every day 10:00, out 15:15 (control)",
+    "structure": "1 call + 1 put, 200 out",
+    "exits": "+40% target / -30% stop",
+    "stats": {
+     "trades": 522,
+     "winRate": 30.7,
+     "profitFactor": 0.63,
+     "net": -194853,
+     "avg": -373,
+     "worst": -7865,
+     "best": 11638,
+     "maxDrawdown": 198397,
+     "lowestEquity": -94853,
+     "endEquity": -94853,
+     "avgOutlay": 13891,
+     "maxOutlay": 50790,
+     "charges": 62570,
+     "rolls": 0,
+     "top5": 43446,
+     "top5SharePct": null,
+     "withoutTop5": -238299,
+     "longestLosingRun": 13,
+     "monthsUp": 4,
+     "months": 26
+    },
+    "signals": 534,
+    "skipped": 12
+   },
+   {
+    "signal": "NR7 day: next day 09:30, held up to 2 days",
+    "structure": "1 call + 1 put at the money",
+    "exits": "time exit",
+    "stats": {
+     "trades": 79,
+     "winRate": 26.6,
+     "profitFactor": 0.67,
+     "net": -71438,
+     "avg": -904,
+     "worst": -23906,
+     "best": 45648,
+     "maxDrawdown": 101615,
+     "lowestEquity": 28562,
+     "endEquity": 28562,
+     "avgOutlay": 23898,
+     "maxOutlay": 48073,
+     "charges": 10882,
+     "rolls": 0,
+     "top5": 92025,
+     "top5SharePct": null,
+     "withoutTop5": -163463,
+     "longestLosingRun": 8,
+     "monthsUp": 6,
+     "months": 26
+    },
+    "signals": 79,
+    "skipped": 0
+   },
+   {
+    "signal": "NR7 day: next day 09:30, held up to 2 days",
+    "structure": "1 call + 1 put at the money",
+    "exits": "+40% target / -30% stop",
+    "stats": {
+     "trades": 79,
+     "winRate": 30.4,
+     "profitFactor": 0.82,
+     "net": -35795,
+     "avg": -453,
+     "worst": -14741,
+     "best": 43140,
+     "maxDrawdown": 77046,
+     "lowestEquity": 63298,
+     "endEquity": 64205,
+     "avgOutlay": 23898,
+     "maxOutlay": 48073,
+     "charges": 10932,
+     "rolls": 0,
+     "top5": 90869,
+     "top5SharePct": null,
+     "withoutTop5": -126663,
+     "longestLosingRun": 8,
+     "monthsUp": 6,
+     "months": 26
+    },
+    "signals": 79,
+    "skipped": 0
+   },
+   {
+    "signal": "NR7 day: next day 09:30, held up to 2 days",
+    "structure": "1 call + 1 put, 200 out",
+    "exits": "time exit",
+    "stats": {
+     "trades": 79,
+     "winRate": 26.6,
+     "profitFactor": 0.69,
+     "net": -57171,
+     "avg": -724,
+     "worst": -22236,
+     "best": 42909,
+     "maxDrawdown": 84193,
+     "lowestEquity": 42829,
+     "endEquity": 42829,
+     "avgOutlay": 13316,
+     "maxOutlay": 34641,
+     "charges": 9346,
+     "rolls": 0,
+     "top5": 85581,
+     "top5SharePct": null,
+     "withoutTop5": -142752,
+     "longestLosingRun": 8,
+     "monthsUp": 6,
+     "months": 26
+    },
+    "signals": 79,
+    "skipped": 0
+   },
+   {
+    "signal": "NR7 day: next day 09:30, held up to 2 days",
+    "structure": "1 call + 1 put, 200 out",
+    "exits": "+40% target / -30% stop",
+    "stats": {
+     "trades": 79,
+     "winRate": 35.4,
+     "profitFactor": 1,
+     "net": -209,
+     "avg": -3,
+     "worst": -11111,
+     "best": 39057,
+     "maxDrawdown": 45124,
+     "lowestEquity": 73755,
+     "endEquity": 99791,
+     "avgOutlay": 13316,
+     "maxOutlay": 34641,
+     "charges": 9426,
+     "rolls": 0,
+     "top5": 76862,
+     "top5SharePct": null,
+     "withoutTop5": -77072,
+     "longestLosingRun": 7,
+     "monthsUp": 11,
+     "months": 26
+    },
+    "signals": 79,
+    "skipped": 0
+   },
+   {
+    "signal": "Quiet first hour (<0.35%): 10:15, out 15:15",
+    "structure": "1 call + 1 put at the money",
+    "exits": "time exit",
+    "stats": {
+     "trades": 191,
+     "winRate": 25.1,
+     "profitFactor": 0.54,
+     "net": -78036,
+     "avg": -409,
+     "worst": -3856,
+     "best": 11671,
+     "maxDrawdown": 78036,
+     "lowestEquity": 21964,
+     "endEquity": 21964,
+     "avgOutlay": 21354,
+     "maxOutlay": 50600,
+     "charges": 25539,
+     "rolls": 0,
+     "top5": 38586,
+     "top5SharePct": null,
+     "withoutTop5": -116622,
+     "longestLosingRun": 14,
+     "monthsUp": 6,
+     "months": 24
+    },
+    "signals": 191,
+    "skipped": 0
+   },
+   {
+    "signal": "Quiet first hour (<0.35%): 10:15, out 15:15",
+    "structure": "1 call + 1 put at the money",
+    "exits": "+40% target / -30% stop",
+    "stats": {
+     "trades": 191,
+     "winRate": 25.1,
+     "profitFactor": 0.57,
+     "net": -72481,
+     "avg": -379,
+     "worst": -3856,
+     "best": 16439,
+     "maxDrawdown": 72481,
+     "lowestEquity": 27519,
+     "endEquity": 27519,
+     "avgOutlay": 21354,
+     "maxOutlay": 50600,
+     "charges": 25546,
+     "rolls": 0,
+     "top5": 43006,
+     "top5SharePct": null,
+     "withoutTop5": -115487,
+     "longestLosingRun": 14,
+     "monthsUp": 6,
+     "months": 24
+    },
+    "signals": 191,
+    "skipped": 0
+   },
+   {
+    "signal": "Quiet first hour (<0.35%): 10:15, out 15:15",
+    "structure": "1 call + 1 put, 200 out",
+    "exits": "time exit",
+    "stats": {
+     "trades": 191,
+     "winRate": 25.1,
+     "profitFactor": 0.6,
+     "net": -51877,
+     "avg": -272,
+     "worst": -3291,
+     "best": 10795,
+     "maxDrawdown": 51877,
+     "lowestEquity": 48123,
+     "endEquity": 48123,
+     "avgOutlay": 10755,
+     "maxOutlay": 37003,
+     "charges": 21807,
+     "rolls": 0,
+     "top5": 35953,
+     "top5SharePct": null,
+     "withoutTop5": -87830,
+     "longestLosingRun": 10,
+     "monthsUp": 7,
+     "months": 24
+    },
+    "signals": 191,
+    "skipped": 0
+   },
+   {
+    "signal": "Quiet first hour (<0.35%): 10:15, out 15:15",
+    "structure": "1 call + 1 put, 200 out",
+    "exits": "+40% target / -30% stop",
+    "stats": {
+     "trades": 191,
+     "winRate": 25.1,
+     "profitFactor": 0.61,
+     "net": -51746,
+     "avg": -271,
+     "worst": -3291,
+     "best": 11615,
+     "maxDrawdown": 51746,
+     "lowestEquity": 48254,
+     "endEquity": 48254,
+     "avgOutlay": 10755,
+     "maxOutlay": 37003,
+     "charges": 21807,
+     "rolls": 0,
+     "top5": 33133,
+     "top5SharePct": null,
+     "withoutTop5": -84880,
+     "longestLosingRun": 10,
+     "monthsUp": 5,
+     "months": 24
+    },
+    "signals": 191,
+    "skipped": 0
    }
   ]
  },
