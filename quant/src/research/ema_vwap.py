@@ -188,3 +188,129 @@ def _group(trades, key):
     for t in trades:
         out[key(t) if callable(key) else t[key]].append(t)
     return out
+
+
+# ---------------------------------------------------------------------------------------------------------------------------------------
+# Entry rules from the "EMA VWAP" reel (3-minute candles), tested on real option prices. Each rule reads candle i at its close and returns
+# "CE" (buy calls), "PE" (buy puts) or None. rows[i] = (start, end, open, high, low, close, ema9, vwap) of the near-month NIFTY future.
+def rule_wick_vwap(rows, i):
+    """The images: trade WITH the trend after a wick into VWAP is rejected. Down trend (EMA9 below VWAP): the candle's high reaches VWAP but
+    it closes back below VWAP and EMA9, red -> puts. Up trend (EMA9 above VWAP): the low reaches VWAP, closes back above both, green -> calls."""
+    s, e, o, h, l, c, ema, vw = rows[i]
+    if ema < vw and h >= vw and c < vw and c < ema and c < o:
+        return "PE"
+    if ema > vw and l <= vw and c > vw and c > ema and c > o:
+        return "CE"
+    return None
+
+
+def rule_wick_any(rows, i):
+    """As rule_wick_vwap, but a wick into EITHER line counts (EMA9 sits between price and VWAP on most pullbacks)."""
+    s, e, o, h, l, c, ema, vw = rows[i]
+    if ema < vw and h >= min(ema, vw) and c < ema and c < o:
+        return "PE"
+    if ema > vw and l <= max(ema, vw) and c > ema and c > o:
+        return "CE"
+    return None
+
+
+def rule_as_written(rows, i):
+    """The CEO's words: a candle that wicks through VWAP and closes back below it -> puts; a candle that breaks (closes) through EMA9 upward
+    -> calls. No trend filter."""
+    s, e, o, h, l, c, ema, vw = rows[i]
+    pc, pe = rows[i - 1][5], rows[i - 1][6]
+    if h >= vw and c < vw and o < vw:
+        return "PE"
+    if pc <= pe and c > ema:
+        return "CE"
+    return None
+
+
+def rule_cross(rows, i):
+    """Baseline tested earlier: EMA9 crosses VWAP."""
+    pe_, pv_, ema, vw = rows[i - 1][6], rows[i - 1][7], rows[i][6], rows[i][7]
+    return "CE" if pe_ <= pv_ and ema > vw else "PE" if pe_ >= pv_ and ema < vw else None
+
+
+RULES = {"wick into VWAP, with the trend (the images)": rule_wick_vwap, "wick into EMA9 or VWAP, with the trend": rule_wick_any,
+         "as written: VWAP wick -> puts, EMA9 break -> calls": rule_as_written, "EMA9 x VWAP crossover (tested earlier)": rule_cross}
+
+
+def simulate_rule(bt, ind: dict, rule, lots: int = 2, stop: float | None = 0.25, first_entry: str = "09:21", last_entry: str = "15:00",
+                  square_off: str = "15:20", max_trades: int = 99, min_dte: int = 0) -> list[dict]:
+    """One position at a time: buy `lots` lots of the at-the-money option of the nearest weekly expiry with at least `min_dte` trading days
+    left, at the signal candle's close (real 1-minute option price + slippage). Exit at the first 3-minute candle that CLOSES back across EMA9
+    against the trade (image 2), or when the option falls by `stop` (checked every minute), or at `square_off`. Full charges."""
+    from ..backtest.straddle_engine import _price_at, _series
+    trades, cache, exps = [], {}, sorted(bt.expiries)
+
+    def leg(expiry, strike, kind):
+        key = (expiry, strike, kind)
+        if key not in cache:
+            try:
+                meta = next((x for x in bt.c.expired_contracts(expiry) if int(x.get("strike_price") or 0) == strike and x.get("instrument_type") == kind), None)
+                E = date.fromisoformat(expiry)
+                cache[key] = (meta, _series(bt.c.expired_candles(meta["instrument_key"], "1minute", E - timedelta(days=9), E))) if meta else None
+            except RuntimeError:
+                cache[key] = None
+        return cache[key]
+
+    for d, rows in sorted(ind.items()):
+        if d < bt.cfg.start or d not in bt.n1 or len(rows) < 3:
+            continue
+        cand = [e for e in exps if e >= d.isoformat() and sum(1 for x in bt.trading if d < x <= date.fromisoformat(e)) >= min_dte]
+        if not cand:
+            continue
+        expiry = cand[0]
+        dte = sum(1 for x in bt.trading if d < x <= date.fromisoformat(expiry))
+        pos, n = None, 0
+        for i in range(1, len(rows)):
+            s, end, o, h, l, c, ema, vw = rows[i]
+            if pos:
+                bars, hit, t = pos["bars"], None, s
+                while t <= end and t <= square_off:                     # the premium stop, minute by minute inside this candle
+                    px = _price_at(bars, t)
+                    if stop and px is not None and t > pos["t"] and px - _slip(px) <= pos["entry"] * (1 - stop):
+                        hit = (t, px - _slip(px), f"stop -{int(stop * 100)}%")
+                        break
+                    t = _m(t, 1)
+                if not hit:
+                    if end >= square_off:
+                        px = _price_at(bars, square_off) or _price_at(bars, end)
+                        hit = (square_off, (px or pos["entry"]) - _slip(px or pos["entry"]), "15:20 square-off")
+                    elif (c < ema) if pos["kind"] == "CE" else (c > ema):   # a 3-minute close back across EMA9: exit (image 2)
+                        px = _price_at(bars, end)
+                        if px is not None:
+                            hit = (end, px - _slip(px), "3-min close across EMA9")
+                if hit:
+                    x = max(hit[1], 0.05)
+                    units = pos["units"]
+                    ch = charges(pos["entry"] * units, x * units, orders=2)["total"]
+                    net = (x - pos["entry"]) * units - ch
+                    trades.append({"day": d.isoformat(), "expiry": expiry, "dte": dte, "side": "CALL" if pos["kind"] == "CE" else "PUT", "strike": pos["strike"],
+                                   "in": pos["t"], "out": hit[0], "entry": round(pos["entry"], 2), "exit": round(x, 2), "why": hit[2], "units": units,
+                                   "outlay": round(pos["entry"] * units), "charges": round(ch, 2), "net": round(net, 2), "fut_move": round((c - pos["fut"]) * (1 if pos["kind"] == "CE" else -1), 1)})
+                    pos = None
+                continue
+            if n >= max_trades or not (first_entry <= end <= last_entry):
+                continue
+            kind = rule(rows, i)
+            if not kind:
+                continue
+            spot = _price_at(bt.n1[d], end)
+            if not spot:
+                continue
+            k = int(round(spot / 50) * 50)
+            lg = leg(expiry, k, kind)
+            if not lg:
+                continue
+            px = _price_at(lg[1].get(d) or {}, end)
+            if px is None or px <= 0:
+                continue
+            pos = {"kind": kind, "strike": k, "t": end, "entry": px + _slip(px), "bars": lg[1].get(d) or {}, "units": lots * int(lg[0].get("lot_size") or 75), "fut": c}
+            n += 1
+    return trades
+
+
+def _slip(px: float) -> float:
+    return max(0.10, 0.003 * px)

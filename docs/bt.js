@@ -199,12 +199,20 @@
     pdhl: function (B, X, i) { var S = X.S; if (!(S.ph[i] > 0)) return 0; return B.c[i] > S.ph[i] && B.c[i - 1] <= S.ph[i] ? 1 : B.c[i] < S.pl[i] && B.c[i - 1] >= S.pl[i] ? -1 : 0; },
     first5: function (B, X, i) { var S = cached(X, 'or5', function () { return session(B, 5); }); if (!S.orDone[i - 1]) return 0; var d = S.di[i], k = 'f5';
       var sig = B.c[i] > S.orH[i] && B.c[i - 1] <= S.orH[i] ? 1 : B.c[i] < S.orL[i] && B.c[i - 1] >= S.orL[i] ? -1 : 0; if (!sig) return 0; X[k] = X[k] || {}; if (X[k][d]) return 0; X[k][d] = 1; return sig; },
+    /* the "EMA VWAP" reel, 3-minute candles: a wick into VWAP (or either line) rejected, with the trend; and the CEO's written version */
+    wick_vwap: function (B, X, i) { var m = cached(X, 'e9', function () { return ema(B.c, 9); }), v = X.S.vwap, o = B.o[i], h = B.h[i], l = B.l[i], c = B.c[i];
+      if (m[i] < v[i] && h >= v[i] && c < v[i] && c < m[i] && c < o) return -1; if (m[i] > v[i] && l <= v[i] && c > v[i] && c > m[i] && c > o) return 1; return 0; },
+    wick_any: function (B, X, i) { var m = cached(X, 'e9', function () { return ema(B.c, 9); }), v = X.S.vwap, o = B.o[i], h = B.h[i], l = B.l[i], c = B.c[i];
+      if (m[i] < v[i] && h >= Math.min(m[i], v[i]) && c < m[i] && c < o) return -1; if (m[i] > v[i] && l <= Math.max(m[i], v[i]) && c > m[i] && c > o) return 1; return 0; },
+    as_written: function (B, X, i) { var m = cached(X, 'e9', function () { return ema(B.c, 9); }), v = X.S.vwap;
+      if (B.h[i] >= v[i] && B.c[i] < v[i] && B.o[i] < v[i]) return -1; if (B.c[i - 1] <= m[i - 1] && B.c[i] > m[i]) return 1; return 0; },
     random: function (B, X, i, e) { var r = Math.sin((B.t[i] + e.seed * 7919) * 12.9898) * 43758.5453; r -= Math.floor(r); return r < e.p ? (r < e.p / 2 ? 1 : -1) : 0; } };
   /* spec: { id, family, tf, entry: {...}, fade, filters: {adxMin, adxMax, vwapSide}, exits: {stopAtr, targetR, trail, trailAfter, be, flip}, from, to, exit, maxTrades } */
   function compose(spec) {
     var f = FAMILIES[spec.family], x = spec.exits || {}, fade = spec.fade ? -1 : 1;
     return { id: spec.id, name: spec.id, tf: spec.tf || 5, params: [], fixed: { from: spec.from || '09:30', to: spec.to || '14:30', exit: spec.exit || '15:15', maxTrades: spec.maxTrades || 3 },
       filters: spec.filters || {}, exits: { noTarget: x.targetR ? 0 : 1, trail: x.trail || 0, trailAfter: x.trailAfter || 0, be: x.be || 0, flip: x.flip || 0 },
+      out: x.emaExit ? function (B, X, j, side) { var m = cached(X, 'e9', function () { return ema(B.c, 9); }); return side === 1 ? B.c[j] < m[j] : B.c[j] > m[j]; } : undefined,
       entry: function (B, X, i) { if (i < 30) return null; var d = f(B, X, i, spec.entry || {}) * fade; if (!d) return null; var stp = (x.stopAtr || 1) * X.A[i]; return { side: d, stp: stp, tgt: x.targetR ? x.targetR * stp : 1e9 }; } };
   }
 
