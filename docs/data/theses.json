@@ -4925,7 +4925,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9138",
-    "0.12% of the account"
+    "0.11% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -5158,7 +5158,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9139",
-    "0.12% of the account"
+    "0.11% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -5184,7 +5184,7 @@
    [
     "Risk if the stop is hit",
     "\u20b9187",
-    "0.16% of the account"
+    "0.15% of the account"
    ]
   ],
   "risk": "Exit at the stop, the target or the time stop in the rule.",
@@ -5236,7 +5236,7 @@
    [
     "Risk if the stop is hit",
     "\u20b990",
-    "0.08% of the account"
+    "0.07% of the account"
    ],
    [
     "Reward at the target",

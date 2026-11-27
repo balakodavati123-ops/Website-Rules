@@ -8941,6 +8941,135 @@
   "charges_rs": 64.4
  },
  {
+  "id": "F261127-112",
+  "desk": "FNO",
+  "strategy": "long_straddle",
+  "label": "NIFTY long straddle \u00b7 12-01",
+  "side": "LONG",
+  "entry": -327.55,
+  "last": 47.2,
+  "qty": 1,
+  "status": "WIN",
+  "pnl_rs": 2988.0,
+  "exit": 47.2,
+  "why": "time",
+  "day": "2026-11-27",
+  "opened": "10:00:06",
+  "closed": "15:15:10",
+  "ts": 1795753809.9393802,
+  "expiry": "2026-12-01",
+  "lot": 65,
+  "legs": [
+   {
+    "side": "B",
+    "strike": 25850.0,
+    "kind": "CE",
+    "entry": 154.3,
+    "last": 58.05,
+    "key": "NSE_FO|47847"
+   },
+   {
+    "side": "B",
+    "strike": 25850.0,
+    "kind": "PE",
+    "entry": 173.25,
+    "last": 316.7,
+    "key": "NSE_FO|47854"
+   }
+  ],
+  "horizon": "daily",
+  "underlying": "NIFTY",
+  "unit_base": 327.55,
+  "target_u": 163.78,
+  "stop_u": 114.64,
+  "risk_class": "High return \u00b7 high loss",
+  "max_gain_rs": null,
+  "max_loss_rs": 21291,
+  "margin_rs": 21609,
+  "margin_src": "Upstox margin calculator",
+  "thesis": {
+   "horizon": "daily",
+   "headline": "Buy 25,850 CE, Buy 25,850 PE \u00b7 NIFTY 2026-12-01",
+   "news": [
+    "US markets averaged -0.18% at the 25/11 close.",
+    "Asia averaged +0.90%.",
+    "Brent crude 92.29 (-2.45%).",
+    "Siemens Energy India Q4 Results: Profit zooms 82% as new orders nearly double; declares \u20b912 dividend (CNBC-TV18)",
+    "Trump tariff threat unlikely to shake markets; AI stock valuations a concern: Richard Harris (CNBC-TV18)",
+    "US tariff worries persist, but why ICICI Securities likes textile stocks (CNBC-TV18)",
+    "6 companies filed results or hold board meetings today."
+   ],
+   "data": [
+    "NIFTY 25,849, -0.14% on the previous close. India VIX 16.6.",
+    "Implied volatility at the money 14.8% a year. Over 4 days to 2026-12-01 that prices a one-standard-deviation move of about \u00b1399 points (\u00b11.5%), so the market gives roughly a 68% chance of finishing between 25,449 and 26,248.",
+    "Option positioning: put-to-call ratio 0.94, largest call open interest at 26,000 (a ceiling), largest put open interest at 25,800 (a floor), max pain 25,850.",
+    "Foreign institutions hold net -70,670 index futures, net +374,199 puts and -196,496 calls (NSE participant data, 2026-11-18).",
+    "Our forecast for today: Bullish (score +0.20); likely range 25,626 to 26,176.",
+    "Conditions at 10:00 (Normal confidence): market-wide news today: Stock Crash: Norwegian budget carrier plunges 86% after warning finances are 'critical'; India bonds tumble as Brent tops $95 per barrel, RBI flags food inflation risks.",
+    "The quant chose strike 25,850 from 5 strikes: cost 327.55 points, 0.81x the move the market expects; it pays beyond 26,178 up (1.27%) or 25,522 down (1.26%); calls and puts together delta 0.02; spreads up to 0.3%.",
+    "Exits (unchanged): take profit at 50% above the cost, stop at 35% below it, out by 15:15.",
+    "The historical backtest disagrees with trading this every day: replayed on 907 near-expiry days since 2022 with model prices from India VIX, this exact rule won 24.0% of days and averaged Rs -1254.3 a day (total Rs -1137647); the desk's live record decides from here.",
+    "Trained rule: buy at 10:00, after watching the first 45 minutes on this week's expiry, strike chosen by the quant, when movement days: VIX rising, a big gap or strong news (the CEO's rule).",
+    "Backtest 2022-2024 (15-minute bars, model prices from India VIX): None trades, None% won, average Rs None; out of sample 2025-2026: None trades, None% won, average Rs None.",
+    "Days like today (None most similar): None% won, average Rs None. ."
+   ],
+   "strategy": "Buy the at-the-money call and put.",
+   "why": [
+    "Used when a big move is plausible but its direction is not: either leg can pay for both. It loses if the index drifts, because time decay eats the premium."
+   ],
+   "numbers": [
+    [
+     "Net debit",
+     "327.6 points = \u20b921,291 per lot",
+     "What you receive (or pay) up front"
+    ],
+    [
+     "Most you can make",
+     "\u20b9482,841",
+     "At expiry, if everything goes right"
+    ],
+    [
+     "Most you can lose",
+     "\u20b921,210",
+     "At expiry, if everything goes wrong (fixed by the bought options)"
+    ],
+    [
+     "Break-even at expiry",
+     "25,522 and 26,178",
+     "Where the structure stops losing money"
+    ],
+    [
+     "Chance of profit at expiry",
+     "42%",
+     "From the options market's own implied volatility; not our edge, the market's odds"
+    ],
+    [
+     "Expected move to expiry",
+     "\u00b1399 points",
+     "4 days at 14.8% implied volatility"
+    ],
+    [
+     "Reward for the risk",
+     "22.77 to 1",
+     "Best case divided by worst case"
+    ],
+    [
+     "Margin the broker asks",
+     "\u20b921,609",
+     "18% of the account (Upstox margin calculator)"
+    ],
+    [
+     "Our exit levels",
+     "Take profit at \u20b910,645, cut at \u20b97,452",
+     "Rupees on one lot, before the exit rule below"
+    ]
+   ],
+   "risk": "Take profit at 50% of the debit, cut at 35%, and be flat by 15:15 whatever happens. Fails when: A quiet day. The cost of both options is the most you can lose.",
+   "viability": "One lot of 65 needs \u20b921,609 of margin, checked with the broker's calculator when the trade was booked."
+  },
+  "reason": "NIFTY 25,849 (-0.14% on the close). Debit 327.6 points; target 50% of it, stop 35% of it; out by 15:15"
+ },
+ {
   "id": "K261127-113",
   "desk": "EQUITY",
   "strategy": "scalp_vwap_pullback_v2",

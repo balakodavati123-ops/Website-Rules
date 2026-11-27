@@ -194,13 +194,13 @@
  {
   "desk": "FNO",
   "strategy": "long_straddle",
-  "closed": 5,
-  "wins": 3,
-  "win_rate": 60.0,
-  "pnl_rs": 7946.0,
-  "avg_rs": 1589.2,
-  "t_stat": 0.82,
-  "confidence": 79.4,
+  "closed": 6,
+  "wins": 4,
+  "win_rate": 66.7,
+  "pnl_rs": 10934.0,
+  "avg_rs": 1822.33,
+  "t_stat": 1.14,
+  "confidence": 87.3,
   "verdict": "COLLECTING"
  },
  {

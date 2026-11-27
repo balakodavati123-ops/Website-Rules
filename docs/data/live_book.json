@@ -3,11 +3,13 @@
  "trades": [],
  "seen": {
   "KALYANKJIL": "conflict",
-  "ZYDUSLIFE": "conflict"
+  "ZYDUSLIFE": "conflict",
+  "INOXINDIA": "conflict",
+  "MAHACOAL": "conflict"
  },
  "seq": 0,
  "diag": {
-  "at": "12:09",
+  "at": "15:40",
   "effort": 2,
   "setups_on": [
    "news",
@@ -15,53 +17,16 @@
    "momentum",
    "vwap"
   ],
-  "scanned": 549,
+  "scanned": 0,
   "found": {
-   "news": [
-    "ZEEL",
-    "COFORGE",
-    "LUPIN",
-    "WELCORP",
-    "SHYAMMETL",
-    "DIXON",
-    "SOLARINDS"
-   ],
-   "gap": [
-    "SILVERBEES",
-    "MANAPPURAM",
-    "GOLD1",
-    "HINDZINC",
-    "PASHUPATI",
-    "VAML",
-    "MAFANG",
-    "APLAPOLLO"
-   ],
-   "momentum": [
-    "MEESHO",
-    "MODEFENCE",
-    "SHRIRAMFIN",
-    "BANKBARODA",
-    "UTLSOLAR",
-    "INFY",
-    "SILVERBEES",
-    "PRECWIRE"
-   ],
-   "vwap": [
-    "ASTERDM",
-    "SHRIRAMFIN",
-    "MARUTI",
-    "LALITHAA",
-    "BAJAJHLDNG",
-    "AGIIL",
-    "LLOYDSENGG",
-    "TATACAP"
-   ]
+   "news": [],
+   "gap": [],
+   "momentum": [],
+   "vwap": []
   },
   "taken": [],
-  "skipped": {
-   "DIXON": "no intraday margin left"
-  },
-  "news_names": 4,
-  "headline_names": 17
+  "skipped": {},
+  "news_names": 12,
+  "headline_names": 9
  }
 }

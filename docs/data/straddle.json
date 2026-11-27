@@ -1,19 +1,19 @@
 {
- "updated_at": "2026-11-27T12:09:54+05:30",
+ "updated_at": "2026-11-27T15:30:54+05:30",
  "today": {
   "ok": false,
-  "why": "no straddle rule beat time decay and costs in training (2592 rules tested); on the 40 days most like today the trade averaged Rs -1,760",
+  "why": "no straddle rule beat time decay and costs in training (2592 rules tested); on the 40 days most like today the trade averaged Rs -1,712",
   "match": true,
   "knn": {
    "k": 40,
-   "avg_rs": -1759.8,
+   "avg_rs": -1712.4,
    "win_rate": 17.5,
    "dates": [
     "2026-04-17",
-    "2024-11-11",
     "2026-11-12",
-    "2026-10-15",
-    "2026-05-15"
+    "2026-05-15",
+    "2024-11-11",
+    "2026-10-15"
    ]
   },
   "features": {
@@ -21,11 +21,11 @@
    "vix_pct": 75.8,
    "rv_iv": 1.17,
    "gap": -0.17,
-   "vix_chg": -1.01,
+   "vix_chg": -1.72,
    "dte": 4,
    "prev_close": 25884.5
   },
-  "strike": 25700,
+  "strike": 25600,
   "expiry": "2026-12-01",
   "entry": "10:00",
   "target": 0.4,
@@ -52,37 +52,37 @@
    "win_rate": 15.6,
    "pf": 0.21
   },
-  "at": "12:09",
+  "at": "15:30",
   "mode": "ceo"
  },
  "conditions": {
   "go": true,
   "lean": -1,
   "steps": 2,
-  "basis": "the morning's move from the open (-0.50%)",
+  "basis": "the morning's move from the open (-0.90%)",
   "confidence": "High",
-  "news_support": 0,
-  "news_against": 2,
+  "news_support": 1,
+  "news_against": 1,
   "reasons": [
-   "the first 45 minutes covered 0.94% (high to low): the market is moving",
-   "NIFTY is -0.50% from its open by 10:00",
-   "market-wide news today: Crude oil price rises on reports of Houthi attack on Saudi refinery; Stock Market Today: Sensex Drops Over 650 Points, Nifty Below 25,750; Infosys, TCS, HCLTec"
+   "the first 45 minutes covered 1.33% (high to low): the market is moving",
+   "NIFTY is -0.90% from its open by 10:00",
+   "market-wide news today: Is a US Fed rate hike confirmed in Dec meet? How will it impact Sensex, Nifty, Gold as US ; Why is Indian stock market falling today? Nifty down to near 25,600, Sensex crashes 900 po"
   ],
   "go_signals": [
-   "the first 45 minutes covered 0.94% (high to low): the market is moving",
-   "NIFTY is -0.50% from its open by 10:00",
-   "market-wide news today: Crude oil price rises on reports of Houthi attack on Saudi refinery; Stock Market Today: Sensex Drops Over 650 Points, Nifty Below 25,750; Infosys, TCS, HCLTec"
+   "the first 45 minutes covered 1.33% (high to low): the market is moving",
+   "NIFTY is -0.90% from its open by 10:00",
+   "market-wide news today: Is a US Fed rate hike confirmed in Dec meet? How will it impact Sensex, Nifty, Gold as US ; Why is Indian stock market falling today? Nifty down to near 25,600, Sensex crashes 900 po"
   ],
   "skip_signals": [],
   "news": {
-   "strong": 2,
-   "net": 2,
+   "strong": 0,
+   "net": 0,
    "macro": [
-    "Crude oil price rises on reports of Houthi attack on Saudi refinery",
-    "Stock Market Today: Sensex Drops Over 650 Points, Nifty Below 25,750; Infosys, TCS, HCLTec",
-    "Sanjay Raut Sharpens Attack On BJP Over Delimitation Bill, Calls It Conspiracy To Strip Pe"
+    "Is a US Fed rate hike confirmed in Dec meet? How will it impact Sensex, Nifty, Gold as US ",
+    "Why is Indian stock market falling today? Nifty down to near 25,600, Sensex crashes 900 po",
+    "Tokyo's core CPI hits 2.9%, strengthening case for BOJ rate hike in December"
    ],
-   "mood": "mixed",
+   "mood": "bearish",
    "fc": 0.2
   }
  },
@@ -207,9 +207,9 @@
   }
  },
  "live": {
-  "n": 5,
-  "wins": 3,
-  "total_rs": 7946,
+  "n": 6,
+  "wins": 4,
+  "total_rs": 10934,
   "trades": [
    {
     "id": "F261119-37",
@@ -249,6 +249,14 @@
     "label": "NIFTY long straddle \u00b7 12-01",
     "status": "LOSS",
     "pnl_rs": -4695.0,
+    "why": "time"
+   },
+   {
+    "id": "F261127-112",
+    "day": "2026-11-27",
+    "label": "NIFTY long straddle \u00b7 12-01",
+    "status": "WIN",
+    "pnl_rs": 2988.0,
     "why": "time"
    }
   ]
