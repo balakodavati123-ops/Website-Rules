@@ -1,62 +1,67 @@
 {
  "mood": "mixed",
- "brief": "Indian shares are mixed, with the Sensex slipping and the Nifty flat as IT stocks fall, while metals and Titan gain. The Sensex fell about 500 points from its day's high, and Deutsche Bank sees a possible RBI rate hike in December.",
+ "brief": "Indian shares are subdued, with the Sensex slipping and the Nifty flat as IT stocks fall while metals and Titan gain. Concerns include elevated oil prices weighing on Indian bonds and scrutiny of the Tata Steel and APL Apollo deal.",
  "themes": [
-  "IT stocks fall",
-  "Sensex pares early gains",
-  "Possible RBI December rate hike",
-  "Nvidia halts Southeast Asia sales"
+  "IT stocks fall, metals gain",
+  "Tata Steel-APL Apollo deal under scrutiny",
+  "Oil prices weigh on bonds",
+  "Global tech rout and Nvidia worries"
  ],
  "companies": [
   {
-   "name": "Tata Consultancy Services",
-   "tone": "negative",
-   "why": "Tumbles as IT stocks fall"
-  },
-  {
-   "name": "HCLTech",
-   "tone": "negative",
-   "why": "Tumbles as IT stocks fall"
-  },
-  {
-   "name": "Infosys",
-   "tone": "negative",
-   "why": "Fresh short positions as futures decline"
-  },
-  {
-   "name": "Wipro",
-   "tone": "negative",
-   "why": "Fresh short positions as futures decline"
-  },
-  {
    "name": "Titan",
    "tone": "positive",
-   "why": "Top gainer in the market today"
+   "why": "Gains while the broader market is subdued"
   },
   {
-   "name": "Kalyan Jewellers",
-   "tone": "positive",
-   "why": "Gains up to 3% among jewellery stocks"
-  },
-  {
-   "name": "Senco Gold",
+   "name": "Tata Steel",
    "tone": "negative",
-   "why": "Falls while other jewellery stocks gain"
+   "why": "APL Apollo deal called ugly; Sebi may scrutinise"
   },
   {
-   "name": "Urban Company",
-   "tone": "neutral",
-   "why": "Listed among stocks to watch today"
+   "name": "APL Apollo",
+   "tone": "negative",
+   "why": "Deal faces scrutiny over related-party and shareholder worries"
+  },
+  {
+   "name": "Waaree Renewable",
+   "tone": "positive",
+   "why": "Rises 14% after 120-MWp EPC order"
+  },
+  {
+   "name": "HDFC Bank",
+   "tone": "negative",
+   "why": "Slips to 2.5-year low on legal, leadership woes"
+  },
+  {
+   "name": "Zydus Lifesciences",
+   "tone": "negative",
+   "why": "Dips 3% on USFDA complete response letter"
+  },
+  {
+   "name": "BEML",
+   "tone": "positive",
+   "why": "Jumps 7% in the Nifty 500"
+  },
+  {
+   "name": "Jupiter Wagons",
+   "tone": "negative",
+   "why": "Falls 5.7% after two-day rally"
+  },
+  {
+   "name": "IDFC First Bank",
+   "tone": "positive",
+   "why": "Gains 3% and nears 52-week high"
   }
  ],
- "global": "Nvidia halted sales to Southeast Asia as the US tightened China restrictions, though Asian stocks rose and US futures jumped.",
+ "global": "Nvidia has fallen about 35% from its record high and the Nasdaq is in a correction, weighing on global tech sentiment.",
  "risks": [
-  "Possible RBI rate hike in December",
-  "New Iran sanctions and Brent near month high",
-  "IT selling may drag the index"
+  "IT selling may drag the index",
+  "Elevated oil prices fan inflation worries",
+  "Global tech rout could spill into Indian markets"
  ],
- "time": "27 Nov 10:21",
- "at": 1795755076.620758,
+ "time": "27 Nov 11:21",
+ "at": 1795758691.009659,
  "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "n": 40

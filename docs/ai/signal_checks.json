@@ -1,6 +1,6 @@
 {
- "time": "27 Nov 10:21",
- "at": 1795755076.620758,
+ "time": "27 Nov 11:21",
+ "at": 1795758691.009659,
  "day": "2026-11-27",
  "model": "Claude (your plan, scheduled)",
  "checks": {
@@ -31,6 +31,18 @@
   "DHARAN": {
    "verdict": "confirm",
    "why": "Fresh, specific insolvency process filing is material negative news."
+  },
+  "SHYAMMETL": {
+   "verdict": "doubt",
+   "why": "General update with no detail; price has not moved."
+  },
+  "WAAREERTL": {
+   "verdict": "doubt",
+   "why": "Order win is specific, but the 14% jump is priced in and price is flat."
+  },
+  "IDFCFIRSTB": {
+   "verdict": "doubt",
+   "why": "Move already happened; price is down, not confirming."
   }
  }
 }
