@@ -25,17 +25,21 @@ STRUCTURES = ("buy2", "hedge", "spread", "straddle", "strangle")
 
 class Pricer:
     def __init__(self, bt, log=print):
-        self.bt, self.log, self.cache, self.exps, self.fallbacks = bt, log, {}, sorted(bt.expiries), 0
+        self.bt, self.log, self.cache, self.exps, self.fallbacks, self.unavailable = bt, log, {}, sorted(bt.expiries), 0, 0
 
     def series(self, expiry: str, strike: int, kind: str):
         key = (expiry, strike, kind)
         if key not in self.cache:
-            meta = next((x for x in self.bt.c.expired_contracts(expiry) if int(x.get("strike_price") or 0) == strike and x.get("instrument_type") == kind), None)
-            if not meta:
-                self.cache[key] = None
-            else:
-                E = date.fromisoformat(expiry)
-                self.cache[key] = (meta, _series(self.bt.c.expired_candles(meta["instrument_key"], "1minute", E - timedelta(days=13), E)))
+            try:
+                meta = next((x for x in self.bt.c.expired_contracts(expiry) if int(x.get("strike_price") or 0) == strike and x.get("instrument_type") == kind), None)
+                if not meta:
+                    self.cache[key] = None
+                else:
+                    E = date.fromisoformat(expiry)
+                    self.cache[key] = (meta, _series(self.bt.c.expired_candles(meta["instrument_key"], "1minute", E - timedelta(days=13), E)))
+            except RuntimeError:                                       # Upstox would not serve it (rate limit): skip, and count it
+                self.unavailable += 1
+                return None
         return self.cache[key]
 
     def px(self, expiry: str, strike: int, kind: str, d: date, t: str, back: int = 20) -> float | None:

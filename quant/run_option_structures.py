@@ -43,30 +43,38 @@ def main() -> None:
     P = OS.Pricer(bt)
     sig = json.loads(Path("quant/results/signals.json").read_text())
     res = {"period": f"{bt.expiries[0]} to {bt.expiries[-1]} (expired weekly options)", "directional": [], "omni": []}
-    for i, s in enumerate(sig):
+    out = Path("quant/results/option_structures.json" if only is None else f"quant/results/option_structures_{only}.json")
+    def keep():
+        res["exit_price_fallbacks"], res["contracts_unavailable"] = P.fallbacks, P.unavailable
+        res["status"] = "VERIFIED_HISTORICAL: Upstox expired NIFTY weekly option 1-minute candles; index signals from the NIFTY 1-minute database"
+        out.write_text(json.dumps(res, indent=1, default=str))
+    order = [i for i, s in enumerate(sig) if s["kind"] != "intraday"] + [None] + [i for i, s in enumerate(sig) if s["kind"] == "intraday"]
+    for i in order:
+        if i is None:
+            if only is not None:
+                continue
+            for name, tr in omni_signals(bt).items():
+                for st, kw, lab in [("straddle", {}, "1 call + 1 put at the money"), ("strangle", {"wing": 200}, "1 call + 1 put, 200 out")]:
+                    for ex, xl in [({}, "time exit"), ({"stop": 0.3, "target": 0.4}, "+40% target / -30% stop")]:
+                        rows = OS.simulate(P, tr, st, **kw, **ex)
+                        S = OS.stats(rows)
+                        res["omni"].append({"signal": name, "structure": lab, "exits": xl, "stats": S, "signals": len(tr), "skipped": len(tr) - len(rows)})
+                        print(f"[{time.time() - t0:5.0f}s] OMNI {name:44s} | {lab:28s} | {xl:24s} | {S.get('trades')} of {len(tr)} tr {S.get('winRate')}% PF {S.get('profitFactor')} net Rs {S.get('net')} DD Rs {S.get('maxDrawdown')} top5 {S.get('top5SharePct')}%", flush=True)
+                        keep()
+            continue
+        s = sig[i]
         if only is not None and i != only:
             continue
         for st, kw, lab in VARIANTS:
             for ex, xl in EXITS:
                 rows = OS.simulate(P, s["trades"], st, **kw, **ex)
                 S = OS.stats(rows)
-                res["directional"].append({"signal": s["label"], "kind": s["kind"], "structure": lab, "exits": xl, "stats": S,
+                res["directional"].append({"signal": s["label"], "kind": s["kind"], "structure": lab, "exits": xl, "stats": S, "signals": len(s["trades"]), "skipped": len(s["trades"]) - len(rows),
                                            "byYear": {y: OS.stats([r for r in rows if r["day"][:4] == y]) for y in sorted({r["day"][:4] for r in rows})}})
-                print(f"[{time.time() - t0:5.0f}s] {s['label'][:62]:62s} | {lab:38s} | {xl:31s} | {S.get('trades')} tr {S.get('winRate')}% PF {S.get('profitFactor')} net Rs {S.get('net')} DD Rs {S.get('maxDrawdown')} low Rs {S.get('lowestEquity')}", flush=True)
-    if only is None:
-        for name, tr in omni_signals(bt).items():
-            for st, kw, lab in [("straddle", {}, "1 call + 1 put at the money"), ("strangle", {"wing": 200}, "1 call + 1 put, 200 out")]:
-                for ex, xl in [({}, "time exit"), ({"stop": 0.3, "target": 0.4}, "+40% target / -30% stop")]:
-                    rows = OS.simulate(P, tr, st, **kw, **ex)
-                    S = OS.stats(rows)
-                    res["omni"].append({"signal": name, "structure": lab, "exits": xl, "stats": S})
-                    print(f"[{time.time() - t0:5.0f}s] OMNI {name:44s} | {lab:28s} | {xl:24s} | {S.get('trades')} tr {S.get('winRate')}% PF {S.get('profitFactor')} net Rs {S.get('net')} DD Rs {S.get('maxDrawdown')}", flush=True)
-    res["exit_price_fallbacks"] = P.fallbacks
-    print("exits with no option price at that minute (valued flat):", P.fallbacks)
-    res["status"] = "VERIFIED_HISTORICAL: Upstox expired NIFTY weekly option 1-minute candles; index signals from the NIFTY 1-minute database"
-    Path("quant/results").mkdir(exist_ok=True)
-    Path("quant/results/option_structures.json" if only is None else f"quant/results/option_structures_{only}.json").write_text(json.dumps(res, indent=1, default=str))
-
+                print(f"[{time.time() - t0:5.0f}s] {s['label'][:62]:62s} | {lab:38s} | {xl:31s} | {S.get('trades')} of {len(s['trades'])} tr {S.get('winRate')}% PF {S.get('profitFactor')} net Rs {S.get('net')} DD Rs {S.get('maxDrawdown')} low Rs {S.get('lowestEquity')} top5 {S.get('top5SharePct')}%", flush=True)
+                keep()
+    keep()
+    print("exits valued flat for want of a price:", P.fallbacks, "| contracts Upstox would not serve:", P.unavailable)
 
 if __name__ == "__main__":
     main()
