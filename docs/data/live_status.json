@@ -2,13 +2,14 @@
  "desks": {
   "broker": "not connected: no broker token",
   "crypto": "6 coins from Kraken, real time",
-  "gateway": "dry \u00b7 0 intents, 4 refused",
+  "gateway": "dry \u00b7 0 intents, 0 refused",
+  "macro": "15 world prices, world markets imply 26.7 NIFTY points; call none (outside market hours)",
   "charts": "3 live charts",
-  "news_pulse": "1 new signal(s); 4 in the last hour from 9 feeds"
+  "news_pulse": "0 new signal(s); 0 in the last hour from 7 feeds"
  },
- "updated_at": "2026-11-27T23:34:13+05:30",
- "updated_hm": "27 Nov 23:34:13",
- "loops": 22,
+ "updated_at": "2026-11-28T05:14:55+05:30",
+ "updated_hm": "28 Nov 05:14:55",
+ "loops": 3143,
  "sessions": {
   "equity": false,
   "fno": false,
