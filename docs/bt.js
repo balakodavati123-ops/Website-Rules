@@ -179,6 +179,16 @@
         return null;
       },
       out: function (B, X, j, side) { return side === 1 ? B.c[j] < X.es[j] : B.c[j] > X.es[j]; } }];
+  /* the "EMA VWAP" reel on 3-minute candles: entries from FAMILIES, out on a 3-minute close back across EMA9 (or the stop / exit time) */
+  [['reel_wick', 'EMA9 / VWAP wick rejection (reel)', 'wick_vwap', 'With the trend (EMA9 vs VWAP): a 3-minute candle wicks into VWAP and closes back on the trend side: buy puts in a down trend, calls in an up trend. Out on a 3-minute close back across EMA9.'],
+   ['reel_written', 'VWAP wick puts / EMA9 break calls', 'as_written', 'A 3-minute candle that wicks through VWAP and closes back below it: buy puts. A 3-minute close breaking above EMA9: buy calls. Out on a 3-minute close back across EMA9.']].forEach(function (r) {
+    STRATS.push({ id: r[0], name: r[1], tf: 3, about: r[3], entryText: r[3], exitText: 'Out on the first 3-minute candle that closes back across EMA9, at the ATR stop, or at the exit time.',
+      grid: ['stp', [1, 2, 3, 4], 'maxTrades', [1, 3, 99]],
+      params: [{ k: 'stp', label: 'Stop (ATR)', v: 3, min: 0.5, max: 8, step: 0.5 }],
+      fixed: { from: '09:21', to: '15:00', exit: '15:20' },
+      entry: function (B, X, i, P) { var d = FAMILIES[r[2]](B, X, i); return d ? { side: d, stp: P.stp * X.A[i], tgt: 1e9 } : null; },
+      out: function (B, X, j, side) { var m = cached(X, 'e9', function () { return ema(B.c, 9); }); return side === 1 ? B.c[j] < m[j] : B.c[j] > m[j]; } });
+  });
   STRATS.forEach(function (s) { s.params = s.params.concat(COMMON.filter(function (c) { return !(s.fixed && c.k in s.fixed); })); });
 
   /* ---------- strategy factory: an entry family + settings + filters + exits (+ an optional fade: the opposite trade) ---------- */

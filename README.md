@@ -125,6 +125,22 @@ Each trade buys at most 2 lots: calls on up signals, puts on down signals. Each 
   There is no edge: time decay wins unless a big move is known in advance.
 - **Hedging pays on multi-day trends, not intraday.** The opposite protective option helped the multi-day trades (smaller drawdowns), but made intraday trades much worse (profit factor 0.48–0.65), because over a few hours the protection only costs time value.
 
+### The "EMA VWAP" reel (3-minute candles), on real option prices with 2 lots
+
+| Rule | Trades | Per day | Won | PF | Net | Account low |
+|---|---|---|---|---|---|---|
+| Wick into VWAP rejected, with the trend (the reel's images) | 1,282 | 3.2 | 24% | 0.83 | −₹1.75 L | wiped |
+| Wick into EMA9 or VWAP, with the trend | 5,993 | 12.2 | 23% | 0.75 | −₹10.8 L | wiped |
+| VWAP wick → puts, EMA9 break → calls (as written) | 5,917 | 12.0 | 23% | 0.74 | −₹10.6 L | wiped |
+| EMA9 × VWAP crossover | 1,167 | 2.6 | 30% | 0.86 | −₹1.53 L | −₹53k |
+
+- **No edge even before costs.** On the futures, these entries lost 0.7–1.0 points per trade, so there is nothing for option costs to eat into.
+- **The exit cuts most trades.** About 95% of trades end at the first 3-minute close back across EMA9, mostly as small losses. The rare trades that run to 15:20 are the only big winners.
+- **Every variant loses.** The stop, skipping expiry day, the call side, the put side, and each year from 2024 to 2026 all lost money.
+- **A 5-year check on the index (2022–2026) agrees.** The profit factor before costs is 0.97–1.10.
+- **Why the reel looks convincing:** a reel shows chosen examples, while a backtest counts every signal.
+- **Try it yourself:** both rules are in the Backtest tab as "EMA9 / VWAP wick rejection (reel)" and "VWAP wick puts / EMA9 break calls".
+
 ### About "70–80% profits" on social media
 - Posts show winners and leave out the losers.
 - SEBI's study: **91% of individual F&O traders lost money in FY24**, and 93% over FY22–FY24.

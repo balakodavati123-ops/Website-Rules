@@ -57,6 +57,6 @@ def test_fills_stop_first_gaps_time_exit_and_charges():
 
 def test_five_strategies_run_and_patterns_build():
     o = _run()
-    assert [x[0] for x in o["five"]] == ["trend_pullback", "orb_trend", "vwap_snapback", "gap_fill", "ema_st_adx"]
+    assert [x[0] for x in o["five"]] == ["trend_pullback", "orb_trend", "vwap_snapback", "gap_fill", "ema_st_adx", "reel_wick", "reel_written"]
     assert all(x[2] and x[3] for x in o["five"])
     assert {"gaps", "firstHour", "byDow", "expiry", "month"} <= set(o["patterns"])
