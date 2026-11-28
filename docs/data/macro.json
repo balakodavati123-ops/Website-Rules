@@ -1,6 +1,6 @@
 {
- "at": "23:32:27",
- "day": "2026-11-27",
+ "at": "05:14:55",
+ "day": "2026-11-28",
  "session": "closed",
  "ref": {
   "day": "2026-11-27",
@@ -23,13 +23,13 @@
  "banknifty": null,
  "vix": null,
  "implied": {
-  "nifty_pct": 0.11,
-  "nifty_pts": 28.5,
-  "sensex_pct": 0.109,
-  "sensex_pts": 92.2,
+  "nifty_pct": 0.103,
+  "nifty_pts": 26.7,
+  "sensex_pct": 0.102,
+  "sensex_pts": 85.8,
   "missing": [],
-  "session_pct": 0.3,
-  "session_pts": 77.7
+  "session_pct": null,
+  "session_pts": null
  },
  "call": null,
  "pre_open": null,
@@ -40,7 +40,7 @@
    "symbol": "INR=X",
    "last": 92.98,
    "chg_pct": 0.0,
-   "as_of": "27 Nov 21:53",
+   "as_of": "28 Nov 03:39",
    "weighted": true,
    "beta": -0.3471,
    "effect_pct": -0.0,
@@ -54,13 +54,13 @@
    "key": "brent",
    "name": "Brent crude",
    "symbol": "BZ=F",
-   "last": 90.08,
-   "chg_pct": -1.2,
-   "as_of": "27 Nov 23:30",
+   "last": 90.84,
+   "chg_pct": -0.36,
+   "as_of": "28 Nov 01:14",
    "weighted": true,
    "beta": -0.0138,
-   "effect_pct": 0.016,
-   "effect_pts": 4.3,
+   "effect_pct": 0.005,
+   "effect_pts": 1.3,
    "why": "India imports most of its oil: dearer crude widens the trade gap and lifts inflation",
    "note": null,
    "stale": false,
@@ -70,13 +70,13 @@
    "key": "dxy",
    "name": "US dollar index",
    "symbol": "DX-Y.NYB",
-   "last": 104.02,
-   "chg_pct": 0.21,
-   "as_of": "27 Nov 23:22",
+   "last": 104.01,
+   "chg_pct": 0.2,
+   "as_of": "28 Nov 03:29",
    "weighted": true,
    "beta": -0.1694,
-   "effect_pct": -0.035,
-   "effect_pts": -9.0,
+   "effect_pct": -0.033,
+   "effect_pts": -8.6,
    "why": "A strong dollar pulls money out of emerging markets like India",
    "note": null,
    "stale": false,
@@ -86,13 +86,13 @@
    "key": "es",
    "name": "S&P 500 futures",
    "symbol": "ES=F",
-   "last": 7306.75,
-   "chg_pct": 0.81,
-   "as_of": "27 Nov 23:30",
+   "last": 7308.25,
+   "chg_pct": 0.83,
+   "as_of": "27 Nov 23:44",
    "weighted": true,
    "beta": 0.1578,
-   "effect_pct": 0.128,
-   "effect_pts": 33.3,
+   "effect_pct": 0.132,
+   "effect_pts": 34.1,
    "why": "Wall Street's mood, live through the Indian day",
    "note": null,
    "stale": false,
@@ -134,9 +134,9 @@
    "key": "wti",
    "name": "WTI crude",
    "symbol": "CL=F",
-   "last": 82.81,
-   "chg_pct": -1.91,
-   "as_of": "27 Nov 23:30",
+   "last": 83.08,
+   "chg_pct": -1.59,
+   "as_of": "28 Nov 01:14",
    "weighted": false,
    "beta": null,
    "effect_pct": null,
@@ -150,9 +150,9 @@
    "key": "gold",
    "name": "Gold",
    "symbol": "GC=F",
-   "last": 3675.4,
-   "chg_pct": 1.52,
-   "as_of": "27 Nov 23:30",
+   "last": 3668.5,
+   "chg_pct": 1.33,
+   "as_of": "28 Nov 01:14",
    "weighted": false,
    "beta": null,
    "effect_pct": null,
@@ -166,9 +166,9 @@
    "key": "us10y",
    "name": "US 10-year yield",
    "symbol": "^TNX",
-   "last": 4.93,
-   "chg_pct": 1.65,
-   "as_of": "27 Nov 23:17",
+   "last": 4.94,
+   "chg_pct": 1.82,
+   "as_of": "28 Nov 01:29",
    "weighted": false,
    "beta": null,
    "effect_pct": null,
@@ -182,9 +182,9 @@
    "key": "nq",
    "name": "Nasdaq futures",
    "symbol": "NQ=F",
-   "last": 26798.75,
-   "chg_pct": 1.55,
-   "as_of": "27 Nov 23:30",
+   "last": 26765.0,
+   "chg_pct": 1.42,
+   "as_of": "27 Nov 23:44",
    "weighted": false,
    "beta": null,
    "effect_pct": null,
@@ -198,9 +198,9 @@
    "key": "vix_us",
    "name": "US fear index (VIX)",
    "symbol": "^VIX",
-   "last": 24.82,
-   "chg_pct": -0.4,
-   "as_of": "27 Nov 23:17",
+   "last": 23.81,
+   "chg_pct": -4.45,
+   "as_of": "27 Nov 23:45",
    "weighted": false,
    "beta": null,
    "effect_pct": null,
@@ -244,55 +244,48 @@
   }
  ],
  "news_tone": {
-  "headlines": 22,
-  "bad": 7,
-  "good": 2
+  "headlines": 18,
+  "bad": 2,
+  "good": 4
  },
- "big_moves": [
-  {
-   "key": "gold",
-   "text": "Gold is up 1.5% since NIFTY's last close. On the 79 days since 2022 when it rose 1.5% or more, NIFTY fell on 49% of them (average move +0.10%).",
-   "nifty_fell_pct": 49.4,
-   "days": 79
-  }
- ],
+ "big_moves": [],
  "rupee_record": null,
  "india": null,
  "themes": [
   {
    "key": "rates",
    "label": "RBI, rates and inflation",
-   "count": 11,
-   "neg": 2,
-   "pos": 2,
+   "count": 10,
+   "neg": 0,
+   "pos": 4,
    "latest": {
-    "headline": "NSE secures RBI approval for corporate bond index futures",
+    "headline": "NSE gets RBI nod to launch corporate bond index futures",
     "source": "BusinessLine",
-    "time": "27 Nov 17:47"
-   }
-  },
-  {
-   "key": "crude",
-   "label": "crude oil",
-   "count": 7,
-   "neg": 5,
-   "pos": 0,
-   "latest": {
-    "headline": "Crude oil price rises on reports of Houthi attack on Saudi refinery",
-    "source": "BusinessLine",
-    "time": "27 Nov 17:47"
+    "time": "28 Nov 04:23"
    }
   },
   {
    "key": "geo",
    "label": "war, attacks, sanctions and tariffs",
-   "count": 7,
+   "count": 6,
    "neg": 0,
    "pos": 0,
    "latest": {
-    "headline": "Crude oil price rises on reports of Houthi attack on Saudi refinery",
+    "headline": "Jefferies sees telecom tariff hike in April next year; Airtel top pick",
+    "source": "BusinessStandard",
+    "time": "28 Nov 04:28"
+   }
+  },
+  {
+   "key": "rupee",
+   "label": "the rupee and the dollar",
+   "count": 2,
+   "neg": 1,
+   "pos": 0,
+   "latest": {
+    "headline": "Rupee plunges 24 paise to 92.62 against US dollar in early trade",
     "source": "BusinessLine",
-    "time": "27 Nov 17:47"
+    "time": "28 Nov 04:23"
    }
   },
   {
@@ -302,33 +295,30 @@
    "neg": 1,
    "pos": 0,
    "latest": {
-    "headline": "Is a US Fed rate hike confirmed in Dec meet? How will it impact Sensex, Nifty, Gold as US PCE inflation rises in October",
-    "source": "Mint",
-    "time": "27 Nov 17:42"
+    "headline": "Nasdaq futures plunge nearly 3% as AI trade comes under pressure; gold extends decline",
+    "source": "CNBC-TV18",
+    "time": "28 Nov 04:23"
    }
   },
   {
-   "key": "rupee",
-   "label": "the rupee and the dollar",
+   "key": "crude",
+   "label": "crude oil",
    "count": 1,
-   "neg": 1,
+   "neg": 0,
    "pos": 0,
    "latest": {
-    "headline": "Rupee plunges 24 paise to 92.62 against US dollar in early trade",
-    "source": "BusinessLine",
-    "time": "27 Nov 17:47"
+    "headline": "Brent crude crosses $96 a barrel mark after Houthis attack key Saudi refinery",
+    "source": "CNBC-TV18",
+    "time": "28 Nov 04:18"
    }
   }
  ],
  "reasons": [
-  "NIFTY is down 277 points (-1.07%) at 25,607 at the close; Sensex -1.17%.",
-  "S&P 500 futures is up 0.8% since NIFTY's last close: on past days that has meant about +33 NIFTY points.",
+  "NIFTY is down 277 points (-1.07%) at 25,607 at its last close (27 Nov); Sensex -1.17%.",
+  "S&P 500 futures is up 0.8% since NIFTY's last close: on past days that has meant about +34 NIFTY points.",
   "US dollar index is up 0.2% since NIFTY's last close: on past days that has meant about -9 NIFTY points.",
-  "Brent crude is down 1.2% ($90.08 a barrel) since NIFTY's last close: on past days that has meant about +4 NIFTY points.",
-  "Gold is up 1.5% since NIFTY's last close. On the 79 days since 2022 when it rose 1.5% or more, NIFTY fell on 49% of them (average move +0.10%).",
-  "India's own news today is mostly bad for the market: 7 bad and 2 good among 22 headlines on these themes (shown for context: headlines are not part of the tested call).",
-  "Today's headlines: 11 on RBI, rates and inflation, 7 on crude oil, 7 on war, attacks, sanctions and tariffs, 2 on the US markets and the Fed. Latest on RBI, rates and inflation: \"NSE secures RBI approval for corporate bond index futures\".",
-  "World markets account for about +78 of NIFTY's -277 points in today's session. The rest is India's own news and money flows (on a typical day world markets explain about a fifth of the move)."
+  "India's own news today is mostly good for the market: 4 good and 2 bad among 18 headlines on these themes (shown for context: headlines are not part of the tested call).",
+  "Today's headlines: 10 on RBI, rates and inflation, 6 on war, attacks, sanctions and tariffs, 2 on the rupee and the dollar, 2 on the US markets and the Fed. Latest on RBI, rates and inflation: \"NSE gets RBI nod to launch corporate bond index futures\"."
  ],
  "model": {
   "r2": 0.201,
@@ -336,6 +326,6 @@
   "from": "2022-01-04",
   "to": "2026-11-25"
  },
- "world_at": "23:32:26",
+ "world_at": "04:59:56",
  "alerts": []
 }

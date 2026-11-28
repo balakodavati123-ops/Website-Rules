@@ -1,90 +1,5 @@
 {
- "intents": {
-  "K261127-113": {
-   "id": "K261127-113",
-   "agent": "scalp_vwap_pullback_v2",
-   "symbol": "VEDL",
-   "label": "VEDL long",
-   "side": "BUY",
-   "qty": 163,
-   "entry": 244.4489,
-   "stop": 243.55,
-   "target": 245.5,
-   "created": "10:15:01",
-   "day": "2026-11-27",
-   "hold_min": 10,
-   "qty_sent": 163,
-   "reasons": [
-    "target is less than 1.2 times the risk"
-   ],
-   "margin": null,
-   "est_cost": 37.69,
-   "status": "REJECTED"
-  },
-  "K261127-114": {
-   "id": "K261127-114",
-   "agent": "scalp_vwap_pullback_v2",
-   "symbol": "INDIGO",
-   "label": "INDIGO short",
-   "side": "SELL",
-   "qty": 7,
-   "entry": 5670.4657,
-   "stop": 5687.05,
-   "target": 5650.6,
-   "created": "10:22:41",
-   "day": "2026-11-27",
-   "hold_min": 10,
-   "qty_sent": 7,
-   "reasons": [
-    "target is less than 1.2 times the risk"
-   ],
-   "margin": null,
-   "est_cost": 37.58,
-   "status": "REJECTED"
-  },
-  "K261127-115": {
-   "id": "K261127-115",
-   "agent": "scalp_vwap_pullback_v2",
-   "symbol": "KEI",
-   "label": "KEI short",
-   "side": "SELL",
-   "qty": 10,
-   "entry": 3759.9479,
-   "stop": 3774.0,
-   "target": 3743.1,
-   "created": "10:26:01",
-   "day": "2026-11-27",
-   "hold_min": 10,
-   "qty_sent": 10,
-   "reasons": [
-    "target is less than 1.2 times the risk"
-   ],
-   "margin": null,
-   "est_cost": 36.84,
-   "status": "REJECTED"
-  },
-  "K261127-116": {
-   "id": "K261127-116",
-   "agent": "scalp_vwap_pullback_v2",
-   "symbol": "JPL",
-   "label": "JPL short",
-   "side": "SELL",
-   "qty": 29,
-   "entry": 1376.5246,
-   "stop": 1379.95,
-   "target": 1372.45,
-   "created": "10:30:18",
-   "day": "2026-11-27",
-   "hold_min": 10,
-   "qty_sent": 29,
-   "reasons": [
-    "target is less than 1.2 times the risk"
-   ],
-   "margin": null,
-   "est_cost": 37.66,
-   "status": "REJECTED"
-  }
- },
+ "intents": {},
  "events": [
   {
    "t": "10:30:18",
@@ -224,7 +139,7 @@
   }
  ],
  "day": {
-  "day": "2026-11-27",
+  "day": "2026-11-28",
   "trades": 0,
   "pnl": 0.0,
   "stops": 0
@@ -234,7 +149,7 @@
  "wanted": "dry",
  "blockers": [],
  "killed": false,
- "updated_at": "2026-11-27T23:31:19+05:30",
+ "updated_at": "2026-11-28T05:14:57+05:30",
  "caps": {
   "max_value": 40000.0,
   "risk": 250.0,
