@@ -5,12 +5,12 @@
   "orders": "off: 0 waiting for you, 0 at the broker; Off: the desks trade on paper only. Nothing is sent to your broker.",
   "gateway": "dry \u00b7 0 intents, 0 refused",
   "macro": "18 world prices, world markets imply 25.9 NIFTY points; call none (outside market hours)",
-  "charts": "2 live charts",
-  "news_pulse": "1 new signal(s); 3 in the last hour from 9 feeds"
+  "news_pulse": "0 new signal(s); 3 in the last hour from 9 feeds",
+  "charts": "2 live charts"
  },
- "updated_at": "2026-11-28T16:19:37+05:30",
- "updated_hm": "28 Nov 16:19:37",
- "loops": 3453,
+ "updated_at": "2026-11-28T22:00:12+05:30",
+ "updated_hm": "28 Nov 22:00:12",
+ "loops": 3411,
  "sessions": {
   "equity": false,
   "fno": false,
@@ -28,6 +28,6 @@
   "snapshots": 0.0,
   "plan": 0.0,
   "slow_and_intraday": 0.4,
-  "persist": 0.4
+  "persist": 0.5
  }
 }

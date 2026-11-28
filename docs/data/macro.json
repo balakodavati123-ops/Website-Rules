@@ -1,5 +1,5 @@
 {
- "at": "16:19:00",
+ "at": "22:00:01",
  "day": "2026-11-28",
  "session": "closed",
  "ref": {
@@ -292,9 +292,9 @@
   }
  ],
  "news_tone": {
-  "headlines": 24,
-  "bad": 4,
-  "good": 4
+  "headlines": 23,
+  "bad": 3,
+  "good": 5
  },
  "big_moves": [],
  "rupee_record": null,
@@ -303,61 +303,61 @@
   {
    "key": "rates",
    "label": "RBI, rates and inflation",
-   "count": 20,
+   "count": 17,
    "neg": 1,
    "pos": 5,
    "latest": {
-    "headline": "Tokyo's core CPI hits 2.9%, strengthening case for BOJ rate hike in December",
-    "source": "CNBC-TV18",
-    "time": "28 Nov 16:18"
+    "headline": "Canadian dollar holds on to weekly gain as investors bet on December rate hike",
+    "source": "Mint",
+    "time": "28 Nov 21:58"
    }
   },
   {
    "key": "geo",
    "label": "war, attacks, sanctions and tariffs",
-   "count": 4,
+   "count": 5,
    "neg": 0,
    "pos": 0,
    "latest": {
-    "headline": "Stock Market Today: Gift Nifty, Oil Prices To Iran War; Five Key Factors That May Drive Sensex, Nifty 50 On Nov 27 - NDTV Profit",
-    "source": "GoogleNews-Business",
-    "time": "28 Nov 16:13"
+    "headline": "From war premium to demand concerns: What is driving the sharp fall in crude oil prices?",
+    "source": "ET",
+    "time": "28 Nov 21:48"
    }
   },
   {
    "key": "crude",
    "label": "crude oil",
-   "count": 2,
-   "neg": 1,
+   "count": 3,
+   "neg": 0,
    "pos": 0,
    "latest": {
-    "headline": "Stock Market Today: Gift Nifty, Oil Prices To Iran War; Five Key Factors That May Drive Sensex, Nifty 50 On Nov 27 - NDTV Profit",
-    "source": "GoogleNews-Business",
-    "time": "28 Nov 16:13"
-   }
-  },
-  {
-   "key": "us",
-   "label": "the US markets and the Fed",
-   "count": 2,
-   "neg": 1,
-   "pos": 0,
-   "latest": {
-    "headline": "Nasdaq futures plunge nearly 3% as AI trade comes under pressure; gold extends decline",
-    "source": "CNBC-TV18",
-    "time": "28 Nov 16:18"
+    "headline": "From war premium to demand concerns: What is driving the sharp fall in crude oil prices?",
+    "source": "ET",
+    "time": "28 Nov 21:48"
    }
   },
   {
    "key": "rupee",
    "label": "the rupee and the dollar",
+   "count": 2,
+   "neg": 1,
+   "pos": 0,
+   "latest": {
+    "headline": "Canadian dollar holds on to weekly gain as investors bet on December rate hike",
+    "source": "Mint",
+    "time": "28 Nov 21:58"
+   }
+  },
+  {
+   "key": "us",
+   "label": "the US markets and the Fed",
    "count": 1,
    "neg": 1,
    "pos": 0,
    "latest": {
-    "headline": "Rupee plunges 24 paise to 92.62 against US dollar in early trade",
-    "source": "BusinessLine",
-    "time": "28 Nov 15:57"
+    "headline": "Nasdaq futures plunge nearly 3% as AI trade comes under pressure; gold extends decline",
+    "source": "CNBC-TV18",
+    "time": "28 Nov 21:38"
    }
   }
  ],
@@ -365,7 +365,7 @@
   "NIFTY is down 277 points (-1.07%) at 25,607 at its last close (27 Nov); Sensex -1.17%.",
   "S&P 500 futures is up 0.8% since NIFTY's last close: on past days that has meant about +34 NIFTY points.",
   "US dollar index is up 0.2% since NIFTY's last close: on past days that has meant about -9 NIFTY points.",
-  "Today's headlines: 20 on RBI, rates and inflation, 4 on war, attacks, sanctions and tariffs, 2 on crude oil, 2 on the US markets and the Fed. Latest on RBI, rates and inflation: \"Tokyo's core CPI hits 2.9%, strengthening case for BOJ rate hike in December\"."
+  "Today's headlines: 17 on RBI, rates and inflation, 5 on war, attacks, sanctions and tariffs, 3 on crude oil, 2 on the rupee and the dollar. Latest on RBI, rates and inflation: \"Canadian dollar holds on to weekly gain as investors bet on December rate hike\"."
  ],
  "model": {
   "r2": 0.201,
@@ -373,7 +373,7 @@
   "from": "2022-01-04",
   "to": "2026-11-25"
  },
- "world_at": "16:11:34",
+ "world_at": "21:49:38",
  "alerts": [
   {
    "key": "2026-11-28:silver:+1",
