@@ -271,7 +271,7 @@ def run() -> None:
     names_idx: dict = {}
     hl_at = [0.0]
     bars_at, bars_thread = [0.0], [None]
-    gw = GW.Gateway(DOCS / "gateway.json", ind, master)
+    gw = GW.Gateway(DOCS / "gateway.json", ind, master, {**os.environ, "EXEC_MODE": os.environ.get("GATEWAY_MODE", "dry")})   # INDmoney route: its own switch; EXEC_MODE is the Upstox order desk
     fc_try = [0.0]
     fc, fc_hist = load("forecast.json", {}), load("forecast_history.json", [])
     sm, parts = load("smart_money.json", {}), load("participants.json", {})
@@ -297,6 +297,7 @@ def run() -> None:
     for k_, v_ in NP.new_state().items():
         pulse.setdefault(k_, v_)
     pulse_at, pulse_thread, px_now = [0.0], [None], {}
+    live_at, orders_lock = [0.0], threading.Lock()                                                    # the order desk (backend/executor.py): your approval on every order
     macro_at, macro_thread = [0.0], [None]                              # world markets, crude, the rupee, breadth, news themes: the live all-factor call
     mac = {"world": None, "daily": None, "model": MAC.load_models(ROOT / "docs" / "models"), "state": load("macro_state.json", {}), "india": {}, "last": {}}
     inbox_at, inbox_thread = [0.0], [None]
@@ -475,6 +476,26 @@ def run() -> None:
         return (f"Approved for paper trading: {sid}. It trades on paper first; real orders need a separate live approval."
                 if kind == "approve" else f"Rejected: {sid}. It will not be traded.")
 
+    def live_approval(kind: str, strategy: str, at) -> str:
+        """Allow (or stop) a desk strategy sending orders to your account. Each order still needs its own approval."""
+        ap = load("approvals.json", {"strategies": []})
+        ap["live"] = [x for x in ap.get("live") or [] if x.get("strategy") != strategy] + [{"strategy": strategy, "decision": "approved" if kind == "approve" else "revoked", "at": str(at)}]
+        save("approvals.json", ap)
+        return (f"{strategy} may now ask to trade on your account. Every order still needs your approval, fits your wallet, and only goes out when "
+                "live trading is switched on (README section 3)." if kind == "approve" else f"{strategy} can no longer send orders to your account.")
+
+    def live_ok() -> set:
+        return {x["strategy"] for x in load("approvals.json", {}).get("live") or [] if x.get("decision") == "approved"}
+
+    def push_ticket(title: str, body: str, tid: str, urgent: bool = False) -> None:
+        repo_ = os.environ.get("GITHUB_REPOSITORY", "")
+        links = None
+        if title.startswith("Approve order") and repo_:
+            import urllib.parse as up_
+            mk = lambda verb: f"https://github.com/{repo_}/issues/new?title=" + up_.quote(f"CEO {verb} ORDER {tid}") + "&body=" + up_.quote(f"{verb.title()} order ticket {tid}. Tap Submit.")
+            links = [("Approve", mk("APPROVE")), ("Reject", mk("REJECT"))]
+        N.push(title, body, 5 if urgent or links else 4, "rotating_light" if urgent else "moneybag", links)
+
     def ceo_inbox(at) -> None:
         """Instructions from the CEO (GitHub issues titled CEO ..., owner only): apply them and answer."""
         gt, repo = os.environ.get("GITHUB_TOKEN"), os.environ.get("GITHUB_REPOSITORY")
@@ -488,6 +509,12 @@ def run() -> None:
                 text = ceo_close(cmd["arg"], at)
             elif cmd["kind"] in ("approve", "reject") and cmd["arg"].upper().startswith("STRATEGY "):
                 text = strategy_approval(cmd["kind"], cmd["arg"][9:].strip(), at)
+            elif cmd["kind"] in ("approve", "reject") and cmd["arg"].upper().startswith("ORDER "):
+                with orders_lock:                                        # your decision on one order ticket: nothing is sent without it
+                    text = X.approve(DOCS / "live_orders.json", cmd["arg"][6:].strip(), at, cmd["kind"] == "approve")
+                live_at[0] = 0.0                                         # act on it at once
+            elif cmd["kind"] in ("approve", "reject") and cmd["arg"].upper().startswith("LIVE "):
+                text = live_approval(cmd["kind"], cmd["arg"][5:].strip(), at)
             else:
                 with clock:
                     text = CO.apply(cst, cmd, at)
@@ -806,6 +833,18 @@ def run() -> None:
         save("all_trades.json", [{k: v for k, v in t.items() if k != "thesis"} | ({"has_thesis": True} if t.get("thesis") else {}) for t in allt[:4000]])
         stats = D.learn(list(archive.values()) + [t for t in books if t["status"] in ("WIN", "LOSS")])
         save("strategy_stats.json", stats)
+        hm_l, wk_l = datetime.now(IST).strftime("%H:%M"), datetime.now(IST).weekday() < 5
+        if time.time() - live_at[0] >= (10 if wk_l and "09:00" <= hm_l <= "15:45" else 300):
+            live_at[0] = time.time()
+            try:                                       # the order desk: tickets you approve, sized from your wallet; off unless EXEC_MODE is set
+                with orders_lock:
+                    los = X.step(allt, stats, live_ok(), DOCS / "live_orders.json", datetime.now(IST),
+                                 {"margin": (lambda legs: M.final(legs)) if M else None, "key_of": lambda s_: key_of.get(s_), "push": push_ticket})
+                status["desks"]["orders"] = f"{los['mode']}: {los['summary']['awaiting']} waiting for you, {los['summary']['open']} at the broker; {los.get('note', '')}"
+            except Exception as e:
+                import traceback
+                traceback.print_exc()
+                status["desks"]["orders"] = f"error: {str(e)[:100]}"
         try:                                           # the gateway to the broker: dry-run unless EXEC_MODE=live and every live condition holds
             ok_ = set(lab_v[0].get("approved") or [])           # only strategies the lab approved may reach the broker
             stage_ = {r["strategy"]: r["stage"] for r in lab_v[0].get("strategies") or []}
@@ -1239,6 +1278,8 @@ def run() -> None:
                 info["intraday"] = f"error: {str(e)[:80]}"
         hm_ = now.strftime("%H:%M")
         inbox_every = 60 if now.weekday() < 5 and "09:00" <= hm_ <= "15:35" else 300     # your instructions: checked every minute in market hours
+        if (load("live_orders.json", {}).get("summary") or {}).get("awaiting"):
+            inbox_every = 15                                                    # an order waits for your approval: look every 15 seconds
         if time.time() - inbox_at[0] >= inbox_every and not (inbox_thread[0] and inbox_thread[0].is_alive()):
             inbox_at[0] = time.time()
 

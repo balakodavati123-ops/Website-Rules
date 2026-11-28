@@ -6,7 +6,8 @@ import os
 import urllib.request
 
 
-def push(title: str, body: str, priority: int = 3, tags: str = "") -> bool:
+def push(title: str, body: str, priority: int = 3, tags: str = "", links: list[tuple[str, str]] | None = None) -> bool:
+    """links: up to three (label, url) buttons on the alert, e.g. Approve / Reject (they open the URL; nothing is approved by the tap alone)."""
     topic = os.environ.get("NTFY_TOPIC", "").strip()
     if not topic:
         return False
@@ -14,6 +15,8 @@ def push(title: str, body: str, priority: int = 3, tags: str = "") -> bool:
         h = {"Title": title.encode("ascii", "ignore").decode(), "Priority": str(priority), "User-Agent": "desk/1.0"}
         if tags:
             h["Tags"] = tags
+        if links:
+            h["Actions"] = "; ".join(f"view, {lab}, {url}, clear=true" for lab, url in links[:3])
         req = urllib.request.Request(f"https://ntfy.sh/{topic}", data=body.encode("utf-8"), headers=h, method="POST")
         urllib.request.urlopen(req, timeout=10).read()
         return True

@@ -111,6 +111,7 @@ body{font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;background:rad
 .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:0 1px 0 rgba(255,255,255,.03) inset,0 12px 32px rgba(0,0,0,.35);backdrop-filter:blur(10px)}
 .card h2{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#cfe0ff;font-weight:600}
 .card p.rc,.card h2 em:not([id]){display:none}
+.lv-tk{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0;background:var(--panel2)}.lv-tk.wait{border-color:#e8b04a}.lv-tk h4{margin:0 0 4px;font-size:13.5px}.lv-tk .q{font-size:11.5px;color:var(--mut);margin:2px 0;line-height:1.45}.lv-tk .ctl{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.lv-live{color:#ff6b81;font-weight:700}.lv-pr{color:#e8b04a;font-weight:700}
 .mx .q{font-size:11px;color:var(--mut);margin-top:2px;white-space:normal;line-height:1.4}.mx tr.mx-st td{opacity:.5}.mx-th{padding:7px 0;border-bottom:1px solid var(--line)}.mx-th b{font-weight:600}.mx-th span{font-size:11.5px;margin-left:6px}.mx td{vertical-align:top}
 header h1{background:linear-gradient(90deg,#fff,#9cc2ff 60%,#c9b6ff);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700;letter-spacing:.2px}
 header small{color:var(--mut);letter-spacing:.6px;text-transform:uppercase;font-size:10.5px}
@@ -168,6 +169,13 @@ table th{letter-spacing:.8px;text-transform:uppercase;font-size:10.5px;color:var
 <div class="card" id="brk-card"><h2>Broker account <em id="brk-note">—</em></h2><div class="kpis" id="brk-k"></div>
  <div class="g2o" style="margin-top:8px"><div><h3 class="co-h">Holdings</h3><div class="tw"><table id="brk-h"><thead><tr><th>Stock</th><th class="r">Qty</th><th class="r">Avg</th><th class="r">Last</th><th class="r">Value</th><th class="r">P/L</th></tr></thead><tbody></tbody></table></div></div>
  <div><h3 class="co-h">Positions today</h3><div class="tw"><table id="brk-p"><thead><tr><th>Instrument</th><th class="r">Qty</th><th class="r">Avg</th><th class="r">Last</th><th class="r">P/L</th></tr></thead><tbody></tbody></table></div></div></div></div>
+<div class="card" id="lv-card"><h2>Live trading · your approval on every order <em id="lv-note">—</em></h2>
+ <div class="kpis" id="lv-k"></div>
+ <p class="q" id="lv-msg" style="margin:8px 0 0;color:var(--mut);font-size:12px"></p>
+ <div id="lv-tks"></div>
+ <div class="bt-2" style="margin-top:8px">
+  <div><h3 class="co-h">Strategies allowed to ask</h3><div class="tw"><table id="lv-s"><thead><tr><th>Strategy</th><th class="r">Paper trades</th><th class="r">Win rate</th><th class="r">Paper P/L</th><th>Record</th><th></th></tr></thead><tbody></tbody></table></div></div>
+  <div><h3 class="co-h">Orders and decisions today</h3><div class="tw"><table id="lv-o"><thead><tr><th>Time</th><th>Ticket</th><th>What</th><th>Status</th></tr></thead><tbody></tbody></table></div></div></div></div>
 <div class="card mx" id="mx-over"><h2>NIFTY right now · all factors <em id="mxo-note">—</em></h2><div class="kpis fv-k" id="mxo-k"></div><ul class="fv-why" id="mxo-why"></ul></div>
 <div class="card" hidden><h2>Today's forecast for our indexes <em id="fc-over-note">built before the open</em></h2><div class="fcg" id="fc-over-g"><div class="empty">The forecast is built at 08:45 IST on trading days.</div></div></div>
 <div class="kpis" id="kpis" style="margin:0 0 12px"></div>
@@ -965,6 +973,36 @@ function drawTicker(){const box=$('tkr');if(!box)return;const news=(S.news||[]).
  const ix=(S.prices&&S.prices.indices)||{};TKX.forEach((k)=>{const x=ix[k];if(!x||!TKI[k])return;TKI[k].forEach((el)=>{el.children[1].textContent=num(x.last,2);el.children[2].textContent=x.chg_pct==null?'':pc(x.chg_pct);el.children[2].className='num '+cl(x.chg_pct||0)})});
  const mf={};((S.macro&&S.macro.factors)||[]).forEach((f)=>{mf[f.key]=f});TKM.forEach(([k])=>{const f=mf[k],els=TKI['m:'+k];if(!f||!els||f.last==null)return;
   els.forEach((el)=>{el.children[1].textContent=fnum(f.last,2);el.children[2].textContent=f.chg_pct==null?'':pc(f.chg_pct);el.children[2].className='num '+cl((TKBAD.has(k)?-1:1)*(f.chg_pct||0))})})}
+/* live trading (backend/executor.py): every order waits for your approval and fits your wallet */
+async function lvLoad(){const [o,ap]=await Promise.all([get('live_orders'),get('approvals')]);if(o)S.lo=o;if(ap)S.ap=ap;drawLive()}
+function drawLive(){if(!$('lv-k')||$('t-over').hidden)return;const O=S.lo||{mode:'off',tickets:{},orders:[],held:[]},W=O.wallet||{},Sm=O.summary||{},d=today(),mode=O.mode||'off';
+ $('lv-note').textContent=(O.updated_at?'checked '+String(O.updated_at).slice(11,19):'not running yet');
+ const mtxt={off:'Off',sandbox:'Practice',live:'LIVE'}[mode]||mode,mk=kv2('Mode',mtxt,mode==='live'?'real money, your approval on each order':mode==='sandbox'?'Upstox practice exchange, no money':'paper only; see README section 3');
+ if(mode==='live')mk.querySelector('.v').classList.add('lv-live');if(mode==='sandbox')mk.querySelector('.v').classList.add('lv-pr');
+ $('lv-k').replaceChildren(mk,kv2('Wallet available',W.available==null?'—':inr(W.available),W.usable==null?(W.note||''):`usable for new orders ${inr(Math.max(0,W.usable))}`),
+  kv2('Waiting for you',String(Sm.awaiting||0),'orders that need Approve or Reject'),kv2('At the broker',String(Sm.open||0),`today's live result ${sg(Math.round(Sm.today_pnl||0))}`,cl(Sm.today_pnl||0)));
+ $('lv-msg').textContent=(O.note||'')+(Sm.static_ip_refused?' Upstox refused an order today because it did not come from your registered static IP (README section 3, step 2).':'');
+ const tks=Object.values(O.tickets||{}).filter((t)=>t.day===d||['AWAITING','APPROVED','SENDING','OPEN','CLOSING'].includes(t.status)).sort((a,b)=>b.created.localeCompare(a.created));
+ $('lv-tks').replaceChildren(...tks.filter((t)=>['AWAITING','APPROVED','SENDING','OPEN','CLOSING'].includes(t.status)).map((t)=>{const w=E('div','lv-tk'+(t.status==='AWAITING'?' wait':''));
+  const left=Math.max(0,Math.round((new Date(t.expires)-Date.now())/60000));
+  w.append(E('h4','',`${t.id} · ${t.label} · ${t.status==='AWAITING'?'waiting for you':t.status.toLowerCase()}`),
+   E('div','q',`${t.mode==='live'?'REAL MONEY':'Practice'} · ${t.n} ${t.unit_name}${t.paper_n!==t.n?` (paper desk: ${t.paper_n})`:''} · up to ${inr(t.cost)} of ${inr(t.wallet_usable)} usable${t.note?' · '+t.note:''}`),
+   E('div','q',t.legs.map((l)=>`${l.side.toLowerCase()} ${l.qty} × ${l.name||l.key} near ${fnum(l.px,2)}`).join(' · ')),
+   E('div','q',t.reason||''));
+  if(t.status==='AWAITING'){const c=E('div','ctl'),a=E('a','btn','Approve'),r=E('a','btn ghost','Reject');a.href=ask('CEO APPROVE ORDER '+t.id,'Approve order ticket '+t.id+' ('+t.label+'). Tap Submit.');r.href=ask('CEO REJECT ORDER '+t.id,'Reject order ticket '+t.id+'.');
+   [a,r].forEach((x)=>{x.target='_blank';x.rel='noopener';x.style.textDecoration='none'});c.append(a,r,E('span','q',left?`expires in about ${left} min (${t.expires.slice(11,16)})`:`expires at ${t.expires.slice(11,16)}`));w.appendChild(c)}
+  return w}));
+ const live=new Set(((S.ap||{}).live||[]).filter((x)=>x.decision==='approved').map((x)=>x.strategy)),ready=O.gate==='ceo';
+ const rows=(S.stats||[]).filter((x)=>x.desk==='FNO'||x.desk==='EQUITY').sort((a,b)=>(b.pnl_rs||0)-(a.pnl_rs||0)).map((x)=>{const r=E('tr'),on=live.has(x.strategy),b=E('a','btn'+(on?' ghost':''),on?'Stop':'Allow');
+  b.href=ask(`CEO ${on?'REJECT':'APPROVE'} LIVE ${x.strategy}`,on?`Stop ${x.strategy} sending orders to my account.`:`Allow ${x.strategy} to ask for real orders. Each order still needs my approval and must fit my wallet. Paper record: ${x.closed} trades, ${x.win_rate}% won, ${Math.round(x.pnl_rs)} rupees.`);
+  b.target='_blank';b.rel='noopener';b.style.cssText='padding:2px 10px;font-size:11.5px;text-decoration:none';
+  r.append(E('td','',x.strategy.replace(/_/g,' ')+(on?' · allowed':'')),E('td','r num',fnum(x.closed)),E('td','r num',x.win_rate==null?'—':x.win_rate+'%'),E('td','r num '+cl(x.pnl_rs||0),sg(Math.round(x.pnl_rs||0))),
+   E('td','',x.verdict+(x.verdict!=='READY FOR REVIEW'&&!ready?' · not yet eligible':'')),(()=>{const c=E('td','');c.appendChild(b);return c})());return r});
+ $('lv-s').tBodies[0].replaceChildren(...(rows.length?rows:[(()=>{const r=E('tr'),c=E('td','empty','No Equity or F&O strategy records yet');c.colSpan=6;r.appendChild(c);return r})()]));
+ const ev=[...(O.orders||[]).filter((o)=>String(o.ts).slice(0,10)===d).map((o)=>({t:String(o.ts).slice(11,16),id:o.ticket,w:`${o.phase==='in'?'entry':'exit'} ${o.side.toLowerCase()} ${o.qty} @ ${fnum(o.price,2)}${o.filled?` · filled ${o.filled}${o.avg?' at '+fnum(o.avg,2):''}`:''}`,s:o.status+(o.why?' · '+o.why:'')})),
+  ...tks.filter((t)=>['EXPIRED','REJECTED','CANCELLED','FAILED','CLOSED'].includes(t.status)).map((t)=>({t:String(t.closed||t.decided||t.created).slice(11,16),id:t.id,w:t.label,s:t.status.toLowerCase()+(t.why?' · '+t.why:'')+(t.pnl!=null?' · '+sg(Math.round(t.pnl)):'')})),
+  ...(O.held||[]).slice(-8).map((h)=>({t:h.at,id:'—',w:h.label,s:'not sent: '+h.why}))].sort((a,b)=>String(b.t).localeCompare(String(a.t)));
+ $('lv-o').tBodies[0].replaceChildren(...(ev.length?ev.slice(0,25).map((e)=>{const r=E('tr');r.append(E('td','num',e.t||''),E('td','',e.id),E('td','',e.w),E('td','',e.s));return r}):[(()=>{const r=E('tr'),c=E('td','empty','Nothing today');c.colSpan=4;r.appendChild(c);return r})()]))}
 /* the live macro read (backend/macro.py): world markets, crude, the rupee, India's own market and the day's headline themes */
 let MACRO=null;
 async function mvLoad(){const m=await get('macro');if(m){MACRO=m;S.macro=m;drawMV();drawTicker()}}
@@ -1038,7 +1076,7 @@ const AUo={};function drawAudit(){if($('t-audit').hidden)return;const dk=$('au-d
    E('td','',o.length?(o[o.length-1].status||o[o.length-1].state||'sent'):'paper'),E('td','',t.status==='OPEN'?'open':t.status==='VOID'?'void':(t.status==='WIN'?'won':'lost')+' · '+(t.why||'')),E('td','r num '+cl(p),t.status==='VOID'?'0':sg(Math.round(p))));
   const d=E('tr','au-d'),c=E('td','');c.colSpan=11;d.appendChild(c);d.hidden=!AUo[t.id];if(AUo[t.id])c.append(E('div','lg',`${t.id} · ${t.reason||''}`),thEl(t));r.onclick=()=>{AUo[t.id]=!AUo[t.id];drawAudit()};return [r,d]}))}
 ['au-d','au-s','au-p'].forEach((id)=>$(id).onchange=drawAudit);$('au-q').oninput=drawAudit;
-function setTab(t){document.querySelectorAll('#nav button').forEach((b)=>b.classList.toggle('on',b.dataset.t===t));['over','co','lc','ipo','lab','bt','view','summary','intra','exec','today','fno','comm','crypto','chart','ledger','eq','audit'].forEach((k)=>{$('t-'+k).hidden=k!==t});if(t==='over')drawBroker();if(t==='audit')drawAudit();if(t==='bt')rsLoad();if(t==='co')drawAgents();if(t==='chart')lcLoad();if(t==='eq'&&!TVinit){TVinit=true;tvLoad()}if(t==='co'){floorStart();drawCompany();if(innerHeight<500)setTimeout(()=>$('co-card').scrollIntoView({block:'start'}),300)}if(t==='lc'){lcLoad();if(innerHeight<500)setTimeout(()=>$('lc-card').scrollIntoView({block:'start'}),300)}if(t==='ipo')drawIPO();if(t==='lab'){drawLab();drawNDB()}if(t==='bt')btInit();if(t==='exec')drawExec();if(t==='view'){drawForecast();Object.values(FCN).forEach((x)=>{x.cv._sig=''});fcLive();drawSmart();drawVia()}if(t==='summary')drawSummary();if(t==='intra'){drawIntra();drawPulse()}if(t==='chart')drawChart();if(t==='today')drawToday();if(DT[t])drawDeskTab(t);if(t==='fno'){fnoLoad(true);drawOT();drawTH()}if(t==='fno'||t==='over')drawMV();if(location.hash!=='#'+t)history.replaceState(null,'','#'+t)}
+function setTab(t){document.querySelectorAll('#nav button').forEach((b)=>b.classList.toggle('on',b.dataset.t===t));['over','co','lc','ipo','lab','bt','view','summary','intra','exec','today','fno','comm','crypto','chart','ledger','eq','audit'].forEach((k)=>{$('t-'+k).hidden=k!==t});if(t==='over')drawBroker();if(t==='audit')drawAudit();if(t==='bt')rsLoad();if(t==='co')drawAgents();if(t==='chart')lcLoad();if(t==='eq'&&!TVinit){TVinit=true;tvLoad()}if(t==='co'){floorStart();drawCompany();if(innerHeight<500)setTimeout(()=>$('co-card').scrollIntoView({block:'start'}),300)}if(t==='lc'){lcLoad();if(innerHeight<500)setTimeout(()=>$('lc-card').scrollIntoView({block:'start'}),300)}if(t==='ipo')drawIPO();if(t==='lab'){drawLab();drawNDB()}if(t==='bt')btInit();if(t==='exec')drawExec();if(t==='view'){drawForecast();Object.values(FCN).forEach((x)=>{x.cv._sig=''});fcLive();drawSmart();drawVia()}if(t==='summary')drawSummary();if(t==='intra'){drawIntra();drawPulse()}if(t==='chart')drawChart();if(t==='today')drawToday();if(DT[t])drawDeskTab(t);if(t==='fno'){fnoLoad(true);drawOT();drawTH()}if(t==='fno'||t==='over')drawMV();if(t==='over')drawLive();if(location.hash!=='#'+t)history.replaceState(null,'','#'+t)}
 document.querySelectorAll('#nav button').forEach((b)=>b.onclick=()=>setTab(b.dataset.t));
 document.querySelectorAll('#t-today .ctl button[data-m]').forEach((b)=>b.onclick=()=>{TM=b.dataset.m;document.querySelectorAll('#t-today .ctl button[data-m]').forEach((x)=>x.classList.toggle('on',x===b));drawToday()});
 let busy=false,tick2=0;
@@ -1047,7 +1085,7 @@ async function mid(){const ex=await get('executions');if(ex)S.exec=ex;const gj=a
 async function fast(){if(!$('t-fno').hidden)fnoLoad(false);const p=await get('prices');drawPrices(p);drawTicker();fcLive();lcTick(p);if(p){const n=(p.indices||{})['Nifty 50'];if(n){const b=$('nf-k');mcard(b,'n','Now',num(n.last,2),n.last,pc(n.chg_pct),n.chg_pct);mcard(b,'h','Day high',num(n.high,2),n.high,'',null);mcard(b,'l','Day low',num(n.low,2),n.low,'',null)}Object.keys(DT).forEach((k)=>{if(!$('t-'+k).hidden)deskMarket(k)})}}
 $('f-day').onchange=(e)=>{S.day=e.target.value;drawLedger()};$('f-st').onchange=drawLedger;$('f-q').oninput=drawLedger;
 const fd=$('f-desk');['ALL',...Object.keys(DESK)].forEach((k)=>{const b=E('button',k==='ALL'?'on':'',k==='ALL'?'All markets':DESK[k]);b.onclick=()=>{S.desk=k;[...fd.children].forEach((x)=>x.classList.toggle('on',x===b));drawLedger()};fd.appendChild(b)});fd.style.display='contents';
-loadSyms();startStream();fast();core();mid();slow();setInterval(fast,4000);setInterval(brLoad,30000);brLoad();setInterval(mvLoad,30000);mvLoad();rsLoad();setInterval(core,8000);setInterval(mid,15000);setInterval(slow,120000);setInterval(drawStatus,1000);
+loadSyms();startStream();fast();core();mid();slow();setInterval(fast,4000);setInterval(brLoad,30000);brLoad();setInterval(mvLoad,30000);mvLoad();setInterval(lvLoad,10000);lvLoad();rsLoad();setInterval(core,8000);setInterval(mid,15000);setInterval(slow,120000);setInterval(drawStatus,1000);
 const h0=(location.hash||'').slice(1),H0={lc:'chart',today:'audit',ledger:'audit',intra:'eq',summary:'over',exec:'audit',lab:'bt',view:'over'}[h0]||h0;setTab(['co','over','eq','fno','chart','bt','audit'].includes(H0)?H0:'co');
 document.addEventListener('visibilitychange',()=>{if(!document.hidden){lastAct=Date.now();fast();core();mid()}if(FLOOR)FLOOR.setLive(ceoLive())});
 </script></body></html>

@@ -17,7 +17,7 @@ An algorithmic trading desk for **NSE Equity and NIFTY F&O**, run by AI agents o
 | Tab | What it shows |
 |---|---|
 | **Company floor** (front page) | The live office: every desk, its agents, the trades flowing through, the COO and your CEO desk. Below it, the research agents and the share of the strategy search each one ran. |
-| **Overview** | **Broker account**: wallet, holdings and today's positions from your Upstox account, refreshed every minute; the paper account until a broker token is connected. **NIFTY right now · all factors**: the live call and the main reasons (see section 4b). Also today's P/L, NIFTY today, agent ranking, open positions and **Close now** buttons. |
+| **Overview** | **Broker account**: wallet, holdings and today's positions from your Upstox account, refreshed every minute; the paper account until a broker token is connected. **Live trading**: the mode (Off / Practice / LIVE), your wallet, order tickets waiting for your **Approve / Reject**, the strategies allowed to ask, and today's orders (section 3). **NIFTY right now · all factors**: the live call and the main reasons (see section 4b). Also today's P/L, NIFTY today, agent ranking, open positions and **Close now** buttons. |
 | **Equity** | Equity desk P/L, open positions and trades (Open / Today / All days); top gainers, losers and most active; headlines; results filed; world markets; **Fundamentals** for any stock from TradingView (financials and a daily chart, BSE listing). |
 | **F&O** | **What's moving NIFTY and Sensex now** (section 4b): the live call, what world markets point to in NIFTY points, each factor's move and effect, breadth, heavyweights, sectors, India VIX, Bank Nifty, today's headline themes and alerts. **NIFTY today**: the mode (Quiet / Volatile / Highly volatile, from India VIX), the live all-factor call, the desk's own 10:00 trade tilt, the likely range, today's trade, the reasons in plain words. The NIFTY chart with the call drawn on it, the **live option chain** (21 strikes, best buyer and seller with quantities, volume, open contracts, a five-level order book), open trades by Today / Weekly / Monthly, and trade history per book. |
 | **Charts** | Live 1-minute charts for F&O and Equity with EMA 20/50, VWAP, opening range, entries, stops, targets, expected exits and the order book; plus a chart for any NSE stock with your trades on it. |
@@ -31,32 +31,68 @@ They are stored as GitHub secrets: repository **Settings → Secrets and variabl
 | Secret | What it is | What it unlocks |
 |---|---|---|
 | `UPSTOX_TOKEN` | Upstox **Analytics** token (read-only, long-lived) | All market data: prices, candles, option chains, the 1-minute database. *Already set.* |
-| `UPSTOX_EXEC_TOKEN` | Upstox **trading** access token for your own account (from the Upstox developer app; it expires daily at 03:30 IST) | Your wallet, holdings and positions on the Overview. Orders too, but only once execution is switched on (section 3). |
+| `UPSTOX_EXEC_TOKEN` | Upstox **trading** access token for your own account (from the Upstox developer app; it expires daily at 03:30 IST) | Your wallet, holdings and positions on the Overview. Orders too, but only once live trading is switched on, from your static IP, with your approval on each order (section 3). |
 | `CLAUDE_CODE_OAUTH_TOKEN` | From `claude setup-token` on your Claude plan (no API bill) | The AI market brief, the plain-words thesis and the analyst rounds. |
 
 GitHub itself is the fourth piece. It is already in place: it hosts the dashboard, runs the engine every market day, and carries your approvals. Approval buttons open a GitHub issue with the instruction already written; the engine obeys only issues opened by you.
 
-## 3. From research to real money: the gates
+## 3. From research to real money: switching on live trading
 
-Nothing places a real order until every step below is done, in order.
+**Your rules, built in:**
+- **No order without your approval.** Every order waits for you, one at a time.
+- **No order beyond your wallet.** Sizes come from the cash in your Upstox account, with no borrowed money.
 
-1. **Research.** Every Saturday five quant agents split the strategy search equally (workflow `research`). A sixth runs the multi-day strategies. A risk agent runs random-entry strategies through the same rules, to measure luck.
-2. **Approval queue** (Backtest tab). Only strategies that held up in **all three periods** are listed:
-   - chosen on 2022–23,
-   - confirmed on 2024,
-   - shown once on 2025–26.
+Nothing reaches your broker until you finish the steps below.
 
-   **Approve** means paper trading. **Reject** removes the strategy.
-3. **Paper record.** An approved strategy trades on paper. Every trade appears in Audit, with its risk and reward worked out before entry.
-4. **Live.** Real orders need, together:
-   - a separate live approval;
-   - the secret `EXEC_MODE=live` plus `EXEC_LIVE_CONFIRM=I-UNDERSTAND-REAL-MONEY`;
-   - a valid `UPSTOX_EXEC_TOKEN`;
-   - a strategy verdict of READY FOR REVIEW (100+ paper trades, 98% confidence).
+### How one order happens
+1. **A desk opens a paper trade.** If that strategy is allowed (step 5), the desk checks your Upstox wallet. It asks Upstox's margin calculator what one lot (or one share) costs, then cuts the paper size down to what **90% of your available cash** pays for, minus what other waiting orders have reserved. If not even one lot fits, nothing happens; the Live trading card says why.
+2. **You get an order ticket** on your phone and on **Overview → Live trading**: what it buys, how many, the most it can cost and your wallet. It has **Approve** and **Reject** buttons.
+3. **Approve** opens a GitHub issue that is already filled in; tap **Submit**. Only issues you open count. The engine checks every 15 seconds while a ticket waits. **No answer within 5 minutes means the ticket expires and nothing is sent.**
+4. **Just before sending, the desk checks again.** It re-reads your wallet and the price. If the price has moved more than 1% against the ticket, it cancels. Otherwise it sends limit orders, buy legs first. A spread's sell leg goes only after its buy leg fills, sized to what filled.
+5. **An entry that has not filled within 60 seconds is cancelled.** The position is whatever actually filled.
+6. **Exits go out automatically, with no second approval**, when the desk closes the paper trade (stop, target, time or your **Close now**), because closing only reduces risk. If an exit doesn't fill, it is re-priced up to 3 times. After that you get an urgent alert to close it in the Upstox app.
 
-   Hard limits always apply: `EXEC_MAX_ORDER_RS`, `EXEC_MAX_DAY_LOSS_RS`, and the kill switch `EXEC_KILL=1`. `EXEC_MODE=sandbox` sends practice orders to Upstox's practice exchange first.
+### One-time setup
+1. **Phone alerts.**
+   - Install the **ntfy** app and subscribe to your `NTFY_TOPIC` (the secret already used for alerts).
+   - Order tickets arrive there with Approve / Reject buttons.
+2. **A fixed (static) IP address. Upstox requires this.**
+   - Since 1 April 2026, Upstox accepts API orders only from the static IP you registered. GitHub's own machines change IP every run, so real orders need **your own always-on Linux machine with a fixed public IP**. A small cloud server in Mumbai with a reserved IP is enough.
+   - Register that IP in the Upstox developer portal: **My Apps → your app → Static IPs** (primary, plus an optional backup). You can change it once a week, and changing it logs out your token.
+   - On that machine, install a GitHub runner: repository **Settings → Actions → Runners → New self-hosted runner → Linux**, and run the commands GitHub shows (they finish with `./svc.sh install` and `./svc.sh start`).
+   - Then add the repository **variable** `ENGINE_RUNNER` = `self-hosted`. The engine then runs on your machine, from your IP.
+   - **Safety for a public repository:** set **Settings → Actions → General → Fork pull request workflows → Require approval for all outside collaborators**. Code from strangers must never run on the machine that can trade.
+3. **Upstox app and tokens:**
+   - Create an app for algo trading in the developer portal and give it an **Algo name**. Save the name as the variable `EXEC_ALGO_NAME`; Upstox needs it on every order.
+   - **Every morning**, log in and save the fresh access token as the secret `UPSTOX_EXEC_TOKEN`. It expires daily at 03:30 IST. It also feeds the wallet on Overview.
+   - **For practice**, create a sandbox app and save its token (valid 30 days) as the secret `UPSTOX_SANDBOX_TOKEN`.
+4. **Practice first.** Set the variable `EXEC_MODE` = `sandbox`.
+   - Tickets, approvals and orders all work, but they go to Upstox's practice exchange and no money moves.
+   - The wallet shown is your real one, so sizing is realistic.
+5. **Allow a strategy.** On Overview → Live trading → **Strategies allowed to ask**, tap **Allow** next to a strategy (or **Stop**). Allowing lets it *ask*; every order still needs its own approval.
+   - By default only strategies whose paper record is **READY FOR REVIEW** (100+ paper trades, 98% confidence the average trade makes money) can create tickets. **No strategy qualifies today.**
+   - To allow one anyway, knowingly, set the variable `EXEC_GATE` = `ceo` and `EXEC_GATE_CONFIRM` = `I-ACCEPT-UNVALIDATED-STRATEGY`. The research (section 4) found that intraday strategies lose after costs, so please read it first.
+6. **Real money.** Set `EXEC_MODE` = `live` and the secret `EXEC_LIVE_CONFIRM` = `I-UNDERSTAND-REAL-MONEY`. Without both, nothing real is sent.
 
-Commodities and crypto no longer open new trades (`DESKS_OFF`, default `COMMODITY,CRYPTO`).
+Variables live under **Settings → Secrets and variables → Actions → Variables**; secrets under **Secrets**. A change takes effect at the engine's next run (or restart it from Actions → market-hours → Run workflow).
+
+### Limits (variables, with defaults)
+| Variable | Default | What it does |
+|---|---|---|
+| `EXEC_WALLET_USE` | 0.9 | Share of available cash the desk may use |
+| `EXEC_MAX_ORDER_RS` | 50,000 | Most one ticket may cost |
+| `EXEC_MAX_DAY_LOSS_RS` | 2,000 | Today's live loss that stops new tickets |
+| `EXEC_MAX_OPEN` | 2 | Live positions open or waiting at once |
+| `EXEC_APPROVAL_MINUTES` | 5 | How long a ticket waits for you |
+| `EXEC_MAX_SLIP_PCT` | 1 | Price move against the ticket that cancels it before sending |
+| `EXEC_FILL_TIMEOUT_S` | 60 | Seconds before an unfilled order is cancelled (entries) or re-priced (exits) |
+| `EXEC_KILL` | (off) | `1` stops all new tickets and cancels waiting ones. Open positions still exit by the desk's rules. |
+
+**Also:**
+- Switching `EXEC_MODE` off never abandons a position: the desk still manages the exits of anything already at the broker.
+- Commodities and crypto are never sent.
+- Approval takes about 15–60 seconds. That suits trades held for hours (the 10:00 F&O trade, multi-day spreads), not 10-minute scalps.
+- The INDmoney route (`backend/gateway.py`) has its own switch, `GATEWAY_MODE`, and stays a dry run.
 
 ## 4. What the research found (data: 3 Jan 2022 to 26 Nov 2026, real NIFTY 1-minute candles)
 

@@ -19,7 +19,7 @@ permissions:
   actions: write
 jobs:
   run:
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.ENGINE_RUNNER || 'ubuntu-latest' }}      # set ENGINE_RUNNER=self-hosted to run on your static-IP machine (needed for real orders)
     timeout-minutes: 355
     environment:
       name: github-pages
@@ -36,7 +36,7 @@ jobs:
       - name: Resume the live books from the data branch
         run: |
           if git fetch -q --depth=1 origin data 2>/dev/null; then
-            for f in live_book desk_book trade_archive strategy_stats forecast_history participants forecast gateway company llm_usage news_digest day_review ipo ipo_state lab news_wire news_pulse_state; do git show FETCH_HEAD:$f.json > /tmp/r.json 2>/dev/null && mv /tmp/r.json docs/data/$f.json || true; done
+            for f in live_orders live_book desk_book trade_archive strategy_stats forecast_history participants forecast gateway company llm_usage news_digest day_review ipo ipo_state lab news_wire news_pulse_state; do git show FETCH_HEAD:$f.json > /tmp/r.json 2>/dev/null && mv /tmp/r.json docs/data/$f.json || true; done
           fi
       - name: Run the desks
         env:
@@ -48,9 +48,23 @@ jobs:
           LLM_CALLS_5H: ${{ vars.LLM_CALLS_5H }}
           LLM_CALLS_DAY: ${{ vars.LLM_CALLS_DAY }}
           INDSTOCKS_TOKEN: ${{ secrets.INDSTOCKS_TOKEN }}          # optional, read-only use here: funds, margin and charges for the dry-run; orders cannot be sent from GitHub (no static IP)
+          # the order desk (backend/executor.py): off unless EXEC_MODE is sandbox or live; every order waits for your approval
           EXEC_MODE: ${{ vars.EXEC_MODE }}
+          EXEC_LIVE_CONFIRM: ${{ secrets.EXEC_LIVE_CONFIRM }}
+          UPSTOX_SANDBOX_TOKEN: ${{ secrets.UPSTOX_SANDBOX_TOKEN }}
+          EXEC_ALGO_NAME: ${{ vars.EXEC_ALGO_NAME }}
+          EXEC_KILL: ${{ vars.EXEC_KILL }}
+          EXEC_GATE: ${{ vars.EXEC_GATE }}
+          EXEC_GATE_CONFIRM: ${{ vars.EXEC_GATE_CONFIRM }}
           EXEC_MAX_ORDER_RS: ${{ vars.EXEC_MAX_ORDER_RS }}
           EXEC_MAX_DAY_LOSS_RS: ${{ vars.EXEC_MAX_DAY_LOSS_RS }}
+          EXEC_MAX_OPEN: ${{ vars.EXEC_MAX_OPEN }}
+          EXEC_WALLET_USE: ${{ vars.EXEC_WALLET_USE }}
+          EXEC_APPROVAL_MINUTES: ${{ vars.EXEC_APPROVAL_MINUTES }}
+          EXEC_MAX_SLIP_PCT: ${{ vars.EXEC_MAX_SLIP_PCT }}
+          EXEC_FILL_TIMEOUT_S: ${{ vars.EXEC_FILL_TIMEOUT_S }}
+          EXEC_SANDBOX_WALLET_RS: ${{ vars.EXEC_SANDBOX_WALLET_RS }}
+          GATEWAY_MODE: ${{ vars.GATEWAY_MODE }}
           LOOP_SECONDS: "20400"
         run: python backend/engine.py
       - name: Save state to the branch
