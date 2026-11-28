@@ -1,0 +1,33 @@
+{
+ "desks": {
+  "broker": "not connected: no broker token",
+  "crypto": "closed (the crypto desk was shut on 28 Nov 2026)",
+  "orders": "off: 0 waiting for you, 0 at the broker; Off: the desks trade on paper only. Nothing is sent to your broker.",
+  "gateway": "dry \u00b7 0 intents, 0 refused",
+  "macro": "18 world prices, world markets imply 24.8 NIFTY points; call none (outside market hours)",
+  "charts": "2 live charts",
+  "news_pulse": "0 new signal(s); 2 in the last hour from 9 feeds"
+ },
+ "updated_at": "2026-11-28T23:03:22+05:30",
+ "updated_hm": "28 Nov 23:03:22",
+ "loops": 619,
+ "sessions": {
+  "equity": false,
+  "fno": false,
+  "mcx": false,
+  "crypto": false
+ },
+ "note": "Real-time Upstox prices for equities, NIFTY options and MCX; Kraken for crypto. Paper trades only.",
+ "open": 13,
+ "first_iteration": {
+  "equity": 0.0,
+  "fill": 0.0,
+  "mcx": 0.0,
+  "fno": 0.0,
+  "crypto": 0.0,
+  "snapshots": 0.0,
+  "plan": 0.0,
+  "slow_and_intraday": 0.5,
+  "persist": 0.6
+ }
+}

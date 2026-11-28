@@ -1,0 +1,66 @@
+{
+ "day": "2026-11-27",
+ "trades": 6,
+ "closed": 6,
+ "open": 0,
+ "wins": 1,
+ "win_rate": 17,
+ "pnl": 906.64,
+ "by_desk": {
+  "EQUITY": {
+   "trades": 4,
+   "pnl": -544.71
+  },
+  "FNO": {
+   "trades": 2,
+   "pnl": 1451.35
+  },
+  "COMMODITY": {
+   "trades": 0,
+   "pnl": 0
+  },
+  "CRYPTO": {
+   "trades": 0,
+   "pnl": 0
+  }
+ },
+ "by_strategy": [
+  {
+   "strategy": "long_straddle",
+   "n": 1,
+   "pnl": 2988.0
+  },
+  {
+   "strategy": "scalp_vwap_pullback_v2",
+   "n": 4,
+   "pnl": -544.71
+  },
+  {
+   "strategy": "ema_vwap_cross",
+   "n": 1,
+   "pnl": -1536.65
+  }
+ ],
+ "equity": 121520.48,
+ "best": {
+  "label": "NIFTY long straddle \u00b7 12-01",
+  "pnl": 2988.0
+ },
+ "worst": {
+  "label": "NIFTY 25,800 PE \u00b7 EMA9/VWAP \u00b7 12-01",
+  "pnl": -1536.65
+ },
+ "news": {
+  "n": 0,
+  "pnl": 0
+ },
+ "planned": {
+  "n": 0,
+  "pnl": 0
+ },
+ "notes": [
+  "6 trades: 1 won and 5 lost of 6 closed; net +907 rupees.",
+  "Best market: FNO (+1,451). Weakest: EQUITY (-545).",
+  "Win rate under 40% today: the strategies below the line on the scoreboard are the ones to watch for a pause."
+ ]
+}

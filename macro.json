@@ -1,0 +1,392 @@
+{
+ "at": "23:02:55",
+ "day": "2026-11-28",
+ "session": "closed",
+ "ref": {
+  "day": "2026-11-27",
+  "label": "since NIFTY's close on 27 Nov (15:30)"
+ },
+ "nifty": {
+  "last": 25607.2,
+  "prev": 25884.5,
+  "chg_pct": -1.07,
+  "chg_pts": -277.3,
+  "source": "Yahoo Finance (delayed)"
+ },
+ "sensex": {
+  "last": 83339.26,
+  "prev": 84328.59,
+  "chg_pct": -1.17,
+  "chg_pts": -989.3,
+  "source": "Yahoo Finance (delayed)"
+ },
+ "banknifty": null,
+ "vix": null,
+ "implied": {
+  "nifty_pct": 0.096,
+  "nifty_pts": 24.8,
+  "sensex_pct": 0.095,
+  "sensex_pts": 79.8,
+  "missing": [],
+  "session_pct": null,
+  "session_pts": null
+ },
+ "call": null,
+ "pre_open": null,
+ "factors": [
+  {
+   "key": "usdinr",
+   "name": "Dollar in rupees",
+   "symbol": "INR=X",
+   "last": 92.99,
+   "chg_pct": 0.01,
+   "as_of": "28 Nov 09:00",
+   "weighted": true,
+   "beta": -0.3471,
+   "effect_pct": -0.004,
+   "effect_pts": -1.0,
+   "why": "A weaker rupee drives foreign investors out and makes oil imports dearer",
+   "note": null,
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "brent",
+   "name": "Brent crude",
+   "symbol": "BZ=F",
+   "last": 90.84,
+   "chg_pct": -0.36,
+   "as_of": "28 Nov 01:14",
+   "weighted": true,
+   "beta": -0.0138,
+   "effect_pct": 0.005,
+   "effect_pts": 1.3,
+   "why": "India imports most of its oil: dearer crude widens the trade gap and lifts inflation",
+   "note": null,
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "dxy",
+   "name": "US dollar index",
+   "symbol": "DX-Y.NYB",
+   "last": 104.03,
+   "chg_pct": 0.22,
+   "as_of": "28 Nov 03:29",
+   "weighted": true,
+   "beta": -0.1694,
+   "effect_pct": -0.037,
+   "effect_pts": -9.5,
+   "why": "A strong dollar pulls money out of emerging markets like India",
+   "note": null,
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "es",
+   "name": "S&P 500 futures",
+   "symbol": "ES=F",
+   "last": 7308.25,
+   "chg_pct": 0.83,
+   "as_of": "27 Nov 23:44",
+   "weighted": true,
+   "beta": 0.1578,
+   "effect_pct": 0.132,
+   "effect_pts": 34.1,
+   "why": "Wall Street's mood, live through the Indian day",
+   "note": null,
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "n225",
+   "name": "Nikkei 225",
+   "symbol": "^N225",
+   "last": 58711.11,
+   "chg_pct": 0.0,
+   "as_of": "27 Nov 12:15",
+   "weighted": true,
+   "beta": 0.1359,
+   "effect_pct": 0.0,
+   "effect_pts": 0.0,
+   "why": "Asia's biggest market, open before and during India's morning",
+   "note": "no trade since NIFTY's close",
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "hsi",
+   "name": "Hang Seng",
+   "symbol": "^HSI",
+   "last": 22694.77,
+   "chg_pct": 0.0,
+   "as_of": "27 Nov 13:39",
+   "weighted": true,
+   "beta": 0.0949,
+   "effect_pct": 0.0,
+   "effect_pts": 0.0,
+   "why": "Asia and China risk mood",
+   "note": "no trade since NIFTY's close",
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "wti",
+   "name": "WTI crude",
+   "symbol": "CL=F",
+   "last": 83.08,
+   "chg_pct": -1.59,
+   "as_of": "28 Nov 01:14",
+   "weighted": false,
+   "beta": null,
+   "effect_pct": null,
+   "effect_pts": null,
+   "why": "US crude: confirms or questions Brent's move",
+   "note": null,
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "gold",
+   "name": "Gold",
+   "symbol": "GC=F",
+   "last": 3668.5,
+   "chg_pct": 1.33,
+   "as_of": "28 Nov 01:14",
+   "weighted": false,
+   "beta": null,
+   "effect_pct": null,
+   "effect_pts": null,
+   "why": "Rises when investors run for safety",
+   "note": null,
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "silver",
+   "name": "Silver",
+   "symbol": "SI=F",
+   "last": 43.7,
+   "chg_pct": 3.84,
+   "as_of": "28 Nov 01:14",
+   "weighted": false,
+   "beta": null,
+   "effect_pct": null,
+   "effect_pts": null,
+   "why": "Follows gold and industrial demand",
+   "note": null,
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "copper",
+   "name": "Copper",
+   "symbol": "HG=F",
+   "last": 5.6,
+   "chg_pct": 1.97,
+   "as_of": "28 Nov 01:14",
+   "weighted": false,
+   "beta": null,
+   "effect_pct": null,
+   "effect_pts": null,
+   "why": "Leads metal stocks; reads China's demand",
+   "note": null,
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "natgas",
+   "name": "Natural gas",
+   "symbol": "NG=F",
+   "last": 3.49,
+   "chg_pct": -5.14,
+   "as_of": "28 Nov 01:14",
+   "weighted": false,
+   "beta": null,
+   "effect_pct": null,
+   "effect_pts": null,
+   "why": "Moves city gas and fertiliser companies",
+   "note": null,
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "us10y",
+   "name": "US 10-year yield",
+   "symbol": "^TNX",
+   "last": 4.94,
+   "chg_pct": 1.82,
+   "as_of": "28 Nov 01:29",
+   "weighted": false,
+   "beta": null,
+   "effect_pct": null,
+   "effect_pts": null,
+   "why": "Higher US yields pull money toward US bonds",
+   "note": null,
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "nq",
+   "name": "Nasdaq futures",
+   "symbol": "NQ=F",
+   "last": 26765.0,
+   "chg_pct": 1.42,
+   "as_of": "27 Nov 23:44",
+   "weighted": false,
+   "beta": null,
+   "effect_pct": null,
+   "effect_pts": null,
+   "why": "Leads Indian IT stocks",
+   "note": null,
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "vix_us",
+   "name": "US fear index (VIX)",
+   "symbol": "^VIX",
+   "last": 23.81,
+   "chg_pct": -4.45,
+   "as_of": "27 Nov 23:45",
+   "weighted": false,
+   "beta": null,
+   "effect_pct": null,
+   "effect_pts": null,
+   "why": "Rising means investors worldwide are nervous",
+   "note": null,
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "sse",
+   "name": "Shanghai",
+   "symbol": "000001.SS",
+   "last": 3606.49,
+   "chg_pct": 0.0,
+   "as_of": "27 Nov 12:30",
+   "weighted": false,
+   "beta": null,
+   "effect_pct": null,
+   "effect_pts": null,
+   "why": "China demand: metals and commodities",
+   "note": "no trade since NIFTY's close",
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "stoxx",
+   "name": "Euro Stoxx 50",
+   "symbol": "^STOXX50E",
+   "last": 6089.2,
+   "chg_pct": 0.06,
+   "as_of": "27 Nov 22:30",
+   "weighted": false,
+   "beta": null,
+   "effect_pct": null,
+   "effect_pts": null,
+   "why": "Europe, open from about 13:30 IST",
+   "note": null,
+   "stale": false,
+   "via": null
+  }
+ ],
+ "news_tone": {
+  "headlines": 22,
+  "bad": 1,
+  "good": 5
+ },
+ "big_moves": [],
+ "rupee_record": null,
+ "india": null,
+ "themes": [
+  {
+   "key": "rates",
+   "label": "RBI, rates and inflation",
+   "count": 15,
+   "neg": 0,
+   "pos": 5,
+   "latest": {
+    "headline": "Canadian dollar holds on to weekly gain as investors bet on December rate hike",
+    "source": "Mint",
+    "time": "28 Nov 22:46"
+   }
+  },
+  {
+   "key": "geo",
+   "label": "war, attacks, sanctions and tariffs",
+   "count": 6,
+   "neg": 0,
+   "pos": 0,
+   "latest": {
+    "headline": "US tariff worries persist, but why ICICI Securities likes textile stocks",
+    "source": "CNBC-TV18",
+    "time": "28 Nov 23:01"
+   }
+  },
+  {
+   "key": "crude",
+   "label": "crude oil",
+   "count": 3,
+   "neg": 0,
+   "pos": 0,
+   "latest": {
+    "headline": "From war premium to demand concerns: What is driving the sharp fall in crude oil prices?",
+    "source": "ET",
+    "time": "28 Nov 22:36"
+   }
+  },
+  {
+   "key": "rupee",
+   "label": "the rupee and the dollar",
+   "count": 1,
+   "neg": 0,
+   "pos": 0,
+   "latest": {
+    "headline": "Canadian dollar holds on to weekly gain as investors bet on December rate hike",
+    "source": "Mint",
+    "time": "28 Nov 22:46"
+   }
+  },
+  {
+   "key": "us",
+   "label": "the US markets and the Fed",
+   "count": 1,
+   "neg": 1,
+   "pos": 0,
+   "latest": {
+    "headline": "Nasdaq futures plunge nearly 3% as AI trade comes under pressure; gold extends decline",
+    "source": "CNBC-TV18",
+    "time": "28 Nov 22:31"
+   }
+  }
+ ],
+ "reasons": [
+  "NIFTY is down 277 points (-1.07%) at 25,607 at its last close (27 Nov); Sensex -1.17%.",
+  "S&P 500 futures is up 0.8% since NIFTY's last close: on past days that has meant about +34 NIFTY points.",
+  "US dollar index is up 0.2% since NIFTY's last close: on past days that has meant about -10 NIFTY points.",
+  "India's own news today is mostly good for the market: 5 good and 1 bad among 22 headlines on these themes (shown for context: headlines are not part of the tested call).",
+  "Today's headlines: 15 on RBI, rates and inflation, 6 on war, attacks, sanctions and tariffs, 3 on crude oil, 1 on the rupee and the dollar. Latest on RBI, rates and inflation: \"Canadian dollar holds on to weekly gain as investors bet on December rate hike\"."
+ ],
+ "model": {
+  "r2": 0.201,
+  "days": 888,
+  "from": "2022-01-04",
+  "to": "2026-11-25"
+ },
+ "world_at": "23:02:55",
+ "alerts": [
+  {
+   "key": "2026-11-28:silver:+1",
+   "at": "09:36",
+   "title": "Silver +3.8%",
+   "body": "Silver is up 3.8% since NIFTY's last close. Follows gold and industrial demand."
+  },
+  {
+   "key": "2026-11-28:natgas:-1",
+   "at": "09:36",
+   "title": "Natural gas -5.1%",
+   "body": "Natural gas is down 5.1% since NIFTY's last close. Moves city gas and fertiliser companies."
+  }
+ ]
+}

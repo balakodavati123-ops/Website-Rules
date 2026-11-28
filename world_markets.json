@@ -1,0 +1,162 @@
+[
+ {
+  "group": "United States",
+  "name": "S&P 500",
+  "symbol": "^GSPC",
+  "last": 7561.67,
+  "chg_pct": -0.4,
+  "as_of": "2026-11-13",
+  "why": "Sets the tone for Asia's open",
+  "spark": "[7688.62, 7353.73, 7376.86, 7549.94, 7520.93, 7619.38, 7592.4, 7561.67]"
+ },
+ {
+  "group": "United States",
+  "name": "Nasdaq",
+  "symbol": "^IXIC",
+  "last": 25136.27,
+  "chg_pct": -0.91,
+  "as_of": "2026-11-13",
+  "why": "Leads Indian IT stocks",
+  "spark": "[25736.51, 24315.0, 24579.43, 25253.14, 25065.87, 25466.19, 25366.09, 25136.27]"
+ },
+ {
+  "group": "United States",
+  "name": "Dow Jones",
+  "symbol": "^DJI",
+  "last": 52347.55,
+  "chg_pct": 0.1,
+  "as_of": "2026-11-13",
+  "why": "Broad US risk mood",
+  "spark": "[53356.12, 51523.06, 51285.73, 52389.75, 52231.89, 52486.49, 52297.09, 52347.55]"
+ },
+ {
+  "group": "United States",
+  "name": "US fear index (VIX)",
+  "symbol": "^VIX",
+  "last": 19.3,
+  "chg_pct": 3.21,
+  "as_of": "2026-11-13",
+  "why": "Rising means global risk-off",
+  "spark": "[16.61, 28.18, 25.64, 19.92, 19.46, 17.49, 18.7, 19.3]"
+ },
+ {
+  "group": "Asia",
+  "name": "Nikkei 225",
+  "symbol": "^N225",
+  "last": 61142.35,
+  "chg_pct": 0.53,
+  "as_of": "2026-11-13",
+  "why": "Trades before India opens",
+  "spark": "[62188.63, 61077.9, 57434.77, 58775.5, 60459.58, 61248.59, 60819.36, 61142.35]"
+ },
+ {
+  "group": "Asia",
+  "name": "Hang Seng",
+  "symbol": "^HSI",
+  "last": 23637.6,
+  "chg_pct": -1.55,
+  "as_of": "2026-11-13",
+  "why": "Asia and China risk mood",
+  "spark": "[23919.5, 24796.98, 24481.86, 24448.95, 24557.04, 24315.92, 24008.55, 23637.6]"
+ },
+ {
+  "group": "Asia",
+  "name": "Shanghai",
+  "symbol": "000001.SS",
+  "last": 3634.35,
+  "chg_pct": -0.59,
+  "as_of": "2026-11-13",
+  "why": "China demand, metals",
+  "spark": "[3686.17, 3689.91, 3649.18, 3660.79, 3663.72, 3680.64, 3655.83, 3634.35]"
+ },
+ {
+  "group": "Europe",
+  "name": "FTSE 100",
+  "symbol": "^FTSE",
+  "last": 10902.6,
+  "chg_pct": 0.36,
+  "as_of": "2026-11-13",
+  "why": "Europe's close, yesterday",
+  "spark": "[10829.2, 10782.7, 10673.9, 10782.9, 10751.6, 10835.5, 10863.1, 10902.6]"
+ },
+ {
+  "group": "Europe",
+  "name": "DAX",
+  "symbol": "^GDAXI",
+  "last": 26749.95,
+  "chg_pct": -0.08,
+  "as_of": "2026-11-13",
+  "why": "Europe's close, yesterday",
+  "spark": "[26437.67, 26325.01, 25820.36, 26267.19, 26347.45, 26662.77, 26771.88, 26749.95]"
+ },
+ {
+  "group": "India",
+  "name": "Nifty 50",
+  "symbol": "^NSEI",
+  "last": 25144.3,
+  "chg_pct": -0.61,
+  "as_of": "2026-11-13",
+  "why": "Yesterday's close",
+  "spark": "[23810.85, 23960.6, 24536.6, 25030.35, 25044.65, 25255.05, 25299.35, 25144.3]"
+ },
+ {
+  "group": "Money",
+  "name": "US dollar index",
+  "symbol": "DX-Y.NYB",
+  "last": 103.41,
+  "chg_pct": 0.23,
+  "as_of": "2026-11-13",
+  "why": "A strong dollar pulls money out of India",
+  "spark": "[101.51, 101.55, 102.3, 101.65, 102.23, 102.91, 103.17, 103.41]"
+ },
+ {
+  "group": "Money",
+  "name": "Dollar in rupees",
+  "symbol": "INR=X",
+  "last": 94.24,
+  "chg_pct": 0.22,
+  "as_of": "2026-11-14",
+  "why": "A weak rupee hurts importers, helps IT",
+  "spark": "[94.52, 94.46, 93.9, 93.95, 93.93, 93.7, 94.03, 94.24]"
+ },
+ {
+  "group": "Money",
+  "name": "US 10-year yield",
+  "symbol": "^TNX",
+  "last": 5.15,
+  "chg_pct": 1.0,
+  "as_of": "2026-11-13",
+  "why": "Higher yields pressure growth stocks",
+  "spark": "[4.89, 4.84, 4.86, 4.86, 4.98, 5.0, 5.1, 5.15]"
+ },
+ {
+  "group": "Commodities",
+  "name": "Brent crude",
+  "symbol": "BZ=F",
+  "last": 95.84,
+  "chg_pct": 0.02,
+  "as_of": "2026-11-13",
+  "why": "India imports its oil: higher is worse",
+  "spark": "[94.62, 98.29, 98.32, 92.57, 91.49, 92.76, 95.82, 95.84]"
+ },
+ {
+  "group": "Commodities",
+  "name": "Gold",
+  "symbol": "GC=F",
+  "last": 3886.3,
+  "chg_pct": 0.03,
+  "as_of": "2026-11-13",
+  "why": "Your largest holding follows this",
+  "spark": "[4073.0, 4113.5, 4074.9, 4114.5, 4030.2, 4000.5, 3885.3, 3886.3]"
+ },
+ {
+  "group": "Commodities",
+  "name": "Silver",
+  "symbol": "SI=F",
+  "last": 49.03,
+  "chg_pct": -1.88,
+  "as_of": "2026-11-13",
+  "why": "Your second-largest holding",
+  "spark": "[52.12, 52.23, 51.8, 52.56, 51.1, 51.88, 49.97, 49.03]"
+ }
+]

@@ -1,0 +1,902 @@
+{
+ "updated_at": "2026-11-27T15:30:54+05:30",
+ "today": {
+  "at": "15:30:54",
+  "fut": "NIFTY FUT 29 DEC 26",
+  "rules": {
+   "slope_bars": 3,
+   "cooldown_min": 30,
+   "stop": 0.25,
+   "first": "09:21",
+   "last": "15:00",
+   "square_off": "15:20",
+   "breach": "close"
+  },
+  "candles": 125,
+  "seeded": true,
+  "source": "Upstox 1-minute candles",
+  "warmup": null,
+  "last": [
+   {
+    "end": "13:33",
+    "close": 25749.9,
+    "ema9": 25748.76,
+    "vwap": 25854.91
+   },
+   {
+    "end": "13:36",
+    "close": 25769.0,
+    "ema9": 25752.8,
+    "vwap": 25854.09
+   },
+   {
+    "end": "13:39",
+    "close": 25770.0,
+    "ema9": 25756.24,
+    "vwap": 25852.46
+   },
+   {
+    "end": "13:42",
+    "close": 25777.0,
+    "ema9": 25760.4,
+    "vwap": 25851.53
+   },
+   {
+    "end": "13:45",
+    "close": 25770.0,
+    "ema9": 25762.32,
+    "vwap": 25850.36
+   },
+   {
+    "end": "13:48",
+    "close": 25789.0,
+    "ema9": 25767.65,
+    "vwap": 25847.91
+   },
+   {
+    "end": "13:51",
+    "close": 25769.9,
+    "ema9": 25768.1,
+    "vwap": 25847.56
+   },
+   {
+    "end": "13:54",
+    "close": 25776.2,
+    "ema9": 25769.72,
+    "vwap": 25847.25
+   },
+   {
+    "end": "13:57",
+    "close": 25755.0,
+    "ema9": 25766.78,
+    "vwap": 25847.08
+   },
+   {
+    "end": "14:00",
+    "close": 25738.0,
+    "ema9": 25761.02,
+    "vwap": 25846.38
+   },
+   {
+    "end": "14:03",
+    "close": 25754.6,
+    "ema9": 25759.74,
+    "vwap": 25846.02
+   },
+   {
+    "end": "14:06",
+    "close": 25763.8,
+    "ema9": 25760.55,
+    "vwap": 25845.91
+   },
+   {
+    "end": "14:09",
+    "close": 25763.8,
+    "ema9": 25761.2,
+    "vwap": 25845.8
+   },
+   {
+    "end": "14:12",
+    "close": 25760.0,
+    "ema9": 25760.96,
+    "vwap": 25845.5
+   },
+   {
+    "end": "14:15",
+    "close": 25794.8,
+    "ema9": 25767.73,
+    "vwap": 25845.02
+   },
+   {
+    "end": "14:18",
+    "close": 25790.0,
+    "ema9": 25772.18,
+    "vwap": 25844.81
+   },
+   {
+    "end": "14:21",
+    "close": 25791.4,
+    "ema9": 25776.03,
+    "vwap": 25844.68
+   },
+   {
+    "end": "14:24",
+    "close": 25756.1,
+    "ema9": 25772.04,
+    "vwap": 25844.36
+   },
+   {
+    "end": "14:27",
+    "close": 25770.0,
+    "ema9": 25771.63,
+    "vwap": 25844.05
+   },
+   {
+    "end": "14:30",
+    "close": 25775.0,
+    "ema9": 25772.31,
+    "vwap": 25843.94
+   },
+   {
+    "end": "14:33",
+    "close": 25772.0,
+    "ema9": 25772.24,
+    "vwap": 25843.84
+   },
+   {
+    "end": "14:36",
+    "close": 25781.2,
+    "ema9": 25774.04,
+    "vwap": 25843.58
+   },
+   {
+    "end": "14:39",
+    "close": 25794.4,
+    "ema9": 25778.11,
+    "vwap": 25843.25
+   },
+   {
+    "end": "14:42",
+    "close": 25750.0,
+    "ema9": 25772.49,
+    "vwap": 25841.93
+   },
+   {
+    "end": "14:45",
+    "close": 25748.0,
+    "ema9": 25767.59,
+    "vwap": 25841.26
+   },
+   {
+    "end": "14:48",
+    "close": 25736.8,
+    "ema9": 25761.43,
+    "vwap": 25840.53
+   },
+   {
+    "end": "14:51",
+    "close": 25743.1,
+    "ema9": 25757.77,
+    "vwap": 25839.82
+   },
+   {
+    "end": "14:54",
+    "close": 25758.0,
+    "ema9": 25757.81,
+    "vwap": 25839.29
+   },
+   {
+    "end": "14:57",
+    "close": 25746.6,
+    "ema9": 25755.57,
+    "vwap": 25838.94
+   },
+   {
+    "end": "15:00",
+    "close": 25740.0,
+    "ema9": 25752.46,
+    "vwap": 25837.78
+   },
+   {
+    "end": "15:03",
+    "close": 25730.0,
+    "ema9": 25747.96,
+    "vwap": 25835.68
+   },
+   {
+    "end": "15:06",
+    "close": 25714.0,
+    "ema9": 25741.17,
+    "vwap": 25832.19
+   },
+   {
+    "end": "15:09",
+    "close": 25710.0,
+    "ema9": 25734.94,
+    "vwap": 25828.67
+   },
+   {
+    "end": "15:12",
+    "close": 25699.4,
+    "ema9": 25727.83,
+    "vwap": 25823.51
+   },
+   {
+    "end": "15:15",
+    "close": 25701.0,
+    "ema9": 25722.46,
+    "vwap": 25820.84
+   },
+   {
+    "end": "15:18",
+    "close": 25716.1,
+    "ema9": 25721.19,
+    "vwap": 25819.62
+   },
+   {
+    "end": "15:21",
+    "close": 25711.0,
+    "ema9": 25719.15,
+    "vwap": 25818.88
+   },
+   {
+    "end": "15:24",
+    "close": 25702.0,
+    "ema9": 25715.72,
+    "vwap": 25818.05
+   },
+   {
+    "end": "15:27",
+    "close": 25696.9,
+    "ema9": 25711.96,
+    "vwap": 25816.3
+   },
+   {
+    "end": "15:30",
+    "close": 25696.9,
+    "ema9": 25708.95,
+    "vwap": 25815.6
+   }
+  ],
+  "crosses": [
+   {
+    "end": "09:57",
+    "dir": "down",
+    "taken": true,
+    "why": ""
+   }
+  ],
+  "now": {
+   "end": "15:30",
+   "close": 25696.9,
+   "ema9": 25708.95,
+   "vwap": 25815.6,
+   "side": "EMA9 below VWAP (puts side)",
+   "vwap_slope": -3.28
+  }
+ },
+ "paused": false,
+ "books": {
+  "ema_vwap": {
+   "closed": 5,
+   "wins": 2,
+   "win_rate": 40.0,
+   "total_rs": -728,
+   "avg_rs": -146,
+   "best_rs": 1814,
+   "worst_rs": -1537,
+   "sessions": 3,
+   "since": "2026-11-25",
+   "open": 0,
+   "open_rs": 0,
+   "trades": [
+    {
+     "id": "F261125-85",
+     "day": "2026-11-25",
+     "opened": "09:45:04",
+     "closed": "10:06:12",
+     "label": "NIFTY 25,750 CE \u00b7 EMA9/VWAP \u00b7 12-01",
+     "status": "LOSS",
+     "pnl_rs": -89.68,
+     "why": "EMA9 breach: the 10:06 3-minute candle closed at 25,878.9, below EMA9 25,882.1",
+     "entry": -244.15,
+     "exit_premium": 243.95,
+     "legs": [
+      {
+       "side": "B",
+       "strike": 25750.0,
+       "kind": "CE",
+       "entry": 244.15,
+       "last": 243.95,
+       "key": "NSE_FO|47837"
+      }
+     ]
+    },
+    {
+     "id": "F261125-90",
+     "day": "2026-11-25",
+     "opened": "12:57:02",
+     "closed": "13:27:10",
+     "label": "NIFTY 25,750 PE \u00b7 EMA9/VWAP \u00b7 12-01",
+     "status": "WIN",
+     "pnl_rs": 1814.36,
+     "why": "EMA9 breach: the 13:27 3-minute candle closed at 25,832.0, above EMA9 25,831.2",
+     "entry": -225.65,
+     "exit_premium": 254.75,
+     "legs": [
+      {
+       "side": "B",
+       "strike": 25750.0,
+       "kind": "PE",
+       "entry": 225.65,
+       "last": 254.75,
+       "key": "NSE_FO|47838"
+      }
+     ]
+    },
+    {
+     "id": "F261126-108",
+     "day": "2026-11-26",
+     "opened": "13:33:07",
+     "closed": "13:45:04",
+     "label": "NIFTY 25,800 PE \u00b7 EMA9/VWAP \u00b7 12-01",
+     "status": "LOSS",
+     "pnl_rs": -1320.31,
+     "why": "EMA9 breach: the 13:45 3-minute candle closed at 25,973.0, above EMA9 25,962.5",
+     "entry": -168.65,
+     "exit_premium": 149.35,
+     "legs": [
+      {
+       "side": "B",
+       "strike": 25800.0,
+       "kind": "PE",
+       "entry": 168.65,
+       "last": 149.35,
+       "key": "NSE_FO|47846"
+      }
+     ]
+    },
+    {
+     "id": "F261126-109",
+     "day": "2026-11-26",
+     "opened": "14:42:02",
+     "closed": "15:20:03",
+     "label": "NIFTY 25,900 CE \u00b7 EMA9/VWAP \u00b7 12-01",
+     "status": "WIN",
+     "pnl_rs": 404.04,
+     "why": "time: square-off at 15:20",
+     "entry": -186.9,
+     "exit_premium": 194.2,
+     "legs": [
+      {
+       "side": "B",
+       "strike": 25900.0,
+       "kind": "CE",
+       "entry": 186.9,
+       "last": 194.2,
+       "key": "NSE_FO|47855"
+      }
+     ]
+    },
+    {
+     "id": "F261127-111",
+     "day": "2026-11-27",
+     "opened": "09:57:12",
+     "closed": "10:09:04",
+     "label": "NIFTY 25,800 PE \u00b7 EMA9/VWAP \u00b7 12-01",
+     "status": "LOSS",
+     "pnl_rs": -1536.65,
+     "why": "EMA9 breach: the 10:09 3-minute candle closed at 25,959.8, above EMA9 25,944.3",
+     "entry": -159.6,
+     "exit_premium": 136.95,
+     "legs": [
+      {
+       "side": "B",
+       "strike": 25800.0,
+       "kind": "PE",
+       "entry": 159.6,
+       "last": 136.95,
+       "key": "NSE_FO|47846"
+      }
+     ]
+    }
+   ]
+  },
+  "straddle": {
+   "closed": 6,
+   "wins": 4,
+   "win_rate": 66.7,
+   "total_rs": 10934,
+   "avg_rs": 1822,
+   "best_rs": 4883,
+   "worst_rs": -4695,
+   "sessions": 6,
+   "since": "2026-11-19",
+   "open": 0,
+   "open_rs": 0,
+   "trades": [
+    {
+     "id": "F261119-37",
+     "day": "2026-11-19",
+     "opened": "09:45:06",
+     "closed": "15:15:14",
+     "label": "NIFTY long straddle \u00b7 11-23",
+     "status": "WIN",
+     "pnl_rs": 4447.25,
+     "why": "time",
+     "entry": -291.3,
+     "exit_premium": null,
+     "legs": [
+      {
+       "side": "B",
+       "strike": 25250.0,
+       "kind": "CE",
+       "entry": 125.7,
+       "last": 316.3,
+       "key": "NSE_FO|64453"
+      },
+      {
+       "side": "B",
+       "strike": 25250.0,
+       "kind": "PE",
+       "entry": 165.6,
+       "last": 44.65,
+       "key": "NSE_FO|64455"
+      }
+     ]
+    },
+    {
+     "id": "F261120-53",
+     "day": "2026-11-20",
+     "opened": "09:45:02",
+     "closed": "15:15:08",
+     "label": "NIFTY long straddle \u00b7 11-23",
+     "status": "WIN",
+     "pnl_rs": 4522.0,
+     "why": "time",
+     "entry": -271.75,
+     "exit_premium": null,
+     "legs": [
+      {
+       "side": "B",
+       "strike": 25500.0,
+       "kind": "CE",
+       "entry": 108.2,
+       "last": 310.3,
+       "key": "NSE_FO|64473"
+      },
+      {
+       "side": "B",
+       "strike": 25500.0,
+       "kind": "PE",
+       "entry": 163.55,
+       "last": 32.25,
+       "key": "NSE_FO|64474"
+      }
+     ]
+    },
+    {
+     "id": "F261123-76",
+     "day": "2026-11-23",
+     "opened": "11:31:00",
+     "closed": "14:54:38",
+     "label": "NIFTY long straddle \u00b7 11-23",
+     "status": "WIN",
+     "pnl_rs": 4882.75,
+     "why": "target",
+     "entry": -146.35,
+     "exit_premium": null,
+     "legs": [
+      {
+       "side": "B",
+       "strike": 25600.0,
+       "kind": "CE",
+       "entry": 80.0,
+       "last": 1.4,
+       "key": "NSE_FO|64477"
+      },
+      {
+       "side": "B",
+       "strike": 25600.0,
+       "kind": "PE",
+       "entry": 66.35,
+       "last": 221.3,
+       "key": "NSE_FO|64478"
+      }
+     ]
+    },
+    {
+     "id": "F261125-87",
+     "day": "2026-11-25",
+     "opened": "10:00:03",
+     "closed": "15:15:13",
+     "label": "NIFTY long straddle \u00b7 12-01",
+     "status": "LOSS",
+     "pnl_rs": -1211.0,
+     "why": "time",
+     "entry": -480.55,
+     "exit_premium": null,
+     "legs": [
+      {
+       "side": "B",
+       "strike": 25650.0,
+       "kind": "CE",
+       "entry": 317.7,
+       "last": 320.4,
+       "key": "NSE_FO|47821"
+      },
+      {
+       "side": "B",
+       "strike": 25650.0,
+       "kind": "PE",
+       "entry": 162.85,
+       "last": 142.75,
+       "key": "NSE_FO|47834"
+      }
+     ]
+    },
+    {
+     "id": "F261126-95",
+     "day": "2026-11-26",
+     "opened": "10:00:01",
+     "closed": "15:15:11",
+     "label": "NIFTY long straddle \u00b7 12-01",
+     "status": "LOSS",
+     "pnl_rs": -4695.0,
+     "why": "time",
+     "entry": -422.5,
+     "exit_premium": null,
+     "legs": [
+      {
+       "side": "B",
+       "strike": 25950.0,
+       "kind": "CE",
+       "entry": 151.8,
+       "last": 169.0,
+       "key": "NSE_FO|47893"
+      },
+      {
+       "side": "B",
+       "strike": 25950.0,
+       "kind": "PE",
+       "entry": 270.7,
+       "last": 182.5,
+       "key": "NSE_FO|47894"
+      }
+     ]
+    },
+    {
+     "id": "F261127-112",
+     "day": "2026-11-27",
+     "opened": "10:00:06",
+     "closed": "15:15:10",
+     "label": "NIFTY long straddle \u00b7 12-01",
+     "status": "WIN",
+     "pnl_rs": 2988.0,
+     "why": "time",
+     "entry": -327.55,
+     "exit_premium": null,
+     "legs": [
+      {
+       "side": "B",
+       "strike": 25850.0,
+       "kind": "CE",
+       "entry": 154.3,
+       "last": 58.05,
+       "key": "NSE_FO|47847"
+      },
+      {
+       "side": "B",
+       "strike": 25850.0,
+       "kind": "PE",
+       "entry": 173.25,
+       "last": 316.7,
+       "key": "NSE_FO|47854"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "backtest": {
+  "no filter (your rules)": {
+   "year1": {
+    "trades": 520,
+    "win_rate_pct": 29.2,
+    "expectancy_inr": -24.1,
+    "net_pnl_inr": -12520,
+    "gross_pnl_inr": 18850,
+    "charges_inr": 31370
+   },
+   "year2": {
+    "trades": 702,
+    "win_rate_pct": 29.8,
+    "expectancy_inr": -100.5,
+    "net_pnl_inr": -70538,
+    "gross_pnl_inr": -27211,
+    "charges_inr": 43328
+   },
+   "all": {
+    "trades": 1222,
+    "win_rate_pct": 29.5,
+    "expectancy_inr": -68.0,
+    "net_pnl_inr": -83059,
+    "gross_pnl_inr": -8361,
+    "charges_inr": 74698
+   },
+   "per_session": 2.83
+  },
+  "VWAP slope, 1 candle": {
+   "year1": {
+    "trades": 495,
+    "win_rate_pct": 28.9,
+    "expectancy_inr": -23.7,
+    "net_pnl_inr": -11723,
+    "gross_pnl_inr": 18150,
+    "charges_inr": 29873
+   },
+   "year2": {
+    "trades": 671,
+    "win_rate_pct": 30.4,
+    "expectancy_inr": -87.0,
+    "net_pnl_inr": -58384,
+    "gross_pnl_inr": -16973,
+    "charges_inr": 41411
+   },
+   "all": {
+    "trades": 1166,
+    "win_rate_pct": 29.8,
+    "expectancy_inr": -60.1,
+    "net_pnl_inr": -70107,
+    "gross_pnl_inr": 1177,
+    "charges_inr": 71284
+   },
+   "per_session": 2.7
+  },
+  "VWAP slope, 3 candles": {
+   "year1": {
+    "trades": 453,
+    "win_rate_pct": 30.5,
+    "expectancy_inr": -17.3,
+    "net_pnl_inr": -7826,
+    "gross_pnl_inr": 19529,
+    "charges_inr": 27355
+   },
+   "year2": {
+    "trades": 618,
+    "win_rate_pct": 29.9,
+    "expectancy_inr": -98.4,
+    "net_pnl_inr": -60781,
+    "gross_pnl_inr": -22629,
+    "charges_inr": 38152
+   },
+   "all": {
+    "trades": 1071,
+    "win_rate_pct": 30.2,
+    "expectancy_inr": -64.1,
+    "net_pnl_inr": -68607,
+    "gross_pnl_inr": -3100,
+    "charges_inr": 65507
+   },
+   "per_session": 2.49
+  },
+  "VWAP slope, 5 candles": {
+   "year1": {
+    "trades": 425,
+    "win_rate_pct": 29.9,
+    "expectancy_inr": -12.8,
+    "net_pnl_inr": -5440,
+    "gross_pnl_inr": 20235,
+    "charges_inr": 25675
+   },
+   "year2": {
+    "trades": 559,
+    "win_rate_pct": 29.9,
+    "expectancy_inr": -101.5,
+    "net_pnl_inr": -56741,
+    "gross_pnl_inr": -22219,
+    "charges_inr": 34522
+   },
+   "all": {
+    "trades": 984,
+    "win_rate_pct": 29.9,
+    "expectancy_inr": -63.2,
+    "net_pnl_inr": -62181,
+    "gross_pnl_inr": -1984,
+    "charges_inr": 60197
+   },
+   "per_session": 2.31
+  },
+  "skip a crossover within 15 min": {
+   "year1": {
+    "trades": 439,
+    "win_rate_pct": 29.6,
+    "expectancy_inr": -32.3,
+    "net_pnl_inr": -14178,
+    "gross_pnl_inr": 12306,
+    "charges_inr": 26484
+   },
+   "year2": {
+    "trades": 582,
+    "win_rate_pct": 29.9,
+    "expectancy_inr": -80.9,
+    "net_pnl_inr": -47071,
+    "gross_pnl_inr": -11122,
+    "charges_inr": 35948
+   },
+   "all": {
+    "trades": 1021,
+    "win_rate_pct": 29.8,
+    "expectancy_inr": -60.0,
+    "net_pnl_inr": -61249,
+    "gross_pnl_inr": 1183,
+    "charges_inr": 62432
+   },
+   "per_session": 2.36
+  },
+  "skip within 30 min": {
+   "year1": {
+    "trades": 376,
+    "win_rate_pct": 30.3,
+    "expectancy_inr": -27.5,
+    "net_pnl_inr": -10352,
+    "gross_pnl_inr": 12382,
+    "charges_inr": 22735
+   },
+   "year2": {
+    "trades": 508,
+    "win_rate_pct": 30.9,
+    "expectancy_inr": -52.4,
+    "net_pnl_inr": -26631,
+    "gross_pnl_inr": 4794,
+    "charges_inr": 31425
+   },
+   "all": {
+    "trades": 884,
+    "win_rate_pct": 30.7,
+    "expectancy_inr": -41.8,
+    "net_pnl_inr": -36983,
+    "gross_pnl_inr": 17176,
+    "charges_inr": 54160
+   },
+   "per_session": 2.05
+  },
+  "slope 1 + 15 min": {
+   "year1": {
+    "trades": 427,
+    "win_rate_pct": 29.3,
+    "expectancy_inr": -31.5,
+    "net_pnl_inr": -13471,
+    "gross_pnl_inr": 12334,
+    "charges_inr": 25805
+   },
+   "year2": {
+    "trades": 569,
+    "win_rate_pct": 30.4,
+    "expectancy_inr": -74.2,
+    "net_pnl_inr": -42206,
+    "gross_pnl_inr": -7051,
+    "charges_inr": 35155
+   },
+   "all": {
+    "trades": 996,
+    "win_rate_pct": 29.9,
+    "expectancy_inr": -55.9,
+    "net_pnl_inr": -55676,
+    "gross_pnl_inr": 5283,
+    "charges_inr": 60959
+   },
+   "per_session": 2.33
+  },
+  "slope 3 + 15 min": {
+   "year1": {
+    "trades": 428,
+    "win_rate_pct": 29.9,
+    "expectancy_inr": -24.2,
+    "net_pnl_inr": -10363,
+    "gross_pnl_inr": 15477,
+    "charges_inr": 25840
+   },
+   "year2": {
+    "trades": 562,
+    "win_rate_pct": 30.2,
+    "expectancy_inr": -76.2,
+    "net_pnl_inr": -42833,
+    "gross_pnl_inr": -8098,
+    "charges_inr": 34736
+   },
+   "all": {
+    "trades": 990,
+    "win_rate_pct": 30.1,
+    "expectancy_inr": -53.7,
+    "net_pnl_inr": -53196,
+    "gross_pnl_inr": 7379,
+    "charges_inr": 60576
+   },
+   "per_session": 2.3
+  },
+  "slope 5 + 15 min": {
+   "year1": {
+    "trades": 391,
+    "win_rate_pct": 29.2,
+    "expectancy_inr": -34.4,
+    "net_pnl_inr": -13438,
+    "gross_pnl_inr": 10188,
+    "charges_inr": 23626
+   },
+   "year2": {
+    "trades": 519,
+    "win_rate_pct": 29.9,
+    "expectancy_inr": -79.6,
+    "net_pnl_inr": -41327,
+    "gross_pnl_inr": -9303,
+    "charges_inr": 32023
+   },
+   "all": {
+    "trades": 910,
+    "win_rate_pct": 29.6,
+    "expectancy_inr": -60.2,
+    "net_pnl_inr": -54765,
+    "gross_pnl_inr": 884,
+    "charges_inr": 55650
+   },
+   "per_session": 2.15
+  },
+  "slope 3 + 30 min": {
+   "year1": {
+    "trades": 368,
+    "win_rate_pct": 30.7,
+    "expectancy_inr": -22.5,
+    "net_pnl_inr": -8297,
+    "gross_pnl_inr": 13963,
+    "charges_inr": 22261
+   },
+   "year2": {
+    "trades": 493,
+    "win_rate_pct": 31.0,
+    "expectancy_inr": -49.2,
+    "net_pnl_inr": -24271,
+    "gross_pnl_inr": 6236,
+    "charges_inr": 30507
+   },
+   "all": {
+    "trades": 861,
+    "win_rate_pct": 30.9,
+    "expectancy_inr": -37.8,
+    "net_pnl_inr": -32568,
+    "gross_pnl_inr": 20199,
+    "charges_inr": 52768
+   },
+   "per_session": 2.01
+  },
+  "slope 3 + 15 min, touch exit": {
+   "year1": {
+    "trades": 428,
+    "win_rate_pct": 34.8,
+    "expectancy_inr": -12.9,
+    "net_pnl_inr": -5532,
+    "gross_pnl_inr": 20315,
+    "charges_inr": 25847
+   },
+   "year2": {
+    "trades": 562,
+    "win_rate_pct": 34.9,
+    "expectancy_inr": -69.1,
+    "net_pnl_inr": -38849,
+    "gross_pnl_inr": -4108,
+    "charges_inr": 34741
+   },
+   "all": {
+    "trades": 990,
+    "win_rate_pct": 34.8,
+    "expectancy_inr": -44.8,
+    "net_pnl_inr": -44381,
+    "gross_pnl_inr": 16207,
+    "charges_inr": 60588
+   },
+   "per_session": 2.3
+  },
+  "_live_rule": "slope 3 + 30 min",
+  "_chosen_on_year1": "VWAP slope, 5 candles"
+ }
+}

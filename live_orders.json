@@ -1,0 +1,24 @@
+{
+ "tickets": {},
+ "orders": [],
+ "mode": "off",
+ "updated_at": "2026-11-28T23:01:48+05:30",
+ "gate": "strict",
+ "live_strategies": [],
+ "limits": {
+  "max_order": 50000.0,
+  "max_day_loss": 2000.0,
+  "max_open": 2,
+  "wallet_use": 0.9,
+  "approval_minutes": 5.0,
+  "max_slip_pct": 1.0
+ },
+ "held": [],
+ "note": "Off: the desks trade on paper only. Nothing is sent to your broker.",
+ "summary": {
+  "awaiting": 0,
+  "open": 0,
+  "today_pnl": 0,
+  "static_ip_refused": false
+ }
+}

@@ -1,0 +1,303 @@
+{
+ "day": "2026-11-27",
+ "built_at": "09:07",
+ "stage": 2,
+ "tone": {
+  "label": "Mixed",
+  "score": 0.25,
+  "notes": [
+   "US markets averaged -0.18% at the 25/11 close.",
+   "Asia averaged +0.90%.",
+   "Brent crude 92.29 (-2.45%).",
+   "Dollar-rupee 92.46 (+0.24%).",
+   "India VIX 16.84: normal."
+  ],
+  "as_of": "2026-11-25"
+ },
+ "nifty": {
+  "last": 25854.35,
+  "chg_pct": -0.12
+ },
+ "world": [
+  {
+   "name": "S&P 500",
+   "last": 7182.78,
+   "chg_pct": -0.25
+  },
+  {
+   "name": "Nasdaq",
+   "last": 23585.8,
+   "chg_pct": -0.62
+  },
+  {
+   "name": "Dow Jones",
+   "last": 50182.95,
+   "chg_pct": 0.33
+  },
+  {
+   "name": "US fear index (VIX)",
+   "last": 26.8,
+   "chg_pct": -5.27
+  },
+  {
+   "name": "Nikkei 225",
+   "last": 58172.04,
+   "chg_pct": 1.17
+  },
+  {
+   "name": "Hang Seng",
+   "last": 22366.27,
+   "chg_pct": 0.63
+  },
+  {
+   "name": "Shanghai",
+   "last": 3489.94,
+   "chg_pct": 0.38
+  },
+  {
+   "name": "FTSE 100",
+   "last": 10609.3,
+   "chg_pct": 1.75
+  },
+  {
+   "name": "DAX",
+   "last": 25215.52,
+   "chg_pct": 2.08
+  },
+  {
+   "name": "Nifty 50",
+   "last": 25884.5,
+   "chg_pct": 0.25
+  }
+ ],
+ "events": [],
+ "results": [
+  {
+   "symbol": "ARSHIYA",
+   "company": "Arshiya Limited",
+   "time": "13 Nov 20:35"
+  },
+  {
+   "symbol": "DPSCLTD",
+   "company": "DPSC Limited",
+   "time": "13 Nov 19:22"
+  },
+  {
+   "symbol": "GBGLOBAL",
+   "company": "GB Global Limited",
+   "time": "13 Nov 19:12"
+  },
+  {
+   "symbol": "NAGAFERT",
+   "company": "Nagarjuna Fertilizers and Chemicals Limited",
+   "time": "13 Nov 18:34"
+  },
+  {
+   "symbol": "SETCO",
+   "company": "Setco Automotive Limited",
+   "time": "13 Nov 16:02"
+  },
+  {
+   "symbol": "SKIL",
+   "company": "SKIL Infrastructure Limited",
+   "time": "13 Nov 19:12"
+  }
+ ],
+ "headlines": [
+  {
+   "headline": "Siemens Energy India Q4 Results: Profit zooms 82% as new orders nearly double; declares \u20b912 dividend",
+   "category": "EARNINGS",
+   "source": "CNBC-TV18",
+   "time": "27 Nov 09:06"
+  },
+  {
+   "headline": "Trump tariff threat unlikely to shake markets; AI stock valuations a concern: Richard Harris",
+   "category": "GEOPOLITICS",
+   "source": "CNBC-TV18",
+   "time": "27 Nov 09:06"
+  },
+  {
+   "headline": "US tariff worries persist, but why ICICI Securities likes textile stocks",
+   "category": "GEOPOLITICS",
+   "source": "CNBC-TV18",
+   "time": "27 Nov 09:06"
+  },
+  {
+   "headline": "Supriya Lifescience to consider share buyback proposal at December 2 board meeting",
+   "category": "DEAL/ORDER",
+   "source": "CNBC-TV18",
+   "time": "27 Nov 09:06"
+  },
+  {
+   "headline": "Mizuho and Avendus commence strategic partnership post KKR stake sale - Moneycontrol.com",
+   "category": "DEAL/ORDER",
+   "source": "GoogleNews-Business",
+   "time": "27 Nov 09:06"
+  },
+  {
+   "headline": "IDBI Bank Disinvestment Awaits RBI Nod for \u20b952,878 Crore Fairfax Deal; DIPAM Secretary Shares Update - Kotak Neo",
+   "category": "APPROVAL",
+   "source": "GoogleNews",
+   "time": "27 Nov 09:06"
+  },
+  {
+   "headline": "Kospi slumps nearly 5%; Asian markets fall after US tech sell-off sparks AI rally doubts",
+   "category": "CRASH/SHOCK",
+   "source": "CNBC-TV18",
+   "time": "27 Nov 09:01"
+  },
+  {
+   "headline": "SoftBank shares crash 14% as Asian tech stocks fall on AI rally concerns",
+   "category": "CRASH/SHOCK",
+   "source": "CNBC-TV18",
+   "time": "27 Nov 09:01"
+  }
+ ],
+ "watch": [
+  {
+   "symbol": "BIOCON",
+   "why": [
+    "positive filing"
+   ],
+   "prev_close": 365.0,
+   "long_above": 367.19,
+   "short_below": 357.7,
+   "stop_pct": 1.0,
+   "bias": "long"
+  },
+  {
+   "symbol": "SETCO",
+   "why": [
+    "results filed"
+   ],
+   "prev_close": 16.93,
+   "long_above": 17.27,
+   "short_below": 16.59,
+   "stop_pct": 1.0,
+   "bias": "either"
+  }
+ ],
+ "fno": [
+  {
+   "strategy": "Iron condor, credit spread (fixed return)",
+   "note": "Favoured on a quiet day"
+  },
+  {
+   "strategy": "Debit spread, long breakout (high return, low loss)",
+   "note": "Needs a 0.25% to 0.5% move from the previous close first; waits for the trend"
+  },
+  {
+   "strategy": "Long straddle (high return, high loss)",
+   "note": "Pays only on a big move; the desk skips it when its cost does not fit the F&O limit"
+  }
+ ],
+ "outlook": "Tone mixed. 2 names in the news to watch; the desks act only when price confirms: a 2% move near the day's extreme (0.6% when a filing agrees) on real turnover.",
+ "world_at": 1795750620.9391568,
+ "gaps": {
+  "up": [
+   {
+    "symbol": "MAFANG",
+    "price": 228.0,
+    "chg_pct": 5.82
+   },
+   {
+    "symbol": "MOCAPITAL",
+    "price": 60.41,
+    "chg_pct": 4.48
+   },
+   {
+    "symbol": "ITIETF",
+    "price": 37.25,
+    "chg_pct": 4.46
+   },
+   {
+    "symbol": "PASHUPATI",
+    "price": 32.78,
+    "chg_pct": 4.36
+   },
+   {
+    "symbol": "ITETF",
+    "price": 35.5,
+    "chg_pct": 3.92
+   },
+   {
+    "symbol": "RATNAVEER",
+    "price": 420.0,
+    "chg_pct": 3.7
+   },
+   {
+    "symbol": "MOREALTY",
+    "price": 97.99,
+    "chg_pct": 3.62
+   },
+   {
+    "symbol": "ITBEES",
+    "price": 37.02,
+    "chg_pct": 3.55
+   },
+   {
+    "symbol": "HDFCNIFIT",
+    "price": 35.5,
+    "chg_pct": 3.44
+   },
+   {
+    "symbol": "IT",
+    "price": 36.95,
+    "chg_pct": 3.39
+   }
+  ],
+  "down": [
+   {
+    "symbol": "JWL",
+    "price": 230.0,
+    "chg_pct": -3.64
+   },
+   {
+    "symbol": "ZYDUSLIFE",
+    "price": 1178.8,
+    "chg_pct": -1.29
+   },
+   {
+    "symbol": "CONSUMBEES",
+    "price": 137.52,
+    "chg_pct": -1.15
+   },
+   {
+    "symbol": "SBIPSUBNK",
+    "price": 55.16,
+    "chg_pct": -0.92
+   },
+   {
+    "symbol": "KOTAKBANK",
+    "price": 506.0,
+    "chg_pct": -0.77
+   },
+   {
+    "symbol": "PSUBANKADD",
+    "price": 96.14,
+    "chg_pct": -0.76
+   },
+   {
+    "symbol": "PSUBNKBEES",
+    "price": 106.42,
+    "chg_pct": -0.68
+   },
+   {
+    "symbol": "BHARTIARTL",
+    "price": 2089.0,
+    "chg_pct": -0.64
+   },
+   {
+    "symbol": "MOMENTUM50",
+    "price": 52.35,
+    "chg_pct": -0.57
+   },
+   {
+    "symbol": "PVTBANIETF",
+    "price": 31.65,
+    "chg_pct": -0.53
+   }
+  ],
+  "at": "09:12"
+ }
+}

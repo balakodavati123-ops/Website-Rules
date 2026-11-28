@@ -1,0 +1,270 @@
+{
+ "day": "2026-11-27",
+ "built_at": "09:16",
+ "stage": 2,
+ "views": {
+  "Nifty 50": {
+   "name": "Nifty 50",
+   "bias": "Bullish",
+   "score": 0.2,
+   "confidence": "Moderate",
+   "prev_close": 25884,
+   "centre": 25901,
+   "lo": 25626,
+   "hi": 26176,
+   "lo2": 25351,
+   "hi2": 26451,
+   "sigma_pts": 275,
+   "sigma_pct": 1.06,
+   "pivots": {
+    "P": 25864,
+    "R1": 25995,
+    "S1": 25754,
+    "R2": 26106,
+    "S2": 25623
+   },
+   "resistance": [
+    25995,
+    26000
+   ],
+   "support": [
+    25000,
+    25754
+   ],
+   "parts": {
+    "world": 0.31,
+    "trend": 0.93,
+    "range": 0.25,
+    "gap": -0.29,
+    "options": -0.04,
+    "fii": -0.36,
+    "vix": -0.02
+   },
+   "reasons": [
+    "Nifty 50 closed at 25,884, +4.2% from its 20-day average (24,839) and +2.6% over five sessions: the trend is up.",
+    "World tone is mixed: US and Asia weighted average +0.25% at the 25/11 close; Brent crude 92.29 (-2.45%).",
+    "It opened at 25,839, -0.17% from the previous close.",
+    "Foreign institutions are net short 70,670 index futures, little changed (-257 over 5 sessions): a persistent bearish tilt.",
+    "Yesterday it closed in the middle third of its 25,734 to 25,975 range, so buyers or sellers did not win the day.",
+    "Options: put-to-call ratio 1.03 (balanced), most call open interest at 26,000 (ceiling), most put open interest at 25,000 (floor), max pain 25,800.",
+    "India VIX 16.9 (+0.1%): steady."
+   ],
+   "playbook": "Above 25,995 the day favours buyers (next stop 26,106); below 25,754 sellers take over (next 25,623). Between them expect a range day: the edges 25,626 and 26,176 are where moves have usually run out of fuel.",
+   "headlines": [
+    "Siemens Energy India Q4 Results: Profit zooms 82% as new orders nearly double; declares \u20b912 dividend",
+    "Trump tariff threat unlikely to shake markets; AI stock valuations a concern: Richard Harris",
+    "US tariff worries persist, but why ICICI Securities likes textile stocks"
+   ],
+   "rv": 16.5,
+   "stage": 2,
+   "day": "2026-11-27"
+  },
+  "Bank Nifty": {
+   "name": "Bank Nifty",
+   "bias": "Sideways",
+   "score": 0.14,
+   "confidence": "Low",
+   "prev_close": 63535,
+   "centre": 63581,
+   "lo": 62509,
+   "hi": 64654,
+   "lo2": 61436,
+   "hi2": 65726,
+   "sigma_pts": 1073,
+   "sigma_pct": 1.69,
+   "pivots": {
+    "P": 63657,
+    "R1": 63983,
+    "S1": 63210,
+    "R2": 64430,
+    "S2": 62885
+   },
+   "resistance": [
+    63983,
+    66000
+   ],
+   "support": [
+    63210,
+    65000
+   ],
+   "parts": {
+    "world": 0.31,
+    "trend": 0.9,
+    "range": -0.47,
+    "gap": -0.55,
+    "options": 0.34,
+    "fii": -0.36,
+    "vix": -0.02
+   },
+   "reasons": [
+    "Bank Nifty closed at 63,535, +6.0% from its 20-day average (59,913) and +2.4% over five sessions: the trend is up.",
+    "It opened at 63,326, -0.33% from the previous close.",
+    "World tone is mixed: US and Asia weighted average +0.25% at the 25/11 close; Brent crude 92.29 (-2.45%).",
+    "Options: put-to-call ratio 0.87 (balanced), most call open interest at 66,000 (ceiling), most put open interest at 65,000 (floor), max pain 64,000.",
+    "Yesterday it closed in the lower third of its 63,332 to 64,105 range, so buyers or sellers held the close.",
+    "Foreign institutions are net short 70,670 index futures, little changed (-257 over 5 sessions): a persistent bearish tilt.",
+    "India VIX 16.9 (+0.1%): steady."
+   ],
+   "playbook": "Above 63,983 the day favours buyers (next stop 64,430); below 63,210 sellers take over (next 62,885). Between them expect a range day: the edges 62,509 and 64,654 are where moves have usually run out of fuel.",
+   "headlines": [
+    "Siemens Energy India Q4 Results: Profit zooms 82% as new orders nearly double; declares \u20b912 dividend",
+    "Trump tariff threat unlikely to shake markets; AI stock valuations a concern: Richard Harris",
+    "US tariff worries persist, but why ICICI Securities likes textile stocks"
+   ],
+   "rv": 26.3,
+   "stage": 2,
+   "day": "2026-11-27"
+  },
+  "Sensex": {
+   "name": "Sensex",
+   "bias": "Bullish",
+   "score": 0.25,
+   "confidence": "Moderate",
+   "prev_close": 84329,
+   "centre": 84395,
+   "lo": 83499,
+   "hi": 85290,
+   "lo2": 82603,
+   "hi2": 86186,
+   "sigma_pts": 896,
+   "sigma_pct": 1.06,
+   "pivots": {
+    "P": 84212,
+    "R1": 84669,
+    "S1": 83872,
+    "R2": 85009,
+    "S2": 83415
+   },
+   "resistance": [
+    84669
+   ],
+   "support": [
+    83872
+   ],
+   "parts": {
+    "world": 0.31,
+    "trend": 0.97,
+    "range": 0.44,
+    "gap": -0.47,
+    "fii": -0.36,
+    "vix": -0.02
+   },
+   "reasons": [
+    "Sensex closed at 84,329, +4.7% from its 20-day average (80,533) and +2.8% over five sessions: the trend is up.",
+    "World tone is mixed: US and Asia weighted average +0.25% at the 25/11 close; Brent crude 92.29 (-2.45%).",
+    "It opened at 84,093, -0.28% from the previous close.",
+    "Yesterday it closed in the upper third of its 83,755 to 84,552 range, so buyers or sellers held the close.",
+    "Foreign institutions are net short 70,670 index futures, little changed (-257 over 5 sessions): a persistent bearish tilt.",
+    "India VIX 16.9 (+0.1%): steady."
+   ],
+   "playbook": "Above 84,669 the day favours buyers (next stop 85,009); below 83,872 sellers take over (next 83,415). Between them expect a range day: the edges 83,499 and 85,290 are where moves have usually run out of fuel.",
+   "headlines": [
+    "Siemens Energy India Q4 Results: Profit zooms 82% as new orders nearly double; declares \u20b912 dividend",
+    "Trump tariff threat unlikely to shake markets; AI stock valuations a concern: Richard Harris",
+    "US tariff worries persist, but why ICICI Securities likes textile stocks"
+   ],
+   "rv": 16.4,
+   "stage": 2,
+   "day": "2026-11-27"
+  }
+ },
+ "pre": {
+  "Nifty 50": {
+   "bias": "Bullish",
+   "score": 0.28,
+   "lo": 25633,
+   "hi": 26182,
+   "centre": 25907
+  },
+  "Bank Nifty": {
+   "bias": "Bullish",
+   "score": 0.24,
+   "lo": 62542,
+   "hi": 64684,
+   "centre": 63613
+  },
+  "Sensex": {
+   "bias": "Bullish",
+   "score": 0.4,
+   "lo": 83541,
+   "hi": 85330,
+   "centre": 84436
+  }
+ },
+ "scored": true,
+ "record": {
+  "Nifty 50": {
+   "days": 7,
+   "direction": 14,
+   "range": 29
+  },
+  "Bank Nifty": {
+   "days": 7,
+   "direction": 0,
+   "range": 43
+  },
+  "Sensex": {
+   "days": 7,
+   "direction": 14,
+   "range": 29
+  }
+ },
+ "world_as_of": "2026-11-25",
+ "plan_world_at": 1795750620.9391568,
+ "result": [
+  {
+   "name": "Nifty 50",
+   "day": "2026-11-27",
+   "bias": "Bullish",
+   "score": 0.2,
+   "prev_close": 25884,
+   "lo": 25626,
+   "hi": 26176,
+   "open": 25839.25,
+   "high": 25909.15,
+   "low": 25565.9,
+   "close": 25607.2,
+   "chg_pct": -1.07,
+   "direction_right": false,
+   "close_in_range": false,
+   "high_in_range": true,
+   "low_in_range": true
+  },
+  {
+   "name": "Bank Nifty",
+   "day": "2026-11-27",
+   "bias": "Sideways",
+   "score": 0.14,
+   "prev_close": 63535,
+   "lo": 62509,
+   "hi": 64654,
+   "open": 63326.2,
+   "high": 63931.65,
+   "low": 62957.7,
+   "close": 63040.9,
+   "chg_pct": -0.78,
+   "direction_right": false,
+   "close_in_range": true,
+   "high_in_range": true,
+   "low_in_range": true
+  },
+  {
+   "name": "Sensex",
+   "day": "2026-11-27",
+   "bias": "Bullish",
+   "score": 0.25,
+   "prev_close": 84329,
+   "lo": 83499,
+   "hi": 85290,
+   "open": 84093.24,
+   "high": 84286.18,
+   "low": 83208.33,
+   "close": 83339.26,
+   "chg_pct": -1.17,
+   "direction_right": false,
+   "close_in_range": false,
+   "high_in_range": true,
+   "low_in_range": true
+  }
+ ]
+}

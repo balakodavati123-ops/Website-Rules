@@ -1,0 +1,58 @@
+{
+ "mood": "bearish",
+ "brief": "Indian shares fell, with the Sensex down 764 points and the Nifty below 25,700 as IT stocks and financials dragged. Sebi summoned APL Apollo officials over the Tata Steel deal, while defence stocks surged up to 15%.",
+ "themes": [
+  "Sensex falls 764 points on IT and financials",
+  "Sebi examines Tata Steel-APL Apollo deal",
+  "Defence stocks surge up to 15%",
+  "SAP weighs 10,000 job cuts"
+ ],
+ "companies": [
+  {
+   "name": "Infosys",
+   "tone": "negative",
+   "why": "Tumbles as IT stocks drag the Sensex"
+  },
+  {
+   "name": "TCS",
+   "tone": "negative",
+   "why": "Tumbles as IT stocks drag the Sensex"
+  },
+  {
+   "name": "HCLTech",
+   "tone": "negative",
+   "why": "Tumbles as IT stocks drag the Sensex"
+  },
+  {
+   "name": "Tata Steel",
+   "tone": "negative",
+   "why": "Sebi examines APL Apollo deal over related-party rules"
+  },
+  {
+   "name": "APL Apollo",
+   "tone": "negative",
+   "why": "Sebi summons officials; investor backlash on deal"
+  },
+  {
+   "name": "HDFC Bank",
+   "tone": "neutral",
+   "why": "Shares tread water as rally loses steam"
+  },
+  {
+   "name": "Bosch",
+   "tone": "positive",
+   "why": "Announces record date for stock split and bonus"
+  }
+ ],
+ "global": "Nvidia's CEO drew continued Trump support, while SAP reportedly weighs at least 10,000 job cuts in an AI push.",
+ "risks": [
+  "Sebi action on Tata Steel-APL Apollo deal",
+  "IT selling and tech layoffs",
+  "Possible US Fed rate hike in December"
+ ],
+ "time": "27 Nov 16:21",
+ "at": 1795776680.239108,
+ "day": "2026-11-27",
+ "model": "Claude (your plan, scheduled)",
+ "n": 40
+}

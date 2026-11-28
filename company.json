@@ -1,0 +1,3092 @@
+{
+ "updated_at": "2026-11-28T23:03:22+05:30",
+ "ceo": {
+  "name": "Balaji",
+  "title": "CEO"
+ },
+ "coo": {
+  "name": "Raghav",
+  "role": "COO",
+  "tokens": 1000,
+  "notes": [
+   {
+    "team": "scalp",
+    "level": "warn",
+    "text": "Scalping desk: targets hit 2 times against 13.9 expected by pure chance (z -4.15): no edge so far."
+   }
+  ],
+  "requests": [
+   {
+    "id": "R261126-scalp-3",
+    "team": "scalp",
+    "strategy": null,
+    "kind": "team",
+    "status": "pending",
+    "created": "26 Nov 10:29",
+    "text": "Scalping desk keeps losing: 20 closed trades, net \u2212\u20b91,138, 20.0% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close."
+   },
+   {
+    "id": "R261121-crypto-1",
+    "team": "crypto",
+    "strategy": null,
+    "kind": "team",
+    "status": "approved",
+    "created": "21 Nov 03:42",
+    "text": "Crypto desk keeps losing: 26 closed trades, net \u2212\u20b9713, 30.8% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close.",
+    "decided": "21 Nov 08:15"
+   },
+   {
+    "id": "R261124-intraday-2",
+    "team": "intraday",
+    "strategy": null,
+    "kind": "team",
+    "status": "approved",
+    "created": "24 Nov 00:00",
+    "text": "Intraday hunters keeps losing: 22 closed trades, net \u2212\u20b9833, 27.3% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close.",
+    "decided": "24 Nov 08:36"
+   },
+   {
+    "id": "R261126-scalp-4",
+    "team": "scalp",
+    "strategy": "scalp_vwap_pullback",
+    "status": "approved",
+    "created": "26 Nov 11:15",
+    "text": "scalp vwap pullback has lost over 30 closed trades (net \u2212\u20b91,407, 26.7% won). The record paused it automatically. May I retire it? I propose a new scalping team: 23 of 30 trades ran out of time: demand a stronger bar and set a closer target.",
+    "variant": {
+     "name": "scalp_vwap_pullback_v2",
+     "params": {
+      "vol_x": 1.5,
+      "rr": 1.2
+     },
+     "why": "23 of 30 trades ran out of time: demand a stronger bar and set a closer target"
+    },
+    "decided": "26 Nov 23:17"
+   }
+  ],
+  "doing": "Supervising 8 teams: 0 traded today, company \u20b90. 1 request waiting for you.",
+  "hires": [],
+  "designation": "COO"
+ },
+ "pnl": {
+  "today_rs": 0,
+  "open_rs": -155.99,
+  "closed_rs": 0,
+  "trades": 0,
+  "open": 13,
+  "equity_rs": 121520.48
+ },
+ "flows": [
+  {
+   "t": "22:47:54",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u20b90; 1 request(s) for you"
+  },
+  {
+   "t": "22:48:10",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "22:48:31",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "22:48:31",
+   "from": "src:yahoo",
+   "to": "news-1",
+   "kind": "data",
+   "text": "6 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+  },
+  {
+   "t": "22:48:58",
+   "from": "src:claude",
+   "to": "lab-1",
+   "kind": "data",
+   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+  },
+  {
+   "t": "22:49:25",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "22:49:25",
+   "from": "src:news",
+   "to": "news-0",
+   "kind": "data",
+   "text": "24 market-moving headlines today: 3 bad, 5 good for Indian shares"
+  },
+  {
+   "t": "22:49:47",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "22:50:15",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "22:50:15",
+   "from": "src:claude",
+   "to": "news-2",
+   "kind": "data",
+   "text": "18 on RBI, the Fed, rates and inflation. Latest: Canadian dollar holds on to wee"
+  },
+  {
+   "t": "22:50:36",
+   "from": "src:claude",
+   "to": "lab-1",
+   "kind": "data",
+   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+  },
+  {
+   "t": "22:51:03",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "22:51:03",
+   "from": "src:yahoo",
+   "to": "news-1",
+   "kind": "data",
+   "text": "6 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+  },
+  {
+   "t": "22:51:14",
+   "from": "src:nse",
+   "to": "intraday-0",
+   "kind": "data",
+   "text": "Optimism \u00b7 SWELECTES: SWELECTES: Acquisition"
+  },
+  {
+   "t": "22:51:31",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "22:51:52",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "22:51:52",
+   "from": "src:news",
+   "to": "news-3",
+   "kind": "data",
+   "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+  },
+  {
+   "t": "22:52:21",
+   "from": "src:github",
+   "to": "lab-2",
+   "kind": "data",
+   "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+  },
+  {
+   "t": "22:52:42",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "22:52:42",
+   "from": "src:claude",
+   "to": "news-2",
+   "kind": "data",
+   "text": "18 on RBI, the Fed, rates and inflation. Latest: Canadian dollar holds on to wee"
+  },
+  {
+   "t": "22:52:59",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u20b90; 1 request(s) for you"
+  },
+  {
+   "t": "22:53:09",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "22:53:38",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "22:53:38",
+   "from": "src:news",
+   "to": "news-0",
+   "kind": "data",
+   "text": "24 market-moving headlines today: 3 bad, 5 good for Indian shares"
+  },
+  {
+   "t": "22:53:54",
+   "from": "src:claude",
+   "to": "lab-1",
+   "kind": "data",
+   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+  },
+  {
+   "t": "22:54:23",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "22:54:23",
+   "from": "src:news",
+   "to": "news-3",
+   "kind": "data",
+   "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+  },
+  {
+   "t": "22:54:44",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "22:55:11",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "22:55:11",
+   "from": "src:yahoo",
+   "to": "news-1",
+   "kind": "data",
+   "text": "6 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+  },
+  {
+   "t": "22:55:40",
+   "from": "src:github",
+   "to": "lab-2",
+   "kind": "data",
+   "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+  },
+  {
+   "t": "22:55:57",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "22:55:57",
+   "from": "src:news",
+   "to": "news-3",
+   "kind": "data",
+   "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+  },
+  {
+   "t": "22:56:26",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "22:56:47",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "22:56:47",
+   "from": "src:claude",
+   "to": "news-2",
+   "kind": "data",
+   "text": "18 on RBI, the Fed, rates and inflation. Latest: Canadian dollar holds on to wee"
+  },
+  {
+   "t": "22:57:14",
+   "from": "src:claude",
+   "to": "lab-1",
+   "kind": "data",
+   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+  },
+  {
+   "t": "22:57:43",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "22:57:43",
+   "from": "src:yahoo",
+   "to": "news-1",
+   "kind": "data",
+   "text": "5 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+  },
+  {
+   "t": "22:58:00",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "22:58:00",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u20b90; 1 request(s) for you"
+  },
+  {
+   "t": "22:58:28",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "22:58:28",
+   "from": "src:news",
+   "to": "news-3",
+   "kind": "data",
+   "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+  },
+  {
+   "t": "22:58:50",
+   "from": "src:claude",
+   "to": "lab-1",
+   "kind": "data",
+   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+  },
+  {
+   "t": "22:59:17",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "22:59:17",
+   "from": "src:yahoo",
+   "to": "news-1",
+   "kind": "data",
+   "text": "5 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+  },
+  {
+   "t": "22:59:47",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "23:00:04",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "23:00:04",
+   "from": "src:news",
+   "to": "news-0",
+   "kind": "data",
+   "text": "23 market-moving headlines today: 3 bad, 5 good for Indian shares"
+  },
+  {
+   "t": "23:00:32",
+   "from": "src:claude",
+   "to": "lab-1",
+   "kind": "data",
+   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+  },
+  {
+   "t": "23:00:52",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "23:00:52",
+   "from": "src:claude",
+   "to": "news-2",
+   "kind": "data",
+   "text": "18 on RBI, the Fed, rates and inflation. Latest: Canadian dollar holds on to wee"
+  },
+  {
+   "t": "23:01:19",
+   "from": "src:claude",
+   "to": "lab-3",
+   "kind": "data",
+   "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
+  },
+  {
+   "t": "23:01:48",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "23:01:48",
+   "from": "src:yahoo",
+   "to": "news-1",
+   "kind": "data",
+   "text": "5 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+  },
+  {
+   "t": "23:02:04",
+   "from": "src:claude",
+   "to": "lab-1",
+   "kind": "data",
+   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+  },
+  {
+   "t": "23:02:38",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "23:02:38",
+   "from": "src:news",
+   "to": "news-3",
+   "kind": "data",
+   "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+  },
+  {
+   "t": "23:02:55",
+   "from": "src:claude",
+   "to": "lab-3",
+   "kind": "data",
+   "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
+  },
+  {
+   "t": "23:03:00",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u20b90; 1 request(s) for you"
+  }
+ ],
+ "teams": [
+  {
+   "id": "scalp",
+   "name": "Scalping desk",
+   "color": "#22d3ee",
+   "source": "upstox",
+   "sources": [
+    "upstox",
+    "indmoney"
+   ],
+   "status": "New team",
+   "agents": [
+    {
+     "name": "Riya",
+     "role": "Lead analyst",
+     "doing": "Market closed: the scan restarts at 09:30.",
+     "tokens": 0
+    },
+    {
+     "name": "Dev",
+     "role": "Quant analyst",
+     "doing": "Record: 34 closed, 23.5% won, average \u2212\u20b957, target hits 2 vs 13.9 by chance (z -4.15).",
+     "tokens": 0
+    },
+    {
+     "name": "Kabir",
+     "role": "Trading manager",
+     "doing": "Waiting: no setup has met the rules yet today.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "effort": 2,
+   "staff": [
+    {
+     "id": "scalp-0",
+     "name": "Asha",
+     "designation": "Associate",
+     "role": "Universe scanner",
+     "kind": "data",
+     "status": "idle",
+     "doing": "Market closed: waiting for the session",
+     "record": {
+      "trades": 34,
+      "wins": 8,
+      "pnl_rs": -1951.62,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "scalp-1",
+     "name": "Riya",
+     "designation": "Associate",
+     "role": "VWAP pullback hunter",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: no pullback has met the rule yet today",
+     "record": {
+      "trades": 34,
+      "wins": 8,
+      "pnl_rs": -1951.62,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "scalp-2",
+     "name": "Dev",
+     "designation": "Associate",
+     "role": "Volatility quant",
+     "kind": "quant",
+     "status": "idle",
+     "doing": "Market closed: keeps every stop at least one standard deviation of 10-minute noise away",
+     "record": {
+      "trades": 34,
+      "wins": 8,
+      "pnl_rs": -1951.62,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "scalp-3",
+     "name": "Mihir",
+     "designation": "Associate",
+     "role": "Charges quant",
+     "kind": "quant",
+     "status": "idle",
+     "doing": "Market closed: skips any setup whose charges would eat more than a third of the target",
+     "record": {
+      "trades": 34,
+      "wins": 8,
+      "pnl_rs": -1951.62,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "scalp-m",
+     "name": "Kabir",
+     "designation": "Manager",
+     "role": "Trading manager",
+     "kind": "trader",
+     "status": "idle",
+     "doing": "Market closed: waiting: no setup has met the rules yet today.",
+     "record": {
+      "trades": 34,
+      "wins": 8,
+      "pnl_rs": -1951.62,
+      "basis": "team record"
+     }
+    }
+   ],
+   "manager": "scalp-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 34,
+    "win_rate": 23.5,
+    "avg_rs": -57.4,
+    "net_rs": -1951.62,
+    "worst_run": 11,
+    "profit_factor": 0.24,
+    "target_hits": 2,
+    "expected_hits": 13.9,
+    "edge_z": -4.15,
+    "hit_rate": 0.059
+   },
+   "verdicts": [
+    {
+     "strategy": "scalp_vwap_pullback",
+     "closed": 30,
+     "win_rate": 26.7,
+     "pnl_rs": -1406.91,
+     "verdict": "PAUSED"
+    },
+    {
+     "strategy": "scalp_vwap_pullback_v2",
+     "closed": 4,
+     "win_rate": 0.0,
+     "pnl_rs": -544.71,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": {
+    "name": "scalp_vwap_pullback_v2",
+    "params": {
+     "vol_x": 1.5,
+     "rr": 1.2
+    },
+    "why": "23 of 30 trades ran out of time: demand a stronger bar and set a closer target",
+    "since": "2026-11-26",
+    "replaces": "scalp_vwap_pullback"
+   }
+  },
+  {
+   "id": "intraday",
+   "name": "Intraday desk \u00b7 Equity + F&O",
+   "color": "#f97316",
+   "source": "news",
+   "sources": [
+    "upstox",
+    "nse",
+    "news"
+   ],
+   "status": "Paused by you",
+   "agents": [
+    {
+     "name": "Ananya",
+     "role": "Lead analyst",
+     "doing": "Preparing the morning plan at 08:45: equity names in the news and the day's NIFTY option setup.",
+     "tokens": 0
+    },
+    {
+     "name": "Ishaan",
+     "role": "Quant analyst",
+     "doing": "Record: 64 closed, 43.8% won, average +\u20b9410, target hits 3 vs 4.3 by chance (z -0.78).",
+     "tokens": 0
+    },
+    {
+     "name": "Vikram",
+     "role": "Trading manager",
+     "doing": "Waiting: no setup has met the rules yet today.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "effort": 2,
+   "staff": [
+    {
+     "id": "intraday-0",
+     "name": "Ananya",
+     "designation": "Associate",
+     "role": "Filings & headlines hunter",
+     "kind": "research",
+     "status": "vacant",
+     "doing": "12 filings and 0 headline signal(s) lean one way: . Latest 22:51: SWELECTES: Acquisition",
+     "record": {
+      "trades": 5,
+      "wins": 2,
+      "pnl_rs": -21.84,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "intraday-1",
+     "name": "Farah",
+     "designation": "Associate",
+     "role": "Gap & momentum scanner",
+     "kind": "data",
+     "status": "vacant",
+     "doing": "Scanning 0 liquid stocks for gaps, momentum and VWAP pressure",
+     "record": {
+      "trades": 17,
+      "wins": 4,
+      "pnl_rs": -811.45,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "intraday-2",
+     "name": "Kunal",
+     "designation": "Senior Associate",
+     "role": "F&O intraday trader",
+     "kind": "research",
+     "status": "vacant",
+     "doing": "Today's NIFTY option trades: the 10:00 trade and the EMA9 / VWAP book, all closed by 15:15",
+     "record": {
+      "trades": 28,
+      "wins": 17,
+      "pnl_rs": 27284.01,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "intraday-3",
+     "name": "Divya",
+     "designation": "Associate",
+     "role": "Scalping link",
+     "kind": "research",
+     "status": "vacant",
+     "doing": "Takes the scalping desk's 1-minute VWAP and volume reads for timing entries",
+     "record": {
+      "trades": 64,
+      "wins": 28,
+      "pnl_rs": 26266.41,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "intraday-4",
+     "name": "Ishaan",
+     "designation": "Associate",
+     "role": "Risk quant",
+     "kind": "quant",
+     "status": "vacant",
+     "doing": "Sizes each trade from the stop distance; stop beyond VWAP, target 2R, stop to entry after 1R; every trade closed by 15:15",
+     "record": {
+      "trades": 64,
+      "wins": 28,
+      "pnl_rs": 26266.41,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "intraday-m",
+     "name": "Vikram",
+     "designation": "Manager",
+     "role": "Trading manager",
+     "kind": "trader",
+     "status": "vacant",
+     "doing": "Waiting: no setup has met the rules yet today.",
+     "record": {
+      "trades": 64,
+      "wins": 28,
+      "pnl_rs": 26266.41,
+      "basis": "team record"
+     }
+    }
+   ],
+   "manager": "intraday-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 64,
+    "win_rate": 43.8,
+    "avg_rs": 410.41,
+    "net_rs": 26266.41,
+    "worst_run": 6,
+    "profit_factor": 2.68,
+    "target_hits": 3,
+    "expected_hits": 4.3,
+    "edge_z": -0.78,
+    "hit_rate": 0.136
+   },
+   "verdicts": [
+    {
+     "strategy": "credit_spread",
+     "closed": 2,
+     "win_rate": 50.0,
+     "pnl_rs": -221.75,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "debit_spread",
+     "closed": 3,
+     "win_rate": 33.3,
+     "pnl_rs": 1014.5,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "ema_vwap_cross",
+     "closed": 5,
+     "win_rate": 40.0,
+     "pnl_rs": -728.24,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "gap-and-go",
+     "closed": 17,
+     "win_rate": 23.5,
+     "pnl_rs": -811.45,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "headline-led",
+     "closed": 2,
+     "win_rate": 50.0,
+     "pnl_rs": 111.69,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "iron_condor",
+     "closed": 2,
+     "win_rate": 50.0,
+     "pnl_rs": -63.25,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "long_breakout",
+     "closed": 5,
+     "win_rate": 80.0,
+     "pnl_rs": 12003.75,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "long_straddle",
+     "closed": 6,
+     "win_rate": 66.7,
+     "pnl_rs": 10934.0,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "news-led",
+     "closed": 3,
+     "win_rate": 33.3,
+     "pnl_rs": -133.53,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "price_only",
+     "closed": 14,
+     "win_rate": 35.7,
+     "pnl_rs": -184.31,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "short_strangle",
+     "closed": 2,
+     "win_rate": 100.0,
+     "pnl_rs": 1091.25,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "weekly_bull_put_spread",
+     "closed": 1,
+     "win_rate": 100.0,
+     "pnl_rs": 2249.75,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "weekly_iron_butterfly",
+     "closed": 1,
+     "win_rate": 0.0,
+     "pnl_rs": -1919.25,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "weekly_iron_condor",
+     "closed": 1,
+     "win_rate": 100.0,
+     "pnl_rs": 2923.25,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "swing",
+   "name": "Swing & signals",
+   "color": "#84cc16",
+   "source": "upstox",
+   "sources": [
+    "upstox",
+    "nse"
+   ],
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Meera",
+     "role": "Lead analyst",
+     "doing": "Daily chart scan after the close; holding 13 swing positions with stops.",
+     "tokens": 0
+    },
+    {
+     "name": "Rohan",
+     "role": "Quant analyst",
+     "doing": "GAIL long: reward 4.0\u00d7 the risk; a random walk reaches the target first 20% of the time; break-even needs 26% wins after charges.",
+     "tokens": 0
+    },
+    {
+     "name": "Arjun",
+     "role": "Trading manager",
+     "doing": "Holding 13: GAIL long at 188.99, stop 179.54, now \u2212\u20b913.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "effort": 1,
+   "staff": [
+    {
+     "id": "swing-0",
+     "name": "Meera",
+     "designation": "Associate",
+     "role": "Breakout analyst",
+     "kind": "research",
+     "status": "holding",
+     "doing": "5 open position(s): GAIL, PETRONET, PNB",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "swing-1",
+     "name": "Gautam",
+     "designation": "Associate",
+     "role": "Trend analyst",
+     "kind": "research",
+     "status": "holding",
+     "doing": "5 open position(s): LAURUSLABS, MAHABANK, PAYTM, SONACOMS",
+     "record": {
+      "trades": 1,
+      "wins": 0,
+      "pnl_rs": -335.67,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "swing-2",
+     "name": "Leela",
+     "designation": "Associate",
+     "role": "Dip analyst",
+     "kind": "research",
+     "status": "holding",
+     "doing": "3 open position(s): HAL, HCLTECH, PAYTM",
+     "record": {
+      "trades": 1,
+      "wins": 0,
+      "pnl_rs": -335.67,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "swing-3",
+     "name": "Sana",
+     "designation": "Associate",
+     "role": "Signal desk",
+     "kind": "research",
+     "status": "holding",
+     "doing": "1 open position(s): PNB",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "swing-4",
+     "name": "Rohan",
+     "designation": "Associate",
+     "role": "Backtest quant",
+     "kind": "backtest",
+     "status": "idle",
+     "doing": "Market closed: five-year tests decide which daily rules may trade",
+     "record": {
+      "trades": 1,
+      "wins": 0,
+      "pnl_rs": -335.67,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "swing-m",
+     "name": "Arjun",
+     "designation": "Manager",
+     "role": "Trading manager",
+     "kind": "trader",
+     "status": "holding",
+     "doing": "Holding 13: GAIL long at 188.99, stop 179.54, now \u2212\u20b913.",
+     "record": {
+      "trades": 1,
+      "wins": 0,
+      "pnl_rs": -335.67,
+      "basis": "team record"
+     }
+    }
+   ],
+   "manager": "swing-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 13,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 1,
+    "win_rate": 0.0,
+    "avg_rs": -335.67,
+    "net_rs": -335.67,
+    "worst_run": 1,
+    "profit_factor": 0.0
+   },
+   "verdicts": [
+    {
+     "strategy": "pullback_in_uptrend",
+     "closed": 1,
+     "win_rate": 0.0,
+     "pnl_rs": -335.67,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "fno",
+   "name": "F&O desk \u00b7 positional",
+   "color": "#a78bfa",
+   "source": "upstox",
+   "sources": [
+    "upstox",
+    "nse"
+   ],
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Neha",
+     "role": "Lead analyst",
+     "doing": "NIFTY 2026-12-01: put-to-call 0.59, call wall 27,000, put wall 25,000.",
+     "tokens": 0
+    },
+    {
+     "name": "Siddharth",
+     "role": "Quant analyst",
+     "doing": "Record: 2 closed, 0.0% won, average \u2212\u20b9517.",
+     "tokens": 0
+    },
+    {
+     "name": "Karan",
+     "role": "Trading manager",
+     "doing": "Waiting: no setup has met the rules yet today.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 1000,
+   "effort": 1,
+   "staff": [
+    {
+     "id": "fno-0",
+     "name": "Neha",
+     "designation": "Associate",
+     "role": "NIFTY chain reader",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: 2026-12-01: put-to-call 0.59, call wall 27,000, put wall 25,000",
+     "record": {
+      "trades": 1,
+      "wins": 0,
+      "pnl_rs": -333.5,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "fno-1",
+     "name": "Varun",
+     "designation": "Associate",
+     "role": "Bank Nifty chain reader",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: 2026-12-29: put-to-call 0.88, call wall 66,000, put wall 65,000",
+     "record": {
+      "trades": 1,
+      "wins": 0,
+      "pnl_rs": -701.0,
+      "basis": "own trades"
+     }
+    },
+    {
+     "id": "fno-2",
+     "name": "Anjali",
+     "designation": "Associate",
+     "role": "OI & participants",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: fIIs net -70,670 index futures, +374,199 puts",
+     "record": {
+      "trades": 2,
+      "wins": 0,
+      "pnl_rs": -1034.5,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "fno-3",
+     "name": "Siddharth",
+     "designation": "Associate",
+     "role": "IV vs realised quant",
+     "kind": "quant",
+     "status": "idle",
+     "doing": "Market closed: compares implied with realised volatility to pick buying or selling",
+     "record": {
+      "trades": 2,
+      "wins": 0,
+      "pnl_rs": -1034.5,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "fno-4",
+     "name": "Tanvi",
+     "designation": "Associate",
+     "role": "Margin checker",
+     "kind": "quant",
+     "status": "idle",
+     "doing": "Market closed: every structure is checked with the broker's margin calculator",
+     "record": {
+      "trades": 2,
+      "wins": 0,
+      "pnl_rs": -1034.5,
+      "basis": "team record"
+     }
+    },
+    {
+     "id": "fno-m",
+     "name": "Karan",
+     "designation": "Manager",
+     "role": "Trading manager",
+     "kind": "trader",
+     "status": "idle",
+     "doing": "Market closed: waiting: no setup has met the rules yet today.",
+     "record": {
+      "trades": 2,
+      "wins": 0,
+      "pnl_rs": -1034.5,
+      "basis": "team record"
+     }
+    }
+   ],
+   "manager": "fno-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 2,
+    "win_rate": 0.0,
+    "avg_rs": -517.25,
+    "net_rs": -1034.5,
+    "worst_run": 2,
+    "profit_factor": 0.0
+   },
+   "verdicts": [
+    {
+     "strategy": "monthly_credit_spread",
+     "closed": 1,
+     "win_rate": 0.0,
+     "pnl_rs": -701.0,
+     "verdict": "COLLECTING"
+    },
+    {
+     "strategy": "weekly_credit_spread",
+     "closed": 1,
+     "win_rate": 0.0,
+     "pnl_rs": -333.5,
+     "verdict": "COLLECTING"
+    }
+   ],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "mcx",
+   "name": "Commodities watch",
+   "color": "#f59e0b",
+   "source": "yahoo",
+   "sources": [
+    "upstox",
+    "yahoo"
+   ],
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Pooja",
+     "role": "Lead analyst",
+     "doing": "Big commodity moves since NIFTY's close: WTI crude -1.6%, Silver +3.8%, Copper +2.0%, Natural gas -5.1%.",
+     "tokens": 0
+    },
+    {
+     "name": "Aditya",
+     "role": "Impact quant",
+     "doing": "Weighs each move by how much it has moved NIFTY on past days.",
+     "tokens": 0
+    },
+    {
+     "name": "Zoya",
+     "role": "Desk manager",
+     "doing": "2 commodity alert(s) sent today; latest: Silver +3.8%.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 500,
+   "effort": 1,
+   "staff": [
+    {
+     "id": "mcx-0",
+     "name": "Pooja",
+     "designation": "Associate",
+     "role": "Crude oil analyst",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: brent crude $90.84 (-0.4%); WTI crude $83.08 (-1.6%). About +1 NIFTY points. Dearer crude hurts oil marketers, paints and airlines and weakens the rupee",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "reports, no trades"
+     }
+    },
+    {
+     "id": "mcx-1",
+     "name": "Irfan",
+     "designation": "Associate",
+     "role": "Precious metals analyst",
+     "kind": "research",
+     "status": "alert",
+     "doing": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are running for safety; it moves jewellers and gold loan companies",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "reports, no trades"
+     }
+    },
+    {
+     "id": "mcx-2",
+     "name": "Rekha",
+     "designation": "Associate",
+     "role": "Base metals analyst",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: copper $5.60 (+2.0%). Copper leads metal stocks (Hindalco, Tata Steel, Vedanta) and reads China's demand",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "reports, no trades"
+     }
+    },
+    {
+     "id": "mcx-3",
+     "name": "Vivek",
+     "designation": "Associate",
+     "role": "Energy analyst",
+     "kind": "research",
+     "status": "alert",
+     "doing": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "reports, no trades"
+     }
+    },
+    {
+     "id": "mcx-4",
+     "name": "Aditya",
+     "designation": "Associate",
+     "role": "Impact quant",
+     "kind": "quant",
+     "status": "idle",
+     "doing": "Market closed: measures how much each commodity has moved NIFTY on past days (crude alone has been a weak guide; the rupee carries most of it)",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "reports, no trades"
+     }
+    },
+    {
+     "id": "mcx-m",
+     "name": "Zoya",
+     "designation": "Manager",
+     "role": "Desk manager",
+     "kind": "trader",
+     "status": "idle",
+     "doing": "Market closed: 2 commodity alert(s) sent today; latest: Silver +3.8%.",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "reports, no trades"
+     }
+    }
+   ],
+   "manager": "mcx-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 0
+   },
+   "verdicts": [],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "intel",
+   "name": "Market intelligence",
+   "color": "#38bdf8",
+   "source": "news",
+   "sources": [
+    "nse",
+    "yahoo",
+    "news",
+    "upstox",
+    "claude"
+   ],
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Priya",
+     "role": "Lead analyst",
+     "doing": "Nifty forecast bullish (score +0.20), range 25,626 to 26,176. FIIs net -70,670 index futures.",
+     "tokens": 0
+    },
+    {
+     "name": "Aryan",
+     "role": "Quant analyst",
+     "doing": "Scoring the forecast against the close every evening: 14% right on direction over 7 days.",
+     "tokens": 0
+    },
+    {
+     "name": "Ira",
+     "role": "Chief forecaster",
+     "doing": "Sends the day's bias and levels to the F&O and equity desks.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "effort": 1,
+   "staff": [
+    {
+     "id": "intel-0",
+     "name": "Priya",
+     "designation": "Associate",
+     "role": "World markets",
+     "kind": "data",
+     "status": "idle",
+     "doing": "Market closed: overnight US, Asia, dollar, crude and gold, refreshed every half hour before the open",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "forecast record"
+     }
+    },
+    {
+     "id": "intel-1",
+     "name": "Rahul",
+     "designation": "Associate",
+     "role": "Smart money",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: nSE participant positions for 2026-11-18",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "forecast record"
+     }
+    },
+    {
+     "id": "intel-2",
+     "name": "Shreya",
+     "designation": "Associate",
+     "role": "Option walls",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: largest call and put open interest on NIFTY and Bank Nifty",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "forecast record"
+     }
+    },
+    {
+     "id": "intel-3",
+     "name": "Aman",
+     "designation": "Associate",
+     "role": "Headlines desk",
+     "kind": "research",
+     "status": "idle",
+     "doing": "Market closed: claude read the headlines: bearish. Indian shares fell, with the Sensex down 764 points and the Nifty below 25,700 as IT stocks and financials dragged. Sebi sum",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "forecast record"
+     }
+    },
+    {
+     "id": "intel-4",
+     "name": "Aryan",
+     "designation": "Associate",
+     "role": "Forecast quant",
+     "kind": "quant",
+     "status": "idle",
+     "doing": "Market closed: nifty bullish, range 25,626 to 26,176",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "forecast record"
+     }
+    },
+    {
+     "id": "intel-m",
+     "name": "Ira",
+     "designation": "Manager",
+     "role": "Chief forecaster",
+     "kind": "trader",
+     "status": "idle",
+     "doing": "Market closed: sends the day's bias and levels to the F&O and equity desks.",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "forecast record"
+     }
+    }
+   ],
+   "manager": "intel-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 0
+   },
+   "verdicts": [],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "lab",
+   "name": "Strategy lab",
+   "color": "#10b981",
+   "source": "github",
+   "sources": [
+    "github",
+    "claude"
+   ],
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Priyanka",
+     "role": "Research agent",
+     "doing": "Backtests new strategies after every close; last run 2026-11-28: 31 multi-day strategies passed every period.",
+     "tokens": 0
+    },
+    {
+     "name": "Lakshmi",
+     "role": "Backtest agent",
+     "doing": "Each strategy must win on 2022-23, hold on 2024 and still work on 2025-26, after full costs, and beat random entries.",
+     "tokens": 0
+    },
+    {
+     "name": "Vikas",
+     "role": "Lab manager",
+     "doing": "Puts strategies that pass every check in your approval queue (Backtest tab).",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "effort": null,
+   "staff": [
+    {
+     "id": "lab-0",
+     "name": "Priyanka",
+     "designation": "Associate",
+     "role": "Research agent",
+     "kind": "research",
+     "status": "active",
+     "doing": "Builds new strategies from 20 families of rules: 2312 intraday and 162 multi-day in the last run (2026-11-28 10:29 UTC)",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "strategies approved"
+     }
+    },
+    {
+     "id": "lab-1",
+     "name": "Omar",
+     "designation": "Associate",
+     "role": "Backtest agent",
+     "kind": "backtest",
+     "status": "active",
+     "doing": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-day strategies passed all three periods; 0 intraday ones survive option costs",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "strategies approved"
+     }
+    },
+    {
+     "id": "lab-2",
+     "name": "Lakshmi",
+     "designation": "Associate",
+     "role": "Evaluation agent",
+     "kind": "backtest",
+     "status": "active",
+     "doing": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "strategies approved"
+     }
+    },
+    {
+     "id": "lab-3",
+     "name": "Joseph",
+     "designation": "Associate",
+     "role": "Review agent",
+     "kind": "audit",
+     "status": "active",
+     "doing": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat that",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "strategies approved"
+     }
+    },
+    {
+     "id": "lab-4",
+     "name": "Rhea",
+     "designation": "Associate",
+     "role": "Data engineer",
+     "kind": "data",
+     "status": "alert",
+     "doing": "Data gaps: indmoney",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "strategies approved"
+     }
+    },
+    {
+     "id": "lab-m",
+     "name": "Vikas",
+     "designation": "Manager",
+     "role": "Lab manager",
+     "kind": "trader",
+     "status": "idle",
+     "doing": "Puts strategies that pass every check in your approval queue (Backtest tab).",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "strategies approved"
+     }
+    }
+   ],
+   "manager": "lab-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 0
+   },
+   "verdicts": [],
+   "activity": 0,
+   "variant": null
+  },
+  {
+   "id": "news",
+   "name": "Global news desk",
+   "color": "#ef4444",
+   "source": "news",
+   "sources": [
+    "news",
+    "yahoo",
+    "claude"
+   ],
+   "status": "Active",
+   "agents": [
+    {
+     "name": "Kavya",
+     "role": "Lead editor",
+     "doing": "22 headlines today that can move Indian markets, grouped into crude, rupee, rates, wars and fund flows.",
+     "tokens": 0
+    },
+    {
+     "name": "Harsh",
+     "role": "Impact quant",
+     "doing": "Scores each headline and world move for its likely effect on NIFTY.",
+     "tokens": 0
+    },
+    {
+     "name": "Hari",
+     "role": "News manager",
+     "doing": "Publishes the Attention panel on Desk TV.",
+     "tokens": 0
+    }
+   ],
+   "tokens": 0,
+   "effort": null,
+   "staff": [
+    {
+     "id": "news-0",
+     "name": "Kavya",
+     "designation": "Associate",
+     "role": "Global headlines reader",
+     "kind": "research",
+     "status": "active",
+     "doing": "22 market-moving headlines today: 1 bad, 5 good for Indian shares",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "reports, no trades"
+     }
+    },
+    {
+     "id": "news-1",
+     "name": "Yash",
+     "designation": "Associate",
+     "role": "Geopolitics watcher",
+     "kind": "research",
+     "status": "active",
+     "doing": "6 on wars, attacks, sanctions and tariffs. Latest: US tariff worries persist, but why ICICI Securities likes textile stocks",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "reports, no trades"
+     }
+    },
+    {
+     "id": "news-2",
+     "name": "Nisha",
+     "designation": "Associate",
+     "role": "Central banks watcher",
+     "kind": "research",
+     "status": "active",
+     "doing": "16 on RBI, the Fed, rates and inflation. Latest: Canadian dollar holds on to weekly gain as investors bet on December rate hike",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "reports, no trades"
+     }
+    },
+    {
+     "id": "news-3",
+     "name": "Harsh",
+     "designation": "Associate",
+     "role": "Impact scorer",
+     "kind": "research",
+     "status": "alert",
+     "doing": "2 alert(s) today; latest 09:36: Silver +3.8%",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "reports, no trades"
+     }
+    },
+    {
+     "id": "news-m",
+     "name": "Hari",
+     "designation": "Manager",
+     "role": "News manager",
+     "kind": "trader",
+     "status": "idle",
+     "doing": "Publishes the Attention panel on Desk TV.",
+     "record": {
+      "trades": 0,
+      "wins": 0,
+      "pnl_rs": 0,
+      "basis": "reports, no trades"
+     }
+    }
+   ],
+   "manager": "news-m",
+   "today": {
+    "pnl": 0,
+    "pnl_rs": 0,
+    "trades": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0
+   },
+   "record": {
+    "n": 0
+   },
+   "verdicts": [],
+   "activity": 0,
+   "variant": null
+  }
+ ],
+ "sources": [
+  {
+   "id": "nse",
+   "name": "NSE",
+   "status": "ok",
+   "detail": "17 filings lean one way today; participant positions for 2026-11-18"
+  },
+  {
+   "id": "upstox",
+   "name": "Upstox",
+   "status": "idle",
+   "detail": "market closed: quotes resume at 09:00"
+  },
+  {
+   "id": "indmoney",
+   "name": "INDmoney",
+   "status": "off",
+   "detail": "not connected here: the gateway reads it only where INDSTOCKS_TOKEN is set"
+  },
+  {
+   "id": "yahoo",
+   "name": "Yahoo Finance",
+   "status": "idle",
+   "detail": "world markets refreshed 1551 min ago"
+  },
+  {
+   "id": "news",
+   "name": "News feeds",
+   "status": "ok",
+   "detail": "news pulse: 9 feeds read every minute in market hours, 64 signals today; 0 with the hunters now"
+  },
+  {
+   "id": "claude",
+   "name": "Claude AI",
+   "status": "ok",
+   "detail": "scheduled Claude analyst (your plan): last round 27 Nov 16:21, next on the hour's :20 from 09:20 to 16:20 IST on weekdays"
+  },
+  {
+   "id": "github",
+   "name": "CEO approvals",
+   "status": "ok",
+   "detail": "listening for your instructions every 5 minutes"
+  }
+ ],
+ "board": [
+  {
+   "who": "team:fno",
+   "tokens": 1000
+  },
+  {
+   "who": "Raghav",
+   "tokens": 1000
+  },
+  {
+   "who": "team:mcx",
+   "tokens": 500
+  }
+ ],
+ "ledger": [
+  {
+   "day": "2026-11-27",
+   "to": "Raghav",
+   "tokens": 1000,
+   "why": "company +0.75% beat the Nifty -1.07%"
+  },
+  {
+   "day": "2026-11-27",
+   "to": "team:fno",
+   "tokens": 500,
+   "why": "best team today (+\u20b91,451)"
+  },
+  {
+   "day": "2026-11-26",
+   "to": "team:mcx",
+   "tokens": 500,
+   "why": "best team today (+\u20b9697)"
+  },
+  {
+   "day": "2026-11-25",
+   "to": "team:fno",
+   "tokens": 500,
+   "why": "best team today (+\u20b9514)"
+  }
+ ],
+ "messages": [
+  {
+   "t": "28 Nov 09:36",
+   "from": "Raghav (COO)",
+   "text": "Tanvi (Margin checker) is back to Associate until the record recovers (\u2212\u20b91,034 over 2 trades).",
+   "kind": "promotion"
+  },
+  {
+   "t": "28 Nov 09:36",
+   "from": "Raghav (COO)",
+   "text": "Siddharth (IV vs realised quant) is back to Associate until the record recovers (\u2212\u20b91,034 over 2 trades).",
+   "kind": "promotion"
+  },
+  {
+   "t": "28 Nov 09:36",
+   "from": "Raghav (COO)",
+   "text": "Anjali (OI & participants) is back to Associate until the record recovers (\u2212\u20b91,034 over 2 trades).",
+   "kind": "promotion"
+  },
+  {
+   "t": "28 Nov 09:36",
+   "from": "Raghav (COO)",
+   "text": "Neha (NIFTY chain reader) is back to Associate until the record recovers (\u2212\u20b9334 over 1 trades).",
+   "kind": "promotion"
+  },
+  {
+   "t": "28 Nov 09:36",
+   "from": "Raghav (COO)",
+   "text": "Promoted Kunal (F&O intraday trader) to Senior Associate: 28 closed trades, +\u20b927,284.",
+   "kind": "promotion"
+  },
+  {
+   "t": "27 Nov 15:45",
+   "from": "Raghav (COO)",
+   "text": "The company made +0.75% today against the Nifty's -1.07%. 1,000 tokens to the COO.",
+   "kind": "award"
+  },
+  {
+   "t": "27 Nov 15:45",
+   "from": "Raghav (COO)",
+   "text": "Bonus: F&O desk was the best team today with +\u20b91,451 after charges. 500 tokens to the team.",
+   "kind": "award"
+  },
+  {
+   "t": "26 Nov 23:17",
+   "from": "Raghav (COO)",
+   "text": "Done. scalp vwap pullback is retired; the new team scalp vwap pullback v2 starts on paper now (23 of 30 trades ran out of time: demand a stronger bar and set a closer target).",
+   "kind": "decision"
+  },
+  {
+   "t": "26 Nov 15:45",
+   "from": "Raghav (COO)",
+   "text": "Company today \u2212\u20b95,084 (-4.22%) against the Nifty's +0.25%: no COO bonus.",
+   "kind": "award"
+  },
+  {
+   "t": "26 Nov 15:45",
+   "from": "Raghav (COO)",
+   "text": "Bonus: Commodities desk was the best team today with +\u20b9697 after charges. 500 tokens to the team.",
+   "kind": "award"
+  },
+  {
+   "t": "26 Nov 11:15",
+   "from": "Raghav (COO)",
+   "text": "scalp vwap pullback has lost over 30 closed trades (net \u2212\u20b91,407, 26.7% won). The record paused it automatically. May I retire it? I propose a new scalping team: 23 of 30 trades ran out of time: demand a stronger bar and set a closer target. (request R261126-scalp-4)",
+   "kind": "request"
+  },
+  {
+   "t": "26 Nov 10:29",
+   "from": "Raghav (COO)",
+   "text": "Scalping desk keeps losing: 20 closed trades, net \u2212\u20b91,138, 20.0% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close. (request R261126-scalp-3)",
+   "kind": "request"
+  },
+  {
+   "t": "25 Nov 15:45",
+   "from": "Raghav (COO)",
+   "text": "Company today \u2212\u20b9110 (-0.09%) against the Nifty's +1.85%: no COO bonus.",
+   "kind": "award"
+  },
+  {
+   "t": "25 Nov 15:45",
+   "from": "Raghav (COO)",
+   "text": "Bonus: F&O desk was the best team today with +\u20b9514 after charges. 500 tokens to the team.",
+   "kind": "award"
+  },
+  {
+   "t": "24 Nov 15:45",
+   "from": "Raghav (COO)",
+   "text": "No team bonus today: no team finished the day in profit.",
+   "kind": "award"
+  },
+  {
+   "t": "24 Nov 08:36",
+   "from": "Raghav (COO)",
+   "text": "Done. intraday is paused: no new trades. Its open trades run to their exits. Resume it when you want it back.",
+   "kind": "decision"
+  },
+  {
+   "t": "24 Nov 00:00",
+   "from": "Raghav (COO)",
+   "text": "Promoted Tanvi (Margin checker) to Senior Associate: 22 closed trades, +\u20b929,896.",
+   "kind": "promotion"
+  },
+  {
+   "t": "24 Nov 00:00",
+   "from": "Raghav (COO)",
+   "text": "Promoted Siddharth (IV vs realised quant) to Senior Associate: 22 closed trades, +\u20b929,896.",
+   "kind": "promotion"
+  },
+  {
+   "t": "24 Nov 00:00",
+   "from": "Raghav (COO)",
+   "text": "Promoted Anjali (OI & participants) to Senior Associate: 22 closed trades, +\u20b929,896.",
+   "kind": "promotion"
+  },
+  {
+   "t": "24 Nov 00:00",
+   "from": "Raghav (COO)",
+   "text": "Intraday hunters keeps losing: 22 closed trades, net \u2212\u20b9833, 27.3% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close. (request R261124-intraday-2)",
+   "kind": "request"
+  },
+  {
+   "t": "21 Nov 08:15",
+   "from": "Raghav (COO)",
+   "text": "Done. crypto is paused: no new trades. Its open trades run to their exits. Resume it when you want it back.",
+   "kind": "decision"
+  },
+  {
+   "t": "21 Nov 03:42",
+   "from": "Raghav (COO)",
+   "text": "Crypto desk keeps losing: 26 closed trades, net \u2212\u20b9713, 30.8% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close. (request R261121-crypto-1)",
+   "kind": "request"
+  }
+ ],
+ "company": {
+  "pnl_today": 0,
+  "nifty_chg": null,
+  "equity": 121520.48,
+  "sessions": {
+   "equity": false,
+   "fno": false,
+   "mcx": false,
+   "crypto": false
+  }
+ },
+ "awards": {
+  "team": 500,
+  "coo": 1000
+ },
+ "execution": {
+  "mode": "dry",
+  "intents": 0,
+  "refused": 0
+ },
+ "quant": {
+  "S3": {
+   "risk_rs": 242.15
+  },
+  "S4": {
+   "risk_rs": 138.08
+  },
+  "S6": {
+   "risk_rs": 153.6,
+   "reward_rs": 768.0,
+   "rr": 5.0,
+   "base_p": 0.167,
+   "breakeven_p": 0.194,
+   "used_p": 0.167,
+   "p_source": "random-walk baseline",
+   "ev_rs": -25.17,
+   "kelly": -0.0
+  },
+  "S7": {
+   "risk_rs": 96.0,
+   "reward_rs": 480.0,
+   "rr": 5.0,
+   "base_p": 0.167,
+   "breakeven_p": 0.209,
+   "used_p": 0.167,
+   "p_source": "random-walk baseline",
+   "ev_rs": -24.58,
+   "kelly": -0.0
+  },
+  "S8": {
+   "risk_rs": 148.0,
+   "reward_rs": 740.0,
+   "rr": 5.0,
+   "base_p": 0.167,
+   "breakeven_p": 0.195,
+   "used_p": 0.167,
+   "p_source": "random-walk baseline",
+   "ev_rs": -25.12,
+   "kelly": -0.0
+  },
+  "S9": {
+   "risk_rs": 182.6,
+   "reward_rs": 730.4,
+   "rr": 4.0,
+   "base_p": 0.2,
+   "breakeven_p": 0.227,
+   "used_p": 0.2,
+   "p_source": "random-walk baseline",
+   "ev_rs": -25.1,
+   "kelly": 0.0
+  },
+  "S10": {
+   "risk_rs": 184.21
+  },
+  "S11": {
+   "risk_rs": 182.6
+  },
+  "S12": {
+   "risk_rs": 138.75
+  },
+  "S13": {
+   "risk_rs": 187.16
+  },
+  "G1": {
+   "risk_rs": 314.72
+  },
+  "S1": {
+   "risk_rs": 90.16,
+   "reward_rs": 360.62,
+   "rr": 4.0,
+   "base_p": 0.2,
+   "breakeven_p": 0.254,
+   "used_p": 0.2,
+   "p_source": "random-walk baseline",
+   "ev_rs": -24.34,
+   "kelly": 0.0
+  },
+  "S2": {
+   "risk_rs": 85.05,
+   "reward_rs": 340.2,
+   "rr": 4.0,
+   "base_p": 0.2,
+   "breakeven_p": 0.257,
+   "used_p": 0.2,
+   "p_source": "random-walk baseline",
+   "ev_rs": -24.3,
+   "kelly": -0.0
+  }
+ },
+ "state": {
+  "tokens": {
+   "team:fno": 1000,
+   "team:mcx": 500,
+   "Raghav": 1000
+  },
+  "ledger": [
+   {
+    "day": "2026-11-27",
+    "to": "Raghav",
+    "tokens": 1000,
+    "why": "company +0.75% beat the Nifty -1.07%"
+   },
+   {
+    "day": "2026-11-27",
+    "to": "team:fno",
+    "tokens": 500,
+    "why": "best team today (+\u20b91,451)"
+   },
+   {
+    "day": "2026-11-26",
+    "to": "team:mcx",
+    "tokens": 500,
+    "why": "best team today (+\u20b9697)"
+   },
+   {
+    "day": "2026-11-25",
+    "to": "team:fno",
+    "tokens": 500,
+    "why": "best team today (+\u20b9514)"
+   }
+  ],
+  "requests": [
+   {
+    "id": "R261121-crypto-1",
+    "team": "crypto",
+    "strategy": null,
+    "kind": "team",
+    "status": "approved",
+    "created": "21 Nov 03:42",
+    "text": "Crypto desk keeps losing: 26 closed trades, net \u2212\u20b9713, 30.8% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close.",
+    "decided": "21 Nov 08:15"
+   },
+   {
+    "id": "R261124-intraday-2",
+    "team": "intraday",
+    "strategy": null,
+    "kind": "team",
+    "status": "approved",
+    "created": "24 Nov 00:00",
+    "text": "Intraday hunters keeps losing: 22 closed trades, net \u2212\u20b9833, 27.3% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close.",
+    "decided": "24 Nov 08:36"
+   },
+   {
+    "id": "R261126-scalp-3",
+    "team": "scalp",
+    "strategy": null,
+    "kind": "team",
+    "status": "pending",
+    "created": "26 Nov 10:29",
+    "text": "Scalping desk keeps losing: 20 closed trades, net \u2212\u20b91,138, 20.0% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close."
+   },
+   {
+    "id": "R261126-scalp-4",
+    "team": "scalp",
+    "strategy": "scalp_vwap_pullback",
+    "status": "approved",
+    "created": "26 Nov 11:15",
+    "text": "scalp vwap pullback has lost over 30 closed trades (net \u2212\u20b91,407, 26.7% won). The record paused it automatically. May I retire it? I propose a new scalping team: 23 of 30 trades ran out of time: demand a stronger bar and set a closer target.",
+    "variant": {
+     "name": "scalp_vwap_pullback_v2",
+     "params": {
+      "vol_x": 1.5,
+      "rr": 1.2
+     },
+     "why": "23 of 30 trades ran out of time: demand a stronger bar and set a closer target"
+    },
+    "decided": "26 Nov 23:17"
+   }
+  ],
+  "messages": [
+   {
+    "t": "28 Nov 09:36",
+    "from": "Raghav (COO)",
+    "text": "Tanvi (Margin checker) is back to Associate until the record recovers (\u2212\u20b91,034 over 2 trades).",
+    "kind": "promotion"
+   },
+   {
+    "t": "28 Nov 09:36",
+    "from": "Raghav (COO)",
+    "text": "Siddharth (IV vs realised quant) is back to Associate until the record recovers (\u2212\u20b91,034 over 2 trades).",
+    "kind": "promotion"
+   },
+   {
+    "t": "28 Nov 09:36",
+    "from": "Raghav (COO)",
+    "text": "Anjali (OI & participants) is back to Associate until the record recovers (\u2212\u20b91,034 over 2 trades).",
+    "kind": "promotion"
+   },
+   {
+    "t": "28 Nov 09:36",
+    "from": "Raghav (COO)",
+    "text": "Neha (NIFTY chain reader) is back to Associate until the record recovers (\u2212\u20b9334 over 1 trades).",
+    "kind": "promotion"
+   },
+   {
+    "t": "28 Nov 09:36",
+    "from": "Raghav (COO)",
+    "text": "Promoted Kunal (F&O intraday trader) to Senior Associate: 28 closed trades, +\u20b927,284.",
+    "kind": "promotion"
+   },
+   {
+    "t": "27 Nov 15:45",
+    "from": "Raghav (COO)",
+    "text": "The company made +0.75% today against the Nifty's -1.07%. 1,000 tokens to the COO.",
+    "kind": "award"
+   },
+   {
+    "t": "27 Nov 15:45",
+    "from": "Raghav (COO)",
+    "text": "Bonus: F&O desk was the best team today with +\u20b91,451 after charges. 500 tokens to the team.",
+    "kind": "award"
+   },
+   {
+    "t": "26 Nov 23:17",
+    "from": "Raghav (COO)",
+    "text": "Done. scalp vwap pullback is retired; the new team scalp vwap pullback v2 starts on paper now (23 of 30 trades ran out of time: demand a stronger bar and set a closer target).",
+    "kind": "decision"
+   },
+   {
+    "t": "26 Nov 15:45",
+    "from": "Raghav (COO)",
+    "text": "Company today \u2212\u20b95,084 (-4.22%) against the Nifty's +0.25%: no COO bonus.",
+    "kind": "award"
+   },
+   {
+    "t": "26 Nov 15:45",
+    "from": "Raghav (COO)",
+    "text": "Bonus: Commodities desk was the best team today with +\u20b9697 after charges. 500 tokens to the team.",
+    "kind": "award"
+   },
+   {
+    "t": "26 Nov 11:15",
+    "from": "Raghav (COO)",
+    "text": "scalp vwap pullback has lost over 30 closed trades (net \u2212\u20b91,407, 26.7% won). The record paused it automatically. May I retire it? I propose a new scalping team: 23 of 30 trades ran out of time: demand a stronger bar and set a closer target. (request R261126-scalp-4)",
+    "kind": "request"
+   },
+   {
+    "t": "26 Nov 10:29",
+    "from": "Raghav (COO)",
+    "text": "Scalping desk keeps losing: 20 closed trades, net \u2212\u20b91,138, 20.0% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close. (request R261126-scalp-3)",
+    "kind": "request"
+   },
+   {
+    "t": "25 Nov 15:45",
+    "from": "Raghav (COO)",
+    "text": "Company today \u2212\u20b9110 (-0.09%) against the Nifty's +1.85%: no COO bonus.",
+    "kind": "award"
+   },
+   {
+    "t": "25 Nov 15:45",
+    "from": "Raghav (COO)",
+    "text": "Bonus: F&O desk was the best team today with +\u20b9514 after charges. 500 tokens to the team.",
+    "kind": "award"
+   },
+   {
+    "t": "24 Nov 15:45",
+    "from": "Raghav (COO)",
+    "text": "No team bonus today: no team finished the day in profit.",
+    "kind": "award"
+   },
+   {
+    "t": "24 Nov 08:36",
+    "from": "Raghav (COO)",
+    "text": "Done. intraday is paused: no new trades. Its open trades run to their exits. Resume it when you want it back.",
+    "kind": "decision"
+   },
+   {
+    "t": "24 Nov 00:00",
+    "from": "Raghav (COO)",
+    "text": "Promoted Tanvi (Margin checker) to Senior Associate: 22 closed trades, +\u20b929,896.",
+    "kind": "promotion"
+   },
+   {
+    "t": "24 Nov 00:00",
+    "from": "Raghav (COO)",
+    "text": "Promoted Siddharth (IV vs realised quant) to Senior Associate: 22 closed trades, +\u20b929,896.",
+    "kind": "promotion"
+   },
+   {
+    "t": "24 Nov 00:00",
+    "from": "Raghav (COO)",
+    "text": "Promoted Anjali (OI & participants) to Senior Associate: 22 closed trades, +\u20b929,896.",
+    "kind": "promotion"
+   },
+   {
+    "t": "24 Nov 00:00",
+    "from": "Raghav (COO)",
+    "text": "Intraday hunters keeps losing: 22 closed trades, net \u2212\u20b9833, 27.3% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close. (request R261124-intraday-2)",
+    "kind": "request"
+   },
+   {
+    "t": "21 Nov 08:15",
+    "from": "Raghav (COO)",
+    "text": "Done. crypto is paused: no new trades. Its open trades run to their exits. Resume it when you want it back.",
+    "kind": "decision"
+   },
+   {
+    "t": "21 Nov 03:42",
+    "from": "Raghav (COO)",
+    "text": "Crypto desk keeps losing: 26 closed trades, net \u2212\u20b9713, 30.8% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close. (request R261121-crypto-1)",
+    "kind": "request"
+   }
+  ],
+  "retired": [
+   "scalp_vwap_pullback"
+  ],
+  "resumed": [],
+  "paused_teams": [
+   "crypto",
+   "intraday"
+  ],
+  "variants": {
+   "scalp": {
+    "name": "scalp_vwap_pullback_v2",
+    "params": {
+     "vol_x": 1.5,
+     "rr": 1.2
+    },
+    "why": "23 of 30 trades ran out of time: demand a stronger bar and set a closer target",
+    "since": "2026-11-26",
+    "replaces": "scalp_vwap_pullback"
+   }
+  },
+  "awarded": [
+   "2026-11-24",
+   "2026-11-25",
+   "2026-11-26",
+   "2026-11-27"
+  ],
+  "said": {
+   "scalp|2026-11-19|Hungry": 1,
+   "intraday|2026-11-19|Hungry": 1,
+   "swing|2026-11-19|Hungry": 1,
+   "fno|2026-11-19|Hungry": 1,
+   "mcx|2026-11-19|Injured": 1,
+   "crypto|2026-11-19|Injured": 1,
+   "intel|2026-11-19|Forecasting": 1,
+   "fno|2026-11-19|Thriving": 1,
+   "fno|2026-11-20|Hungry": 1,
+   "pushed": [
+    "R261121-crypto-1",
+    "R261124-intraday-2",
+    "R261126-scalp-3",
+    "R261126-scalp-4"
+   ]
+  },
+  "effort": {
+   "scalp": 2,
+   "intraday": 2,
+   "swing": 1,
+   "fno": 1,
+   "mcx": 1,
+   "crypto": 1,
+   "intel": 1
+  },
+  "hires": [],
+  "designations": {
+   "scalp-0": "Associate",
+   "scalp-1": "Associate",
+   "scalp-2": "Associate",
+   "scalp-3": "Associate",
+   "scalp-m": "Manager",
+   "intraday-0": "Associate",
+   "intraday-1": "Associate",
+   "intraday-2": "Senior Associate",
+   "intraday-3": "Associate",
+   "intraday-4": "Associate",
+   "intraday-5": "Associate",
+   "intraday-m": "Manager",
+   "swing-0": "Associate",
+   "swing-1": "Associate",
+   "swing-2": "Associate",
+   "swing-3": "Associate",
+   "swing-4": "Associate",
+   "swing-m": "Manager",
+   "fno-0": "Associate",
+   "fno-1": "Associate",
+   "fno-2": "Associate",
+   "fno-3": "Associate",
+   "fno-4": "Associate",
+   "fno-m": "Manager",
+   "mcx-0": "Associate",
+   "mcx-1": "Associate",
+   "mcx-2": "Associate",
+   "mcx-3": "Associate",
+   "mcx-4": "Associate",
+   "mcx-m": "Manager",
+   "crypto-0": "Associate",
+   "crypto-1": "Associate",
+   "crypto-2": "Associate",
+   "crypto-3": "Associate",
+   "crypto-4": "Associate",
+   "crypto-5": "Associate",
+   "crypto-6": "Associate",
+   "crypto-m": "Manager",
+   "intel-0": "Associate",
+   "intel-1": "Associate",
+   "intel-2": "Associate",
+   "intel-3": "Associate",
+   "intel-4": "Associate",
+   "intel-m": "Manager",
+   "lab-0": "Associate",
+   "lab-1": "Associate",
+   "lab-2": "Associate",
+   "lab-3": "Associate",
+   "lab-4": "Associate",
+   "lab-m": "Manager",
+   "ipo-0": "Associate",
+   "ipo-1": "Associate",
+   "ipo-2": "Associate",
+   "ipo-3": "Associate",
+   "ipo-m": "Manager",
+   "news-0": "Associate",
+   "news-1": "Associate",
+   "news-2": "Associate",
+   "news-3": "Associate",
+   "news-m": "Manager"
+  },
+  "flows": [
+   {
+    "t": "22:42:53",
+    "from": "src:news",
+    "to": "news-0",
+    "kind": "data",
+    "text": "23 market-moving headlines today: 3 bad, 5 good for Indian shares"
+   },
+   {
+    "t": "22:42:53",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u20b90; 1 request(s) for you"
+   },
+   {
+    "t": "22:43:22",
+    "from": "src:github",
+    "to": "lab-0",
+    "kind": "data",
+    "text": "Builds new strategies from 20 families of rules: 2312 intraday and 162 multi-day"
+   },
+   {
+    "t": "22:43:38",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "22:43:38",
+    "from": "src:claude",
+    "to": "news-2",
+    "kind": "data",
+    "text": "17 on RBI, the Fed, rates and inflation. Latest: India stocks dip after RBI hike"
+   },
+   {
+    "t": "22:44:07",
+    "from": "src:github",
+    "to": "lab-2",
+    "kind": "data",
+    "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+   },
+   {
+    "t": "22:44:29",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "22:44:29",
+    "from": "src:yahoo",
+    "to": "news-1",
+    "kind": "data",
+    "text": "6 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+   },
+   {
+    "t": "22:44:56",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "22:45:24",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "22:45:24",
+    "from": "src:news",
+    "to": "news-0",
+    "kind": "data",
+    "text": "23 market-moving headlines today: 3 bad, 5 good for Indian shares"
+   },
+   {
+    "t": "22:45:41",
+    "from": "src:github",
+    "to": "lab-2",
+    "kind": "data",
+    "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+   },
+   {
+    "t": "22:46:09",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "22:46:09",
+    "from": "src:claude",
+    "to": "news-2",
+    "kind": "data",
+    "text": "17 on RBI, the Fed, rates and inflation. Latest: India stocks dip after RBI hike"
+   },
+   {
+    "t": "22:46:30",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "22:46:57",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "22:46:57",
+    "from": "src:news",
+    "to": "news-0",
+    "kind": "data",
+    "text": "24 market-moving headlines today: 3 bad, 5 good for Indian shares"
+   },
+   {
+    "t": "22:47:25",
+    "from": "src:github",
+    "to": "lab-2",
+    "kind": "data",
+    "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+   },
+   {
+    "t": "22:47:42",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "22:47:42",
+    "from": "src:news",
+    "to": "news-3",
+    "kind": "data",
+    "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+   },
+   {
+    "t": "22:47:54",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u20b90; 1 request(s) for you"
+   },
+   {
+    "t": "22:48:10",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "22:48:31",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "22:48:31",
+    "from": "src:yahoo",
+    "to": "news-1",
+    "kind": "data",
+    "text": "6 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+   },
+   {
+    "t": "22:48:58",
+    "from": "src:claude",
+    "to": "lab-1",
+    "kind": "data",
+    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+   },
+   {
+    "t": "22:49:25",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "22:49:25",
+    "from": "src:news",
+    "to": "news-0",
+    "kind": "data",
+    "text": "24 market-moving headlines today: 3 bad, 5 good for Indian shares"
+   },
+   {
+    "t": "22:49:47",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "22:50:15",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "22:50:15",
+    "from": "src:claude",
+    "to": "news-2",
+    "kind": "data",
+    "text": "18 on RBI, the Fed, rates and inflation. Latest: Canadian dollar holds on to wee"
+   },
+   {
+    "t": "22:50:36",
+    "from": "src:claude",
+    "to": "lab-1",
+    "kind": "data",
+    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+   },
+   {
+    "t": "22:51:03",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "22:51:03",
+    "from": "src:yahoo",
+    "to": "news-1",
+    "kind": "data",
+    "text": "6 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+   },
+   {
+    "t": "22:51:14",
+    "from": "src:nse",
+    "to": "intraday-0",
+    "kind": "data",
+    "text": "Optimism \u00b7 SWELECTES: SWELECTES: Acquisition"
+   },
+   {
+    "t": "22:51:31",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "22:51:52",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "22:51:52",
+    "from": "src:news",
+    "to": "news-3",
+    "kind": "data",
+    "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+   },
+   {
+    "t": "22:52:21",
+    "from": "src:github",
+    "to": "lab-2",
+    "kind": "data",
+    "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+   },
+   {
+    "t": "22:52:42",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "22:52:42",
+    "from": "src:claude",
+    "to": "news-2",
+    "kind": "data",
+    "text": "18 on RBI, the Fed, rates and inflation. Latest: Canadian dollar holds on to wee"
+   },
+   {
+    "t": "22:52:59",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u20b90; 1 request(s) for you"
+   },
+   {
+    "t": "22:53:09",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "22:53:38",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "22:53:38",
+    "from": "src:news",
+    "to": "news-0",
+    "kind": "data",
+    "text": "24 market-moving headlines today: 3 bad, 5 good for Indian shares"
+   },
+   {
+    "t": "22:53:54",
+    "from": "src:claude",
+    "to": "lab-1",
+    "kind": "data",
+    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+   },
+   {
+    "t": "22:54:23",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "22:54:23",
+    "from": "src:news",
+    "to": "news-3",
+    "kind": "data",
+    "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+   },
+   {
+    "t": "22:54:44",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "22:55:11",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "22:55:11",
+    "from": "src:yahoo",
+    "to": "news-1",
+    "kind": "data",
+    "text": "6 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+   },
+   {
+    "t": "22:55:40",
+    "from": "src:github",
+    "to": "lab-2",
+    "kind": "data",
+    "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+   },
+   {
+    "t": "22:55:57",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "22:55:57",
+    "from": "src:news",
+    "to": "news-3",
+    "kind": "data",
+    "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+   },
+   {
+    "t": "22:56:26",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "22:56:47",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "22:56:47",
+    "from": "src:claude",
+    "to": "news-2",
+    "kind": "data",
+    "text": "18 on RBI, the Fed, rates and inflation. Latest: Canadian dollar holds on to wee"
+   },
+   {
+    "t": "22:57:14",
+    "from": "src:claude",
+    "to": "lab-1",
+    "kind": "data",
+    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+   },
+   {
+    "t": "22:57:43",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "22:57:43",
+    "from": "src:yahoo",
+    "to": "news-1",
+    "kind": "data",
+    "text": "5 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+   },
+   {
+    "t": "22:58:00",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "22:58:00",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u20b90; 1 request(s) for you"
+   },
+   {
+    "t": "22:58:28",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "22:58:28",
+    "from": "src:news",
+    "to": "news-3",
+    "kind": "data",
+    "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+   },
+   {
+    "t": "22:58:50",
+    "from": "src:claude",
+    "to": "lab-1",
+    "kind": "data",
+    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+   },
+   {
+    "t": "22:59:17",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "22:59:17",
+    "from": "src:yahoo",
+    "to": "news-1",
+    "kind": "data",
+    "text": "5 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+   },
+   {
+    "t": "22:59:47",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "23:00:04",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "23:00:04",
+    "from": "src:news",
+    "to": "news-0",
+    "kind": "data",
+    "text": "23 market-moving headlines today: 3 bad, 5 good for Indian shares"
+   },
+   {
+    "t": "23:00:32",
+    "from": "src:claude",
+    "to": "lab-1",
+    "kind": "data",
+    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+   },
+   {
+    "t": "23:00:52",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "23:00:52",
+    "from": "src:claude",
+    "to": "news-2",
+    "kind": "data",
+    "text": "18 on RBI, the Fed, rates and inflation. Latest: Canadian dollar holds on to wee"
+   },
+   {
+    "t": "23:01:19",
+    "from": "src:claude",
+    "to": "lab-3",
+    "kind": "data",
+    "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
+   },
+   {
+    "t": "23:01:48",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "23:01:48",
+    "from": "src:yahoo",
+    "to": "news-1",
+    "kind": "data",
+    "text": "5 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+   },
+   {
+    "t": "23:02:04",
+    "from": "src:claude",
+    "to": "lab-1",
+    "kind": "data",
+    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+   },
+   {
+    "t": "23:02:38",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "23:02:38",
+    "from": "src:news",
+    "to": "news-3",
+    "kind": "data",
+    "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+   },
+   {
+    "t": "23:02:55",
+    "from": "src:claude",
+    "to": "lab-3",
+    "kind": "data",
+    "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
+   },
+   {
+    "t": "23:03:00",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u20b90; 1 request(s) for you"
+   }
+  ],
+  "flow_seen": {
+   "sig:N195218-79": "2026-11-28",
+   "sig:N201230-80": "2026-11-28",
+   "sig:N202232-81": "2026-11-28",
+   "sig:N203233-82": "2026-11-28",
+   "sig:N204248-83": "2026-11-28",
+   "sig:N204248-84": "2026-11-28",
+   "sig:N204248-85": "2026-11-28",
+   "sig:N205255-86": "2026-11-28",
+   "sig:N205255-87": "2026-11-28",
+   "sig:N205255-88": "2026-11-28",
+   "sig:N211302-89": "2026-11-28",
+   "sig:N212305-90": "2026-11-28",
+   "sig:N213309-91": "2026-11-28",
+   "sig:N213309-92": "2026-11-28",
+   "sig:N214313-93": "2026-11-28",
+   "sig:N215314-94": "2026-11-28",
+   "sig:N224333-95": "2026-11-28",
+   "sig:N225344-96": "2026-11-28",
+   "sig:N225344-97": "2026-11-28",
+   "sig:N233157-98": "2026-11-28",
+   "sig:N000505-1": "2026-11-28",
+   "sig:N000505-2": "2026-11-28",
+   "sig:N000505-3": "2026-11-28",
+   "sig:N000505-4": "2026-11-28",
+   "sig:N000505-5": "2026-11-28",
+   "sig:N004521-6": "2026-11-28",
+   "sig:N005527-7": "2026-11-28",
+   "sig:N011536-8": "2026-11-28",
+   "sig:N011536-9": "2026-11-28",
+   "sig:N030606-10": "2026-11-28",
+   "sig:N055604-11": "2026-11-28",
+   "sig:N064619-12": "2026-11-28",
+   "sig:N082923-13": "2026-11-28",
+   "sig:N095624-14": "2026-11-28",
+   "sig:N104942-15": "2026-11-28",
+   "sig:N104942-16": "2026-11-28",
+   "sig:N104942-17": "2026-11-28",
+   "sig:N105944-18": "2026-11-28",
+   "sig:N110949-19": "2026-11-28",
+   "sig:N110949-20": "2026-11-28",
+   "sig:N111952-21": "2026-11-28",
+   "sig:N112957-22": "2026-11-28",
+   "sig:N114000-23": "2026-11-28",
+   "sig:N121009-24": "2026-11-28",
+   "sig:N123011-25": "2026-11-28",
+   "sig:N124017-26": "2026-11-28",
+   "sig:N125018-27": "2026-11-28",
+   "sig:N131023-28": "2026-11-28",
+   "sig:N131023-29": "2026-11-28",
+   "sig:N131023-30": "2026-11-28",
+   "sig:N131023-31": "2026-11-28",
+   "sig:N132029-32": "2026-11-28",
+   "sig:N134034-33": "2026-11-28",
+   "sig:N134034-34": "2026-11-28",
+   "sig:N135042-35": "2026-11-28",
+   "sig:N141047-36": "2026-11-28",
+   "sig:N141047-37": "2026-11-28",
+   "sig:N141047-38": "2026-11-28",
+   "sig:N142049-39": "2026-11-28",
+   "sig:N150110-40": "2026-11-28",
+   "sig:N152118-41": "2026-11-28",
+   "sig:N154127-42": "2026-11-28",
+   "sig:N161134-43": "2026-11-28",
+   "sig:N162015-44": "2026-11-28",
+   "sig:N163019-45": "2026-11-28",
+   "sig:N171035-46": "2026-11-28",
+   "sig:N171035-47": "2026-11-28",
+   "sig:N173043-48": "2026-11-28",
+   "sig:N174048-49": "2026-11-28",
+   "sig:N175049-50": "2026-11-28",
+   "sig:N175049-51": "2026-11-28",
+   "sig:N180053-52": "2026-11-28",
+   "sig:N180053-53": "2026-11-28",
+   "sig:N184104-54": "2026-11-28",
+   "sig:N185105-55": "2026-11-28",
+   "sig:N200129-56": "2026-11-28",
+   "sig:N200129-57": "2026-11-28",
+   "sig:N204142-58": "2026-11-28",
+   "sig:N210144-59": "2026-11-28",
+   "sig:N212146-60": "2026-11-28",
+   "sig:N214157-61": "2026-11-28",
+   "sig:N220048-62": "2026-11-28",
+   "sig:N224106-63": "2026-11-28",
+   "sig:N225109-64": "2026-11-28"
+  },
+  "flow_at": {
+   "crypto": 1795229124.147547,
+   "lab": 1795887175.439976,
+   "ceo": 1795887180.473936,
+   "mcx": 1795887158.393135,
+   "scalp": 1795774263.123947,
+   "intraday": 1795405911.526052,
+   "swing": 1795774263.123947,
+   "intel": 1795774263.123947,
+   "ipo": 1795774263.123947,
+   "fno": 1795773618.717064,
+   "news": 1795887158.393135
+  },
+  "done_cmds": [
+   "C261123-1"
+  ]
+ }
+}

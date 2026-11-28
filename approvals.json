@@ -1,0 +1,10 @@
+{
+ "strategies": [
+  {
+   "id": "MACD(12,26,9), 125-min \u00b7 ATR stop 2 + opposite signal \u00b7 no filter \u00b7 debit spread, 200 wide \u00b7 signal exits",
+   "decision": "approved",
+   "stage": "paper",
+   "at": "2026-11-27 09:26:03.187911+05:30"
+  }
+ ]
+}

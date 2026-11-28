@@ -1,0 +1,32 @@
+{
+ "day": "2026-11-27",
+ "trades": [],
+ "seen": {
+  "KALYANKJIL": "conflict",
+  "ZYDUSLIFE": "conflict",
+  "INOXINDIA": "conflict",
+  "MAHACOAL": "conflict"
+ },
+ "seq": 0,
+ "diag": {
+  "at": "15:40",
+  "effort": 2,
+  "setups_on": [
+   "news",
+   "gap",
+   "momentum",
+   "vwap"
+  ],
+  "scanned": 0,
+  "found": {
+   "news": [],
+   "gap": [],
+   "momentum": [],
+   "vwap": []
+  },
+  "taken": [],
+  "skipped": {},
+  "news_names": 12,
+  "headline_names": 9
+ }
+}

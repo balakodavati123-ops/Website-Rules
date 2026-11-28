@@ -1,0 +1,16 @@
+{
+ "alerts": {
+  "2026-11-28:silver:+1": {
+   "at": "09:36",
+   "title": "Silver +3.8%",
+   "body": "Silver is up 3.8% since NIFTY's last close. Follows gold and industrial demand.",
+   "new": false
+  },
+  "2026-11-28:natgas:-1": {
+   "at": "09:36",
+   "title": "Natural gas -5.1%",
+   "body": "Natural gas is down 5.1% since NIFTY's last close. Moves city gas and fertiliser companies.",
+   "new": false
+  }
+ }
+}
