@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-28T10:39:14+05:30",
+ "updated_at": "2026-11-28T16:19:37+05:30",
  "ceo": {
   "name": "Balaji",
   "title": "CEO"
@@ -77,424 +77,424 @@
  },
  "flows": [
   {
-   "t": "10:24:01",
-   "from": "src:upstox",
-   "to": "mcx-1",
-   "kind": "data",
-   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-  },
-  {
-   "t": "10:24:01",
-   "from": "src:github",
-   "to": "lab-2",
-   "kind": "data",
-   "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
-  },
-  {
-   "t": "10:24:01",
-   "from": "src:news",
-   "to": "news-0",
-   "kind": "data",
-   "text": "19 market-moving headlines today: 4 bad, 2 good for Indian shares"
-  },
-  {
-   "t": "10:24:48",
-   "from": "src:upstox",
-   "to": "mcx-1",
-   "kind": "data",
-   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-  },
-  {
-   "t": "10:24:48",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "10:24:48",
-   "from": "src:claude",
-   "to": "news-2",
-   "kind": "data",
-   "text": "16 on RBI, the Fed, rates and inflation. Latest: Tokyo's core CPI hits 2.9%, str"
-  },
-  {
-   "t": "10:25:35",
-   "from": "src:upstox",
-   "to": "mcx-1",
-   "kind": "data",
-   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-  },
-  {
-   "t": "10:25:35",
-   "from": "src:claude",
-   "to": "lab-1",
-   "kind": "data",
-   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-  },
-  {
-   "t": "10:25:35",
-   "from": "src:news",
-   "to": "news-0",
-   "kind": "data",
-   "text": "19 market-moving headlines today: 4 bad, 2 good for Indian shares"
-  },
-  {
-   "t": "10:25:58",
-   "from": "coo",
-   "to": "ceo",
-   "kind": "report",
-   "text": "Company today \u20b90; 1 request(s) for you"
-  },
-  {
-   "t": "10:26:24",
-   "from": "src:yahoo",
-   "to": "mcx-3",
-   "kind": "data",
-   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-  },
-  {
-   "t": "10:26:24",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "10:26:24",
-   "from": "src:news",
-   "to": "news-3",
-   "kind": "data",
-   "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
-  },
-  {
-   "t": "10:27:13",
-   "from": "src:yahoo",
-   "to": "mcx-3",
-   "kind": "data",
-   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-  },
-  {
-   "t": "10:27:13",
-   "from": "src:claude",
-   "to": "lab-1",
-   "kind": "data",
-   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-  },
-  {
-   "t": "10:27:13",
-   "from": "src:yahoo",
-   "to": "news-1",
-   "kind": "data",
-   "text": "2 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
-  },
-  {
-   "t": "10:28:01",
-   "from": "src:upstox",
-   "to": "mcx-1",
-   "kind": "data",
-   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-  },
-  {
-   "t": "10:28:01",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "10:28:01",
-   "from": "src:news",
-   "to": "news-0",
-   "kind": "data",
-   "text": "29 market-moving headlines today: 4 bad, 4 good for Indian shares"
-  },
-  {
-   "t": "10:28:51",
-   "from": "src:upstox",
-   "to": "mcx-1",
-   "kind": "data",
-   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-  },
-  {
-   "t": "10:28:51",
-   "from": "src:claude",
-   "to": "lab-1",
-   "kind": "data",
-   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-  },
-  {
-   "t": "10:28:51",
-   "from": "src:claude",
-   "to": "news-2",
-   "kind": "data",
-   "text": "27 on RBI, the Fed, rates and inflation. Latest: India swaps, treasury bills sig"
-  },
-  {
-   "t": "10:29:41",
-   "from": "src:yahoo",
-   "to": "mcx-3",
-   "kind": "data",
-   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-  },
-  {
-   "t": "10:29:41",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "10:29:41",
-   "from": "src:yahoo",
-   "to": "news-1",
-   "kind": "data",
-   "text": "4 on wars, attacks, sanctions and tariffs. Latest: India should push for 10-15% "
-  },
-  {
-   "t": "10:30:34",
-   "from": "src:yahoo",
-   "to": "mcx-3",
-   "kind": "data",
-   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-  },
-  {
-   "t": "10:30:34",
-   "from": "src:claude",
-   "to": "lab-1",
-   "kind": "data",
-   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-  },
-  {
-   "t": "10:30:34",
-   "from": "src:news",
-   "to": "news-3",
-   "kind": "data",
-   "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
-  },
-  {
-   "t": "10:31:01",
-   "from": "coo",
-   "to": "ceo",
-   "kind": "report",
-   "text": "Company today \u20b90; 1 request(s) for you"
-  },
-  {
-   "t": "10:31:24",
-   "from": "src:upstox",
-   "to": "mcx-1",
-   "kind": "data",
-   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-  },
-  {
-   "t": "10:31:24",
-   "from": "src:github",
-   "to": "lab-4",
-   "kind": "data",
-   "text": "Data gaps: indmoney"
-  },
-  {
-   "t": "10:31:24",
-   "from": "src:claude",
-   "to": "news-2",
-   "kind": "data",
-   "text": "27 on RBI, the Fed, rates and inflation. Latest: India swaps, treasury bills sig"
-  },
-  {
-   "t": "10:32:10",
-   "from": "src:upstox",
-   "to": "mcx-1",
-   "kind": "data",
-   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-  },
-  {
-   "t": "10:32:10",
-   "from": "src:claude",
-   "to": "lab-1",
-   "kind": "data",
-   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-  },
-  {
-   "t": "10:32:10",
-   "from": "src:news",
-   "to": "news-0",
-   "kind": "data",
-   "text": "29 market-moving headlines today: 4 bad, 4 good for Indian shares"
-  },
-  {
-   "t": "10:32:58",
-   "from": "src:upstox",
-   "to": "mcx-1",
-   "kind": "data",
-   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-  },
-  {
-   "t": "10:32:58",
-   "from": "src:claude",
-   "to": "lab-3",
-   "kind": "data",
-   "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
-  },
-  {
-   "t": "10:32:58",
-   "from": "src:claude",
-   "to": "news-2",
-   "kind": "data",
-   "text": "25 on RBI, the Fed, rates and inflation. Latest: India stocks dip after RBI hike"
-  },
-  {
-   "t": "10:33:47",
-   "from": "src:yahoo",
-   "to": "mcx-3",
-   "kind": "data",
-   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-  },
-  {
-   "t": "10:33:47",
-   "from": "src:claude",
-   "to": "lab-1",
-   "kind": "data",
-   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-  },
-  {
-   "t": "10:33:47",
-   "from": "src:yahoo",
-   "to": "news-1",
-   "kind": "data",
-   "text": "4 on wars, attacks, sanctions and tariffs. Latest: US tariff worries persist, bu"
-  },
-  {
-   "t": "10:34:36",
-   "from": "src:yahoo",
-   "to": "mcx-3",
-   "kind": "data",
-   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-  },
-  {
-   "t": "10:34:36",
-   "from": "src:claude",
-   "to": "lab-3",
-   "kind": "data",
-   "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
-  },
-  {
-   "t": "10:34:36",
-   "from": "src:news",
-   "to": "news-3",
-   "kind": "data",
-   "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
-  },
-  {
-   "t": "10:35:23",
-   "from": "src:upstox",
-   "to": "mcx-1",
-   "kind": "data",
-   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-  },
-  {
-   "t": "10:35:23",
-   "from": "src:claude",
-   "to": "lab-1",
-   "kind": "data",
-   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-  },
-  {
-   "t": "10:35:23",
-   "from": "src:claude",
-   "to": "news-2",
-   "kind": "data",
-   "text": "25 on RBI, the Fed, rates and inflation. Latest: India stocks dip after RBI hike"
-  },
-  {
-   "t": "10:36:01",
-   "from": "coo",
-   "to": "ceo",
-   "kind": "report",
-   "text": "Company today \u20b90; 1 request(s) for you"
-  },
-  {
-   "t": "10:36:12",
-   "from": "src:upstox",
-   "to": "mcx-1",
-   "kind": "data",
-   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-  },
-  {
-   "t": "10:36:12",
-   "from": "src:claude",
-   "to": "lab-3",
-   "kind": "data",
-   "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
-  },
-  {
-   "t": "10:36:12",
-   "from": "src:news",
-   "to": "news-0",
-   "kind": "data",
-   "text": "25 market-moving headlines today: 1 bad, 3 good for Indian shares"
-  },
-  {
-   "t": "10:37:01",
-   "from": "src:yahoo",
-   "to": "mcx-3",
-   "kind": "data",
-   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-  },
-  {
-   "t": "10:37:01",
-   "from": "src:claude",
-   "to": "lab-1",
-   "kind": "data",
-   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-  },
-  {
-   "t": "10:37:01",
-   "from": "src:news",
-   "to": "news-3",
-   "kind": "data",
-   "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
-  },
-  {
-   "t": "10:37:50",
-   "from": "src:yahoo",
-   "to": "mcx-3",
-   "kind": "data",
-   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-  },
-  {
-   "t": "10:37:50",
-   "from": "src:claude",
-   "to": "lab-3",
-   "kind": "data",
-   "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
-  },
-  {
-   "t": "10:37:50",
-   "from": "src:yahoo",
-   "to": "news-1",
-   "kind": "data",
-   "text": "3 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
-  },
-  {
-   "t": "10:38:37",
-   "from": "src:yahoo",
-   "to": "mcx-3",
-   "kind": "data",
-   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-  },
-  {
-   "t": "10:38:37",
+   "t": "16:05:08",
    "from": "src:github",
    "to": "lab-0",
    "kind": "data",
    "text": "Builds new strategies from 20 families of rules: 2312 intraday and 162 multi-day"
   },
   {
-   "t": "10:38:37",
+   "t": "16:05:08",
    "from": "src:news",
    "to": "news-3",
    "kind": "data",
    "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+  },
+  {
+   "t": "16:05:55",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "16:05:55",
+   "from": "src:github",
+   "to": "lab-2",
+   "kind": "data",
+   "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+  },
+  {
+   "t": "16:05:55",
+   "from": "src:yahoo",
+   "to": "news-1",
+   "kind": "data",
+   "text": "5 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+  },
+  {
+   "t": "16:06:43",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "16:06:43",
+   "from": "src:github",
+   "to": "lab-0",
+   "kind": "data",
+   "text": "Builds new strategies from 20 families of rules: 2312 intraday and 162 multi-day"
+  },
+  {
+   "t": "16:06:43",
+   "from": "src:news",
+   "to": "news-0",
+   "kind": "data",
+   "text": "21 market-moving headlines today: 3 bad, 4 good for Indian shares"
+  },
+  {
+   "t": "16:07:28",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "16:07:28",
+   "from": "src:github",
+   "to": "lab-2",
+   "kind": "data",
+   "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+  },
+  {
+   "t": "16:07:28",
+   "from": "src:claude",
+   "to": "news-2",
+   "kind": "data",
+   "text": "17 on RBI, the Fed, rates and inflation. Latest: Ujjivan SFB gets RBI nod for 3-"
+  },
+  {
+   "t": "16:08:15",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "16:08:15",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "16:08:15",
+   "from": "src:news",
+   "to": "news-0",
+   "kind": "data",
+   "text": "21 market-moving headlines today: 3 bad, 4 good for Indian shares"
+  },
+  {
+   "t": "16:09:04",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "16:09:04",
+   "from": "src:github",
+   "to": "lab-2",
+   "kind": "data",
+   "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+  },
+  {
+   "t": "16:09:04",
+   "from": "src:news",
+   "to": "news-3",
+   "kind": "data",
+   "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+  },
+  {
+   "t": "16:09:20",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u20b90; 1 request(s) for you"
+  },
+  {
+   "t": "16:09:56",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "16:09:56",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "16:09:56",
+   "from": "src:yahoo",
+   "to": "news-1",
+   "kind": "data",
+   "text": "5 on wars, attacks, sanctions and tariffs. Latest: US tariff worries persist, bu"
+  },
+  {
+   "t": "16:10:46",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "16:10:46",
+   "from": "src:github",
+   "to": "lab-2",
+   "kind": "data",
+   "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+  },
+  {
+   "t": "16:10:46",
+   "from": "src:news",
+   "to": "news-0",
+   "kind": "data",
+   "text": "26 market-moving headlines today: 4 bad, 4 good for Indian shares"
+  },
+  {
+   "t": "16:11:34",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "16:11:34",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "16:11:34",
+   "from": "src:claude",
+   "to": "news-2",
+   "kind": "data",
+   "text": "20 on RBI, the Fed, rates and inflation. Latest: RBI eases daily CRR maintenance"
+  },
+  {
+   "t": "16:11:39",
+   "from": "src:news",
+   "to": "intraday-1",
+   "kind": "data",
+   "text": "Fear \u00b7 SUKHJITS: Sukhjit Starch fined \u20b92.23 lakh by BSE and NSE for LODR non-compliance - "
+  },
+  {
+   "t": "16:12:21",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "16:12:21",
+   "from": "src:github",
+   "to": "lab-2",
+   "kind": "data",
+   "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+  },
+  {
+   "t": "16:12:21",
+   "from": "src:yahoo",
+   "to": "news-1",
+   "kind": "data",
+   "text": "5 on wars, attacks, sanctions and tariffs. Latest: US tariff worries persist, bu"
+  },
+  {
+   "t": "16:13:10",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "16:13:10",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "16:13:10",
+   "from": "src:news",
+   "to": "news-3",
+   "kind": "data",
+   "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+  },
+  {
+   "t": "16:14:00",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "16:14:00",
+   "from": "src:github",
+   "to": "lab-2",
+   "kind": "data",
+   "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+  },
+  {
+   "t": "16:14:00",
+   "from": "src:claude",
+   "to": "news-2",
+   "kind": "data",
+   "text": "19 on RBI, the Fed, rates and inflation. Latest: Gold price forecast: Fed rate h"
+  },
+  {
+   "t": "16:14:21",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u20b90; 1 request(s) for you"
+  },
+  {
+   "t": "16:14:48",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "16:14:48",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "16:14:48",
+   "from": "src:news",
+   "to": "news-0",
+   "kind": "data",
+   "text": "23 market-moving headlines today: 3 bad, 4 good for Indian shares"
+  },
+  {
+   "t": "16:15:35",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "16:15:35",
+   "from": "src:claude",
+   "to": "lab-1",
+   "kind": "data",
+   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+  },
+  {
+   "t": "16:15:35",
+   "from": "src:claude",
+   "to": "news-2",
+   "kind": "data",
+   "text": "19 on RBI, the Fed, rates and inflation. Latest: Gold price forecast: Fed rate h"
+  },
+  {
+   "t": "16:16:25",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "16:16:25",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "16:16:25",
+   "from": "src:yahoo",
+   "to": "news-1",
+   "kind": "data",
+   "text": "6 on wars, attacks, sanctions and tariffs. Latest: Stock Market Today: Gift Nift"
+  },
+  {
+   "t": "16:17:14",
+   "from": "src:yahoo",
+   "to": "mcx-3",
+   "kind": "data",
+   "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+  },
+  {
+   "t": "16:17:14",
+   "from": "src:claude",
+   "to": "lab-1",
+   "kind": "data",
+   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+  },
+  {
+   "t": "16:17:14",
+   "from": "src:news",
+   "to": "news-3",
+   "kind": "data",
+   "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+  },
+  {
+   "t": "16:18:02",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "16:18:02",
+   "from": "src:github",
+   "to": "lab-4",
+   "kind": "data",
+   "text": "Data gaps: indmoney"
+  },
+  {
+   "t": "16:18:02",
+   "from": "src:claude",
+   "to": "news-2",
+   "kind": "data",
+   "text": "19 on RBI, the Fed, rates and inflation. Latest: Gold price forecast: Fed rate h"
+  },
+  {
+   "t": "16:18:49",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "16:18:49",
+   "from": "src:claude",
+   "to": "lab-1",
+   "kind": "data",
+   "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+  },
+  {
+   "t": "16:18:49",
+   "from": "src:news",
+   "to": "news-0",
+   "kind": "data",
+   "text": "23 market-moving headlines today: 3 bad, 4 good for Indian shares"
+  },
+  {
+   "t": "16:19:22",
+   "from": "coo",
+   "to": "ceo",
+   "kind": "report",
+   "text": "Company today \u20b90; 1 request(s) for you"
+  },
+  {
+   "t": "16:19:37",
+   "from": "src:upstox",
+   "to": "mcx-1",
+   "kind": "data",
+   "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+  },
+  {
+   "t": "16:19:37",
+   "from": "src:claude",
+   "to": "lab-3",
+   "kind": "data",
+   "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
+  },
+  {
+   "t": "16:19:37",
+   "from": "src:claude",
+   "to": "news-2",
+   "kind": "data",
+   "text": "22 on RBI, the Fed, rates and inflation. Latest: Tokyo's core CPI hits 2.9%, str"
   }
  ],
  "teams": [
@@ -697,7 +697,7 @@
      "role": "Filings & headlines hunter",
      "kind": "research",
      "status": "vacant",
-     "doing": "12 filings and 0 headline signal(s) lean one way: . Latest 09:56: Market weekly wrap: NIFTY50, SENSEX end 4-week rally; Tata S",
+     "doing": "12 filings and 0 headline signal(s) lean one way: . Latest 16:11: Sukhjit Starch fined \u20b92.23 lakh by BSE and NSE for LODR non-",
      "record": {
       "trades": 5,
       "wins": 2,
@@ -1656,7 +1656,7 @@
     {
      "name": "Kavya",
      "role": "Lead editor",
-     "doing": "19 headlines today that can move Indian markets, grouped into crude, rupee, rates, wars and fund flows.",
+     "doing": "24 headlines today that can move Indian markets, grouped into crude, rupee, rates, wars and fund flows.",
      "tokens": 0
     },
     {
@@ -1682,7 +1682,7 @@
      "role": "Global headlines reader",
      "kind": "research",
      "status": "active",
-     "doing": "19 market-moving headlines today: 3 bad, 3 good for Indian shares",
+     "doing": "24 market-moving headlines today: 4 bad, 4 good for Indian shares",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1697,7 +1697,7 @@
      "role": "Geopolitics watcher",
      "kind": "research",
      "status": "active",
-     "doing": "3 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely to shake markets; AI stock valuations a concern: Richard Harris",
+     "doing": "4 on wars, attacks, sanctions and tariffs. Latest: Stock Market Today: Gift Nifty, Oil Prices To Iran War; Five Key Factors That May Drive Sensex, Nifty 50 On Nov 27 - NDTV Profit",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1712,7 +1712,7 @@
      "role": "Central banks watcher",
      "kind": "research",
      "status": "active",
-     "doing": "16 on RBI, the Fed, rates and inflation. Latest: NSE secures RBI approval for corporate bond index futures",
+     "doing": "22 on RBI, the Fed, rates and inflation. Latest: Tokyo's core CPI hits 2.9%, strengthening case for BOJ rate hike in December",
      "record": {
       "trades": 0,
       "wins": 0,
@@ -1773,7 +1773,7 @@
    "id": "nse",
    "name": "NSE",
    "status": "ok",
-   "detail": "1 filings lean one way today; participant positions for 2026-11-18"
+   "detail": "8 filings lean one way today; participant positions for 2026-11-18"
   },
   {
    "id": "upstox",
@@ -1791,13 +1791,13 @@
    "id": "yahoo",
    "name": "Yahoo Finance",
    "status": "idle",
-   "detail": "world markets refreshed 807 min ago"
+   "detail": "world markets refreshed 1147 min ago"
   },
   {
    "id": "news",
    "name": "News feeds",
    "status": "ok",
-   "detail": "news pulse: 9 feeds read every minute in market hours, 14 signals today; 0 with the hunters now"
+   "detail": "news pulse: 9 feeds read every minute in market hours, 43 signals today; 0 with the hunters now"
   },
   {
    "id": "claude",
@@ -2426,564 +2426,564 @@
   },
   "flows": [
    {
-    "t": "10:18:19",
-    "from": "src:claude",
-    "to": "news-2",
-    "kind": "data",
-    "text": "22 on RBI, the Fed, rates and inflation. Latest: India stocks dip after RBI hike"
-   },
-   {
-    "t": "10:19:08",
+    "t": "16:00:20",
     "from": "src:yahoo",
     "to": "mcx-3",
     "kind": "data",
     "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
    },
    {
-    "t": "10:19:08",
-    "from": "src:github",
-    "to": "lab-2",
+    "t": "16:00:20",
+    "from": "src:claude",
+    "to": "lab-1",
     "kind": "data",
-    "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
    },
    {
-    "t": "10:19:08",
+    "t": "16:00:20",
     "from": "src:yahoo",
     "to": "news-1",
     "kind": "data",
-    "text": "4 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+    "text": "6 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
    },
    {
-    "t": "10:19:58",
+    "t": "16:01:09",
     "from": "src:yahoo",
     "to": "mcx-3",
     "kind": "data",
     "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
    },
    {
-    "t": "10:19:58",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "10:19:58",
-    "from": "src:news",
-    "to": "news-3",
-    "kind": "data",
-    "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
-   },
-   {
-    "t": "10:20:48",
-    "from": "src:upstox",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-   },
-   {
-    "t": "10:20:48",
-    "from": "src:github",
-    "to": "lab-2",
-    "kind": "data",
-    "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
-   },
-   {
-    "t": "10:20:48",
-    "from": "src:claude",
-    "to": "news-2",
-    "kind": "data",
-    "text": "22 on RBI, the Fed, rates and inflation. Latest: India stocks dip after RBI hike"
-   },
-   {
-    "t": "10:20:56",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u20b90; 1 request(s) for you"
-   },
-   {
-    "t": "10:21:35",
-    "from": "src:upstox",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-   },
-   {
-    "t": "10:21:35",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "10:21:35",
-    "from": "src:news",
-    "to": "news-0",
-    "kind": "data",
-    "text": "22 market-moving headlines today: 0 bad, 3 good for Indian shares"
-   },
-   {
-    "t": "10:22:23",
-    "from": "src:yahoo",
-    "to": "mcx-3",
-    "kind": "data",
-    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-   },
-   {
-    "t": "10:22:23",
-    "from": "src:github",
-    "to": "lab-2",
-    "kind": "data",
-    "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
-   },
-   {
-    "t": "10:22:23",
-    "from": "src:news",
-    "to": "news-3",
-    "kind": "data",
-    "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
-   },
-   {
-    "t": "10:23:12",
-    "from": "src:yahoo",
-    "to": "mcx-3",
-    "kind": "data",
-    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-   },
-   {
-    "t": "10:23:12",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "10:23:12",
-    "from": "src:yahoo",
-    "to": "news-1",
-    "kind": "data",
-    "text": "2 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
-   },
-   {
-    "t": "10:24:01",
-    "from": "src:upstox",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-   },
-   {
-    "t": "10:24:01",
-    "from": "src:github",
-    "to": "lab-2",
-    "kind": "data",
-    "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
-   },
-   {
-    "t": "10:24:01",
-    "from": "src:news",
-    "to": "news-0",
-    "kind": "data",
-    "text": "19 market-moving headlines today: 4 bad, 2 good for Indian shares"
-   },
-   {
-    "t": "10:24:48",
-    "from": "src:upstox",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-   },
-   {
-    "t": "10:24:48",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "10:24:48",
-    "from": "src:claude",
-    "to": "news-2",
-    "kind": "data",
-    "text": "16 on RBI, the Fed, rates and inflation. Latest: Tokyo's core CPI hits 2.9%, str"
-   },
-   {
-    "t": "10:25:35",
-    "from": "src:upstox",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-   },
-   {
-    "t": "10:25:35",
-    "from": "src:claude",
-    "to": "lab-1",
-    "kind": "data",
-    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-   },
-   {
-    "t": "10:25:35",
-    "from": "src:news",
-    "to": "news-0",
-    "kind": "data",
-    "text": "19 market-moving headlines today: 4 bad, 2 good for Indian shares"
-   },
-   {
-    "t": "10:25:58",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u20b90; 1 request(s) for you"
-   },
-   {
-    "t": "10:26:24",
-    "from": "src:yahoo",
-    "to": "mcx-3",
-    "kind": "data",
-    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-   },
-   {
-    "t": "10:26:24",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "10:26:24",
-    "from": "src:news",
-    "to": "news-3",
-    "kind": "data",
-    "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
-   },
-   {
-    "t": "10:27:13",
-    "from": "src:yahoo",
-    "to": "mcx-3",
-    "kind": "data",
-    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-   },
-   {
-    "t": "10:27:13",
-    "from": "src:claude",
-    "to": "lab-1",
-    "kind": "data",
-    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-   },
-   {
-    "t": "10:27:13",
-    "from": "src:yahoo",
-    "to": "news-1",
-    "kind": "data",
-    "text": "2 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
-   },
-   {
-    "t": "10:28:01",
-    "from": "src:upstox",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-   },
-   {
-    "t": "10:28:01",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "10:28:01",
-    "from": "src:news",
-    "to": "news-0",
-    "kind": "data",
-    "text": "29 market-moving headlines today: 4 bad, 4 good for Indian shares"
-   },
-   {
-    "t": "10:28:51",
-    "from": "src:upstox",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-   },
-   {
-    "t": "10:28:51",
-    "from": "src:claude",
-    "to": "lab-1",
-    "kind": "data",
-    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-   },
-   {
-    "t": "10:28:51",
-    "from": "src:claude",
-    "to": "news-2",
-    "kind": "data",
-    "text": "27 on RBI, the Fed, rates and inflation. Latest: India swaps, treasury bills sig"
-   },
-   {
-    "t": "10:29:41",
-    "from": "src:yahoo",
-    "to": "mcx-3",
-    "kind": "data",
-    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-   },
-   {
-    "t": "10:29:41",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "10:29:41",
-    "from": "src:yahoo",
-    "to": "news-1",
-    "kind": "data",
-    "text": "4 on wars, attacks, sanctions and tariffs. Latest: India should push for 10-15% "
-   },
-   {
-    "t": "10:30:34",
-    "from": "src:yahoo",
-    "to": "mcx-3",
-    "kind": "data",
-    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-   },
-   {
-    "t": "10:30:34",
-    "from": "src:claude",
-    "to": "lab-1",
-    "kind": "data",
-    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-   },
-   {
-    "t": "10:30:34",
-    "from": "src:news",
-    "to": "news-3",
-    "kind": "data",
-    "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
-   },
-   {
-    "t": "10:31:01",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u20b90; 1 request(s) for you"
-   },
-   {
-    "t": "10:31:24",
-    "from": "src:upstox",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-   },
-   {
-    "t": "10:31:24",
-    "from": "src:github",
-    "to": "lab-4",
-    "kind": "data",
-    "text": "Data gaps: indmoney"
-   },
-   {
-    "t": "10:31:24",
-    "from": "src:claude",
-    "to": "news-2",
-    "kind": "data",
-    "text": "27 on RBI, the Fed, rates and inflation. Latest: India swaps, treasury bills sig"
-   },
-   {
-    "t": "10:32:10",
-    "from": "src:upstox",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-   },
-   {
-    "t": "10:32:10",
-    "from": "src:claude",
-    "to": "lab-1",
-    "kind": "data",
-    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-   },
-   {
-    "t": "10:32:10",
-    "from": "src:news",
-    "to": "news-0",
-    "kind": "data",
-    "text": "29 market-moving headlines today: 4 bad, 4 good for Indian shares"
-   },
-   {
-    "t": "10:32:58",
-    "from": "src:upstox",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-   },
-   {
-    "t": "10:32:58",
+    "t": "16:01:09",
     "from": "src:claude",
     "to": "lab-3",
     "kind": "data",
     "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
    },
    {
-    "t": "10:32:58",
-    "from": "src:claude",
-    "to": "news-2",
-    "kind": "data",
-    "text": "25 on RBI, the Fed, rates and inflation. Latest: India stocks dip after RBI hike"
-   },
-   {
-    "t": "10:33:47",
-    "from": "src:yahoo",
-    "to": "mcx-3",
-    "kind": "data",
-    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-   },
-   {
-    "t": "10:33:47",
-    "from": "src:claude",
-    "to": "lab-1",
-    "kind": "data",
-    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-   },
-   {
-    "t": "10:33:47",
-    "from": "src:yahoo",
-    "to": "news-1",
-    "kind": "data",
-    "text": "4 on wars, attacks, sanctions and tariffs. Latest: US tariff worries persist, bu"
-   },
-   {
-    "t": "10:34:36",
-    "from": "src:yahoo",
-    "to": "mcx-3",
-    "kind": "data",
-    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-   },
-   {
-    "t": "10:34:36",
-    "from": "src:claude",
-    "to": "lab-3",
-    "kind": "data",
-    "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
-   },
-   {
-    "t": "10:34:36",
+    "t": "16:01:09",
     "from": "src:news",
     "to": "news-3",
     "kind": "data",
     "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
    },
    {
-    "t": "10:35:23",
-    "from": "src:upstox",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-   },
-   {
-    "t": "10:35:23",
-    "from": "src:claude",
-    "to": "lab-1",
-    "kind": "data",
-    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-   },
-   {
-    "t": "10:35:23",
-    "from": "src:claude",
-    "to": "news-2",
-    "kind": "data",
-    "text": "25 on RBI, the Fed, rates and inflation. Latest: India stocks dip after RBI hike"
-   },
-   {
-    "t": "10:36:01",
-    "from": "coo",
-    "to": "ceo",
-    "kind": "report",
-    "text": "Company today \u20b90; 1 request(s) for you"
-   },
-   {
-    "t": "10:36:12",
-    "from": "src:upstox",
-    "to": "mcx-1",
-    "kind": "data",
-    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
-   },
-   {
-    "t": "10:36:12",
-    "from": "src:claude",
-    "to": "lab-3",
-    "kind": "data",
-    "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
-   },
-   {
-    "t": "10:36:12",
-    "from": "src:news",
-    "to": "news-0",
-    "kind": "data",
-    "text": "25 market-moving headlines today: 1 bad, 3 good for Indian shares"
-   },
-   {
-    "t": "10:37:01",
+    "t": "16:01:57",
     "from": "src:yahoo",
     "to": "mcx-3",
     "kind": "data",
     "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
    },
    {
-    "t": "10:37:01",
-    "from": "src:claude",
-    "to": "lab-1",
-    "kind": "data",
-    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
-   },
-   {
-    "t": "10:37:01",
-    "from": "src:news",
-    "to": "news-3",
-    "kind": "data",
-    "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
-   },
-   {
-    "t": "10:37:50",
-    "from": "src:yahoo",
-    "to": "mcx-3",
-    "kind": "data",
-    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-   },
-   {
-    "t": "10:37:50",
-    "from": "src:claude",
-    "to": "lab-3",
-    "kind": "data",
-    "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
-   },
-   {
-    "t": "10:37:50",
-    "from": "src:yahoo",
-    "to": "news-1",
-    "kind": "data",
-    "text": "3 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
-   },
-   {
-    "t": "10:38:37",
-    "from": "src:yahoo",
-    "to": "mcx-3",
-    "kind": "data",
-    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
-   },
-   {
-    "t": "10:38:37",
+    "t": "16:01:57",
     "from": "src:github",
     "to": "lab-0",
     "kind": "data",
     "text": "Builds new strategies from 20 families of rules: 2312 intraday and 162 multi-day"
    },
    {
-    "t": "10:38:37",
+    "t": "16:01:57",
+    "from": "src:yahoo",
+    "to": "news-1",
+    "kind": "data",
+    "text": "6 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+   },
+   {
+    "t": "16:02:44",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "16:02:44",
+    "from": "src:claude",
+    "to": "lab-3",
+    "kind": "data",
+    "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
+   },
+   {
+    "t": "16:02:44",
+    "from": "src:news",
+    "to": "news-0",
+    "kind": "data",
+    "text": "25 market-moving headlines today: 4 bad, 2 good for Indian shares"
+   },
+   {
+    "t": "16:03:32",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "16:03:32",
+    "from": "src:github",
+    "to": "lab-0",
+    "kind": "data",
+    "text": "Builds new strategies from 20 families of rules: 2312 intraday and 162 multi-day"
+   },
+   {
+    "t": "16:03:32",
+    "from": "src:claude",
+    "to": "news-2",
+    "kind": "data",
+    "text": "19 on RBI, the Fed, rates and inflation. Latest: India swaps, treasury bills sig"
+   },
+   {
+    "t": "16:04:16",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u20b90; 1 request(s) for you"
+   },
+   {
+    "t": "16:04:21",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "16:04:21",
+    "from": "src:claude",
+    "to": "lab-3",
+    "kind": "data",
+    "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
+   },
+   {
+    "t": "16:04:21",
+    "from": "src:yahoo",
+    "to": "news-1",
+    "kind": "data",
+    "text": "5 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+   },
+   {
+    "t": "16:05:08",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "16:05:08",
+    "from": "src:github",
+    "to": "lab-0",
+    "kind": "data",
+    "text": "Builds new strategies from 20 families of rules: 2312 intraday and 162 multi-day"
+   },
+   {
+    "t": "16:05:08",
     "from": "src:news",
     "to": "news-3",
     "kind": "data",
     "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+   },
+   {
+    "t": "16:05:55",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "16:05:55",
+    "from": "src:github",
+    "to": "lab-2",
+    "kind": "data",
+    "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+   },
+   {
+    "t": "16:05:55",
+    "from": "src:yahoo",
+    "to": "news-1",
+    "kind": "data",
+    "text": "5 on wars, attacks, sanctions and tariffs. Latest: Trump tariff threat unlikely "
+   },
+   {
+    "t": "16:06:43",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "16:06:43",
+    "from": "src:github",
+    "to": "lab-0",
+    "kind": "data",
+    "text": "Builds new strategies from 20 families of rules: 2312 intraday and 162 multi-day"
+   },
+   {
+    "t": "16:06:43",
+    "from": "src:news",
+    "to": "news-0",
+    "kind": "data",
+    "text": "21 market-moving headlines today: 3 bad, 4 good for Indian shares"
+   },
+   {
+    "t": "16:07:28",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "16:07:28",
+    "from": "src:github",
+    "to": "lab-2",
+    "kind": "data",
+    "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+   },
+   {
+    "t": "16:07:28",
+    "from": "src:claude",
+    "to": "news-2",
+    "kind": "data",
+    "text": "17 on RBI, the Fed, rates and inflation. Latest: Ujjivan SFB gets RBI nod for 3-"
+   },
+   {
+    "t": "16:08:15",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "16:08:15",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "16:08:15",
+    "from": "src:news",
+    "to": "news-0",
+    "kind": "data",
+    "text": "21 market-moving headlines today: 3 bad, 4 good for Indian shares"
+   },
+   {
+    "t": "16:09:04",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "16:09:04",
+    "from": "src:github",
+    "to": "lab-2",
+    "kind": "data",
+    "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+   },
+   {
+    "t": "16:09:04",
+    "from": "src:news",
+    "to": "news-3",
+    "kind": "data",
+    "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+   },
+   {
+    "t": "16:09:20",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u20b90; 1 request(s) for you"
+   },
+   {
+    "t": "16:09:56",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "16:09:56",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "16:09:56",
+    "from": "src:yahoo",
+    "to": "news-1",
+    "kind": "data",
+    "text": "5 on wars, attacks, sanctions and tariffs. Latest: US tariff worries persist, bu"
+   },
+   {
+    "t": "16:10:46",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "16:10:46",
+    "from": "src:github",
+    "to": "lab-2",
+    "kind": "data",
+    "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+   },
+   {
+    "t": "16:10:46",
+    "from": "src:news",
+    "to": "news-0",
+    "kind": "data",
+    "text": "26 market-moving headlines today: 4 bad, 4 good for Indian shares"
+   },
+   {
+    "t": "16:11:34",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "16:11:34",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "16:11:34",
+    "from": "src:claude",
+    "to": "news-2",
+    "kind": "data",
+    "text": "20 on RBI, the Fed, rates and inflation. Latest: RBI eases daily CRR maintenance"
+   },
+   {
+    "t": "16:11:39",
+    "from": "src:news",
+    "to": "intraday-1",
+    "kind": "data",
+    "text": "Fear \u00b7 SUKHJITS: Sukhjit Starch fined \u20b92.23 lakh by BSE and NSE for LODR non-compliance - "
+   },
+   {
+    "t": "16:12:21",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "16:12:21",
+    "from": "src:github",
+    "to": "lab-2",
+    "kind": "data",
+    "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+   },
+   {
+    "t": "16:12:21",
+    "from": "src:yahoo",
+    "to": "news-1",
+    "kind": "data",
+    "text": "5 on wars, attacks, sanctions and tariffs. Latest: US tariff worries persist, bu"
+   },
+   {
+    "t": "16:13:10",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "16:13:10",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "16:13:10",
+    "from": "src:news",
+    "to": "news-3",
+    "kind": "data",
+    "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+   },
+   {
+    "t": "16:14:00",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "16:14:00",
+    "from": "src:github",
+    "to": "lab-2",
+    "kind": "data",
+    "text": "Paper records of 29 strategies: 4 tested, 0 approved, 0 to investigate"
+   },
+   {
+    "t": "16:14:00",
+    "from": "src:claude",
+    "to": "news-2",
+    "kind": "data",
+    "text": "19 on RBI, the Fed, rates and inflation. Latest: Gold price forecast: Fed rate h"
+   },
+   {
+    "t": "16:14:21",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u20b90; 1 request(s) for you"
+   },
+   {
+    "t": "16:14:48",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "16:14:48",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "16:14:48",
+    "from": "src:news",
+    "to": "news-0",
+    "kind": "data",
+    "text": "23 market-moving headlines today: 3 bad, 4 good for Indian shares"
+   },
+   {
+    "t": "16:15:35",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "16:15:35",
+    "from": "src:claude",
+    "to": "lab-1",
+    "kind": "data",
+    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+   },
+   {
+    "t": "16:15:35",
+    "from": "src:claude",
+    "to": "news-2",
+    "kind": "data",
+    "text": "19 on RBI, the Fed, rates and inflation. Latest: Gold price forecast: Fed rate h"
+   },
+   {
+    "t": "16:16:25",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "16:16:25",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "16:16:25",
+    "from": "src:yahoo",
+    "to": "news-1",
+    "kind": "data",
+    "text": "6 on wars, attacks, sanctions and tariffs. Latest: Stock Market Today: Gift Nift"
+   },
+   {
+    "t": "16:17:14",
+    "from": "src:yahoo",
+    "to": "mcx-3",
+    "kind": "data",
+    "text": "Natural gas $3.49 (-5.1%). Natural gas moves city gas and fertiliser companies"
+   },
+   {
+    "t": "16:17:14",
+    "from": "src:claude",
+    "to": "lab-1",
+    "kind": "data",
+    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+   },
+   {
+    "t": "16:17:14",
+    "from": "src:news",
+    "to": "news-3",
+    "kind": "data",
+    "text": "2 alert(s) today; latest 09:36: Silver +3.8%"
+   },
+   {
+    "t": "16:18:02",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "16:18:02",
+    "from": "src:github",
+    "to": "lab-4",
+    "kind": "data",
+    "text": "Data gaps: indmoney"
+   },
+   {
+    "t": "16:18:02",
+    "from": "src:claude",
+    "to": "news-2",
+    "kind": "data",
+    "text": "19 on RBI, the Fed, rates and inflation. Latest: Gold price forecast: Fed rate h"
+   },
+   {
+    "t": "16:18:49",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "16:18:49",
+    "from": "src:claude",
+    "to": "lab-1",
+    "kind": "data",
+    "text": "Backtests every strategy on NIFTY's 1-minute history after each close: 31 multi-"
+   },
+   {
+    "t": "16:18:49",
+    "from": "src:news",
+    "to": "news-0",
+    "kind": "data",
+    "text": "23 market-moving headlines today: 3 bad, 4 good for Indian shares"
+   },
+   {
+    "t": "16:19:22",
+    "from": "coo",
+    "to": "ceo",
+    "kind": "report",
+    "text": "Company today \u20b90; 1 request(s) for you"
+   },
+   {
+    "t": "16:19:37",
+    "from": "src:upstox",
+    "to": "mcx-1",
+    "kind": "data",
+    "text": "Gold $3,668.50 (+1.3%); Silver $43.70 (+3.8%). A jump means investors are runnin"
+   },
+   {
+    "t": "16:19:37",
+    "from": "src:claude",
+    "to": "lab-3",
+    "kind": "data",
+    "text": "Luck check: 6 of 100 random-entry strategies also passed, so a pass must beat th"
+   },
+   {
+    "t": "16:19:37",
+    "from": "src:claude",
+    "to": "news-2",
+    "kind": "data",
+    "text": "22 on RBI, the Fed, rates and inflation. Latest: Tokyo's core CPI hits 2.9%, str"
    }
   ],
   "flow_seen": {
@@ -3020,20 +3020,49 @@
    "sig:N055604-11": "2026-11-28",
    "sig:N064619-12": "2026-11-28",
    "sig:N082923-13": "2026-11-28",
-   "sig:N095624-14": "2026-11-28"
+   "sig:N095624-14": "2026-11-28",
+   "sig:N104942-15": "2026-11-28",
+   "sig:N104942-16": "2026-11-28",
+   "sig:N104942-17": "2026-11-28",
+   "sig:N105944-18": "2026-11-28",
+   "sig:N110949-19": "2026-11-28",
+   "sig:N110949-20": "2026-11-28",
+   "sig:N111952-21": "2026-11-28",
+   "sig:N112957-22": "2026-11-28",
+   "sig:N114000-23": "2026-11-28",
+   "sig:N121009-24": "2026-11-28",
+   "sig:N123011-25": "2026-11-28",
+   "sig:N124017-26": "2026-11-28",
+   "sig:N125018-27": "2026-11-28",
+   "sig:N131023-28": "2026-11-28",
+   "sig:N131023-29": "2026-11-28",
+   "sig:N131023-30": "2026-11-28",
+   "sig:N131023-31": "2026-11-28",
+   "sig:N132029-32": "2026-11-28",
+   "sig:N134034-33": "2026-11-28",
+   "sig:N134034-34": "2026-11-28",
+   "sig:N135042-35": "2026-11-28",
+   "sig:N141047-36": "2026-11-28",
+   "sig:N141047-37": "2026-11-28",
+   "sig:N141047-38": "2026-11-28",
+   "sig:N142049-39": "2026-11-28",
+   "sig:N150110-40": "2026-11-28",
+   "sig:N152118-41": "2026-11-28",
+   "sig:N154127-42": "2026-11-28",
+   "sig:N161134-43": "2026-11-28"
   },
   "flow_at": {
    "crypto": 1795229124.147547,
-   "lab": 1795842517.667935,
-   "ceo": 1795842361.436879,
-   "mcx": 1795842517.667935,
+   "lab": 1795862977.084587,
+   "ceo": 1795862962.143833,
+   "mcx": 1795862977.084587,
    "scalp": 1795774263.123947,
    "intraday": 1795405911.526052,
    "swing": 1795774263.123947,
    "intel": 1795774263.123947,
    "ipo": 1795774263.123947,
    "fno": 1795773618.717064,
-   "news": 1795842517.667935
+   "news": 1795862977.084587
   },
   "done_cmds": [
    "C261123-1"

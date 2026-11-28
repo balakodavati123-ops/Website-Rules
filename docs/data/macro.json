@@ -1,5 +1,5 @@
 {
- "at": "10:39:14",
+ "at": "16:19:00",
  "day": "2026-11-28",
  "session": "closed",
  "ref": {
@@ -292,9 +292,9 @@
   }
  ],
  "news_tone": {
-  "headlines": 19,
-  "bad": 3,
-  "good": 3
+  "headlines": 24,
+  "bad": 4,
+  "good": 4
  },
  "big_moves": [],
  "rupee_record": null,
@@ -303,61 +303,61 @@
   {
    "key": "rates",
    "label": "RBI, rates and inflation",
-   "count": 15,
+   "count": 20,
    "neg": 1,
-   "pos": 3,
+   "pos": 5,
    "latest": {
-    "headline": "NSE secures RBI approval for corporate bond index futures",
-    "source": "BusinessLine",
-    "time": "28 Nov 10:36"
+    "headline": "Tokyo's core CPI hits 2.9%, strengthening case for BOJ rate hike in December",
+    "source": "CNBC-TV18",
+    "time": "28 Nov 16:18"
    }
   },
   {
    "key": "geo",
    "label": "war, attacks, sanctions and tariffs",
-   "count": 3,
+   "count": 4,
    "neg": 0,
    "pos": 0,
    "latest": {
-    "headline": "Trump tariff threat unlikely to shake markets; AI stock valuations a concern: Richard Harris",
-    "source": "CNBC-TV18",
-    "time": "28 Nov 10:36"
-   }
-  },
-  {
-   "key": "rupee",
-   "label": "the rupee and the dollar",
-   "count": 2,
-   "neg": 1,
-   "pos": 0,
-   "latest": {
-    "headline": "Rupee plunges 24 paise to 92.62 against US dollar in early trade",
-    "source": "BusinessLine",
-    "time": "28 Nov 10:36"
+    "headline": "Stock Market Today: Gift Nifty, Oil Prices To Iran War; Five Key Factors That May Drive Sensex, Nifty 50 On Nov 27 - NDTV Profit",
+    "source": "GoogleNews-Business",
+    "time": "28 Nov 16:13"
    }
   },
   {
    "key": "crude",
    "label": "crude oil",
-   "count": 1,
+   "count": 2,
    "neg": 1,
    "pos": 0,
    "latest": {
-    "headline": "Sensex plunges 989 points as crude prices rise, IT stocks and HDFC Bank drag - Telegraph India",
-    "source": "GoogleNews",
-    "time": "28 Nov 10:36"
+    "headline": "Stock Market Today: Gift Nifty, Oil Prices To Iran War; Five Key Factors That May Drive Sensex, Nifty 50 On Nov 27 - NDTV Profit",
+    "source": "GoogleNews-Business",
+    "time": "28 Nov 16:13"
    }
   },
   {
    "key": "us",
    "label": "the US markets and the Fed",
-   "count": 1,
-   "neg": 0,
+   "count": 2,
+   "neg": 1,
    "pos": 0,
    "latest": {
-    "headline": "Is a US Fed rate hike confirmed in Dec meet? How will it impact Sensex, Nifty, Gold as US PCE inflation rises in October",
-    "source": "Mint",
-    "time": "28 Nov 10:36"
+    "headline": "Nasdaq futures plunge nearly 3% as AI trade comes under pressure; gold extends decline",
+    "source": "CNBC-TV18",
+    "time": "28 Nov 16:18"
+   }
+  },
+  {
+   "key": "rupee",
+   "label": "the rupee and the dollar",
+   "count": 1,
+   "neg": 1,
+   "pos": 0,
+   "latest": {
+    "headline": "Rupee plunges 24 paise to 92.62 against US dollar in early trade",
+    "source": "BusinessLine",
+    "time": "28 Nov 15:57"
    }
   }
  ],
@@ -365,7 +365,7 @@
   "NIFTY is down 277 points (-1.07%) at 25,607 at its last close (27 Nov); Sensex -1.17%.",
   "S&P 500 futures is up 0.8% since NIFTY's last close: on past days that has meant about +34 NIFTY points.",
   "US dollar index is up 0.2% since NIFTY's last close: on past days that has meant about -9 NIFTY points.",
-  "Today's headlines: 15 on RBI, rates and inflation, 3 on war, attacks, sanctions and tariffs, 2 on the rupee and the dollar, 1 on crude oil. Latest on RBI, rates and inflation: \"NSE secures RBI approval for corporate bond index futures\"."
+  "Today's headlines: 20 on RBI, rates and inflation, 4 on war, attacks, sanctions and tariffs, 2 on crude oil, 2 on the US markets and the Fed. Latest on RBI, rates and inflation: \"Tokyo's core CPI hits 2.9%, strengthening case for BOJ rate hike in December\"."
  ],
  "model": {
   "r2": 0.201,
@@ -373,7 +373,7 @@
   "from": "2022-01-04",
   "to": "2026-11-25"
  },
- "world_at": "10:39:14",
+ "world_at": "16:11:34",
  "alerts": [
   {
    "key": "2026-11-28:silver:+1",

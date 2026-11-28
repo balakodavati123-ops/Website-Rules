@@ -1,54 +1,607 @@
 {
- "updated_at": "2026-11-28T10:36:34+05:30",
- "scans": 2769,
+ "updated_at": "2026-11-28T16:11:34+05:30",
+ "scans": 2803,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "10:36:34"
+   "at": "16:11:34"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "10:36:34"
+   "at": "16:11:34"
   },
   "Moneycontrol": {
    "ok": true,
    "items": 15,
-   "at": "10:36:34"
+   "at": "16:11:34"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "10:36:34"
+   "at": "16:11:34"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "10:36:34"
+   "at": "16:11:34"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "10:36:34"
+   "at": "16:11:34"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "10:36:34"
+   "at": "16:11:34"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "10:36:34"
+   "at": "16:11:34"
   },
   "Google News": {
    "ok": true,
-   "items": 10,
-   "at": "10:36:34"
+   "items": 5,
+   "at": "16:11:34"
   }
  },
  "signals": [
+  {
+   "id": "N161134-43",
+   "t": "16:11:34",
+   "ts": 1795862494.485684,
+   "pub": "16:09",
+   "lag_s": 153,
+   "symbol": "SUKHJITS",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "fined"
+   ],
+   "headline": "Sukhjit Starch fined \u20b92.23 lakh by BSE and NSE for LODR non-compliance - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSWJ5d08wb0FpamhfNXhNUjl0NUI4S3ZVcHRwdWw3b0JxOGlnQmtNcDFYb1hDZHF5UElyWWRHT3JiZjZsVkNmcW9qSkt3cURJajJTc3p0VEhRVTRuajhyelBBWExaMnFRTkVJTHRSX3NfZDdDc2l2YktpVFcyOHB3cldlcDdvcVdxWnJjajhHYWg0UkpxRE1rNHdyOERCRS1vV3JEQ2J2R2VHNUF4S0hJaG5RTXllUQ?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N154127-42",
+   "t": "15:41:27",
+   "ts": 1795860687.665074,
+   "pub": "15:16",
+   "lag_s": 1515,
+   "symbol": "ALLTIME",
+   "tone": "positive",
+   "score": 5.2,
+   "emotion": "Euphoria",
+   "why": [
+    "all-time high",
+    "surge"
+   ],
+   "headline": "India\u2019s Exports Surge 45% To All-Time High: Why Costly Crude Is Part Of The Story",
+   "source": "NDTV Profit",
+   "link": "https://www.ndtvprofit.com/business/india-s-exports-surge-45-to-all-time-high-why-costly-crude-is-part-of-the-story-12388631#publisher=newsstand",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N152118-41",
+   "t": "15:21:18",
+   "ts": 1795859478.009495,
+   "pub": "15:14",
+   "lag_s": 384,
+   "symbol": "BHEL",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "fined"
+   ],
+   "headline": "BHEL fined \u20b914.47 lakh by BSE and NSE for director vacancies - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQazdNNTBGNVlpenlJWnZqYlNkSl9kTEhJLW1ldlRzaWxDM2ZqdWZscktSc1R2MEJZaTZXenBlMWt4RHA3U2tkX0xOTmFSaEU1S2lPTzVFOXpKQ2FNZzh1alhkSVJHQUhPWTRNeXoxc1RRdjlRS1ZHbGRrRUtzZDVvWFhOTTh4dUYxamdVXzBJWUFUSmlDU3JiNjNYUlRtclphcHF4VFR1eVc?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N150110-40",
+   "t": "15:01:10",
+   "ts": 1795858270.559881,
+   "pub": "14:55",
+   "lag_s": 313,
+   "symbol": "SEAMECLTD",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "SEAMECLTD: Awarding of order(s)/contract(s)",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/SEAMECLTD_28112026145542_BSENSEWorkorderAdsunDivingPRPX28112026.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N142049-39",
+   "t": "14:20:49",
+   "ts": 1795855849.801339,
+   "pub": "14:15",
+   "lag_s": 337,
+   "symbol": "BPCL",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "fined"
+   ],
+   "headline": "Bharat Petroleum Corporation fined Rs. 14,46,680 by stock exchanges for non-compliance - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQbS1uYlR2bkotYUVWMzdzdV9nWGo5SVhHanFOTFdmS0ZMZndEWTlXNVZhZHBfZVJmeFFpbUphN1NrVnlQM1JaWnBpT21fdmFaY2VGaW9Uc242T0pWTTFYU3MybDFoQ3hNbGstd3NLUU1vanV0czJzQkR1UkhBd0s2aVF1UVl4blpybF9fczF1RVJQYjFVcUdEUTdCLUQtdWJ0VEVObnRwcGhGX1BiR213a3JmUENYOWNTSTdiMHRVNA?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N141047-38",
+   "t": "14:10:47",
+   "ts": 1795855247.300712,
+   "pub": "14:00",
+   "lag_s": 601,
+   "symbol": "HINDCOPPER",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "fined"
+   ],
+   "headline": "Hindustan Copper fined \u20b99.7 lakh each by BSE and NSE for governance lapses - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOckNEb3BaR0NIZHdLQVRnQWxDcV9Rbm1zOHBzSU03bzVhZGJDYUgwV2JHcS1rYTlCVWU5UnRNMlhOMWRXclpBWXJzOGtxX3ZwRW96QmIxLWRhRlVsX2RHTkY2bEEzTlZwdmpNS0Myb1V1Q2ROaFpOY3YtMUJ0MFRwYmxYMk1pVE1MOXJLX3FzX1c3Tm9xSHdHTDJjS1R1YWl0QW5lek1jYUNIWTdiNDRxZVUxTFdSSjNwVU44?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N141047-37",
+   "t": "14:10:47",
+   "ts": 1795855247.300712,
+   "pub": "14:00",
+   "lag_s": 601,
+   "symbol": "IREDA",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "fined"
+   ],
+   "headline": "IREDA fined \u20b912.58 lakh by NSE, BSE for board compliance lapse - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPeUN2WXdrTF9sN0ZaNzhCNmxqVjdELTZyNWw5X2g2eHJrbUVTV1hSbm9QanIxQUdpcEJ5WE9VemtoV1JJRFlybmtNTkEydVZqZ1JzeFJxNlExdGpEMW51RlR0T3MxT2hITEFtMl9qVWxEY3FGMnpWaU1SeXRHUGRtVktoSi15QXBMV0lWMmZpcDJvdW5VZVRWdjk1SklYQ1BpZHotVmJobDBVU2lTNHAw?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N141047-36",
+   "t": "14:10:47",
+   "ts": 1795855247.300712,
+   "pub": "14:04",
+   "lag_s": 362,
+   "symbol": "BPCL",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "fined"
+   ],
+   "headline": "BPCL fined \u20b914.46 lakh each by BSE and NSE for governance lapses - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVHNTbzVTVHdFNHVudXJNV3dWWTRpRE1QM1RqN1VWcmpGOExRMWFFd1NOMURLNU80SldwQjdaeFNaSF9GcWpHeGZ5TTdiQmZyZUZxLXdDOEhCMWlybk1OTGxqOEpKV251M21rTU9vUWthaXZjSmxmeXV4REhTdXF5ZUNjQW52TkVoNjZ1TzRONTNyRjY4TEszZThVQUthLTJCZGxLc1dlSzVzQlFqcFE?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N135042-35",
+   "t": "13:50:42",
+   "ts": 1795854042.345539,
+   "pub": "13:45",
+   "lag_s": 331,
+   "symbol": "HINDCOPPER",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "fined"
+   ],
+   "headline": "Hindustan Copper fined Rs. 9,69,960 each by BSE and NSE for non-compliance - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQbEVSTkxnbkt2VUVub2VtMVpjcV9wWlc3eThzSFphM1JLelFfemstV01lRm9meW1SVFpTajFJQ3hSRHhtMWhpQTFENm4zdXRYQjc0SnFLckNiRFE4UU1DZHVEWFpzV1Zwc1p2VWVwWk9keXRNQ2s3QWJDZWF4b1ZNelJzbkh0UzU5MVZRNFZjOHl3OHUyTkpwM0FpdjhrdHBkVnpuLVJhZUJHRmhYcy04?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N134034-34",
+   "t": "13:40:34",
+   "ts": 1795853434.190628,
+   "pub": "13:30",
+   "lag_s": 591,
+   "symbol": "NLCINDIA",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "penalty"
+   ],
+   "headline": "NLC India faces \u20b910.47 lakh penalty from BSE and NSE for governance norms - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOcFpueHNCU1JGaGRmQWVrb2hxbFJ4Wl9UczBoYl9xaGhLSnlac1NXRkx5dWtxa2NkcVRSYV9uY3NVMGgwTWt3V1lLajNNblpneVBtZEpUb2Z4dXVDWnlrVUg1V0ZNMk1uTXBTVFRFUG1LNHhrNWJjWDVZYzVZczB6WktKQ1hBcy1FQVgtQlhDRWV5X2ZSQnNoMG80S3hDLV93c1JvbW1HZ0VaeVNObTdLemFjYnBBRDA?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N134034-33",
+   "t": "13:40:34",
+   "ts": 1795853434.190628,
+   "pub": "13:33",
+   "lag_s": 453,
+   "symbol": "BPCL",
+   "tone": "positive",
+   "score": 1.5,
+   "emotion": "Optimism",
+   "why": [
+    "approves"
+   ],
+   "headline": "BPCL board approves \u20b91.27 lakh crore refinery & petrochemical complex in Andhra Pradesh",
+   "source": "CNBC-TV18",
+   "link": "https://www.cnbctv18.com/market/stocks/bpcl-share-price-board-approves-rs-1-27-lakh-crore-refinery-and-petrochemical-complex-in-andhra-pradesh-20043571.htm",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N132029-32",
+   "t": "13:20:29",
+   "ts": 1795852229.183506,
+   "pub": "13:12",
+   "lag_s": 469,
+   "symbol": "RCF",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "fined"
+   ],
+   "headline": "Rashtriya Chemicals fined \u20b99.41 lakh each by NSE and BSE - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPYVh5UHFfN3BfWXNiTENyQU5TU2lpMncxbG1XbjFWNGRrS1RJbHN4akNITW5vZUVuVjhxSHVDeDA3LTJWZE9qY0JiRjJfX3FTN0R1dUVsSndXYktRUFFlLWthZG5WYkxQTjZVX2RPUW1VeTFIdlp2S3ppRE1oTy1Tc3JrR09BSTlEandTZnZ1eWhFSDZNem56bjIwLVZzOWZfYjdNX2RESWk?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N131023-31",
+   "t": "13:10:23",
+   "ts": 1795851623.236312,
+   "pub": "13:10",
+   "lag_s": 20,
+   "symbol": "VISHNU",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "acquisition"
+   ],
+   "headline": "VISHNU: Acquisition",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/VISHNU_28112026130946_Update_on_Acquisition_dt_28_11_2026_final_signed.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N131023-30",
+   "t": "13:10:23",
+   "ts": 1795851623.236312,
+   "pub": "13:05",
+   "lag_s": 304,
+   "symbol": "RCF",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "fined"
+   ],
+   "headline": "Rashtriya Chemicals and Fertilizers fined Rs. 9,41,640 by NSE and BSE each - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQnRoalhpZ3ZWOUFERmRaRDA1YXZqdzRpUkVfTlhLbE01VDJncFVFQjJaV1FDOGk5T1lmeFBaaW8wNDgxZHZHMDJpQllkZWNRQ09SVVEyWXdEV2xaN28wNXA1WXNLOFJzWVBjU1hkSWRtbDJ6ZkNoT01TcGNvWlVXQXI4QlZyNGQxaGxBQ09WeDJkNTI5TmRWeURBcy1QeDhCU3J1aGZTNndpOEFsQmxN?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N131023-29",
+   "t": "13:10:23",
+   "ts": 1795851623.236312,
+   "pub": "12:33",
+   "lag_s": 2219,
+   "symbol": "DALBHARAT",
+   "tone": "positive",
+   "score": 4.5,
+   "emotion": "Euphoria",
+   "why": [
+    "approves",
+    "buyback"
+   ],
+   "headline": "Dalmia Bharat Approves \u20b9700 Crore Share Buyback at \u20b91,850 Per Share, to Repurchase Up to 37.83 Lakh Shares - Kotak Neo",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxONTVrWE43LWhDUDFuZ0p0QlVmdUxoRDhHVjFScUZtSnpweGE4NldQSGJYeHFZQWdMUUV5NDBfVFV6amdnRmxOX2VrREphQlFySnY1eDlpMVR6VDdKM3JUREFoVFlERkVIMGVvWWluaHh6bWE5d000THQ2ZHc4SG01T25kT01ZVW9peHY5WkdsOHZLWGlkUVJQSmZNdDhacTJCbHdGV0ZYeHoxN2k4VFkxWjNvUUc4Y2xhVVJ2RTFJVnY3LVlLc3Nia2Q0MEV4YjZzZDZ4QnAzTQ?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N131023-28",
+   "t": "13:10:23",
+   "ts": 1795851623.236312,
+   "pub": "12:54",
+   "lag_s": 967,
+   "symbol": "ZEEL",
+   "tone": "positive",
+   "score": 3,
+   "emotion": "Optimism",
+   "why": [
+    "buyback"
+   ],
+   "headline": "Zee Entertainment Announces \u20b9600 Crore Buyback at \u20b991 per Share, Tender Window Opens on 1 December 2026 - Kotak Neo",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQNk5oVXlOY0VqRHpzbEx4MC1PdFhtMG1WTzlvRGJ0a2ZPb1hoR2EyODlQSDJlYzBtRjlOMVpXYWRzXzV2dUtkejlwaU1jR1hDb1o2MVJXTUpmejZjUHdJa1VURjF3dnhSTWFFbVdSVnd0cGgtVFpSNVFqRjdxR1N0MUp2ZWhmQ3Rsb09rLWZtNXg0T2RfUEZhemVGMHp3eXFFRjlVQVZxQ184U0hybkVDWDZwQkhSQXpiUXpv?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N125018-27",
+   "t": "12:50:18",
+   "ts": 1795850418.26669,
+   "pub": "12:47",
+   "lag_s": 146,
+   "symbol": "E2E",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "E2E: Bagging/Receiving of orders/contracts",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/E2E_28112026124250_E2E_SEBI_Reg30_Disclosure.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N124017-26",
+   "t": "12:40:17",
+   "ts": 1795849817.576802,
+   "pub": "12:32",
+   "lag_s": 439,
+   "symbol": "LTF",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "LTF: Resignation of Director/KMP/SMP",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/LTF_ROID_105322_KMP_Doc.zip",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N123011-25",
+   "t": "12:30:11",
+   "ts": 1795849211.186614,
+   "pub": "12:24",
+   "lag_s": 334,
+   "symbol": "GRSE",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "fined"
+   ],
+   "headline": "Garden Reach Shipbuilders fined \u20b99.77 lakh by NSE and BSE - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZlU2dDJuMUF2VVZoeFIzVkdTWjAzOHBQcWgtd2poVk9aeWdCRlRVTThMaWxSczg3OGV2Vkk2OG5RWkp2aWN5YmtnQXpSaFVkdUV2QlliYUFPMXlKbXpLYnFTbHkxYVA3UDBTdjlEYWEteXh4NHczUzBTdzBnSXRWTmQwMnZTU19tT2VBMlpMaE9CTjVyTnFCdWpaeDVWTVhZN2VHRjBUQnA4dw?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N121009-24",
+   "t": "12:10:09",
+   "ts": 1795848009.276607,
+   "pub": "12:04",
+   "lag_s": 366,
+   "symbol": "LTF",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "filing: negative"
+   ],
+   "headline": "LTF: Cessation",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/ltfinance_28112026120351_NSEBSEINTIMATION.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N114000-23",
+   "t": "11:40:00",
+   "ts": 1795846200.197695,
+   "pub": "11:29",
+   "lag_s": 604,
+   "symbol": "BHARATCOAL",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "fined"
+   ],
+   "headline": "Bharat Coking Coal fined \u20b911,94,160 by NSE and BSE for non-compliance - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcUJ5ejh0bzl2Yy1RV1NyaHo2VlhsUmdYdVIwZnhoc3dSZzlPMy1WRVV0Vm5ZaDRzM2ZoNUcxRy12eFZ0VEU3NTNETWJGTmJvNTFmSlY5SV80STFPSl9odkJnejBycmRTcWdLckRrVjF3aUFHckg4OUgtRWs0YmJjZUxTSE5MQlJuN1VWdF9qWG9vZjRfazh2X3M1OXlVYU5LM09Nb25hRGVaeEE?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N112957-22",
+   "t": "11:29:57",
+   "ts": 1795845597.971333,
+   "pub": "11:20",
+   "lag_s": 574,
+   "symbol": "BHARATCOAL",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "fined"
+   ],
+   "headline": "Bharat Coking Coal fined \u20b911.94 lakh by NSE and BSE for governance lapses - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNElxOWRuZGM3V1dFM1RCQloxM1VPbU5TM0RDeklrSV9zZEFXVjZOcTlGNEViT2xCN1dSVkR6YlFZcW5fUkVGUEVGd0t6Vm42RXp2TS0zRkFOQUhRN2F3bG84S1RIVWlMTlY1ZC1TLXZQSGxTVFFVaEdUbTBuemRoSVQxOXk3SjJoUm4xRl8xOWdqWXJ4a0hJQTZoZzg3M1IxdUdiSVRTRzlQVUMyMGtXV0Y2MlFtSExoZ1E?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N111952-21",
+   "t": "11:19:52",
+   "ts": 1795844992.006305,
+   "pub": "11:10",
+   "lag_s": 591,
+   "symbol": "APOLLO",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "approval"
+   ],
+   "headline": "Apollo Micro Systems receives in-principle approval for equity issuance - Business Upturn",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSzF0dDlPelhVYU1YWXR1MlR0YWdDbDhwcC0zb3JUWnFMT2Q0U0Y4Z3RPMVlTMUtrVFFwY2I1RUxQRmF5LXE4dFBiMk84VFJHSTlJYXFvaThBbEk2S0EtWUJTa2lQLUJXdnVGTURxUExRWXVmcmk5a2hEdWdlbTdZbmI0aU9ZQ2FxQW9zUjAyOG8zVkR2VkY0VnRuWkszdmoxcWcwbHF6VmVUWXdjMlpaNzR3?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N110949-20",
+   "t": "11:09:49",
+   "ts": 1795844389.226149,
+   "pub": "11:03",
+   "lag_s": 400,
+   "symbol": "HERITGFOOD",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "HERITGFOOD: Resignation of Director/KMP/SMP",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/HERITGFOOD_ROID_105319_KMP_Doc.zip",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N110949-19",
+   "t": "11:09:49",
+   "ts": 1795844389.226149,
+   "pub": "10:58",
+   "lag_s": 676,
+   "symbol": "APOLLO",
+   "tone": "positive",
+   "score": 2,
+   "emotion": "Optimism",
+   "why": [
+    "approval"
+   ],
+   "headline": "Apollo Micro Systems receives in-principle approval for preferential share issue - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOVlFKWTA5RUJGQjRJRWJ6Z0Fxb2szaE1nVkg4NC1iMUlvdkRpR0xWOVRzeW1vSU9sZVk4NGVzbVBXRUMya2pqYTFqSDhMNzFnbTdSMmNOdmV6bGxFZXY1bzZDVmtEemMtbmtsVUlyRFRfRkxNVXQ3OExVeFNhM3FBWkxhUHV3YWZuRldEMW93eGVUVGtudjJONXI0dWVyQ2ZUVFZWeXJWVWZUTTNqZmdpUnpjT0s3bGJMc0xBblE3ZWt3Zw?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N105944-18",
+   "t": "10:59:44",
+   "ts": 1795843784.492656,
+   "pub": "10:56",
+   "lag_s": 193,
+   "symbol": "HERITGFOOD",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "HERITGFOOD: Resignation",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/HERITGFOOD_28112026105620_SE_Intimation_CEO_Resignation.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N104942-17",
+   "t": "10:49:42",
+   "ts": 1795843182.856031,
+   "pub": "10:44",
+   "lag_s": 296,
+   "symbol": "JSWENERGY",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "JSWENERGY: General Updates",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/KRUTIKAJSWEL_28112026104316_Lettertobsensesapnasakar01sd.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N104942-16",
+   "t": "10:49:42",
+   "ts": 1795843182.856031,
+   "pub": "10:45",
+   "lag_s": 272,
+   "symbol": "BRITANNIA",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "resignation"
+   ],
+   "headline": "BRITANNIA: Resignation of Director/KMP/SMP",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/BRITANNIA_ROID_105317_KMP_Doc.zip",
+   "kind": "filing",
+   "status": "new"
+  },
+  {
+   "id": "N104942-15",
+   "t": "10:49:42",
+   "ts": 1795843182.856031,
+   "pub": "10:40",
+   "lag_s": 573,
+   "symbol": "COALINDIA",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "fined"
+   ],
+   "headline": "Coal India fined \u20b910.57 lakh each by BSE and NSE for compliance lapses - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOR3RlWGc5NDhHb3R4dmJqb0IwODRodEdYbzhJaEJVcHM4V21qOGJHdTRpblNuSEhWZnpnLXFmWlhSNFVMd0pmaDM1RFNGdFhkQ1VCTDRVMERsSHRYQXdaYWVSUFJYSERlQlJHeWFPNTdsdkMtbE9xU0JfU2FVSW1ocUJERGlUUnRxbmdmYklQMUt0UWYzX1FsZFJTMWxnSEhXTGNGQkF4Y3hUck5Na01hQ05tN1pPQQ?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
   {
    "id": "N095624-14",
    "t": "09:56:24",
@@ -319,11 +872,11 @@
   }
  ],
  "stats": {
-  "last_hour": 1,
+  "last_hour": 3,
   "positive": 1,
-  "negative": 0,
-  "today": 14,
-  "median_lag_min": 55.7,
-  "new_this_scan": 0
+  "negative": 2,
+  "today": 43,
+  "median_lag_min": 8.1,
+  "new_this_scan": 1
  }
 }
