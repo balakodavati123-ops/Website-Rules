@@ -213,50 +213,7 @@
    }
   },
   "thesis": {},
-  "detail": {
-   "FOODLINK|191.0": {
-    "lot_size": 78.0,
-    "issue_text": "Initial Public offer comprising of Fresh issue aggregating up to Rs. 1920 million and Offer for Sale of up to 8,835,382 Equity Shares",
-    "fresh_cr": 192.0,
-    "ofs_cr": 168.76,
-    "issue_size_cr": 360.76
-   },
-   "AIRPRO|99.0": {
-    "lot_size": 1200.0,
-    "issue_text": "Initial Public Offer comprising of Fresh Issue up to 29,20,000 Equity Shares and Offer for Sales up to 6,80,000 Equity Shares (Including Market maker portion of 1,80,000 Equity Shares)",
-    "fresh_cr": 28.91,
-    "ofs_cr": 6.73,
-    "issue_size_cr": 35.64
-   },
-   "AJPACK|180.0": {
-    "lot_size": 800.0,
-    "issue_text": "Initial Public Offer comprising of Fresh issue of up to 27,50,000 Equity Shares and Offer for sale up to 2,50,000 Equity Shares (including Market Maker portion of 1,50,400 Equity Shares)",
-    "fresh_cr": 49.5,
-    "ofs_cr": 4.5,
-    "issue_size_cr": 54.0
-   },
-   "MONOMARK|65.0": {
-    "lot_size": 225.0,
-    "issue_text": "Initial Public Offer comprising Fresh Issue of up to 2,70,00,000 equity shares",
-    "fresh_cr": 175.5,
-    "ofs_cr": null,
-    "issue_size_cr": 175.5
-   },
-   "MATANGI|172.0": {
-    "lot_size": 87.0,
-    "issue_text": "Initial Public Offering comprising of Fresh Issue up to 57,61,831 Equity shares and Offer for Sale upto 15,15,150 Equity Shares.",
-    "fresh_cr": 99.1,
-    "ofs_cr": 26.06,
-    "issue_size_cr": 125.16
-   },
-   "SWARA|111.0": {
-    "lot_size": 135.0,
-    "issue_text": "Initial Public offer comprising of Fresh issue aggregating up to Rs. 5,000 million and Offer for Sale of up to Rs. 3,000 million (Including Eligible Employee Reservation portion aggregating up to Rs. 12.50 million)",
-    "fresh_cr": 500.0,
-    "ofs_cr": 300.0,
-    "issue_size_cr": 800.0
-   }
-  }
+  "detail": {}
  },
  "notes": {
   "day": "2026-11-28",

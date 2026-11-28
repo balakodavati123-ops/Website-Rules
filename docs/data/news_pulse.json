@@ -1,54 +1,92 @@
 {
- "updated_at": "2026-11-28T05:06:49+05:30",
- "scans": 2735,
+ "updated_at": "2026-11-28T08:26:41+05:30",
+ "scans": 2755,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "05:06:49"
+   "at": "08:26:41"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "05:06:49"
+   "at": "08:26:41"
   },
   "Moneycontrol": {
-   "ok": false,
+   "ok": true,
    "items": 15,
-   "at": "05:06:49"
+   "at": "08:26:41"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "05:06:49"
+   "at": "08:26:41"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "05:06:49"
+   "at": "08:26:41"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "05:06:49"
+   "at": "08:26:41"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "05:06:49"
+   "at": "08:26:41"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "05:06:49"
+   "at": "08:26:41"
   },
   "Google News": {
-   "ok": false,
-   "items": 7,
-   "at": "05:06:49"
+   "ok": true,
+   "items": 10,
+   "at": "08:26:41"
   }
  },
  "signals": [
+  {
+   "id": "N064619-12",
+   "t": "06:46:19",
+   "ts": 1795828579.168884,
+   "pub": "05:50",
+   "lag_s": 3341,
+   "symbol": "DOLATALGO",
+   "tone": "negative",
+   "score": -2.5,
+   "emotion": "Fear",
+   "why": [
+    "penalty"
+   ],
+   "headline": "Dolat Algotech pays \u20b91.18 lakh penalty to NSE Clearing for limit breach - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZURCcmowU3NHay12bjRVRDhJaUVaem5iWEt5ZktrSUh3YjVpZnlXb3NwWldZOVVLN0tHN0xBLVprYnVBVFYyTldXNFd6VXlCOENoYzM4aDE1X1JxMnZtSmtNdUpIcDFBRnZlSVFPckl6aDhDbkNfQVNISlVqdjgzeHlid254Yy12SUJUNllJNkp4bGdTZF93bHNmSXhFU1JOYm5sS0tEZHl3MHVlWDA5cTJwTDV0TUhWTGlfNQ?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N055604-11",
+   "t": "05:56:04",
+   "ts": 1795825564.24757,
+   "pub": "05:53",
+   "lag_s": 153,
+   "symbol": "VIJSOLX",
+   "tone": "positive",
+   "score": 2.6,
+   "emotion": "Optimism",
+   "why": [
+    "acquires"
+   ],
+   "headline": "Deepak Vegpro acquires 653 Vijay Solvex shares, stake hits 69.69% - scanx.trade",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQMWFfZlJxQnhHbWN4Z0xmekFkVkNXUzNHMjJ6ZHZTTURvd2ZtT192SVVRWG42QW9aeERCLU9YZ281OXNhTTNLdllqLXY5S1pqdzdYdU80a2cwbHFFSnBCc1dVbjVZUEp5MnpSRGgySmctbmFkWll0UGRabFl1emM0amRheGZkcmh2V2ZTLXhrYi1ZZGZtV3JYRi10dXNha09RNUFJWFVmMURRd3Rtd2lrQU9MOGNub1Q2eTFKOExn?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
   {
    "id": "N030606-10",
    "t": "03:06:06",
@@ -245,8 +283,8 @@
   "last_hour": 0,
   "positive": 0,
   "negative": 0,
-  "today": 10,
-  "median_lag_min": 71.2,
+  "today": 12,
+  "median_lag_min": 55.7,
   "new_this_scan": 0
  }
 }
