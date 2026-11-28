@@ -19,7 +19,7 @@ An algorithmic trading desk for **NSE Equity and NIFTY F&O**, run by AI agents o
 | **Company floor** (front page) | **Desk TV** at the top, like a news channel: the company's P&L today with its line through the day and a tile per trading desk; **Attention**, the world moves, alerts and headlines that can move Indian markets; **COO desk**, the decisions waiting for you with Approve / Reject right there; and a breaking-news crawl. **⛶ Full screen** turns it into a wall screen. Below it, the live office floor with every team (section 1b). |
 | **Overview** | **Broker account**: wallet, holdings and today's positions from your Upstox account, refreshed every minute; the paper account until a broker token is connected. **Live trading**: the mode (Off / Practice / LIVE), your wallet, order tickets waiting for your **Approve / Reject**, the strategies allowed to ask, and today's orders (section 3). **NIFTY right now · all factors**: the live call and the main reasons (see section 4b). Also today's P/L, NIFTY today, agent ranking, open positions and **Close now** buttons. |
 | **Equity** | Equity desk P/L, open positions and trades (Open / Today / All days); top gainers, losers and most active; headlines; results filed; world markets; **Fundamentals** for any stock from TradingView (financials and a daily chart, BSE listing). |
-| **F&O** | **What's moving NIFTY and Sensex now** (section 4b): the live call, what world markets point to in NIFTY points, each factor's move and effect, breadth, heavyweights, sectors, India VIX, Bank Nifty, today's headline themes and alerts. **NIFTY today**: the mode (Quiet / Volatile / Highly volatile, from India VIX), the live all-factor call, the desk's own 10:00 trade tilt, the likely range, today's trade, the reasons in plain words. The NIFTY chart with the call drawn on it, the **live option chain** (21 strikes, best buyer and seller with quantities, volume, open contracts, a five-level order book), open trades by Today / Weekly / Monthly, and trade history per book. |
+| **F&O** | **EPM** on the option chain: each strike's target and stop if NIFTY makes its expected move (section 4). **What's moving NIFTY and Sensex now** (section 4b): the live call, what world markets point to in NIFTY points, each factor's move and effect, breadth, heavyweights, sectors, India VIX, Bank Nifty, today's headline themes and alerts. **NIFTY today**: the mode (Quiet / Volatile / Highly volatile, from India VIX), the live all-factor call, the desk's own 10:00 trade tilt, the likely range, today's trade, the reasons in plain words. The NIFTY chart with the call drawn on it, the **live option chain** (21 strikes, best buyer and seller with quantities, volume, open contracts, a five-level order book), open trades by Today / Weekly / Monthly, and trade history per book. |
 | **Charts** | Live 1-minute charts for F&O and Equity with EMA 20/50, VWAP, opening range, entries, stops, targets, expected exits and the order book; plus a chart for any NSE stock with your trades on it. |
 | **Backtest** | The **strategy research** results and the **approval queue**; the **backtester** (any of the strategies, any years, your own settings, exits that protect profit, the search for settings, patterns by day / week / month); the **NIFTY 1-minute database** (download). |
 | **Audit** | Every Equity and F&O trade with its planned **risk** (₹ to the stop), **reward** (₹ to the target), **R:R**, capital, order route (paper / practice / live), status and P/L. Filter by desk, status, period or text; tap a row for the trade's full reasoning. |
@@ -193,6 +193,44 @@ Each trade buys at most 2 lots: calls on up signals, puts on down signals. Each 
 - **A 5-year check on the index (2022–2026) agrees.** The profit factor before costs is 0.97–1.10.
 - **Why the reel looks convincing:** a reel shows chosen examples, while a backtest counts every signal.
 - **Try it yourself:** both rules are in the Backtest tab as "EMA9 / VWAP wick rejection (reel)" and "VWAP wick puts / EMA9 break calls".
+
+### EPM: the expected premium move, per strike (F&O tab → option chain → EPM buttons)
+**What it shows:** for every strike, where the premium should be if NIFTY makes its expected move, over the **rest of today**, **one session** or **to expiry**.
+- **Target:** the move goes in the option's favour (up for a call, down for a put).
+- **Stop:** the same move goes against it.
+- **If flat:** NIFTY doesn't move, so only time decay applies.
+- **Reward / risk per lot:** the target and stop distances times the lot size.
+
+Each open option trade on the F&O tab also shows its P/L if NIFTY rises, falls or stays flat by that move. Single-leg trades also show their EPM target and stop.
+
+**How it is worked out (`backend/epm.py`):**
+1. **The expected move** is one standard deviation: NIFTY × the at-the-money implied volatility × √time. About two days in three, NIFTY ends inside it.
+2. **Each strike is repriced** with Black-Scholes at NIFTY ± that move, minus the horizon's time decay. Each strike uses its own volatility.
+3. **Prices are taken off the forward NIFTY**, which is implied by the at-the-money call and put. Pricing off spot made calls look cheap and puts dear.
+4. **Time counts in trading minutes**, so weekends add no decay.
+
+**Tested on real NIFTY weekly option prices, 522 days, Oct 2024 – Nov 2026 (`quant/run_epm_exits.py`):**
+- **EPM predicts the premium well.**
+  - For the move NIFTY actually made between 10:00 and 15:15, the predicted premium change matched the real one with a **0.97 correlation**.
+  - The typical error was **about 5.5% of the premium** (about 10 points), and about 7% on big-move days.
+  - Real premiums ended about 5 points higher than predicted on average, so the model's intraday decay is slightly too fast.
+- **But the expected move rarely happens within the day.**
+  - NIFTY reached the full rest-of-day move upward on **11%** of days and downward on **13%**.
+  - The option prices imply about **32% per side**. Options are priced for more movement than NIFTY usually delivers, which is why buying them tends to lose.
+- **Exiting at EPM, buying 1 lot at the money at 10:00, out by 15:15, after full costs:**
+
+  | Exit rule | Call every day | Put every day | Desk's 10:00 direction (morning move) |
+  |---|---|---|---|
+  | Hold to 15:15 | PF 0.79, −₹1.99 L | PF 0.88, −₹96k | PF 0.87, −₹80k |
+  | Desk rule today: +50% / −35% | PF 0.85, −₹1.41 L | PF 0.89, −₹89k | PF 0.89, −₹67k |
+  | **EPM: target 1 move, stop ½ move against** | **PF 0.87, −₹1.18 L** | **PF 0.91, −₹73k** | **PF 0.92, −₹43k** |
+  | EPM: target 1 move, stop 1 move | PF 0.86, −₹1.31 L | PF 0.88, −₹99k | PF 0.91, −₹50k |
+  | EPM: target ½ move, stop 1 move | PF 0.80, −₹1.62 L | PF 0.90, −₹65k | PF 0.85, −₹73k |
+
+- **Reading the table:**
+  - "Target at the full expected move, stop at half a move against" beats today's +50% / −35% rule in all three columns. It cuts the loss on the desk's own 10:00 direction trade by about a third.
+  - **Every exit rule still loses**, because the entry has no edge and the options are priced for moves that rarely come. EPM is a better way to set a target and a stop; it does not make buying options profitable by itself.
+- Data status: VERIFIED_HISTORICAL (Upstox expired-option 1-minute candles). Results: `quant/results/epm_exits.json`.
 
 ### About "70–80% profits" on social media
 - Posts show winners and leave out the losers.

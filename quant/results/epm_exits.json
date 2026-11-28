@@ -1,0 +1,330 @@
+{
+ "generated": "2026-11-28T10:37:19+05:30",
+ "period": "2024-10-01 to 2026-11-27",
+ "days_tested": 522,
+ "days_skipped": 13,
+ "status": "VERIFIED_HISTORICAL: Upstox expired NIFTY weekly option 1-minute candles (cached), NIFTY 1-minute database",
+ "expected_move_reached_by_15_15_pct": {
+  "up_1sd": 11.3,
+  "down_1sd": 13.2,
+  "model_each_side_touch_pct": 31.7
+ },
+ "calibration": {
+  "CE": {
+   "days": 522,
+   "median_abs_error_pts": 11.2,
+   "median_abs_error_pct_of_premium": 5.6,
+   "corr": 0.972,
+   "bias_pts": 5.67,
+   "big_move_days": 146,
+   "big_move_median_abs_error_pct": 6.9
+  },
+  "PE": {
+   "days": 522,
+   "median_abs_error_pts": 8.53,
+   "median_abs_error_pct_of_premium": 5.4,
+   "corr": 0.968,
+   "bias_pts": 4.73,
+   "big_move_days": 146,
+   "big_move_median_abs_error_pct": 6.6
+  },
+  "all": {
+   "days": 1044,
+   "median_abs_error_pts": 9.79,
+   "median_abs_error_pct_of_premium": 5.5,
+   "corr": 0.97,
+   "bias_pts": 5.2,
+   "big_move_days": 292,
+   "big_move_median_abs_error_pct": 6.8
+  }
+ },
+ "results": {
+  "hold": {
+   "call every day": {
+    "trades": 522,
+    "win_rate": 39.1,
+    "profit_factor": 0.79,
+    "net_rs": -198551,
+    "avg_rs": -380,
+    "max_drawdown_rs": 213158,
+    "exits": {
+     "target": 0,
+     "stop": 0,
+     "time": 522
+    },
+    "best_rs": 23320,
+    "worst_rs": -13374
+   },
+   "put every day": {
+    "trades": 522,
+    "win_rate": 42.1,
+    "profit_factor": 0.88,
+    "net_rs": -96013,
+    "avg_rs": -184,
+    "max_drawdown_rs": 130690,
+    "exits": {
+     "target": 0,
+     "stop": 0,
+     "time": 522
+    },
+    "best_rs": 19311,
+    "worst_rs": -13492
+   },
+   "morning-move direction": {
+    "trades": 332,
+    "win_rate": 44.6,
+    "profit_factor": 0.87,
+    "net_rs": -80323,
+    "avg_rs": -242,
+    "max_drawdown_rs": 111764,
+    "exits": {
+     "target": 0,
+     "stop": 0,
+     "time": 332
+    },
+    "best_rs": 19311,
+    "worst_rs": -13492
+   }
+  },
+  "desk rule +50% / -35%": {
+   "call every day": {
+    "trades": 522,
+    "win_rate": 40.4,
+    "profit_factor": 0.85,
+    "net_rs": -141096,
+    "avg_rs": -270,
+    "max_drawdown_rs": 155195,
+    "exits": {
+     "target": 78,
+     "stop": 127,
+     "time": 317
+    },
+    "best_rs": 16264,
+    "worst_rs": -11158
+   },
+   "put every day": {
+    "trades": 522,
+    "win_rate": 42.0,
+    "profit_factor": 0.89,
+    "net_rs": -89290,
+    "avg_rs": -171,
+    "max_drawdown_rs": 111889,
+    "exits": {
+     "target": 103,
+     "stop": 115,
+     "time": 304
+    },
+    "best_rs": 10155,
+    "worst_rs": -10405
+   },
+   "morning-move direction": {
+    "trades": 332,
+    "win_rate": 45.2,
+    "profit_factor": 0.89,
+    "net_rs": -66939,
+    "avg_rs": -202,
+    "max_drawdown_rs": 110121,
+    "exits": {
+     "target": 57,
+     "stop": 94,
+     "time": 181
+    },
+    "best_rs": 14129,
+    "worst_rs": -11158
+   }
+  },
+  "EPM 1 / 1": {
+   "call every day": {
+    "trades": 522,
+    "win_rate": 40.8,
+    "profit_factor": 0.86,
+    "net_rs": -130769,
+    "avg_rs": -251,
+    "max_drawdown_rs": 151699,
+    "exits": {
+     "target": 87,
+     "stop": 40,
+     "time": 395
+    },
+    "best_rs": 15653,
+    "worst_rs": -12475
+   },
+   "put every day": {
+    "trades": 522,
+    "win_rate": 42.9,
+    "profit_factor": 0.88,
+    "net_rs": -99016,
+    "avg_rs": -190,
+    "max_drawdown_rs": 124282,
+    "exits": {
+     "target": 98,
+     "stop": 36,
+     "time": 388
+    },
+    "best_rs": 10155,
+    "worst_rs": -13123
+   },
+   "morning-move direction": {
+    "trades": 332,
+    "win_rate": 46.1,
+    "profit_factor": 0.91,
+    "net_rs": -50065,
+    "avg_rs": -151,
+    "max_drawdown_rs": 123087,
+    "exits": {
+     "target": 61,
+     "stop": 32,
+     "time": 239
+    },
+    "best_rs": 15653,
+    "worst_rs": -13123
+   }
+  },
+  "EPM 0.5 / 1": {
+   "call every day": {
+    "trades": 522,
+    "win_rate": 50.4,
+    "profit_factor": 0.8,
+    "net_rs": -161527,
+    "avg_rs": -309,
+    "max_drawdown_rs": 174718,
+    "exits": {
+     "target": 232,
+     "stop": 36,
+     "time": 254
+    },
+    "best_rs": 6829,
+    "worst_rs": -12475
+   },
+   "put every day": {
+    "trades": 522,
+    "win_rate": 56.7,
+    "profit_factor": 0.9,
+    "net_rs": -65288,
+    "avg_rs": -125,
+    "max_drawdown_rs": 95731,
+    "exits": {
+     "target": 272,
+     "stop": 31,
+     "time": 219
+    },
+    "best_rs": 5577,
+    "worst_rs": -13123
+   },
+   "morning-move direction": {
+    "trades": 332,
+    "win_rate": 57.5,
+    "profit_factor": 0.85,
+    "net_rs": -72935,
+    "avg_rs": -220,
+    "max_drawdown_rs": 107673,
+    "exits": {
+     "target": 169,
+     "stop": 27,
+     "time": 136
+    },
+    "best_rs": 5640,
+    "worst_rs": -13123
+   }
+  },
+  "EPM 1 / 0.5": {
+   "call every day": {
+    "trades": 522,
+    "win_rate": 39.7,
+    "profit_factor": 0.87,
+    "net_rs": -118459,
+    "avg_rs": -227,
+    "max_drawdown_rs": 142400,
+    "exits": {
+     "target": 86,
+     "stop": 162,
+     "time": 274
+    },
+    "best_rs": 15653,
+    "worst_rs": -10556
+   },
+   "put every day": {
+    "trades": 522,
+    "win_rate": 42.0,
+    "profit_factor": 0.91,
+    "net_rs": -72758,
+    "avg_rs": -139,
+    "max_drawdown_rs": 95614,
+    "exits": {
+     "target": 97,
+     "stop": 140,
+     "time": 285
+    },
+    "best_rs": 10155,
+    "worst_rs": -8195
+   },
+   "morning-move direction": {
+    "trades": 332,
+    "win_rate": 44.9,
+    "profit_factor": 0.92,
+    "net_rs": -42712,
+    "avg_rs": -129,
+    "max_drawdown_rs": 112743,
+    "exits": {
+     "target": 60,
+     "stop": 110,
+     "time": 162
+    },
+    "best_rs": 15653,
+    "worst_rs": -10556
+   }
+  },
+  "EPM 1 / none": {
+   "call every day": {
+    "trades": 522,
+    "win_rate": 40.8,
+    "profit_factor": 0.85,
+    "net_rs": -137387,
+    "avg_rs": -263,
+    "max_drawdown_rs": 154356,
+    "exits": {
+     "target": 87,
+     "stop": 0,
+     "time": 435
+    },
+    "best_rs": 15653,
+    "worst_rs": -13374
+   },
+   "put every day": {
+    "trades": 522,
+    "win_rate": 42.9,
+    "profit_factor": 0.88,
+    "net_rs": -98012,
+    "avg_rs": -188,
+    "max_drawdown_rs": 124095,
+    "exits": {
+     "target": 98,
+     "stop": 0,
+     "time": 424
+    },
+    "best_rs": 10155,
+    "worst_rs": -13492
+   },
+   "morning-move direction": {
+    "trades": 332,
+    "win_rate": 46.1,
+    "profit_factor": 0.91,
+    "net_rs": -51283,
+    "avg_rs": -154,
+    "max_drawdown_rs": 114644,
+    "exits": {
+     "target": 61,
+     "stop": 0,
+     "time": 271
+    },
+    "best_rs": 15653,
+    "worst_rs": -13492
+   }
+  }
+ },
+ "unavailable": 0,
+ "fallbacks": 0,
+ "network_calls": 6,
+ "cache_hits": 1872,
+ "seconds": 22
+}

@@ -8,12 +8,16 @@ is instead the live all-factor call, updated every minute, and the desk's tilt i
 (VIX / sqrt(252) for a full day, scaled by the square root of the time left): about two days in three NIFTY stays inside it.
 
 chain_snapshot(): strikes around the index for one expiry, each side's last price, best bid and ask with quantities, volume, open interest and
-its change today, plus five levels of the order book for the strikes nearest the money.
+its change today, five levels of the order book for the strikes nearest the money, and each strike's EPM (expected premium move, backend/epm.py):
+its price if NIFTY moves its expected amount in its favour (target), against it (stop), or not at all, over the rest of today, one session, or
+to expiry. trade_epm(): the same for every open option trade, as the position's P/L if NIFTY rises, falls or stays put.
 """
 from __future__ import annotations
 
 import math
-from datetime import datetime
+from datetime import date, datetime
+
+import epm as EPM
 
 MODES = ((13.0, "MODE_1_QUIET", "Quiet", "a calm market with small, slow moves"),
          (18.0, "MODE_2_VOLATILE", "Volatile", "a normal, lively market"),
@@ -152,6 +156,74 @@ def depth_keys(rows: list[dict], spot: float, n: int = 2) -> list[str]:
     return out
 
 
+def _px(side: dict) -> float | None:
+    """The price to value an option at: the middle of the best bid and ask when the quote is sound, else the last trade."""
+    b, a, l = side.get("bid") or 0, side.get("ask") or 0, side.get("ltp") or 0
+    if b > 0 and a > 0 and a >= b and (a - b) <= max(1.0, 0.05 * (a + b) / 2):
+        return round((a + b) / 2, 2)
+    return l or None
+
+
+def add_epm(out: list[dict], spot: float, expiry: str, lot: int, now: datetime) -> dict:
+    """EPM (backend/epm.py) for every strike in the snapshot, written into each side as side['epm'] = {horizon: {target, stop, ...}}."""
+    try:
+        E = date.fromisoformat(expiry)
+    except Exception:
+        return {"ok": False, "why": "no expiry"}
+    res = EPM.chain([{"k": r["k"], "ce": _px(r["ce"]), "pe": _px(r["pe"])} for r in out], spot, E, now, lot)
+    for r in out:
+        x = res["strikes"].get(r["k"]) or {}
+        for s_ in ("ce", "pe"):
+            if x.get(s_):
+                r[s_]["epm"] = x[s_]
+    return res["meta"]
+
+
+def trade_epm(trades: list[dict], chains: dict, spot: float, now: datetime) -> dict:
+    """For each open NIFTY option trade: what each leg should be worth, and the position's P/L, if NIFTY moves its expected amount up,
+    down, or not at all over the rest of today (one session when the market is closed). chains: {expiry: Upstox chain rows}."""
+    out = {}
+    for t in trades:
+        if t.get("desk") != "FNO" or t.get("status") != "OPEN" or not t.get("legs") or not chains.get(t.get("expiry")):
+            continue
+        rows = chains[t["expiry"]]
+        snap = [{"k": r["strike_price"], "ce": _px(_side(r.get("call_options"))), "pe": _px(_side(r.get("put_options")))} for r in rows]
+        try:
+            E = date.fromisoformat(t["expiry"])
+        except Exception:
+            continue
+        T_min = EPM.trading_minutes_to(E, now)
+        F = EPM.forward(snap, spot)
+        iv0 = EPM.atm_iv(snap, F, T_min)
+        left = EPM.minutes_left(now)
+        h = left if left >= 15 else EPM.DAY_MIN
+        if not iv0 or T_min <= 0:
+            continue
+        mv = EPM.expected_move(spot, iv0, h)
+        units = int(t.get("lot") or 0) * int(t.get("qty") or 1)
+        legs, pnl = [], {"up": 0.0, "down": 0.0, "flat": 0.0}
+        ok = True
+        for l in t["legs"]:
+            k, kind = float(l.get("strike") or 0), l.get("kind")
+            row = next((x for x in snap if float(x["k"]) == k), None)
+            px = row and row[kind.lower()]
+            iv = EPM.implied_vol(px, F, k, EPM.years(T_min), kind) if px else None
+            e = EPM.epm(F, k, kind, px, T_min, iv, mv, h) if iv else None
+            if not e:
+                ok = False
+                break
+            up, dn = (e["target"], e["stop"]) if kind == "CE" else (e["stop"], e["target"])
+            sg = 1 if l["side"] == "B" else -1
+            for sc, v in (("up", up), ("down", dn), ("flat", e["if_flat"])):
+                pnl[sc] += sg * (v - px) * units
+            legs.append({"strike": k, "kind": kind, "side": l["side"], "now": px, "if_up": up, "if_down": dn, "if_flat": e["if_flat"],
+                         "target": e["target"] if l["side"] == "B" else e["stop"], "stop": e["stop"] if l["side"] == "B" else e["target"]})
+        if ok:
+            out[t["id"]] = {"move": round(mv), "horizon": "rest of today" if h == left else "one session", "legs": legs,
+                            "pnl_if": {k: round(v) for k, v in pnl.items()}}
+    return out
+
+
 def chain_snapshot(rows: list[dict], spot: float, expiry: str, lot: int, now: datetime, quotes: dict | None = None, width: int = 10) -> dict:
     ks = sorted({r["strike_price"] for r in rows})
     if not ks or not spot:
@@ -167,4 +239,5 @@ def chain_snapshot(rows: list[dict], spot: float, expiry: str, lot: int, now: da
             dep[k] = {"buy": [[x.get("price"), x.get("quantity"), x.get("orders")] for x in d.get("buy") or []][:5],
                       "sell": [[x.get("price"), x.get("quantity"), x.get("orders")] for x in d.get("sell") or []][:5],
                       "tbq": q.get("total_buy_quantity"), "tsq": q.get("total_sell_quantity")}
-    return {"at": now.strftime("%H:%M:%S"), "day": now.strftime("%Y-%m-%d"), "expiry": expiry, "spot": round(spot, 2), "atm": atm, "lot": lot, "rows": out, "depth": dep}
+    meta = add_epm(out, spot, expiry, lot, now)
+    return {"at": now.strftime("%H:%M:%S"), "day": now.strftime("%Y-%m-%d"), "expiry": expiry, "spot": round(spot, 2), "atm": atm, "lot": lot, "rows": out, "depth": dep, "epm": meta}

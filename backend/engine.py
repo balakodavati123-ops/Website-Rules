@@ -1142,7 +1142,9 @@ def run() -> None:
                                                       mac["last"] if (mac["last"] or {}).get("day") == today else None))
                     rows0 = chains.get(exps[0]) or []
                     if rows0 and spot:
-                        save("fno_chain.json", FV.chain_snapshot(rows0, spot, exps[0], ctx["lot"], now, U.quotes(FV.depth_keys(rows0, spot), token)))
+                        cs_ = FV.chain_snapshot(rows0, spot, exps[0], ctx["lot"], now, U.quotes(FV.depth_keys(rows0, spot), token))
+                        cs_["trades"] = FV.trade_epm(xb["trades"], chains, spot, now)          # each open option trade at NIFTY's expected move up, down or flat
+                        save("fno_chain.json", cs_)
                 except Exception as e:
                     import traceback
                     traceback.print_exc()
