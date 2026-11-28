@@ -28,7 +28,7 @@
  "strategies": [
   {
    "strategy": "crypto_breakout",
-   "team": "crypto",
+   "team": null,
    "desk": "CRYPTO",
    "stage": "BUILT",
    "closed": 9,
@@ -85,7 +85,7 @@
   },
   {
    "strategy": "mcx_pullback",
-   "team": "mcx",
+   "team": null,
    "desk": "COMMODITY",
    "stage": "BUILT",
    "closed": 7,
@@ -142,7 +142,7 @@
   },
   {
    "strategy": "long_straddle",
-   "team": "fno",
+   "team": "intraday",
    "desk": "FNO",
    "stage": "BUILT",
    "closed": 6,
@@ -199,7 +199,7 @@
   },
   {
    "strategy": "ema_vwap_cross",
-   "team": "fno",
+   "team": "intraday",
    "desk": "FNO",
    "stage": "BUILT",
    "closed": 5,
@@ -256,7 +256,7 @@
   },
   {
    "strategy": "long_breakout",
-   "team": "fno",
+   "team": "intraday",
    "desk": "FNO",
    "stage": "BUILT",
    "closed": 5,
@@ -370,7 +370,7 @@
   },
   {
    "strategy": "debit_spread",
-   "team": "fno",
+   "team": "intraday",
    "desk": "FNO",
    "stage": "BUILT",
    "closed": 3,
@@ -484,7 +484,7 @@
   },
   {
    "strategy": "credit_spread",
-   "team": "fno",
+   "team": "intraday",
    "desk": "FNO",
    "stage": "BUILT",
    "closed": 2,
@@ -598,7 +598,7 @@
   },
   {
    "strategy": "iron_condor",
-   "team": "fno",
+   "team": "intraday",
    "desk": "FNO",
    "stage": "BUILT",
    "closed": 2,
@@ -655,7 +655,7 @@
   },
   {
    "strategy": "short_strangle",
-   "team": "fno",
+   "team": "intraday",
    "desk": "FNO",
    "stage": "BUILT",
    "closed": 2,
@@ -826,7 +826,7 @@
   },
   {
    "strategy": "weekly_bull_put_spread",
-   "team": "fno",
+   "team": "intraday",
    "desk": "FNO",
    "stage": "BUILT",
    "closed": 1,
@@ -940,7 +940,7 @@
   },
   {
    "strategy": "weekly_iron_butterfly",
-   "team": "fno",
+   "team": "intraday",
    "desk": "FNO",
    "stage": "BUILT",
    "closed": 1,
@@ -997,7 +997,7 @@
   },
   {
    "strategy": "weekly_iron_condor",
-   "team": "fno",
+   "team": "intraday",
    "desk": "FNO",
    "stage": "BUILT",
    "closed": 1,
@@ -1396,7 +1396,7 @@
   },
   {
    "strategy": "crypto_dip_bounce",
-   "team": "crypto",
+   "team": null,
    "desk": "CRYPTO",
    "stage": "TESTED",
    "closed": 19,
@@ -1456,7 +1456,7 @@
   },
   {
    "strategy": "mcx_momentum",
-   "team": "mcx",
+   "team": null,
    "desk": "COMMODITY",
    "stage": "TESTED",
    "closed": 19,

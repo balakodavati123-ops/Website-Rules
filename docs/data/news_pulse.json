@@ -1,54 +1,93 @@
 {
- "updated_at": "2026-11-28T08:26:41+05:30",
- "scans": 2755,
+ "updated_at": "2026-11-28T10:36:34+05:30",
+ "scans": 2769,
  "feeds": {
   "ET Markets": {
    "ok": true,
    "items": 50,
-   "at": "08:26:41"
+   "at": "10:36:34"
   },
   "ET Stocks": {
    "ok": true,
    "items": 50,
-   "at": "08:26:41"
+   "at": "10:36:34"
   },
   "Moneycontrol": {
    "ok": true,
    "items": 15,
-   "at": "08:26:41"
+   "at": "10:36:34"
   },
   "Mint": {
    "ok": true,
    "items": 35,
-   "at": "08:26:41"
+   "at": "10:36:34"
   },
   "Business Standard": {
    "ok": true,
    "items": 35,
-   "at": "08:26:41"
+   "at": "10:36:34"
   },
   "BusinessLine": {
    "ok": true,
    "items": 60,
-   "at": "08:26:41"
+   "at": "10:36:34"
   },
   "NDTV Profit": {
    "ok": true,
    "items": 20,
-   "at": "08:26:41"
+   "at": "10:36:34"
   },
   "CNBC-TV18": {
    "ok": true,
    "items": 200,
-   "at": "08:26:41"
+   "at": "10:36:34"
   },
   "Google News": {
    "ok": true,
    "items": 10,
-   "at": "08:26:41"
+   "at": "10:36:34"
   }
  },
  "signals": [
+  {
+   "id": "N095624-14",
+   "t": "09:56:24",
+   "ts": 1795839984.536252,
+   "pub": "09:36",
+   "lag_s": 1186,
+   "symbol": "TATASTEEL",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "rally",
+    "gains"
+   ],
+   "headline": "Market weekly wrap: NIFTY50, SENSEX end 4-week rally; Tata Steel lags, TCS leads gains - Upstox",
+   "source": "Google News",
+   "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPNHRVLXBOMlc0UlhQeUMzN0ZFamtwdTdCOVhGdUhWVXFFNkctUkN4cGlJd0R2c0lEYVZabzZrMU1uN1dyc2lLOEtWbnJMZVFpbDU2VFpnbVNNWjJVQThqUUhoa2dSZWFyRFZMT00xYU55OGF5Q2g2NUx5NVdMM1UzN3BMS2FVTG9LdTh3RlRiQ01jSTREN0NOekYzQVZCSlhKWTlmSWJmaHh6ZFRWQlFHN3NtanVrU3ZjU2JtMG50QkNpdU1VTWQ5SzRZcXFUNG1nUS1JWm9QRDJJUQ?oc=5",
+   "kind": "headline",
+   "status": "new"
+  },
+  {
+   "id": "N082923-13",
+   "t": "08:29:23",
+   "ts": 1795834763.496064,
+   "pub": "07:11",
+   "lag_s": 4687,
+   "symbol": "KEC",
+   "tone": "positive",
+   "score": 2.5,
+   "emotion": "Optimism",
+   "why": [
+    "filing: positive"
+   ],
+   "headline": "KEC: Bagging/Receiving of orders/contracts",
+   "source": "NSE filing",
+   "link": "https://nsearchives.nseindia.in/corporate/KEC_28112026071011_PressRelease.pdf",
+   "kind": "filing",
+   "status": "new"
+  },
   {
    "id": "N064619-12",
    "t": "06:46:19",
@@ -280,10 +319,10 @@
   }
  ],
  "stats": {
-  "last_hour": 0,
-  "positive": 0,
+  "last_hour": 1,
+  "positive": 1,
   "negative": 0,
-  "today": 12,
+  "today": 14,
   "median_lag_min": 55.7,
   "new_this_scan": 0
  }

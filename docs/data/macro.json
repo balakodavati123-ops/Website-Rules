@@ -1,5 +1,5 @@
 {
- "at": "08:28:33",
+ "at": "10:39:14",
  "day": "2026-11-28",
  "session": "closed",
  "ref": {
@@ -23,10 +23,10 @@
  "banknifty": null,
  "vix": null,
  "implied": {
-  "nifty_pct": 0.103,
-  "nifty_pts": 26.7,
-  "sensex_pct": 0.102,
-  "sensex_pts": 85.8,
+  "nifty_pct": 0.1,
+  "nifty_pts": 25.9,
+  "sensex_pct": 0.098,
+  "sensex_pts": 82.6,
   "missing": [],
   "session_pct": null,
   "session_pts": null
@@ -38,13 +38,13 @@
    "key": "usdinr",
    "name": "Dollar in rupees",
    "symbol": "INR=X",
-   "last": 92.98,
-   "chg_pct": -0.0,
-   "as_of": "28 Nov 03:39",
+   "last": 92.99,
+   "chg_pct": 0.01,
+   "as_of": "28 Nov 09:00",
    "weighted": true,
    "beta": -0.3471,
-   "effect_pct": 0.0,
-   "effect_pts": 0.0,
+   "effect_pct": -0.004,
+   "effect_pts": -1.0,
    "why": "A weaker rupee drives foreign investors out and makes oil imports dearer",
    "note": null,
    "stale": false,
@@ -163,6 +163,54 @@
    "via": null
   },
   {
+   "key": "silver",
+   "name": "Silver",
+   "symbol": "SI=F",
+   "last": 43.7,
+   "chg_pct": 3.84,
+   "as_of": "28 Nov 01:14",
+   "weighted": false,
+   "beta": null,
+   "effect_pct": null,
+   "effect_pts": null,
+   "why": "Follows gold and industrial demand",
+   "note": null,
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "copper",
+   "name": "Copper",
+   "symbol": "HG=F",
+   "last": 5.6,
+   "chg_pct": 1.97,
+   "as_of": "28 Nov 01:14",
+   "weighted": false,
+   "beta": null,
+   "effect_pct": null,
+   "effect_pts": null,
+   "why": "Leads metal stocks; reads China's demand",
+   "note": null,
+   "stale": false,
+   "via": null
+  },
+  {
+   "key": "natgas",
+   "name": "Natural gas",
+   "symbol": "NG=F",
+   "last": 3.49,
+   "chg_pct": -5.14,
+   "as_of": "28 Nov 01:14",
+   "weighted": false,
+   "beta": null,
+   "effect_pct": null,
+   "effect_pts": null,
+   "why": "Moves city gas and fertiliser companies",
+   "note": null,
+   "stale": false,
+   "via": null
+  },
+  {
    "key": "us10y",
    "name": "US 10-year yield",
    "symbol": "^TNX",
@@ -244,8 +292,8 @@
   }
  ],
  "news_tone": {
-  "headlines": 22,
-  "bad": 1,
+  "headlines": 19,
+  "bad": 3,
   "good": 3
  },
  "big_moves": [],
@@ -255,13 +303,13 @@
   {
    "key": "rates",
    "label": "RBI, rates and inflation",
-   "count": 21,
-   "neg": 0,
+   "count": 15,
+   "neg": 1,
    "pos": 3,
    "latest": {
-    "headline": "India swaps, treasury bills signal possibility of outsized RBI rate hike next week",
-    "source": "CNBC-TV18",
-    "time": "28 Nov 08:27"
+    "headline": "NSE secures RBI approval for corporate bond index futures",
+    "source": "BusinessLine",
+    "time": "28 Nov 10:36"
    }
   },
   {
@@ -271,45 +319,45 @@
    "neg": 0,
    "pos": 0,
    "latest": {
-    "headline": "GAIL share price: UBS sees positive impact from proposed gas pipeline tariff reforms",
+    "headline": "Trump tariff threat unlikely to shake markets; AI stock valuations a concern: Richard Harris",
     "source": "CNBC-TV18",
-    "time": "28 Nov 08:27"
+    "time": "28 Nov 10:36"
    }
   },
   {
-   "key": "us",
-   "label": "the US markets and the Fed",
+   "key": "rupee",
+   "label": "the rupee and the dollar",
    "count": 2,
    "neg": 1,
    "pos": 0,
    "latest": {
-    "headline": "Gold price forecast: Fed rate hike in December may limit recovery to \u20b91.30 lakh per 10 grams by 2026-end, says expert - Livemint",
-    "source": "GoogleNews-Business",
-    "time": "28 Nov 08:22"
+    "headline": "Rupee plunges 24 paise to 92.62 against US dollar in early trade",
+    "source": "BusinessLine",
+    "time": "28 Nov 10:36"
    }
   },
   {
    "key": "crude",
    "label": "crude oil",
    "count": 1,
-   "neg": 0,
+   "neg": 1,
    "pos": 0,
    "latest": {
-    "headline": "Brent crude crosses $96 a barrel mark after Houthis attack key Saudi refinery",
-    "source": "CNBC-TV18",
-    "time": "28 Nov 08:22"
+    "headline": "Sensex plunges 989 points as crude prices rise, IT stocks and HDFC Bank drag - Telegraph India",
+    "source": "GoogleNews",
+    "time": "28 Nov 10:36"
    }
   },
   {
-   "key": "rupee",
-   "label": "the rupee and the dollar",
+   "key": "us",
+   "label": "the US markets and the Fed",
    "count": 1,
    "neg": 0,
    "pos": 0,
    "latest": {
-    "headline": "Canadian dollar holds on to weekly gain as investors bet on December rate hike",
+    "headline": "Is a US Fed rate hike confirmed in Dec meet? How will it impact Sensex, Nifty, Gold as US PCE inflation rises in October",
     "source": "Mint",
-    "time": "28 Nov 08:27"
+    "time": "28 Nov 10:36"
    }
   }
  ],
@@ -317,8 +365,7 @@
   "NIFTY is down 277 points (-1.07%) at 25,607 at its last close (27 Nov); Sensex -1.17%.",
   "S&P 500 futures is up 0.8% since NIFTY's last close: on past days that has meant about +34 NIFTY points.",
   "US dollar index is up 0.2% since NIFTY's last close: on past days that has meant about -9 NIFTY points.",
-  "India's own news today is mostly good for the market: 3 good and 1 bad among 22 headlines on these themes (shown for context: headlines are not part of the tested call).",
-  "Today's headlines: 21 on RBI, rates and inflation, 3 on war, attacks, sanctions and tariffs, 2 on the US markets and the Fed, 1 on crude oil. Latest on RBI, rates and inflation: \"India swaps, treasury bills signal possibility of outsized RBI rate hike next week\"."
+  "Today's headlines: 15 on RBI, rates and inflation, 3 on war, attacks, sanctions and tariffs, 2 on the rupee and the dollar, 1 on crude oil. Latest on RBI, rates and inflation: \"NSE secures RBI approval for corporate bond index futures\"."
  ],
  "model": {
   "r2": 0.201,
@@ -326,6 +373,19 @@
   "from": "2022-01-04",
   "to": "2026-11-25"
  },
- "world_at": "08:25:24",
- "alerts": []
+ "world_at": "10:39:14",
+ "alerts": [
+  {
+   "key": "2026-11-28:silver:+1",
+   "at": "09:36",
+   "title": "Silver +3.8%",
+   "body": "Silver is up 3.8% since NIFTY's last close. Follows gold and industrial demand."
+  },
+  {
+   "key": "2026-11-28:natgas:-1",
+   "at": "09:36",
+   "title": "Natural gas -5.1%",
+   "body": "Natural gas is down 5.1% since NIFTY's last close. Moves city gas and fertiliser companies."
+  }
+ ]
 }
