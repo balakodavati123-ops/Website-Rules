@@ -13,10 +13,10 @@ GURPURB = {"name": "Guru Nanak Jayanti", "closed": ["NSE", "NFO", "CDS", "BSE", 
 def test_sessions_close_nse_and_fno_on_a_holiday_and_keep_mcx_to_its_window(monkeypatch):
     monkeypatch.setattr(EN, "HOL", {"day": "2026-11-24", "at": 0.0, **GURPURB})
     noon, evening = datetime(2026, 11, 24, 12, 0, tzinfo=IST), datetime(2026, 11, 24, 18, 0, tzinfo=IST)
-    assert EN.sessions(noon) == {"equity": False, "fno": False, "mcx": False, "crypto": True}
+    assert EN.sessions(noon) == {"equity": False, "fno": False, "mcx": False, "crypto": False}
     assert EN.sessions(evening)["mcx"] and not EN.sessions(evening)["fno"]
     nxt = datetime(2026, 11, 25, 12, 0, tzinfo=IST)                                  # yesterday's holiday never closes today's market
-    assert EN.sessions(nxt) == {"equity": True, "fno": True, "mcx": True, "crypto": True}
+    assert EN.sessions(nxt) == {"equity": True, "fno": True, "mcx": True, "crypto": False}
 
 
 def test_trades_booked_on_a_closed_market_are_voided(monkeypatch):

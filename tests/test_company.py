@@ -41,7 +41,12 @@ def test_floor_shows_every_team_with_three_agents_and_what_they_do():
     assert [t["id"] for t in v["teams"]] == [t["id"] for t in CO.TEAMS]
     sc = v["teams"][0]
     assert len(sc["agents"]) == 3 and sc["agents"][2]["doing"].startswith("Holding 1") and "1-minute" in sc["agents"][0]["doing"]
-    assert v["coo"]["name"] == "Raghav" and v["teams"][3]["today"]["trades"] == 1
+    assert v["coo"]["name"] == "Raghav" and v["teams"][1]["today"]["trades"] == 1              # a same-day F&O trade is the intraday desk's
+    assert "crypto" not in [t["id"] for t in v["teams"]] and {"mcx", "news", "lab"} <= {t["id"] for t in v["teams"]}
+    fo = next(x for x in v["teams"][1]["staff"] if x["role"] == "F&O intraday trader")
+    assert "NIFTY option" in fo["doing"]
+    held = CO.build(CO.new_state(), datetime(2026, 11, 19, 11, 0, tzinfo=IST), [tr(3, desk="FNO", strat="weekly_iron_condor") | {"horizon": "weekly"}], [], {"sessions": {"equity": True}})
+    assert held["teams"][3]["today"]["trades"] == 1                                       # a held structure stays with the positional F&O desk
 
 
 def test_end_of_day_bonuses():
@@ -80,9 +85,9 @@ def test_ceo_reject_keeps_the_team_and_pause_resume_work():
     now = datetime(2026, 11, 19, 12, 0, tzinfo=IST)
     CO.apply(st, {"kind": "reject", "arg": "r1"}, now)
     assert "mcx_pullback" not in CO.paused_strategies(st, {"mcx_pullback"}, {})
-    CO.apply(st, {"kind": "pause", "arg": "crypto"}, now)
-    assert st["paused_teams"] == ["crypto"]
-    CO.apply(st, {"kind": "resume", "arg": "Crypto desk"}, now)
+    CO.apply(st, {"kind": "pause", "arg": "swing"}, now)
+    assert st["paused_teams"] == ["swing"]
+    CO.apply(st, {"kind": "resume", "arg": "Swing & signals"}, now)
     assert st["paused_teams"] == []
 
 
@@ -104,12 +109,12 @@ def test_designations_follow_the_record_and_the_floor_has_flows():
     team = {t["id"]: t for t in v["teams"]}
     assert "eco" not in team["intraday"] and st["effort"]["intraday"] == CO.BASE_EFFORT                    # no hunger: the hunters always hunt actively
     staff = team["intraday"]["staff"]
-    assert len(staff) == 7 and staff[-1]["designation"] == "Manager" and staff[-1]["name"] == "Vikram" and {x["designation"] for x in staff[:-1]} == {"Associate"}
-    assert {"lab", "ipo"} <= set(team) and team["lab"]["staff"][0]["role"] == "Research agent"
+    assert len(staff) == 6 and staff[-1]["designation"] == "Manager" and staff[-1]["name"] == "Vikram" and {x["designation"] for x in staff[:-1]} == {"Associate"}
+    assert {"lab", "news", "mcx"} <= set(team) and team["lab"]["staff"][0]["role"] == "Research agent" and team["lab"]["staff"][1]["role"] == "Backtest agent"
     wins = [tr(i, desk="EQUITY", strat="momentum", pnl=120.0, setup="momentum", day="2026-11-18") for i in range(8)] + \
            [tr(20 + i, desk="EQUITY", strat="momentum", pnl=-60.0, status="LOSS", why="stop", setup="momentum", day="2026-11-18") for i in range(4)]
     v = CO.build(st, morning, wins + [tr(99, desk="EQUITY", strat="momentum", status="OPEN", pnl=10.0, setup="momentum")], [], {"sessions": open_ses})
-    mom = next(x for x in next(t for t in v["teams"] if t["id"] == "intraday")["staff"] if x["role"] == "Momentum scanner")
+    mom = next(x for x in next(t for t in v["teams"] if t["id"] == "intraday")["staff"] if x["role"] == "Gap & momentum scanner")
     assert mom["designation"] == "Senior Associate" and mom["record"]["basis"] == "own trades" and any(m["kind"] == "promotion" for m in v["messages"])
     assert any(f["kind"] == "idea" and f["from"] == mom["id"] and f["to"] == "intraday-m" for f in v["flows"]) and any(f["to"] == "coo" for f in v["flows"])
     assert v["ceo"]["name"] == "Balaji" and v["pnl"]["open"] == 1

@@ -2,7 +2,7 @@
 
 What it watches
   World      the rupee (USD/INR), Brent and WTI crude, the US dollar index, S&P 500 and Nasdaq futures, Nikkei, Hang Seng, Shanghai,
-             Euro Stoxx, gold, the US 10-year yield and US VIX (Yahoo Finance, 15-minute bars, fetched about every two minutes).
+             Euro Stoxx, gold, silver, copper, natural gas, the US 10-year yield and US VIX (Yahoo Finance, 15-minute bars, fetched about every two minutes).
   India      NIFTY, Sensex, Bank Nifty and India VIX (Upstox, real time); breadth of the NIFTY 50 stocks; the heavyweights' share of the
              move; sector baskets that react to crude, the rupee and rates (oil marketers, IT, banks, ...).
   News       today's headlines grouped into themes: crude, the rupee, RBI and rates, the Fed and US markets, war and sanctions, fund flows.
@@ -42,6 +42,9 @@ FACTORS = [
     ("hsi", "^HSI", "Hang Seng", "hsi", "Asia and China risk mood"),
     ("wti", "CL=F", "WTI crude", None, "US crude: confirms or questions Brent's move"),
     ("gold", "GC=F", "Gold", None, "Rises when investors run for safety"),
+    ("silver", "SI=F", "Silver", None, "Follows gold and industrial demand"),
+    ("copper", "HG=F", "Copper", None, "Leads metal stocks; reads China's demand"),
+    ("natgas", "NG=F", "Natural gas", None, "Moves city gas and fertiliser companies"),
     ("us10y", "^TNX", "US 10-year yield", None, "Higher US yields pull money toward US bonds"),
     ("nq", "NQ=F", "Nasdaq futures", None, "Leads Indian IT stocks"),
     ("vix_us", "^VIX", "US fear index (VIX)", None, "Rising means investors worldwide are nervous"),
@@ -85,12 +88,12 @@ THEMES = [
     ("rupee", "the rupee and the dollar", r"\b(rupee|forex|usd/inr|dollar)s?\b"),
     ("rates", "RBI, rates and inflation", r"\b(rbi|repo rate|rate hikes?|rate cuts?|yields?|bonds?|inflation|cpi|wpi|crr)\b"),
     ("us", "the US markets and the Fed", r"\b(fed|powell|fomc|us treasury|us treasuries|us yields?|us bonds?|wall street|nasdaq|dow jones|s&p 500)\b"),
-    ("geo", "war, attacks, sanctions and tariffs", r"\b(wars?|attacks?|attacked|missiles?|houthis?|iran|israel|russia|ukraine|sanctions?|tariffs?|conflict)\b"),
+    ("geo", "war, attacks, sanctions and tariffs", r"\b(wars?|attacks?|attacked|missiles?|houthis?|iran|israel|russia|ukraine|sanctions?|conflict|(trade|import|reciprocal|us|trump)\s+tariffs?|tariffs?\s+on)\b"),
     ("flows", "foreign and domestic fund flows", r"\b(fiis?|fpis?|foreign investors?|foreign funds?|diis?|outflows?|inflows?)\b"),
     ("economy", "India's economy and policy", r"\b(gdp|union budget|gst|fiscal deficit|trade deficit|current account|iip|pmi)\b"),
 ]
 CUTS = ("10:15", "11:15", "12:15", "13:15")
-LIVE24 = {"usdinr", "brent", "wti", "dxy", "es", "nq", "gold"}        # trade nearly round the clock: no fresh price for 2 hours means a feed gap
+LIVE24 = {"usdinr", "brent", "wti", "dxy", "es", "nq", "gold", "silver", "copper", "natgas"}        # trade nearly round the clock: no fresh price for 2 hours means a feed gap
 MON = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
 
 
@@ -519,7 +522,7 @@ def alerts(out: dict, state: dict, now: datetime) -> list[dict]:
         if k not in sent:
             sent[k] = {"at": now.strftime("%H:%M"), "title": title, "body": body, "new": True}
             new.append(k)
-    lv = {"brent": 2.0, "wti": 2.0, "usdinr": 0.35, "dxy": 0.6, "es": 1.0, "n225": 2.0, "hsi": 2.0, "vix_us": 10.0, "us10y": 3.0}
+    lv = {"brent": 2.0, "wti": 2.0, "usdinr": 0.35, "dxy": 0.6, "es": 1.0, "n225": 2.0, "hsi": 2.0, "vix_us": 10.0, "us10y": 3.0, "gold": 2.0, "silver": 3.0, "copper": 2.5, "natgas": 5.0}
     for r in out.get("factors") or []:
         th, c = lv.get(r["key"]), r.get("chg_pct")
         if th and c is not None and abs(c) >= th:

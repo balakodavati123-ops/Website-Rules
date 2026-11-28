@@ -1,4 +1,6 @@
-"""Balaji Trading Desk: the company. Teams of agents per market, a strategy lab, an IPO desk, a COO who supervises them all, and the CEO.
+"""Balaji Trading Desk: the company. Trading teams for Equity and F&O (intraday with the scalping desk's help, swing, positional F&O),
+watch teams that report what can move Indian markets (commodities, global news, market intelligence), a strategy lab that backtests
+continuously, a COO who supervises them all, and the CEO. The crypto desk was closed on 28 Nov 2026.
 
 Every agent is a set of written rules (and, where a Claude API key is set, a Claude model for reading and writing) running in this program;
 what each one is doing is read from live data, never invented. Designations follow the record: every new agent starts as an Associate and is
@@ -19,24 +21,23 @@ COO = {"name": "Raghav", "role": "COO"}
 TEAMS = [
     {"id": "scalp", "name": "Scalping desk", "bucket": "scalp", "source": "upstox", "sources": ["upstox", "indmoney"], "agents": [("Riya", "Lead analyst"), ("Dev", "Quant analyst"), ("Kabir", "Trading manager")],
      "analysts": ["Universe scanner", "VWAP pullback hunter", "Volatility quant", "Charges quant"], "names": ["Asha", "Riya", "Dev", "Mihir"], "color": "#22d3ee"},
-    {"id": "intraday", "name": "Intraday hunters", "bucket": "intraday", "source": "news", "sources": ["upstox", "nse", "news"], "agents": [("Ananya", "Lead analyst"), ("Ishaan", "Quant analyst"), ("Vikram", "Trading manager")],
-     "analysts": ["Filings hunter", "Headlines hunter", "Gap scanner", "Momentum scanner", "VWAP pressure scanner", "Risk quant"], "names": ["Ananya", "Farah", "Kunal", "Divya", "Manav", "Ishaan"], "color": "#f97316"},
+    {"id": "intraday", "name": "Intraday desk · Equity + F&O", "bucket": "intraday", "source": "news", "sources": ["upstox", "nse", "news"], "agents": [("Ananya", "Lead analyst"), ("Ishaan", "Quant analyst"), ("Vikram", "Trading manager")],
+     "analysts": ["Filings & headlines hunter", "Gap & momentum scanner", "F&O intraday trader", "Scalping link", "Risk quant"], "names": ["Ananya", "Farah", "Kunal", "Divya", "Ishaan"], "color": "#f97316"},
     {"id": "swing", "name": "Swing & signals", "bucket": "swing", "source": "upstox", "sources": ["upstox", "nse"], "agents": [("Meera", "Lead analyst"), ("Rohan", "Quant analyst"), ("Arjun", "Trading manager")],
      "analysts": ["Breakout analyst", "Trend analyst", "Dip analyst", "Signal desk", "Backtest quant"], "names": ["Meera", "Gautam", "Leela", "Sana", "Rohan"], "color": "#84cc16"},
-    {"id": "fno", "name": "F&O desk", "bucket": "FNO", "source": "upstox", "sources": ["upstox", "nse"], "agents": [("Neha", "Lead analyst"), ("Siddharth", "Quant analyst"), ("Karan", "Trading manager")],
+    {"id": "fno", "name": "F&O desk · positional", "bucket": "FNO", "source": "upstox", "sources": ["upstox", "nse"], "agents": [("Neha", "Lead analyst"), ("Siddharth", "Quant analyst"), ("Karan", "Trading manager")],
      "analysts": ["NIFTY chain reader", "Bank Nifty chain reader", "OI & participants", "IV vs realised quant", "Margin checker"], "names": ["Neha", "Varun", "Anjali", "Siddharth", "Tanvi"], "color": "#a78bfa"},
-    {"id": "mcx", "name": "Commodities desk", "bucket": "COMMODITY", "source": "upstox", "sources": ["upstox", "yahoo"], "agents": [("Pooja", "Lead analyst"), ("Aditya", "Quant analyst"), ("Zoya", "Trading manager")],
-     "analysts": ["Gold 1 g", "Silver 1 kg", "Crude oil mini", "Natural gas mini", "Margin quant"], "names": ["Pooja", "Irfan", "Rekha", "Vivek", "Aditya"], "color": "#f59e0b"},
-    {"id": "crypto", "name": "Crypto desk", "bucket": "CRYPTO", "source": "kraken", "sources": ["kraken"], "agents": [("Tara", "Lead analyst"), ("Nikhil", "Quant analyst"), ("Sam", "Trading manager")],
-     "analysts": ["BTC", "ETH", "SOL", "XRP", "DOGE", "ADA", "Volatility quant"], "names": ["Tara", "Kiran", "Ayaan", "Mira", "Zubin", "Esha", "Nikhil"], "color": "#ec4899"},
+    {"id": "mcx", "name": "Commodities watch", "bucket": None, "source": "yahoo", "sources": ["upstox", "yahoo"], "agents": [("Pooja", "Lead analyst"), ("Aditya", "Impact quant"), ("Zoya", "Desk manager")],
+     "analysts": ["Crude oil analyst", "Precious metals analyst", "Base metals analyst", "Energy analyst", "Impact quant"], "names": ["Pooja", "Irfan", "Rekha", "Vivek", "Aditya"], "color": "#f59e0b"},
     {"id": "intel", "name": "Market intelligence", "bucket": None, "source": "news", "sources": ["nse", "yahoo", "news", "upstox", "claude"], "agents": [("Priya", "Lead analyst"), ("Aryan", "Quant analyst"), ("Ira", "Chief forecaster")],
      "analysts": ["World markets", "Smart money", "Option walls", "Headlines desk", "Forecast quant"], "names": ["Priya", "Rahul", "Shreya", "Aman", "Aryan"], "color": "#38bdf8"},
-    {"id": "lab", "name": "Strategy lab", "bucket": None, "source": "github", "sources": ["github", "claude"], "agents": [("Priyanka", "Research agent"), ("Lakshmi", "Evaluation agent"), ("Vikas", "Lab manager")],
-     "analysts": ["Research agent", "Implementation agent", "Evaluation agent", "Review agent", "Data engineer"], "names": ["Priyanka", "Omar", "Lakshmi", "Joseph", "Rhea"], "color": "#10b981"},
-    {"id": "ipo", "name": "IPO desk", "bucket": None, "source": "nse", "sources": ["nse", "news", "claude"], "agents": [("Kavya", "Lead analyst"), ("Harsh", "Valuation quant"), ("Hari", "IPO manager")],
-     "analysts": ["DRHP reader", "Subscription tracker", "IPO news reader", "Valuation quant"], "names": ["Kavya", "Yash", "Nisha", "Harsh"], "color": "#ef4444"},
+    {"id": "lab", "name": "Strategy lab", "bucket": None, "source": "github", "sources": ["github", "claude"], "agents": [("Priyanka", "Research agent"), ("Lakshmi", "Backtest agent"), ("Vikas", "Lab manager")],
+     "analysts": ["Research agent", "Backtest agent", "Evaluation agent", "Review agent", "Data engineer"], "names": ["Priyanka", "Omar", "Lakshmi", "Joseph", "Rhea"], "color": "#10b981"},
+    {"id": "news", "name": "Global news desk", "bucket": None, "source": "news", "sources": ["news", "yahoo", "claude"], "agents": [("Kavya", "Lead editor"), ("Harsh", "Impact quant"), ("Hari", "News manager")],
+     "analysts": ["Global headlines reader", "Geopolitics watcher", "Central banks watcher", "Impact scorer"], "names": ["Kavya", "Yash", "Nisha", "Harsh"], "color": "#ef4444"},
 ]
-SOURCES = [("nse", "NSE"), ("upstox", "Upstox"), ("indmoney", "INDmoney"), ("kraken", "Kraken"), ("yahoo", "Yahoo Finance"), ("news", "News feeds"), ("claude", "Claude AI"), ("github", "CEO inbox (GitHub)")]
+WATCH = ("mcx", "intel", "lab", "news")              # teams that research and report; they place no trades
+SOURCES = [("nse", "NSE"), ("upstox", "Upstox"), ("indmoney", "INDmoney"), ("yahoo", "Yahoo Finance"), ("news", "News feeds"), ("claude", "Claude AI"), ("github", "CEO approvals")]
 TEAM_AWARD, COO_AWARD = 500, 1000
 BASE_EFFORT, MAX_EFFORT = 2, 3            # the intraday hunters and scalpers always hunt actively; an extra Associate hired by the COO widens the scan
 SENIOR = {"trades": 10, "win_rate": 45.0}
@@ -49,10 +50,14 @@ def kind_of(title: str) -> str:
 
 
 def team_of(t: dict) -> str | None:
+    """The team a trade belongs to. F&O trades closed the same day are the intraday desk's; held structures are the positional F&O desk's.
+    Commodity and crypto trades belong to no team now (the commodities desk only watches; crypto was closed)."""
     d, s = t.get("desk"), str(t.get("strategy") or "")
     if d == "EQUITY":
         return "scalp" if s.startswith("scalp") else "swing" if t.get("opened") in ("swing", "signal") else "intraday"
-    return {"FNO": "fno", "COMMODITY": "mcx", "CRYPTO": "crypto"}.get(d)
+    if d == "FNO":
+        return "fno" if t.get("horizon") in ("weekly", "monthly") else "intraday"
+    return None
 
 
 def new_state() -> dict:
@@ -155,6 +160,8 @@ def build(st: dict, now: datetime, trades: list[dict], stats: list[dict], ctx: d
     for k_ in ("eco", "mood"):
         st.pop(k_, None)
     _hiring(st, now, ctx, sum(float(t.get("pnl_rs") or 0) for t in trades if t.get("day") == today and team_of(t) == "intraday"))
+    sc_td = [t for t in by_team["scalp"] if t["day"] == today]
+    ctx = {**ctx, "scalp_today": {"trades": len(sc_td), "pnl": round(sum(float(t.get("pnl_rs") or 0) for t in sc_td), 2)}}
     vstat = {(s["strategy"]): s for s in stats}
     strat_team = {t["strategy"]: team_of(t) for t in trades if team_of(t)}
     teams, notes = [], []
@@ -173,7 +180,7 @@ def build(st: dict, now: datetime, trades: list[dict], stats: list[dict], ctx: d
         research, quant, trader = _doing(tid, spec, td, opn, T, rec, ctx, now)
         agents = [{"name": n, "role": r, "doing": d, "tokens": st["tokens"].get(n, 0)} for (n, r), d in zip(spec["agents"], (research, quant, trader))]
         ses = ctx.get("sessions") or {}
-        session = bool(ses.get("crypto") if tid == "crypto" else ses.get("mcx") if tid == "mcx" else ses.get("fno") if tid == "fno" else ses.get("equity"))
+        session = True if tid in ("news", "lab") else bool(ses.get("mcx") or ses.get("fno")) if tid == "mcx" else bool(ses.get("fno")) if tid == "fno" else bool(ses.get("equity"))
         if tid in ("intraday", "scalp"):
             hired = [h for h in st["hires"] if h["team"] == tid and h["day"] == today]
             st["effort"][tid] = min(MAX_EFFORT, BASE_EFFORT + len(hired))
@@ -190,7 +197,7 @@ def build(st: dict, now: datetime, trades: list[dict], stats: list[dict], ctx: d
             notes.append({"team": tid, "level": "warn", "text": f"{spec['name']}: targets hit {rec['target_hits']} times against {rec['expected_hits']} expected by pure chance (z {rec['edge_z']}): no edge so far."})
         rj = Q.team_numbers([t for t in T if t.get("setup")]) if tid == "intraday" else rec          # the hunters are judged on their own trades, not the desk's older rules
         losing = rj.get("n", 0) >= 20 and (rj.get("net_rs") or 0) < 0 and ((rj.get("edge_z") is not None and rj["edge_z"] <= -1.5) or (rj.get("win_rate") or 0) < 30)
-        if losing and not any(r.get("kind") == "team" and r["team"] == tid and r["status"] == "pending" for r in st["requests"]) and tid not in st["paused_teams"]:
+        if tid not in WATCH and losing and not any(r.get("kind") == "team" and r["team"] == tid and r["status"] == "pending" for r in st["requests"]) and tid not in st["paused_teams"]:
             rid = f"R{now:%y%m%d}-{tid}-{len(st['requests']) + 1}"
             st["requests"].append({"id": rid, "team": tid, "strategy": None, "kind": "team", "status": "pending", "created": now.strftime("%d %b %H:%M"),
                                    "text": f"{spec['name']} keeps losing: {rj['n']} closed trades, net {_fmt(rj.get('net_rs') or 0)}, {rj.get('win_rate')}% won. May I pause the team so the strategy lab can rebuild it? It keeps its open trades until they close."})
@@ -224,7 +231,7 @@ def build(st: dict, now: datetime, trades: list[dict], stats: list[dict], ctx: d
     # end of day: bonuses
     if now.weekday() < 5 and hhmm >= "15:45" and today not in st["awarded"]:
         st["awarded"] = (st["awarded"] + [today])[-30:]
-        race = [t for t in teams if t["id"] not in ("intel", "lab", "ipo") and t["today"]["trades"]]
+        race = [t for t in teams if t["id"] not in WATCH and t["today"]["trades"]]
         best = max(race, key=lambda t: t["today"]["pnl"]) if race else None
         if best and best["today"]["pnl"] > 0:
             give(st, now, "team:" + best["id"], TEAM_AWARD, f"best team today ({_fmt(best['today']['pnl'])})")
@@ -245,7 +252,7 @@ def build(st: dict, now: datetime, trades: list[dict], stats: list[dict], ctx: d
     pending = [r for r in st["requests"] if r["status"] == "pending"]
     active = sum(1 for t in teams if t["today"]["trades"])
     comp_today = round(sum(t["today"]["pnl"] for t in teams), 2)
-    leader = max([t for t in teams if t["id"] not in ("intel", "lab", "ipo") and t["today"]["trades"]], key=lambda t: t["today"]["pnl"], default=None)
+    leader = max([t for t in teams if t["id"] not in WATCH and t["today"]["trades"]], key=lambda t: t["today"]["pnl"], default=None)
     coo = {**COO, "tokens": st["tokens"].get(COO["name"], 0), "notes": notes[:12], "requests": pending + [r for r in st["requests"] if r["status"] != "pending"][-5:],
            "doing": f"Supervising {len(teams)} teams: {active} traded today, company {_fmt(comp_today)}." + (f" {len(pending)} request{'s' if len(pending) > 1 else ''} waiting for you." if pending else "") +
                     (f" Bonus race leader: {leader['name']} ({_fmt(leader['today']['pnl'])})." if leader and leader["today"]["pnl"] > 0 else "")}
@@ -277,17 +284,21 @@ def _seats(spec: dict, tid: str, td: list[dict], opn: list[dict], ctx: dict, ses
     if tid == "intraday":
         d, heads = ctx.get("intraday_diag") or {}, ctx.get("headlines") or {}
         found, on = d.get("found") or {}, d.get("setups_on") or []
-        seat("Filings hunter", "active" if d.get("news_names") else "idle", f"{d.get('news_names', 0)} companies filed news today that leans one way")
         last = (ctx.get("pulse") or [])[-1:]
-        seat("Headlines hunter", "active" if heads else "idle", (f"{len(heads)} news signal(s) with the desk: " + ", ".join(f"{k} ({v.get('emotion') or v.get('tone')})" for k, v in list(heads.items())[-4:]) +
-             (f". Latest {last[0]['t'][:5]}: {last[0]['headline'][:70]}" if last else "")) if heads else "Reading every market feed once a minute: no headline in the last 3 hours names one company and leans one way")
-        for k, title in (("gap", "Gap scanner"), ("momentum", "Momentum scanner"), ("vwap", "VWAP pressure scanner")):
-            f = found.get(k) or []
-            if k not in on:
-                seat(title, "resting", "Off duty: the COO switches it on when the desk needs a wider scan")
-            else:
-                seat(title, "active" if f else "idle", f"{len(f)} candidate(s) now: {', '.join(f[:4])}" if f else f"Scanning {d.get('scanned', 0)} liquid stocks: nothing meets the rule right now")
-        seat("Risk quant", "holding" if opn else "idle", "Sizes each trade to Rs 150 of risk: stop just beyond VWAP, target 2R, stop moved to entry after a 1R gain")
+        seat("Filings & headlines hunter", "active" if heads or d.get("news_names") else "idle",
+             (f"{d.get('news_names', 0)} filings and {len(heads)} headline signal(s) lean one way: " + ", ".join(f"{k} ({v.get('emotion') or v.get('tone')})" for k, v in list(heads.items())[-3:])
+              + (f". Latest {last[0]['t'][:5]}: {last[0]['headline'][:60]}" if last else "")) if heads or d.get("news_names") else "Reading every filing and market headline once a minute: nothing names one company and leans one way yet")
+        cands = [x for k in ("gap", "momentum", "vwap") if k in on for x in (found.get(k) or [])]
+        seat("Gap & momentum scanner", "active" if cands else "idle", f"{len(cands)} candidate(s) now: {', '.join(cands[:5])}" if cands else f"Scanning {d.get('scanned', 0)} liquid stocks for gaps, momentum and VWAP pressure")
+        fo = [t for t in td if t.get("desk") == "FNO"]
+        fo_open = [t for t in fo if t["status"] == "OPEN"]
+        seat("F&O intraday trader", "holding" if fo_open else "active" if fo else "idle",
+             (f"{len(fo)} NIFTY option trade(s) today; " + "; ".join(f"{t['label']} {t['status'].lower()} {_fmt(float(t.get('pnl_rs') or 0))}" for t in fo[-2:])) if fo else
+             "Today's NIFTY option trades: the 10:00 trade and the EMA9 / VWAP book, all closed by 15:15")
+        sc = ctx.get("scalp_today") or {}
+        seat("Scalping link", "active" if sc.get("trades") else "idle", (f"The scalping desk's 1-minute setups today: {sc['trades']} trade(s), {_fmt(sc.get('pnl') or 0)}; their VWAP and volume reads feed our entries")
+             if sc.get("trades") else "Takes the scalping desk's 1-minute VWAP and volume reads for timing entries")
+        seat("Risk quant", "holding" if opn else "idle", "Sizes each trade from the stop distance; stop beyond VWAP, target 2R, stop to entry after 1R; every trade closed by 15:15")
     elif tid == "scalp":
         n = ctx.get("scalp_n") or 0
         seat("Universe scanner", "active" if n else "idle", f"{n} liquid names on 1-minute bars" if n else "Waiting for the session")
@@ -310,33 +321,52 @@ def _seats(spec: dict, tid: str, td: list[dict], opn: list[dict], ctx: dict, ses
         seat("IV vs realised quant", "active" if fs else "idle", f"ATM straddle {fs.get('straddle')} points: the market prices about ±{fs['straddle'] / fs['spot'] * 100:.2f}% to {fs['expiry']}" if fs.get("straddle") and fs.get("spot") else "Compares implied with realised volatility to pick buying or selling")
         sk = [x for x in ((ctx.get("via") or {}).get("skipped") or []) if x.get("desk") == "FNO"]
         seat("Margin checker", "alert" if sk else "idle", f"{len(sk)} structure(s) skipped today: the broker's margin did not fit" if sk else "Every structure is checked with the broker's margin calculator")
-    elif tid in ("mcx", "crypto"):
-        live = {x["name"]: x for x in (ctx.get("mcx") if tid == "mcx" else ctx.get("crypto")) or []}
-        for title in spec["analysts"][:-1]:
-            x, hold = live.get(title), [t for t in opn if str(t.get("label", "")).startswith(title) or t.get("symbol") == title]
-            mv = x and abs(x.get("chg_pct") or 0) >= (0.8 if tid == "mcx" else 1.0)
-            seat(title, "holding" if hold else "active" if mv else "idle", (f"{x['chg_pct']:+.2f}% today" + (", in a trade" if hold else ", moving: watching for an entry" if mv else "")) if x else "No price yet")
-        seat(spec["analysts"][-1], "idle", "Checks margin and noise before every trade" if tid == "mcx" else "Sets stop and target from each coin's own volatility")
+    elif tid == "mcx":
+        F = {f["key"]: f for f in ((ctx.get("macro") or {}).get("factors") or [])}
+        mv = lambda k: F.get(k) or {}
+        txt = lambda k, unit="": (f"{mv(k)['name']} {unit}{mv(k)['last']:,.2f} ({mv(k)['chg_pct']:+.1f}%)" if mv(k).get("last") is not None and mv(k).get("chg_pct") is not None else None)
+        hot = lambda *ks: "alert" if any(abs(mv(k).get("chg_pct") or 0) >= 2 for k in ks) else "active" if any(mv(k).get("last") is not None for k in ks) else "idle"
+        crude = [x for x in (txt("brent", "$"), txt("wti", "$"), txt("mcx_crude", "Rs ")) if x]
+        seat("Crude oil analyst", hot("brent", "wti", "mcx_crude"), ("; ".join(crude) + f". About {mv('brent').get('effect_pts') or 0:+,.0f} NIFTY points. Dearer crude hurts oil marketers, paints and airlines and weakens the rupee")
+             if crude else "Waiting for crude prices")
+        pm = [x for x in (txt("gold", "$"), txt("silver", "$")) if x]
+        seat("Precious metals analyst", hot("gold", "silver"), ("; ".join(pm) + ". A jump means investors are running for safety; it moves jewellers and gold loan companies") if pm else "Waiting for gold and silver")
+        seat("Base metals analyst", hot("copper"), (txt("copper", "$") + ". Copper leads metal stocks (Hindalco, Tata Steel, Vedanta) and reads China's demand") if txt("copper", "$") else "Waiting for copper")
+        seat("Energy analyst", hot("natgas"), (txt("natgas", "$") + ". Natural gas moves city gas and fertiliser companies") if txt("natgas", "$") else "Waiting for natural gas")
+        sec = {x["name"]: x for x in (((ctx.get("macro") or {}).get("india") or {}).get("sectors") or [])}
+        om, op = sec.get("Oil marketers"), sec.get("Oil producers")
+        seat("Impact quant", "active" if om or op else "idle", (f"In India now: oil marketers {om['chg_pct']:+.1f}%, oil producers {op['chg_pct']:+.1f}%" if om and op else
+             "Measures how much each commodity has moved NIFTY on past days (crude alone has been a weak guide; the rupee carries most of it)"))
     elif tid == "lab":
-        lab = ctx.get("lab") or {}
+        lab, rs = ctx.get("lab") or {}, ctx.get("research") or {}
         cnt = {x["stage"]: x["n"] for x in lab.get("stages") or []}
         rows = lab.get("strategies") or []
         inv = [r["strategy"] for r in rows if r["stage"] == "INVESTIGATE"]
-        seat("Research agent", "active" if cnt.get("PROPOSED") else "idle", f"{cnt.get('PROPOSED', 0)} improved version(s) proposed, waiting for your approval" if cnt.get("PROPOSED") else "Reads every losing streak for an idea worth testing")
-        seat("Implementation agent", "active" if (lab.get("experiments") or []) else "idle", f"{len(lab.get('experiments') or [])} new version(s) running on paper" if lab.get("experiments") else "Builds approved versions as new paper strategies")
-        seat("Evaluation agent", "active" if rows else "idle", f"Testing {len(rows)} strategies: {cnt.get('BUILT', 0)} built, {cnt.get('TESTED', 0)} tested, {cnt.get('APPROVED', 0)} approved, {cnt.get('INVESTIGATE', 0)} to investigate" if rows else "Waiting for closed trades")
-        seat("Review agent", "alert" if inv else "idle", ("Challenging " + ", ".join(x.replace("_", " ") for x in inv[:3]) + ": failed a check") if inv else "Audits every check before a strategy is approved")
+        sw, rd = rs.get("swing") or {}, (rs.get("swing") or {}).get("random") or {}
+        when = str(rs.get("generatedAt") or "")[:16].replace("T", " ")
+        seat("Research agent", "active" if rs else "idle", (f"Builds new strategies from {len(rs.get('families') or [])} families of rules: {sum(a.get('strategies', 0) for a in rs.get('agents') or [])} intraday and "
+             f"{sw.get('tried', 0)} multi-day in the last run ({when} UTC)") if rs else "Builds new strategies from combinations of entries, exits, stops and filters")
+        seat("Backtest agent", "active" if rs else "idle", (f"Backtests every strategy on NIFTY's 1-minute history after each close: {sw.get('passTest', 0)} multi-day strategies passed all three periods; "
+             f"{(rs.get('targets') or {}).get('option.test', 0)} intraday ones survive option costs") if rs else "Backtests every new strategy after each close")
+        seat("Evaluation agent", "active" if rows else "idle", f"Paper records of {len(rows)} strategies: {cnt.get('TESTED', 0)} tested, {cnt.get('APPROVED', 0)} approved, {cnt.get('INVESTIGATE', 0)} to investigate" if rows else "Waiting for closed paper trades")
+        seat("Review agent", "alert" if inv else "active" if rd else "idle", ("Challenging " + ", ".join(x.replace("_", " ") for x in inv[:3]) + ": failed a check") if inv else
+             (f"Luck check: {rd.get('passTest', 0)} of {rd.get('tried', 0)} random-entry strategies also passed, so a pass must beat that" if rd else "Audits every check before a strategy reaches your approval queue"))
         fresh = [k for k, v in (ctx.get("sources") or {}).items() if (v or {}).get("status") in ("warn", "off")]
-        seat("Data engineer", "alert" if fresh else "active", ("Data gaps: " + ", ".join(fresh[:4])) if fresh else "Every data feed is fresh")
-    elif tid == "ipo":
-        ipo = ctx.get("ipo") or {}
-        L_ = ipo.get("ipos") or []
-        opn_i = [x for x in L_ if x.get("status") == "open"]
-        seat("DRHP reader", "active" if ipo.get("drhp_recent") else "idle", f"{len(ipo.get('drhp_recent') or [])} recent draft prospectuses filed with SEBI" if ipo.get("drhp_recent") else "Waiting for SEBI's list of draft prospectuses")
-        seat("Subscription tracker", "active" if opn_i else "idle", (f"{len(opn_i)} IPO(s) open: " + ", ".join(x.get("name", "")[:18] for x in opn_i[:3])) if opn_i else f"{len(L_)} upcoming or recent issues on NSE")
-        seat("IPO news reader", "active" if any(x.get("news") for x in L_) else "idle", f"Headlines for {sum(1 for x in L_ if x.get('news'))} issue(s)")
-        apply_ = [x for x in L_ if str((x.get("analysis") or {}).get("verdict", "")).startswith("Apply")]
-        seat("Valuation quant", "active" if apply_ else "idle", (f"{len(apply_)} issue(s) worth one lot: " + ", ".join(x.get("name", "")[:18] for x in apply_[:3])) if apply_ else "Scores each issue on subscription, size and offer-for-sale share")
+        seat("Data engineer", "alert" if fresh else "active", ("Data gaps: " + ", ".join(fresh[:4])) if fresh else "Adds each day's 1-minute candles to the database after the close; every feed is fresh")
+    elif tid == "news":
+        M = ctx.get("macro") or {}
+        th = {x["key"]: x for x in M.get("themes") or []}
+        tone = M.get("news_tone") or {}
+        lat = lambda *ks: next((th[k]["latest"]["headline"] for k in ks if k in th), None)
+        seat("Global headlines reader", "active" if th else "idle", (f"{tone.get('headlines', 0)} market-moving headlines today: {tone.get('bad', 0)} bad, {tone.get('good', 0)} good for Indian shares")
+             if th else "Reading every market feed for crude, the rupee, rates, wars and fund flows")
+        g = th.get("geo")
+        seat("Geopolitics watcher", "alert" if g and g.get("neg", 0) >= 2 else "active" if g else "idle", f"{g['count']} on wars, attacks, sanctions and tariffs. Latest: {lat('geo')}" if g else "No war, sanctions or tariff headline today")
+        cb = [th[k] for k in ("rates", "us") if k in th]
+        seat("Central banks watcher", "active" if cb else "idle", (f"{sum(x['count'] for x in cb)} on RBI, the Fed, rates and inflation. Latest: {lat('rates', 'us')}") if cb else "Watching RBI, the Fed, bond yields and inflation")
+        al = M.get("alerts") or []
+        seat("Impact scorer", "alert" if al else "active" if M.get("big_moves") else "idle", (f"{len(al)} alert(s) today; latest {al[0]['at']}: {al[0]['title']}") if al else
+             f"{len(M.get('big_moves') or [])} big move(s) in world prices; ranks what goes on the Attention panel")
     else:
         sm, fc, n_head = ctx.get("sm") or {}, ctx.get("fc") or {}, ctx.get("news_n") or 0
         seat("World markets", "active" if ctx.get("world") else "idle", "Overnight US, Asia, dollar, crude and gold, refreshed every half hour before the open")
@@ -366,26 +396,32 @@ def _doing(tid: str, spec: dict, td: list[dict], opn: list[dict], T: list[dict],
     if tid == "scalp":
         r = f"Scanning the {ctx.get('scalp_n') or 25} most liquid stocks on 1-minute bars for VWAP pullbacks." if ses.get("equity") else "Market closed: the scan restarts at 09:30."
     elif tid == "intraday":
-        r = f"Watching {len(plan.get('watch') or [])} name(s) in the news and today's filings; {len(plan.get('results') or [])} results to read." if plan.get("day") == now.strftime("%Y-%m-%d") else "Preparing the morning plan at 08:45."
+        r = (f"Equity: {len(plan.get('watch') or [])} name(s) in the news, {len(plan.get('results') or [])} results to read. F&O: NIFTY options for the day, all closed by 15:15." if plan.get("day") == now.strftime("%Y-%m-%d")
+             else "Preparing the morning plan at 08:45: equity names in the news and the day's NIFTY option setup.")
     elif tid == "swing":
         r = f"Daily chart scan after the close; holding {len(opn)} swing positions with stops."
     elif tid == "fno":
         ch = (sm.get("chains") or {}).get("NIFTY") or {}
         r = f"NIFTY {ch.get('expiry', '')}: put-to-call {ch.get('pcr')}, call wall {ch.get('call_wall', 0):,.0f}, put wall {ch.get('put_wall', 0):,.0f}." if ch else "Reading the NIFTY and Bank Nifty option chains."
     elif tid == "mcx":
-        b, g = world.get("Brent crude") or {}, world.get("Gold") or {}
-        r = f"Brent {b.get('chg_pct', 0):+.2f}%, gold {g.get('chg_pct', 0):+.2f}% overnight; tracking 4 MCX contracts the account can carry." if b else "Tracking gold, silver, crude and natural gas futures."
-    elif tid == "crypto":
-        r = "Reading 6 coins on Kraken around the clock; long only (spot)."
+        F = {f["key"]: f for f in ((ctx.get("macro") or {}).get("factors") or [])}
+        big = [f for f in F.values() if f["key"] in ("brent", "wti", "gold", "silver", "copper", "natgas", "mcx_crude") and abs(f.get("chg_pct") or 0) >= 1.5]
+        r = ("Big commodity moves since NIFTY's close: " + ", ".join(f"{f['name']} {f['chg_pct']:+.1f}%" for f in big[:4]) + ".") if big else "Watching crude, gold, silver, copper and natural gas live for anything that can move Indian shares."
+        al = [a for a in ((ctx.get("macro") or {}).get("alerts") or []) if a.get("key", "").split(":")[1:2] and a["key"].split(":")[1] in ("brent", "wti", "gold", "silver", "copper", "natgas")]
+        return r, "Weighs each move by how much it has moved NIFTY on past days.", (f"{len(al)} commodity alert(s) sent today; latest: {al[0]['title']}." if al else "Sends an alert to your phone on a big move (crude ±2% and more).")
+    elif tid == "news":
+        M = ctx.get("macro") or {}
+        n = (M.get("news_tone") or {}).get("headlines", 0)
+        return (f"{n} headlines today that can move Indian markets, grouped into crude, rupee, rates, wars and fund flows." if n else "Reading global headlines that can move Indian markets."), \
+            "Scores each headline and world move for its likely effect on NIFTY.", "Publishes the Attention panel on Desk TV."
     elif tid == "lab":
         lab = ctx.get("lab") or {}
-        r = f"{len(lab.get('strategies') or [])} strategies in the pipeline; {len(lab.get('approved') or [])} passed every check."
-        rv = (lab.get("review") or {}).get("text")
-        return r, "Seven checks on the paper record: enough trades, profit after charges, double costs, out of sample, beats chance, most days, losing streak.", ("Today's review is written." if rv else "Writes the day's review after the close.")
-    elif tid == "ipo":
-        ipo = ctx.get("ipo") or {}
-        r = f"{len(ipo.get('ipos') or [])} issues tracked; {len(ipo.get('drhp_recent') or [])} recent draft prospectuses."
-        return r, "Minimum lot at the top of the price band; listing range from subscription demand.", "Suggests at most one lot; never applies on its own."
+        rs = ctx.get("research") or {}
+        r = (f"Backtests new strategies after every close; last run {str(rs.get('generatedAt') or '')[:10]}: {(rs.get('swing') or {}).get('passTest', 0)} multi-day strategies passed every period." if rs else
+             f"{len(lab.get('strategies') or [])} strategies in the pipeline; {len(lab.get('approved') or [])} passed every check.")
+        q_ = (ctx.get("ceo_queue") or 0)
+        return r, "Each strategy must win on 2022-23, hold on 2024 and still work on 2025-26, after full costs, and beat random entries.", \
+            (f"{q_} strateg{'y' if q_ == 1 else 'ies'} in your approval queue (Backtest tab)." if q_ else "Puts strategies that pass every check in your approval queue (Backtest tab).")
     else:
         v = (fc.get("views") or {}).get("Nifty 50") or {}
         fii = next((p for p in (sm.get("participants") or []) if p.get("who") == "FII"), None)
@@ -441,8 +477,10 @@ def _hiring(st: dict, now: datetime, ctx: dict, pnl: float) -> None:
 def _seat_trades(tid: str, title: str, T: list[dict]) -> list[dict] | None:
     """The trades a seat's own work led to, or None for a team-wide role judged on the team's record."""
     if tid == "intraday":
-        m = {"Filings hunter": ("news", "news-led"), "Headlines hunter": ("news", "headline-led"), "Gap scanner": ("gap", None), "Momentum scanner": ("momentum", None), "VWAP pressure scanner": ("vwap", None)}.get(title)
-        return [t for t in T if t.get("setup") == m[0] and (m[1] is None or t.get("basis") == m[1])] if m else None
+        if title == "F&O intraday trader":
+            return [t for t in T if t.get("desk") == "FNO"]
+        m = {"Filings & headlines hunter": ("news",), "Gap & momentum scanner": ("gap", "momentum", "vwap")}.get(title)
+        return [t for t in T if t.get("desk") == "EQUITY" and t.get("setup") in m] if m else None
     if tid == "scalp":
         return T if title == "VWAP pullback hunter" else None
     if tid == "swing":
@@ -451,9 +489,6 @@ def _seat_trades(tid: str, title: str, T: list[dict]) -> list[dict] | None:
     if tid == "fno":
         u = {"NIFTY chain reader": "NIFTY", "Bank Nifty chain reader": "BANKNIFTY"}.get(title)
         return [t for t in T if t.get("underlying", "NIFTY") == u] if u else None
-    if tid in ("mcx", "crypto"):
-        out = [t for t in T if str(t.get("label", "")).startswith(title) or t.get("symbol") == title]
-        return out if "quant" not in title.lower() else None
     return None
 
 
@@ -482,8 +517,8 @@ def _staff(st: dict, now: datetime, spec: dict, tid: str, seats: list[dict], T: 
                 ok, basis = rf.get("days", 0) >= 10 and (rf.get("direction") or 0) >= 55, "forecast record"
             elif tid == "lab":
                 ok, basis = bool((ctx.get("lab") or {}).get("approved")), "strategies approved"
-            elif tid == "ipo":
-                ok, basis = False, "listings called"
+            elif tid in ("news", "mcx"):
+                ok, basis = False, "reports, no trades"
         desig = "Manager" if officer else "Associate" if x.get("hire") else "Senior Associate" if ok else "Associate"
         prev = st["designations"].get(sid)
         if not officer and not x.get("hire") and prev and prev != desig:
@@ -520,7 +555,7 @@ def _flows(st: dict, now: datetime, spec: dict, tid: str, staff: list[dict], td:
         else:
             _flow(st, now, mgr, "coo", "report", f"Closed {t['label']}: {_fmt(float(t.get('pnl_rs') or 0))}")
     live = [x for x in staff[:-1] if x["status"] in ("active", "holding", "alert")]
-    if (session or tid in ("intel", "lab", "ipo")) and not paused and live and now.timestamp() - st["flow_at"].get(tid, 0) >= 45:
+    if (session or tid in WATCH) and not paused and live and now.timestamp() - st["flow_at"].get(tid, 0) >= 45:
         st["flow_at"][tid] = now.timestamp()
         i = (now.minute * 3 + now.second // 20) % len(live)
         src = spec["sources"][i % len(spec["sources"])]

@@ -16,13 +16,30 @@ An algorithmic trading desk for **NSE Equity and NIFTY F&O**, run by AI agents o
 
 | Tab | What it shows |
 |---|---|
-| **Company floor** (front page) | The live office: every desk, its agents, the trades flowing through, the COO and your CEO desk. Below it, the research agents and the share of the strategy search each one ran. |
+| **Company floor** (front page) | **Desk TV** at the top, like a news channel: the company's P&L today with its line through the day and a tile per trading desk; **Attention**, the world moves, alerts and headlines that can move Indian markets; **COO desk**, the decisions waiting for you with Approve / Reject right there; and a breaking-news crawl. **⛶ Full screen** turns it into a wall screen. Below it, the live office floor with every team (section 1b). |
 | **Overview** | **Broker account**: wallet, holdings and today's positions from your Upstox account, refreshed every minute; the paper account until a broker token is connected. **Live trading**: the mode (Off / Practice / LIVE), your wallet, order tickets waiting for your **Approve / Reject**, the strategies allowed to ask, and today's orders (section 3). **NIFTY right now · all factors**: the live call and the main reasons (see section 4b). Also today's P/L, NIFTY today, agent ranking, open positions and **Close now** buttons. |
 | **Equity** | Equity desk P/L, open positions and trades (Open / Today / All days); top gainers, losers and most active; headlines; results filed; world markets; **Fundamentals** for any stock from TradingView (financials and a daily chart, BSE listing). |
 | **F&O** | **What's moving NIFTY and Sensex now** (section 4b): the live call, what world markets point to in NIFTY points, each factor's move and effect, breadth, heavyweights, sectors, India VIX, Bank Nifty, today's headline themes and alerts. **NIFTY today**: the mode (Quiet / Volatile / Highly volatile, from India VIX), the live all-factor call, the desk's own 10:00 trade tilt, the likely range, today's trade, the reasons in plain words. The NIFTY chart with the call drawn on it, the **live option chain** (21 strikes, best buyer and seller with quantities, volume, open contracts, a five-level order book), open trades by Today / Weekly / Monthly, and trade history per book. |
 | **Charts** | Live 1-minute charts for F&O and Equity with EMA 20/50, VWAP, opening range, entries, stops, targets, expected exits and the order book; plus a chart for any NSE stock with your trades on it. |
 | **Backtest** | The **strategy research** results and the **approval queue**; the **backtester** (any of the strategies, any years, your own settings, exits that protect profit, the search for settings, patterns by day / week / month); the **NIFTY 1-minute database** (download). |
 | **Audit** | Every Equity and F&O trade with its planned **risk** (₹ to the stop), **reward** (₹ to the target), **R:R**, capital, order route (paper / practice / live), status and P/L. Filter by desk, status, period or text; tap a row for the trade's full reasoning. |
+
+## 1b. The teams on the floor
+
+| Team | What it does |
+|---|---|
+| **Scalping desk** | 1-minute VWAP pullbacks on the most liquid stocks. It also feeds its 1-minute reads to the intraday desk. |
+| **Intraday desk · Equity + F&O** | Equity intraday trades (filings, headlines, gaps, momentum) and the day's NIFTY option trades (the 10:00 trade and the EMA9 / VWAP book), all closed by 15:15. It uses the scalping desk's timing. |
+| **Swing & signals** | Multi-day equity positions with stops. |
+| **F&O desk · positional** | Option structures held for days or weeks. |
+| **Commodities watch** | No trading. It watches crude (Brent, WTI, MCX), gold, silver, copper and natural gas live, reports what each move means for Indian shares, and sends an alert on big moves. |
+| **Market intelligence** | World markets before the open, institutional positions, option walls, the morning forecast. |
+| **Strategy lab** | Backtests every strategy after each market close (workflow `research`, 17:11 IST on market days and Saturday morning). It builds new ones from combinations of rules, checks them on 2022–23, 2024 and 2025–26 after full costs and against random entries, and puts the ones that pass in your approval queue. |
+| **Global news desk** | Reads the world's headlines (crude, the rupee, RBI and the Fed, wars and tariffs, fund flows), scores their likely effect on NIFTY, and runs the Attention panel on Desk TV. |
+
+- The **crypto desk was closed on 28 Nov 2026**: no Kraken prices, trades or charts. Its past trades stay in the history.
+- The **IPO desk's** people now run the Global news desk.
+- The commodities desk no longer trades.
 
 ## 2. Connectors: only three are needed
 
@@ -34,7 +51,7 @@ They are stored as GitHub secrets: repository **Settings → Secrets and variabl
 | `UPSTOX_EXEC_TOKEN` | Upstox **trading** access token for your own account (from the Upstox developer app; it expires daily at 03:30 IST) | Your wallet, holdings and positions on the Overview. Orders too, but only once live trading is switched on, from your static IP, with your approval on each order (section 3). |
 | `CLAUDE_CODE_OAUTH_TOKEN` | From `claude setup-token` on your Claude plan (no API bill) | The AI market brief, the plain-words thesis and the analyst rounds. |
 
-GitHub itself is the fourth piece. It is already in place: it hosts the dashboard, runs the engine every market day, and carries your approvals. Approval buttons open a GitHub issue with the instruction already written; the engine obeys only issues opened by you.
+GitHub itself is the fourth piece. It is already in place: it hosts the dashboard, runs the engine every market day, and carries your decisions. **Approve from the dashboard:** tap **🔑 Approve from here** (top of the page) once per device and paste a GitHub key that can only open issues on this repository. From then on every Approve, Reject, Allow, Close now and "Message the COO" works inside the dashboard: it shows **Sent**, then the COO's reply, usually within 20 seconds in market hours. The key stays in that browser. Without it, the buttons fall back to opening GitHub. The engine obeys only you, the repository owner.
 
 ## 3. From research to real money: switching on live trading
 
@@ -47,7 +64,7 @@ Nothing reaches your broker until you finish the steps below.
 ### How one order happens
 1. **A desk opens a paper trade.** If that strategy is allowed (step 5), the desk checks your Upstox wallet. It asks Upstox's margin calculator what one lot (or one share) costs, then cuts the paper size down to what **90% of your available cash** pays for, minus what other waiting orders have reserved. If not even one lot fits, nothing happens; the Live trading card says why.
 2. **You get an order ticket** on your phone and on **Overview → Live trading**: what it buys, how many, the most it can cost and your wallet. It has **Approve** and **Reject** buttons.
-3. **Approve** opens a GitHub issue that is already filled in; tap **Submit**. Only issues you open count. The engine checks every 15 seconds while a ticket waits. **No answer within 5 minutes means the ticket expires and nothing is sent.**
+3. **Approve** works right on the dashboard once the device is connected (section 2); otherwise it opens a filled-in GitHub issue to submit. Only your decisions count. The engine checks every 15 seconds while a ticket waits. **No answer within 5 minutes means the ticket expires and nothing is sent.**
 4. **Just before sending, the desk checks again.** It re-reads your wallet and the price. If the price has moved more than 1% against the ticket, it cancels. Otherwise it sends limit orders, buy legs first. A spread's sell leg goes only after its buy leg fills, sized to what filled.
 5. **An entry that has not filled within 60 seconds is cancelled.** The position is whatever actually filled.
 6. **Exits go out automatically, with no second approval**, when the desk closes the paper trade (stop, target, time or your **Close now**), because closing only reduces risk. If an exit doesn't fill, it is re-priced up to 3 times. After that you get an urgent alert to close it in the Upstox app.

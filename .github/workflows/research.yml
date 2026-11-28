@@ -1,10 +1,11 @@
 # Strategy research: five research agents split the strategy factory equally (each runs one shard of about 460 NIFTY strategies on the
 # 1-minute database), then a combine step picks strategies on 2022-23, checks them on 2024 and shows 2025-26 once, runs the multi-day
-# strategies, and commits docs/data/research.json for the dashboard's Backtest tab. Weekly, and on demand.
+# strategies, and commits docs/data/research.json for the dashboard's Backtest tab. After every market day, Saturdays, and on demand.
 name: research
 on:
   schedule:
     - cron: "17 2 * * 6"          # Saturday 07:47 IST
+    - cron: "41 11 * * 1-5"       # every market day at 17:11 IST, after the day's candles are in: the lab backtests continuously
   workflow_dispatch:
 permissions:
   contents: write

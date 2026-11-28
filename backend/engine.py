@@ -93,6 +93,7 @@ def OF_opens(token: str, led: list[dict]) -> dict:
 
 
 FOCUS_OFF = [x.strip() for x in os.environ.get("DESKS_OFF", "COMMODITY,CRYPTO").split(",") if x.strip()]     # buckets that open no new trades
+CRYPTO_ON = os.environ.get("CRYPTO_DESK", "").lower() == "on"                 # the crypto desk was closed on 28 Nov 2026: no Kraken prices, trades or charts
 HOL = {"day": None, "name": "", "closed": [], "open": {}, "at": 0.0}       # today's exchange holiday, from Upstox (refreshed once a day)
 EXCH = {"EQUITY": "NSE", "FNO": "NFO", "COMMODITY": "MCX"}
 
@@ -108,7 +109,7 @@ def sessions(now: datetime) -> dict:
             return wk and hol["open"][ex][0] <= now.timestamp() <= hol["open"][ex][1]
         return ok and ex not in hol["closed"]
     return {"equity": open_("NSE", wk and D.mins("09:10") <= t <= D.mins("15:40")), "fno": open_("NFO", wk and D.mins("09:15") <= t <= D.mins("15:30")),
-            "mcx": open_("MCX", wk and D.mins("09:00") <= t <= D.mins("23:30")), "crypto": True}
+            "mcx": open_("MCX", wk and D.mins("09:00") <= t <= D.mins("23:30")), "crypto": CRYPTO_ON}
 
 
 def void_holiday_trades(books: list[dict], today: str, now: datetime) -> list[str]:
@@ -675,6 +676,20 @@ def run() -> None:
         except Exception as e:
             status["desks"]["news_pulse"] = f"error: {str(e)[:100]}"
 
+    rs_cache = {"m": 0.0, "v": {}}
+
+    def research_summary() -> dict:
+        """The strategy lab's last backtest run (docs/data/research.json, rebuilt after every close), without the big tables."""
+        f = DOCS / "research.json"
+        try:
+            m = f.stat().st_mtime
+            if m != rs_cache["m"]:
+                r = json.loads(f.read_text())
+                rs_cache.update(m=m, v={k: r.get(k) for k in ("generatedAt", "agents", "targets", "families")} | {"swing": {k: v for k, v in (r.get("swing") or {}).items() if k != "top"}})
+        except Exception:
+            pass
+        return rs_cache["v"]
+
     def macro_scan(now) -> None:
         """What is moving NIFTY and Sensex now (backend/macro.py): world prices about every two minutes, the call and reasons every minute."""
         try:
@@ -736,15 +751,16 @@ def run() -> None:
                     c = CF.from_hhmm(scalp_bars[sym], today) if len(scalp_bars.get(sym) or []) > 30 and t and t.get("day") == today else CF.upstox_candles(U._get, token, kmap[sym], now)
                     q = U.quotes([kmap[sym]], token)
                     out.append(CF.chart("eq", "Equities", sym, (t["label"] if t else f"{sym} · top candidate now"), "1m", c, CF.depth_upstox(q.get(kmap[sym])), CF.strategies(c, t), CF.trade_marks(t, c, now), []))
-            t = CF.focus(allt, "CRYPTO", today)
-            coin = t["symbol"] if t and t.get("symbol") in D.PAIRS else "BTC"
-            j = D._get_json(f"https://api.kraken.com/0/public/OHLC?pair={D.PAIRS[coin]}USD&interval=5")
-            rows = next(v for k_, v in j["result"].items() if k_ != "last")[-150:]
-            c = [[int(r[0]), float(r[1]), float(r[2]), float(r[3]), float(r[4]), float(r[6])] for r in rows]
-            dj = next(iter(D._get_json(f"https://api.kraken.com/0/public/Depth?pair={D.PAIRS[coin]}USD&count=5")["result"].values()))
-            dep = {"bids": [[float(b[0]), float(b[1])] for b in dj["bids"]], "asks": [[float(a[0]), float(a[1])] for a in dj["asks"]]}
-            dep.update(buy_qty=sum(b[1] for b in dep["bids"]), sell_qty=sum(a[1] for a in dep["asks"]))
-            out.append(CF.chart("crypto", "Crypto", coin, f"{coin} / USD (Kraken)" + (f" · {t['label']}" if t else ""), "5m", c, dep, CF.strategies(c, t), CF.trade_marks(t, c, now, None), []))
+            if CRYPTO_ON:                                   # the crypto desk is closed: no Kraken chart
+                t = CF.focus(allt, "CRYPTO", today)
+                coin = t["symbol"] if t and t.get("symbol") in D.PAIRS else "BTC"
+                j = D._get_json(f"https://api.kraken.com/0/public/OHLC?pair={D.PAIRS[coin]}USD&interval=5")
+                rows = next(v for k_, v in j["result"].items() if k_ != "last")[-150:]
+                c = [[int(r[0]), float(r[1]), float(r[2]), float(r[3]), float(r[4]), float(r[6])] for r in rows]
+                dj = next(iter(D._get_json(f"https://api.kraken.com/0/public/Depth?pair={D.PAIRS[coin]}USD&count=5")["result"].values()))
+                dep = {"bids": [[float(b[0]), float(b[1])] for b in dj["bids"]], "asks": [[float(a[0]), float(a[1])] for a in dj["asks"]]}
+                dep.update(buy_qty=sum(b[1] for b in dep["bids"]), sell_qty=sum(a[1] for a in dep["asks"]))
+                out.append(CF.chart("crypto", "Crypto", coin, f"{coin} / USD (Kraken)" + (f" · {t['label']}" if t else ""), "5m", c, dep, CF.strategies(c, t), CF.trade_marks(t, c, now, None), []))
             save("candles.json", {"updated_at": now.isoformat(timespec="seconds"), "charts": out})
             status["desks"]["charts"] = f"{len(out)} live charts"
         except Exception as e:
@@ -794,11 +810,12 @@ def run() -> None:
                                                    "nifty_chg": nf, "equity": acct[0], "scalp_n": len(scalp_bars), "scalp_params": {**SC.R, **((cst["variants"].get("scalp") or {}).get("params") or {})},
                                                    "sessions": status.get("sessions"), "quant_notes": qn, "headlines": headlines, "intraday_diag": eq.get("diag"), "mcx": snap.get("mcx"),
                                                    "crypto": snap.get("crypto"), "fno_snap": snap.get("fno"), "news_n": len(load("news_feed.json", [])), "sources": sources_status(now),
-                                                   "lab": lab, "ipo": ipo_v[0], "news_digest": digest[0], "pulse": pulse.get("signals") or []})
+                                                   "lab": lab, "news_digest": digest[0], "pulse": pulse.get("signals") or [], "macro": mac["last"], "research": research_summary()})
             for r in view["coo"]["requests"]:
                 if r["status"] == "pending" and r["id"] not in cst["said"].get("pushed", []):
                     cst["said"]["pushed"] = (cst["said"].get("pushed", []) + [r["id"]])[-50:]
-                    N.push("COO needs your decision", r["text"] + " Open the Company page to approve or reject.", 4, "briefcase")
+                    N.push("COO needs your decision", r["text"] + " Approve or reject on the Company floor (Desk TV).", 4, "briefcase",
+                           [("Open Desk TV", "https://balakodavati123-ops.github.io/Website-Rules/#co")])
             save("company.json", {**view, "quant": qn, "state": cst})
 
     def load_master() -> None:
@@ -1142,10 +1159,14 @@ def run() -> None:
                 info["fno"] = f"error: {e}"
         T["fno"] = round(time.time() - it0, 1)
         try:
+            if not CRYPTO_ON:
+                raise StopIteration
             ticks = D.kraken_ticks()
             D.crypto_step(xb, now, ticks, paused, rm["CRYPTO"], {"env": make_env(), "acct": acct[0]})
             snap["crypto"] = [{"name": k, "last": v["last"], "chg_pct": (v["last"] / v["open"] - 1) * 100, "high": v["high"], "low": v["low"], "unit": "$"} for k, v in ticks.items()]
             info["crypto"] = "6 coins from Kraken, real time"
+        except StopIteration:
+            info["crypto"] = "closed (the crypto desk was shut on 28 Nov 2026)"
         except Exception as e:
             info["crypto"] = f"error: {e}"
         T["crypto"] = round(time.time() - it0, 1)
@@ -1244,7 +1265,7 @@ def run() -> None:
             migrate()
             if not (news_thread and news_thread.is_alive()):        # the slow fetches (news, world markets, NSE files) can take a while from a cloud address: never hold up the price loop for them
                 def _slow(at=now):
-                    for name_, fn_ in (("news", lambda: (lambda n2: (news.clear(), news.update(n2)) if n2 else None)(I.filings_news())), ("news_feed", lambda: I.update_news_feed(at)), ("ai_sync", lambda: ai_sync(at)), ("news_ai", lambda: news_ai(at)), ("ipo", lambda: ipo_desk(at)), ("review", lambda: review_day(at)),
+                    for name_, fn_ in (("news", lambda: (lambda n2: (news.clear(), news.update(n2)) if n2 else None)(I.filings_news())), ("news_feed", lambda: I.update_news_feed(at)), ("ai_sync", lambda: ai_sync(at)), ("news_ai", lambda: news_ai(at)), ("review", lambda: review_day(at)),
                                        ("world", lambda: refresh_world(at)), ("smart_money", lambda: token and refresh_smart(at)), ("margin_reference", lambda: margin_reference(at)), ("indstocks_master", lambda: load_master()), ("noop", lambda: None)):
                         try:
                             fn_()
@@ -1268,7 +1289,7 @@ def run() -> None:
                         intra["s"][nm] = U.intraday(token, k, 5)
                     except Exception:
                         pass
-                for coin in D.PAIRS:
+                for coin in (D.PAIRS if CRYPTO_ON else []):
                     try:
                         intra["s"][coin] = D.kraken_ohlc(coin, 5, 288)
                     except Exception:
@@ -1277,7 +1298,7 @@ def run() -> None:
             except Exception as e:
                 info["intraday"] = f"error: {str(e)[:80]}"
         hm_ = now.strftime("%H:%M")
-        inbox_every = 60 if now.weekday() < 5 and "09:00" <= hm_ <= "15:35" else 300     # your instructions: checked every minute in market hours
+        inbox_every = 20 if now.weekday() < 5 and "08:30" <= hm_ <= "15:45" else 60      # your decisions from the dashboard: read every 20 seconds in market hours
         if (load("live_orders.json", {}).get("summary") or {}).get("awaiting"):
             inbox_every = 15                                                    # an order waits for your approval: look every 15 seconds
         if time.time() - inbox_at[0] >= inbox_every and not (inbox_thread[0] and inbox_thread[0].is_alive()):
