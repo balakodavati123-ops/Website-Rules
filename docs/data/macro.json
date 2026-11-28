@@ -1,5 +1,5 @@
 {
- "at": "05:14:55",
+ "at": "08:28:33",
  "day": "2026-11-28",
  "session": "closed",
  "ref": {
@@ -39,12 +39,12 @@
    "name": "Dollar in rupees",
    "symbol": "INR=X",
    "last": 92.98,
-   "chg_pct": 0.0,
+   "chg_pct": -0.0,
    "as_of": "28 Nov 03:39",
    "weighted": true,
    "beta": -0.3471,
-   "effect_pct": -0.0,
-   "effect_pts": -0.0,
+   "effect_pct": 0.0,
+   "effect_pts": 0.0,
    "why": "A weaker rupee drives foreign investors out and makes oil imports dearer",
    "note": null,
    "stale": false,
@@ -244,9 +244,9 @@
   }
  ],
  "news_tone": {
-  "headlines": 18,
-  "bad": 2,
-  "good": 4
+  "headlines": 22,
+  "bad": 1,
+  "good": 3
  },
  "big_moves": [],
  "rupee_record": null,
@@ -255,37 +255,25 @@
   {
    "key": "rates",
    "label": "RBI, rates and inflation",
-   "count": 10,
+   "count": 21,
    "neg": 0,
-   "pos": 4,
+   "pos": 3,
    "latest": {
-    "headline": "NSE gets RBI nod to launch corporate bond index futures",
-    "source": "BusinessLine",
-    "time": "28 Nov 04:23"
+    "headline": "India swaps, treasury bills signal possibility of outsized RBI rate hike next week",
+    "source": "CNBC-TV18",
+    "time": "28 Nov 08:27"
    }
   },
   {
    "key": "geo",
    "label": "war, attacks, sanctions and tariffs",
-   "count": 6,
+   "count": 3,
    "neg": 0,
    "pos": 0,
    "latest": {
-    "headline": "Jefferies sees telecom tariff hike in April next year; Airtel top pick",
-    "source": "BusinessStandard",
-    "time": "28 Nov 04:28"
-   }
-  },
-  {
-   "key": "rupee",
-   "label": "the rupee and the dollar",
-   "count": 2,
-   "neg": 1,
-   "pos": 0,
-   "latest": {
-    "headline": "Rupee plunges 24 paise to 92.62 against US dollar in early trade",
-    "source": "BusinessLine",
-    "time": "28 Nov 04:23"
+    "headline": "GAIL share price: UBS sees positive impact from proposed gas pipeline tariff reforms",
+    "source": "CNBC-TV18",
+    "time": "28 Nov 08:27"
    }
   },
   {
@@ -295,9 +283,9 @@
    "neg": 1,
    "pos": 0,
    "latest": {
-    "headline": "Nasdaq futures plunge nearly 3% as AI trade comes under pressure; gold extends decline",
-    "source": "CNBC-TV18",
-    "time": "28 Nov 04:23"
+    "headline": "Gold price forecast: Fed rate hike in December may limit recovery to \u20b91.30 lakh per 10 grams by 2026-end, says expert - Livemint",
+    "source": "GoogleNews-Business",
+    "time": "28 Nov 08:22"
    }
   },
   {
@@ -309,7 +297,19 @@
    "latest": {
     "headline": "Brent crude crosses $96 a barrel mark after Houthis attack key Saudi refinery",
     "source": "CNBC-TV18",
-    "time": "28 Nov 04:18"
+    "time": "28 Nov 08:22"
+   }
+  },
+  {
+   "key": "rupee",
+   "label": "the rupee and the dollar",
+   "count": 1,
+   "neg": 0,
+   "pos": 0,
+   "latest": {
+    "headline": "Canadian dollar holds on to weekly gain as investors bet on December rate hike",
+    "source": "Mint",
+    "time": "28 Nov 08:27"
    }
   }
  ],
@@ -317,8 +317,8 @@
   "NIFTY is down 277 points (-1.07%) at 25,607 at its last close (27 Nov); Sensex -1.17%.",
   "S&P 500 futures is up 0.8% since NIFTY's last close: on past days that has meant about +34 NIFTY points.",
   "US dollar index is up 0.2% since NIFTY's last close: on past days that has meant about -9 NIFTY points.",
-  "India's own news today is mostly good for the market: 4 good and 2 bad among 18 headlines on these themes (shown for context: headlines are not part of the tested call).",
-  "Today's headlines: 10 on RBI, rates and inflation, 6 on war, attacks, sanctions and tariffs, 2 on the rupee and the dollar, 2 on the US markets and the Fed. Latest on RBI, rates and inflation: \"NSE gets RBI nod to launch corporate bond index futures\"."
+  "India's own news today is mostly good for the market: 3 good and 1 bad among 22 headlines on these themes (shown for context: headlines are not part of the tested call).",
+  "Today's headlines: 21 on RBI, rates and inflation, 3 on war, attacks, sanctions and tariffs, 2 on the US markets and the Fed, 1 on crude oil. Latest on RBI, rates and inflation: \"India swaps, treasury bills signal possibility of outsized RBI rate hike next week\"."
  ],
  "model": {
   "r2": 0.201,
@@ -326,6 +326,6 @@
   "from": "2022-01-04",
   "to": "2026-11-25"
  },
- "world_at": "04:59:56",
+ "world_at": "08:25:24",
  "alerts": []
 }
